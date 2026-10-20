@@ -1,0 +1,18 @@
+{
+  "compiler_jobs_max": 2,
+  "compiler_output_directory": "clang",
+  "executables": {
+    "c_compiler": "clang-10",
+    "cmake": "cmake",
+    "cxx_compiler": "clang++-10"
+  },
+  "id": "occt-intersection-clang10-v1",
+  "platforms": [
+    "linux-x86_64"
+  ],
+  "schema_version": 1,
+  "tcl_paths": "deployment configuration or BENCH_TCL_* environment variables",
+  "tcl_version": "8.6",
+  "title": "OCCT bounded DRAW evaluator · Clang 10 / Tcl 8.6",
+  "tools_directory": "occt-intersection-clang10-v1"
+}

@@ -1,0 +1,44 @@
+{
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 9000
+  },
+  "evaluation_suite": {
+    "id": "occt-visible5all",
+    "version": "1"
+  },
+  "execution_mode": "joint",
+  "has_hidden_checks": false,
+  "id": "occt_boolean_group_visible_690_693_172_370_1452",
+  "kind": "group",
+  "members": [
+    {
+      "issue_id": "occt-690",
+      "issue_version": "1"
+    },
+    {
+      "issue_id": "occt-693",
+      "issue_version": "1"
+    },
+    {
+      "issue_id": "occt-172",
+      "issue_version": "1"
+    },
+    {
+      "issue_id": "occt-370",
+      "issue_version": "1"
+    },
+    {
+      "issue_id": "occt-1452",
+      "issue_version": "1"
+    }
+  ],
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "schema_version": 1,
+  "source_id": "occt-3e80fad1779e",
+  "title": "旧题 · OCCT 690 / 693 / 172 / 370 / 1452 · 组合题",
+  "version": "1"
+}

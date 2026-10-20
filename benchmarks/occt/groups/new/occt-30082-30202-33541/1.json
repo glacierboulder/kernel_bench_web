@@ -1,0 +1,36 @@
+{
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "evaluation_suite": {
+    "id": "NG-04R-checks-v2",
+    "version": "1"
+  },
+  "execution_mode": "joint",
+  "has_hidden_checks": true,
+  "id": "NG-04R-v2",
+  "kind": "group",
+  "members": [
+    {
+      "issue_id": "mantis-30082",
+      "issue_version": "2"
+    },
+    {
+      "issue_id": "mantis-30202",
+      "issue_version": "2"
+    },
+    {
+      "issue_id": "mantis-33541",
+      "issue_version": "2"
+    }
+  ],
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "schema_version": 1,
+  "source_id": "occt-ng04r-derived-fe81a63b",
+  "title": "新题 · OCCT 30082 / 30202 / 33541",
+  "version": "1"
+}

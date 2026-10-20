@@ -1,0 +1,21 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": true,
+  "test_done_marker": true,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 7,
+  "numeric_assertions": 6,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={reversed operand order retains four branches} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={reversed tolerance remains bounded} detail={actual=1.1368683772161603e-13 lower=0 upper=1.0e-12}\nBENCH_ASSERT_PASS kind=numeric label={c_1 positive finite length} detail={actual=0.0010007069168230824 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_2 positive finite length} detail={actual=13.012833486790504 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_3 positive finite length} detail={actual=0.0010007069169515079 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_4 positive finite length} detail={actual=0.0010008938273849189 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={aggregate branch length remains finite} detail={actual=13.015835794451663 lower=1.0 upper=4000}\nBENCH_ORACLE_OK assertions=7 numeric_assertions=6\nTEST_DONE assertions=7 numeric_assertions=6\n",
+  "stderr_tail": "",
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/deliverable_bundle/evaluation/cases/mantis-32850/1/regression.tcl",
+  "draw_executable": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng05t_v1/build_reference/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.032
+}
+

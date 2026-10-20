@@ -1,0 +1,20 @@
+{
+  "assertions": 5,
+  "draw_executable": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/build_derived_baseline/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.032,
+  "expected_oracle_error": false,
+  "failed_assertions": 0,
+  "infrastructure_tcl_error": false,
+  "numeric_assertions": 1,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "passed": true,
+  "protocol": "draw_case_oracle_v1",
+  "return_code": 0,
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/cases_a/wline_construction_and_endpoint_handling/mantis_30082/original.tcl",
+  "stderr_tail": "",
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={issue intersection exists} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={one intersection curve} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={bounded reached tolerance} detail={actual=7.075040715644249e-07 expected=6.5e-7 tolerance=7.0e-8 absolute_error=5.750407156442488e-8}\nBENCH_ASSERT_PASS kind=expression label={intersection curve edge BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersection curve edge shape validity} detail=value=1\nBENCH_ORACLE_OK assertions=5 numeric_assertions=1\nTEST_DONE assertions=5 numeric_assertions=1\n",
+  "tcl_error_detected": false,
+  "test_done_marker": true,
+  "timed_out": false
+}

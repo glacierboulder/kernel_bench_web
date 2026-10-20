@@ -1,0 +1,113 @@
+{
+  "checkpoints": [
+    {
+      "case": "issues/occt-30082/4/public/original.tcl",
+      "category": "original",
+      "id": "mantis-30082-original",
+      "issue_id": "mantis-30082",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/mantis-30082/4/neighborhood.tcl",
+      "category": "neighborhood",
+      "id": "mantis-30082-neighborhood",
+      "issue_id": "mantis-30082",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-30082/4/regression.tcl",
+      "category": "regression",
+      "id": "mantis-30082-regression",
+      "issue_id": "mantis-30082",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "issues/occt-31602/2/public/original.tcl",
+      "category": "original",
+      "id": "mantis-31602-original",
+      "issue_id": "mantis-31602",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/mantis-31602/2/neighborhood.tcl",
+      "category": "neighborhood",
+      "id": "mantis-31602-neighborhood",
+      "issue_id": "mantis-31602",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-31602/2/regression.tcl",
+      "category": "regression",
+      "id": "mantis-31602-regression",
+      "issue_id": "mantis-31602",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "issues/occt-32850/1/public/original.tcl",
+      "category": "original",
+      "id": "mantis-32850-original",
+      "issue_id": "mantis-32850",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/mantis-32850/1/neighborhood.tcl",
+      "category": "neighborhood",
+      "id": "mantis-32850-neighborhood",
+      "issue_id": "mantis-32850",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-32850/1/regression.tcl",
+      "category": "regression",
+      "id": "mantis-32850-regression",
+      "issue_id": "mantis-32850",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "NG-05T-v1"
+  ],
+  "id": "NG-05T-v1-checks",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-ng04t-v1-baseline-ef5af939"
+  ],
+  "title": "WLine boundary point preservation across endpoint sampling, periodic seam insertion, and special-vertex registration：几何验收",
+  "version": "1"
+}

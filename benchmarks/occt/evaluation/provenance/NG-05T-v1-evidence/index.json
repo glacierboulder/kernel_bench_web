@@ -1,0 +1,71 @@
+{
+  "schema_version": "occt_group_evidence_index_v1",
+  "group_id": "NG-05T-v1",
+  "candidate_only": false,
+  "formal_acceptance": true,
+  "scope_approved": true,
+  "baseline_verified": true,
+  "reference_verified": true,
+  "framework_replay_verified": true,
+  "integrated": true,
+  "independent_final_review": "PASS",
+  "members": [
+    "M30082@4",
+    "M31602@2",
+    "M32850@1"
+  ],
+  "baseline_categories": "9/9 executed; 8 semantic geometry failures and 1 pass; all three originals fail on one locked tree",
+  "reference_categories": "9/9 passed",
+  "framework_evaluation_id": "b5c44774f6746fa2",
+  "framework_snapshot_sha256": "a8b00eaa231dd83f606d79b613586da10c6b8ecbbcc65dc85bf6e54f79983ad9",
+  "framework_hidden_checks": "6/6 passed; hidden details remain supervisor-only",
+  "negative_controls": {
+    "status": "verified_empty_rejection_and_incomplete_patch_failure",
+    "archive": "evaluation/provenance/NG-05T-v1-evidence/formal_candidate_replay/negative_controls",
+    "empty_patch_evaluation_id": "647b1e699857ad1d",
+    "partial_patch_evaluation_id": "fc8956364a9ac408",
+    "empty_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "partial_patch_sha256": "01dbcc5624e89e2ba2ee575e3adab5a50c7ed590d673666c5b67b13d88b50a8d",
+    "partial_patch_checkpoints": "4/9 passed, 5/9 failed; see archive_manifest.json and raw checkpoint records"
+  },
+  "limitations": [
+    "Patch-only reevaluation has no report.md, so the separate submission stage is failed; patch application, configure, build, and all required geometry checks passed.",
+    "Network namespace creation is unavailable; the documented offline isolation shim was used.",
+    "The reference target closure was rebuilt from the locked baseline artifact copy after path retargeting, not from a pristine source build."
+  ],
+  "evidence": {
+    "scope": "evaluation/provenance/NG-05T-v1-evidence/group_scope.json",
+    "baseline": "evaluation/provenance/NG-05T-v1-evidence/source_runs/baseline/manifest.json",
+    "reference": "evaluation/provenance/NG-05T-v1-evidence/source_runs/reference/manifest.json",
+    "candidate_framework": "evaluation/provenance/NG-05T-v1-evidence/framework_candidate_record.json",
+    "reference_patch": "evaluation/provenance/NG-05T-v1-reference.patch"
+  },
+  "artifact_hashes": {
+    "evaluation/provenance/NG-05T-v1-evidence/formal_candidate_replay/benchmark-snapshot/snapshot.json": "490c56723d79de8d678a89693b618b8a20b9843fcafe7ee2ee31dc9f1c71c052",
+    "evaluation/provenance/NG-05T-v1-evidence/formal_candidate_replay/benchmark-snapshot/catalog.json": "58109e83c0ce06600c2eecb58dd14d7acba7b9f3dfebed6ebd54fc18ded5d99d",
+    "evaluation/provenance/NG-05T-v1-evidence/formal_candidate_replay/benchmark-snapshot/group.json": "17a627919419fe0aaf83bcd2dabf7a556d4c133f9039c707e306525868430af0",
+    "evaluation/provenance/NG-05T-v1-evidence/formal_candidate_replay/benchmark-snapshot/suite.json": "73a4236f1912b94d7159a286fba6c0a46dc3de65357a5d01d8cf097476f54bc6",
+    "evaluation/provenance/NG-05T-v1-evidence/formal_candidate_replay/benchmark-snapshot/source-lock.json": "bfe3ee0350abf8eb7dcc4241a41e15a25020b35742963b367e3e51287d703199",
+    "reference_patch_sha256": "e969460acfdd3e2fd9eba551bf6e4410e3b72615b60f2ad30956c348dce6423d",
+    "approval_candidate_sha256": "01f7b145165ea8bde06e87601bca8f7650d993eb2a57dae390b79f5e19c5c880",
+    "candidate_catalog_sha256": "bb19b2ad9f31939052685813923907f9dda4a1ac129ae96a2371d54ebb15f335",
+    "candidate_sources_lock_sha256": "392c7d6cd757402ef83cf55ae31305f4eef3deebf4c7bea3d4f0b11fd621dc8c",
+    "selected_git_bundle_sha256": "aae4ca88798c770ca2cc77d0f3005c7ebd0a3b6f23d3e97b67da58cfb3e8bd00",
+    "selected_reference_patch_sha256": "e969460acfdd3e2fd9eba551bf6e4410e3b72615b60f2ad30956c348dce6423d",
+    "evaluation/provenance/NG-05T-v1-evidence/formal_candidate_replay/negative_controls/archive_manifest.json": "4d39be578c858be529f2d5bcfc3252d62179ed058ea2103501c6e69986e314e8",
+    "evaluation/provenance/NG-05T-v1-final-delivery-review.json": "b233f7bbcfe454f1da3b6e1a687e741640efeedf12c0b5ccf2bf34de5156bfb4"
+  },
+  "post_integration_freeze": {
+    "status": "passed_snapshot_matches_candidate_replay",
+    "snapshot_sha256": "a8b00eaa231dd83f606d79b613586da10c6b8ecbbcc65dc85bf6e54f79983ad9",
+    "path": "evaluation/provenance/NG-05T-v1-evidence/post_integration_freeze_audit.json",
+    "sha256": "bd25a25c7639a79fcf45bb100a0e5343aed2dd0fc7e7a6a04bf0c4c47b474f22"
+  },
+  "formal_integration": true,
+  "evidence_stage": "formally_accepted_after_final_independent_review",
+  "final_delivery_review": {
+    "record": "evaluation/provenance/NG-05T-v1-final-delivery-review.json",
+    "sha256": "b233f7bbcfe454f1da3b6e1a687e741640efeedf12c0b5ccf2bf34de5156bfb4",
+    "reviewed_at_utc": "2026-10-18T16:18:34Z"
+  }
+}

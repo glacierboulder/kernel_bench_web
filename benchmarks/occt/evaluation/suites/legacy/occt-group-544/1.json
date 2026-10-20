@@ -1,0 +1,89 @@
+{
+  "checkpoints": [
+    {
+      "case": "issues/occt-544/1/public/reproduce.tcl",
+      "category": "original",
+      "id": "visible_issue_544",
+      "issue_id": "occt-544",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/evaluator_tests/issue_506_bndsort_repro.cpp",
+      "category": "original",
+      "id": "positive_control_hole0",
+      "issue_id": null,
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 15,
+        "inputs": [
+          "evaluation/cases/evaluator_assets/issue_506/brd.brep",
+          "evaluation/cases/evaluator_assets/issue_506/hole0.brep"
+        ],
+        "libraries": [
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase"
+        ],
+        "stdout_contains": [
+          "indices.Size(): 1",
+          "Index 0"
+        ]
+      },
+      "timeout_seconds": 30,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/evaluator_tests/issue_506_bndsort_repro.cpp",
+      "category": "original",
+      "id": "hidden_issue_506_hole1",
+      "issue_id": null,
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 15,
+        "inputs": [
+          "evaluation/cases/evaluator_assets/issue_506/brd.brep",
+          "evaluation/cases/evaluator_assets/issue_506/hole1.brep"
+        ],
+        "libraries": [
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase"
+        ],
+        "stdout_contains": [
+          "indices.Size(): 1",
+          "Index 0"
+        ]
+      },
+      "timeout_seconds": 30,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt_boolean_group_visible_544"
+  ],
+  "id": "occt-group-544",
+  "legacy_task_kind": "group",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-3e80fad1779e"
+  ],
+  "title": "OCCT group legacy checks",
+  "version": "1"
+}

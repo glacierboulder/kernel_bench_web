@@ -1,0 +1,34 @@
+{
+  "status": "negative_control_passed",
+  "control": "official partial fix for M30082 and M30202 omitting M33541",
+  "partial_patch_sha256": "a3b0141c4917a18f7ff0fa43d813f32d71308327e9560ba7767988d92cb08658",
+  "baseline_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+  "partial_reference_tree_sha256": "57e9f6265595f4c166ea8c70d92fd4f98ea082dde68eba3d939a5497d2fc358d",
+  "partial_build_receipt_sha256": "c3f1d05ec9657d66e4dddf83ce8b1290e0a8a7e534c70f4459184678bc3f4f08",
+  "run_manifest_sha256": "8b34f21c33ee81ad56d9827e5eaf645b4bfa9c7e4bcfa1922648c5044558f8b4",
+  "tests": {
+    "M30082": {
+      "category": "original",
+      "passed": true,
+      "failed_assertions": 0,
+      "case_sha256": "d7a67e0db899f0d44985bce74f3046cc63eb1d7a905ab0c2f9227273a348774c",
+      "result_sha256": "e3d5431617e7754968dea25f85d127d7b768a2bd96c24bcb1a7a4b27bf9d7721"
+    },
+    "M33541": {
+      "category": "original",
+      "passed": false,
+      "failed_assertions": 2,
+      "case_sha256": "ce5e8ed08e3882abc9d770614a6e87704f499eb6cc1cf229d9a536f21f854cdd",
+      "result_sha256": "cdf9220456f9f60aae761c7f82118076f5d794a019cc33619eac26b22ee874a0"
+    },
+    "M30202": {
+      "category": "original",
+      "passed": true,
+      "failed_assertions": 0,
+      "case_sha256": "fa251ecf12bc62b0ea971b2f824d68860fd59e3985690b1c5aac7f665b51b2df",
+      "result_sha256": "e251b1dcd827bb84a22826e05e89b0956b858599848ac1ee22caa901e2163756"
+    }
+  },
+  "M33541_v2_case_identity": "unchanged bytes from issue-keyed v1 original; SHA256=ce5e8ed08e3882abc9d770614a6e87704f499eb6cc1cf229d9a536f21f854cdd",
+  "interpretation": "The first two original checks pass under this partial patch while M33541 retains both numeric failures; this distinguishes the third fix from a generic baseline-only control. Only original cases were run in this historical partial-patch control."
+}

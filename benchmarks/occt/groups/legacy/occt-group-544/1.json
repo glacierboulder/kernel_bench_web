@@ -1,0 +1,28 @@
+{
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "evaluation_suite": {
+    "id": "occt-group-544",
+    "version": "1"
+  },
+  "execution_mode": "joint",
+  "has_hidden_checks": true,
+  "id": "occt_boolean_group_visible_544",
+  "kind": "group",
+  "members": [
+    {
+      "issue_id": "occt-544",
+      "issue_version": "1"
+    }
+  ],
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "schema_version": 1,
+  "source_id": "occt-3e80fad1779e",
+  "title": "旧题 · OCCT 544 · 组合题",
+  "version": "1"
+}

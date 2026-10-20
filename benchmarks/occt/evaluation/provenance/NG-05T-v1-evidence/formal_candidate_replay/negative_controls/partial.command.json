@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "$CONDA_PREFIX/bin/python",
+    "-m",
+    "backend.reevaluate",
+    "--patch",
+    "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng05t_v1/evidence/framework_candidate/negative_controls/partial_without_endpoint_and_periodic_fixes.patch",
+    "--source-id",
+    "occt-ng04t-v1-baseline-ef5af939",
+    "--suite-id",
+    "NG-05T-v1-checks",
+    "--suite-version",
+    "1"
+  ],
+  "return_code": 0
+}

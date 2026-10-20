@@ -1,0 +1,27 @@
+{
+  "schema_version": "ng05t_v1_final_delivery_review_v1",
+  "group_id": "NG-05T-v1",
+  "reviewed_at_utc": "2026-10-18T16:18:34Z",
+  "reviewer": "reused independent read-only delivery reviewer",
+  "review_method": "bounded final reread; no build or geometry replay",
+  "verdict": "PASS",
+  "reviewed_surfaces": [
+    "evaluation/provenance/NG-05T-v1-evidence/index.json",
+    "evaluation/provenance/NG-05T-v1-evidence/formal_integration_status.json",
+    "evaluation/provenance/NG-05T-v1-evidence/group_scope.json",
+    "evaluation/provenance/NG-05T-v1-evidence/formal_candidate_replay/negative_controls/archive_manifest.json",
+    "evaluation/provenance/NG-05T-v1.json"
+  ],
+  "verified_findings": [
+    "The partial-patch summary matches raw results: 4/9 checkpoints passed and 5/9 failed.",
+    "All 15 negative-control archive file hashes and sizes match; evidence index and integration-status hashes are bound.",
+    "Inherited issue-level validation is explicitly labeled historical; current status distinguishes formal integration from formal acceptance.",
+    "Previously audited technical gates remain consistent: formal replay 9/9 geometry and hidden 6/6; candidate and post-integration snapshots match."
+  ],
+  "limitations_retained": [
+    "Patch-only reevaluation has no report.md, so submission stage is failed while technical and suite evaluation passed.",
+    "Network namespace creation was unavailable; the documented offline isolation shim was used.",
+    "Reference target closure was incrementally rebuilt from locked baseline artifacts, not from a pristine source build."
+  ],
+  "reviewer_conclusion": "PASS; no remaining blocker to formal acceptance of NG-05T-v1."
+}

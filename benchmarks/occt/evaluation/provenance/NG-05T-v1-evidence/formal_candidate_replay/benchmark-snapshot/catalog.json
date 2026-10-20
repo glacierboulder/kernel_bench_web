@@ -1,0 +1,116 @@
+{
+  "evaluation_suites": [
+    {
+      "id": "NG-04R-checks-v2",
+      "path": "evaluation/suites/NG-04R-checks-v2/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-04R-v3-checks",
+      "path": "evaluation/suites/NG-04R-v3-checks/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-04R-v4-checks",
+      "path": "evaluation/suites/NG-04R-v4-checks/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-04T-v1-checks",
+      "path": "evaluation/suites/NG-04T-v1-checks/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-05T-v1-checks",
+      "path": "evaluation/suites/NG-05T-v1-checks/1.json",
+      "version": "1"
+    }
+  ],
+  "groups": [
+    {
+      "id": "NG-04R-v2",
+      "path": "groups/NG-04R-v2/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-04R-v3",
+      "path": "groups/NG-04R-v3/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-04R-v4",
+      "path": "groups/NG-04R-v4/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-04T-v1",
+      "path": "groups/NG-04T-v1/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-05T-v1",
+      "path": "groups/NG-05T-v1/1.json",
+      "version": "1"
+    }
+  ],
+  "id": "occt-intersection",
+  "issues": [
+    {
+      "id": "mantis-30082",
+      "path": "issues/mantis-30082/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "mantis-30202",
+      "path": "issues/mantis-30202/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "mantis-33541",
+      "path": "issues/mantis-33541/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "mantis-30082",
+      "path": "issues/mantis-30082/3/issue.json",
+      "version": "3"
+    },
+    {
+      "id": "mantis-30202",
+      "path": "issues/mantis-30202/3/issue.json",
+      "version": "3"
+    },
+    {
+      "id": "mantis-31602",
+      "path": "issues/mantis-31602/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "mantis-33541",
+      "path": "issues/mantis-33541/3/issue.json",
+      "version": "3"
+    },
+    {
+      "id": "mantis-30082",
+      "path": "issues/mantis-30082/4/issue.json",
+      "version": "4"
+    },
+    {
+      "id": "mantis-30202",
+      "path": "issues/mantis-30202/4/issue.json",
+      "version": "4"
+    },
+    {
+      "id": "mantis-32850",
+      "path": "issues/mantis-32850/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "mantis-31602",
+      "path": "issues/mantis-31602/2/issue.json",
+      "version": "2"
+    }
+  ],
+  "schema_version": 1,
+  "title": "OCCT 求交起始失效环节联合修复题组"
+}

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "$CONDA_PREFIX/bin/python",
+    "-m",
+    "backend.catalog",
+    "--root",
+    "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng05t_v1/deliverable_bundle",
+    "--json"
+  ],
+  "return_code": 0,
+  "cwd": "$FRAMEWORK_ROOT"
+}

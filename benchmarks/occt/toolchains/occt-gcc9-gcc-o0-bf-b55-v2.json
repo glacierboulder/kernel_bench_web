@@ -1,0 +1,19 @@
+{
+  "compiler_jobs_max": 2,
+  "compiler_output_directory": "gcc",
+  "evaluator_directory": "evaluation/cases/five_group_runtime",
+  "executables": {
+    "c_compiler": "gcc",
+    "cmake": "cmake",
+    "cxx_compiler": "g++"
+  },
+  "id": "occt-gcc9-gcc-o0-bf-b55-v2",
+  "platforms": [
+    "linux-x86_64"
+  ],
+  "schema_version": 1,
+  "tcl_paths": "deployment configuration or BENCH_TCL_* environment variables",
+  "tcl_version": "8.6",
+  "title": "OCCT B/F 2016 · GCC 9.4 / Tcl 8.6 / O0",
+  "tools_directory": "occt-gcc9-bf-b55-v2"
+}

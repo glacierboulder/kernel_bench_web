@@ -1,0 +1,20 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": true,
+  "test_done_marker": true,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 7,
+  "numeric_assertions": 3,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={cylinder minus sphere BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={cylinder minus sphere checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={cylinder/sphere overlap BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={cylinder/sphere overlap checkshape validity} detail=value=1\nchecknbshapes cut_result -vertex 3 -edge 5 -wire 4 -face 4 -solid 1\nOK :  is GOOD because number of VERTEX entities is equal to number of expected VERTEX entities\nOK :  is GOOD because number of EDGE entities is equal to number of expected EDGE entities\nOK :  is GOOD because number of WIRE entities is equal to number of expected WIRE entities\nOK :  is GOOD because number of FACE entities is equal to number of expected FACE entities\nOK :  is GOOD because number of SOLID entities is equal to number of expected SOLID entities\nBENCH_ASSERT_PASS kind=numeric label={cut volume} detail={actual=2.8126 expected=2.8126 tolerance=2.0e-4 absolute_error=0.0}\nBENCH_ASSERT_PASS kind=numeric label={Common volume} detail={actual=0.328988 expected=0.328988 tolerance=2.0e-5 absolute_error=0.0}\nBENCH_ASSERT_PASS kind=numeric label={cylinder volume} detail={actual=3.14159 expected=3.141592653589793 tolerance=4.0e-6 absolute_error=2.6535897932333796e-6}\nBENCH_ORACLE_OK assertions=7 numeric_assertions=3\nTEST_DONE assertions=7 numeric_assertions=3\n",
+  "stderr_tail": "",
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/cases_v2/mantis_33541/original.tcl",
+  "draw_executable": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/build_derived_baseline/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.115
+}

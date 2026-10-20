@@ -1,0 +1,2 @@
+# Mantis 33541 — Unit sphere cut from a unit cylinder
+Subtract the unit sphere translated by (1,1,1) from the finite unit cylinder. The result must be a valid one-solid shape with the upstream topology and expected volume. The intersecting Common and Cut results must conserve the cylinder volume. Scaled and translated copies preserve the geometric relationship; a separated sphere is a no-op control.

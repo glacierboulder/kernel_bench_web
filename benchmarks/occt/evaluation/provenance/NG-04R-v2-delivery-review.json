@@ -1,0 +1,23 @@
+{
+  "schema_version": "occt-independent-delivery-review-v1",
+  "group_id": "NG-04R-v2",
+  "review_type": "independent_read_only_final_delivery_review",
+  "verdict": "pass",
+  "scope": "Actual single-group deliverable bundle and NG-04R-v2-final-evidence envelope.",
+  "reviewed_on": "2026-10-18",
+  "framework_evaluation_id": "0069678e94731943",
+  "framework_snapshot_sha256": "b00d011fab6d7472792fc4176652374808a325f90f11f46eab91a07347c20ad3",
+  "findings": [
+    "Catalog contains one group, three issue v2s, and one evaluation suite.",
+    "All 12 raw-result wrappers validate; manifest, receipt, framework record, raw result, case, runner, patch, and source-bundle hashes match.",
+    "The framework record binds the locked snapshot and records 9/9 passed, including hidden checks 6/6.",
+    "Current issue provenance refers to the final evaluation; prior candidate evidence remains historical."
+  ],
+  "limitations_preserved": [
+    "Network namespace creation was unavailable; the recorded offline isolation shim was used and no model/API calls were made.",
+    "M30202 has no established native C++ crash frame or unique first faulty hunk.",
+    "M30082 archived attachment byte identity remains unverified.",
+    "Reference build artifact hashes are inherited from an immutable receipt for the same locked reference tree and patch; the final isolated replay independently records configure/build success."
+  ],
+  "review_actions": "Read-only review; no source edits or builds were performed."
+}

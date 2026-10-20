@@ -1,0 +1,17 @@
+{
+  "id": "example_boolean_group",
+  "version": "1",
+  "title": "示例 · 双 issue 问题组（模板）",
+  "kind": "group",
+  "base_commit": "REPLACE_WITH_SHARED_BASE_COMMIT",
+  "execution_mode": "joint",
+  "issues": [
+    {"id": "example-a", "title": "示例问题 A", "visibility": "public"},
+    {"id": "example-b", "title": "示例问题 B", "visibility": "public"}
+  ],
+  "budget": {"scope": "group", "wall_clock_minutes": 120},
+  "has_hidden_checks": true,
+  "required_output": ["patch", "report"],
+  "tags": ["模板", "多 issue"],
+  "description": "填写真实公开材料后再注册；成员共同修复并提交统一补丁。"
+}

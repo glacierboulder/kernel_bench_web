@@ -1,0 +1,20 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": true,
+  "test_done_marker": true,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 4,
+  "numeric_assertions": 1,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={translated issue input intersection exists} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={translated issue input has one curve} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={translated reached tolerance} detail={actual=7.075041002162086e-07 lower=1.0e-8 upper=1.0e-5}\nBENCH_ASSERT_PASS kind=expression label={half-scale cylinder case has four curves} detail=value=1\nBENCH_ORACLE_OK assertions=4 numeric_assertions=1\nTEST_DONE assertions=4 numeric_assertions=1\n",
+  "stderr_tail": "",
+  "script": "/evaluation/cases/bundle/evaluation/cases/mantis-30082/2/neighborhood.tcl",
+  "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-s60hkk9a/build/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.032
+}

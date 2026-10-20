@@ -1,0 +1,113 @@
+{
+  "checkpoints": [
+    {
+      "case": "issues/occt-30082/2/public/original.tcl",
+      "category": "original",
+      "id": "mantis-30082-original",
+      "issue_id": "mantis-30082",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/mantis-30082/2/neighborhood.tcl",
+      "category": "neighborhood",
+      "id": "mantis-30082-neighborhood",
+      "issue_id": "mantis-30082",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-30082/2/regression.tcl",
+      "category": "regression",
+      "id": "mantis-30082-regression",
+      "issue_id": "mantis-30082",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "issues/occt-30202/2/public/original.tcl",
+      "category": "original",
+      "id": "mantis-30202-original",
+      "issue_id": "mantis-30202",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/mantis-30202/2/neighborhood.tcl",
+      "category": "neighborhood",
+      "id": "mantis-30202-neighborhood",
+      "issue_id": "mantis-30202",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-30202/2/regression.tcl",
+      "category": "regression",
+      "id": "mantis-30202-regression",
+      "issue_id": "mantis-30202",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "issues/occt-33541/2/public/original.tcl",
+      "category": "original",
+      "id": "mantis-33541-original",
+      "issue_id": "mantis-33541",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/mantis-33541/2/neighborhood.tcl",
+      "category": "neighborhood",
+      "id": "mantis-33541-neighborhood",
+      "issue_id": "mantis-33541",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-33541/2/regression.tcl",
+      "category": "regression",
+      "id": "mantis-33541-regression",
+      "issue_id": "mantis-33541",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "NG-04R-v2"
+  ],
+  "id": "NG-04R-checks-v2",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-ng04r-derived-fe81a63b"
+  ],
+  "title": "WLine endpoint construction, special-point refinement, and extension eligibility：几何验收",
+  "version": "1"
+}

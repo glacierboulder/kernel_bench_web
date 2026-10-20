@@ -1,0 +1,28 @@
+{
+  "schema_version": "ng05t_v1_formal_evidence_integration_v1",
+  "group_id": "NG-05T-v1",
+  "candidate_catalog_counts": {
+    "groups": 5,
+    "issues": 11,
+    "suites": 5
+  },
+  "formal_catalog_counts_after_group_assembly": {
+    "groups": 5,
+    "issues": 11,
+    "suites": 5
+  },
+  "evidence_directory": "evaluation/provenance/NG-05T-v1-evidence",
+  "evidence_index_sha256": "365651db9d3e97e6aa3e5da28741222441ef250a023857fc844165418a8ef3af",
+  "reference_patch_sha256": "e969460acfdd3e2fd9eba551bf6e4410e3b72615b60f2ad30956c348dce6423d",
+  "source_bundle": "sources/NG-05T-v1-baseline-and-reference.bundle",
+  "source_bundle_sha256": "aae4ca88798c770ca2cc77d0f3005c7ebd0a3b6f23d3e97b67da58cfb3e8bd00",
+  "formal_acceptance": true,
+  "status": "formally_accepted_final_independent_delivery_review_passed",
+  "post_integration_freeze_snapshot_sha256": "a8b00eaa231dd83f606d79b613586da10c6b8ecbbcc65dc85bf6e54f79983ad9",
+  "post_integration_freeze_audit": "evaluation/provenance/NG-05T-v1-evidence/post_integration_freeze_audit.json",
+  "candidate_only": false,
+  "evidence_stage": "formal_catalog_integrated_and_accepted",
+  "independent_final_review": "PASS",
+  "final_delivery_review_record": "evaluation/provenance/NG-05T-v1-final-delivery-review.json",
+  "final_delivery_review_sha256": "b233f7bbcfe454f1da3b6e1a687e741640efeedf12c0b5ccf2bf34de5156bfb4"
+}

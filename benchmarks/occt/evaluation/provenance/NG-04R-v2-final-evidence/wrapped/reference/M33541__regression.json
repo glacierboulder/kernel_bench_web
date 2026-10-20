@@ -1,0 +1,36 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": true,
+  "test_done_marker": true,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 9,
+  "numeric_assertions": 3,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={intersecting control cut BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersecting control cut checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersecting control Common BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersecting control Common checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={control Cut volume} detail={actual=2.8126 expected=2.8126 tolerance=2.0e-4 absolute_error=0.0}\nBENCH_ASSERT_PASS kind=numeric label={control Common volume} detail={actual=0.328988 expected=0.328988 tolerance=2.0e-5 absolute_error=0.0}\nBENCH_ASSERT_PASS kind=expression label={disjoint control cut BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={disjoint control cut checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={disjoint cylinder volume} detail={actual=3.14159 expected=3.141592653589793 tolerance=4.0e-6 absolute_error=2.6535897932333796e-6}\nchecknbshapes r_out -solid 1\nOK :  is GOOD because number of SOLID entities is equal to number of expected SOLID entities\nBENCH_ORACLE_OK assertions=9 numeric_assertions=3\nTEST_DONE assertions=9 numeric_assertions=3\n",
+  "stderr_tail": "",
+  "script": "/evaluation/cases/bundle/evaluation/cases/mantis-33541/2/regression.tcl",
+  "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-s60hkk9a/build/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.064,
+  "execution_provenance": {
+    "source_tree_sha256": "f5094f5fa60c3c16fbaeac830ac1f4d6b802431b73e6f527990ce909dfd94bdf",
+    "baseline_source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+    "reference_patch_sha256": "0a657cb55f39cf3f4e4cb381d61f97aecff850db93fd580fc619e9a5ae72e776",
+    "runner_sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+    "case_sha256": "07beabc8e9c643e299074d421156e4021b0acc182abd618f5bc82dc2ec7b8120"
+  },
+  "evidence_attestation": {
+    "source_run_manifest": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/reference/manifest.json",
+    "source_run_manifest_sha256": "cd5424e93cd69bd26249c3e89876c7c63008abee4ae1633e4dcced0d2bb02582",
+    "build_receipt": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/reference/build_receipt.json",
+    "build_receipt_sha256": "2fa503e18d250a0c4961407ac5b5de67fcce112ac8df3ecd60a8c8155d8408da",
+    "raw_result": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/reference/results/m33541_regression.json",
+    "raw_result_sha256": "94a7355d74a02acd23ed0f6b679abab153b69bb943b56d14023852dbd4d250e0",
+    "run_phase": "reference"
+  }
+}

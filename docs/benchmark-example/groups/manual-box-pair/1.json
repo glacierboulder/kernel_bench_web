@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "manual-box-pair",
+  "version": "1",
+  "title": "Manual example · Box A and Box B",
+  "kind": "group",
+  "source_id": "occt-3e80fad1779e",
+  "execution_mode": "joint",
+  "members": [
+    {"issue_id": "manual-box-a", "issue_version": "1"},
+    {"issue_id": "manual-box-b", "issue_version": "1"}
+  ],
+  "budget": {"scope": "group", "wall_seconds": 3600},
+  "required_outputs": ["patch.diff", "report.md"],
+  "evaluation_suite": {"id": "manual-box-pair-suite", "version": "1"},
+  "has_hidden_checks": false
+}

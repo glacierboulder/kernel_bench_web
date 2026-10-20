@@ -1,0 +1,44 @@
+{
+  "schema_version": "ng05t_v1_postintegration_freeze_audit_v1",
+  "status": "passed_snapshot_matches_candidate_replay",
+  "formal_catalog_counts": {
+    "issues": 11,
+    "groups": 5,
+    "evaluation_suites": 5
+  },
+  "source_id": "occt-ng04t-v1-baseline-ef5af939",
+  "source_commit": "201a54e50b9f24ecd5d9c401461ad64312de9870",
+  "source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+  "snapshot_sha256": "a8b00eaa231dd83f606d79b613586da10c6b8ecbbcc65dc85bf6e54f79983ad9",
+  "candidate_snapshot_sha256": "a8b00eaa231dd83f606d79b613586da10c6b8ecbbcc65dc85bf6e54f79983ad9",
+  "snapshot_match": true,
+  "catalog_issue_count": 11,
+  "suite_checkpoints": 9,
+  "public_checkpoint_count": 3,
+  "hidden_checkpoint_count": 6,
+  "visible_files": [
+    "issue_mantis-30082/issue.json",
+    "issue_mantis-30082/original.tcl",
+    "issue_mantis-30082/statement.md",
+    "issue_mantis-31602/issue.json",
+    "issue_mantis-31602/original.tcl",
+    "issue_mantis-31602/statement.md",
+    "issue_mantis-32850/issue.json",
+    "issue_mantis-32850/original.tcl",
+    "issue_mantis-32850/statement.md"
+  ],
+  "supervisor_hidden_case_files": [
+    "supervisor/cases/bundle/evaluation/cases/mantis-30082/4/neighborhood.tcl",
+    "supervisor/cases/bundle/evaluation/cases/mantis-30082/4/regression.tcl",
+    "supervisor/cases/bundle/evaluation/cases/mantis-31602/2/neighborhood.tcl",
+    "supervisor/cases/bundle/evaluation/cases/mantis-31602/2/regression.tcl",
+    "supervisor/cases/bundle/evaluation/cases/mantis-32850/1/neighborhood.tcl",
+    "supervisor/cases/bundle/evaluation/cases/mantis-32850/1/regression.tcl"
+  ],
+  "public_material_leaks": [],
+  "fresh_data_dir": "$BENCH_TMP_DIR/occt_ng05t_v1_postintegration_retry_20261018/data",
+  "fresh_cache_dir": "$BENCH_TMP_DIR/occt_ng05t_v1_postintegration_retry_20261018/cache",
+  "fresh_work_dir": "$BENCH_TMP_DIR/occt_ng05t_v1_postintegration_retry_20261018/work",
+  "integration_evaluation_rerun": false,
+  "note": "This gate re-imports the integrated formal bundle, restores its locked source from the independent self-contained-source clone, and re-freezes/verifies the task snapshot; full geometry/build results are the archived candidate formal replay bound to the identical snapshot hash."
+}

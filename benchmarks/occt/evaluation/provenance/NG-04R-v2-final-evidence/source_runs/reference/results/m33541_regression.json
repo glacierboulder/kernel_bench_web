@@ -1,0 +1,20 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": true,
+  "test_done_marker": true,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 9,
+  "numeric_assertions": 3,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={intersecting control cut BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersecting control cut checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersecting control Common BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersecting control Common checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={control Cut volume} detail={actual=2.8126 expected=2.8126 tolerance=2.0e-4 absolute_error=0.0}\nBENCH_ASSERT_PASS kind=numeric label={control Common volume} detail={actual=0.328988 expected=0.328988 tolerance=2.0e-5 absolute_error=0.0}\nBENCH_ASSERT_PASS kind=expression label={disjoint control cut BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={disjoint control cut checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={disjoint cylinder volume} detail={actual=3.14159 expected=3.141592653589793 tolerance=4.0e-6 absolute_error=2.6535897932333796e-6}\nchecknbshapes r_out -solid 1\nOK :  is GOOD because number of SOLID entities is equal to number of expected SOLID entities\nBENCH_ORACLE_OK assertions=9 numeric_assertions=3\nTEST_DONE assertions=9 numeric_assertions=3\n",
+  "stderr_tail": "",
+  "script": "/evaluation/cases/bundle/evaluation/cases/mantis-33541/2/regression.tcl",
+  "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-s60hkk9a/build/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.064
+}

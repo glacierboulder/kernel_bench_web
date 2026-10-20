@@ -1,0 +1,36 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": true,
+  "test_done_marker": true,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 5,
+  "numeric_assertions": 1,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={issue intersection exists} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={one intersection curve} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={bounded reached tolerance} detail={actual=7.075040715644249e-07 expected=6.5e-7 tolerance=7.0e-8 absolute_error=5.750407156442488e-8}\nBENCH_ASSERT_PASS kind=expression label={intersection curve edge BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersection curve edge shape validity} detail=value=1\nBENCH_ORACLE_OK assertions=5 numeric_assertions=1\nTEST_DONE assertions=5 numeric_assertions=1\n",
+  "stderr_tail": "",
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/deliverable_bundle/issues/mantis-30082/4/public/original.tcl",
+  "draw_executable": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng05t_v1/build_reference/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.065,
+  "execution_provenance": {
+    "source_tree_sha256": "d48e73eb8ad378ef637c25b2b69d7eed6324f4f23f8c02763770d706249ce8bc",
+    "baseline_source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+    "reference_patch_sha256": "e969460acfdd3e2fd9eba551bf6e4410e3b72615b60f2ad30956c348dce6423d",
+    "runner_sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+    "case_sha256": "c95ce4a22cb803f7d9e028250206149a9ec1230eb8185b7d14395b4af3dde4b4"
+  },
+  "evidence_attestation": {
+    "source_run_manifest": "evaluation/provenance/NG-05T-v1-evidence/source_runs/reference/manifest.json",
+    "source_run_manifest_sha256": "947ca1196abb708ca069dcf580e05a76b9cc7e9bf0eca97522aeaf89c6eae39e",
+    "build_receipt": "evaluation/provenance/NG-05T-v1-evidence/source_runs/reference/build_receipt.json",
+    "build_receipt_sha256": "e1ef94238dbdd31fefc10507eb7193739ebbc0242f49f89b4f8eb5a63af06a05",
+    "raw_result": "evaluation/provenance/NG-05T-v1-evidence/source_runs/reference/results/m30082_original.json",
+    "raw_result_sha256": "e3d45852ffec14d80add6688f68f71fd80da80ee3a7d6acaacc7cba89b6b03ab",
+    "run_phase": "reference"
+  }
+}

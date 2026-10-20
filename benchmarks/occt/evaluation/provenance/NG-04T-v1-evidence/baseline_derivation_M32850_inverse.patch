@@ -1,0 +1,132 @@
+diff --git a/src/IntPatch/IntPatch_ALineToWLine.cxx b/src/IntPatch/IntPatch_ALineToWLine.cxx
+index 80dea14330..e5d4a48b46 100644
+--- a/src/IntPatch/IntPatch_ALineToWLine.cxx
++++ b/src/IntPatch/IntPatch_ALineToWLine.cxx
+@@ -734,8 +734,7 @@ void IntPatch_ALineToWLine::MakeWLine(const Handle(IntPatch_ALine)& theALine,
+       }
+ 
+       IntPatch_Point aVtx = theALine->Vertex(aVertexNumber);
+-      Standard_Real aNewVertexParam = aLinOn2S->NbPoints() + 1;
+-      Standard_Integer aNbPointsPrev = aLinOn2S->NbPoints();
++      const Standard_Real aNewVertexParam = aLinOn2S->NbPoints() + 1;
+ 
+       //ATTENTION!!!
+       // IsPoleOrSeam inserts new point in aLinOn2S if aVtx respects
+@@ -769,7 +768,6 @@ void IntPatch_ALineToWLine::MakeWLine(const Handle(IntPatch_ALine)& theALine,
+ 
+       aPrePointExist = IsPoleOrSeam(myS1, myS2, aPrefIso, aLinOn2S, aVtx,
+                                 anArrPeriods, aTol, aSingularSurfaceID);
+-
+       if (aPrePointExist == IntPatch_SPntPole ||
+           aPrePointExist == IntPatch_SPntPoleSeamU)
+       {
+@@ -783,11 +781,6 @@ void IntPatch_ALineToWLine::MakeWLine(const Handle(IntPatch_ALine)& theALine,
+       const Standard_Real aCurVertParam = aVtx.ParameterOnLine();
+       if(aPrePointExist != IntPatch_SPntNone)
+       {
+-        if (aNbPointsPrev == aLinOn2S->NbPoints())
+-        {
+-          //Vertex coinsides any point of line and was not added into line
+-          aNewVertexParam = aNbPointsPrev;
+-        }
+         aPrevParam = aParameter = aCurVertParam;
+       }
+       else
+diff --git a/src/IntStart/IntStart_SearchOnBoundaries.gxx b/src/IntStart/IntStart_SearchOnBoundaries.gxx
+index 59bac00346..8c013fbce1 100644
+--- a/src/IntStart/IntStart_SearchOnBoundaries.gxx
++++ b/src/IntStart/IntStart_SearchOnBoundaries.gxx
+@@ -354,7 +354,6 @@ void BoundedArc (const TheArc& A,
+   {
+     const IntSurf_Quadric& aQuadric = Func.Quadric();
+     GeomAbs_SurfaceType TypeQuad = aQuadric.TypeQuadric();
+-    GeomAbs_CurveType TypeConS = GeomAbs_OtherCurve;
+     
+     IntCurveSurface_HInter IntCS;
+     Standard_Boolean IsIntCSdone = Standard_False;
+@@ -388,7 +387,7 @@ void BoundedArc (const TheArc& A,
+       //Exact solution
+       Handle(Adaptor3d_Surface) aSurf = Func.Surface();
+       Adaptor3d_CurveOnSurface ConS(A, aSurf);
+-      TypeConS = ConS.GetType();
++      GeomAbs_CurveType TypeConS = ConS.GetType();
+ #ifdef OCCT_DEBUG
+       Handle(Geom_Curve) CurveConS;
+       switch(TypeConS)
+@@ -609,27 +608,13 @@ void BoundedArc (const TheArc& A,
+           para = aSI(i).Value();
+ 
+           Standard_Real param=(para+parap1)*0.5;
+-          Standard_Real yf = 0.0;
+-          Standard_Real ym = 0.0;
+-          Standard_Real yl = 0.0;
+-          if(Func.Value(param,ym) && Abs(ym) < maxdist) {
+-            Standard_Real sm = Sign(1., ym);
+-            Standard_Boolean aTang = Func.Value(para,yf) && Func.Value(parap1,yl);
+-            if (aTang) {
+-              //Line can be tangent surface if all distances less then maxdist
+-              aTang = aTang && Abs(yf) < maxdist && Abs(yl) < maxdist;
+-            }
+-            if (aTang && IsIntCSdone && TypeConS == GeomAbs_Line) {
+-              //Interval is got by exact intersection
+-              //Line can be tangent if all points are on the same side of surface
+-              //it means that signs of all distances are the same
+-              Standard_Real sf = Sign(1., yf), sl = Sign(1., yl);
+-              aTang = aTang && (sm == sf) && (sm == sl);
+-            }
+-            if(aTang) { 
++          Standard_Real ym;
++          if(Func.Value(param,ym)) {
++            if(Abs(ym)<maxdist) { 
+               //  Modified by skv - Tue Aug 31 12:13:51 2004 OCC569 Begin
+               // Consider this interval as tangent one. Treat it to find
+               // parameter with the lowest function value.
++
+               // Compute the number of nodes.
+               Standard_Real    aTol = TolBoundary*1000.0;
+               if(aTol > 0.001)
+@@ -642,7 +627,6 @@ void BoundedArc (const TheArc& A,
+               Standard_Integer aNbNodes = RealToInt(Ceiling((parap1 - para)/aTol));
+ 
+               Standard_Real    aVal     = RealLast();
+-              Standard_Real aValMax = 0.;
+               //Standard_Integer aNbNodes = 23;
+               Standard_Real    aDelta   = (parap1 - para)/(aNbNodes + 1.);
+               Standard_Integer ii;
+@@ -653,29 +637,17 @@ void BoundedArc (const TheArc& A,
+                 aCurPar = (ii < aNbNodes + 1) ? para + ii*aDelta : parap1;
+ 
+                 if (Func.Value(aCurPar, aCurVal)) {
+-                  Standard_Real anAbsVal = Abs(aCurVal);
+-                  if (anAbsVal < aVal) {
+-                    aVal  = anAbsVal;
++                  //if (aCurVal < aVal) {
++                  if (Abs(aCurVal) < aVal) {
++                    //aVal  = aCurVal;
++                    aVal  = Abs(aCurVal);
+                     param = aCurPar;
+                   }
+-                  if (anAbsVal > aValMax)
+-                  {
+-                    aValMax = anAbsVal;
+-                  }
+                 }
+               }
+-              // At last, interval got by exact intersection can be considered as tangent if
+-              // minimal distance is inside interval and
+-              // minimal and maximal values are almost the same
+-              if (IsIntCSdone && aNbNodes > 1) {
+-                aTang = Abs(param - para) > EpsX && Abs(parap1 - param) > EpsX &&
+-                  0.01*aValMax <= aVal;
+-              }
+-              if (aTang)
+-              {
+-                aSI(i).ChangeValue() = Pdeb - 1;
+-                aSI(i + 1).ChangeValue() = param;
+-              }
++              //  Modified by skv - Tue Aug 31 12:13:51 2004 OCC569 End
++              aSI(i).ChangeValue() = Pdeb - 1;
++              aSI(i + 1).ChangeValue() = param;
+             }
+           }
+         }

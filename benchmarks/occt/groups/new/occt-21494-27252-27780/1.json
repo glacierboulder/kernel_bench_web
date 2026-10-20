@@ -1,0 +1,36 @@
+{
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "evaluation_suite": {
+    "id": "occt-bf-suite-b2613378-27780-27252-21494-v1",
+    "version": "1"
+  },
+  "execution_mode": "joint",
+  "has_hidden_checks": true,
+  "id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+  "kind": "group",
+  "members": [
+    {
+      "issue_id": "occt-21494",
+      "issue_version": "2"
+    },
+    {
+      "issue_id": "occt-27252",
+      "issue_version": "2"
+    },
+    {
+      "issue_id": "occt-27780",
+      "issue_version": "1"
+    }
+  ],
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "schema_version": 1,
+  "source_id": "occt-2613378e60ff",
+  "title": "新题 · OCCT 21494 / 27252 / 27780",
+  "version": "1"
+}

@@ -1,0 +1,29 @@
+{
+  "checkpoints": [
+    {
+      "case": "issues/occt-544/1/public/reproduce.tcl",
+      "category": "original",
+      "id": "visible_issue_544",
+      "issue_id": "occt-544",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    }
+  ],
+  "group_ids": [
+    "occt_boolean_single_544"
+  ],
+  "id": "occt-single-544",
+  "legacy_task_kind": "single",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-3e80fad1779e"
+  ],
+  "title": "OCCT single legacy checks",
+  "version": "1"
+}

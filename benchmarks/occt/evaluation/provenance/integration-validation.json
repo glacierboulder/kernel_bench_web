@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "validated_utc": "2026-10-20T07:56:59Z",
+  "catalog": {
+    "command": "conda run -n \"$BENCH_CONDA_ENV\" python -m backend.catalog --json",
+    "root": "$FRAMEWORK_ROOT/benchmarks/occt",
+    "ok": true,
+    "issues": 24,
+    "groups": 12,
+    "evaluation_suites": 12,
+    "sources": 6,
+    "source_ids": [
+      "occt-3e80fad1779e",
+      "occt-ng04r-derived-fe81a63b",
+      "occt-ng04t-v1-baseline-ef5af939",
+      "occt-d9d3107d8df1",
+      "occt-b55bd0235351",
+      "occt-2613378e60ff"
+    ]
+  },
+  "default_registration": {
+    "command": "incremental import_public_tasks for $FRAMEWORK_ROOT/benchmarks/occt",
+    "database": "$BENCH_DATA_DIR/bench.sqlite3",
+    "tasks_registered": 12,
+    "task_rows_after_registration": 12,
+    "runs_after_registration": 0,
+    "read_only_api_handler_check": {
+      "handler": "backend.app.state (/api/state)",
+      "live_status_and_codex_probe": "stubbed to avoid runtime capability probes",
+      "visible_tasks": 12,
+      "runs": 0,
+      "result": "passed"
+    },
+    "http_testclient_probe": "not completed; probe remained blocked with capability probes stubbed; no resident service started"
+  },
+  "new_group_checkpoint_presence": {
+    "scope": "static manifest and referenced-file existence only; does not report geometry-oracle outcomes",
+    "all_15_issue_versions_have_original_neighborhood_regression": true,
+    "all_49_referenced_case_files_exist": true,
+    "groups": [
+      {
+        "group_id": "NG-04R-v2",
+        "issues": [
+          "mantis-30082@2",
+          "mantis-30202@2",
+          "mantis-33541@2"
+        ],
+        "original": 3,
+        "neighborhood": 3,
+        "regression": 3
+      },
+      {
+        "group_id": "NG-05T-v1",
+        "issues": [
+          "mantis-30082@4",
+          "mantis-31602@2",
+          "mantis-32850@1"
+        ],
+        "original": 3,
+        "neighborhood": 3,
+        "regression": 3
+      },
+      {
+        "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+        "issues": [
+          "occt-21494@1",
+          "occt-29807@1",
+          "occt-31835@1"
+        ],
+        "original": 6,
+        "neighborhood": 3,
+        "regression": 3
+      },
+      {
+        "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+        "issues": [
+          "occt-27310@1",
+          "occt-27773@1",
+          "occt-27252@1"
+        ],
+        "original": 4,
+        "neighborhood": 3,
+        "regression": 3
+      },
+      {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "issues": [
+          "occt-21494@2",
+          "occt-27252@2",
+          "occt-27780@1"
+        ],
+        "original": 3,
+        "neighborhood": 3,
+        "regression": 3
+      }
+    ]
+  },
+  "frozen_runtime_and_dispatch": {
+    "command": "conda run -n \"$BENCH_CONDA_ENV\" python scripts/experiments/validate_occt_bundle_routes.py",
+    "groups_frozen_independently": 5,
+    "prepare_control_succeeded_for_each_group": true,
+    "checkpoint_targets_checked": 49,
+    "dispatcher_selections_checked": 49,
+    "builds_run": 0,
+    "paid_model_calls": 0,
+    "results": [
+      {
+        "group_id": "NG-04R-v2",
+        "suite_id": "NG-04R-checks-v2",
+        "checkpoints": 9,
+        "case_path_aliases": 3,
+        "snapshot_sha256": "cb09f85eb3317fd1836b42d18995b55ca114f1d6a87018c18c0d63742f4bf2da",
+        "control_prepared": true
+      },
+      {
+        "group_id": "NG-05T-v1",
+        "suite_id": "NG-05T-v1-checks",
+        "checkpoints": 9,
+        "case_path_aliases": 3,
+        "snapshot_sha256": "eee585c445f29cf89f986ce3a98986d701785cb6d59f89684c16832e3074ad91",
+        "control_prepared": true
+      },
+      {
+        "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+        "suite_id": "occt-bf-suite-d9d310-21494-29807-31835",
+        "checkpoints": 12,
+        "case_path_aliases": 0,
+        "snapshot_sha256": "d205b6602b02c1bae42a2115ba6fbada852ae0fc76169698013477cc71c19ec4",
+        "control_prepared": true
+      },
+      {
+        "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+        "suite_id": "occt-bf-suite-b55-27310-27773-27252-oracle-v2",
+        "checkpoints": 10,
+        "case_path_aliases": 0,
+        "snapshot_sha256": "94d3743f0e567a5ac6a0e0fa6ea173aa3dae201c8c483b572b8f15a3f6ee425e",
+        "control_prepared": true
+      },
+      {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "suite_id": "occt-bf-suite-b2613378-27780-27252-21494-v1",
+        "checkpoints": 9,
+        "case_path_aliases": 0,
+        "snapshot_sha256": "94a8c56faaff3bd22c701b8fe6209995cd782e8398500e627d3ada935238784a",
+        "control_prepared": true
+      }
+    ]
+  },
+  "source_cache": {
+    "root": "$BENCH_CACHE_DIR/sources",
+    "status": "six source.json entries present; each is verified_git and matches the locked commit and materialized tree SHA-256",
+    "sources": [
+      {
+        "source_id": "occt-3e80fad1779e",
+        "commit": "3e80fad1779e4fab620d1ab1982bfd7722b6c92b",
+        "tree_sha256": "c53024a6a438c14a4bca3e3aae84bead8890cc7e82fdd9f018f235153e57507f",
+        "verification_status": "verified_git"
+      },
+      {
+        "source_id": "occt-ng04r-derived-fe81a63b",
+        "commit": "75fad89c90cf0390a6a053fa43a290b3fbb05069",
+        "tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+        "verification_status": "verified_git"
+      },
+      {
+        "source_id": "occt-ng04t-v1-baseline-ef5af939",
+        "commit": "201a54e50b9f24ecd5d9c401461ad64312de9870",
+        "tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+        "verification_status": "verified_git"
+      },
+      {
+        "source_id": "occt-d9d3107d8df1",
+        "commit": "d9d3107d8df19cacc3d7a0cd46ba51deee0bf6f2",
+        "tree_sha256": "fdc06c2924af2315e740cec852552d1f9b8d8def2dd13f8a3f592b289885403f",
+        "verification_status": "verified_git"
+      },
+      {
+        "source_id": "occt-b55bd0235351",
+        "commit": "b55bd02353519ebba14575f8056bb2b14585089e",
+        "tree_sha256": "b65869dfa1367bb32a63e47accc1552de0fa6a6d5bd8a90a38db64bd4c7aaa77",
+        "verification_status": "verified_git"
+      },
+      {
+        "source_id": "occt-2613378e60ff",
+        "commit": "2613378e60ff5e517b2bf73699184d0c6f636bb8",
+        "tree_sha256": "5ead8e62e4d72f801f43d8bd81dda610925dd2b9704ff51aaebe755def165104",
+        "verification_status": "verified_git"
+      }
+    ]
+  },
+  "toolchain_preflight": {
+    "command": "conda run -n \"$BENCH_CONDA_ENV\" python scripts/experiments/preflight_occt_toolchains.py",
+    "profiles_checked": 5,
+    "all_required_executables_available": true,
+    "tcl_version": "8.6.13",
+    "ninja_version": "1.13.0.git.kitware.jobserver-pipe-1",
+    "max_compiler_jobs": 2,
+    "resolved_compiler_jobs": 2,
+    "builds_invoked": false,
+    "details": [
+      {
+        "toolchain_id": "occt-clang10-tcl86-bf-d9-v1",
+        "cmake": "available",
+        "c_compiler": "available",
+        "cxx_compiler": "available",
+        "tool_directory_executable": true
+      },
+      {
+        "toolchain_id": "occt-clang10-tcl86-bf-g3-v1",
+        "cmake": "available",
+        "c_compiler": "available",
+        "cxx_compiler": "available",
+        "tool_directory_executable": true
+      },
+      {
+        "toolchain_id": "occt-clang10-tcl86-v1",
+        "cmake": "available",
+        "c_compiler": "available",
+        "cxx_compiler": "available",
+        "tool_directory_executable": true
+      },
+      {
+        "toolchain_id": "occt-gcc9-gcc-o0-bf-b55-v2",
+        "cmake": "available",
+        "c_compiler": "available",
+        "cxx_compiler": "available",
+        "tool_directory_executable": true
+      },
+      {
+        "toolchain_id": "occt-intersection-clang10-v1",
+        "cmake": "available",
+        "c_compiler": "available",
+        "cxx_compiler": "available",
+        "tool_directory_executable": true
+      }
+    ]
+  },
+  "focused_tests": {
+    "command": "conda run -n \"$BENCH_CONDA_ENV\" python -m unittest tests.test_toolchain tests.test_freeze tests.test_catalog_contract tests.test_checkpoints tests.test_evaluation_stages tests.test_suite_driver tests.test_repro_runner -v",
+    "tests_run": 27,
+    "passed": 27,
+    "failed": 0,
+    "test_runtime_seconds": 6.885
+  },
+  "portability": {
+    "redaction_manifest": "evaluation/provenance/portability-redactions.json",
+    "source_provenance_sanitized": true,
+    "machine_local_paths_and_environment_names_removed_from_shareable_text": true,
+    "evaluator_portability_hash_manifest": "evaluation/provenance/evaluator-environment-portability.json",
+    "geometry_inputs_and_oracle_predicates_changed": false
+  },
+  "archives": [
+    {
+      "original_path": "$FRAMEWORK_ROOT/benchmarks/occt_intersection",
+      "archive_path": "$CADAI_ARCHIVE_ROOT/occt_intersection_20261020T070331Z",
+      "checksum_manifest": "$CADAI_ARCHIVE_ROOT/occt_intersection_20261020T070331Z/ARCHIVE-CHECKSUMS.json",
+      "files": 882,
+      "total_file_bytes": 982054506
+    },
+    {
+      "original_path": "$FRAMEWORK_ROOT/benchmarks/.occt-premerge-backup",
+      "archive_path": "$CADAI_ARCHIVE_ROOT/occt-benchmark-premerge_20261020T070331Z",
+      "checksum_manifest": "$CADAI_ARCHIVE_ROOT/occt-benchmark-premerge_20261020T070331Z/ARCHIVE-CHECKSUMS.json",
+      "files": 73,
+      "total_file_bytes": 320863
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "failure_policy": "Draw diagnostics, missing commands, Tcl source errors, timeout, and runtime failures are never geometry failures; only a completed exact original assertion emitting explicit geometry predicate errors is geometry_fail.",
+  "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+  "hidden_cases": {
+    "M21494_neighbor_sphere9p5": {
+      "category": "neighborhood",
+      "check_ids": [
+        "two_analytic_closed_curves"
+      ],
+      "inputs": [
+        {
+          "path": "inputs/M21494_neighbor_source.tcl",
+          "sha256": "f69f8af78dc401728e491399f3e077b5d7da0febd6d367cb030441f79664e3a6"
+        },
+        {
+          "path": "inputs/M21494_intersection_oracle.tcl",
+          "sha256": "fdb259dffb2dfc917e39f07bcc67e2a3bab757f03fa0bbe488b789570a64a2a0"
+        },
+        {
+          "path": "inputs/official_9bc5f585_intss_begin.tcl",
+          "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+        },
+        {
+          "path": "inputs/M21494_neighbor_sphere9p5.tcl",
+          "sha256": "14dea7550fd64df29481458f1f3b7e70d04d7e8a9c3e5b60687464892b1cc352"
+        }
+      ],
+      "issue": "21494",
+      "path": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M21494_neighbor_sphere9p5.tcl",
+      "sha256": "14dea7550fd64df29481458f1f3b7e70d04d7e8a9c3e5b60687464892b1cc352"
+    },
+    "M21494_regression_cone10_sphere9": {
+      "category": "regression",
+      "check_ids": [
+        "two_analytic_closed_curves"
+      ],
+      "inputs": [
+        {
+          "path": "inputs/M21494_regression_source.tcl",
+          "sha256": "1c8e9fd77b35b11ec6e6d122e9ac088ca66975b00786a129b5336b13738ebf96"
+        },
+        {
+          "path": "inputs/M21494_intersection_oracle.tcl",
+          "sha256": "fdb259dffb2dfc917e39f07bcc67e2a3bab757f03fa0bbe488b789570a64a2a0"
+        },
+        {
+          "path": "inputs/official_9bc5f585_intss_begin.tcl",
+          "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+        },
+        {
+          "path": "inputs/M21494_regression_cone10_sphere9.tcl",
+          "sha256": "6a8e2e791a2917f917fa7f88dca74b078341b96b5bfa364505a3930ec36bc0d2"
+        }
+      ],
+      "issue": "21494",
+      "path": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M21494_regression_cone10_sphere9.tcl",
+      "sha256": "6a8e2e791a2917f917fa7f88dca74b078341b96b5bfa364505a3930ec36bc0d2"
+    },
+    "M29807_cone_plane_ring_control": {
+      "category": "regression",
+      "check_ids": [
+        "cone_plane_ring_analytic_geometry"
+      ],
+      "inputs": [
+        {
+          "path": "inputs/M29807_ring_case_source.tcl",
+          "sha256": "140bb6460ba913fa02c4cac8840b9b6e6dd5f0dcae7c339b17a96d49a36dec79"
+        },
+        {
+          "path": "inputs/M29807_ring_oracle.tcl",
+          "sha256": "b41682478a6667632b153d628afd55b1d4e99e2626d56e0d529a672ef789a4d9"
+        },
+        {
+          "path": "inputs/official_9bc5f585_intss_begin.tcl",
+          "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+        },
+        {
+          "path": "inputs/M29807_cone_plane_ring_control.tcl",
+          "sha256": "ec0c671c88801797c27aea946db38d6c375d934d2bac9e9329be7f79b72d7a79"
+        }
+      ],
+      "issue": "29807",
+      "path": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M29807_cone_plane_ring_control.tcl",
+      "sha256": "ec0c671c88801797c27aea946db38d6c375d934d2bac9e9329be7f79b72d7a79"
+    },
+    "M29807_neighbor_i1002": {
+      "category": "neighborhood",
+      "check_ids": [
+        "official_tolerance_and_curve_count"
+      ],
+      "inputs": [
+        {
+          "path": "inputs/official_bug29807_i1002.tcl",
+          "sha256": "ad27aa48033fe2768bba305c9b677312aeae9705f9544c64558e2b75d036ef28"
+        },
+        {
+          "path": "inputs/bug29807-obj.brep",
+          "sha256": "53c74f5c57fd22ed11aef27d4ddfb362503a48d16eb3ca9dfaee6d030636465a"
+        },
+        {
+          "path": "inputs/bug29807-tool.brep",
+          "sha256": "2774749bea5417d09e20f9bcfbdf539e34018abaf5507f8ad979d237104b8210"
+        },
+        {
+          "path": "inputs/M29807_neighbor_i1002.tcl",
+          "sha256": "5feeefbe19ea6b3f6b2a1c8ddc5a6586349061da63ade89941e04e01e65f697d"
+        }
+      ],
+      "issue": "29807",
+      "path": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M29807_neighbor_i1002.tcl",
+      "sha256": "5feeefbe19ea6b3f6b2a1c8ddc5a6586349061da63ade89941e04e01e65f697d"
+    },
+    "M31835_neighbor_axis_offset5": {
+      "category": "neighborhood",
+      "check_ids": [
+        "valid_three_cylinder_common_volume"
+      ],
+      "inputs": [
+        {
+          "path": "inputs/M31835_neighbor_axis_offset5_source.tcl",
+          "sha256": "1abf12d7414472fc7d9a20274e87a9aea48db8268d02291a348a90b3f1329bc9"
+        },
+        {
+          "path": "inputs/M31835_three_cylinder_oracle.tcl",
+          "sha256": "1e8005aae8e5913b6bc8a01f948df45082901d882311aa9ca0462d758a4272f8"
+        },
+        {
+          "path": "inputs/M31835_neighbor_axis_offset5.tcl",
+          "sha256": "8b68fb9eb10a4b86d310248c026e820fdcf82899b2f8d422524eb9dc13b8aaad"
+        }
+      ],
+      "issue": "31835",
+      "path": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M31835_neighbor_axis_offset5.tcl",
+      "sha256": "8b68fb9eb10a4b86d310248c026e820fdcf82899b2f8d422524eb9dc13b8aaad"
+    },
+    "M31835_regression_steinmetz_r80": {
+      "category": "regression",
+      "check_ids": [
+        "valid_three_cylinder_common_volume"
+      ],
+      "inputs": [
+        {
+          "path": "inputs/M31835_regression_steinmetz_r80_source.tcl",
+          "sha256": "0a816add8c252182ac22f828f42710fd9e6f93baf80c94ec73f38dce341d45a4"
+        },
+        {
+          "path": "inputs/M31835_three_cylinder_oracle.tcl",
+          "sha256": "1e8005aae8e5913b6bc8a01f948df45082901d882311aa9ca0462d758a4272f8"
+        },
+        {
+          "path": "inputs/M31835_regression_steinmetz_r80.tcl",
+          "sha256": "6935600c84c3364e2806f58a9fe1ef705253d434e7ed2f0341e180bac0904283"
+        }
+      ],
+      "issue": "31835",
+      "path": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M31835_regression_steinmetz_r80.tcl",
+      "sha256": "6935600c84c3364e2806f58a9fe1ef705253d434e7ed2f0341e180bac0904283"
+    }
+  },
+  "official_helper": {
+    "path": "issues/occt-21494/1/public/official_9bc5f585_intss_begin.tcl",
+    "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+  },
+  "official_tests": {
+    "M21494_original": {
+      "path": "issues/occt-21494/1/public/bug21494_2.tcl",
+      "sha256": "09801f217d3a6668062405c2aa66d3f9cb4db765b1d0fa4cd8ab97a3148b2b47",
+      "test_commit": "9bc5f5850a61be8afe2bd8c2490903a418fa8fc4",
+      "test_path": "tests/lowalgos/intss/bug21494_2"
+    },
+    "M29807_i5002": {
+      "path": "issues/occt-29807/1/public/bug29807_i5002.tcl",
+      "sha256": "9f0c58fbfd6f56bbbc545f16cf7b4197529acb929e15961d7d60f9b8671d1fe0",
+      "test_commit": "3306fdd954ad583d2652f0454612b6183176eb2e",
+      "test_path": "tests/bugs/modalg_7/bug29807_i5002"
+    },
+    "M29807_svm01": {
+      "path": "issues/occt-29807/1/public/bug29807_svm01.tcl",
+      "sha256": "c5a6829e61545ab97ee642deaac6b6ae6e841a332a15829c0fa13cda80e73336",
+      "test_commit": "3306fdd954ad583d2652f0454612b6183176eb2e",
+      "test_path": "tests/bugs/modalg_7/bug29807_svm01"
+    },
+    "M29807_svm02": {
+      "path": "issues/occt-29807/1/public/bug29807_svm02.tcl",
+      "sha256": "6b5be1415d7c55fa85804d435db5e5fc6e3bf040f71f23a4f81e2ac76fbbe72f",
+      "test_commit": "3306fdd954ad583d2652f0454612b6183176eb2e",
+      "test_path": "tests/bugs/modalg_7/bug29807_svm02"
+    },
+    "M31835_1": {
+      "path": "issues/occt-31835/1/public/bug31835_1.tcl",
+      "sha256": "77b9905c9da09bc1bf8966ea67a7877afdcf6cb17c4f915063207f5bfe689873",
+      "test_commit": "135c2bd90858f779bb4557a909e18adf8422649e",
+      "test_path": "tests/bugs/modalg_7/bug31835_1"
+    },
+    "M31835_2": {
+      "path": "issues/occt-31835/1/public/bug31835_2.tcl",
+      "sha256": "1e1a6438d1ff2eb9797a5c0d500e4c5f416a120711b91f198bda2b07091c9e8e",
+      "test_commit": "135c2bd90858f779bb4557a909e18adf8422649e",
+      "test_path": "tests/bugs/modalg_7/bug31835_2"
+    }
+  },
+  "run_matrix": {
+    "neighborhood": "F geometry_pass",
+    "original": "B geometry_fail, F geometry_pass",
+    "regression": "B and F geometry_pass"
+  },
+  "schema_version": "bf-frozen-case-contracts-v1"
+}

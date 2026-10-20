@@ -1,0 +1,37 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": false,
+  "test_done_marker": false,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 15,
+  "numeric_assertions": 0,
+  "failed_assertions": 0,
+  "tcl_error_detected": true,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": true,
+  "occt_error_detected": true,
+  "oracle_summary_found": false,
+  "stdout_tail": "DRAW is running in batch mode\n0030202: IntPatch_WLineTool::JoinWLines array out of bounds\nM30202_OPERATION r_0\nBENCH_ASSERT_PASS kind=expression label={r_0 BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={r_0 checkshape validity} detail=value=1\nchecknbshapes r_0 -solid 1 -shell 1 -face 10 -wire 10\nOK :  is GOOD because number of WIRE entities is equal to number of expected WIRE entities\nOK :  is GOOD because number of FACE entities is equal to number of expected FACE entities\nOK :  is GOOD because number of SHELL entities is equal to number of expected SHELL entities\nOK :  is GOOD because number of SOLID entities is equal to number of expected SOLID entities\ncheckprops r_0 -v 0.15225\nBENCH_ASSERT_PASS kind=expression label={r_0 BOP argument audit} detail=value=1\nM30202_OPERATION r_1\nBENCH_ASSERT_PASS kind=expression label={r_1 BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={r_1 checkshape validity} detail=value=1\nchecknbshapes r_1 -solid 1 -shell 1 -face 31 -wire 33\nOK :  is GOOD because number of WIRE entities is equal to number of expected WIRE entities\nOK :  is GOOD because number of FACE entities is equal to number of expected FACE entities\nOK :  is GOOD because number of SHELL entities is equal to number of expected SHELL entities\nOK :  is GOOD because number of SOLID entities is equal to number of expected SOLID entities\ncheckprops r_1 -v 46.7138\nBENCH_ASSERT_PASS kind=expression label={r_1 BOP argument audit} detail=value=1\nM30202_OPERATION r_2\nBENCH_ASSERT_PASS kind=expression label={r_2 BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={r_2 checkshape validity} detail=value=1\nchecknbshapes r_2 -solid 1 -shell 1 -face 29 -wire 31\nOK :  is GOOD because number of WIRE entities is equal to number of expected WIRE entities\nOK :  is GOOD because number of FACE entities is equal to number of expected FACE entities\nOK :  is GOOD because number of SHELL entities is equal to number of expected SHELL entities\nOK :  is GOOD because number of SOLID entities is equal to number of expected SOLID entities\ncheckprops r_2 -v 45.3505\nBENCH_ASSERT_PASS kind=expression label={r_2 BOP argument audit} detail=value=1\nM30202_OPERATION r_3\nBENCH_ASSERT_PASS kind=expression label={r_3 BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={r_3 checkshape validity} detail=value=1\nchecknbshapes r_3 -solid 1 -shell 1 -face 12 -wire 12\nOK :  is GOOD because number of WIRE entities is equal to number of expected WIRE entities\nOK :  is GOOD because number of FACE entities is equal to number of expected FACE entities\nOK :  is GOOD because number of SHELL entities is equal to number of expected SHELL entities\nOK :  is GOOD because number of SOLID entities is equal to number of expected SOLID entities\ncheckprops r_3 -v 1.2111\nBENCH_ASSERT_PASS kind=expression label={r_3 BOP argument audit} detail=value=1\nM30202_OPERATION r_4\nBENCH_ASSERT_PASS kind=expression label={r_4 BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={r_4 checkshape validity} detail=value=1\nchecknbshapes r_4 -vertex 8 -edge 8\nOK :  is GOOD because number of VERTEX entities is equal to number of expected VERTEX entities\nOK :  is GOOD because number of EDGE entities is equal to number of expected EDGE entities\nBENCH_ASSERT_PASS kind=expression label={r_4 BOP argument audit} detail=value=1\ncheckprops r_0 -s 3.07923 -v 0.15225\ncheckprops r_1 -s 128.978 -v 46.7138\ncheckprops r_2 -s 117.75 -v 45.3505\ncheckprops r_3 -s 14.3071 -v 1.2111\ncheckprops r_4 -l 8.28981\ncheckmaxtol result -min_tol 1.0e-4\n",
+  "stderr_tail": "BENCH_TCL_ERROR: An exception was caught 0x2949e7c0 : OSD_SIGSEGV: SIGSEGV 'segmentation violation' detected. Address 28.\nAn exception was caught 0x2949e7c0 : OSD_SIGSEGV: SIGSEGV 'segmentation violation' detected. Address 28.\n    while executing\n\"bopcurves b1_5 b2_7 -2d\"\n    (file \"$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/cases_v2/mantis_30202/original.tcl\" line 153)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+  "full_log_failure_detected": true,
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/cases_v2/mantis_30202/original.tcl",
+  "draw_executable": "$BENCH_TMP_DIR/occt_ng04_bundle_trial/baseline_build_v2/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 1.618,
+  "execution_provenance": {
+    "source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+    "baseline_source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+    "reference_patch_sha256": null,
+    "runner_sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+    "case_sha256": "bab1c3ab3b7962d958715d15559806e595ed2e3b761031115cec0bf0b3d7261c"
+  },
+  "evidence_attestation": {
+    "source_run_manifest": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/baseline/manifest.json",
+    "source_run_manifest_sha256": "f463a624b301902a4ca846d995b3d2718654860f7f089272937703db37c681cc",
+    "build_receipt": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/baseline/build_receipt.json",
+    "build_receipt_sha256": "405893e4df064b8a9b986db27a48cf4d98948a2d50601cd2596b6fd12474dd1e",
+    "raw_result": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/baseline/results/m30202_original.json",
+    "raw_result_sha256": "055c8cdb5085bf065cdeb0375933d2d9f99b3f3eaf992c7431700393eeb9462b",
+    "run_phase": "baseline"
+  }
+}

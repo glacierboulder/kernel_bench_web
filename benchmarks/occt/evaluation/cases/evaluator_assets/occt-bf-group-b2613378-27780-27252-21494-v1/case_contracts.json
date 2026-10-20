@@ -1,0 +1,66 @@
+{
+  "cases": {
+    "M21494_neighbor_sphere9p5": {
+      "category": "neighborhood",
+      "issue_id": "occt-21494",
+      "issue_version": "2",
+      "script": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M21494_neighbor_sphere9p5.tcl"
+    },
+    "M21494_original": {
+      "category": "original",
+      "issue_id": "occt-21494",
+      "issue_version": "2",
+      "script": "issues/occt-21494/2/public/harness_bug21494_2.tcl"
+    },
+    "M21494_regression_cone10_sphere9": {
+      "category": "regression",
+      "issue_id": "occt-21494",
+      "issue_version": "2",
+      "script": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M21494_regression_cone10_sphere9.tcl"
+    },
+    "M27252_neighbor_translated_plane": {
+      "category": "neighborhood",
+      "issue_id": "occt-27252",
+      "issue_version": "2",
+      "script": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27252_neighbor_translated_plane.tcl"
+    },
+    "M27252_original": {
+      "category": "original",
+      "issue_id": "occt-27252",
+      "issue_version": "2",
+      "script": "issues/occt-27252/2/public/harness_bug27252_1.tcl"
+    },
+    "M27252_regression_cylinder_plane": {
+      "category": "regression",
+      "issue_id": "occt-27252",
+      "issue_version": "2",
+      "script": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27252_regression_cylinder_plane.tcl"
+    },
+    "M27780_neighbor_translated_face": {
+      "category": "neighborhood",
+      "issue_id": "occt-27780",
+      "issue_version": "1",
+      "script": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27780_neighbor_translated_face.tcl"
+    },
+    "M27780_original": {
+      "category": "original",
+      "issue_id": "occt-27780",
+      "issue_version": "1",
+      "script": "issues/occt-27780/1/public/harness_bug27780.tcl"
+    },
+    "M27780_regression_finite_plane": {
+      "category": "regression",
+      "issue_id": "occt-27780",
+      "issue_version": "1",
+      "script": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27780_regression_finite_plane.tcl"
+    }
+  },
+  "display_adaptation_boundary": {
+    "M21494": "Only pure DRAW display commands are no-op adapted; official test Tcl and official geometry helper bytes are unchanged.",
+    "M27252": "smallview remains unmodified; the B empty-curve observation precedes unset NbCurv and F retains its later exact headless view error.",
+    "M27780": "Only pure display operations are adapted; p-curve direction predicate remains before the known trailing view error."
+  },
+  "failure_policy": "Only a completed case-specific physical geometric predicate can yield geometry_pass/fail. Missing inputs, command/parser errors, and unrecognized source/runtime failures are not geometric outcomes.",
+  "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+  "schema_version": "bf-g3-case-map-v1"
+}

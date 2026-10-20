@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "manual-box-a-suite",
+  "version": "1",
+  "title": "Manual example · Box A checks",
+  "source_ids": ["occt-3e80fad1779e"],
+  "group_ids": ["manual-box-a-single"],
+  "checkpoints": [
+    {
+      "id": "manual_box_a_reproducer",
+      "issue_id": "manual-box-a",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "case": "issues/manual-box-a/1/public/reproduce.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 30,
+      "required": true,
+      "runner_options": {"case_timeout_seconds": 20}
+    }
+  ]
+}

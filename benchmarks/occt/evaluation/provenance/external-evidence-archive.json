@@ -1,0 +1,3527 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-20T07:32:43.056738+00:00",
+  "purpose": "Preserve machine-local raw OCCT evaluation records and original source bundles outside the shareable benchmark project.",
+  "project_root_placeholder": "$FRAMEWORK_ROOT",
+  "archive_root_placeholder": "$CADAI_ARCHIVE_ROOT/occt-benchmark-supporting-evidence_20261020T073242Z",
+  "file_count": 696,
+  "total_file_bytes": 332991851,
+  "checksum_manifest": "${CADAI_ARCHIVE_ROOT}/occt-benchmark-supporting-evidence_20261020T073242Z/ARCHIVE-CHECKSUMS.json",
+  "source_bundles": [
+    {
+      "original_path": "$FRAMEWORK_ROOT/benchmarks/occt/evaluation/provenance/source-packs/occt-five-groups/source-bundles/NG-04R-baseline-and-reference.bundle",
+      "archive_path": "source-bundles/NG-04R-baseline-and-reference.bundle",
+      "size_bytes": 161444792,
+      "sha256": "2ca7cd07c717f21b2293ad04e460345516a7f462bdd22b5a872728e0070494c3",
+      "git_bundle_heads": [
+        "75fad89c90cf0390a6a053fa43a290b3fbb05069 refs/heads/ng04_group_baseline_m30082_m30202",
+        "27d3d2d4d2b1ca23507834f616632524db28eba8 refs/heads/ng04_group_reference_clean"
+      ]
+    },
+    {
+      "original_path": "$FRAMEWORK_ROOT/benchmarks/occt/evaluation/provenance/source-packs/occt-five-groups/source-bundles/NG-05T-v1-baseline-and-reference.bundle",
+      "archive_path": "source-bundles/NG-05T-v1-baseline-and-reference.bundle",
+      "size_bytes": 161617012,
+      "sha256": "aae4ca88798c770ca2cc77d0f3005c7ebd0a3b6f23d3e97b67da58cfb3e8bd00",
+      "git_bundle_heads": [
+        "5d04b991a6e13773db48ef12ec5de2eae8868202 refs/heads/ng05t-v1-reference",
+        "5d04b991a6e13773db48ef12ec5de2eae8868202 HEAD"
+      ]
+    }
+  ],
+  "raw_evidence_groups": [
+    {
+      "group": "benchmark/evaluation/provenance/bf/**",
+      "files": 676,
+      "total_file_bytes": 9914592
+    },
+    {
+      "group": "remaining_ignored_provenance_logs",
+      "files": 18,
+      "total_file_bytes": 15455
+    }
+  ],
+  "checksum_manifest_sha256": "8b726cf7bcc78d3a98e0d8a71826b25b5f0a619e0415b25d01735b0b17d5202b",
+  "checksums": [
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/acceptance.json",
+      "size_bytes": 1163,
+      "sha256": "538290c614947d90709287855b6607bedece4077bc03007ff965c4205893376c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/bf_evidence.json",
+      "size_bytes": 35187,
+      "sha256": "fc31c2d10748836944be5007a7935905390e428d147e9bd3f8f64bfcd37617eb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/build-configs/B/artifact_verification.json",
+      "size_bytes": 2311,
+      "sha256": "3d165d9427410dca63b44bf68eaccdac1bf962a2d3da5ba8732f4a4a46021f42"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/build-configs/B/build_record.json",
+      "size_bytes": 2590,
+      "sha256": "5d35d8ac4c68d3ffd6cecf9e44e771827ebc2ae29a59ad31e49d68ede9adad2a"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/build-configs/F/artifact_verification.json",
+      "size_bytes": 1506,
+      "sha256": "36e85759669255034b7b27f12b4fa34cadaedc44e7733d2ebab49e6f45b47619"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/build-configs/F/build_record.json",
+      "size_bytes": 2255,
+      "sha256": "04dece8cc3d34acb673dae5b0a6323534bbdfdf4d3b6e04d92eb57b76cef1590"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/build-configs/build_config.json",
+      "size_bytes": 2689,
+      "sha256": "bde9d2628426a4dca5a0d75fc94cbe6d7a0c15495a01c0fa54f44d8354c3fe69"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/build-configs/build_identities.json",
+      "size_bytes": 2402,
+      "sha256": "c1a373e337f844b34eb37c447bb98f546e40c86eef092f067bb826295ef022d1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/build-configs/bundle/build.sh",
+      "size_bytes": 188,
+      "sha256": "b8330250a7df543dc7d6bad3c5111fdb462198ebc29e86a9fdb9faf32c9b7814"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/build-configs/bundle/xlocale.h",
+      "size_bytes": 267,
+      "sha256": "0cfbf755395add5d865f01722849120cbd0dccb0774755f2af369950dbcb779f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_neighbor_sphere9p5/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_neighbor_sphere9p5/harness.tcl",
+      "size_bytes": 3133,
+      "sha256": "0a3fa6d75f493beabe249b68094c31eca362d611237168ed4f2e4fa28ba896f4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_neighbor_sphere9p5/intersection_oracle.tcl",
+      "size_bytes": 5903,
+      "sha256": "8cf973f4185a770de74b2b65c594be60164e3307e1a2e20636664a1d0f5f0175"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_neighbor_sphere9p5/official_helper.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_neighbor_sphere9p5/oracle_body.tcl",
+      "size_bytes": 370,
+      "sha256": "bbd6587be7021b33737f95f14b47f779618317be03e068122e6ba35a827e9dd1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_neighbor_sphere9p5/run_eval.py",
+      "size_bytes": 12289,
+      "sha256": "c77f5fb2bf28ac1ddc5039bec0a740ad95805cd86dab0ca13d867f7d854ba4fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_original/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_original/harness.tcl",
+      "size_bytes": 2870,
+      "sha256": "6bc394b1d4da3dae6a7bfc7cb58778074b50e70981e2814e92ca345edb2df109"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_original/official_helper.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_original/official_test.tcl",
+      "size_bytes": 1478,
+      "sha256": "09801f217d3a6668062405c2aa66d3f9cb4db765b1d0fa4cd8ab97a3148b2b47"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_original/run_eval.py",
+      "size_bytes": 12289,
+      "sha256": "c77f5fb2bf28ac1ddc5039bec0a740ad95805cd86dab0ca13d867f7d854ba4fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_regression_cone10_sphere9/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_regression_cone10_sphere9/harness.tcl",
+      "size_bytes": 3161,
+      "sha256": "fa781837124691df321b5a76f963975ad1142be083f3322e6288839a362aa7df"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_regression_cone10_sphere9/intersection_oracle.tcl",
+      "size_bytes": 5903,
+      "sha256": "8cf973f4185a770de74b2b65c594be60164e3307e1a2e20636664a1d0f5f0175"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_regression_cone10_sphere9/official_helper.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_regression_cone10_sphere9/oracle_body.tcl",
+      "size_bytes": 379,
+      "sha256": "4a98549fdbd30a639a84e4aa0e31764a0a8dbe7b2b1c40437963fa893dfa0c5c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M21494_regression_cone10_sphere9/run_eval.py",
+      "size_bytes": 12289,
+      "sha256": "c77f5fb2bf28ac1ddc5039bec0a740ad95805cd86dab0ca13d867f7d854ba4fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/harness.tcl",
+      "size_bytes": 1211,
+      "sha256": "8d19c2cd4a69b3f264c5a6cd6e2ea7ca6e630802161cdf613a8c40c10ca8d0c0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/inputs/bug27221.brep",
+      "size_bytes": 21259,
+      "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/oracle_body.tcl",
+      "size_bytes": 1770,
+      "sha256": "5272a139ea9f001e9f544bccbc921958b0ccc5497c300fa1aa78fbdf36aa38bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/run_eval.py",
+      "size_bytes": 12289,
+      "sha256": "c77f5fb2bf28ac1ddc5039bec0a740ad95805cd86dab0ca13d867f7d854ba4fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_original/draw_pure_display_noop.tcl",
+      "size_bytes": 320,
+      "sha256": "dea5c27787c800b29f6cc2f8e303d74b26a06a2b75c4fcc2ddbe1378964953ce"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_original/harness.tcl",
+      "size_bytes": 1229,
+      "sha256": "6d8652828f821c3ec5b7929490239a758d69ac2e3b20c90c3d85e8a3156eeca3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_original/inputs/bug27221.brep",
+      "size_bytes": 21259,
+      "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_original/official_test.tcl",
+      "size_bytes": 812,
+      "sha256": "00da8b7e69b3a955dee068a593ad1281154909fa93e64bf113b831664c44d607"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_original/run_eval.py",
+      "size_bytes": 12289,
+      "sha256": "c77f5fb2bf28ac1ddc5039bec0a740ad95805cd86dab0ca13d867f7d854ba4fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_regression_cylinder_plane/harness.tcl",
+      "size_bytes": 1209,
+      "sha256": "77881543265e499d855768987fa9f4e9d9c17f2e84b3f746c76be14ba7906900"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_regression_cylinder_plane/oracle_body.tcl",
+      "size_bytes": 1841,
+      "sha256": "e359d80f2464e3207cc07b285eb57b70b69cabc0021ea8b084fa59a596b440c1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_regression_cylinder_plane/run_eval.py",
+      "size_bytes": 12289,
+      "sha256": "c77f5fb2bf28ac1ddc5039bec0a740ad95805cd86dab0ca13d867f7d854ba4fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/harness.tcl",
+      "size_bytes": 778,
+      "sha256": "05105a20a0a482465678fa0a88e8ab50e981f9f48a41179853ffb9eaf179dfbd"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/inputs/buc60532a.brep",
+      "size_bytes": 265191,
+      "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/inputs/buc60532b.brep",
+      "size_bytes": 17791,
+      "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/oracle_body.tcl",
+      "size_bytes": 3205,
+      "sha256": "0b43a8a9fa486257e1a1b63569b86c05329ce20331873593e1dedec665fdc6ab"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/run_eval.py",
+      "size_bytes": 12289,
+      "sha256": "c77f5fb2bf28ac1ddc5039bec0a740ad95805cd86dab0ca13d867f7d854ba4fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_original/draw_pure_display_noop.tcl",
+      "size_bytes": 295,
+      "sha256": "c465d73430f50b53b6c5443c94179cb4fa385d1e42bae5e8316a1d65c2328726"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_original/harness.tcl",
+      "size_bytes": 1318,
+      "sha256": "fcb755741b0323aa64907f102b1c62f9cb16464e0c2e6793a424a24348f05fcf"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_original/inputs/buc60532a.brep",
+      "size_bytes": 265191,
+      "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_original/inputs/buc60532b.brep",
+      "size_bytes": 17791,
+      "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_original/official_test.tcl",
+      "size_bytes": 847,
+      "sha256": "11055f92090b4f452126cf04ae51ab6c139fd6cad453fcff345bde55169384db"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_original/run_eval.py",
+      "size_bytes": 12289,
+      "sha256": "c77f5fb2bf28ac1ddc5039bec0a740ad95805cd86dab0ca13d867f7d854ba4fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_regression_finite_plane/harness.tcl",
+      "size_bytes": 778,
+      "sha256": "bb7aa02fcf9b0efd353421e68fd306ef92627c30c8e021d5cd397ac698f9cbcb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_regression_finite_plane/oracle_body.tcl",
+      "size_bytes": 2436,
+      "sha256": "5e40dbc6198da722a84d883e376e669742d555f77c27d067033c23f326339324"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_regression_finite_plane/run_eval.py",
+      "size_bytes": 12289,
+      "sha256": "c77f5fb2bf28ac1ddc5039bec0a740ad95805cd86dab0ca13d867f7d854ba4fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/shared/run_eval.py",
+      "size_bytes": 12289,
+      "sha256": "c77f5fb2bf28ac1ddc5039bec0a740ad95805cd86dab0ca13d867f7d854ba4fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/oracles/M21494_neighbor_sphere9p5.json",
+      "size_bytes": 718,
+      "sha256": "1774e414ef52a2b4be22959c2ceed7085116a0c60a6e03b2deb5f8f9752630c1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/oracles/M21494_original.json",
+      "size_bytes": 718,
+      "sha256": "4e65af30b849340f9cc1ccd838402dbe97c433cf327bca7d827ba81ceaa5b233"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/oracles/M21494_regression_cone10_sphere9.json",
+      "size_bytes": 697,
+      "sha256": "7568914675467e9a80af69a09b49a2319a1e359ba3a42553db5fff50c1fae53e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/oracles/M27252_neighbor_translated_plane.json",
+      "size_bytes": 723,
+      "sha256": "11fbc028711744d766d939a25e0e8d5080d3192036c8b69d573f4cd732fca805"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/oracles/M27252_original.json",
+      "size_bytes": 759,
+      "sha256": "a58bd2992061f66fa39a4a2a04e7a792afe817c52531cc784d0eaeb134efde13"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/oracles/M27252_regression_cylinder_plane.json",
+      "size_bytes": 731,
+      "sha256": "8e2b7d86926e74d23adaaa052f9ca5890e04668ed451b790ae316f4a2cab91a6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/oracles/M27780_neighbor_translated_face.json",
+      "size_bytes": 742,
+      "sha256": "41a01031ef28b5de8460e2bd996425d660a19c2bc361ba847b2d686ff96061c7"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/oracles/M27780_original.json",
+      "size_bytes": 729,
+      "sha256": "83970f28fdd152a78e1db3169da3e5a94a2683541eb4f95c742f2ff421b7b3a0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/oracles/M27780_regression_finite_plane.json",
+      "size_bytes": 738,
+      "sha256": "6a0733886e977156119b965b0f49f99582c7e6e885c085b415dbf0073c983647"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runners/run_draw_case.py",
+      "size_bytes": 13580,
+      "sha256": "465172238816dcf841c1ae16fd9ba5a557f0ea6c730ea053c9533fb8fefd8275"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/B/M21494_original.execution.json",
+      "size_bytes": 5050,
+      "sha256": "df7409d4a8a7a43502ec6e2714bad646328f55c5adfb706ee05c771c98b43949"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/B/M21494_original.log",
+      "size_bytes": 756,
+      "sha256": "db3e1b745cadf5a95b02507f2d0b16db643001dc413ddddea18375b6e30acdaf"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/B/M21494_regression_cone10_sphere9.execution.json",
+      "size_bytes": 5475,
+      "sha256": "98a66ef47ce036c1dce92de1e62aabdb8959b0bb50ad199529a000e74c3fe2a4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/B/M21494_regression_cone10_sphere9.log",
+      "size_bytes": 2274,
+      "sha256": "f4f1552ba87636afc51acb5cb43f4df7940ee125d954a925fefb33c39d26becb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/B/M27252_original.execution.json",
+      "size_bytes": 5225,
+      "sha256": "78c95dc2d568399cb990e1c70f9e199d79bdb73b8d30d81fa25c7a31dee00850"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/B/M27252_original.log",
+      "size_bytes": 842,
+      "sha256": "8824b6ae25323777ebf972e4be1caea699e60133302ea5e8784cf222fdc8fd26"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/B/M27252_regression_cylinder_plane.execution.json",
+      "size_bytes": 5101,
+      "sha256": "a86e7d1f80b5ab0ff28b59d6572eb0318eee298aa3b86943a65bdb72ff74a851"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/B/M27252_regression_cylinder_plane.log",
+      "size_bytes": 1351,
+      "sha256": "74b51e680c35a611a308781e536528ec5645c6e4907b7eadb86cabfe86a91b11"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/B/M27780_original.execution.json",
+      "size_bytes": 5281,
+      "sha256": "ca11f5d39791d5ed3e54d943bff0efdbbc8c643d5fccda35771da97c6d37b32f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/B/M27780_original.log",
+      "size_bytes": 645,
+      "sha256": "6986e58ebc6361287a80582cac4601cf647fe29f79d954661abad8c3174808b1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/B/M27780_regression_finite_plane.execution.json",
+      "size_bytes": 5109,
+      "sha256": "4f469f90dbb58d71c36644779b63faa67c173c95ed3b45e88e9b4566238811fd"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/B/M27780_regression_finite_plane.log",
+      "size_bytes": 2264,
+      "sha256": "31306691d3cf807f964f42dcf7d3e8fbe573537b3263e200ac91acb6c3eaae4f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M21494_neighbor_sphere9p5.execution.json",
+      "size_bytes": 5416,
+      "sha256": "492d61911717cb471eeb7b08e0cc502f7c3cccf34deb9827963643298a07c0e3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M21494_neighbor_sphere9p5.log",
+      "size_bytes": 2274,
+      "sha256": "63a12e23903918a7daf0b65a35279ba72030d8aa0baf3d57cf8c8ca3c87a3185"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M21494_original.execution.json",
+      "size_bytes": 5021,
+      "sha256": "83af606b707a2e7bb462fc485070e459a4b8d0b6cea7128960c3796772a571a4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M21494_original.log",
+      "size_bytes": 998,
+      "sha256": "549afa5c916fa0f54908f826c820c39d1033f175b28a14db21d05d4e3ff587bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M21494_regression_cone10_sphere9.execution.json",
+      "size_bytes": 5484,
+      "sha256": "163eed54445c41d9876a0f6326d3111c0d38a00cf6d6c285bc84e96a6bb257bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M21494_regression_cone10_sphere9.log",
+      "size_bytes": 2274,
+      "sha256": "f4f1552ba87636afc51acb5cb43f4df7940ee125d954a925fefb33c39d26becb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M27252_neighbor_translated_plane.execution.json",
+      "size_bytes": 5354,
+      "sha256": "3ac5e805145a97ccef82acf4176bc0b890aeb27aa74f7adb31ce110ef78f917f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M27252_neighbor_translated_plane.log",
+      "size_bytes": 1789,
+      "sha256": "cbd541c6a192f51837a2922cbb55d99d449b86656e8ccc559eaee67888122cd8"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M27252_original.execution.json",
+      "size_bytes": 5121,
+      "sha256": "86378095b1267ba19b1ff57e9fa0128d565a53a6dcbacfa49babc385b7b55945"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M27252_original.log",
+      "size_bytes": 934,
+      "sha256": "493283c74fdba583c42c03d0025697fb59ef579cb2fbae7c74c734463c41ef07"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M27252_regression_cylinder_plane.execution.json",
+      "size_bytes": 5110,
+      "sha256": "a8c47eb0ddcf75e914fb589842f29acebdc44a3f5345d4590f72c3eece547eaa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M27252_regression_cylinder_plane.log",
+      "size_bytes": 1351,
+      "sha256": "74b51e680c35a611a308781e536528ec5645c6e4907b7eadb86cabfe86a91b11"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M27780_neighbor_translated_face.execution.json",
+      "size_bytes": 5533,
+      "sha256": "4f903256fd4decd4538c5092129599a279edc9b6432fd7a2969b5a55d6bf1d18"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M27780_neighbor_translated_face.log",
+      "size_bytes": 4913,
+      "sha256": "50f27c50d4ba3711dee545ee8e1b1a52fa6a4b2d0cf4fc38daa5b6950a2075e4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M27780_original.execution.json",
+      "size_bytes": 5285,
+      "sha256": "8b48418afd4378f8e0724da865e4a2c3c6db61de2c26b495f69e473f566170c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M27780_original.log",
+      "size_bytes": 639,
+      "sha256": "e6582d7ba0446d96a4e1c066903e49d38805e00d0a8a1dd87815ba97a6e81ce0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M27780_regression_finite_plane.execution.json",
+      "size_bytes": 5118,
+      "sha256": "f6723afd61c591dc5946a2e1ee92207183072ada22ba1742b8dc69f99814e819"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1/runs/F/M27780_regression_finite_plane.log",
+      "size_bytes": 2264,
+      "sha256": "31306691d3cf807f964f42dcf7d3e8fbe573537b3263e200ac91acb6c3eaae4f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/acceptance.json",
+      "size_bytes": 8698,
+      "sha256": "6921cd7c6b45c2d0c78f20a99a7fa3da77566a7a1abab0e5578de37f61c1c547"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/bf_evidence.json",
+      "size_bytes": 35187,
+      "sha256": "4d9a6216b299c3a565e67b03c4fccdf7678819658a40eccb50096080ce3b428b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/build-configs/B/artifact_verification.json",
+      "size_bytes": 2311,
+      "sha256": "3d165d9427410dca63b44bf68eaccdac1bf962a2d3da5ba8732f4a4a46021f42"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/build-configs/B/build_record.json",
+      "size_bytes": 2590,
+      "sha256": "5d35d8ac4c68d3ffd6cecf9e44e771827ebc2ae29a59ad31e49d68ede9adad2a"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/build-configs/F/artifact_verification.json",
+      "size_bytes": 1506,
+      "sha256": "36e85759669255034b7b27f12b4fa34cadaedc44e7733d2ebab49e6f45b47619"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/build-configs/F/build_record.json",
+      "size_bytes": 2255,
+      "sha256": "04dece8cc3d34acb673dae5b0a6323534bbdfdf4d3b6e04d92eb57b76cef1590"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/build-configs/build_config.json",
+      "size_bytes": 2689,
+      "sha256": "bde9d2628426a4dca5a0d75fc94cbe6d7a0c15495a01c0fa54f44d8354c3fe69"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/build-configs/build_identities.json",
+      "size_bytes": 2402,
+      "sha256": "c1a373e337f844b34eb37c447bb98f546e40c86eef092f067bb826295ef022d1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/build-configs/bundle/build.sh",
+      "size_bytes": 188,
+      "sha256": "b8330250a7df543dc7d6bad3c5111fdb462198ebc29e86a9fdb9faf32c9b7814"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/build-configs/bundle/xlocale.h",
+      "size_bytes": 267,
+      "sha256": "0cfbf755395add5d865f01722849120cbd0dccb0774755f2af369950dbcb779f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_neighbor_sphere9p5/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_neighbor_sphere9p5/harness.tcl",
+      "size_bytes": 3133,
+      "sha256": "0a3fa6d75f493beabe249b68094c31eca362d611237168ed4f2e4fa28ba896f4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_neighbor_sphere9p5/intersection_oracle.tcl",
+      "size_bytes": 5903,
+      "sha256": "8cf973f4185a770de74b2b65c594be60164e3307e1a2e20636664a1d0f5f0175"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_neighbor_sphere9p5/official_helper.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_neighbor_sphere9p5/oracle_body.tcl",
+      "size_bytes": 370,
+      "sha256": "bbd6587be7021b33737f95f14b47f779618317be03e068122e6ba35a827e9dd1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_neighbor_sphere9p5/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_original/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_original/harness.tcl",
+      "size_bytes": 2870,
+      "sha256": "6bc394b1d4da3dae6a7bfc7cb58778074b50e70981e2814e92ca345edb2df109"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_original/official_helper.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_original/official_test.tcl",
+      "size_bytes": 1478,
+      "sha256": "09801f217d3a6668062405c2aa66d3f9cb4db765b1d0fa4cd8ab97a3148b2b47"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_original/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_regression_cone10_sphere9/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_regression_cone10_sphere9/harness.tcl",
+      "size_bytes": 3161,
+      "sha256": "fa781837124691df321b5a76f963975ad1142be083f3322e6288839a362aa7df"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_regression_cone10_sphere9/intersection_oracle.tcl",
+      "size_bytes": 5903,
+      "sha256": "8cf973f4185a770de74b2b65c594be60164e3307e1a2e20636664a1d0f5f0175"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_regression_cone10_sphere9/official_helper.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_regression_cone10_sphere9/oracle_body.tcl",
+      "size_bytes": 379,
+      "sha256": "4a98549fdbd30a639a84e4aa0e31764a0a8dbe7b2b1c40437963fa893dfa0c5c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M21494_regression_cone10_sphere9/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27252_neighbor_translated_plane/harness.tcl",
+      "size_bytes": 1377,
+      "sha256": "52c6fe556ef59324043b925aaa9fb424e1fa999260c63980958d069ea3d8d4a4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27252_neighbor_translated_plane/inputs/bug27221.brep",
+      "size_bytes": 21259,
+      "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27252_neighbor_translated_plane/oracle_body.tcl",
+      "size_bytes": 1770,
+      "sha256": "5272a139ea9f001e9f544bccbc921958b0ccc5497c300fa1aa78fbdf36aa38bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27252_neighbor_translated_plane/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27252_original/draw_pure_display_noop.tcl",
+      "size_bytes": 320,
+      "sha256": "dea5c27787c800b29f6cc2f8e303d74b26a06a2b75c4fcc2ddbe1378964953ce"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27252_original/harness.tcl",
+      "size_bytes": 1229,
+      "sha256": "6d8652828f821c3ec5b7929490239a758d69ac2e3b20c90c3d85e8a3156eeca3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27252_original/inputs/bug27221.brep",
+      "size_bytes": 21259,
+      "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27252_original/official_test.tcl",
+      "size_bytes": 812,
+      "sha256": "00da8b7e69b3a955dee068a593ad1281154909fa93e64bf113b831664c44d607"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27252_original/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27252_regression_cylinder_plane/harness.tcl",
+      "size_bytes": 1407,
+      "sha256": "071942516b95cc17a435e8eba7ee0b5fdc13d133779ab3350819b82a55d5cfb8"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27252_regression_cylinder_plane/oracle_body.tcl",
+      "size_bytes": 1841,
+      "sha256": "e359d80f2464e3207cc07b285eb57b70b69cabc0021ea8b084fa59a596b440c1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27252_regression_cylinder_plane/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_neighbor_translated_face/harness.tcl",
+      "size_bytes": 976,
+      "sha256": "6a76c26f324aca8e67baf4d4966561185acfa01963b3eb4350deeec9a815c071"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_neighbor_translated_face/inputs/buc60532a.brep",
+      "size_bytes": 265191,
+      "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_neighbor_translated_face/inputs/buc60532b.brep",
+      "size_bytes": 17791,
+      "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_neighbor_translated_face/oracle_body.tcl",
+      "size_bytes": 3205,
+      "sha256": "0b43a8a9fa486257e1a1b63569b86c05329ce20331873593e1dedec665fdc6ab"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_neighbor_translated_face/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_original/draw_pure_display_noop.tcl",
+      "size_bytes": 295,
+      "sha256": "c465d73430f50b53b6c5443c94179cb4fa385d1e42bae5e8316a1d65c2328726"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_original/harness.tcl",
+      "size_bytes": 1318,
+      "sha256": "fcb755741b0323aa64907f102b1c62f9cb16464e0c2e6793a424a24348f05fcf"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_original/inputs/buc60532a.brep",
+      "size_bytes": 265191,
+      "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_original/inputs/buc60532b.brep",
+      "size_bytes": 17791,
+      "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_original/official_test.tcl",
+      "size_bytes": 847,
+      "sha256": "11055f92090b4f452126cf04ae51ab6c139fd6cad453fcff345bde55169384db"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_original/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_regression_finite_plane/harness.tcl",
+      "size_bytes": 976,
+      "sha256": "213b9fe46cdbc1f73b57c3559c72c4abf8c4b60d2338d69d6fc1f848facbdd26"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_regression_finite_plane/oracle_body.tcl",
+      "size_bytes": 2436,
+      "sha256": "5e40dbc6198da722a84d883e376e669742d555f77c27d067033c23f326339324"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/M27780_regression_finite_plane/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/inputs/shared/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/oracles/M21494_neighbor_sphere9p5.json",
+      "size_bytes": 718,
+      "sha256": "fb6638085ada27daa7a3a253848aa2dbcc68a94c7d8578341db25e7e69c58779"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/oracles/M21494_original.json",
+      "size_bytes": 718,
+      "sha256": "41d6131aeefd87d597e6d9fbc939b4ad43823ca77cdbbe6ee8666517b0fe251e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/oracles/M21494_regression_cone10_sphere9.json",
+      "size_bytes": 697,
+      "sha256": "a0ac86cb149047d9433747f083f3b29b06114741d387240834849f3962b3cc1f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/oracles/M27252_neighbor_translated_plane.json",
+      "size_bytes": 723,
+      "sha256": "6a62ac4c7df2935cabc12639592203a1f4d584dcecda3ea079f2ad42d608322b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/oracles/M27252_original.json",
+      "size_bytes": 759,
+      "sha256": "6949ed4356a3b961e92bb0710cb885c08ab0d75410f77ff84c0c325faeb4bdda"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/oracles/M27252_regression_cylinder_plane.json",
+      "size_bytes": 731,
+      "sha256": "aaeddac0ba9d6409ee9e26f3c3110915704b9720bc57a31795637cb5d8f3f632"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/oracles/M27780_neighbor_translated_face.json",
+      "size_bytes": 742,
+      "sha256": "813712d9cd7c453f3ce4e8f2355cece1aaf487f01f52d9351eddb9fee6271584"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/oracles/M27780_original.json",
+      "size_bytes": 729,
+      "sha256": "cb72aa89156c51c7eab1f42f24bb597eebe268e82c65a49d253793654978cf78"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/oracles/M27780_regression_finite_plane.json",
+      "size_bytes": 738,
+      "sha256": "5f33fb0179709c736eb9af3d5691057cc7c7767cafa199dde3083067546c1224"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runners/run_draw_case.py",
+      "size_bytes": 13580,
+      "sha256": "465172238816dcf841c1ae16fd9ba5a557f0ea6c730ea053c9533fb8fefd8275"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/B/M21494_original.execution.json",
+      "size_bytes": 5938,
+      "sha256": "7110ec6013a629e9d9b5f542b04f16a84b1f8160a568f65d51c87a32cf0e3a7f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/B/M21494_original.log",
+      "size_bytes": 756,
+      "sha256": "db3e1b745cadf5a95b02507f2d0b16db643001dc413ddddea18375b6e30acdaf"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/B/M21494_regression_cone10_sphere9.execution.json",
+      "size_bytes": 6362,
+      "sha256": "8ce8072aa0cdff7d65fbca174ba4b567d22be826256a5ab4734e9d6f7e478395"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/B/M21494_regression_cone10_sphere9.log",
+      "size_bytes": 2274,
+      "sha256": "f4f1552ba87636afc51acb5cb43f4df7940ee125d954a925fefb33c39d26becb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/B/M27252_original.execution.json",
+      "size_bytes": 6113,
+      "sha256": "452412c819062d9a9f9a794c8f081f3ee988b82c1a249bbcc31ee3fed08c3081"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/B/M27252_original.log",
+      "size_bytes": 842,
+      "sha256": "8824b6ae25323777ebf972e4be1caea699e60133302ea5e8784cf222fdc8fd26"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/B/M27252_regression_cylinder_plane.execution.json",
+      "size_bytes": 5988,
+      "sha256": "94e3e1c0fa0ca5ad343343539b1f86c04d92db7d11185bd2c38b84cd2768b207"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/B/M27252_regression_cylinder_plane.log",
+      "size_bytes": 1351,
+      "sha256": "74b51e680c35a611a308781e536528ec5645c6e4907b7eadb86cabfe86a91b11"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/B/M27780_original.execution.json",
+      "size_bytes": 6169,
+      "sha256": "f417c1c424c132d7ca5ad42b2a055b2fadb1e5bc3596de26e998088d6032c762"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/B/M27780_original.log",
+      "size_bytes": 645,
+      "sha256": "6986e58ebc6361287a80582cac4601cf647fe29f79d954661abad8c3174808b1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/B/M27780_regression_finite_plane.execution.json",
+      "size_bytes": 5996,
+      "sha256": "8947519978f027d20a77c225d16f0c0b162780ef09d40524ecd51eff94e5339a"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/B/M27780_regression_finite_plane.log",
+      "size_bytes": 2264,
+      "sha256": "31306691d3cf807f964f42dcf7d3e8fbe573537b3263e200ac91acb6c3eaae4f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M21494_neighbor_sphere9p5.execution.json",
+      "size_bytes": 6303,
+      "sha256": "b71a5aedcca9c160237f012223bb09dc77e813505bc2493964b8c35d6cf17db1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M21494_neighbor_sphere9p5.log",
+      "size_bytes": 2274,
+      "sha256": "63a12e23903918a7daf0b65a35279ba72030d8aa0baf3d57cf8c8ca3c87a3185"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M21494_original.execution.json",
+      "size_bytes": 5908,
+      "sha256": "eeb1cdfea9e56bf9676a73a43e508945d1f74fc95bef64f287facc1684ebf4c2"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M21494_original.log",
+      "size_bytes": 998,
+      "sha256": "549afa5c916fa0f54908f826c820c39d1033f175b28a14db21d05d4e3ff587bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M21494_regression_cone10_sphere9.execution.json",
+      "size_bytes": 6371,
+      "sha256": "dd0870eee56a9165bf0b8d96fea211dafd5d536448bb846e8b0a1fef099caba3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M21494_regression_cone10_sphere9.log",
+      "size_bytes": 2274,
+      "sha256": "f4f1552ba87636afc51acb5cb43f4df7940ee125d954a925fefb33c39d26becb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M27252_neighbor_translated_plane.execution.json",
+      "size_bytes": 6241,
+      "sha256": "3edbf14338179c3a05dd62f4c1ed70177337741c7a80ba27cce3b7cb904b2cb9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M27252_neighbor_translated_plane.log",
+      "size_bytes": 1789,
+      "sha256": "cbd541c6a192f51837a2922cbb55d99d449b86656e8ccc559eaee67888122cd8"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M27252_original.execution.json",
+      "size_bytes": 6008,
+      "sha256": "f18bebefa8c55316bd6fc91577e4d195d2e1abdb08742374eb05ee5732c6589f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M27252_original.log",
+      "size_bytes": 934,
+      "sha256": "493283c74fdba583c42c03d0025697fb59ef579cb2fbae7c74c734463c41ef07"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M27252_regression_cylinder_plane.execution.json",
+      "size_bytes": 5997,
+      "sha256": "85f75e23289920aeed2aadd264455eb1d5dff8254003fe534d928cfd8c2064d3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M27252_regression_cylinder_plane.log",
+      "size_bytes": 1351,
+      "sha256": "74b51e680c35a611a308781e536528ec5645c6e4907b7eadb86cabfe86a91b11"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M27780_neighbor_translated_face.execution.json",
+      "size_bytes": 6420,
+      "sha256": "1aa966797f15163bd8053b8fc2cd4631a81db1d2217761394a8c63597fea4db9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M27780_neighbor_translated_face.log",
+      "size_bytes": 4913,
+      "sha256": "50f27c50d4ba3711dee545ee8e1b1a52fa6a4b2d0cf4fc38daa5b6950a2075e4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M27780_original.execution.json",
+      "size_bytes": 6172,
+      "sha256": "6164578f39788d9da0543fd9c926cd8860fc0cb9f58804c0c84e606def090db1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M27780_original.log",
+      "size_bytes": 639,
+      "sha256": "e6582d7ba0446d96a4e1c066903e49d38805e00d0a8a1dd87815ba97a6e81ce0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M27780_regression_finite_plane.execution.json",
+      "size_bytes": 6005,
+      "sha256": "4fca06adea6517b0c90f8a5dab3653e23d04bc44f39377c88cf4992c3a0a5445"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v2/runs/F/M27780_regression_finite_plane.log",
+      "size_bytes": 2264,
+      "sha256": "31306691d3cf807f964f42dcf7d3e8fbe573537b3263e200ac91acb6c3eaae4f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/acceptance.json",
+      "size_bytes": 3975,
+      "sha256": "04d8b8a03998f823a2df08b6e48e75ea801b3068db7e64f94437b5999fe230e6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/bf_evidence.json",
+      "size_bytes": 35187,
+      "sha256": "e9dcf43579418c40546a9b7d424f6dcffd8cb9fd66410c11afd46889408f25f4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/build-configs/B/artifact_verification.json",
+      "size_bytes": 2311,
+      "sha256": "3d165d9427410dca63b44bf68eaccdac1bf962a2d3da5ba8732f4a4a46021f42"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/build-configs/B/build_record.json",
+      "size_bytes": 2590,
+      "sha256": "5d35d8ac4c68d3ffd6cecf9e44e771827ebc2ae29a59ad31e49d68ede9adad2a"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/build-configs/F/artifact_verification.json",
+      "size_bytes": 1506,
+      "sha256": "36e85759669255034b7b27f12b4fa34cadaedc44e7733d2ebab49e6f45b47619"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/build-configs/F/build_record.json",
+      "size_bytes": 2255,
+      "sha256": "04dece8cc3d34acb673dae5b0a6323534bbdfdf4d3b6e04d92eb57b76cef1590"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/build-configs/build_config.json",
+      "size_bytes": 2689,
+      "sha256": "bde9d2628426a4dca5a0d75fc94cbe6d7a0c15495a01c0fa54f44d8354c3fe69"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/build-configs/build_identities.json",
+      "size_bytes": 2402,
+      "sha256": "c1a373e337f844b34eb37c447bb98f546e40c86eef092f067bb826295ef022d1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/build-configs/bundle/build.sh",
+      "size_bytes": 188,
+      "sha256": "b8330250a7df543dc7d6bad3c5111fdb462198ebc29e86a9fdb9faf32c9b7814"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/build-configs/bundle/xlocale.h",
+      "size_bytes": 267,
+      "sha256": "0cfbf755395add5d865f01722849120cbd0dccb0774755f2af369950dbcb779f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_neighbor_sphere9p5/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_neighbor_sphere9p5/harness.tcl",
+      "size_bytes": 3465,
+      "sha256": "46613cebcbc4c5d694913082afcf224c3ac60d920926f9ab64f183a733ed504f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_neighbor_sphere9p5/intersection_oracle.tcl",
+      "size_bytes": 5903,
+      "sha256": "8cf973f4185a770de74b2b65c594be60164e3307e1a2e20636664a1d0f5f0175"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_neighbor_sphere9p5/official_helper.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_neighbor_sphere9p5/oracle_body.tcl",
+      "size_bytes": 370,
+      "sha256": "bbd6587be7021b33737f95f14b47f779618317be03e068122e6ba35a827e9dd1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_neighbor_sphere9p5/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_original/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_original/harness.tcl",
+      "size_bytes": 2870,
+      "sha256": "6bc394b1d4da3dae6a7bfc7cb58778074b50e70981e2814e92ca345edb2df109"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_original/official_helper.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_original/official_test.tcl",
+      "size_bytes": 1478,
+      "sha256": "09801f217d3a6668062405c2aa66d3f9cb4db765b1d0fa4cd8ab97a3148b2b47"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_original/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_regression_cone10_sphere9/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_regression_cone10_sphere9/harness.tcl",
+      "size_bytes": 3330,
+      "sha256": "00fe99a744ab0c201e2ee5f2e6e6084621a39d15a62a52b809cfac35c14cbbbf"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_regression_cone10_sphere9/intersection_oracle.tcl",
+      "size_bytes": 5903,
+      "sha256": "8cf973f4185a770de74b2b65c594be60164e3307e1a2e20636664a1d0f5f0175"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_regression_cone10_sphere9/official_helper.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_regression_cone10_sphere9/oracle_body.tcl",
+      "size_bytes": 379,
+      "sha256": "4a98549fdbd30a639a84e4aa0e31764a0a8dbe7b2b1c40437963fa893dfa0c5c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M21494_regression_cone10_sphere9/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27252_neighbor_translated_plane/harness.tcl",
+      "size_bytes": 1546,
+      "sha256": "d83b4091476cd52e05d68d2a6684b31a5de9a143b537606bf5a4e41da9dd9892"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27252_neighbor_translated_plane/inputs/bug27221.brep",
+      "size_bytes": 21259,
+      "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27252_neighbor_translated_plane/oracle_body.tcl",
+      "size_bytes": 1770,
+      "sha256": "5272a139ea9f001e9f544bccbc921958b0ccc5497c300fa1aa78fbdf36aa38bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27252_neighbor_translated_plane/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27252_original/draw_pure_display_noop.tcl",
+      "size_bytes": 320,
+      "sha256": "dea5c27787c800b29f6cc2f8e303d74b26a06a2b75c4fcc2ddbe1378964953ce"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27252_original/harness.tcl",
+      "size_bytes": 1229,
+      "sha256": "6d8652828f821c3ec5b7929490239a758d69ac2e3b20c90c3d85e8a3156eeca3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27252_original/inputs/bug27221.brep",
+      "size_bytes": 21259,
+      "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27252_original/official_test.tcl",
+      "size_bytes": 812,
+      "sha256": "00da8b7e69b3a955dee068a593ad1281154909fa93e64bf113b831664c44d607"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27252_original/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27252_regression_cylinder_plane/harness.tcl",
+      "size_bytes": 1576,
+      "sha256": "9447cc01a79d08ff4490859674bcb0390e036211a8067ba076a32b26883acdde"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27252_regression_cylinder_plane/oracle_body.tcl",
+      "size_bytes": 1841,
+      "sha256": "e359d80f2464e3207cc07b285eb57b70b69cabc0021ea8b084fa59a596b440c1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27252_regression_cylinder_plane/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_neighbor_translated_face/harness.tcl",
+      "size_bytes": 1145,
+      "sha256": "e04d148186d229b93050bb84ebb65d9290e0ee1a31a4cb57e1c7c92386e7417c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_neighbor_translated_face/inputs/buc60532a.brep",
+      "size_bytes": 265191,
+      "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_neighbor_translated_face/inputs/buc60532b.brep",
+      "size_bytes": 17791,
+      "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_neighbor_translated_face/oracle_body.tcl",
+      "size_bytes": 3205,
+      "sha256": "0b43a8a9fa486257e1a1b63569b86c05329ce20331873593e1dedec665fdc6ab"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_neighbor_translated_face/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_original/draw_pure_display_noop.tcl",
+      "size_bytes": 295,
+      "sha256": "c465d73430f50b53b6c5443c94179cb4fa385d1e42bae5e8316a1d65c2328726"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_original/harness.tcl",
+      "size_bytes": 1318,
+      "sha256": "fcb755741b0323aa64907f102b1c62f9cb16464e0c2e6793a424a24348f05fcf"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_original/inputs/buc60532a.brep",
+      "size_bytes": 265191,
+      "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_original/inputs/buc60532b.brep",
+      "size_bytes": 17791,
+      "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_original/official_test.tcl",
+      "size_bytes": 847,
+      "sha256": "11055f92090b4f452126cf04ae51ab6c139fd6cad453fcff345bde55169384db"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_original/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_regression_finite_plane/harness.tcl",
+      "size_bytes": 1145,
+      "sha256": "480bae209e70cf47c5d474ef5f6ea27eae9e8186a7978ee54621e0440a065017"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_regression_finite_plane/oracle_body.tcl",
+      "size_bytes": 2436,
+      "sha256": "5e40dbc6198da722a84d883e376e669742d555f77c27d067033c23f326339324"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/M27780_regression_finite_plane/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/inputs/shared/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/oracles/M21494_neighbor_sphere9p5.json",
+      "size_bytes": 718,
+      "sha256": "fb6638085ada27daa7a3a253848aa2dbcc68a94c7d8578341db25e7e69c58779"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/oracles/M21494_original.json",
+      "size_bytes": 718,
+      "sha256": "41d6131aeefd87d597e6d9fbc939b4ad43823ca77cdbbe6ee8666517b0fe251e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/oracles/M21494_regression_cone10_sphere9.json",
+      "size_bytes": 697,
+      "sha256": "a0ac86cb149047d9433747f083f3b29b06114741d387240834849f3962b3cc1f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/oracles/M27252_neighbor_translated_plane.json",
+      "size_bytes": 723,
+      "sha256": "6a62ac4c7df2935cabc12639592203a1f4d584dcecda3ea079f2ad42d608322b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/oracles/M27252_original.json",
+      "size_bytes": 759,
+      "sha256": "6949ed4356a3b961e92bb0710cb885c08ab0d75410f77ff84c0c325faeb4bdda"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/oracles/M27252_regression_cylinder_plane.json",
+      "size_bytes": 731,
+      "sha256": "aaeddac0ba9d6409ee9e26f3c3110915704b9720bc57a31795637cb5d8f3f632"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/oracles/M27780_neighbor_translated_face.json",
+      "size_bytes": 742,
+      "sha256": "813712d9cd7c453f3ce4e8f2355cece1aaf487f01f52d9351eddb9fee6271584"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/oracles/M27780_original.json",
+      "size_bytes": 729,
+      "sha256": "cb72aa89156c51c7eab1f42f24bb597eebe268e82c65a49d253793654978cf78"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/oracles/M27780_regression_finite_plane.json",
+      "size_bytes": 738,
+      "sha256": "5f33fb0179709c736eb9af3d5691057cc7c7767cafa199dde3083067546c1224"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runners/run_draw_case.py",
+      "size_bytes": 13580,
+      "sha256": "465172238816dcf841c1ae16fd9ba5a557f0ea6c730ea053c9533fb8fefd8275"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/B/M21494_original.execution.json",
+      "size_bytes": 5938,
+      "sha256": "7110ec6013a629e9d9b5f542b04f16a84b1f8160a568f65d51c87a32cf0e3a7f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/B/M21494_original.log",
+      "size_bytes": 756,
+      "sha256": "db3e1b745cadf5a95b02507f2d0b16db643001dc413ddddea18375b6e30acdaf"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/B/M21494_regression_cone10_sphere9.execution.json",
+      "size_bytes": 6368,
+      "sha256": "e66cc0abeac5e7525356d1669a39f1bc92cddecf04de1f1b5812fc36d3bb05ac"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/B/M21494_regression_cone10_sphere9.log",
+      "size_bytes": 2274,
+      "sha256": "f4f1552ba87636afc51acb5cb43f4df7940ee125d954a925fefb33c39d26becb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/B/M27252_original.execution.json",
+      "size_bytes": 6113,
+      "sha256": "452412c819062d9a9f9a794c8f081f3ee988b82c1a249bbcc31ee3fed08c3081"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/B/M27252_original.log",
+      "size_bytes": 842,
+      "sha256": "8824b6ae25323777ebf972e4be1caea699e60133302ea5e8784cf222fdc8fd26"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/B/M27252_regression_cylinder_plane.execution.json",
+      "size_bytes": 5994,
+      "sha256": "23178ef3269189cf9b8c1f43af03b57217dca37bc767e76450bac9ca615f9d2b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/B/M27252_regression_cylinder_plane.log",
+      "size_bytes": 1351,
+      "sha256": "74b51e680c35a611a308781e536528ec5645c6e4907b7eadb86cabfe86a91b11"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/B/M27780_original.execution.json",
+      "size_bytes": 6169,
+      "sha256": "f417c1c424c132d7ca5ad42b2a055b2fadb1e5bc3596de26e998088d6032c762"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/B/M27780_original.log",
+      "size_bytes": 645,
+      "sha256": "6986e58ebc6361287a80582cac4601cf647fe29f79d954661abad8c3174808b1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/B/M27780_regression_finite_plane.execution.json",
+      "size_bytes": 6002,
+      "sha256": "fde55a3da1ee9e830d1481310a1b24906f08674ae59a40c7ee4f83ce59b52f0e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/B/M27780_regression_finite_plane.log",
+      "size_bytes": 2264,
+      "sha256": "31306691d3cf807f964f42dcf7d3e8fbe573537b3263e200ac91acb6c3eaae4f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M21494_neighbor_sphere9p5.execution.json",
+      "size_bytes": 6309,
+      "sha256": "021a7655a6de9399200007078a2bc403ee999e99a389453a4633b2ff5f011792"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M21494_neighbor_sphere9p5.log",
+      "size_bytes": 2274,
+      "sha256": "63a12e23903918a7daf0b65a35279ba72030d8aa0baf3d57cf8c8ca3c87a3185"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M21494_original.execution.json",
+      "size_bytes": 5908,
+      "sha256": "eeb1cdfea9e56bf9676a73a43e508945d1f74fc95bef64f287facc1684ebf4c2"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M21494_original.log",
+      "size_bytes": 998,
+      "sha256": "549afa5c916fa0f54908f826c820c39d1033f175b28a14db21d05d4e3ff587bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M21494_regression_cone10_sphere9.execution.json",
+      "size_bytes": 6377,
+      "sha256": "73618534f275f373d738bb0a96749a752516fd06f4687a83d8431414ecc10dd9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M21494_regression_cone10_sphere9.log",
+      "size_bytes": 2274,
+      "sha256": "f4f1552ba87636afc51acb5cb43f4df7940ee125d954a925fefb33c39d26becb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M27252_neighbor_translated_plane.execution.json",
+      "size_bytes": 6247,
+      "sha256": "5b9eea5d8ae5c75ad4c87b93252a9dade82bbb747de8c03a8fb9e80f531145dc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M27252_neighbor_translated_plane.log",
+      "size_bytes": 1789,
+      "sha256": "cbd541c6a192f51837a2922cbb55d99d449b86656e8ccc559eaee67888122cd8"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M27252_original.execution.json",
+      "size_bytes": 6008,
+      "sha256": "f18bebefa8c55316bd6fc91577e4d195d2e1abdb08742374eb05ee5732c6589f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M27252_original.log",
+      "size_bytes": 934,
+      "sha256": "493283c74fdba583c42c03d0025697fb59ef579cb2fbae7c74c734463c41ef07"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M27252_regression_cylinder_plane.execution.json",
+      "size_bytes": 6003,
+      "sha256": "1251c543d82fde163428c8006a5f0e0cd67ea416fe3ccdb6024d7e702891e564"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M27252_regression_cylinder_plane.log",
+      "size_bytes": 1351,
+      "sha256": "74b51e680c35a611a308781e536528ec5645c6e4907b7eadb86cabfe86a91b11"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M27780_neighbor_translated_face.execution.json",
+      "size_bytes": 6426,
+      "sha256": "eb4988e661a17f07c504c202b7a3a3ae050e980ae1aadffaee56c6ed6a3ff41b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M27780_neighbor_translated_face.log",
+      "size_bytes": 4913,
+      "sha256": "50f27c50d4ba3711dee545ee8e1b1a52fa6a4b2d0cf4fc38daa5b6950a2075e4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M27780_original.execution.json",
+      "size_bytes": 6172,
+      "sha256": "6164578f39788d9da0543fd9c926cd8860fc0cb9f58804c0c84e606def090db1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M27780_original.log",
+      "size_bytes": 639,
+      "sha256": "e6582d7ba0446d96a4e1c066903e49d38805e00d0a8a1dd87815ba97a6e81ce0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M27780_regression_finite_plane.execution.json",
+      "size_bytes": 6011,
+      "sha256": "c5560cd0829d2aa3240a6962bd5041689b4fcc9987f99df22439e0c0252a56a7"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v3/runs/F/M27780_regression_finite_plane.log",
+      "size_bytes": 2264,
+      "sha256": "31306691d3cf807f964f42dcf7d3e8fbe573537b3263e200ac91acb6c3eaae4f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/acceptance.json",
+      "size_bytes": 7087,
+      "sha256": "984d967dde7a2a4441ee9c35e29a1672a70936e18d03f21a06e9876c5d616d79"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/bf_evidence.json",
+      "size_bytes": 35187,
+      "sha256": "e9dcf43579418c40546a9b7d424f6dcffd8cb9fd66410c11afd46889408f25f4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/build-configs/B/artifact_verification.json",
+      "size_bytes": 2311,
+      "sha256": "3d165d9427410dca63b44bf68eaccdac1bf962a2d3da5ba8732f4a4a46021f42"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/build-configs/B/build_record.json",
+      "size_bytes": 2590,
+      "sha256": "5d35d8ac4c68d3ffd6cecf9e44e771827ebc2ae29a59ad31e49d68ede9adad2a"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/build-configs/F/artifact_verification.json",
+      "size_bytes": 1506,
+      "sha256": "36e85759669255034b7b27f12b4fa34cadaedc44e7733d2ebab49e6f45b47619"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/build-configs/F/build_record.json",
+      "size_bytes": 2255,
+      "sha256": "04dece8cc3d34acb673dae5b0a6323534bbdfdf4d3b6e04d92eb57b76cef1590"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/build-configs/build_config.json",
+      "size_bytes": 2689,
+      "sha256": "bde9d2628426a4dca5a0d75fc94cbe6d7a0c15495a01c0fa54f44d8354c3fe69"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/build-configs/build_identities.json",
+      "size_bytes": 2402,
+      "sha256": "c1a373e337f844b34eb37c447bb98f546e40c86eef092f067bb826295ef022d1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/build-configs/bundle/build.sh",
+      "size_bytes": 188,
+      "sha256": "b8330250a7df543dc7d6bad3c5111fdb462198ebc29e86a9fdb9faf32c9b7814"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/build-configs/bundle/xlocale.h",
+      "size_bytes": 267,
+      "sha256": "0cfbf755395add5d865f01722849120cbd0dccb0774755f2af369950dbcb779f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_neighbor_sphere9p5/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_neighbor_sphere9p5/harness.tcl",
+      "size_bytes": 3465,
+      "sha256": "46613cebcbc4c5d694913082afcf224c3ac60d920926f9ab64f183a733ed504f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_neighbor_sphere9p5/intersection_oracle.tcl",
+      "size_bytes": 5903,
+      "sha256": "8cf973f4185a770de74b2b65c594be60164e3307e1a2e20636664a1d0f5f0175"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_neighbor_sphere9p5/official_helper.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_neighbor_sphere9p5/oracle_body.tcl",
+      "size_bytes": 370,
+      "sha256": "bbd6587be7021b33737f95f14b47f779618317be03e068122e6ba35a827e9dd1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_neighbor_sphere9p5/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_original/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_original/harness.tcl",
+      "size_bytes": 2870,
+      "sha256": "6bc394b1d4da3dae6a7bfc7cb58778074b50e70981e2814e92ca345edb2df109"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_original/official_helper.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_original/official_test.tcl",
+      "size_bytes": 1478,
+      "sha256": "09801f217d3a6668062405c2aa66d3f9cb4db765b1d0fa4cd8ab97a3148b2b47"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_original/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_regression_cone10_sphere9/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_regression_cone10_sphere9/harness.tcl",
+      "size_bytes": 3330,
+      "sha256": "00fe99a744ab0c201e2ee5f2e6e6084621a39d15a62a52b809cfac35c14cbbbf"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_regression_cone10_sphere9/intersection_oracle.tcl",
+      "size_bytes": 5903,
+      "sha256": "8cf973f4185a770de74b2b65c594be60164e3307e1a2e20636664a1d0f5f0175"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_regression_cone10_sphere9/official_helper.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_regression_cone10_sphere9/oracle_body.tcl",
+      "size_bytes": 379,
+      "sha256": "4a98549fdbd30a639a84e4aa0e31764a0a8dbe7b2b1c40437963fa893dfa0c5c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M21494_regression_cone10_sphere9/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27252_neighbor_translated_plane/harness.tcl",
+      "size_bytes": 1546,
+      "sha256": "d83b4091476cd52e05d68d2a6684b31a5de9a143b537606bf5a4e41da9dd9892"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27252_neighbor_translated_plane/inputs/bug27221.brep",
+      "size_bytes": 21259,
+      "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27252_neighbor_translated_plane/oracle_body.tcl",
+      "size_bytes": 1770,
+      "sha256": "5272a139ea9f001e9f544bccbc921958b0ccc5497c300fa1aa78fbdf36aa38bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27252_neighbor_translated_plane/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27252_original/draw_pure_display_noop.tcl",
+      "size_bytes": 320,
+      "sha256": "dea5c27787c800b29f6cc2f8e303d74b26a06a2b75c4fcc2ddbe1378964953ce"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27252_original/harness.tcl",
+      "size_bytes": 1229,
+      "sha256": "6d8652828f821c3ec5b7929490239a758d69ac2e3b20c90c3d85e8a3156eeca3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27252_original/inputs/bug27221.brep",
+      "size_bytes": 21259,
+      "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27252_original/official_test.tcl",
+      "size_bytes": 812,
+      "sha256": "00da8b7e69b3a955dee068a593ad1281154909fa93e64bf113b831664c44d607"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27252_original/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27252_regression_cylinder_plane/harness.tcl",
+      "size_bytes": 1576,
+      "sha256": "9447cc01a79d08ff4490859674bcb0390e036211a8067ba076a32b26883acdde"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27252_regression_cylinder_plane/oracle_body.tcl",
+      "size_bytes": 1841,
+      "sha256": "e359d80f2464e3207cc07b285eb57b70b69cabc0021ea8b084fa59a596b440c1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27252_regression_cylinder_plane/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_neighbor_translated_face/harness.tcl",
+      "size_bytes": 1145,
+      "sha256": "e04d148186d229b93050bb84ebb65d9290e0ee1a31a4cb57e1c7c92386e7417c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_neighbor_translated_face/inputs/buc60532a.brep",
+      "size_bytes": 265191,
+      "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_neighbor_translated_face/inputs/buc60532b.brep",
+      "size_bytes": 17791,
+      "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_neighbor_translated_face/oracle_body.tcl",
+      "size_bytes": 3205,
+      "sha256": "0b43a8a9fa486257e1a1b63569b86c05329ce20331873593e1dedec665fdc6ab"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_neighbor_translated_face/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_original/draw_pure_display_noop.tcl",
+      "size_bytes": 295,
+      "sha256": "c465d73430f50b53b6c5443c94179cb4fa385d1e42bae5e8316a1d65c2328726"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_original/harness.tcl",
+      "size_bytes": 1318,
+      "sha256": "fcb755741b0323aa64907f102b1c62f9cb16464e0c2e6793a424a24348f05fcf"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_original/inputs/buc60532a.brep",
+      "size_bytes": 265191,
+      "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_original/inputs/buc60532b.brep",
+      "size_bytes": 17791,
+      "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_original/official_test.tcl",
+      "size_bytes": 847,
+      "sha256": "11055f92090b4f452126cf04ae51ab6c139fd6cad453fcff345bde55169384db"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_original/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_regression_finite_plane/harness.tcl",
+      "size_bytes": 1145,
+      "sha256": "480bae209e70cf47c5d474ef5f6ea27eae9e8186a7978ee54621e0440a065017"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_regression_finite_plane/oracle_body.tcl",
+      "size_bytes": 2436,
+      "sha256": "5e40dbc6198da722a84d883e376e669742d555f77c27d067033c23f326339324"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/M27780_regression_finite_plane/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/inputs/shared/run_eval.py",
+      "size_bytes": 13881,
+      "sha256": "d1a64053733de910040e56b9f075cbfb3be25f98ba75867bfc48a4ec690a13a3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/oracles/M21494_neighbor_sphere9p5.json",
+      "size_bytes": 718,
+      "sha256": "fb6638085ada27daa7a3a253848aa2dbcc68a94c7d8578341db25e7e69c58779"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/oracles/M21494_original.json",
+      "size_bytes": 718,
+      "sha256": "41d6131aeefd87d597e6d9fbc939b4ad43823ca77cdbbe6ee8666517b0fe251e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/oracles/M21494_regression_cone10_sphere9.json",
+      "size_bytes": 697,
+      "sha256": "a0ac86cb149047d9433747f083f3b29b06114741d387240834849f3962b3cc1f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/oracles/M27252_neighbor_translated_plane.json",
+      "size_bytes": 723,
+      "sha256": "6a62ac4c7df2935cabc12639592203a1f4d584dcecda3ea079f2ad42d608322b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/oracles/M27252_original.json",
+      "size_bytes": 759,
+      "sha256": "6949ed4356a3b961e92bb0710cb885c08ab0d75410f77ff84c0c325faeb4bdda"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/oracles/M27252_regression_cylinder_plane.json",
+      "size_bytes": 731,
+      "sha256": "aaeddac0ba9d6409ee9e26f3c3110915704b9720bc57a31795637cb5d8f3f632"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/oracles/M27780_neighbor_translated_face.json",
+      "size_bytes": 742,
+      "sha256": "813712d9cd7c453f3ce4e8f2355cece1aaf487f01f52d9351eddb9fee6271584"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/oracles/M27780_original.json",
+      "size_bytes": 729,
+      "sha256": "cb72aa89156c51c7eab1f42f24bb597eebe268e82c65a49d253793654978cf78"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/oracles/M27780_regression_finite_plane.json",
+      "size_bytes": 738,
+      "sha256": "5f33fb0179709c736eb9af3d5691057cc7c7767cafa199dde3083067546c1224"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runners/run_draw_case.py",
+      "size_bytes": 13580,
+      "sha256": "465172238816dcf841c1ae16fd9ba5a557f0ea6c730ea053c9533fb8fefd8275"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/B/M21494_original.execution.json",
+      "size_bytes": 5938,
+      "sha256": "7110ec6013a629e9d9b5f542b04f16a84b1f8160a568f65d51c87a32cf0e3a7f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/B/M21494_original.log",
+      "size_bytes": 756,
+      "sha256": "db3e1b745cadf5a95b02507f2d0b16db643001dc413ddddea18375b6e30acdaf"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/B/M21494_regression_cone10_sphere9.execution.json",
+      "size_bytes": 6368,
+      "sha256": "e66cc0abeac5e7525356d1669a39f1bc92cddecf04de1f1b5812fc36d3bb05ac"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/B/M21494_regression_cone10_sphere9.log",
+      "size_bytes": 2274,
+      "sha256": "f4f1552ba87636afc51acb5cb43f4df7940ee125d954a925fefb33c39d26becb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/B/M27252_original.execution.json",
+      "size_bytes": 6113,
+      "sha256": "452412c819062d9a9f9a794c8f081f3ee988b82c1a249bbcc31ee3fed08c3081"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/B/M27252_original.log",
+      "size_bytes": 842,
+      "sha256": "8824b6ae25323777ebf972e4be1caea699e60133302ea5e8784cf222fdc8fd26"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/B/M27252_regression_cylinder_plane.execution.json",
+      "size_bytes": 5994,
+      "sha256": "23178ef3269189cf9b8c1f43af03b57217dca37bc767e76450bac9ca615f9d2b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/B/M27252_regression_cylinder_plane.log",
+      "size_bytes": 1351,
+      "sha256": "74b51e680c35a611a308781e536528ec5645c6e4907b7eadb86cabfe86a91b11"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/B/M27780_original.execution.json",
+      "size_bytes": 6169,
+      "sha256": "f417c1c424c132d7ca5ad42b2a055b2fadb1e5bc3596de26e998088d6032c762"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/B/M27780_original.log",
+      "size_bytes": 645,
+      "sha256": "6986e58ebc6361287a80582cac4601cf647fe29f79d954661abad8c3174808b1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/B/M27780_regression_finite_plane.execution.json",
+      "size_bytes": 6002,
+      "sha256": "fde55a3da1ee9e830d1481310a1b24906f08674ae59a40c7ee4f83ce59b52f0e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/B/M27780_regression_finite_plane.log",
+      "size_bytes": 2264,
+      "sha256": "31306691d3cf807f964f42dcf7d3e8fbe573537b3263e200ac91acb6c3eaae4f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M21494_neighbor_sphere9p5.execution.json",
+      "size_bytes": 6309,
+      "sha256": "021a7655a6de9399200007078a2bc403ee999e99a389453a4633b2ff5f011792"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M21494_neighbor_sphere9p5.log",
+      "size_bytes": 2274,
+      "sha256": "63a12e23903918a7daf0b65a35279ba72030d8aa0baf3d57cf8c8ca3c87a3185"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M21494_original.execution.json",
+      "size_bytes": 5908,
+      "sha256": "eeb1cdfea9e56bf9676a73a43e508945d1f74fc95bef64f287facc1684ebf4c2"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M21494_original.log",
+      "size_bytes": 998,
+      "sha256": "549afa5c916fa0f54908f826c820c39d1033f175b28a14db21d05d4e3ff587bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M21494_regression_cone10_sphere9.execution.json",
+      "size_bytes": 6377,
+      "sha256": "73618534f275f373d738bb0a96749a752516fd06f4687a83d8431414ecc10dd9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M21494_regression_cone10_sphere9.log",
+      "size_bytes": 2274,
+      "sha256": "f4f1552ba87636afc51acb5cb43f4df7940ee125d954a925fefb33c39d26becb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M27252_neighbor_translated_plane.execution.json",
+      "size_bytes": 6247,
+      "sha256": "5b9eea5d8ae5c75ad4c87b93252a9dade82bbb747de8c03a8fb9e80f531145dc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M27252_neighbor_translated_plane.log",
+      "size_bytes": 1789,
+      "sha256": "cbd541c6a192f51837a2922cbb55d99d449b86656e8ccc559eaee67888122cd8"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M27252_original.execution.json",
+      "size_bytes": 6008,
+      "sha256": "f18bebefa8c55316bd6fc91577e4d195d2e1abdb08742374eb05ee5732c6589f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M27252_original.log",
+      "size_bytes": 934,
+      "sha256": "493283c74fdba583c42c03d0025697fb59ef579cb2fbae7c74c734463c41ef07"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M27252_regression_cylinder_plane.execution.json",
+      "size_bytes": 6003,
+      "sha256": "1251c543d82fde163428c8006a5f0e0cd67ea416fe3ccdb6024d7e702891e564"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M27252_regression_cylinder_plane.log",
+      "size_bytes": 1351,
+      "sha256": "74b51e680c35a611a308781e536528ec5645c6e4907b7eadb86cabfe86a91b11"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M27780_neighbor_translated_face.execution.json",
+      "size_bytes": 6426,
+      "sha256": "eb4988e661a17f07c504c202b7a3a3ae050e980ae1aadffaee56c6ed6a3ff41b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M27780_neighbor_translated_face.log",
+      "size_bytes": 4913,
+      "sha256": "50f27c50d4ba3711dee545ee8e1b1a52fa6a4b2d0cf4fc38daa5b6950a2075e4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M27780_original.execution.json",
+      "size_bytes": 6172,
+      "sha256": "6164578f39788d9da0543fd9c926cd8860fc0cb9f58804c0c84e606def090db1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M27780_original.log",
+      "size_bytes": 639,
+      "sha256": "e6582d7ba0446d96a4e1c066903e49d38805e00d0a8a1dd87815ba97a6e81ce0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M27780_regression_finite_plane.execution.json",
+      "size_bytes": 6011,
+      "sha256": "c5560cd0829d2aa3240a6962bd5041689b4fcc9987f99df22439e0c0252a56a7"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b2613378-27780-27252-21494-v1-agent-oracle-v4/runs/F/M27780_regression_finite_plane.log",
+      "size_bytes": 2264,
+      "sha256": "31306691d3cf807f964f42dcf7d3e8fbe573537b3263e200ac91acb6c3eaae4f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/acceptance.json",
+      "size_bytes": 1172,
+      "sha256": "483f87c67dda01d3484a17837fb4b5929074ca69a337c0c8c192d429ee201fe2"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/bf_evidence.json",
+      "size_bytes": 40483,
+      "sha256": "718655021fbfbdf1d12ec88d2938b1ebfcab71d2636baef388c75d8fe004e281"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/build-configs/B/build_baseline_gcc_o0_test_plugin.json",
+      "size_bytes": 1714,
+      "sha256": "54d2f1084bd356c2ede8bbaf73a14095ed823ff48f5f523c575c2223856d1d84"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/build-configs/B/build_baseline_gcc_o0_test_plugin_j1.log",
+      "size_bytes": 1837501,
+      "sha256": "e8bd60bf9bee27c0b703ac3db2b5f00d586234ab5092048d64e0317de12ef9d8"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/build-configs/B/reconfigure_baseline_gcc_o0_test_plugin.json",
+      "size_bytes": 2290,
+      "sha256": "032efed413fe1c2e4ee961fa7b8c8e77436f0fa97b9eec2414f5a74db521f7b1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/build-configs/F/build_e6afb_gcc_o0_test_plugin.json",
+      "size_bytes": 2062,
+      "sha256": "93ab0eeb30ba221aa241c765140c034dd30581abc7f349b75840d2256771b3e6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/build-configs/F/build_e6afb_gcc_o0_test_plugin_j1.log",
+      "size_bytes": 2672052,
+      "sha256": "982ced9c328dd6e598007869809d1a6e625824144c04d29a4970564a3b61690e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/build-configs/F/configure_e6afb_gcc_o0.json",
+      "size_bytes": 3694,
+      "sha256": "761b844c12cdc1ffb5b10a141bf95acbe09fbb5fd775931c370ebdb9517805a9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/build-configs/build_config.json",
+      "size_bytes": 3993,
+      "sha256": "b2e05826db2049cb53f5ba99739251ff4c7c943ca7915251622f2be826b65810"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/build-configs/build_identities.json",
+      "size_bytes": 3782,
+      "sha256": "f20991fd2b626314095336703f401b0ce91a8f5b8f8f239f6ce3fe3c3035cc4b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/build-configs/bundle/build.sh",
+      "size_bytes": 211,
+      "sha256": "0400b9a1b7ba5fd7627c17ee3e62a208624b4d8b3967421fd50c850e31bcc92c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/build-configs/bundle/xlocale.h",
+      "size_bytes": 267,
+      "sha256": "0cfbf755395add5d865f01722849120cbd0dccb0774755f2af369950dbcb779f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252/bug27221.brep",
+      "size_bytes": 21259,
+      "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252/bug27252_1.tcl",
+      "size_bytes": 812,
+      "sha256": "00da8b7e69b3a955dee068a593ad1281154909fa93e64bf113b831664c44d607"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252/draw_pure_display_noop.tcl",
+      "size_bytes": 264,
+      "sha256": "6dfd5d87d695385a4c93ffa6c0b2ef9a9607bf43a39e28fa0cea135b11c09bd0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252/harness_bug27252_1.tcl",
+      "size_bytes": 1295,
+      "sha256": "752a8382552078f2647318412730163e8f0def19a3eb7f1b83fd8f6b5c2ac450"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252/run_draw_case.py",
+      "size_bytes": 12981,
+      "sha256": "9ebd9f0a67bb31c6ecec5cac0fbd0cff5f0384b4749aad7b2f83626887923c76"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252/run_eval.py",
+      "size_bytes": 20219,
+      "sha256": "4e2a12acff86178ed85b388f555f8c8c62c3cb0e34b804b19907288d8375ed23"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_neighbor_translated_plane/M27252_neighbor_translated_plane.tcl",
+      "size_bytes": 2082,
+      "sha256": "14c99594426c9a949225670bc4543bb038ce10f14c74808e122b7f79f089872d"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+      "size_bytes": 21259,
+      "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_neighbor_translated_plane/case_contracts.json",
+      "size_bytes": 6687,
+      "sha256": "7acecbf31e2c8d53f96de4d5742b38f84a5c108536bc80e71bb1f516f39c2bab"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_neighbor_translated_plane/draw_pure_display_noop.tcl",
+      "size_bytes": 264,
+      "sha256": "6dfd5d87d695385a4c93ffa6c0b2ef9a9607bf43a39e28fa0cea135b11c09bd0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_neighbor_translated_plane/m27252_neighborhood.tcl",
+      "size_bytes": 1770,
+      "sha256": "5272a139ea9f001e9f544bccbc921958b0ccc5497c300fa1aa78fbdf36aa38bb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_neighbor_translated_plane/run_draw_case.py",
+      "size_bytes": 12981,
+      "sha256": "9ebd9f0a67bb31c6ecec5cac0fbd0cff5f0384b4749aad7b2f83626887923c76"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_neighbor_translated_plane/run_eval.py",
+      "size_bytes": 20219,
+      "sha256": "4e2a12acff86178ed85b388f555f8c8c62c3cb0e34b804b19907288d8375ed23"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_regression_cylinder_plane/M27252_regression_cylinder_plane.tcl",
+      "size_bytes": 2080,
+      "sha256": "8a8c92c161210c4c4c3e5db8fde50810835f4af38d76acfceab48895009f1221"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_regression_cylinder_plane/case_contracts.json",
+      "size_bytes": 6687,
+      "sha256": "7acecbf31e2c8d53f96de4d5742b38f84a5c108536bc80e71bb1f516f39c2bab"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_regression_cylinder_plane/draw_pure_display_noop.tcl",
+      "size_bytes": 264,
+      "sha256": "6dfd5d87d695385a4c93ffa6c0b2ef9a9607bf43a39e28fa0cea135b11c09bd0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_regression_cylinder_plane/m27252_regression.tcl",
+      "size_bytes": 1841,
+      "sha256": "e359d80f2464e3207cc07b285eb57b70b69cabc0021ea8b084fa59a596b440c1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_regression_cylinder_plane/run_draw_case.py",
+      "size_bytes": 12981,
+      "sha256": "9ebd9f0a67bb31c6ecec5cac0fbd0cff5f0384b4749aad7b2f83626887923c76"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27252_regression_cylinder_plane/run_eval.py",
+      "size_bytes": 20219,
+      "sha256": "4e2a12acff86178ed85b388f555f8c8c62c3cb0e34b804b19907288d8375ed23"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_1/OCC496a.brep",
+      "size_bytes": 26898,
+      "sha256": "30ca1434011fba9bfd35692c07719a9d4fcb4aa2606c739e8359fe504204cdc5"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_1/OCC496b.brep",
+      "size_bytes": 6247,
+      "sha256": "34dca030b3713fad191dee6f3675680c4b87f7f2624ec5ffb1e8bc661525b08c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_1/bug27310_1.tcl",
+      "size_bytes": 723,
+      "sha256": "7c122d838f2497b1a4eeb019ebe506abf050f531248503b9df0fbee4c35cfdec"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_1/draw_pure_display_noop.tcl",
+      "size_bytes": 264,
+      "sha256": "6dfd5d87d695385a4c93ffa6c0b2ef9a9607bf43a39e28fa0cea135b11c09bd0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_1/harness_bug27310_1.tcl",
+      "size_bytes": 1303,
+      "sha256": "f9acda947a60a072d880fade9cdc4ea16b7283792976ca3f84ae4ad01ff4f392"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_1/run_draw_case.py",
+      "size_bytes": 12981,
+      "sha256": "9ebd9f0a67bb31c6ecec5cac0fbd0cff5f0384b4749aad7b2f83626887923c76"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_1/run_eval.py",
+      "size_bytes": 20219,
+      "sha256": "4e2a12acff86178ed85b388f555f8c8c62c3cb0e34b804b19907288d8375ed23"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_2_d308/OCC496a.brep",
+      "size_bytes": 26898,
+      "sha256": "30ca1434011fba9bfd35692c07719a9d4fcb4aa2606c739e8359fe504204cdc5"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_2_d308/OCC496b.brep",
+      "size_bytes": 6247,
+      "sha256": "34dca030b3713fad191dee6f3675680c4b87f7f2624ec5ffb1e8bc661525b08c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_2_d308/bug27310_2_d308.tcl",
+      "size_bytes": 742,
+      "sha256": "dc67da9e1b30eccfe64ae98409b635b1ad4ba8379d3a72b5e5a36922355c5ab9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_2_d308/draw_pure_display_noop.tcl",
+      "size_bytes": 264,
+      "sha256": "6dfd5d87d695385a4c93ffa6c0b2ef9a9607bf43a39e28fa0cea135b11c09bd0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_2_d308/harness_bug27310_2_d308.tcl",
+      "size_bytes": 1328,
+      "sha256": "05baa5b8aeff8f3684150b6d8d211c646c8e2c26ed1c029683c58e03b0491b9c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_2_d308/run_draw_case.py",
+      "size_bytes": 12981,
+      "sha256": "9ebd9f0a67bb31c6ecec5cac0fbd0cff5f0384b4749aad7b2f83626887923c76"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_2_d308/run_eval.py",
+      "size_bytes": 20219,
+      "sha256": "4e2a12acff86178ed85b388f555f8c8c62c3cb0e34b804b19907288d8375ed23"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_neighbor_finite_face/M27310_neighbor_finite_face.tcl",
+      "size_bytes": 2062,
+      "sha256": "e025d3718d5ced85ff3d44b3a4bba126f0e49b95c1936301a235e657e765aa9a"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_neighbor_finite_face/OCC496a.brep",
+      "size_bytes": 26898,
+      "sha256": "30ca1434011fba9bfd35692c07719a9d4fcb4aa2606c739e8359fe504204cdc5"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_neighbor_finite_face/OCC496b.brep",
+      "size_bytes": 6247,
+      "sha256": "34dca030b3713fad191dee6f3675680c4b87f7f2624ec5ffb1e8bc661525b08c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_neighbor_finite_face/case_contracts.json",
+      "size_bytes": 6687,
+      "sha256": "7acecbf31e2c8d53f96de4d5742b38f84a5c108536bc80e71bb1f516f39c2bab"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_neighbor_finite_face/draw_pure_display_noop.tcl",
+      "size_bytes": 264,
+      "sha256": "6dfd5d87d695385a4c93ffa6c0b2ef9a9607bf43a39e28fa0cea135b11c09bd0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_neighbor_finite_face/m27310_neighborhood.tcl",
+      "size_bytes": 1856,
+      "sha256": "c6565a3f4881cf5ca5abd4a307eea8f613abfdf80ea59998a6812971277c93fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_neighbor_finite_face/run_draw_case.py",
+      "size_bytes": 12981,
+      "sha256": "9ebd9f0a67bb31c6ecec5cac0fbd0cff5f0384b4749aad7b2f83626887923c76"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_neighbor_finite_face/run_eval.py",
+      "size_bytes": 20219,
+      "sha256": "4e2a12acff86178ed85b388f555f8c8c62c3cb0e34b804b19907288d8375ed23"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_regression_two_loops/M27310_regression_two_loops.tcl",
+      "size_bytes": 2060,
+      "sha256": "27085018781829f4e76d9ccb65b2859871459581614c481810f634fd046254c9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_regression_two_loops/case_contracts.json",
+      "size_bytes": 6687,
+      "sha256": "7acecbf31e2c8d53f96de4d5742b38f84a5c108536bc80e71bb1f516f39c2bab"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_regression_two_loops/draw_pure_display_noop.tcl",
+      "size_bytes": 264,
+      "sha256": "6dfd5d87d695385a4c93ffa6c0b2ef9a9607bf43a39e28fa0cea135b11c09bd0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_regression_two_loops/m27310_regression.tcl",
+      "size_bytes": 1818,
+      "sha256": "def70223581d41ab8f56024ea576e46b6cc250f4f4e4a1802e11e9dcd6b7997e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_regression_two_loops/run_draw_case.py",
+      "size_bytes": 12981,
+      "sha256": "9ebd9f0a67bb31c6ecec5cac0fbd0cff5f0384b4749aad7b2f83626887923c76"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_regression_two_loops/run_eval.py",
+      "size_bytes": 20219,
+      "sha256": "4e2a12acff86178ed85b388f555f8c8c62c3cb0e34b804b19907288d8375ed23"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27310_regression_two_loops/verify_m27310_endpoint_graph.py",
+      "size_bytes": 19410,
+      "sha256": "6c49e71349b761aa765e0101357b0920dbdb6bedc657b686e954c26ca8a80bbc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773/bug27773.tcl",
+      "size_bytes": 383,
+      "sha256": "17b41e533636327619ae94902296b5a2c73e7e0071a09f6280289290223b0941"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773/draw_pure_display_noop.tcl",
+      "size_bytes": 264,
+      "sha256": "6dfd5d87d695385a4c93ffa6c0b2ef9a9607bf43a39e28fa0cea135b11c09bd0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773/harness_bug27773.tcl",
+      "size_bytes": 1293,
+      "sha256": "92c210445156b9e064f379972da197a914680b4ae66cbc9f4d8a113a9ffbb287"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773/run_draw_case.py",
+      "size_bytes": 12981,
+      "sha256": "9ebd9f0a67bb31c6ecec5cac0fbd0cff5f0384b4749aad7b2f83626887923c76"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773/run_eval.py",
+      "size_bytes": 20219,
+      "sha256": "4e2a12acff86178ed85b388f555f8c8c62c3cb0e34b804b19907288d8375ed23"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773_neighbor_offset_line/M27773_neighbor_offset_line.tcl",
+      "size_bytes": 2062,
+      "sha256": "917c4c5b0ba256a24ca9ff487f12d8e64ecb85bb144372583d6b8f30ac253cde"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773_neighbor_offset_line/case_contracts.json",
+      "size_bytes": 6687,
+      "sha256": "7acecbf31e2c8d53f96de4d5742b38f84a5c108536bc80e71bb1f516f39c2bab"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773_neighbor_offset_line/draw_pure_display_noop.tcl",
+      "size_bytes": 264,
+      "sha256": "6dfd5d87d695385a4c93ffa6c0b2ef9a9607bf43a39e28fa0cea135b11c09bd0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773_neighbor_offset_line/m27773_neighborhood.tcl",
+      "size_bytes": 702,
+      "sha256": "76f2a4bb6a28e018c50c02f07f52b521acb1a965d21a99344191fbde05da8ddd"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773_neighbor_offset_line/run_draw_case.py",
+      "size_bytes": 12981,
+      "sha256": "9ebd9f0a67bb31c6ecec5cac0fbd0cff5f0384b4749aad7b2f83626887923c76"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773_neighbor_offset_line/run_eval.py",
+      "size_bytes": 20219,
+      "sha256": "4e2a12acff86178ed85b388f555f8c8c62c3cb0e34b804b19907288d8375ed23"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773_regression_circle_line/M27773_regression_circle_line.tcl",
+      "size_bytes": 2068,
+      "sha256": "aa02e6f88fb03824066186c9038d9fd846b78c170664d76834718b976524f2e3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773_regression_circle_line/case_contracts.json",
+      "size_bytes": 6687,
+      "sha256": "7acecbf31e2c8d53f96de4d5742b38f84a5c108536bc80e71bb1f516f39c2bab"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773_regression_circle_line/draw_pure_display_noop.tcl",
+      "size_bytes": 264,
+      "sha256": "6dfd5d87d695385a4c93ffa6c0b2ef9a9607bf43a39e28fa0cea135b11c09bd0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773_regression_circle_line/m27773_regression.tcl",
+      "size_bytes": 460,
+      "sha256": "73d737e42afac547c472f486406eecd114f77c17fdeb07669bd60fe1fa31e951"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773_regression_circle_line/run_draw_case.py",
+      "size_bytes": 12981,
+      "sha256": "9ebd9f0a67bb31c6ecec5cac0fbd0cff5f0384b4749aad7b2f83626887923c76"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/M27773_regression_circle_line/run_eval.py",
+      "size_bytes": 20219,
+      "sha256": "4e2a12acff86178ed85b388f555f8c8c62c3cb0e34b804b19907288d8375ed23"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/trusted/case_contracts.json",
+      "size_bytes": 6687,
+      "sha256": "7acecbf31e2c8d53f96de4d5742b38f84a5c108536bc80e71bb1f516f39c2bab"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/trusted/run_eval.py",
+      "size_bytes": 20219,
+      "sha256": "4e2a12acff86178ed85b388f555f8c8c62c3cb0e34b804b19907288d8375ed23"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/oracles/M27252.json",
+      "size_bytes": 1082,
+      "sha256": "353644d0a1885fb4177d3f0ffd58d66f471af0b961517e0dd1903b6880fb9f7e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/oracles/M27252_neighbor_translated_plane.json",
+      "size_bytes": 1289,
+      "sha256": "7fa3f5293b7431b7f959c2cfb26c6f2bcd2bd63d45544d7d8819161ff4229c03"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/oracles/M27252_regression_cylinder_plane.json",
+      "size_bytes": 1281,
+      "sha256": "4ffa891e3b2aac4ace5e21fe0d3845d0a217133dcc819e48288684dacfcf5372"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/oracles/M27310_1.json",
+      "size_bytes": 928,
+      "sha256": "c8c6f8909991a6f2b14d069e04dcd0c0f078bc6e82e91ba006a7df79bc6c17f2"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/oracles/M27310_2_d308.json",
+      "size_bytes": 1021,
+      "sha256": "0113bb0df3c2813d6b79709291d96bd61f46efb3e39747e62b83826eb5d2bccc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/oracles/M27310_neighbor_finite_face.json",
+      "size_bytes": 1321,
+      "sha256": "20a1b41a533334b3b79fac2b1ce14aa066489be5bf8a435499366ddac52ff884"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/oracles/M27310_regression_two_loops.json",
+      "size_bytes": 1364,
+      "sha256": "99b7539968138e35b4d1157607c25b0426fac0583d1fedf92a163ec8f3a21b61"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/oracles/M27773.json",
+      "size_bytes": 1012,
+      "sha256": "a5b46dd9a0d24db42f163e312cce85989f4b6ba3c9f7fe2d06843e5c0495e843"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/oracles/M27773_neighbor_offset_line.json",
+      "size_bytes": 1287,
+      "sha256": "f63a6e061933cc4d9e25b5b6574082d56c4095ad2e9a2e60e3b7ab13eadccce0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/oracles/M27773_regression_circle_line.json",
+      "size_bytes": 1278,
+      "sha256": "7c8edd7f894babadf3220c3324a7dca466c2e20eb53189e57d1d1d7f68ba0d68"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runners/run_draw_case.py",
+      "size_bytes": 12981,
+      "sha256": "9ebd9f0a67bb31c6ecec5cac0fbd0cff5f0384b4749aad7b2f83626887923c76"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27252.execution.json",
+      "size_bytes": 2050,
+      "sha256": "0fcb6a6551d746c95d4fda66321b646e92b978a66b88c8831e4296473f3c9032"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27252.log",
+      "size_bytes": 423,
+      "sha256": "e5f444c55b9687154330272beabeffe30dc05870c14f2c555e88cec9d99fc9a2"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27252.staged-result.json",
+      "size_bytes": 5182,
+      "sha256": "1cfdd0d69d648edd7d43c7e62fc33bee85a7fb2feee30adb40485d83eda5b60b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27252_regression_cylinder_plane.execution.json",
+      "size_bytes": 2043,
+      "sha256": "ff4de10a7a3c78d7d9f75fc03371dc5d9240202f2f6743de0125e194a3df9627"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27252_regression_cylinder_plane.log",
+      "size_bytes": 1345,
+      "sha256": "2831db64221d442e4654abfaf5e7d81fcf2bb5aaa260dcc6bf293a5b23e6a381"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27252_regression_cylinder_plane.staged-result.json",
+      "size_bytes": 5557,
+      "sha256": "638b7892d3d75a47e8f44ec434d4e408d59562253f23ef41a959d9b6e9c7da04"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27310_1.execution.json",
+      "size_bytes": 2024,
+      "sha256": "17e0e1eff034b6cc2ab86e1af7be9f9c2f0ae0bb6e3e67c73e0000fa064b363b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27310_1.log",
+      "size_bytes": 1031,
+      "sha256": "d9af3399a231b32431fe812a68e8cb2d4ec59586e189c5a0437f24a557d24612"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27310_1.staged-result.json",
+      "size_bytes": 5260,
+      "sha256": "efe30c96ec0759d3521d05af13b983f58747744c2de439ec5f11c1b8de91630a"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27310_2_d308.execution.json",
+      "size_bytes": 2055,
+      "sha256": "9d4fb7aa51a1afbe41a3b734f8c7b5b72ab1f504857c2da56de1e72244848447"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27310_2_d308.log",
+      "size_bytes": 1002,
+      "sha256": "adbbcf1fb5478fbf4c06c3632833b4e718e3f614710aba97655f5eb8555afb0e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27310_2_d308.staged-result.json",
+      "size_bytes": 5322,
+      "sha256": "2954e137987f5b715cc34b33d1a3164dfd5ecc0b6425a9410a5e11c383d09adb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27310_regression_two_loops.execution.json",
+      "size_bytes": 2807,
+      "sha256": "d203269caeb02229f4d72c6ce9fba48fc2a694616da677a23735c1b298d5c60d"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27310_regression_two_loops.log",
+      "size_bytes": 5649,
+      "sha256": "2ca885d6d888bfaa50eedf3da9e7ee34c5bbf1a6a16511bf243183a3ced6ab22"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27310_regression_two_loops.staged-result.json",
+      "size_bytes": 7137,
+      "sha256": "3cb1c4b7b8d48894bf0d7e85c2c1ae546e2cf65d6761f6ece6f5812d1206e2b5"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27773.execution.json",
+      "size_bytes": 1868,
+      "sha256": "f8de0e1cef48fa7a1802cb7438bad4127af6dd1aa0085b2ecc7e2375a86398df"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27773.log",
+      "size_bytes": 304,
+      "sha256": "15b70ad508a596f25c570c95b7c7e42d2e895903fbeef6d509168d9ce6837657"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27773.staged-result.json",
+      "size_bytes": 4672,
+      "sha256": "f6ff4502c227915fbb519bc2ddc55cbac18fb930deb92d06ecd645797f5a7cb5"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27773_regression_circle_line.execution.json",
+      "size_bytes": 1905,
+      "sha256": "ffec29cff392b1a0ffd0b2131100c6f6ed3d0710bc003908e97856ef59f28b36"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27773_regression_circle_line.log",
+      "size_bytes": 447,
+      "sha256": "58be907e7cdc6e1bd5219c9870e6fd111368c820da095e74974446b2d2befe9f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/B/M27773_regression_circle_line.staged-result.json",
+      "size_bytes": 5275,
+      "sha256": "a2fdc4fe428531300d4277397114ab2cfd28ea9ff01e61cf7ae521e6b4088105"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27252.execution.json",
+      "size_bytes": 1945,
+      "sha256": "42c6b81eca4bf18e240abf913eb7eed113d3518b8ad55371652a6d8edce59675"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27252.log",
+      "size_bytes": 897,
+      "sha256": "d39989f381884f50fd870c6f2d4bf03223c4491116a56af38aa28578ded86945"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27252.staged-result.json",
+      "size_bytes": 5363,
+      "sha256": "ab5f62964fdc62298d2400e99dffbd91770b90eb398b6d5db353e6a608bd8cb1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27252_neighbor_translated_plane.execution.json",
+      "size_bytes": 2072,
+      "sha256": "29f144bf09adde0fcc1163edef9700d671f4c585da1a6920bf6e6b60f803ca6d"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27252_neighbor_translated_plane.log",
+      "size_bytes": 1784,
+      "sha256": "a8689b08dff19562c2d41a24dfeb18e599a8168590110cee781db3b21183e064"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27252_neighbor_translated_plane.staged-result.json",
+      "size_bytes": 6014,
+      "sha256": "58399d514eef9256a18a26cdb22227064930f3b269518678ba11d3ea9f8077ca"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27252_regression_cylinder_plane.execution.json",
+      "size_bytes": 2043,
+      "sha256": "9f3076586307c2de88371cc4e04f1860228369d7e7db57ba855318cfd247d00e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27252_regression_cylinder_plane.log",
+      "size_bytes": 1345,
+      "sha256": "2831db64221d442e4654abfaf5e7d81fcf2bb5aaa260dcc6bf293a5b23e6a381"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27252_regression_cylinder_plane.staged-result.json",
+      "size_bytes": 5958,
+      "sha256": "489a1f25b5968ab9df845b881dd9c23c413e8f688adee27940e035919eeebbb4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27310_1.execution.json",
+      "size_bytes": 2010,
+      "sha256": "b80b8965d5007beb5ce3de1139e027b25cd1cc43e055e05bbeffc0ac22b5594f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27310_1.log",
+      "size_bytes": 972,
+      "sha256": "b9b9b47a221dde29c87ebae8d4db8f228ab907ae04cf6f97cf78c56892593af9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27310_1.staged-result.json",
+      "size_bytes": 5625,
+      "sha256": "2c9c2b2785f988288b80c91648a11a9921a1af96b7c94d93c659b0506cdf00c5"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27310_2_d308.execution.json",
+      "size_bytes": 2057,
+      "sha256": "21fa3aae1a97f016b0802cfd7a93867f511108777be97d6d3627807802a493e7"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27310_2_d308.log",
+      "size_bytes": 1017,
+      "sha256": "edb2277312fd220e1a91ebfee5117a57ccb1c6aa3b99171ccb89a80bc05cd9fc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27310_2_d308.staged-result.json",
+      "size_bytes": 5719,
+      "sha256": "3b4d2cb91ecb2575848d81882fd221d5eb0875e1a3d2c408693e41843bcf4d64"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27310_neighbor_finite_face.execution.json",
+      "size_bytes": 2034,
+      "sha256": "216aefe7ffbec6dcee94629c5c0b5448eb43761fbf0a708b8cfd61052177a8b2"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27310_neighbor_finite_face.log",
+      "size_bytes": 1762,
+      "sha256": "df0f0d2f05a3c394aad5a4eac2bfd47c4ed6305ee0e1f144f8eb4ad483b1cda1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27310_neighbor_finite_face.staged-result.json",
+      "size_bytes": 5937,
+      "sha256": "9c617f61b109c6bfcede18d16dcdcd830c84ba7aba9731c71dbc200a7b2e9603"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27310_regression_two_loops.execution.json",
+      "size_bytes": 2822,
+      "sha256": "db0fb3212a0470048380f575a4acf411c7fb560a820cc8e4c8416e9b8d131a81"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27310_regression_two_loops.log",
+      "size_bytes": 5664,
+      "sha256": "63d4d350537cffd07bb1a848c7a1dac52015b4b5fc19392da9aefdceb3d5a591"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27310_regression_two_loops.staged-result.json",
+      "size_bytes": 7568,
+      "sha256": "4afc6cd2bb82bb88ba621ad8caea1d5b46884a58911cd4e907b50694cccb6949"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27773.execution.json",
+      "size_bytes": 1856,
+      "sha256": "a34aea6ffdc9dc5ea8667fb590f5adb15f3c9d40354c1a32e883a513175bc806"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27773.log",
+      "size_bytes": 453,
+      "sha256": "6597592b5b022d0841e46df0c62a0c9103227e839b95787c7b54a6e74c89678f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27773.staged-result.json",
+      "size_bytes": 5041,
+      "sha256": "95b0fccb16de13f892e88c11f886e3f0a9b7bac8507087956683a980e0994198"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27773_neighbor_offset_line.execution.json",
+      "size_bytes": 1902,
+      "sha256": "96fb507d17727df7c04c8bbfc63de009fb679b6aa5516bc70607b7bbb70322f8"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27773_neighbor_offset_line.log",
+      "size_bytes": 585,
+      "sha256": "72c7353929d3e4dc5bdb1d45488dad99b98fb8660cbe0afcc09782c585bb61a4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27773_neighbor_offset_line.staged-result.json",
+      "size_bytes": 5668,
+      "sha256": "f4a1f8447a72bef9f985e3e0e2a083d7857385de0082ed68e535fca71217368b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27773_regression_circle_line.execution.json",
+      "size_bytes": 1905,
+      "sha256": "b9e15cc024c1c6db648d517f0c3bb2edb31a3dc5ed15fa471d75eb15771cfb49"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27773_regression_circle_line.log",
+      "size_bytes": 447,
+      "sha256": "58be907e7cdc6e1bd5219c9870e6fd111368c820da095e74974446b2d2befe9f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-b55-27310-27773-27252-oracle-v2/runs/F/M27773_regression_circle_line.staged-result.json",
+      "size_bytes": 5676,
+      "sha256": "cf977290ad1efbb9cb955060c027731fd58c1d85e2aed68361b272303452154b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/acceptance.json",
+      "size_bytes": 1628,
+      "sha256": "3bcc3c79b65d7c5689d5e6a7e3e24fa8371466b665e53a2d9617785f3e578aaf"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/bf_evidence.json",
+      "size_bytes": 44447,
+      "sha256": "4e6d7c9a547cad2a041fc1b9a2d4d11a0e9a12c589b3b34899f8351b88815bbc"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/B/build_d9d310_clang10_artifact_verification.json",
+      "size_bytes": 1416,
+      "sha256": "cd715e991a2b74c995a69bc38ce08b46286ef4d70eb570b165bf66680bc2aad9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/B/build_d9d310_clang10_o0.json",
+      "size_bytes": 2265,
+      "sha256": "d8920de5edba63aac104c0446bf8f227fcb8b5d366955509aa857e0139f7100b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/B/configure_d9d310_clang10_o0.json",
+      "size_bytes": 4184,
+      "sha256": "17675be3d2c9e1a6c10d3e91cb67e1df14a7ad97d4cc5c430188f2b4a8750e10"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/B/custom_clang_64.sh",
+      "size_bytes": 1762,
+      "sha256": "6dfe2a626f2957dc6ba8996c6c17abc98eb0bc6c8a3a58b45940269b566dc420"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/B/env.sh",
+      "size_bytes": 4277,
+      "sha256": "77f0233768333a0c6c7c7f61147eec784a8a521e0ab0904d1578f6ec10d3b763"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/F/build_f870ae_clang10_artifact_verification.json",
+      "size_bytes": 1506,
+      "sha256": "36e85759669255034b7b27f12b4fa34cadaedc44e7733d2ebab49e6f45b47619"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/F/build_f870ae_clang10_o0.json",
+      "size_bytes": 2255,
+      "sha256": "04dece8cc3d34acb673dae5b0a6323534bbdfdf4d3b6e04d92eb57b76cef1590"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/F/configure_f870ae_clang10_o0.json",
+      "size_bytes": 4526,
+      "sha256": "82472e12d45c81a43c854127f5bfc726a12950bbd8ee5fcd8888f41fe271371d"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/F/custom_clang_64.sh",
+      "size_bytes": 1762,
+      "sha256": "ab8aa26414453d07348aca86791c9a991a19c8abe4c83d59652bab51c3cb8124"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/F/env.sh",
+      "size_bytes": 4181,
+      "sha256": "7ee50198b0a4e7fadb5286b7cadc093730c422200b8001bf67b48d4777d772de"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/build_config.json",
+      "size_bytes": 4527,
+      "sha256": "3a4c8fdf67ae194a464b102972522b85fe2032792213f692abfb9b4d417ca8ae"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/bundle/build.sh",
+      "size_bytes": 3046,
+      "sha256": "6a0e4b0343018fdd701833b9b033e2ec71e502f9f08e592b3d5b13afdca9d9ba"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/bundle/occt-clang10-tcl86-bf-d9-v1.json",
+      "size_bytes": 490,
+      "sha256": "331e2efb4eb3c1e044df2f9e94a2c3936cee757f98f301c2610df8d3c26e02cb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/bundle/run_eval.py",
+      "size_bytes": 7204,
+      "sha256": "b95dc753d652b9041692cda4ad30ce0bda118ac9a3a0ccc6a49d7eb154e5bef0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/build-configs/bundle/xlocale.h",
+      "size_bytes": 267,
+      "sha256": "0cfbf755395add5d865f01722849120cbd0dccb0774755f2af369950dbcb779f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_intersection_oracle.tcl",
+      "size_bytes": 5931,
+      "sha256": "fdb259dffb2dfc917e39f07bcc67e2a3bab757f03fa0bbe488b789570a64a2a0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_neighbor_source.tcl",
+      "size_bytes": 410,
+      "sha256": "f69f8af78dc401728e491399f3e077b5d7da0febd6d367cb030441f79664e3a6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_neighbor_sphere9p5/M21494_intersection_oracle.tcl",
+      "size_bytes": 5931,
+      "sha256": "fdb259dffb2dfc917e39f07bcc67e2a3bab757f03fa0bbe488b789570a64a2a0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_neighbor_sphere9p5/M21494_neighbor_source.tcl",
+      "size_bytes": 410,
+      "sha256": "f69f8af78dc401728e491399f3e077b5d7da0febd6d367cb030441f79664e3a6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_neighbor_sphere9p5/M21494_neighbor_sphere9p5.tcl",
+      "size_bytes": 3003,
+      "sha256": "14dea7550fd64df29481458f1f3b7e70d04d7e8a9c3e5b60687464892b1cc352"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_neighbor_sphere9p5/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_neighbor_sphere9p5/official_9bc5f585_intss_begin.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_neighbor_sphere9p5.tcl",
+      "size_bytes": 3003,
+      "sha256": "14dea7550fd64df29481458f1f3b7e70d04d7e8a9c3e5b60687464892b1cc352"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_regression_cone10_sphere9/M21494_intersection_oracle.tcl",
+      "size_bytes": 5931,
+      "sha256": "fdb259dffb2dfc917e39f07bcc67e2a3bab757f03fa0bbe488b789570a64a2a0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_regression_cone10_sphere9/M21494_regression_cone10_sphere9.tcl",
+      "size_bytes": 3017,
+      "sha256": "6a8e2e791a2917f917fa7f88dca74b078341b96b5bfa364505a3930ec36bc0d2"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_regression_cone10_sphere9/M21494_regression_source.tcl",
+      "size_bytes": 419,
+      "sha256": "1c8e9fd77b35b11ec6e6d122e9ac088ca66975b00786a129b5336b13738ebf96"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_regression_cone10_sphere9/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_regression_cone10_sphere9/official_9bc5f585_intss_begin.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_regression_cone10_sphere9.tcl",
+      "size_bytes": 3017,
+      "sha256": "6a8e2e791a2917f917fa7f88dca74b078341b96b5bfa364505a3930ec36bc0d2"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M21494_regression_source.tcl",
+      "size_bytes": 419,
+      "sha256": "1c8e9fd77b35b11ec6e6d122e9ac088ca66975b00786a129b5336b13738ebf96"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_cone_plane_ring_control/M29807_cone_plane_ring_control.tcl",
+      "size_bytes": 3011,
+      "sha256": "ec0c671c88801797c27aea946db38d6c375d934d2bac9e9329be7f79b72d7a79"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_cone_plane_ring_control/M29807_ring_case_source.tcl",
+      "size_bytes": 536,
+      "sha256": "140bb6460ba913fa02c4cac8840b9b6e6dd5f0dcae7c339b17a96d49a36dec79"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_cone_plane_ring_control/M29807_ring_oracle.tcl",
+      "size_bytes": 3334,
+      "sha256": "b41682478a6667632b153d628afd55b1d4e99e2626d56e0d529a672ef789a4d9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_cone_plane_ring_control/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_cone_plane_ring_control/official_9bc5f585_intss_begin.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_cone_plane_ring_control.tcl",
+      "size_bytes": 3011,
+      "sha256": "ec0c671c88801797c27aea946db38d6c375d934d2bac9e9329be7f79b72d7a79"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_neighbor_i1002/M29807_neighbor_i1002.tcl",
+      "size_bytes": 3198,
+      "sha256": "5feeefbe19ea6b3f6b2a1c8ddc5a6586349061da63ade89941e04e01e65f697d"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_neighbor_i1002/bug29807-obj.brep",
+      "size_bytes": 124701,
+      "sha256": "53c74f5c57fd22ed11aef27d4ddfb362503a48d16eb3ca9dfaee6d030636465a"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_neighbor_i1002/bug29807-tool.brep",
+      "size_bytes": 1274,
+      "sha256": "2774749bea5417d09e20f9bcfbdf539e34018abaf5507f8ad979d237104b8210"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_neighbor_i1002/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_neighbor_i1002/hidden_2dfit_noop.tcl",
+      "size_bytes": 328,
+      "sha256": "300f448d9b027ede8a5b5b384aa729bb302f8f4a004357bd310ee1b630c856fe"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_neighbor_i1002/official_bug29807_i1002.tcl",
+      "size_bytes": 761,
+      "sha256": "ad27aa48033fe2768bba305c9b677312aeae9705f9544c64558e2b75d036ef28"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_neighbor_i1002.tcl",
+      "size_bytes": 3198,
+      "sha256": "5feeefbe19ea6b3f6b2a1c8ddc5a6586349061da63ade89941e04e01e65f697d"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_ring_case_source.tcl",
+      "size_bytes": 536,
+      "sha256": "140bb6460ba913fa02c4cac8840b9b6e6dd5f0dcae7c339b17a96d49a36dec79"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M29807_ring_oracle.tcl",
+      "size_bytes": 3334,
+      "sha256": "b41682478a6667632b153d628afd55b1d4e99e2626d56e0d529a672ef789a4d9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_neighbor_axis_offset5/M31835_neighbor_axis_offset5.tcl",
+      "size_bytes": 2995,
+      "sha256": "8b68fb9eb10a4b86d310248c026e820fdcf82899b2f8d422524eb9dc13b8aaad"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_neighbor_axis_offset5/M31835_neighbor_axis_offset5_source.tcl",
+      "size_bytes": 363,
+      "sha256": "1abf12d7414472fc7d9a20274e87a9aea48db8268d02291a348a90b3f1329bc9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_neighbor_axis_offset5/M31835_three_cylinder_oracle.tcl",
+      "size_bytes": 1888,
+      "sha256": "1e8005aae8e5913b6bc8a01f948df45082901d882311aa9ca0462d758a4272f8"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_neighbor_axis_offset5/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_neighbor_axis_offset5.tcl",
+      "size_bytes": 2995,
+      "sha256": "8b68fb9eb10a4b86d310248c026e820fdcf82899b2f8d422524eb9dc13b8aaad"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_neighbor_axis_offset5_source.tcl",
+      "size_bytes": 363,
+      "sha256": "1abf12d7414472fc7d9a20274e87a9aea48db8268d02291a348a90b3f1329bc9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_regression_steinmetz_r80/M31835_regression_steinmetz_r80.tcl",
+      "size_bytes": 3001,
+      "sha256": "6935600c84c3364e2806f58a9fe1ef705253d434e7ed2f0341e180bac0904283"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_regression_steinmetz_r80/M31835_regression_steinmetz_r80_source.tcl",
+      "size_bytes": 371,
+      "sha256": "0a816add8c252182ac22f828f42710fd9e6f93baf80c94ec73f38dce341d45a4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_regression_steinmetz_r80/M31835_three_cylinder_oracle.tcl",
+      "size_bytes": 1888,
+      "sha256": "1e8005aae8e5913b6bc8a01f948df45082901d882311aa9ca0462d758a4272f8"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_regression_steinmetz_r80/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_regression_steinmetz_r80.tcl",
+      "size_bytes": 3001,
+      "sha256": "6935600c84c3364e2806f58a9fe1ef705253d434e7ed2f0341e180bac0904283"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_regression_steinmetz_r80_source.tcl",
+      "size_bytes": 371,
+      "sha256": "0a816add8c252182ac22f828f42710fd9e6f93baf80c94ec73f38dce341d45a4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/M31835_three_cylinder_oracle.tcl",
+      "size_bytes": 1888,
+      "sha256": "1e8005aae8e5913b6bc8a01f948df45082901d882311aa9ca0462d758a4272f8"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/bug29807-obj.brep",
+      "size_bytes": 124701,
+      "sha256": "53c74f5c57fd22ed11aef27d4ddfb362503a48d16eb3ca9dfaee6d030636465a"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/bug29807-tool.brep",
+      "size_bytes": 1274,
+      "sha256": "2774749bea5417d09e20f9bcfbdf539e34018abaf5507f8ad979d237104b8210"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/official_9bc5f585_intss_begin.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/official_bug29807_i1002.tcl",
+      "size_bytes": 761,
+      "sha256": "ad27aa48033fe2768bba305c9b677312aeae9705f9544c64558e2b75d036ef28"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M21494_2/bug21494_2.tcl",
+      "size_bytes": 1478,
+      "sha256": "09801f217d3a6668062405c2aa66d3f9cb4db765b1d0fa4cd8ab97a3148b2b47"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M21494_2/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M21494_2/harness_bug21494_2.tcl",
+      "size_bytes": 2771,
+      "sha256": "13e70818e5365e10acb90b43db1b5450a6ac6ccc05b8bc4672cd3ddfae6e34d8"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M21494_2/official_9bc5f585_intss_begin.tcl",
+      "size_bytes": 1732,
+      "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M29807_i5002/bug29807_i5002.tcl",
+      "size_bytes": 1224,
+      "sha256": "9f0c58fbfd6f56bbbc545f16cf7b4197529acb929e15961d7d60f9b8671d1fe0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M29807_i5002/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M29807_i5002/harness_bug29807_i5002.tcl",
+      "size_bytes": 2596,
+      "sha256": "343d4f467a4168bbe5210c918873408010de998151598d4b8ef790b7abe4f3b9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M29807_svm01/bug29807_svm01.tcl",
+      "size_bytes": 837,
+      "sha256": "c5a6829e61545ab97ee642deaac6b6ae6e841a332a15829c0fa13cda80e73336"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M29807_svm01/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M29807_svm01/harness_bug29807_svm01.tcl",
+      "size_bytes": 2549,
+      "sha256": "91069422a88d009c91bb08d05fc6c2a62704ad2de418b75ab37b689a8e3d6d79"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M29807_svm02/bug29807_svm02.tcl",
+      "size_bytes": 833,
+      "sha256": "6b5be1415d7c55fa85804d435db5e5fc6e3bf040f71f23a4f81e2ac76fbbe72f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M29807_svm02/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M29807_svm02/harness_bug29807_svm02.tcl",
+      "size_bytes": 2549,
+      "sha256": "d5c7b1d58ae2706e374db110d92fd5bc91975791e7c639ba1ecde15d1d41f83c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M31835_1/bug31835_1.tcl",
+      "size_bytes": 1337,
+      "sha256": "77b9905c9da09bc1bf8966ea67a7877afdcf6cb17c4f915063207f5bfe689873"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M31835_1/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M31835_1/harness_bug31835_1.tcl",
+      "size_bytes": 3628,
+      "sha256": "c593a09ba82b7762743b7f8039fd41cff15518bcef47dfc92216c5d04bf4377f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M31835_2/bug31835_2.tcl",
+      "size_bytes": 1425,
+      "sha256": "1e1a6438d1ff2eb9797a5c0d500e4c5f416a120711b91f198bda2b07091c9e8e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M31835_2/draw_pure_display_noop.tcl",
+      "size_bytes": 713,
+      "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/inputs/original_M31835_2/harness_bug31835_2.tcl",
+      "size_bytes": 3693,
+      "sha256": "dccb364115a708890f459d349f5840f238a039bb3f34db1d6cfea6fa0702041f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/oracles/M21494_neighbor_sphere9p5.json",
+      "size_bytes": 1401,
+      "sha256": "6f058920248ae8edaa9bc07e86e521bb3d4ab7ed0999640ef063297261435d5e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/oracles/M21494_regression_cone10_sphere9.json",
+      "size_bytes": 1413,
+      "sha256": "d72cccbc832cdf8bc56d28ee7bd79ba1720fdfc7f2049a79fba646ed976d9083"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/oracles/M29807_cone_plane_ring_control.json",
+      "size_bytes": 1427,
+      "sha256": "d12371c5d32ad41be2134fcc9ad6bf6b94e98c51cdad21d2442b09160915946f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/oracles/M29807_neighbor_i1002.json",
+      "size_bytes": 1374,
+      "sha256": "537e36699e72c46514bf27c7649780481c66e125771739d2edcb32d8e1600452"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/oracles/M31835_neighbor_axis_offset5.json",
+      "size_bytes": 1332,
+      "sha256": "307ecb40b8bc4a37db8e96697e2b76fb7a3413024e5e998d29e3c8a42d8c3399"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/oracles/M31835_regression_steinmetz_r80.json",
+      "size_bytes": 1342,
+      "sha256": "d89b17418a76c3c3879a68e8f7fbee1367bda92c49c14468f30a969fa71ba603"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/oracles/original_M21494_2.json",
+      "size_bytes": 1061,
+      "sha256": "dab8f277c5882148d2f7aa7f554059104d35d6932ee2366f60c98b648b402338"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/oracles/original_M29807_i5002.json",
+      "size_bytes": 1069,
+      "sha256": "e4043c1a7e214a47f48d61f9b2cef02ce72f3644672abf2519eee9276573b113"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/oracles/original_M29807_svm01.json",
+      "size_bytes": 1069,
+      "sha256": "ba3ba6146511d8417968a4d51055c482817c5dd5bdec2c1cc0738a963ae8f24f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/oracles/original_M29807_svm02.json",
+      "size_bytes": 1069,
+      "sha256": "11279b0e57b7fb015374fc76fa14e0ed085cf7d246d2cc4f8e64766f9517b270"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/oracles/original_M31835_1.json",
+      "size_bytes": 1061,
+      "sha256": "a4c2901ba162e8cd51544b21e75f62fe62e38126dc196ab9b9b4936cf24268b0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/oracles/original_M31835_2.json",
+      "size_bytes": 1061,
+      "sha256": "395e013c7d18f11bf6659c47bd7a0b999c5f47d814f0af2fc43295ae41306b14"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runners/run_staged_case.py",
+      "size_bytes": 10282,
+      "sha256": "8d985fd862e605a6c8a43c0123bdc99cd0cb2a12b82cd6afe1e49ce575409d4d"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/M21494_regression_cone10_sphere9.execution.json",
+      "size_bytes": 1654,
+      "sha256": "30f9fc78750ed9b4e37c65a954a2ac1994e4d2c32859d7c2bd23ae4ce4cde6ba"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/M21494_regression_cone10_sphere9.log",
+      "size_bytes": 2188,
+      "sha256": "689b9087f3f288d0a8444cdced08beec0d5d542c0bca8ad93319e21e033eaeb3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/M21494_regression_cone10_sphere9.staged-result.json",
+      "size_bytes": 4534,
+      "sha256": "4871d183f31fda2c5dc2b0b113c860b8e176d39d49717a4dcccc4db1c33cec8d"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/M29807_cone_plane_ring_control.execution.json",
+      "size_bytes": 1657,
+      "sha256": "8f1e89b4f2e3cba88fe157e0d05ddc55d1e327af11ef9a70111dcac4b8788395"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/M29807_cone_plane_ring_control.log",
+      "size_bytes": 1666,
+      "sha256": "29ff9da19a0c1d118eee9f267c8fcbd6373cd3f6e9851c444e3f25135097b902"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/M29807_cone_plane_ring_control.staged-result.json",
+      "size_bytes": 4522,
+      "sha256": "b616dc6c4b9fa2ce6a0c33636c0b247db6ca3ce23f2327e81d71fa3b53863d40"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/M31835_regression_steinmetz_r80.execution.json",
+      "size_bytes": 1660,
+      "sha256": "6fe585c16f0f38ed552f9b4c9075728b229b26d3df8c70831652be110b536dc5"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/M31835_regression_steinmetz_r80.log",
+      "size_bytes": 1310,
+      "sha256": "c2deb5552ca8f44dfbc57fb3e2d372030b9c9ab836d384b0857b5fa3098f8d01"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/M31835_regression_steinmetz_r80.staged-result.json",
+      "size_bytes": 4399,
+      "sha256": "6f6bd01eb118eaed04203bd58ad0b1f9f720d3452be7649dc9ef303c2644de2c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M21494_2.execution.json",
+      "size_bytes": 1613,
+      "sha256": "f9f5395b0173f9397188a40565c810e76ba3ff3a447223d7875579a1b17f5257"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M21494_2.log",
+      "size_bytes": 687,
+      "sha256": "6f188162bd21134fb33fc0e69dce3c62bf0882aaab40f372d47c2a4744d24126"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M21494_2.staged-result.json",
+      "size_bytes": 4284,
+      "sha256": "416fcddffcc136d5bcacd35ce9284a71e4c78eb14e8910b4d51915f491dc2b8c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M29807_i5002.execution.json",
+      "size_bytes": 1621,
+      "sha256": "f3aae9f23325b6524bcbad4451bba9c24a330e2e5801c16b70353460d020e081"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M29807_i5002.log",
+      "size_bytes": 858,
+      "sha256": "3e8566589045cc3089839124e11ce2ddd23841c77ef20575cad0257b0ef3c593"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M29807_i5002.staged-result.json",
+      "size_bytes": 4532,
+      "sha256": "c85021cd22c49f22a52a5381b0335ef56c8d67b0d218b9edefea1a97c19d41e6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M29807_svm01.execution.json",
+      "size_bytes": 1621,
+      "sha256": "72aaac799f4ff847c6fbe10421db5216b7e7348ec744f773799e5d979ce8ac4b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M29807_svm01.log",
+      "size_bytes": 1052,
+      "sha256": "8c7916d9d5b8c2e226d18e75c5d72ec8f7b3a1f672b504bab3929f3ab36000a4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M29807_svm01.staged-result.json",
+      "size_bytes": 4364,
+      "sha256": "96b6d7b298518493e29b50942c1be2fbc18420ffe404145413deb0fad892df1c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M29807_svm02.execution.json",
+      "size_bytes": 1621,
+      "sha256": "181eced661e165866cdc5b9b4ee4c244e8555b09d643baa1bd4f81d7bd2ce3d4"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M29807_svm02.log",
+      "size_bytes": 1052,
+      "sha256": "9f091f1a916dc5b3abb8972c50cfea38012135ee14488a75f82ce9288bb62b47"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M29807_svm02.staged-result.json",
+      "size_bytes": 4364,
+      "sha256": "22e878a6c0c9f123b7a0986604e8d749fa5f75349befcdabd70c8831363639ce"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M31835_1.execution.json",
+      "size_bytes": 1613,
+      "sha256": "21ee3f3b738d4ad932d72f23d1b577c711dae5693479f416b66fb6ac86ac6e30"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M31835_1.log",
+      "size_bytes": 3067,
+      "sha256": "c0d533086faaf7e1b506569a863e905c49a3db7e48cad7ea57d132934a6059ed"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M31835_1.staged-result.json",
+      "size_bytes": 4779,
+      "sha256": "26aed7aa2e0b4932555243af9c689f5b2d655cf77df1ebb84f7f0ba49248e7e0"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M31835_2.execution.json",
+      "size_bytes": 1613,
+      "sha256": "929eaa829b6d6af3748288cc9b78bc4a47c099f670ed2b351f7c0270ab2e0818"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M31835_2.log",
+      "size_bytes": 3067,
+      "sha256": "35b021b6ce1104a7ef8f2e335d55668dd517447f279e910fe02f35c24110aa4e"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/B/original_M31835_2.staged-result.json",
+      "size_bytes": 4780,
+      "sha256": "cd0887b5c459be4c8d211b045893118380cfe995396c770c7d8394d27d6b0de1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M21494_neighbor_sphere9p5.execution.json",
+      "size_bytes": 1642,
+      "sha256": "4f1ee7b5c20d0f639baf74039bfa6c36a332a2eec04f747b2ed431731636caf8"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M21494_neighbor_sphere9p5.log",
+      "size_bytes": 2195,
+      "sha256": "3e5554ced9e983e4501fd6d5f4e8782e0583bb7a771d92faecb174bbedaeaec6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M21494_neighbor_sphere9p5.staged-result.json",
+      "size_bytes": 4499,
+      "sha256": "37323f0a9cdc382ad6a13b32a4fc2bee9ba5e5ea94eeeb5dbc7a580c0fe9492d"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M21494_regression_cone10_sphere9.execution.json",
+      "size_bytes": 1654,
+      "sha256": "9bd6252a1856188e8175750de6e43531098b0ded93b70f1cf8a27a2b63716e99"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M21494_regression_cone10_sphere9.log",
+      "size_bytes": 2188,
+      "sha256": "689b9087f3f288d0a8444cdced08beec0d5d542c0bca8ad93319e21e033eaeb3"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M21494_regression_cone10_sphere9.staged-result.json",
+      "size_bytes": 4534,
+      "sha256": "75189ae8aedf3c636f6db827baa1de9d90582d1e2d4d2f274d669931409c62b2"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M29807_cone_plane_ring_control.execution.json",
+      "size_bytes": 1657,
+      "sha256": "7f8eb1017fa2aa85afed93ca5cb6cac01df3fc8ddb2bbd0d10ee0fba6e0a17b7"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M29807_cone_plane_ring_control.log",
+      "size_bytes": 1666,
+      "sha256": "29ff9da19a0c1d118eee9f267c8fcbd6373cd3f6e9851c444e3f25135097b902"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M29807_cone_plane_ring_control.staged-result.json",
+      "size_bytes": 4522,
+      "sha256": "faed33e4c59c94b33344f9af02c8fc5f1574fdaafc1b9fbc3daf5879f4f81b07"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M29807_neighbor_i1002.execution.json",
+      "size_bytes": 1642,
+      "sha256": "5c35fca5992577af5011d19c891bf7c92146517f09feb41f063d15cee39bdb74"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M29807_neighbor_i1002.log",
+      "size_bytes": 1223,
+      "sha256": "eef7e4105fb0c58396a0019eaf7042412af10ae7c3c6fc4557e9f4cc237df170"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M29807_neighbor_i1002.staged-result.json",
+      "size_bytes": 4460,
+      "sha256": "485d8f3a0d816008b203aac3fd2f5a7d4a628144160bf3ab259fbddb2a69d653"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M31835_neighbor_axis_offset5.execution.json",
+      "size_bytes": 1656,
+      "sha256": "f0ff1415d8c89e0bef9e482ffe03e794b3cb5783da7113a22facc2938529a74b"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M31835_neighbor_axis_offset5.log",
+      "size_bytes": 1308,
+      "sha256": "61c0426dd9801402d58b6e1ca0e5286d909791cef6bd32c293e61e271bffb41f"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M31835_neighbor_axis_offset5.staged-result.json",
+      "size_bytes": 4383,
+      "sha256": "4f633f01b4aca292e5044b896d98bdeb9b888233f3ed8125861c80d1ae27ccb9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M31835_regression_steinmetz_r80.execution.json",
+      "size_bytes": 1660,
+      "sha256": "b42b2be0bc0451fb9b2f46029dff768e380e38f92fb3068b3d509d64549e91b6"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M31835_regression_steinmetz_r80.log",
+      "size_bytes": 1310,
+      "sha256": "c2deb5552ca8f44dfbc57fb3e2d372030b9c9ab836d384b0857b5fa3098f8d01"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/M31835_regression_steinmetz_r80.staged-result.json",
+      "size_bytes": 4399,
+      "sha256": "4ddf7c6baf8d303d2a99e50b589e0c5af8f604bfd3cc54343360e13f8c942d8c"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M21494_2.execution.json",
+      "size_bytes": 1611,
+      "sha256": "4489217664ff02f0f70ce3390e12385ea759248018f26e3db58998d1228edd9a"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M21494_2.log",
+      "size_bytes": 929,
+      "sha256": "950b15ea3a93322a87727785ea23d9fbd59f39ea0d166e577960c126f2897cec"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M21494_2.staged-result.json",
+      "size_bytes": 4158,
+      "sha256": "40d29a8f0a7c22013b2411f83ea701587e843d1bf79510c5545d8c8b3dc98a00"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M29807_i5002.execution.json",
+      "size_bytes": 1619,
+      "sha256": "d7b01637931d7c0fed93d4b440d0b69c319ad4772a03d51119331bd2eac0a194"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M29807_i5002.log",
+      "size_bytes": 906,
+      "sha256": "d9e2baef45144cebe3c96b0c294776ec028ae41b831ff478b68878e6fda4d4fa"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M29807_i5002.staged-result.json",
+      "size_bytes": 4182,
+      "sha256": "dcae2eb85339c4f75c47e2699b9655af2ece94f170fc3d71b11c88a9e84aad68"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M29807_svm01.execution.json",
+      "size_bytes": 1619,
+      "sha256": "85b7fbfb5c3f429fe95ac11e49deaa16e4ed8ed9288d3fbd14ffc076d1ba1c80"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M29807_svm01.log",
+      "size_bytes": 1082,
+      "sha256": "026715dae978b4fbadc33535cffafdc2999d247ccc8a0f269dc272544e6f4d50"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M29807_svm01.staged-result.json",
+      "size_bytes": 4182,
+      "sha256": "a1b74bac088cd363adb5e5b5c11d483ee9d3417904bd049a225dab4d4180addb"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M29807_svm02.execution.json",
+      "size_bytes": 1619,
+      "sha256": "3b5aba8e7735b3054d719da508e60ca7ff31f9c762a6ecc3618e67e3a960dbac"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M29807_svm02.log",
+      "size_bytes": 1082,
+      "sha256": "a71d735a10aaf540ec8b6961c9b53c6b1e9a3fbd379f5e3e4d34132f150bd1b1"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M29807_svm02.staged-result.json",
+      "size_bytes": 4182,
+      "sha256": "c3f8d19ad1566df3fe622e0d0c4e27cb1840465096778e127fd1be96f2f74f68"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M31835_1.execution.json",
+      "size_bytes": 1611,
+      "sha256": "fc855d152202837c6c07c8a016bba9241c03030ddf589b3fb1563d2c0ab791bf"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M31835_1.log",
+      "size_bytes": 3036,
+      "sha256": "eb5fcad3be2cc49c3bb080f5d66ee8a81a19fc3f1738beeb52e46e31c3896206"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M31835_1.staged-result.json",
+      "size_bytes": 4159,
+      "sha256": "92a13ae696d863acd24e43cb66cbaebda3f4d4b421fe6fb4b0b88726d6f4b1f9"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M31835_2.execution.json",
+      "size_bytes": 1611,
+      "sha256": "2ae8b316c8d55b604c69d4e6fc3097390587016bf481f5f0f20f3866532c2e2d"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M31835_2.log",
+      "size_bytes": 3036,
+      "sha256": "7e18e0c7b0968a3694ce63eee6d839a1ddea68da7b326353682fd3cb20aafa4d"
+    },
+    {
+      "archive_path": "raw-provenance/bf/occt-bf-group-d9d310-21494-29807-31835/runs/F/original_M31835_2.staged-result.json",
+      "size_bytes": 4159,
+      "sha256": "1f24c05ea5e0de7c16a9095fbb8fd2ebb7ab8bc37f0e055150ffe3b7e4fb392f"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/formal_candidate_replay/logs/catalog.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/formal_candidate_replay/logs/catalog.stdout.log",
+      "size_bytes": 641,
+      "sha256": "a60329acd13d1b04e07c876d66829abb13c87d81fe1b648d751c1fdb37439cd0"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/formal_candidate_replay/logs/import_proto.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/formal_candidate_replay/logs/import_proto.stdout.log",
+      "size_bytes": 97,
+      "sha256": "e6d5e1e1e002b7b3e3998457715d375e834de00b74f8b9233415b823b710aa07"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/formal_candidate_replay/logs/reference_reevaluation.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/formal_candidate_replay/logs/reference_reevaluation.stdout.log",
+      "size_bytes": 4867,
+      "sha256": "bd468273b2c7d9ac38eacf47aefc1b764dd67eb6a6bc1a4fa79945484b554077"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/formal_candidate_replay/logs/source_cache.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/formal_candidate_replay/logs/source_cache.stdout.log",
+      "size_bytes": 414,
+      "sha256": "d9203349b8160477cb88acdfc66813d4506778c4fff5c84a01f1a270f5e181ce"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/formal_candidate_replay/negative_controls/empty.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/formal_candidate_replay/negative_controls/empty.stdout.log",
+      "size_bytes": 3437,
+      "sha256": "385a9ea40175a9de151bbd9b38fa571e7a9537281d717a363d68ab570b156817"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/formal_candidate_replay/negative_controls/partial.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/formal_candidate_replay/negative_controls/partial.stdout.log",
+      "size_bytes": 4870,
+      "sha256": "c6ce76bbd44254ce7a9d1cd5358b5819b61a56057643c349673b70252a1c8273"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/post_integration_freeze/logs/catalog.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/post_integration_freeze/logs/catalog.stdout.log",
+      "size_bytes": 617,
+      "sha256": "bbe8b7f6e0c54d0f5ec94e0d427b66f5cd45bc57ba9eee31c13d404febbdb882"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/post_integration_freeze/logs/import_proto.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/post_integration_freeze/logs/import_proto.stdout.log",
+      "size_bytes": 97,
+      "sha256": "e6d5e1e1e002b7b3e3998457715d375e834de00b74f8b9233415b823b710aa07"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/post_integration_freeze/logs/source_cache.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive_path": "raw-provenance/NG-05T-v1-evidence/post_integration_freeze/logs/source_cache.stdout.log",
+      "size_bytes": 415,
+      "sha256": "d2f1a91c03946284956067f88234a291317039a33643f136f6b9941030c9c154"
+    },
+    {
+      "archive_path": "source-bundles/NG-04R-baseline-and-reference.bundle",
+      "size_bytes": 161444792,
+      "sha256": "2ca7cd07c717f21b2293ad04e460345516a7f462bdd22b5a872728e0070494c3"
+    },
+    {
+      "archive_path": "source-bundles/NG-05T-v1-baseline-and-reference.bundle",
+      "size_bytes": 161617012,
+      "sha256": "aae4ca88798c770ca2cc77d0f3005c7ebd0a3b6f23d3e97b67da58cfb3e8bd00"
+    }
+  ]
+}

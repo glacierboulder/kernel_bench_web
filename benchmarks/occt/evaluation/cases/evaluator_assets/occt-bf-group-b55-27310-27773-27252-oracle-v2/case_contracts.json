@@ -1,0 +1,129 @@
+{
+  "failure_policy": "Only completed exact geometric predicates are geometry pass/fail; execution errors, timeout, malformed logs, missing inputs and unrecognized source failures are never geometry failures.",
+  "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+  "hidden_cases": {
+    "M27252_neighbor_translated_plane": {
+      "category": "neighborhood",
+      "harness_sha256": "14c99594426c9a949225670bc4543bb038ce10f14c74808e122b7f79f089872d",
+      "inputs": [
+        "bug27221.brep"
+      ],
+      "issue": "27252",
+      "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27252_neighbor_translated_plane.tcl",
+      "runner_inputs": [],
+      "source_path": "evaluation/cases/evaluator_assets/occt-bf-group-b55-27310-27773-27252-oracle-v2/tests/m27252_neighborhood.tcl",
+      "source_sha256": "5272a139ea9f001e9f544bccbc921958b0ccc5497c300fa1aa78fbdf36aa38bb"
+    },
+    "M27252_regression_cylinder_plane": {
+      "category": "regression",
+      "harness_sha256": "8a8c92c161210c4c4c3e5db8fde50810835f4af38d76acfceab48895009f1221",
+      "inputs": [],
+      "issue": "27252",
+      "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27252_regression_cylinder_plane.tcl",
+      "runner_inputs": [],
+      "source_path": "evaluation/cases/evaluator_assets/occt-bf-group-b55-27310-27773-27252-oracle-v2/tests/m27252_regression.tcl",
+      "source_sha256": "e359d80f2464e3207cc07b285eb57b70b69cabc0021ea8b084fa59a596b440c1"
+    },
+    "M27310_neighbor_finite_face": {
+      "category": "neighborhood",
+      "harness_sha256": "e025d3718d5ced85ff3d44b3a4bba126f0e49b95c1936301a235e657e765aa9a",
+      "inputs": [
+        "OCC496a.brep",
+        "OCC496b.brep"
+      ],
+      "issue": "27310",
+      "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27310_neighbor_finite_face.tcl",
+      "runner_inputs": [],
+      "source_path": "evaluation/cases/evaluator_assets/occt-bf-group-b55-27310-27773-27252-oracle-v2/tests/m27310_neighborhood.tcl",
+      "source_sha256": "c6565a3f4881cf5ca5abd4a307eea8f613abfdf80ea59998a6812971277c93fa"
+    },
+    "M27310_regression_two_loops": {
+      "category": "regression",
+      "harness_sha256": "27085018781829f4e76d9ccb65b2859871459581614c481810f634fd046254c9",
+      "inputs": [],
+      "issue": "27310",
+      "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27310_regression_two_loops.tcl",
+      "runner_inputs": [],
+      "source_path": "evaluation/cases/evaluator_assets/occt-bf-group-b55-27310-27773-27252-oracle-v2/tests/m27310_regression.tcl",
+      "source_sha256": "def70223581d41ab8f56024ea576e46b6cc250f4f4e4a1802e11e9dcd6b7997e"
+    },
+    "M27773_neighbor_offset_line": {
+      "category": "neighborhood",
+      "harness_sha256": "917c4c5b0ba256a24ca9ff487f12d8e64ecb85bb144372583d6b8f30ac253cde",
+      "inputs": [],
+      "issue": "27773",
+      "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27773_neighbor_offset_line.tcl",
+      "runner_inputs": [],
+      "source_path": "evaluation/cases/evaluator_assets/occt-bf-group-b55-27310-27773-27252-oracle-v2/tests/m27773_neighborhood.tcl",
+      "source_sha256": "76f2a4bb6a28e018c50c02f07f52b521acb1a965d21a99344191fbde05da8ddd"
+    },
+    "M27773_regression_circle_line": {
+      "category": "regression",
+      "harness_sha256": "aa02e6f88fb03824066186c9038d9fd846b78c170664d76834718b976524f2e3",
+      "inputs": [],
+      "issue": "27773",
+      "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27773_regression_circle_line.tcl",
+      "runner_inputs": [],
+      "source_path": "evaluation/cases/evaluator_assets/occt-bf-group-b55-27310-27773-27252-oracle-v2/tests/m27773_regression.tcl",
+      "source_sha256": "73d737e42afac547c472f486406eecd114f77c17fdeb07669bd60fe1fa31e951"
+    }
+  },
+  "input_hashes": {
+    "OCC496a.brep": {
+      "sha256": "30ca1434011fba9bfd35692c07719a9d4fcb4aa2606c739e8359fe504204cdc5",
+      "verified_from": "candidates/bf_expansion/input_staging/assets/30ca1434011f_OCC496a.brep"
+    },
+    "OCC496b.brep": {
+      "sha256": "34dca030b3713fad191dee6f3675680c4b87f7f2624ec5ffb1e8bc661525b08c",
+      "verified_from": "candidates/bf_expansion/input_staging/assets/34dca030b371_OCC496b.brep"
+    },
+    "bug27221.brep": {
+      "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+      "verified_from": "candidates/bf_expansion/input_staging/assets/dc10841b1bc1_bug27221.brep"
+    }
+  },
+  "official_tests": {
+    "M27252": {
+      "inputs": [
+        "bug27221.brep"
+      ],
+      "path": "issues/occt-27252/1/public/bug27252_1.tcl",
+      "sha256": "00da8b7e69b3a955dee068a593ad1281154909fa93e64bf113b831664c44d607",
+      "test_commit": "f542b7bbf1f3bc0b36b33c158580fb1909561a08",
+      "test_path": "tests/bugs/modalg_6/bug27252_1"
+    },
+    "M27310_1": {
+      "inputs": [
+        "OCC496a.brep",
+        "OCC496b.brep"
+      ],
+      "path": "issues/occt-27310/1/public/bug27310_1.tcl",
+      "sha256": "7c122d838f2497b1a4eeb019ebe506abf050f531248503b9df0fbee4c35cfdec",
+      "test_commit": "79997052f158c0512ff4d10ecb896e4899d24077",
+      "test_path": "tests/bugs/modalg_6/bug27310_1"
+    },
+    "M27310_2_d308": {
+      "inputs": [
+        "OCC496a.brep",
+        "OCC496b.brep"
+      ],
+      "path": "issues/occt-27310/1/public/bug27310_2_d308.tcl",
+      "sha256": "dc67da9e1b30eccfe64ae98409b635b1ad4ba8379d3a72b5e5a36922355c5ab9",
+      "test_commit": "d30895f5da57fcf4b409163725c35ef2c823fd43",
+      "test_path": "tests/bugs/modalg_6/bug27310_2"
+    },
+    "M27773": {
+      "inputs": [],
+      "path": "issues/occt-27773/1/public/bug27773.tcl",
+      "sha256": "17b41e533636327619ae94902296b5a2c73e7e0071a09f6280289290223b0941",
+      "test_commit": "e91a710c7eb4d0f82f90d7618034d8db536fa3cf",
+      "test_path": "tests/bugs/modalg_6/bug27773"
+    }
+  },
+  "schema_version": "bf-frozen-case-contracts-v1",
+  "special_compatibility": {
+    "M27252_B_original": "Recognize geometry_fail only when official bopcurves log contains both 'has no 3d curves' and 'has no 3d points', and the only Tcl source failure is can't read NbCurv; otherwise runtime_error/not_run.",
+    "M27310_2": "Uses unchanged official d308 test bytes and expected tolerance; no oracle revision or expected value patch.",
+    "M27310_regression": "Uses physical two-loop endpoint graph oracle: samples on both cylinder equations, one fixed x branch per curve, endpoint graph gives two closed cycles and one per x sign. Curve-piece count/seam coordinates are metadata only."
+  }
+}

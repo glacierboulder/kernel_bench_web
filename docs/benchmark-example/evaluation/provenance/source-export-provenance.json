@@ -1,0 +1,20 @@
+{
+  "base_commit": "3e80fad1779e4fab620d1ab1982bfd7722b6c92b",
+  "export_method": "git archive at the recorded base commit; no working-tree checkout",
+  "agent_snapshot_transform": "copied source tree without .git, top-level tests/, or remotes",
+  "evaluator_snapshot": "private/common_base_source (same commit, retained upstream tests only for provenance; evaluation uses a fresh copy and ignores top-level tests/)",
+  "original_clone_modified": false,
+  "verification_status": "verified_git_archive_matches_lock",
+  "local_tree_hashes": {
+    "hash_algorithm": "agent-bench-tree-sha256-v1",
+    "private_base_source": "1541adf897787322ec645aa6c8b9962fc4398e1111714ead878a692cd4cb4ce1",
+    "private_common_base_source": "c53024a6a438c14a4bca3e3aae84bead8890cc7e82fdd9f018f235153e57507f",
+    "agent_snapshot_task_single": "630f6c6b26331f76b587a3233795f365a1a1e5bdbd91bb752d51c69b8b9214c3"
+  },
+  "verification_evidence": {
+    "commit": "3e80fad1779e4fab620d1ab1982bfd7722b6c92b",
+    "method": "git archive of the exact local Git commit, then agent-bench-tree-sha256-v1",
+    "matches": "private/common_base_source tree hash c53024a6a438c14a4bca3e3aae84bead8890cc7e82fdd9f018f235153e57507f",
+    "unmatched_legacy_export": "private/base_source tree hash 1541adf897787322ec645aa6c8b9962fc4398e1111714ead878a692cd4cb4ce1 differs and is not used as the locked source"
+  }
+}

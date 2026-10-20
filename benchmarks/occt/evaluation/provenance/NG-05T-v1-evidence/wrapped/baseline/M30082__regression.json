@@ -1,0 +1,36 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": true,
+  "test_done_marker": true,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 2,
+  "numeric_assertions": 0,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={separated cylinders have no curves} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={regular cylinder pair has four curves} detail=value=1\nBENCH_ORACLE_OK assertions=2 numeric_assertions=0\nTEST_DONE assertions=2 numeric_assertions=0\n",
+  "stderr_tail": "",
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/cases/M30082/regression.tcl",
+  "draw_executable": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/build_baseline/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.032,
+  "execution_provenance": {
+    "source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+    "baseline_source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+    "reference_patch_sha256": null,
+    "runner_sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+    "case_sha256": "d7b16bf795d51ed9924aad0888132e0d17a636fd347adc8e7d51382028e3d7e9"
+  },
+  "evidence_attestation": {
+    "source_run_manifest": "evaluation/provenance/NG-05T-v1-evidence/source_runs/baseline/manifest.json",
+    "source_run_manifest_sha256": "35b1392ced196f5f036199cd02a75cb1aac7839224b5fd84baf0ea3e40899720",
+    "build_receipt": "evaluation/provenance/NG-05T-v1-evidence/source_runs/baseline/build_receipt.json",
+    "build_receipt_sha256": "243cfa5245ba2afa03de5bfadb6c9d77a19be763ee5bc32f5b369f769377793d",
+    "raw_result": "evaluation/provenance/NG-05T-v1-evidence/source_runs/baseline/results/m30082_regression.json",
+    "raw_result_sha256": "7183db1718feae10770efb098535ef89c874365890f36806acc83e95fb5c6afa",
+    "run_phase": "baseline"
+  }
+}

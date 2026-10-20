@@ -1,0 +1,22 @@
+{
+  "baseline_commit": "201a54e50b9f24ecd5d9c401461ad64312de9870",
+  "baseline_derivation_patch": "evaluation/provenance/NG-04T-v1-evidence/baseline_derivation_M32850_inverse.patch",
+  "baseline_derivation_patch_sha256": "072b5cdd2cff28a75e20d47b24b508edadcf06cc37aab7e5ec17b2dd1d3994d7",
+  "baseline_parent_commit": "d37d3beb3d8e563f66f189e1de23dd102d118c4d",
+  "baseline_source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+  "curation_note": "Baseline identity is unchanged. Source documentation now points to the retained NG-05T source bundle and reference; original NG-04T documentation is preserved in the package audit directory.",
+  "group_scope": "Only NG-05T-v1 is registered against this source in the curated bundle.",
+  "limitations": [
+    "Patch-only reevaluation has no report.md, so the separate submission stage is failed; patch application, configure, build, and all required geometry checks passed.",
+    "Network namespace creation is unavailable; the documented offline isolation shim was used.",
+    "The reference target closure was rebuilt from the locked baseline artifact copy after path retargeting, not from a pristine source build."
+  ],
+  "provenance_schema": "occt-derived-source-v1",
+  "reference_commit": "5d04b991a6e13773db48ef12ec5de2eae8868202",
+  "reference_patch": "evaluation/provenance/NG-05T-v1-reference.patch",
+  "reference_patch_sha256": "e969460acfdd3e2fd9eba551bf6e4410e3b72615b60f2ad30956c348dce6423d",
+  "reference_source_tree_sha256": "d48e73eb8ad378ef637c25b2b69d7eed6324f4f23f8c02763770d706249ce8bc",
+  "self_contained_git_bundle": "evaluation/provenance/source-packs/occt-five-groups/source-bundles/NG-05T-v1-baseline-and-reference.bundle",
+  "self_contained_git_bundle_sha256": "aae4ca88798c770ca2cc77d0f3005c7ebd0a3b6f23d3e97b67da58cfb3e8bd00",
+  "source_kind": "curator-derived baseline; exact inverse of the M32850 official source fix"
+}

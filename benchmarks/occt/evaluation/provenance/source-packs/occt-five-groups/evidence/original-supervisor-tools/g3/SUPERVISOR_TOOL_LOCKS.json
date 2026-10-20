@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "path": "tools/supervisor/FORMAT.md",
+      "role": "reviewed private sidecar format description",
+      "sha256": "c7d25c47883887fb1c82517cb9763b87fef98b5968ac968e2264d575c050ef84"
+    },
+    {
+      "path": "tools/supervisor/validate_bf_evidence.py",
+      "role": "reviewed private sidecar validator",
+      "sha256": "a08435da472d8bbe18ace05080467eaf990ef6de09c7eff08ab620c574363f27"
+    }
+  ],
+  "purpose": "Pin the reviewed private B/F evidence validator and format shipped with this G3 staging bundle.",
+  "schema_version": 1
+}

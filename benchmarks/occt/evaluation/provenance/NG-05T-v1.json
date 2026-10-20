@@ -1,0 +1,223 @@
+{
+  "source_id": "occt-ng04t-v1-baseline-ef5af939",
+  "origin_similarity_review": "Independent pre-review PASS_SCOPE_ONLY approved the B-boundary scope: endpoint sampling, periodic-equivalent seam handling, and special-vertex parameter registration share the contract of correct WLine boundary-point data before downstream joining. These are distinct mechanisms; no common root cause, shared failing hunk, or cross-issue causal chain is claimed. The reviewer specifically required an exact same-tree M31602 original gate and exclusion of unselected M30202 changes; both are recorded and satisfied.",
+  "members": [
+    {
+      "id": "mantis-30082",
+      "metadata": {
+        "schema_version": "occt_intersection_case_v1",
+        "case_id": "mantis:30082",
+        "issue_title": "Intersection curve has a large tolerance near its endpoint",
+        "candidate_group": "NG-04R-v2",
+        "target_start_stage": "geometric_intersection",
+        "target_start_substage": "walking-line endpoint refinement when endpoint tangent disagrees with local chord",
+        "origin_evidence_level": "patch-supported",
+        "source_material": "OCCT tests/bugs/modalg_7/bug30082_1 and _2; issue BREP pair embedded; _2 provides generated cylinder case",
+        "issue_url": "https://occt3d.com/dev/tickets/0030082/",
+        "fixtures": [
+          {
+            "name": "bug27928_b1.brep",
+            "bytes": 9099,
+            "sha256": "4769a709715c2a47c7c85cc518c6688839e282fa37651469f2a21f795c0d4e72",
+            "embedded_base64_in_each_test_script": true,
+            "dataset_commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1"
+          },
+          {
+            "name": "bug27928_b2.brep",
+            "bytes": 10002,
+            "sha256": "90a1b02ca034ec7625ea0928b6ccdc206a7eaa5dd9f6ebf5d5b28349ea64db50",
+            "embedded_base64_in_each_test_script": true,
+            "dataset_commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1"
+          }
+        ],
+        "oracle_protocol": "inline agent_bench_web bench.tcl; require bench_finish",
+        "validation": {
+          "reference_build": "Locked derived reference source tree f5094f5fa60c3c16fbaeac830ac1f4d6b802431b73e6f527990ce909dfd94bdf; framework evaluation 0069678e94731943",
+          "reference_build_result": "passed; isolated configure/build succeeded and original, neighborhood, regression all passed in the 9-check framework replay",
+          "historical_failure_baseline": "Locked derived baseline source tree fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93; original and neighborhood each fail the bounded-reached-tolerance numeric oracle; regression passes",
+          "notes": "Archived Mantis attachment byte identity remains unverified; the issue-keyed upstream BREP pair and exact original geometry are embedded. Case version 2 writes temporary BREP files under TMPDIR for the read-only frozen evaluator.",
+          "framework_evaluation_id": "0069678e94731943",
+          "framework_snapshot_sha256": "b00d011fab6d7472792fc4176652374808a325f90f11f46eab91a07347c20ad3",
+          "baseline_evidence": "evidence/approval_candidate_v2/baseline_rebuilt/manifest.json",
+          "reference_evidence": "evidence/approval_candidate_v2/reference_framework_final_single_group/manifest.json",
+          "validation_metadata_scope": "historical_issue_level_metadata_not_authoritative_for_NG-05T-v1"
+        }
+      },
+      "origin_review": "Mantis 30082 upstream fix 7eb3580b7995bbeb9ffbc501ec46c9d3a4ad611a changes endpoint sampling when a curved intersection endpoint tangent differs from the neighboring chord. The exact original, neighborhood, and regression bytes are reused from the published M30082@4 issue and were replayed on this common baseline and reference.",
+      "checks": {
+        "original": {
+          "filename": "original.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-05T-v1-evidence/wrapped/reference/M30082__original.json",
+            "case_sha256": "c95ce4a22cb803f7d9e028250206149a9ec1230eb8185b7d14395b4af3dde4b4"
+          },
+          "baseline": {
+            "result_path": "evaluation/provenance/NG-05T-v1-evidence/wrapped/baseline/M30082__original.json",
+            "case_sha256": "c95ce4a22cb803f7d9e028250206149a9ec1230eb8185b7d14395b4af3dde4b4",
+            "geometric_failure_description": "The original fails the bounded reached-tolerance oracle: actual 0.00031297851399059634 versus expected 6.5e-7 with 7.0e-8 tolerance. This result is on the exact locked common baseline."
+          }
+        },
+        "neighborhood": {
+          "filename": "neighborhood.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-05T-v1-evidence/wrapped/reference/M30082__neighborhood.json",
+            "case_sha256": "6ece46afe217a0c62e423d464b4e38b9e972f1aa3033e6dd116d4448d5ce7040"
+          }
+        },
+        "regression": {
+          "filename": "regression.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-05T-v1-evidence/wrapped/reference/M30082__regression.json",
+            "case_sha256": "d7b16bf795d51ed9924aad0888132e0d17a636fd347adc8e7d51382028e3d7e9"
+          }
+        }
+      }
+    },
+    {
+      "id": "mantis-31602",
+      "metadata": {
+        "schema_version": "occt_intersection_case_v1",
+        "case_id": "mantis:31602",
+        "issue_title": "Invalid result of Boolean operation (regression vs 7.0.0)",
+        "candidate_group": "periodic_seam_boundary_matching",
+        "target_start_stage": "geometric_intersection",
+        "target_start_substage": "periodic cylinder-cylinder seam/pcurve correspondence during surface intersection",
+        "origin_evidence_level": "upstream-test-backed",
+        "source_material": "OCCT tests/lowalgos/intss/bug31602 and exact fixture from locked public dataset",
+        "issue_url": "https://occt3d.com/dev/tickets/0031602/",
+        "input_provenance": "The exact upstream BREP is embedded in all DRAW scripts and SHA-256 locked in metadata.",
+        "fixtures": [
+          {
+            "name": "bug31602.brep",
+            "bytes": 3048,
+            "sha256": "4caff959070bc5f1632082136214b6d600b712679d4b7626da6364452859e67b",
+            "embedded_base64_in_each_test_script": true,
+            "dataset_commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1",
+            "source_path": "a-betenev/opencascade-dataset/brep/bug31602.brep"
+          }
+        ],
+        "oracle_protocol": "inline agent_bench_web bench.tcl; require bench_finish",
+        "validation": {
+          "reference_build": "OCCT 8.0.0 common_build; this is not the proposed fixed reference build",
+          "reference_build_result": "original, neighborhood, and regression pass on common_build 8.0.0 and 6eeb 7.5.0",
+          "historical_failure_baseline": "candidate b55bd 7.0.1: all three scripts fail only the TolReached <= 2.5e-6 bound; counts, 3D lengths, and pcurve length oracles pass. Candidate pending shared source-coherence/fix validation.",
+          "reference_patch_result": "not_run",
+          "reproduction_status": "exact-input tolerance failure observed on b55bd 7.0.1; no failure on common_build 8.0.0 or 6eeb 7.5.0",
+          "notes": "The issue's numeric 3D and 2D length targets pass on all tested versions. b55bd TolReached values are 2.7305954425874164e-6 (original), 2.7305955299672768e-6 (transformed neighborhood), and 2.7315289043112523e-6 (reversed-pair regression), each above the declared 2.5e-6 limit. Per-build command/result/output SHA records are in cases_b/validation/seam_group_validation.md and cases_b/validation/seam_draw_runs/.",
+          "validation_metadata_scope": "historical_issue_level_metadata_not_authoritative_for_NG-05T-v1"
+        }
+      },
+      "origin_review": "Mantis 31602 upstream fix dccf86756104f107a2302a99a5f883bff2a62d54 addresses periodic-equivalent surface parameters near an almost-full-period seam during boundary-point insertion. The original, neighborhood, and regression case bytes are reused unchanged from M31602@1; version 2 binds those exact cases to the NG-04T locked baseline and its independently replayed results.",
+      "checks": {
+        "original": {
+          "filename": "original.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-05T-v1-evidence/wrapped/reference/M31602__original.json",
+            "case_sha256": "8d4531787a0e2de8abdccecd8916cc07a9b92f2c63de5506854951803550ebc8"
+          },
+          "baseline": {
+            "result_path": "evaluation/provenance/NG-05T-v1-evidence/wrapped/baseline/M31602__original.json",
+            "case_sha256": "8d4531787a0e2de8abdccecd8916cc07a9b92f2c63de5506854951803550ebc8",
+            "geometric_failure_description": "The original fails four explicit geometry/numeric assertions on the exact locked common baseline: reached tolerance 400.30076464747384 exceeds 2.5e-6, and the 3D plus both pcurve lengths differ from their expected values. No loader, infrastructure Tcl, timeout, or OCCT runtime error was detected."
+          }
+        },
+        "neighborhood": {
+          "filename": "neighborhood.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-05T-v1-evidence/wrapped/reference/M31602__neighborhood.json",
+            "case_sha256": "72267ff317028dcc4e3f8cc6c3ed4f19e09d3a43871e795606a2a1e17b0e73ef"
+          }
+        },
+        "regression": {
+          "filename": "regression.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-05T-v1-evidence/wrapped/reference/M31602__regression.json",
+            "case_sha256": "49b6c2b0e8a3ce069249f68122f3e9448d9d7101a5ce1847e87c4f3835d924bf"
+          }
+        }
+      }
+    },
+    {
+      "id": "mantis-32850",
+      "metadata": {
+        "schema_version": "occt_intersection_case_v1",
+        "case_id": "mantis:32850",
+        "issue_title": "Surface-surface intersect lost one line",
+        "candidate_group": "boundary_intersection_search",
+        "target_start_stage": "geometric_intersection",
+        "target_start_substage": "IntTools_FaceFace boundary/endpoint curve trimming for nearly orthogonal trimmed cylinders",
+        "origin_evidence_level": "upstream-test-backed",
+        "source_material": "OCCT tests/lowalgos/intss/bug32850; issue-keyed parametric geometry copied from upstream test",
+        "issue_url": "https://occt3d.com/dev/tickets/0032850/",
+        "input_provenance": "Self-contained exact numeric cylinder/trim construction from the issue-keyed upstream test; no external model is needed.",
+        "fixtures": [],
+        "oracle_protocol": "inline agent_bench_web bench.tcl; require bench_finish",
+        "validation": {
+          "reference_build": "OCCT 8.0.0 common_build; not the proposed frozen historical baseline",
+          "reference_build_result": "not_run",
+          "historical_failure_baseline": "pending root common-baseline/source-coherence audit",
+          "reference_patch_result": "not_run",
+          "reproduction_status": "not_run",
+          "notes": "The original upstream test checks four curves and small tolerance. Surface-distance, branch-length, transform, and order-invariance checks are added as geometric oracles.",
+          "validation_metadata_scope": "historical_issue_level_metadata_not_authoritative_for_NG-05T-v1"
+        }
+      },
+      "origin_review": "Mantis 32850 upstream fix 492b09dcaec31a4076241c578118bea129e60d25 registers the special-vertex parameter during ALine-to-WLine conversion and also changes neighboring boundary-tangency handling. The exact original, neighborhood, and regression bytes are reused from published M32850@1 and were replayed on this common baseline and reference.",
+      "checks": {
+        "original": {
+          "filename": "original.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-05T-v1-evidence/wrapped/reference/M32850__original.json",
+            "case_sha256": "c402ec004583dce920b7ab3d257f89441759658b4465c77c5a5f5e85818e9c08"
+          },
+          "baseline": {
+            "result_path": "evaluation/provenance/NG-05T-v1-evidence/wrapped/baseline/M32850__original.json",
+            "case_sha256": "c402ec004583dce920b7ab3d257f89441759658b4465c77c5a5f5e85818e9c08",
+            "geometric_failure_description": "The original fails the explicit four-intersection-branch geometry assertion on the exact locked common baseline; the failure is semantic and not a loader, infrastructure, timeout, or OCCT runtime error."
+          }
+        },
+        "neighborhood": {
+          "filename": "neighborhood.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-05T-v1-evidence/wrapped/reference/M32850__neighborhood.json",
+            "case_sha256": "4b8a570ee1fd79fbf3868347370f88dd5c14896ca282513cac7e34687df0a713"
+          }
+        },
+        "regression": {
+          "filename": "regression.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-05T-v1-evidence/wrapped/reference/M32850__regression.json",
+            "case_sha256": "afa33395aa692d7b1cac5c1014d8692095b0821a777f07a21684da092b4ccc6d"
+          }
+        }
+      }
+    }
+  ],
+  "validation_scope_note": "The members[].metadata.validation blocks below are historical issue-level metadata inherited during catalog assembly. Their old per-case source trees and evaluations are not the authoritative common-baseline/reference evidence for NG-05T-v1. Use authoritative_ng05t_v1_validation and evaluation/provenance/NG-05T-v1-evidence/index.json for the group-level NG-05T-v1 record.",
+  "authoritative_ng05t_v1_validation": {
+    "scope": "group_level_authoritative_common_baseline_reference_and_formal_replay",
+    "members": [
+      "M30082@4",
+      "M31602@2",
+      "M32850@1"
+    ],
+    "baseline_commit": "201a54e50b9f24ecd5d9c401461ad64312de9870",
+    "baseline_source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+    "reference_source_tree_sha256": "d48e73eb8ad378ef637c25b2b69d7eed6324f4f23f8c02763770d706249ce8bc",
+    "reference_patch_sha256": "e969460acfdd3e2fd9eba551bf6e4410e3b72615b60f2ad30956c348dce6423d",
+    "evidence_index": "evaluation/provenance/NG-05T-v1-evidence/index.json",
+    "formal_replay": {
+      "evaluation_id": "b5c44774f6746fa2",
+      "snapshot_sha256": "a8b00eaa231dd83f606d79b613586da10c6b8ecbbcc65dc85bf6e54f79983ad9",
+      "geometry_checkpoints": "9/9",
+      "hidden_checkpoints": "6/6",
+      "technical_passed": true,
+      "suite_evaluation_passed": true,
+      "submission_stage": "failed",
+      "submission_limitation": "patch-only reevaluation has no report.md",
+      "final_independent_review": "PASS"
+    },
+    "final_delivery_review_record": "evaluation/provenance/NG-05T-v1-final-delivery-review.json",
+    "final_delivery_review_sha256": "b233f7bbcfe454f1da3b6e1a687e741640efeedf12c0b5ccf2bf34de5156bfb4"
+  }
+}

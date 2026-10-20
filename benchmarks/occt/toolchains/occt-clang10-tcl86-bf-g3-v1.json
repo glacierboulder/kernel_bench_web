@@ -1,0 +1,19 @@
+{
+  "compiler_jobs_max": 2,
+  "compiler_output_directory": "clang",
+  "evaluator_directory": "evaluation/cases/five_group_runtime",
+  "executables": {
+    "c_compiler": "clang-10",
+    "cmake": "cmake",
+    "cxx_compiler": "clang++-10"
+  },
+  "id": "occt-clang10-tcl86-bf-g3-v1",
+  "platforms": [
+    "linux-x86_64"
+  ],
+  "schema_version": 1,
+  "tcl_paths": "deployment configuration or BENCH_TCL_* environment variables",
+  "tcl_version": "8.6",
+  "title": "OCCT B/F G3 · Clang 10 / Tcl 8.6 / O0 -DNDEBUG",
+  "tools_directory": "occt-clang10-bf-g3-v1"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "occt-506",
+  "version": "1",
+  "title": "Issue 506 — `Bnd_BoundSortBox::Compare` misses an item in one case",
+  "source_id": "occt-3e80fad1779e",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/brd.brep",
+    "public/hole0.brep",
+    "public/hole1.brep",
+    "public/reproduce.cpp"
+  ]
+}

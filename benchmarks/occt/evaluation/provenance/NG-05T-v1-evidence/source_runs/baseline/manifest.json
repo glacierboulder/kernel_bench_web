@@ -1,0 +1,108 @@
+{
+  "schema_version": "ng05t_v1_baseline_full_matrix_v1",
+  "group_id": "NG-05T-v1",
+  "source_id": "occt-ng04t-v1-baseline-ef5af939",
+  "source_commit": "201a54e50b9f24ecd5d9c401461ad64312de9870",
+  "source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+  "build_receipt": "build_receipt.json",
+  "build_receipt_sha256": "243cfa5245ba2afa03de5bfadb6c9d77a19be763ee5bc32f5b369f769377793d",
+  "tests": [
+    {
+      "issue": "M30082",
+      "version": "4",
+      "category": "original",
+      "passed": false,
+      "failed_assertions": 1,
+      "expected_oracle_error": true,
+      "case_sha256": "c95ce4a22cb803f7d9e028250206149a9ec1230eb8185b7d14395b4af3dde4b4",
+      "result": "source_runs/baseline/results/m30082_original.json"
+    },
+    {
+      "issue": "M30082",
+      "version": "4",
+      "category": "neighborhood",
+      "passed": false,
+      "failed_assertions": 1,
+      "expected_oracle_error": true,
+      "case_sha256": "6ece46afe217a0c62e423d464b4e38b9e972f1aa3033e6dd116d4448d5ce7040",
+      "result": "source_runs/baseline/results/m30082_neighborhood.json"
+    },
+    {
+      "issue": "M30082",
+      "version": "4",
+      "category": "regression",
+      "passed": true,
+      "failed_assertions": 0,
+      "expected_oracle_error": false,
+      "case_sha256": "d7b16bf795d51ed9924aad0888132e0d17a636fd347adc8e7d51382028e3d7e9",
+      "result": "source_runs/baseline/results/m30082_regression.json"
+    },
+    {
+      "issue": "M31602",
+      "version": "2",
+      "category": "original",
+      "passed": false,
+      "failed_assertions": 4,
+      "expected_oracle_error": true,
+      "case_sha256": "8d4531787a0e2de8abdccecd8916cc07a9b92f2c63de5506854951803550ebc8",
+      "result": "source_runs/baseline/results/m31602_original.json"
+    },
+    {
+      "issue": "M31602",
+      "version": "2",
+      "category": "neighborhood",
+      "passed": false,
+      "failed_assertions": 2,
+      "expected_oracle_error": true,
+      "case_sha256": "72267ff317028dcc4e3f8cc6c3ed4f19e09d3a43871e795606a2a1e17b0e73ef",
+      "result": "source_runs/baseline/results/m31602_neighborhood.json"
+    },
+    {
+      "issue": "M31602",
+      "version": "2",
+      "category": "regression",
+      "passed": false,
+      "failed_assertions": 2,
+      "expected_oracle_error": true,
+      "case_sha256": "49b6c2b0e8a3ce069249f68122f3e9448d9d7101a5ce1847e87c4f3835d924bf",
+      "result": "source_runs/baseline/results/m31602_regression.json"
+    },
+    {
+      "issue": "M32850",
+      "version": "1",
+      "category": "original",
+      "passed": false,
+      "failed_assertions": 1,
+      "expected_oracle_error": true,
+      "case_sha256": "c402ec004583dce920b7ab3d257f89441759658b4465c77c5a5f5e85818e9c08",
+      "result": "source_runs/baseline/results/m32850_original.json"
+    },
+    {
+      "issue": "M32850",
+      "version": "1",
+      "category": "neighborhood",
+      "passed": false,
+      "failed_assertions": 1,
+      "expected_oracle_error": true,
+      "case_sha256": "4b8a570ee1fd79fbf3868347370f88dd5c14896ca282513cac7e34687df0a713",
+      "result": "source_runs/baseline/results/m32850_neighborhood.json"
+    },
+    {
+      "issue": "M32850",
+      "version": "1",
+      "category": "regression",
+      "passed": false,
+      "failed_assertions": 1,
+      "expected_oracle_error": true,
+      "case_sha256": "afa33395aa692d7b1cac5c1014d8692095b0821a777f07a21684da092b4ccc6d",
+      "result": "source_runs/baseline/results/m32850_regression.json"
+    }
+  ],
+  "expected_failures": 8,
+  "passes": 1,
+  "status": "all_nine_baseline_categories_run; each member original fails explicit geometry oracle",
+  "limitations": [
+    "M30082 and M32850 baseline captures are reused byte-for-byte from the accepted NG-04T exact-tree run.",
+    "M31602 original was captured in the selected-group baseline screen; neighborhood and regression were run separately against the same locked baseline build in this turn."
+  ]
+}

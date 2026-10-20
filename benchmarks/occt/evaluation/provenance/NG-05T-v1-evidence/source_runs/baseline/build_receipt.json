@@ -1,0 +1,62 @@
+{
+  "schema_version": "ng04t_v1_build_receipt_v1",
+  "phase": "derived_common_baseline",
+  "created_utc": "2026-10-18T14:32:10.352649+00:00",
+  "status": "success_incremental_rebuild_from_locked_parent_artifacts",
+  "source_commit": "201a54e50b9f24ecd5d9c401461ad64312de9870",
+  "source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+  "baseline_parent_commit": "d37d3beb3d8e563f66f189e1de23dd102d118c4d",
+  "baseline_parent_source_tree_sha256": "2cedfc894576a14545607e01f3ab64373a029f650607ceefec12ac9f2475263c",
+  "source_derivation": "exact reverse of official M32850 patch only",
+  "derived_from_build_directory": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/build_derived_baseline",
+  "derived_from_locked_parent_build_artifact": {
+    "libTKGeomAlgo.so.7.8.2": "9d105bbf678d659cd1b093e68717dc5912e1f3e80507676cff36e4f2f7cd0a54"
+  },
+  "build_directory": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/build_baseline",
+  "cmake_cache_sha256": "b382e4aef7959f9b1e44fcc243afe2837884eec76ecacfc7396ddb078f11cd93",
+  "compiler": "Clang 10.0.0",
+  "configure_command": [
+    "cmake",
+    "-S",
+    "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/source_baseline",
+    "-B",
+    "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/build_baseline"
+  ],
+  "configure_exit_code": 0,
+  "build_command": [
+    "cmake",
+    "--build",
+    "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/build_baseline",
+    "--target",
+    "TKGeomAlgo",
+    "TKHLR",
+    "--parallel",
+    "2"
+  ],
+  "build_exit_code": 0,
+  "build_elapsed_seconds": 6.105,
+  "build_output_excerpt": [
+    "Built target TKernel, TKMath, TKG2d, TKG3d, TKGeomBase, TKBRep",
+    "Recompiled TKGeomAlgo: IntPatch_ALineToWLine.cxx and IntPatch_TheSOnBounds_0.cxx",
+    "Relinked libTKGeomAlgo.so and dependent libTKTopAlgo.so",
+    "Recompiled TKHLR: Contap_TheSearch_0.cxx and relinked libTKHLR.so",
+    "All requested targets completed; exit code 0"
+  ],
+  "incremental_rebuild_policy": "2 source files differ from the locked parent. All 2602 other parent objects are retained; dependency scan forced rebuild of the two changed-source consumers in TKGeomAlgo and one in TKHLR. This is an isolated incremental build, not a pristine from-source full build.",
+  "draw_executable_sha256": "fa641b0f2c9525054a166ebaddb6c1fdba6b458303c2598894fc9b6295aebf95",
+  "tk_top_test_sha256": "d85eee59881d36ca13fbf11550bf5a97d1610acb6fc2d1dc9b820325a665f1c6",
+  "rebuilt_artifact_sha256": {
+    "libTKGeomAlgo.so.7.8.2": "2e0d3c1a60431eb2727d7b41e1fe0fc520b219b2577300bf16cfd08e130c65d6",
+    "libTKTopAlgo.so.7.8.2": "9d7cbf2432a3f411c73bbd82ae722de8f9411f48e20bf962c9daef5002a404c4",
+    "libTKHLR.so.7.8.2": "b807ffef4f3139319240edb8ad94072151a9cde360ca949a98cfabfe80f25af0"
+  },
+  "saved_artifacts_dir": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/evidence/build_baseline/artifacts",
+  "case_matrix_manifest_sha256": "46a9fa4ac3cd9017b1b4540eef8268f5fb7951a037b1901f248158505bcd8843",
+  "baseline_adjudication_manifest_sha256": "a3ce6281414961e764f6004c11be7173bef497d0b58579684311fa1f3eba942b",
+  "primary_original_failure_kinds": {
+    "M30082": "semantic_oracle_failure",
+    "M30202": "kernel_sigsegv_after_precall_controls",
+    "M32850": "semantic_oracle_failure"
+  },
+  "negative_classification_tests": "6/6 passed in ${BENCH_CONDA_ENV}; loader errors, missing controls, unrelated Tcl errors, and timeouts are not accepted as crash evidence"
+}

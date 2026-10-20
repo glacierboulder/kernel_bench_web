@@ -1,0 +1,111 @@
+{
+  "checkpoints": [
+    {
+      "case": "issues/occt-690/1/public/reproduce.tcl",
+      "category": "original",
+      "id": "visible_issue_690",
+      "issue_id": "occt-690",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    },
+    {
+      "case": "issues/occt-693/1/public/reproduce.tcl",
+      "category": "original",
+      "id": "visible_issue_693",
+      "issue_id": "occt-693",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    },
+    {
+      "case": "issues/occt-172/1/public/reproduce.tcl",
+      "category": "original",
+      "id": "visible_issue_172",
+      "issue_id": "occt-172",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    },
+    {
+      "case": "issues/occt-370/1/public/reproduce.cpp",
+      "category": "original",
+      "id": "visible_issue_370",
+      "issue_id": "occt-370",
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18,
+        "libraries": [
+          "TKGeomAlgo",
+          "TKShHealing",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    },
+    {
+      "case": "issues/occt-1452/1/public/reproduce.cpp",
+      "category": "original",
+      "id": "visible_issue_1452",
+      "issue_id": "occt-1452",
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18,
+        "libraries": [
+          "TKOffset",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    }
+  ],
+  "group_ids": [
+    "occt_boolean_group_visible_690_693_172_370_1452"
+  ],
+  "id": "occt-visible5all",
+  "legacy_task_kind": "visible5all",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-3e80fad1779e"
+  ],
+  "title": "OCCT visible5all legacy checks",
+  "version": "1"
+}

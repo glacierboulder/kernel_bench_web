@@ -1,0 +1,82 @@
+{
+  "schema_version": "ng05t_v1_negative_control_archive_v1",
+  "empty_patch": "rejected at submission; configure/build not_run; geometry 9/9 not_run",
+  "partial_patch": "build passed; 4/9 checkpoints passed and 5/9 failed: M30082 regression and all three M32850 checkpoints passed; M30082 original/neighborhood and all three M31602 checkpoints failed; technical suite rejected as expected.",
+  "archive_files": [
+    {
+      "path": "control_index.json",
+      "size_bytes": 18619,
+      "sha256": "186b3aa2a925579e6b2cb5ce60eda6adfd01674a5546f4750b2b8550d5ab5bc6"
+    },
+    {
+      "path": "empty.command.json",
+      "size_bytes": 404,
+      "sha256": "e22a8745f708f1d9dff148cbcf5c7de6f00dd622d18dffaec305dcabb178114d"
+    },
+    {
+      "path": "empty.evaluation.internal.json",
+      "size_bytes": 4103,
+      "sha256": "24bced9253eb0c30103dc036d9d3f3a6a37c239aa60a517d8d1e41dc1b014a57"
+    },
+    {
+      "path": "empty.evaluation.raw.json",
+      "size_bytes": 413,
+      "sha256": "f07291b1a626929073cd7a4bfcb4ad0a6da8196c31ac3c072f07e6c766d340cc"
+    },
+    {
+      "path": "empty.patch",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "empty.reevaluation.json",
+      "size_bytes": 3437,
+      "sha256": "385a9ea40175a9de151bbd9b38fa571e7a9537281d717a363d68ab570b156817"
+    },
+    {
+      "path": "empty.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "empty.stdout.log",
+      "size_bytes": 3437,
+      "sha256": "385a9ea40175a9de151bbd9b38fa571e7a9537281d717a363d68ab570b156817"
+    },
+    {
+      "path": "partial.command.json",
+      "size_bytes": 442,
+      "sha256": "6323d6e61af6c82b9fb029051e98d50ea44637759d5e4d12616df80fb5761257"
+    },
+    {
+      "path": "partial.evaluation.internal.json",
+      "size_bytes": 53178,
+      "sha256": "3abb9ae3934acee50b4160f9537807fd39e17ba0cc0a66d2942dbb886d86810e"
+    },
+    {
+      "path": "partial.evaluation.raw.json",
+      "size_bytes": 51790,
+      "sha256": "a7a8213b92b5118f36830fc3da71b1d4765a7a4898a6fe02ac89dee09558f77f"
+    },
+    {
+      "path": "partial.reevaluation.json",
+      "size_bytes": 4870,
+      "sha256": "c6ce76bbd44254ce7a9d1cd5358b5819b61a56057643c349673b70252a1c8273"
+    },
+    {
+      "path": "partial.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "partial.stdout.log",
+      "size_bytes": 4870,
+      "sha256": "c6ce76bbd44254ce7a9d1cd5358b5819b61a56057643c349673b70252a1c8273"
+    },
+    {
+      "path": "partial_without_endpoint_and_periodic_fixes.patch",
+      "size_bytes": 5859,
+      "sha256": "01dbcc5624e89e2ba2ee575e3adab5a50c7ed590d673666c5b67b13d88b50a8d"
+    }
+  ]
+}

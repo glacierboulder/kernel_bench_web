@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "id", "title", "platforms", "executables", "compiler_output_directory", "tools_directory", "compiler_jobs_max", "tcl_version", "tcl_paths"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "platforms": {"type": "array", "items": {"type": "string"}},
+    "executables": {"type": "object", "required": ["cmake", "c_compiler", "cxx_compiler"], "properties": {"cmake": {"type": "string"}, "c_compiler": {"type": "string"}, "cxx_compiler": {"type": "string"}}, "additionalProperties": false},
+    "compiler_output_directory": {"type": "string"},
+    "tools_directory": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+$"},
+    "compiler_jobs_max": {"type": "integer", "minimum": 1, "maximum": 2},
+    "tcl_version": {"type": "string"},
+    "tcl_paths": {"type": "string"},
+    "evaluator_directory": {"type": "string", "pattern": "^evaluation/cases/[A-Za-z0-9_./-]+$"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,724 @@
+{
+  "protocol": "manifest-suite-v1",
+  "suite": {
+    "id": "NG-05T-v1-checks",
+    "version": "1"
+  },
+  "tests": [
+    {
+      "test": "mantis-30082-original",
+      "id": "mantis-30082-original",
+      "status": "failed",
+      "passed": false,
+      "result": {
+        "passed": false,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": false,
+          "test_done_marker": false,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 5,
+          "numeric_assertions": 1,
+          "failed_assertions": 1,
+          "tcl_error_detected": true,
+          "expected_oracle_error": true,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": false,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={issue intersection exists} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={one intersection curve} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersection curve edge BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersection curve edge shape validity} detail=value=1\n",
+          "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={bounded reached tolerance} detail={actual=0.00031297851399059634 expected=6.5e-7 tolerance=7.0e-8 absolute_error=0.00031232851399059635}\nBENCH_ORACLE_FAILED assertions=5 failures=1\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"/evaluation/cases/bundle/issues/mantis-30082/4/public/original.tcl\" line 167)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+          "full_log_failure_detected": true,
+          "script": "/evaluation/cases/bundle/issues/mantis-30082/4/public/original.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.032
+        }
+      },
+      "category": "original",
+      "visibility": "public",
+      "issue_id": "mantis-30082",
+      "elapsed_seconds": 0.032
+    },
+    {
+      "test": "mantis-30082-neighborhood",
+      "id": "mantis-30082-neighborhood",
+      "status": "failed",
+      "passed": false,
+      "result": {
+        "passed": false,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": false,
+          "test_done_marker": false,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 4,
+          "numeric_assertions": 1,
+          "failed_assertions": 1,
+          "tcl_error_detected": true,
+          "expected_oracle_error": true,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": false,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={translated issue input intersection exists} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={translated issue input has one curve} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={half-scale cylinder case has four curves} detail=value=1\n",
+          "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={translated reached tolerance} detail={actual=0.00031297847408055107 lower=1.0e-8 upper=1.0e-5}\nBENCH_ORACLE_FAILED assertions=4 failures=1\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"/evaluation/cases/bundle/evaluation/cases/mantis-30082/4/neighborhood.tcl\" line 172)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+          "full_log_failure_detected": true,
+          "script": "/evaluation/cases/bundle/evaluation/cases/mantis-30082/4/neighborhood.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.032
+        }
+      },
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "issue_id": "mantis-30082",
+      "elapsed_seconds": 0.032
+    },
+    {
+      "test": "mantis-30082-regression",
+      "id": "mantis-30082-regression",
+      "status": "passed",
+      "passed": true,
+      "result": {
+        "passed": true,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": true,
+          "test_done_marker": true,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 2,
+          "numeric_assertions": 0,
+          "failed_assertions": 0,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={separated cylinders have no curves} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={regular cylinder pair has four curves} detail=value=1\nBENCH_ORACLE_OK assertions=2 numeric_assertions=0\nTEST_DONE assertions=2 numeric_assertions=0\n",
+          "stderr_tail": "",
+          "script": "/evaluation/cases/bundle/evaluation/cases/mantis-30082/4/regression.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.032
+        }
+      },
+      "category": "regression",
+      "visibility": "hidden",
+      "issue_id": "mantis-30082",
+      "elapsed_seconds": 0.032
+    },
+    {
+      "test": "mantis-31602-original",
+      "id": "mantis-31602-original",
+      "status": "failed",
+      "passed": false,
+      "result": {
+        "passed": false,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": false,
+          "test_done_marker": false,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 5,
+          "numeric_assertions": 4,
+          "failed_assertions": 4,
+          "tcl_error_detected": true,
+          "expected_oracle_error": true,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": false,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={one intersection branch} detail=value=1\n",
+          "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={intersection tolerance bound} detail={actual=400.30076464747384 lower=0 upper=2.5e-6}\nBENCH_ASSERT_FAIL kind=numeric label={3D intersection length} detail={actual=1368.9828994562147 expected=1340.6982492258749 tolerance=0.02 absolute_error=28.28465023033982}\nBENCH_ASSERT_FAIL kind=numeric label={first pcurve length} detail={actual=422.9556667288075 expected=407.78567590999006 tolerance=0.02 absolute_error=15.169990818817439}\nBENCH_ASSERT_FAIL kind=numeric label={second pcurve length} detail={actual=926.15053844612896 expected=897.8658894846285 tolerance=0.02 absolute_error=28.284648961500466}\nBENCH_ORACLE_FAILED assertions=5 failures=4\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"/evaluation/cases/bundle/issues/mantis-31602/2/public/original.tcl\" line 133)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+          "full_log_failure_detected": true,
+          "script": "/evaluation/cases/bundle/issues/mantis-31602/2/public/original.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.064
+        }
+      },
+      "category": "original",
+      "visibility": "public",
+      "issue_id": "mantis-31602",
+      "elapsed_seconds": 0.064
+    },
+    {
+      "test": "mantis-31602-neighborhood",
+      "id": "mantis-31602-neighborhood",
+      "status": "failed",
+      "passed": false,
+      "result": {
+        "passed": false,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": false,
+          "test_done_marker": false,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 3,
+          "numeric_assertions": 2,
+          "failed_assertions": 2,
+          "tcl_error_detected": true,
+          "expected_oracle_error": true,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": false,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={transformed geometry retains one branch} detail=value=1\n",
+          "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={transformed tolerance bound} detail={actual=400.30076464609999 lower=0 upper=2.5e-6}\nBENCH_ASSERT_FAIL kind=numeric label={transformed 3D length invariant} detail={actual=1368.9828993887595 expected=1340.6982492258749 tolerance=0.02 absolute_error=28.284650162884645}\nBENCH_ORACLE_FAILED assertions=3 failures=2\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"/evaluation/cases/bundle/evaluation/cases/mantis-31602/2/neighborhood.tcl\" line 132)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+          "full_log_failure_detected": true,
+          "script": "/evaluation/cases/bundle/evaluation/cases/mantis-31602/2/neighborhood.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.064
+        }
+      },
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "issue_id": "mantis-31602",
+      "elapsed_seconds": 0.064
+    },
+    {
+      "test": "mantis-31602-regression",
+      "id": "mantis-31602-regression",
+      "status": "failed",
+      "passed": false,
+      "result": {
+        "passed": false,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": false,
+          "test_done_marker": false,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 5,
+          "numeric_assertions": 4,
+          "failed_assertions": 2,
+          "tcl_error_detected": true,
+          "expected_oracle_error": true,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": false,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={reversed pair retains one branch} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={first reversed pcurve has finite length} detail={actual=926.14996318963165 lower=100 upper=1500}\nBENCH_ASSERT_PASS kind=numeric label={second reversed pcurve has finite length} detail={actual=422.9554329505869 lower=100 upper=1500}\n",
+          "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={reversed pair tolerance bound} detail={actual=400.30075250765805 lower=0 upper=2.5e-6}\nBENCH_ASSERT_FAIL kind=numeric label={reversed 3D length invariant} detail={actual=1368.9823242007431 expected=1340.6982492258749 tolerance=0.02 absolute_error=28.28407497486819}\nBENCH_ORACLE_FAILED assertions=5 failures=2\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"/evaluation/cases/bundle/evaluation/cases/mantis-31602/2/regression.tcl\" line 129)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+          "full_log_failure_detected": true,
+          "script": "/evaluation/cases/bundle/evaluation/cases/mantis-31602/2/regression.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.064
+        }
+      },
+      "category": "regression",
+      "visibility": "hidden",
+      "issue_id": "mantis-31602",
+      "elapsed_seconds": 0.064
+    },
+    {
+      "test": "mantis-32850-original",
+      "id": "mantis-32850-original",
+      "status": "passed",
+      "passed": true,
+      "result": {
+        "passed": true,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": true,
+          "test_done_marker": true,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 6,
+          "numeric_assertions": 5,
+          "failed_assertions": 0,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={four intersection branches} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={near-orthogonal cylinder tolerance bound} detail={actual=1.1368683772161603e-13 lower=0 upper=1.0e-12}\nBENCH_ASSERT_PASS kind=numeric label={c_1 finite positive length} detail={actual=0.0010008938272564934 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_2 finite positive length} detail={actual=13.012833486797053 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_3 finite positive length} detail={actual=0.0010008938273849189 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_4 finite positive length} detail={actual=0.0010007069168230824 lower=1.0e-7 upper=1000}\nBENCH_ORACLE_OK assertions=6 numeric_assertions=5\nTEST_DONE assertions=6 numeric_assertions=5\n",
+          "stderr_tail": "",
+          "script": "/evaluation/cases/bundle/issues/mantis-32850/1/public/original.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.016
+        }
+      },
+      "category": "original",
+      "visibility": "public",
+      "issue_id": "mantis-32850",
+      "elapsed_seconds": 0.016
+    },
+    {
+      "test": "mantis-32850-neighborhood",
+      "id": "mantis-32850-neighborhood",
+      "status": "passed",
+      "passed": true,
+      "result": {
+        "passed": true,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": true,
+          "test_done_marker": true,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 6,
+          "numeric_assertions": 5,
+          "failed_assertions": 0,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={rigid translation retains four branches} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={translated tolerance remains bounded} detail={actual=1.1368683772161603e-13 lower=0 upper=1.0e-12}\nBENCH_ASSERT_PASS kind=numeric label={c_1 positive finite length} detail={actual=0.0010007266278350736 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_2 positive finite length} detail={actual=13.012833486779332 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_3 positive finite length} detail={actual=0.001000428438836078 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_4 positive finite length} detail={actual=0.0010007266275782224 lower=1.0e-7 upper=1000}\nBENCH_ORACLE_OK assertions=6 numeric_assertions=5\nTEST_DONE assertions=6 numeric_assertions=5\n",
+          "stderr_tail": "",
+          "script": "/evaluation/cases/bundle/evaluation/cases/mantis-32850/1/neighborhood.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.016
+        }
+      },
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "issue_id": "mantis-32850",
+      "elapsed_seconds": 0.016
+    },
+    {
+      "test": "mantis-32850-regression",
+      "id": "mantis-32850-regression",
+      "status": "passed",
+      "passed": true,
+      "result": {
+        "passed": true,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": true,
+          "test_done_marker": true,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 7,
+          "numeric_assertions": 6,
+          "failed_assertions": 0,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={reversed operand order retains four branches} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={reversed tolerance remains bounded} detail={actual=1.1368683772161603e-13 lower=0 upper=1.0e-12}\nBENCH_ASSERT_PASS kind=numeric label={c_1 positive finite length} detail={actual=0.0010007069168230824 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_2 positive finite length} detail={actual=13.012833486790504 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_3 positive finite length} detail={actual=0.0010007069169515079 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_4 positive finite length} detail={actual=0.0010008938273849189 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={aggregate branch length remains finite} detail={actual=13.015835794451663 lower=1.0 upper=4000}\nBENCH_ORACLE_OK assertions=7 numeric_assertions=6\nTEST_DONE assertions=7 numeric_assertions=6\n",
+          "stderr_tail": "",
+          "script": "/evaluation/cases/bundle/evaluation/cases/mantis-32850/1/regression.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.016
+        }
+      },
+      "category": "regression",
+      "visibility": "hidden",
+      "issue_id": "mantis-32850",
+      "elapsed_seconds": 0.016
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "mantis-30082-original",
+      "issue_id": "mantis-30082",
+      "case": "issues/mantis-30082/4/public/original.tcl",
+      "category": "original",
+      "visibility": "public",
+      "required": true,
+      "status": "failed",
+      "elapsed_seconds": 0.032,
+      "evidence": {
+        "passed": false,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": false,
+          "test_done_marker": false,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 5,
+          "numeric_assertions": 1,
+          "failed_assertions": 1,
+          "tcl_error_detected": true,
+          "expected_oracle_error": true,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": false,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={issue intersection exists} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={one intersection curve} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersection curve edge BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersection curve edge shape validity} detail=value=1\n",
+          "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={bounded reached tolerance} detail={actual=0.00031297851399059634 expected=6.5e-7 tolerance=7.0e-8 absolute_error=0.00031232851399059635}\nBENCH_ORACLE_FAILED assertions=5 failures=1\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"/evaluation/cases/bundle/issues/mantis-30082/4/public/original.tcl\" line 167)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+          "full_log_failure_detected": true,
+          "script": "/evaluation/cases/bundle/issues/mantis-30082/4/public/original.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.032
+        }
+      }
+    },
+    {
+      "id": "mantis-30082-neighborhood",
+      "issue_id": "mantis-30082",
+      "case": "evaluation/cases/mantis-30082/4/neighborhood.tcl",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "required": true,
+      "status": "failed",
+      "elapsed_seconds": 0.032,
+      "evidence": {
+        "passed": false,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": false,
+          "test_done_marker": false,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 4,
+          "numeric_assertions": 1,
+          "failed_assertions": 1,
+          "tcl_error_detected": true,
+          "expected_oracle_error": true,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": false,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={translated issue input intersection exists} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={translated issue input has one curve} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={half-scale cylinder case has four curves} detail=value=1\n",
+          "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={translated reached tolerance} detail={actual=0.00031297847408055107 lower=1.0e-8 upper=1.0e-5}\nBENCH_ORACLE_FAILED assertions=4 failures=1\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"/evaluation/cases/bundle/evaluation/cases/mantis-30082/4/neighborhood.tcl\" line 172)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+          "full_log_failure_detected": true,
+          "script": "/evaluation/cases/bundle/evaluation/cases/mantis-30082/4/neighborhood.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.032
+        }
+      }
+    },
+    {
+      "id": "mantis-30082-regression",
+      "issue_id": "mantis-30082",
+      "case": "evaluation/cases/mantis-30082/4/regression.tcl",
+      "category": "regression",
+      "visibility": "hidden",
+      "required": true,
+      "status": "passed",
+      "elapsed_seconds": 0.032,
+      "evidence": {
+        "passed": true,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": true,
+          "test_done_marker": true,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 2,
+          "numeric_assertions": 0,
+          "failed_assertions": 0,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={separated cylinders have no curves} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={regular cylinder pair has four curves} detail=value=1\nBENCH_ORACLE_OK assertions=2 numeric_assertions=0\nTEST_DONE assertions=2 numeric_assertions=0\n",
+          "stderr_tail": "",
+          "script": "/evaluation/cases/bundle/evaluation/cases/mantis-30082/4/regression.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.032
+        }
+      }
+    },
+    {
+      "id": "mantis-31602-original",
+      "issue_id": "mantis-31602",
+      "case": "issues/mantis-31602/2/public/original.tcl",
+      "category": "original",
+      "visibility": "public",
+      "required": true,
+      "status": "failed",
+      "elapsed_seconds": 0.064,
+      "evidence": {
+        "passed": false,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": false,
+          "test_done_marker": false,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 5,
+          "numeric_assertions": 4,
+          "failed_assertions": 4,
+          "tcl_error_detected": true,
+          "expected_oracle_error": true,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": false,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={one intersection branch} detail=value=1\n",
+          "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={intersection tolerance bound} detail={actual=400.30076464747384 lower=0 upper=2.5e-6}\nBENCH_ASSERT_FAIL kind=numeric label={3D intersection length} detail={actual=1368.9828994562147 expected=1340.6982492258749 tolerance=0.02 absolute_error=28.28465023033982}\nBENCH_ASSERT_FAIL kind=numeric label={first pcurve length} detail={actual=422.9556667288075 expected=407.78567590999006 tolerance=0.02 absolute_error=15.169990818817439}\nBENCH_ASSERT_FAIL kind=numeric label={second pcurve length} detail={actual=926.15053844612896 expected=897.8658894846285 tolerance=0.02 absolute_error=28.284648961500466}\nBENCH_ORACLE_FAILED assertions=5 failures=4\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"/evaluation/cases/bundle/issues/mantis-31602/2/public/original.tcl\" line 133)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+          "full_log_failure_detected": true,
+          "script": "/evaluation/cases/bundle/issues/mantis-31602/2/public/original.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.064
+        }
+      }
+    },
+    {
+      "id": "mantis-31602-neighborhood",
+      "issue_id": "mantis-31602",
+      "case": "evaluation/cases/mantis-31602/2/neighborhood.tcl",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "required": true,
+      "status": "failed",
+      "elapsed_seconds": 0.064,
+      "evidence": {
+        "passed": false,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": false,
+          "test_done_marker": false,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 3,
+          "numeric_assertions": 2,
+          "failed_assertions": 2,
+          "tcl_error_detected": true,
+          "expected_oracle_error": true,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": false,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={transformed geometry retains one branch} detail=value=1\n",
+          "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={transformed tolerance bound} detail={actual=400.30076464609999 lower=0 upper=2.5e-6}\nBENCH_ASSERT_FAIL kind=numeric label={transformed 3D length invariant} detail={actual=1368.9828993887595 expected=1340.6982492258749 tolerance=0.02 absolute_error=28.284650162884645}\nBENCH_ORACLE_FAILED assertions=3 failures=2\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"/evaluation/cases/bundle/evaluation/cases/mantis-31602/2/neighborhood.tcl\" line 132)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+          "full_log_failure_detected": true,
+          "script": "/evaluation/cases/bundle/evaluation/cases/mantis-31602/2/neighborhood.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.064
+        }
+      }
+    },
+    {
+      "id": "mantis-31602-regression",
+      "issue_id": "mantis-31602",
+      "case": "evaluation/cases/mantis-31602/2/regression.tcl",
+      "category": "regression",
+      "visibility": "hidden",
+      "required": true,
+      "status": "failed",
+      "elapsed_seconds": 0.064,
+      "evidence": {
+        "passed": false,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": false,
+          "test_done_marker": false,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 5,
+          "numeric_assertions": 4,
+          "failed_assertions": 2,
+          "tcl_error_detected": true,
+          "expected_oracle_error": true,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": false,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={reversed pair retains one branch} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={first reversed pcurve has finite length} detail={actual=926.14996318963165 lower=100 upper=1500}\nBENCH_ASSERT_PASS kind=numeric label={second reversed pcurve has finite length} detail={actual=422.9554329505869 lower=100 upper=1500}\n",
+          "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={reversed pair tolerance bound} detail={actual=400.30075250765805 lower=0 upper=2.5e-6}\nBENCH_ASSERT_FAIL kind=numeric label={reversed 3D length invariant} detail={actual=1368.9823242007431 expected=1340.6982492258749 tolerance=0.02 absolute_error=28.28407497486819}\nBENCH_ORACLE_FAILED assertions=5 failures=2\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"/evaluation/cases/bundle/evaluation/cases/mantis-31602/2/regression.tcl\" line 129)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+          "full_log_failure_detected": true,
+          "script": "/evaluation/cases/bundle/evaluation/cases/mantis-31602/2/regression.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.064
+        }
+      }
+    },
+    {
+      "id": "mantis-32850-original",
+      "issue_id": "mantis-32850",
+      "case": "issues/mantis-32850/1/public/original.tcl",
+      "category": "original",
+      "visibility": "public",
+      "required": true,
+      "status": "passed",
+      "elapsed_seconds": 0.016,
+      "evidence": {
+        "passed": true,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": true,
+          "test_done_marker": true,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 6,
+          "numeric_assertions": 5,
+          "failed_assertions": 0,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={four intersection branches} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={near-orthogonal cylinder tolerance bound} detail={actual=1.1368683772161603e-13 lower=0 upper=1.0e-12}\nBENCH_ASSERT_PASS kind=numeric label={c_1 finite positive length} detail={actual=0.0010008938272564934 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_2 finite positive length} detail={actual=13.012833486797053 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_3 finite positive length} detail={actual=0.0010008938273849189 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_4 finite positive length} detail={actual=0.0010007069168230824 lower=1.0e-7 upper=1000}\nBENCH_ORACLE_OK assertions=6 numeric_assertions=5\nTEST_DONE assertions=6 numeric_assertions=5\n",
+          "stderr_tail": "",
+          "script": "/evaluation/cases/bundle/issues/mantis-32850/1/public/original.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.016
+        }
+      }
+    },
+    {
+      "id": "mantis-32850-neighborhood",
+      "issue_id": "mantis-32850",
+      "case": "evaluation/cases/mantis-32850/1/neighborhood.tcl",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "required": true,
+      "status": "passed",
+      "elapsed_seconds": 0.016,
+      "evidence": {
+        "passed": true,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": true,
+          "test_done_marker": true,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 6,
+          "numeric_assertions": 5,
+          "failed_assertions": 0,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={rigid translation retains four branches} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={translated tolerance remains bounded} detail={actual=1.1368683772161603e-13 lower=0 upper=1.0e-12}\nBENCH_ASSERT_PASS kind=numeric label={c_1 positive finite length} detail={actual=0.0010007266278350736 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_2 positive finite length} detail={actual=13.012833486779332 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_3 positive finite length} detail={actual=0.001000428438836078 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_4 positive finite length} detail={actual=0.0010007266275782224 lower=1.0e-7 upper=1000}\nBENCH_ORACLE_OK assertions=6 numeric_assertions=5\nTEST_DONE assertions=6 numeric_assertions=5\n",
+          "stderr_tail": "",
+          "script": "/evaluation/cases/bundle/evaluation/cases/mantis-32850/1/neighborhood.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.016
+        }
+      }
+    },
+    {
+      "id": "mantis-32850-regression",
+      "issue_id": "mantis-32850",
+      "case": "evaluation/cases/mantis-32850/1/regression.tcl",
+      "category": "regression",
+      "visibility": "hidden",
+      "required": true,
+      "status": "passed",
+      "elapsed_seconds": 0.016,
+      "evidence": {
+        "passed": true,
+        "result": {
+          "protocol": "draw_case_oracle_v1",
+          "passed": true,
+          "test_done_marker": true,
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 7,
+          "numeric_assertions": 6,
+          "failed_assertions": 0,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={reversed operand order retains four branches} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={reversed tolerance remains bounded} detail={actual=1.1368683772161603e-13 lower=0 upper=1.0e-12}\nBENCH_ASSERT_PASS kind=numeric label={c_1 positive finite length} detail={actual=0.0010007069168230824 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_2 positive finite length} detail={actual=13.012833486790504 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_3 positive finite length} detail={actual=0.0010007069169515079 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_4 positive finite length} detail={actual=0.0010008938273849189 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={aggregate branch length remains finite} detail={actual=13.015835794451663 lower=1.0 upper=4000}\nBENCH_ORACLE_OK assertions=7 numeric_assertions=6\nTEST_DONE assertions=7 numeric_assertions=6\n",
+          "stderr_tail": "",
+          "script": "/evaluation/cases/bundle/evaluation/cases/mantis-32850/1/regression.tcl",
+          "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/lin64/clang/bin/DRAWEXE-7.8.2",
+          "elapsed_seconds": 0.016
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Checks are only those declared in this frozen suite; this is not the full upstream test suite."
+  ],
+  "report": {
+    "provided": false
+  },
+  "patch_bytes": 5859,
+  "build": {
+    "occt_version": "7.8",
+    "toolkit_cache_variable": "BUILD_ADDITIONAL_TOOLKITS",
+    "configure": {
+      "command": [
+        "cmake",
+        "-S",
+        "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/source",
+        "-B",
+        "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_FLAGS_RELEASE=-O3 -DNDEBUG",
+        "-DCMAKE_CXX_FLAGS_RELEASE=-O3 -DNDEBUG",
+        "-DCMAKE_C_COMPILER=clang-10",
+        "-DCMAKE_CXX_COMPILER=clang++-10",
+        "-DCMAKE_CXX_FLAGS=-I/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/compat-include",
+        "-DBUILD_LIBRARY_TYPE=Shared",
+        "-DBUILD_ADDITIONAL_TOOLKITS=TKTopTest;DRAWEXE",
+        "-DBUILD_MODULE_ApplicationFramework=OFF",
+        "-DBUILD_MODULE_DataExchange=OFF",
+        "-DBUILD_MODULE_Draw=OFF",
+        "-DBUILD_MODULE_FoundationClasses=OFF",
+        "-DBUILD_MODULE_ModelingAlgorithms=OFF",
+        "-DBUILD_MODULE_ModelingData=OFF",
+        "-DBUILD_MODULE_Visualization=OFF",
+        "-DUSE_FREETYPE=OFF",
+        "-DUSE_TK=OFF",
+        "-D3RDPARTY_TCL_DIR=$CONDA_BASE",
+        "-D3RDPARTY_TCL_INCLUDE_DIR=$CONDA_BASE/include",
+        "-D3RDPARTY_TCL_LIBRARY=$CONDA_BASE/lib/libtcl8.6.so",
+        "-D3RDPARTY_TCL_LIBRARY_DIR=$CONDA_BASE/lib"
+      ],
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.257,
+      "output_tail": "CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n  Compatibility with CMake < 3.5 will be removed from a future version of\n  CMake.\n\n  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n  CMake that the project does not need compatibility with older versions.\n\n\n-- The C compiler identification is Clang 10.0.0\n-- The CXX compiler identification is Clang 10.0.0\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /usr/bin/clang-10 - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/clang++-10 - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Info. Detecting doxygen\n-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) (Required is at least version \"1.8.4\")\n-- Info: TCL is used by OCCT\n-- Found Tclsh: $CONDA_BASE/bin/tclsh (found version \"8.6\") \n-- Info: TK is used from TCL folder: $CONDA_BASE\n-- Info: Xlib is used by OCCT\n-- Info: The directories of 3rdparty headers: \n\t$CONDA_BASE/include\n-- Info: The directories of 3rdparty libraries: \n\t$CONDA_BASE/lib\n-- \nInfo: (15:57:04) Start collecting all OCCT header files into /workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build/inc ...\n-- Info: (15:57:04) Compare FILES with files in package directories...\n-- Info: (15:57:05) Create header-links in inc folder...\n-- Info: (15:57:05) Checking headers in inc folder...\n-- Info: (15:57:05) End the collecting\n-- Info: Used native memory manager\n-- Info: (15:57:05) OCCT toolkits processed\n-- Info: (15:57:05) OCCT configuration files prepared\n-- Configuring done (1.0s)\n-- Generating done (0.2s)\n-- Build files have been written to: /workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build\n"
+    },
+    "build": {
+      "command": [
+        "cmake",
+        "--build",
+        "/workspace$BENCH_TMP_DIR/manifest-suite-dl_pu3dv/build",
+        "--target",
+        "DRAWEXE",
+        "TKTopTest",
+        "--parallel",
+        "2"
+      ],
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 771.352,
+      "output_tail": "/__/BRepOffsetAPI/BRepOffsetAPI_FindContigousEdges.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_DraftAngle.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_MakeDraft.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_MakeEvolved.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_MakeFilling.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_MakeOffset.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_MakeOffsetShape.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_MakePipe.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_MakePipeShell.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_MakeThickSolid.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_MiddlePath.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_NormalProjection.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_ThruSections.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/Draft/Draft.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/Draft/Draft_EdgeInfo.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/Draft/Draft_FaceInfo.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/Draft/Draft_Modification.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/Draft/Draft_Modification_1.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/Draft/Draft_VertexInfo.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_Analyse.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_Inter2d.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_Inter3d.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_Interval.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_MakeLoops.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_MakeOffset.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_MakeOffset_1.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_MakeSimpleOffset.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_Offset.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_SimpleOffset.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_Tool.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BiTgte/BiTgte_Blend.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BiTgte/BiTgte_CurveOnEdge.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BiTgte/BiTgte_CurveOnVertex.cxx.o\n[ 97%] Linking CXX shared library ../../lin64/clang/lib/libTKOffset.so\n[ 97%] Built target TKOffset\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_BasicCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_ChamferCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_CheckCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_CurveCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_DraftAngleCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_DrawableHistory.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_ExtremaCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_FeatureCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_Fillet2DCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_FilletCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_FillingCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_GPropCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_HistoryCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_MatCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_Objects.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_OtherCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_PrimitiveCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_ProjectionCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_SurfaceCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_SweepCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_TopologyCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_APICommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_ConstraintCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_ContinuityCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_CurveCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_CurveTanCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_DrawableQualifiedCurve2d.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_FairCurveCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_PolyCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_SurfaceCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_TestProjCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/HLRTest/HLRTest.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/HLRTest/HLRTest_DrawableEdgeTool.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/HLRTest/HLRTest_DrawablePolyEdgeTool.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/HLRTest/HLRTest_OutLiner.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/HLRTest/HLRTest_Projector.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/HLRTest/HLRTest_ShapeData.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/MeshTest/MeshTest.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/MeshTest/MeshTest_CheckTopology.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/MeshTest/MeshTest_PluginCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/MeshTest/MeshTest_Debug.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeomliteTest/GeomliteTest.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeomliteTest/GeomliteTest_API2dCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeomliteTest/GeomliteTest_ApproxCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeomliteTest/GeomliteTest_CurveCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeomliteTest/GeomliteTest_ModificationCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeomliteTest/GeomliteTest_SurfaceCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/DrawFairCurve/DrawFairCurve_Batten.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/DrawFairCurve/DrawFairCurve_MinimalVariation.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_APICommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_BOPCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_CheckCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_DrawableShape.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_LowCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_MkConnectedCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_ObjCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_Objects.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_OptionCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_PartitionCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_PeriodicityCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_TolerCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_DebugCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_CellsCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_RemoveFeaturesCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_UtilityCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW.cxx.o\n[100%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeAnalysis.cxx.o\n[100%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeCustom.cxx.o\n[100%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeExtend.cxx.o\n[100%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeFix.cxx.o\n[100%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeProcess.cxx.o\n[100%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeProcessAPI.cxx.o\n[100%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeTool.cxx.o\n[100%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeUpgrade.cxx.o\n[100%] Linking CXX shared library ../../lin64/clang/lib/libTKTopTest.so\n[100%] Built target TKTopTest\n"
+    },
+    "build_compatibility": [
+      "build-only xlocale.h forwarding to locale.h"
+    ],
+    "build_tree_aliases": []
+  },
+  "elapsed_seconds": 774.259,
+  "passed": false,
+  "evaluation_suites": [
+    {
+      "id": "NG-05T-v1-checks",
+      "version": "1"
+    }
+  ],
+  "category_summary": {
+    "original": {
+      "declared": 3,
+      "executed": 3,
+      "passed": 1,
+      "failed": 2,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "state": "configured"
+    },
+    "neighborhood": {
+      "declared": 3,
+      "executed": 3,
+      "passed": 1,
+      "failed": 2,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "state": "configured"
+    },
+    "regression": {
+      "declared": 3,
+      "executed": 3,
+      "passed": 2,
+      "failed": 1,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "state": "configured"
+    }
+  },
+  "technical_passed": false
+}

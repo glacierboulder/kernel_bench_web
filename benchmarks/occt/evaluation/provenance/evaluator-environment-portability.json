@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "reason": "Remove machine-specific Conda environment-name assumptions from project-local evaluator copies while preserving geometry checks and source identities.",
+  "change_scope": "Environment validation and integrity metadata only; no geometry cases, input files, oracle predicates, or expected values changed.",
+  "asset_hash_changes": [
+    {
+      "origin": "g2",
+      "path": "five_group_originals/g2/run_draw_case.py",
+      "old_sha256": "9ebd9f0a67bb31c6ecec5cac0fbd0cff5f0384b4749aad7b2f83626887923c76",
+      "new_sha256": "f153bd34df5560b2574cb7cc6a08234944d6754755dff7c56fc6497acaaf88a2"
+    },
+    {
+      "origin": "g3",
+      "path": "five_group_originals/g3/run_draw_case.py",
+      "old_sha256": "1fa96ec7a47709e152b21f10266ef54048001a475bdbe8eef1cd4613dc1207fd",
+      "new_sha256": "43ffeb9a09984d6a28c30fe12a8dce0506d4b06697a51eb095e8ee2df3da37c4"
+    },
+    {
+      "role": "g3_geometry_core",
+      "path": "occt-bf-group-b2613378-27780-27252-21494-v1/run_draw_case_core.py",
+      "old_sha256": "465172238816dcf841c1ae16fd9ba5a557f0ea6c730ea053c9533fb8fefd8275",
+      "new_sha256": "36c057a5eeb849d3db60ee64bbf5930663c00bb6fc0d8249f09313c156f8b72e"
+    }
+  ],
+  "original_external_source_package": "${OCCT_FIVE_GROUP_SOURCE_ROOT}",
+  "verification": "dispatch_lock runner hashes and G3 core hash constant match the project-local portable copies; source pack and archived package remain unchanged."
+}

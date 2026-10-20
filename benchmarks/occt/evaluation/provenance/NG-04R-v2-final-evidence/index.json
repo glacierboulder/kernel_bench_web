@@ -1,0 +1,76 @@
+{
+  "schema_version": "occt-validation-evidence-index-v1",
+  "group_id": "NG-04R-v2",
+  "baseline_manifest_sha256": "f463a624b301902a4ca846d995b3d2718654860f7f089272937703db37c681cc",
+  "reference_manifest_sha256": "cd5424e93cd69bd26249c3e89876c7c63008abee4ae1633e4dcced0d2bb02582",
+  "baseline_build_receipt_sha256": "405893e4df064b8a9b986db27a48cf4d98948a2d50601cd2596b6fd12474dd1e",
+  "reference_build_receipt_sha256": "2fa503e18d250a0c4961407ac5b5de67fcce112ac8df3ecd60a8c8155d8408da",
+  "baseline_run_count": 9,
+  "reference_run_count": 9,
+  "source_bundle_sha256": "2ca7cd07c717f21b2293ad04e460345516a7f462bdd22b5a872728e0070494c3",
+  "case_hash_mapping": {
+    "M30082/original": "c95ce4a22cb803f7d9e028250206149a9ec1230eb8185b7d14395b4af3dde4b4",
+    "M30082/neighborhood": "6ece46afe217a0c62e423d464b4e38b9e972f1aa3033e6dd116d4448d5ce7040",
+    "M30082/regression": "d7b16bf795d51ed9924aad0888132e0d17a636fd347adc8e7d51382028e3d7e9",
+    "M30202/original": "bab1c3ab3b7962d958715d15559806e595ed2e3b761031115cec0bf0b3d7261c",
+    "M30202/neighborhood": "e4ebad7a7985c132ecc83a8c51bfecef31914d8fc45aabef86f41949a050e1f2",
+    "M30202/regression": "8adfb321c8cd7f85732870e559c50aa06a617d8cfff8c14aadc979914e31b6e0",
+    "M33541/original": "ce5e8ed08e3882abc9d770614a6e87704f499eb6cc1cf229d9a536f21f854cdd",
+    "M33541/neighborhood": "c73267e409637ac865d633d38b470de9bd6b1e5c6b1bb971e5bd13af333764a6",
+    "M33541/regression": "07beabc8e9c643e299074d421156e4021b0acc182abd618f5bc82dc2ec7b8120"
+  },
+  "status": "final single-group framework replay passed; independent delivery review passed",
+  "framework_evaluation_id": "0069678e94731943",
+  "framework_snapshot_sha256": "b00d011fab6d7472792fc4176652374808a325f90f11f46eab91a07347c20ad3",
+  "baseline_outcomes": {
+    "expected_failures": 7,
+    "passes": 2,
+    "manifest_sha256": "f463a624b301902a4ca846d995b3d2718654860f7f089272937703db37c681cc",
+    "invalidated_prior_run": "negative_controls/invalidated_wrong_library_baseline/INVALIDATED.json"
+  },
+  "reference_outcomes": {
+    "passed": 9,
+    "hidden_passed": 6,
+    "evaluation_id": "0069678e94731943",
+    "snapshot_sha256": "b00d011fab6d7472792fc4176652374808a325f90f11f46eab91a07347c20ad3"
+  },
+  "negative_control": {
+    "path": "negative_controls/partial_patch_without_M33541/control_index.json",
+    "sha256": "6c2a4eedccb544678626fe48208ee56c7577f93301b413dd0a46c27f63eb7a0c",
+    "manifest_sha256": "8b34f21c33ee81ad56d9827e5eaf645b4bfa9c7e4bcfa1922648c5044558f8b4",
+    "status": "negative_control_passed",
+    "scope": "three original cases only; M33541 v2 original bytes match the earlier issue case",
+    "outcomes": {
+      "M30082": {
+        "passed": true,
+        "failed_assertions": 0
+      },
+      "M33541": {
+        "passed": false,
+        "failed_assertions": 2
+      },
+      "M30202": {
+        "passed": true,
+        "failed_assertions": 0
+      }
+    }
+  },
+  "limitations": [
+    "Offline replay used an isolation shim because this environment cannot create a network namespace; no model/API calls were made.",
+    "M30202 native C++ crash frame remains unknown; the reviewed DRAW-visible call/signature is preserved.",
+    "M30082 archived attachment byte identity remains unverified."
+  ],
+  "framework_artifacts": {
+    "evaluation_id": "0069678e94731943",
+    "framework_record": "source_runs/reference/framework_record.json",
+    "framework_record_sha256": "aeae4af7974ad5d52fd328e9448971f61ae54ef96b2ff2f1d583ddae35730097",
+    "evaluation_internal_result": "source_runs/reference/evaluation.internal.json",
+    "evaluation_internal_result_sha256": "1c39edb17d10cc80001ca63b39319d146acb826bfac14952363c5acaf5c3b283"
+  },
+  "invalidated_run_note": "Initial baseline replay used the reference TKGeomAlgo library, was marked invalid, and is excluded from outcome counts; the preserved marker and raw records are under negative_controls/invalidated_wrong_library_baseline.",
+  "independent_delivery_review": {
+    "path": "../NG-04R-v2-delivery-review.json",
+    "sha256": "62fbc040d25c06eac0f7f97f107927f4781ff45bab5f57ae4486e87183eb5648",
+    "verdict": "pass"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "case_id": "M21494_original_bug21494_2",
+  "official_test": {
+    "path": "bug21494_2.tcl",
+    "sha256": "09801f217d3a6668062405c2aa66d3f9cb4db765b1d0fa4cd8ab97a3148b2b47"
+  },
+  "official_helper": {
+    "path": "official_9bc5f585_intss_begin.tcl",
+    "sha256": "eb479d7c647afad8ffedf3225bedc321a9b4a9e54a6e27494c94c64c660858c6"
+  },
+  "display_adapter": {
+    "path": "draw_pure_display_noop.tcl",
+    "sha256": "ca6cd9fd9870a45f06fd2a62f1f40486692d163f879ef10ab10fb4071da1b9fa",
+    "approved_commands": [
+      "smallview",
+      "don",
+      "fit",
+      "disp",
+      "checkview"
+    ]
+  },
+  "harness": {
+    "path": "harness_bug21494_2.tcl",
+    "sha256": "2873ca96b3a1355d64e02b19ab28fc35a4f2ca75f59419fecce9c54f97b0762a"
+  },
+  "adaptations": [
+    "Bundle-relative source paths only; unchanged official test/helper bytes",
+    "External no-op for five approved pure-display commands",
+    "TEST_DONE gated on completed source, loaded required commands, and no official Error assertion"
+  ]
+}

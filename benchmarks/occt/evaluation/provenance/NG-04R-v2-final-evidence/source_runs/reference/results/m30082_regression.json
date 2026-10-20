@@ -1,0 +1,20 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": true,
+  "test_done_marker": true,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 2,
+  "numeric_assertions": 0,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={separated cylinders have no curves} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={regular cylinder pair has four curves} detail=value=1\nBENCH_ORACLE_OK assertions=2 numeric_assertions=0\nTEST_DONE assertions=2 numeric_assertions=0\n",
+  "stderr_tail": "",
+  "script": "/evaluation/cases/bundle/evaluation/cases/mantis-30082/2/regression.tcl",
+  "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-s60hkk9a/build/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.032
+}

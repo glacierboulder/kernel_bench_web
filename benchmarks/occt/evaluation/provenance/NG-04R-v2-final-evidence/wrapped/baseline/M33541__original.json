@@ -1,0 +1,37 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": false,
+  "test_done_marker": false,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 7,
+  "numeric_assertions": 3,
+  "failed_assertions": 2,
+  "tcl_error_detected": true,
+  "expected_oracle_error": true,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": true,
+  "oracle_summary_found": false,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={cylinder minus sphere BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={cylinder minus sphere checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={cylinder/sphere overlap BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={cylinder/sphere overlap checkshape validity} detail=value=1\nchecknbshapes cut_result -vertex 3 -edge 5 -wire 4 -face 4 -solid 1\nError :  is WRONG because number of VERTEX entities in shape \"cut_result\" is 0\nError :  is WRONG because number of EDGE entities in shape \"cut_result\" is 0\nError :  is WRONG because number of WIRE entities in shape \"cut_result\" is 0\nError :  is WRONG because number of FACE entities in shape \"cut_result\" is 0\nError :  is WRONG because number of SOLID entities in shape \"cut_result\" is 0\nBENCH_ASSERT_PASS kind=numeric label={cylinder volume} detail={actual=3.14159 expected=3.141592653589793 tolerance=4.0e-6 absolute_error=2.6535897932333796e-6}\n",
+  "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={cut volume} detail={actual=0 expected=2.8126 tolerance=2.0e-4 absolute_error=2.8126}\nBENCH_ASSERT_FAIL kind=numeric label={Common volume} detail={actual=3.14159 expected=0.328988 tolerance=2.0e-5 absolute_error=2.812602}\nBENCH_ORACLE_FAILED assertions=7 failures=2\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/cases_v2/mantis_33541/original.tcl\" line 129)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+  "full_log_failure_detected": true,
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/cases_v2/mantis_33541/original.tcl",
+  "draw_executable": "$BENCH_TMP_DIR/occt_ng04_bundle_trial/baseline_build_v2/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.032,
+  "execution_provenance": {
+    "source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+    "baseline_source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+    "reference_patch_sha256": null,
+    "runner_sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+    "case_sha256": "ce5e8ed08e3882abc9d770614a6e87704f499eb6cc1cf229d9a536f21f854cdd"
+  },
+  "evidence_attestation": {
+    "source_run_manifest": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/baseline/manifest.json",
+    "source_run_manifest_sha256": "f463a624b301902a4ca846d995b3d2718654860f7f089272937703db37c681cc",
+    "build_receipt": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/baseline/build_receipt.json",
+    "build_receipt_sha256": "405893e4df064b8a9b986db27a48cf4d98948a2d50601cd2596b6fd12474dd1e",
+    "raw_result": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/baseline/results/m33541_original.json",
+    "raw_result_sha256": "9974875dfadb8f2a9821c20d694ad0dcf53983f041fa6e8506ec0c52150cf80b",
+    "run_phase": "baseline"
+  }
+}

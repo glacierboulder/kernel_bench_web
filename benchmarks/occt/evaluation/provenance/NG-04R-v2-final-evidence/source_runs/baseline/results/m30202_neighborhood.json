@@ -1,0 +1,21 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": false,
+  "test_done_marker": false,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 0,
+  "numeric_assertions": 0,
+  "failed_assertions": 0,
+  "tcl_error_detected": true,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": true,
+  "occt_error_detected": true,
+  "oracle_summary_found": false,
+  "stdout_tail": "DRAW is running in batch mode\n0030202: IntPatch_WLineTool::JoinWLines array out of bounds\n",
+  "stderr_tail": "BENCH_TCL_ERROR: An exception was caught 0xf2b6bd0 : OSD_SIGSEGV: SIGSEGV 'segmentation violation' detected. Address 28.\nAn exception was caught 0xf2b6bd0 : OSD_SIGSEGV: SIGSEGV 'segmentation violation' detected. Address 28.\n    while executing\n\"bopcurves b1_5 b2_7 -2d\"\n    (file \"$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/cases_v2/mantis_30202/neighborhood.tcl\" line 131)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+  "full_log_failure_detected": true,
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/cases_v2/mantis_30202/neighborhood.tcl",
+  "draw_executable": "$BENCH_TMP_DIR/occt_ng04_bundle_trial/baseline_build_v2/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.032
+}

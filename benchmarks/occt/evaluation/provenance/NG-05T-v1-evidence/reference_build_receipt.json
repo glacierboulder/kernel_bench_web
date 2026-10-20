@@ -1,0 +1,54 @@
+{
+  "schema_version": "ng05t_v1_build_receipt_v1",
+  "status": "success_after_retargeted_locked_build_copy",
+  "baseline_commit": "201a54e50b9f24ecd5d9c401461ad64312de9870",
+  "baseline_source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+  "reference_git_tree": "a00ebaef78661f5acd442f58aadf31b3e91212c5",
+  "reference_source_tree_sha256": "d48e73eb8ad378ef637c25b2b69d7eed6324f4f23f8c02763770d706249ce8bc",
+  "selected_reference_patch_sha256": "e969460acfdd3e2fd9eba551bf6e4410e3b72615b60f2ad30956c348dce6423d",
+  "configure": {
+    "command": [
+      "cmake",
+      "-S",
+      "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng05t_v1/source_reference",
+      "-B",
+      "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng05t_v1/build_reference"
+    ],
+    "return_code": 0,
+    "cmake_cache_sha256": "da40093a03d27bd161dfe7eae832b31b5afd6a2679f9be5507ac6ba71b73ffda",
+    "compiler": null
+  },
+  "build": {
+    "command": [
+      "cmake",
+      "--build",
+      "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng05t_v1/build_reference",
+      "--target",
+      "TKGeomAlgo",
+      "TKHLR",
+      "--parallel",
+      "2"
+    ],
+    "return_code": 0,
+    "parallel_jobs": 2,
+    "rebuild_basis": "copied locked NG-04T baseline build artifacts, retargeted CMake cache, then rebuilt requested TKGeomAlgo/TKHLR target closure after source/build path relocation; broad rebuild is not represented as a clean from-scratch source build."
+  },
+  "changed_source_files": [
+    "src/IntPatch/IntPatch_ALineToWLine.cxx",
+    "src/IntPatch/IntPatch_ImpImpIntersection_4.gxx",
+    "src/IntStart/IntStart_SearchOnBoundaries.gxx"
+  ],
+  "unselected_M30202_source_hunks": "excluded; actual source tree hash equals the temporary selected-patch index tree; M30202-only hunks were removed before configuring.",
+  "compiled_object_counts": {
+    "TKGeomAlgo": 365,
+    "TKHLR": 91
+  },
+  "artifact_sha256": {
+    "lin64/clang/lib/libTKGeomAlgo.so.7.8.2": "9a0ea17b015481e49ce234a667a393638329f85d51131d7c53944c8799fc39b1",
+    "lin64/clang/lib/libTKTopAlgo.so.7.8.2": "b5408c2a862fb80fe0d01da68a5278086c15ca4c1e87a459e1ec2cf83e1cdea4",
+    "lin64/clang/lib/libTKHLR.so.7.8.2": "0fb975b4d6ba2126c9d513da93b8abca8e72057f0f74bde07880e9ac0b3d8af4",
+    "lin64/clang/bin/DRAWEXE-7.8.2": "fa641b0f2c9525054a166ebaddb6c1fdba6b458303c2598894fc9b6295aebf95"
+  },
+  "case_matrix": "ng05t_v1/evidence/reference/manifest.json",
+  "case_matrix_passed": "9/9"
+}

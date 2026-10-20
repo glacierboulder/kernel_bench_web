@@ -1,0 +1,37 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": false,
+  "test_done_marker": false,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 5,
+  "numeric_assertions": 1,
+  "failed_assertions": 1,
+  "tcl_error_detected": true,
+  "expected_oracle_error": true,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": false,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={issue intersection exists} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={one intersection curve} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersection curve edge BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={intersection curve edge shape validity} detail=value=1\n",
+  "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={bounded reached tolerance} detail={actual=0.00031297851399059634 expected=6.5e-7 tolerance=7.0e-8 absolute_error=0.00031232851399059635}\nBENCH_ORACLE_FAILED assertions=5 failures=1\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/cases_v2/mantis_30082/original.tcl\" line 167)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+  "full_log_failure_detected": true,
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/cases_v2/mantis_30082/original.tcl",
+  "draw_executable": "$BENCH_TMP_DIR/occt_ng04_bundle_trial/baseline_build_v2/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.032,
+  "execution_provenance": {
+    "source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+    "baseline_source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+    "reference_patch_sha256": null,
+    "runner_sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+    "case_sha256": "c95ce4a22cb803f7d9e028250206149a9ec1230eb8185b7d14395b4af3dde4b4"
+  },
+  "evidence_attestation": {
+    "source_run_manifest": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/baseline/manifest.json",
+    "source_run_manifest_sha256": "f463a624b301902a4ca846d995b3d2718654860f7f089272937703db37c681cc",
+    "build_receipt": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/baseline/build_receipt.json",
+    "build_receipt_sha256": "405893e4df064b8a9b986db27a48cf4d98948a2d50601cd2596b6fd12474dd1e",
+    "raw_result": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/baseline/results/m30082_original.json",
+    "raw_result_sha256": "4cad874601e91ccd4ab3f4f555ad9f5509df162b4fd6daa8e15a539d04f9948f",
+    "run_phase": "baseline"
+  }
+}

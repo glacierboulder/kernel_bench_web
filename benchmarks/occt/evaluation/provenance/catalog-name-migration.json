@@ -1,0 +1,326 @@
+{
+  "created_utc": "2026-10-20T06:51:58.842976+00:00",
+  "dispatch_alias_policy": "Mantis issue catalog paths use issues/occt-N; frozen suite cases map to the original issues/mantis-N path used by the locked dispatch whitelist. snapshot.json records each alias.",
+  "internal_evaluator_paths": "Preserved exactly; checkpoint_routes and evaluator_assets were copied without rewriting.",
+  "issue_paths": [
+    {
+      "id": "mantis-30082",
+      "path": "issues/occt-30082/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "mantis-30202",
+      "path": "issues/occt-30202/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "mantis-33541",
+      "path": "issues/occt-33541/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "mantis-30082",
+      "path": "issues/occt-30082/4/issue.json",
+      "version": "4"
+    },
+    {
+      "id": "mantis-32850",
+      "path": "issues/occt-32850/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "mantis-31602",
+      "path": "issues/occt-31602/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "occt-21494",
+      "path": "issues/occt-21494/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-29807",
+      "path": "issues/occt-29807/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-31835",
+      "path": "issues/occt-31835/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-27310",
+      "path": "issues/occt-27310/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-27773",
+      "path": "issues/occt-27773/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-27252",
+      "path": "issues/occt-27252/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-21494",
+      "path": "issues/occt-21494/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "occt-27252",
+      "path": "issues/occt-27252/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "occt-27780",
+      "path": "issues/occt-27780/1/issue.json",
+      "version": "1"
+    }
+  ],
+  "legacy_groups": [
+    {
+      "id": "occt_boolean_single_544",
+      "members": [
+        {
+          "issue_id": "occt-544",
+          "issue_version": "1"
+        }
+      ],
+      "original_path": "groups/occt_boolean_single_544/1.json",
+      "path": "groups/legacy/occt-single-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_544",
+      "members": [
+        {
+          "issue_id": "occt-544",
+          "issue_version": "1"
+        }
+      ],
+      "original_path": "groups/occt_boolean_group_visible_544/1.json",
+      "path": "groups/legacy/occt-group-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_active_visible_544",
+      "members": [
+        {
+          "issue_id": "occt-544",
+          "issue_version": "1"
+        }
+      ],
+      "original_path": "groups/occt_boolean_active_visible_544/1.json",
+      "path": "groups/legacy/occt-active-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_544_506_847",
+      "members": [
+        {
+          "issue_id": "occt-544",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-506",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-847",
+          "issue_version": "1"
+        }
+      ],
+      "original_path": "groups/occt_boolean_group_visible_544_506_847/1.json",
+      "path": "groups/legacy/occt-group-544-506-847/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_690_693_172",
+      "members": [
+        {
+          "issue_id": "occt-690",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-693",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-172",
+          "issue_version": "1"
+        }
+      ],
+      "original_path": "groups/occt_boolean_group_visible_690_693_172/1.json",
+      "path": "groups/legacy/occt-group-690-693-172/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_370_872_1452",
+      "members": [
+        {
+          "issue_id": "occt-370",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-872",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-1452",
+          "issue_version": "1"
+        }
+      ],
+      "original_path": "groups/occt_boolean_group_visible_370_872_1452/1.json",
+      "path": "groups/legacy/occt-group-370-872-1452/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_690_693_172_370_1452",
+      "members": [
+        {
+          "issue_id": "occt-690",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-693",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-172",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-370",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-1452",
+          "issue_version": "1"
+        }
+      ],
+      "original_path": "groups/occt_boolean_group_visible_690_693_172_370_1452/1.json",
+      "path": "groups/legacy/occt-group-690-693-172-370-1452/1.json",
+      "version": "1"
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "NG-04R-v2",
+      "members": [
+        {
+          "issue_id": "mantis-30082",
+          "issue_version": "2"
+        },
+        {
+          "issue_id": "mantis-30202",
+          "issue_version": "2"
+        },
+        {
+          "issue_id": "mantis-33541",
+          "issue_version": "2"
+        }
+      ],
+      "path": "groups/new/occt-30082-30202-33541/1.json",
+      "suite_id": "NG-04R-checks-v2",
+      "suite_path": "evaluation/suites/new/occt-30082-30202-33541/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-05T-v1",
+      "members": [
+        {
+          "issue_id": "mantis-30082",
+          "issue_version": "4"
+        },
+        {
+          "issue_id": "mantis-31602",
+          "issue_version": "2"
+        },
+        {
+          "issue_id": "mantis-32850",
+          "issue_version": "1"
+        }
+      ],
+      "path": "groups/new/occt-30082-31602-32850/1.json",
+      "suite_id": "NG-05T-v1-checks",
+      "suite_path": "evaluation/suites/new/occt-30082-31602-32850/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-group-d9d310-21494-29807-31835",
+      "members": [
+        {
+          "issue_id": "occt-21494",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-29807",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-31835",
+          "issue_version": "1"
+        }
+      ],
+      "path": "groups/new/occt-21494-29807-31835/1.json",
+      "suite_id": "occt-bf-suite-d9d310-21494-29807-31835",
+      "suite_path": "evaluation/suites/new/occt-21494-29807-31835/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "members": [
+        {
+          "issue_id": "occt-27310",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-27773",
+          "issue_version": "1"
+        },
+        {
+          "issue_id": "occt-27252",
+          "issue_version": "1"
+        }
+      ],
+      "path": "groups/new/occt-27310-27773-27252/1.json",
+      "suite_id": "occt-bf-suite-b55-27310-27773-27252-oracle-v2",
+      "suite_path": "evaluation/suites/new/occt-27310-27773-27252/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "members": [
+        {
+          "issue_id": "occt-21494",
+          "issue_version": "2"
+        },
+        {
+          "issue_id": "occt-27252",
+          "issue_version": "2"
+        },
+        {
+          "issue_id": "occt-27780",
+          "issue_version": "1"
+        }
+      ],
+      "path": "groups/new/occt-21494-27252-27780/1.json",
+      "suite_id": "occt-bf-suite-b2613378-27780-27252-21494-v1",
+      "suite_path": "evaluation/suites/new/occt-21494-27252-27780/1.json",
+      "version": "1"
+    }
+  ],
+  "schema_version": 1,
+  "source_bundle": "$OCCT_FIVE_GROUP_SOURCE_ROOT",
+  "source_bundle_sha256": {
+    "NG-04R-baseline-and-reference.bundle": "2ca7cd07c717f21b2293ad04e460345516a7f462bdd22b5a872728e0070494c3",
+    "NG-05T-v1-baseline-and-reference.bundle": "aae4ca88798c770ca2cc77d0f3005c7ebd0a3b6f23d3e97b67da58cfb3e8bd00"
+  },
+  "source_descriptor_original_sha256": {
+    "NG-04R-derived-source.json": "c0b0baaa1afed2e22ffefb8c93a7f97deb2647d2217c5c9372869ad5620b98bf",
+    "NG-04T-v1-derived-source.json": "638b1e72adeee244ef63345975237413a309ac98629c7f61386f66b16196470b"
+  },
+  "source_pack_root": "evaluation/provenance/source-packs/occt-five-groups"
+}

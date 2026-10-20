@@ -1,0 +1,36 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": true,
+  "test_done_marker": true,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 16,
+  "numeric_assertions": 0,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "stdout_tail": "DRAW is running in batch mode\n0030202: IntPatch_WLineTool::JoinWLines array out of bounds\nM30202_OPERATION r_0\nBENCH_ASSERT_PASS kind=expression label={r_0 BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={r_0 checkshape validity} detail=value=1\nchecknbshapes r_0 -solid 1 -shell 1 -face 10 -wire 10\nOK :  is GOOD because number of WIRE entities is equal to number of expected WIRE entities\nOK :  is GOOD because number of FACE entities is equal to number of expected FACE entities\nOK :  is GOOD because number of SHELL entities is equal to number of expected SHELL entities\nOK :  is GOOD because number of SOLID entities is equal to number of expected SOLID entities\ncheckprops r_0 -v 0.15225\nBENCH_ASSERT_PASS kind=expression label={r_0 BOP argument audit} detail=value=1\nM30202_OPERATION r_1\nBENCH_ASSERT_PASS kind=expression label={r_1 BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={r_1 checkshape validity} detail=value=1\nchecknbshapes r_1 -solid 1 -shell 1 -face 31 -wire 33\nOK :  is GOOD because number of WIRE entities is equal to number of expected WIRE entities\nOK :  is GOOD because number of FACE entities is equal to number of expected FACE entities\nOK :  is GOOD because number of SHELL entities is equal to number of expected SHELL entities\nOK :  is GOOD because number of SOLID entities is equal to number of expected SOLID entities\ncheckprops r_1 -v 46.7138\nBENCH_ASSERT_PASS kind=expression label={r_1 BOP argument audit} detail=value=1\nM30202_OPERATION r_2\nBENCH_ASSERT_PASS kind=expression label={r_2 BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={r_2 checkshape validity} detail=value=1\nchecknbshapes r_2 -solid 1 -shell 1 -face 29 -wire 31\nOK :  is GOOD because number of WIRE entities is equal to number of expected WIRE entities\nOK :  is GOOD because number of FACE entities is equal to number of expected FACE entities\nOK :  is GOOD because number of SHELL entities is equal to number of expected SHELL entities\nOK :  is GOOD because number of SOLID entities is equal to number of expected SOLID entities\ncheckprops r_2 -v 45.3505\nBENCH_ASSERT_PASS kind=expression label={r_2 BOP argument audit} detail=value=1\nM30202_OPERATION r_3\nBENCH_ASSERT_PASS kind=expression label={r_3 BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={r_3 checkshape validity} detail=value=1\nchecknbshapes r_3 -solid 1 -shell 1 -face 12 -wire 12\nOK :  is GOOD because number of WIRE entities is equal to number of expected WIRE entities\nOK :  is GOOD because number of FACE entities is equal to number of expected FACE entities\nOK :  is GOOD because number of SHELL entities is equal to number of expected SHELL entities\nOK :  is GOOD because number of SOLID entities is equal to number of expected SOLID entities\ncheckprops r_3 -v 1.2111\nBENCH_ASSERT_PASS kind=expression label={r_3 BOP argument audit} detail=value=1\nM30202_OPERATION r_4\nBENCH_ASSERT_PASS kind=expression label={r_4 BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={r_4 checkshape validity} detail=value=1\nchecknbshapes r_4 -vertex 8 -edge 8\nOK :  is GOOD because number of VERTEX entities is equal to number of expected VERTEX entities\nOK :  is GOOD because number of EDGE entities is equal to number of expected EDGE entities\nBENCH_ASSERT_PASS kind=expression label={r_4 BOP argument audit} detail=value=1\ncheckprops r_0 -s 3.07923 -v 0.15225\ncheckprops r_1 -s 128.978 -v 46.7138\ncheckprops r_2 -s 117.75 -v 45.3505\ncheckprops r_3 -s 14.3071 -v 1.2111\ncheckprops r_4 -l 8.28981\ncheckmaxtol result -min_tol 1.0e-4\nBENCH_ASSERT_PASS kind=expression label={M30202 face-pair intersection is empty} detail=value=1\nBENCH_ORACLE_OK assertions=16 numeric_assertions=0\nTEST_DONE assertions=16 numeric_assertions=0\n",
+  "stderr_tail": "",
+  "script": "/evaluation/cases/bundle/issues/mantis-30202/2/public/original.tcl",
+  "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-s60hkk9a/build/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 1.673,
+  "execution_provenance": {
+    "source_tree_sha256": "f5094f5fa60c3c16fbaeac830ac1f4d6b802431b73e6f527990ce909dfd94bdf",
+    "baseline_source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+    "reference_patch_sha256": "0a657cb55f39cf3f4e4cb381d61f97aecff850db93fd580fc619e9a5ae72e776",
+    "runner_sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+    "case_sha256": "bab1c3ab3b7962d958715d15559806e595ed2e3b761031115cec0bf0b3d7261c"
+  },
+  "evidence_attestation": {
+    "source_run_manifest": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/reference/manifest.json",
+    "source_run_manifest_sha256": "cd5424e93cd69bd26249c3e89876c7c63008abee4ae1633e4dcced0d2bb02582",
+    "build_receipt": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/reference/build_receipt.json",
+    "build_receipt_sha256": "2fa503e18d250a0c4961407ac5b5de67fcce112ac8df3ecd60a8c8155d8408da",
+    "raw_result": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/reference/results/m30202_original.json",
+    "raw_result_sha256": "f11e3d8d51fc26a34edef13347fd73ee15f601c3f3fd5a16ece781ae4e38ddb7",
+    "run_phase": "reference"
+  }
+}

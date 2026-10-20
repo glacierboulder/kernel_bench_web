@@ -1,0 +1,126 @@
+{
+  "copied_shared_file_deduplications": [],
+  "created_utc": "2026-10-20T05:55:27.494577+00:00",
+  "dispatcher_repair": {
+    "checkpoint_routes": 49,
+    "preserved_previous_adapters": "validation/five_group_merge/attempt_20261020T055113Z/dispatcher_attempt3",
+    "preserved_previous_lock": "validation/five_group_merge/attempt_20261020T055113Z/dispatch_lock_attempt3_exact_routes_count_guard_failure.json",
+    "reason": "Changed case routing to exact frozen checkpoint path whitelist with fail-closed unknown handling; corrected the G3 geometry helper lock keys to the adapter loader contract.",
+    "recorded_utc": "2026-10-20T05:59:46.317912+00:00",
+    "routing_contract": "occt-five-group-explicit-checkpoint-v2"
+  },
+  "group_to_origin": {
+    "NG-04R-v2": "part1",
+    "NG-05T-v1": "part1",
+    "occt-bf-group-b2613378-27780-27252-21494-v1": "g3",
+    "occt-bf-group-b55-27310-27773-27252-oracle-v2": "g2",
+    "occt-bf-group-d9d310-21494-29807-31835": "g1"
+  },
+  "input_bundles": {
+    "g1": {
+      "catalog_counts": {
+        "evaluation_suites": 1,
+        "groups": 1,
+        "issues": 3
+      },
+      "catalog_sha256_before": "305e2a35cb075f2fdeeff5dbbcdb6a45cf3f411a7f13764f9953db9dd7163770",
+      "root_at_merge": "$OCCT_PART2_SOURCE_ROOT/benchmark/occt-bf-part2",
+      "sources_lock_sha256_before": "7bd19a81af647e2382d68cf3e9facea4673dc888759914434f57465c1dcccd5f"
+    },
+    "g2": {
+      "catalog_counts": {
+        "evaluation_suites": 1,
+        "groups": 1,
+        "issues": 3
+      },
+      "catalog_sha256_before": "527cdde36904f14f8b7e980d721056a92510fecaa55af6cd2362de6ec42fb2a9",
+      "root_at_merge": "$OCCT_PART2_SOURCE_ROOT/benchmark/occt-bf-part2-group2",
+      "sources_lock_sha256_before": "b7a468abf17cda5d320e4f9c9d4c8e8e08c3ca8037dcfba0543494e9af714b3b"
+    },
+    "g3": {
+      "catalog_counts": {
+        "evaluation_suites": 1,
+        "groups": 1,
+        "issues": 3
+      },
+      "catalog_sha256_before": "fc92f2f2fe4638129e176a0d8956aca191db164e19ba3352dfe73600e8e8c0c6",
+      "root_at_merge": "$OCCT_PART2_SOURCE_ROOT/benchmark/occt-bf-part2-group3",
+      "sources_lock_sha256_before": "a0725d5452b38395d724441c896fc9717ff36e994dfcf6121e440335eebab16a"
+    },
+    "part1": {
+      "catalog_counts": {
+        "evaluation_suites": 2,
+        "groups": 2,
+        "issues": 6
+      },
+      "catalog_sha256_before": "9df5fa70aa5312cccb17ab36826aa07bef9a031736c0288066ef9b8aef34764d",
+      "root_at_merge": "$OCCT_PART1_SOURCE_ROOT/benchmark",
+      "sources_lock_sha256_before": "f43c25541538a1f232344ef3864aa104993e8b97f84d164fd602e29bda225fff"
+    }
+  },
+  "issue_version_routes": {
+    "mantis-30082@2": "part1",
+    "mantis-30082@4": "part1",
+    "mantis-30202@2": "part1",
+    "mantis-31602@2": "part1",
+    "mantis-32850@1": "part1",
+    "mantis-33541@2": "part1",
+    "occt-21494@1": "g1",
+    "occt-21494@2": "g3",
+    "occt-27252@1": "g2",
+    "occt-27252@2": "g3",
+    "occt-27310@1": "g2",
+    "occt-27773@1": "g2",
+    "occt-27780@1": "g3",
+    "occt-29807@1": "g1",
+    "occt-31835@1": "g1"
+  },
+  "merge_id": "occt-five-groups-20261020-v1",
+  "merged_counts": {
+    "evaluation_suites": 5,
+    "groups": 5,
+    "issues": 15,
+    "source_identities": 5
+  },
+  "routing_repair": {
+    "preserved_previous_lock": "validation/five_group_merge/attempt_20261020T055113Z/dispatch_lock_attempt1_incomplete.json",
+    "reason": "Part1 contains two groups and two independently routed suites; the first generated lock retained only its final suite.",
+    "recorded_utc": "2026-10-20T05:57:18.385915+00:00"
+  },
+  "runtime_boundary": "Part2 source trees remain an external verified source-cache prerequisite.",
+  "schema_version": 1,
+  "source_id_to_origin": {
+    "occt-2613378e60ff": "g3",
+    "occt-b55bd0235351": "g2",
+    "occt-d9d3107d8df1": "g1",
+    "occt-ng04r-derived-fe81a63b": "part1",
+    "occt-ng04t-v1-baseline-ef5af939": "part1"
+  },
+  "suite_routes": {
+    "NG-04R-checks-v2@1": {
+      "group_id": "NG-04R-v2",
+      "origin": "part1"
+    },
+    "NG-05T-v1-checks@1": {
+      "group_id": "NG-05T-v1",
+      "origin": "part1"
+    },
+    "occt-bf-suite-b2613378-27780-27252-21494-v1@1": {
+      "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "origin": "g3"
+    },
+    "occt-bf-suite-b55-27310-27773-27252-oracle-v2@1": {
+      "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "origin": "g2"
+    },
+    "occt-bf-suite-d9d310-21494-29807-31835@1": {
+      "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+      "origin": "g1"
+    }
+  },
+  "original_dispatch_lock_sha256": "e5bf2ed1c99ab67c85223444667ae0c8040c537f306353ebc579b6d77cb2897c",
+  "dispatch_lock_sha256": "a66efd374f4fb9a3fa574081403f76c2bd7606b693f2485fdde84b17f1ac9d91",
+  "portability_sanitized": true,
+  "pre_sanitization_sha256": "1d9c4178784758f831fad2fbfe3631ed13d56d4ceb7ffb23d04b0e25a27a96eb",
+  "portability_redactions_manifest": "evaluation/provenance/portability-redactions.json"
+}

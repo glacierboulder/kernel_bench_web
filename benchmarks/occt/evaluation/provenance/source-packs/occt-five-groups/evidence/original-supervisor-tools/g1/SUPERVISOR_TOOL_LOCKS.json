@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "purpose": "Pin the reviewed private B/F evidence validator and its format description shipped with this staging bundle.",
+  "files": [
+    {
+      "path": "tools/supervisor/validate_bf_evidence.py",
+      "sha256": "a08435da472d8bbe18ace05080467eaf990ef6de09c7eff08ab620c574363f27",
+      "role": "reviewed private sidecar validator"
+    },
+    {
+      "path": "tools/supervisor/FORMAT.md",
+      "sha256": "c7d25c47883887fb1c82517cb9763b87fef98b5968ac968e2264d575c050ef84",
+      "role": "private sidecar format description"
+    }
+  ]
+}

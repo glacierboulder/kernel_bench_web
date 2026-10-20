@@ -1,0 +1,11 @@
+{
+  "paths": {
+    "benchmark_root": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng05t_v1/deliverable_bundle",
+    "data_dir": "$BENCH_TMP_DIR/occt_ng05t_v1_candidate_acceptance_20261018/data",
+    "cache_dir": "$BENCH_TMP_DIR/occt_ng05t_v1_candidate_acceptance_20261018/cache",
+    "work_dir": "$BENCH_TMP_DIR/occt_ng05t_v1_candidate_acceptance_20261018/work"
+  },
+  "tools": {
+    "bubblewrap": "$BENCH_TMP_DIR/occt_ng05t_v1_candidate_acceptance_20261018/control/bwrap_without_netns.sh"
+  }
+}

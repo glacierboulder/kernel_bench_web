@@ -1,0 +1,140 @@
+{
+  "checkpoints": [
+    {
+      "case": "issues/occt-21494/2/public/harness_bug21494_2.tcl",
+      "category": "original",
+      "id": "M21494_original",
+      "issue_id": "occt-21494",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "public"
+    },
+    {
+      "case": "issues/occt-27252/2/public/harness_bug27252_1.tcl",
+      "category": "original",
+      "id": "M27252_original",
+      "issue_id": "occt-27252",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "public"
+    },
+    {
+      "case": "issues/occt-27780/1/public/harness_bug27780.tcl",
+      "category": "original",
+      "id": "M27780_original",
+      "issue_id": "occt-27780",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M21494_neighbor_sphere9p5.tcl",
+      "category": "neighborhood",
+      "id": "M21494_neighbor_sphere9p5",
+      "issue_id": "occt-21494",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27252_neighbor_translated_plane.tcl",
+      "category": "neighborhood",
+      "id": "M27252_neighbor_translated_plane",
+      "issue_id": "occt-27252",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27780_neighbor_translated_face.tcl",
+      "category": "neighborhood",
+      "id": "M27780_neighbor_translated_face",
+      "issue_id": "occt-27780",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M21494_regression_cone10_sphere9.tcl",
+      "category": "regression",
+      "id": "M21494_regression_cone10_sphere9",
+      "issue_id": "occt-21494",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27252_regression_cylinder_plane.tcl",
+      "category": "regression",
+      "id": "M27252_regression_cylinder_plane",
+      "issue_id": "occt-27252",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27780_regression_finite_plane.tcl",
+      "category": "regression",
+      "id": "M27780_regression_finite_plane",
+      "issue_id": "occt-27780",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt-bf-group-b2613378-27780-27252-21494-v1"
+  ],
+  "id": "occt-bf-suite-b2613378-27780-27252-21494-v1",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-2613378e60ff"
+  ],
+  "title": "OCCT B/F intersection group 3 · M27780/M27252/M21494",
+  "version": "1"
+}

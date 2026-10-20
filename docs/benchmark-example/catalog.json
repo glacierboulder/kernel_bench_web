@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "manual-authoring-example",
+  "title": "文件维护题库示例",
+  "issues": [
+    {"id": "manual-box-a", "version": "1", "path": "issues/manual-box-a/1/issue.json"},
+    {"id": "manual-box-b", "version": "1", "path": "issues/manual-box-b/1/issue.json"}
+  ],
+  "groups": [
+    {"id": "manual-box-a-single", "version": "1", "path": "groups/manual-box-a-single/1.json"},
+    {"id": "manual-box-pair", "version": "1", "path": "groups/manual-box-pair/1.json"}
+  ],
+  "evaluation_suites": [
+    {"id": "manual-box-a-suite", "version": "1", "path": "evaluation/suites/manual-box-a-suite/1.json"},
+    {"id": "manual-box-pair-suite", "version": "1", "path": "evaluation/suites/manual-box-pair-suite/1.json"}
+  ]
+}

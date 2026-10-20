@@ -1,0 +1,103 @@
+{
+  "all_three_checkpoints_pass": true,
+  "negative_controls": [
+    {
+      "id": "wrong_mapping_residual",
+      "reason": "M27780 neighbor: pcurve/support mapping residual exceeds 1e-5",
+      "rejected": true
+    },
+    {
+      "id": "reversed_endpoint_direction",
+      "reason": "M27780 neighbor: official endpoint direction is reversed/unknown",
+      "rejected": true
+    },
+    {
+      "id": "shortened_finite_segment",
+      "reason": "M27780 regression: finite line or pcurve mapping geometry is outside tolerance",
+      "rejected": true
+    }
+  ],
+  "neighbor": {
+    "log_sha256": "49c3c80ae0aad7f0dfa54fad8ca42d4c806722a076cb9a570f5d9d36fbbc122b",
+    "oracle": {
+      "branch_count_is_global_gate": false,
+      "branch_count_observed": 1,
+      "fixed_seed_parameters": [
+        6.240662176421555,
+        0.239999994635582,
+        0.0003444488759544846,
+        -5.001965745862519
+      ],
+      "mapping_residual_limit_model_units": 1e-05,
+      "max_residual_surface_1": 2.797826770262261e-08,
+      "max_residual_surface_2": 5.862361139387628e-08,
+      "official_endpoint_direction_dot": 135.4317956808538,
+      "sample_count": 17,
+      "status": "geometry_pass",
+      "translation_model_units": [
+        0.05,
+        0.0,
+        0.0
+      ]
+    },
+    "script_sha256": "0b43a8a9fa486257e1a1b63569b86c05329ce20331873593e1dedec665fdc6ab",
+    "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449"
+  },
+  "regression_B": {
+    "log_sha256": "f38669a50ec0b2314388e6bc3fdbb57992cdfcc4e7f5efec2275036f79532a41",
+    "oracle": {
+      "expected_open_segment_endpoints": [
+        [
+          0.0,
+          -5.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0,
+          0.0
+        ]
+      ],
+      "max_abs_x": 0.0,
+      "max_abs_z": 0.0,
+      "max_pcurve_to_surface_residual": 0.0,
+      "max_y_spacing_or_endpoint_error": 0.0,
+      "sample_count": 17,
+      "section_edge_count": 1,
+      "section_vertex_count": 2,
+      "status": "geometry_pass",
+      "tolerance_model_units": 1e-07
+    },
+    "script_sha256": "5e40dbc6198da722a84d883e376e669742d555f77c27d067033c23f326339324",
+    "source_commit": "2613378e60ff5e517b2bf73699184d0c6f636bb8"
+  },
+  "regression_F": {
+    "log_sha256": "f38669a50ec0b2314388e6bc3fdbb57992cdfcc4e7f5efec2275036f79532a41",
+    "oracle": {
+      "expected_open_segment_endpoints": [
+        [
+          0.0,
+          -5.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0,
+          0.0
+        ]
+      ],
+      "max_abs_x": 0.0,
+      "max_abs_z": 0.0,
+      "max_pcurve_to_surface_residual": 0.0,
+      "max_y_spacing_or_endpoint_error": 0.0,
+      "sample_count": 17,
+      "section_edge_count": 1,
+      "section_vertex_count": 2,
+      "status": "geometry_pass",
+      "tolerance_model_units": 1e-07
+    },
+    "script_sha256": "5e40dbc6198da722a84d883e376e669742d555f77c27d067033c23f326339324",
+    "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449"
+  },
+  "schema_version": "bf-group3-m27780-geometry-verification-v1"
+}

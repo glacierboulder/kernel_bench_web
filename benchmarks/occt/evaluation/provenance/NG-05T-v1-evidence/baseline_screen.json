@@ -1,0 +1,34 @@
+{
+  "schema_version": "occt_group_baseline_originals_v1",
+  "group_id": "NG-05T-v1",
+  "source_id": "occt-ng04t-v1-baseline-ef5af939",
+  "source_commit": "201a54e50b9f24ecd5d9c401461ad64312de9870",
+  "source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+  "originals": [
+    {
+      "issue": "M30082",
+      "version": "4",
+      "passed": false,
+      "failure_kind": "semantic_numeric_endpoint_tolerance",
+      "case_sha256": "c95ce4a22cb803f7d9e028250206149a9ec1230eb8185b7d14395b4af3dde4b4",
+      "result_path": "ng04t_v1/evidence/baseline_derived/M30082/original/runner_stdout.json"
+    },
+    {
+      "issue": "M31602",
+      "version": "2",
+      "passed": false,
+      "failure_kind": "semantic_geometry_numeric_tolerance_and_curve_lengths",
+      "case_sha256": "8d4531787a0e2de8abdccecd8916cc07a9b92f2c63de5506854951803550ebc8",
+      "result_path": "ng05t_v1/evidence/baseline/M31602/original/runner_stdout.json"
+    },
+    {
+      "issue": "M32850",
+      "version": "1",
+      "passed": false,
+      "failure_kind": "semantic_four_intersection_branches",
+      "case_sha256": "c402ec004583dce920b7ab3d257f89441759658b4465c77c5a5f5e85818e9c08",
+      "result_path": "ng04t_v1/evidence/baseline_derived/M32850/original/runner_stdout.json"
+    }
+  ],
+  "status": "all_selected_originals_fail_same_locked_tree"
+}

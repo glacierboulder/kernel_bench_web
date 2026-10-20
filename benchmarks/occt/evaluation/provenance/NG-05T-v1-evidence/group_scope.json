@@ -1,0 +1,90 @@
+{
+  "schema_version": "occt_intersection_group_scope_v1",
+  "group_id": "NG-05T-v1",
+  "candidate_status": "formally_accepted_after_final_independent_delivery_review",
+  "title": "WLine boundary point preservation across endpoint sampling, periodic seam insertion, and special-vertex registration",
+  "domain": "OCCT geometric intersection before Boolean result assembly",
+  "scope_statement": "Preserve correct boundary/intersection points and endpoint parameters in IntPatch WLine output as curved endpoints are sampled, periodic-equivalent points are handled near a full-period seam, and special vertices are registered during analytic-line conversion.",
+  "scope_classification": "proposed_B_boundary",
+  "members": [
+    {
+      "issue": "M30082",
+      "planned_version": "4",
+      "role": "Endpoint sampling: refine a curved intersection endpoint when its tangent differs from the neighboring chord direction.",
+      "origin_evidence": "Upstream fix 7eb3580b7995bbeb9ffbc501ec46c9d3a4ad611a, dated 2018-09-01; exact original/neighborhood/regression and baseline/reference evidence are already locked in NG-04T-v1. Reuse the same issue version only because the proposed source is the same locked NG-04T source."
+    },
+    {
+      "issue": "M31602",
+      "planned_version": "2",
+      "role": "Periodic seam insertion: avoid recording a boundary point as a distinct WLine point when its surface parameter is periodic-equivalent over an almost-full-period range.",
+      "origin_evidence": "Upstream fix dccf86756104f107a2302a99a5f883bff2a62d54, dated 2020-06-18; upstream lowalgos/intss/bug31602 and exact embedded BREP are available. Version 2 is required to bind this issue to the proposed NG-04T source tree; same-tree original replay is still required."
+    },
+    {
+      "issue": "M32850",
+      "planned_version": "1",
+      "role": "ALine-to-WLine conversion: register the special vertex parameter; adjacent boundary-tangency classification can also affect whether an intersection branch is retained.",
+      "origin_evidence": "Upstream fix 492b09dcaec31a4076241c578118bea129e60d25, dated 2022-10-31; the exact inverse is the NG-04T locked baseline and its self-contained four-branch oracle fails there."
+    }
+  ],
+  "relationship_decision": {
+    "type": "B_boundary",
+    "shared_contract": "correct boundary and endpoint-point data represented in WLine before downstream joining or Boolean assembly",
+    "adjacency": "Endpoint sampling and periodic seam handling determine which points enter a WLine; ALine conversion registers special-vertex parameters and neighboring boundary classification affects branch retention. These are adjacent producer-side contracts on the same intersection representation.",
+    "limits": "No common root cause, single helper, cross-issue causal chain, or unique first faulty hunk is asserted. M30082 and M31602 touch the same implementation file through distinct triggers. M32850 also changes boundary-tangency handling and its first responsible hunk remains unknown. Group distinctness comes from its member set, including M31602 in place of M30202 in NG-04T-v1."
+  },
+  "issue_unit_deduplication": "Three distinct Mantis issue units; no findings, migration tickets, or PRs are counted as extra members.",
+  "baseline_plan": {
+    "kind": "reuse_existing_locked_derived_NG-04T-v1_baseline",
+    "source_id": "occt-ng04t-v1-baseline-ef5af939",
+    "commit": "201a54e50b9f24ecd5d9c401461ad64312de9870",
+    "source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+    "derivation": "Historical derivation: exact reverse of the official M32850 fix from locked anchor d37d3beb3d8e563f66f189e1de23dd102d118c4d; the NG-04T-v1 baseline build/results were prior evidence. NG-05T-v1 current baseline evidence is recorded in source_runs/baseline/manifest.json.",
+    "known_members": {
+      "M30082": "fails its numeric endpoint-tolerance oracle on this tree",
+      "M32850": "fails its four-intersection-branch oracle on this tree"
+    },
+    "verified_gate": "PASS: all nine baseline categories are archived on the locked source tree; eight semantic geometry failures and one pass, with all three selected member originals failing and no infrastructure/runtime errors. See source_runs/baseline/manifest.json."
+  },
+  "reference_plan": {
+    "candidate_fix": "Compose only the official M30082, M31602, and M32850 source fixes on the locked baseline. Exclude the M30202 hunk from the NG-04T reference; do not infer compatibility from the complete NG-04T patch.",
+    "required_checks": "all three members original, neighborhood, and regression must pass on the combined reference tree.",
+    "static_compatibility": {
+      "evidence": "ng05t_v1/evidence/reference/static_patch_check.json",
+      "selected_fix_order": [
+        "M30082",
+        "M31602",
+        "M32850"
+      ],
+      "status": "PASS",
+      "changed_files": [
+        "src/IntPatch/IntPatch_ALineToWLine.cxx",
+        "src/IntPatch/IntPatch_ImpImpIntersection_4.gxx",
+        "src/IntStart/IntStart_SearchOnBoundaries.gxx"
+      ],
+      "unselected_M30202_source_change": "excluded; src/IntPatch/IntPatch_WLineTool.cxx unchanged",
+      "combined_patch_sha256": "e969460acfdd3e2fd9eba551bf6e4410e3b72615b60f2ad30956c348dce6423d"
+    },
+    "verified_gate": "PASS: selected reference patch built from locked baseline artifacts and all nine original/neighborhood/regression checks passed. This is an incremental target rebuild, not a clean from-source build. See source_runs/reference/manifest.json and reference_build_receipt.json."
+  },
+  "cross_group_relationship": {
+    "NG-04T-v1": "shares M30082 and M32850 but replaces M30202 with M31602; distinct issue set and new suite/group are required.",
+    "NG-04R-v4": "shares M30082 and M31602 but replaces M30202 with M32850; same B-boundary neighborhood, separately evaluated on this source."
+  },
+  "decision": "Independent scope review, same-tree baseline, nine-case reference differential, isolated framework replay, negative controls, formal integration, post-integration snapshot audit, and final independent delivery review all passed. NG-05T-v1 is formally accepted.",
+  "pre_review": {
+    "verdict": "PASS_SCOPE_ONLY",
+    "reviewer": "reused independent read-only delivery reviewer",
+    "result": "The B-boundary scope has concrete adjacency across WLine endpoint sampling, periodic seam-equivalent point insertion, and special-vertex parameter registration; member substitution makes a distinct three-issue group rather than an alias.",
+    "limits": "At the pre-execution scope-review stage this reviewer had not established M31602 same-tree failure or combined-reference compatibility. Those gates were subsequently verified in the current NG-05T-v1 evidence; this scope-only review is not the final delivery review.",
+    "review_stage": "historical_pre_execution_scope_only_review"
+  },
+  "authoritative_current_evidence": {
+    "evidence_index": "evaluation/provenance/NG-05T-v1-evidence/index.json",
+    "baseline_manifest": "evaluation/provenance/NG-05T-v1-evidence/source_runs/baseline/manifest.json",
+    "reference_manifest": "evaluation/provenance/NG-05T-v1-evidence/source_runs/reference/manifest.json",
+    "formal_candidate_replay": "evaluation/provenance/NG-05T-v1-evidence/formal_candidate_replay/",
+    "post_integration_freeze_audit": "evaluation/provenance/NG-05T-v1-evidence/post_integration_freeze_audit.json",
+    "status": "formally_accepted_after_final_independent_review",
+    "final_delivery_review": "evaluation/provenance/NG-05T-v1-final-delivery-review.json"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": false,
+  "test_done_marker": false,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 6,
+  "numeric_assertions": 5,
+  "failed_assertions": 1,
+  "tcl_error_detected": true,
+  "expected_oracle_error": true,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": false,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=numeric label={reversed tolerance remains bounded} detail={actual=1.1368683772161603e-13 lower=0 upper=1.0e-12}\nBENCH_ASSERT_PASS kind=numeric label={c_1 positive finite length} detail={actual=0.0010008938273849189 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_2 positive finite length} detail={actual=13.012833486790504 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_3 positive finite length} detail={actual=0.0010007069169515079 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={aggregate branch length remains finite} detail={actual=13.01483508753484 lower=1.0 upper=4000}\n",
+  "stderr_tail": "BENCH_ASSERT_FAIL kind=expression label={reversed operand order retains four branches} detail=value=0\nBENCH_ORACLE_FAILED assertions=6 failures=1\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/cases/M32850/regression.tcl\" line 137)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+  "full_log_failure_detected": true,
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/cases/M32850/regression.tcl",
+  "draw_executable": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/build_baseline/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.032,
+  "execution_provenance": {
+    "source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+    "baseline_source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+    "reference_patch_sha256": null,
+    "runner_sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+    "case_sha256": "afa33395aa692d7b1cac5c1014d8692095b0821a777f07a21684da092b4ccc6d"
+  },
+  "evidence_attestation": {
+    "source_run_manifest": "evaluation/provenance/NG-05T-v1-evidence/source_runs/baseline/manifest.json",
+    "source_run_manifest_sha256": "35b1392ced196f5f036199cd02a75cb1aac7839224b5fd84baf0ea3e40899720",
+    "build_receipt": "evaluation/provenance/NG-05T-v1-evidence/source_runs/baseline/build_receipt.json",
+    "build_receipt_sha256": "243cfa5245ba2afa03de5bfadb6c9d77a19be763ee5bc32f5b369f769377793d",
+    "raw_result": "evaluation/provenance/NG-05T-v1-evidence/source_runs/baseline/results/m32850_regression.json",
+    "raw_result_sha256": "0aa810cb116deead3bf4598bddb195b7d8e1256ec0e72c8ff35aedbebb95ec93",
+    "run_phase": "baseline"
+  }
+}

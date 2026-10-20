@@ -1,0 +1,36 @@
+{
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "evaluation_suite": {
+    "id": "occt-bf-suite-b55-27310-27773-27252-oracle-v2",
+    "version": "1"
+  },
+  "execution_mode": "joint",
+  "has_hidden_checks": true,
+  "id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+  "kind": "group",
+  "members": [
+    {
+      "issue_id": "occt-27310",
+      "issue_version": "1"
+    },
+    {
+      "issue_id": "occt-27773",
+      "issue_version": "1"
+    },
+    {
+      "issue_id": "occt-27252",
+      "issue_version": "1"
+    }
+  ],
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "schema_version": 1,
+  "source_id": "occt-b55bd0235351",
+  "title": "新题 · OCCT 27310 / 27773 / 27252",
+  "version": "1"
+}

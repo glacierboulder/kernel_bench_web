@@ -1,0 +1,137 @@
+{
+  "id": "647b1e699857ad1d",
+  "created_at": "2026-10-18T15:56:58.965648+00:00",
+  "run_id": null,
+  "experiment_id": null,
+  "kind": "reevaluation",
+  "result": {
+    "protocol": "manifest-suite-v1",
+    "suite": {
+      "id": "NG-05T-v1-checks",
+      "version": "1"
+    },
+    "tests": [],
+    "checkpoints": [
+      {
+        "id": "mantis-30082-original",
+        "issue_id": "mantis-30082",
+        "category": "original",
+        "status": "not_run",
+        "required": true
+      },
+      {
+        "id": "mantis-31602-original",
+        "issue_id": "mantis-31602",
+        "category": "original",
+        "status": "not_run",
+        "required": true
+      },
+      {
+        "id": "mantis-32850-original",
+        "issue_id": "mantis-32850",
+        "category": "original",
+        "status": "not_run",
+        "required": true
+      },
+      {
+        "id": "hidden-summary",
+        "issue_id": null,
+        "name": "隐藏检查（详情不公开）",
+        "visibility": "hidden",
+        "category_summary": {
+          "declared": 6,
+          "passed": 0,
+          "failed": 0,
+          "timeout": 0,
+          "error": 0,
+          "not_run": 6,
+          "skipped": 0
+        }
+      }
+    ],
+    "limitations": [
+      "Checks are only those declared in this frozen suite; this is not the full upstream test suite."
+    ],
+    "report": {
+      "provided": false
+    },
+    "failure_stage": "submission",
+    "elapsed_seconds": 0.982,
+    "passed": false,
+    "evaluation_suites": [
+      {
+        "id": "NG-05T-v1-checks",
+        "version": "1"
+      }
+    ],
+    "category_summary": {
+      "original": {
+        "declared": 3,
+        "executed": 0,
+        "passed": 0,
+        "failed": 0,
+        "timeout": 0,
+        "error": 0,
+        "not_run": 3,
+        "skipped": 0,
+        "state": "configured"
+      },
+      "neighborhood": {
+        "declared": 3,
+        "executed": 0,
+        "passed": 0,
+        "failed": 0,
+        "timeout": 0,
+        "error": 0,
+        "not_run": 3,
+        "skipped": 0,
+        "state": "configured"
+      },
+      "regression": {
+        "declared": 3,
+        "executed": 0,
+        "passed": 0,
+        "failed": 0,
+        "timeout": 0,
+        "error": 0,
+        "not_run": 3,
+        "skipped": 0,
+        "state": "configured"
+      }
+    },
+    "technical_passed": false
+  },
+  "returncode": 1,
+  "stages": [
+    {
+      "name": "submission",
+      "status": "failed"
+    },
+    {
+      "name": "patch_application",
+      "status": "failed"
+    },
+    {
+      "name": "configure",
+      "status": "not_run"
+    },
+    {
+      "name": "build",
+      "status": "not_run"
+    }
+  ],
+  "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evaluator_sha256": "544188404e178f2ebd4e396c217161a05feb46cac0297069048ec5fcad9f58f3",
+  "reevaluation": {
+    "source_id": "occt-ng04t-v1-baseline-ef5af939",
+    "source_commit": "201a54e50b9f24ecd5d9c401461ad64312de9870",
+    "source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+    "suite_id": "NG-05T-v1-checks",
+    "suite_version": "1",
+    "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "report_provided": false,
+    "snapshot_sha256": "a8b00eaa231dd83f606d79b613586da10c6b8ecbbcc65dc85bf6e54f79983ad9",
+    "model_called": false,
+    "baseline_verification": "explicit_source_id_for_patch"
+  }
+}

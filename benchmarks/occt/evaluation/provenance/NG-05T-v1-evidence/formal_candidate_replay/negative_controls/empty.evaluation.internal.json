@@ -1,0 +1,152 @@
+{
+  "protocol": "manifest-suite-v1",
+  "suite": {
+    "id": "NG-05T-v1-checks",
+    "version": "1"
+  },
+  "tests": [],
+  "checkpoints": [
+    {
+      "id": "mantis-30082-original",
+      "issue_id": "mantis-30082",
+      "case": "issues/mantis-30082/4/public/original.tcl",
+      "category": "original",
+      "visibility": "public",
+      "required": true,
+      "status": "not_run",
+      "reason": "evaluation stopped before this checkpoint"
+    },
+    {
+      "id": "mantis-30082-neighborhood",
+      "issue_id": "mantis-30082",
+      "case": "evaluation/cases/mantis-30082/4/neighborhood.tcl",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "required": true,
+      "status": "not_run",
+      "reason": "evaluation stopped before this checkpoint"
+    },
+    {
+      "id": "mantis-30082-regression",
+      "issue_id": "mantis-30082",
+      "case": "evaluation/cases/mantis-30082/4/regression.tcl",
+      "category": "regression",
+      "visibility": "hidden",
+      "required": true,
+      "status": "not_run",
+      "reason": "evaluation stopped before this checkpoint"
+    },
+    {
+      "id": "mantis-31602-original",
+      "issue_id": "mantis-31602",
+      "case": "issues/mantis-31602/2/public/original.tcl",
+      "category": "original",
+      "visibility": "public",
+      "required": true,
+      "status": "not_run",
+      "reason": "evaluation stopped before this checkpoint"
+    },
+    {
+      "id": "mantis-31602-neighborhood",
+      "issue_id": "mantis-31602",
+      "case": "evaluation/cases/mantis-31602/2/neighborhood.tcl",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "required": true,
+      "status": "not_run",
+      "reason": "evaluation stopped before this checkpoint"
+    },
+    {
+      "id": "mantis-31602-regression",
+      "issue_id": "mantis-31602",
+      "case": "evaluation/cases/mantis-31602/2/regression.tcl",
+      "category": "regression",
+      "visibility": "hidden",
+      "required": true,
+      "status": "not_run",
+      "reason": "evaluation stopped before this checkpoint"
+    },
+    {
+      "id": "mantis-32850-original",
+      "issue_id": "mantis-32850",
+      "case": "issues/mantis-32850/1/public/original.tcl",
+      "category": "original",
+      "visibility": "public",
+      "required": true,
+      "status": "not_run",
+      "reason": "evaluation stopped before this checkpoint"
+    },
+    {
+      "id": "mantis-32850-neighborhood",
+      "issue_id": "mantis-32850",
+      "case": "evaluation/cases/mantis-32850/1/neighborhood.tcl",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "required": true,
+      "status": "not_run",
+      "reason": "evaluation stopped before this checkpoint"
+    },
+    {
+      "id": "mantis-32850-regression",
+      "issue_id": "mantis-32850",
+      "case": "evaluation/cases/mantis-32850/1/regression.tcl",
+      "category": "regression",
+      "visibility": "hidden",
+      "required": true,
+      "status": "not_run",
+      "reason": "evaluation stopped before this checkpoint"
+    }
+  ],
+  "limitations": [
+    "Checks are only those declared in this frozen suite; this is not the full upstream test suite."
+  ],
+  "report": {
+    "provided": false
+  },
+  "failure_stage": "submission",
+  "error": "empty patch",
+  "elapsed_seconds": 0.982,
+  "passed": false,
+  "evaluation_suites": [
+    {
+      "id": "NG-05T-v1-checks",
+      "version": "1"
+    }
+  ],
+  "category_summary": {
+    "original": {
+      "declared": 3,
+      "executed": 0,
+      "passed": 0,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 3,
+      "skipped": 0,
+      "state": "configured"
+    },
+    "neighborhood": {
+      "declared": 3,
+      "executed": 0,
+      "passed": 0,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 3,
+      "skipped": 0,
+      "state": "configured"
+    },
+    "regression": {
+      "declared": 3,
+      "executed": 0,
+      "passed": 0,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 3,
+      "skipped": 0,
+      "state": "configured"
+    }
+  },
+  "technical_passed": false
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "id", "title", "issues", "groups", "evaluation_suites"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "issues": {"type": "array", "items": {"$ref": "#/$defs/reference"}},
+    "groups": {"type": "array", "items": {"$ref": "#/$defs/reference"}},
+    "evaluation_suites": {"type": "array", "items": {"$ref": "#/$defs/reference"}}
+  },
+  "$defs": {
+    "reference": {"type": "object", "required": ["id", "version", "path"], "properties": {"id": {"type": "string"}, "version": {"type": "string"}, "path": {"type": "string"}}, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

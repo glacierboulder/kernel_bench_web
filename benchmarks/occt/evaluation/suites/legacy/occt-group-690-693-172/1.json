@@ -1,0 +1,57 @@
+{
+  "checkpoints": [
+    {
+      "case": "issues/occt-690/1/public/reproduce.tcl",
+      "category": "original",
+      "id": "visible_issue_690",
+      "issue_id": "occt-690",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    },
+    {
+      "case": "issues/occt-693/1/public/reproduce.tcl",
+      "category": "original",
+      "id": "visible_issue_693",
+      "issue_id": "occt-693",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    },
+    {
+      "case": "issues/occt-172/1/public/reproduce.tcl",
+      "category": "original",
+      "id": "visible_issue_172",
+      "issue_id": "occt-172",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    }
+  ],
+  "group_ids": [
+    "occt_boolean_group_visible_690_693_172"
+  ],
+  "id": "occt-visible4",
+  "legacy_task_kind": "visible4",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-3e80fad1779e"
+  ],
+  "title": "OCCT visible4 legacy checks",
+  "version": "1"
+}

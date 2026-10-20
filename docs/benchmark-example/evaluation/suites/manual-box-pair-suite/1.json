@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "manual-box-pair-suite",
+  "version": "1",
+  "title": "Manual example · Box A and Box B checks",
+  "source_ids": ["occt-3e80fad1779e"],
+  "group_ids": ["manual-box-pair"],
+  "checkpoints": [
+    {
+      "id": "manual_box_a_reproducer",
+      "issue_id": "manual-box-a",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "case": "issues/manual-box-a/1/public/reproduce.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 30,
+      "required": true,
+      "runner_options": {"case_timeout_seconds": 20}
+    },
+    {
+      "id": "manual_box_b_reproducer",
+      "issue_id": "manual-box-b",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "case": "issues/manual-box-b/1/public/reproduce.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 30,
+      "required": true,
+      "runner_options": {"case_timeout_seconds": 20}
+    }
+  ]
+}

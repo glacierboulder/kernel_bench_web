@@ -1,0 +1,21 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": false,
+  "test_done_marker": false,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 5,
+  "numeric_assertions": 4,
+  "failed_assertions": 2,
+  "tcl_error_detected": true,
+  "expected_oracle_error": true,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": false,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={reversed pair retains one branch} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={first reversed pcurve has finite length} detail={actual=926.14996318963165 lower=100 upper=1500}\nBENCH_ASSERT_PASS kind=numeric label={second reversed pcurve has finite length} detail={actual=422.9554329505869 lower=100 upper=1500}\n",
+  "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={reversed pair tolerance bound} detail={actual=400.30075250765805 lower=0 upper=2.5e-6}\nBENCH_ASSERT_FAIL kind=numeric label={reversed 3D length invariant} detail={actual=1368.9823242007431 expected=1340.6982492258749 tolerance=0.02 absolute_error=28.28407497486819}\nBENCH_ORACLE_FAILED assertions=5 failures=2\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/deliverable_bundle/evaluation/cases/mantis-31602/1/regression.tcl\" line 129)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+  "full_log_failure_detected": true,
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/deliverable_bundle/evaluation/cases/mantis-31602/1/regression.tcl",
+  "draw_executable": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/build_baseline/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.064
+}

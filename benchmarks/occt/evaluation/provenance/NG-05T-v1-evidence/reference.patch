@@ -1,0 +1,247 @@
+diff --git a/src/IntPatch/IntPatch_ALineToWLine.cxx b/src/IntPatch/IntPatch_ALineToWLine.cxx
+index e5d4a48b46..80dea14330 100644
+--- a/src/IntPatch/IntPatch_ALineToWLine.cxx
++++ b/src/IntPatch/IntPatch_ALineToWLine.cxx
+@@ -734,7 +734,8 @@ void IntPatch_ALineToWLine::MakeWLine(const Handle(IntPatch_ALine)& theALine,
+       }
+ 
+       IntPatch_Point aVtx = theALine->Vertex(aVertexNumber);
+-      const Standard_Real aNewVertexParam = aLinOn2S->NbPoints() + 1;
++      Standard_Real aNewVertexParam = aLinOn2S->NbPoints() + 1;
++      Standard_Integer aNbPointsPrev = aLinOn2S->NbPoints();
+ 
+       //ATTENTION!!!
+       // IsPoleOrSeam inserts new point in aLinOn2S if aVtx respects
+@@ -768,6 +769,7 @@ void IntPatch_ALineToWLine::MakeWLine(const Handle(IntPatch_ALine)& theALine,
+ 
+       aPrePointExist = IsPoleOrSeam(myS1, myS2, aPrefIso, aLinOn2S, aVtx,
+                                 anArrPeriods, aTol, aSingularSurfaceID);
++
+       if (aPrePointExist == IntPatch_SPntPole ||
+           aPrePointExist == IntPatch_SPntPoleSeamU)
+       {
+@@ -781,6 +783,11 @@ void IntPatch_ALineToWLine::MakeWLine(const Handle(IntPatch_ALine)& theALine,
+       const Standard_Real aCurVertParam = aVtx.ParameterOnLine();
+       if(aPrePointExist != IntPatch_SPntNone)
+       {
++        if (aNbPointsPrev == aLinOn2S->NbPoints())
++        {
++          //Vertex coinsides any point of line and was not added into line
++          aNewVertexParam = aNbPointsPrev;
++        }
+         aPrevParam = aParameter = aCurVertParam;
+       }
+       else
+diff --git a/src/IntPatch/IntPatch_ImpImpIntersection_4.gxx b/src/IntPatch/IntPatch_ImpImpIntersection_4.gxx
+index b2b84e8552..33454d9bec 100644
+--- a/src/IntPatch/IntPatch_ImpImpIntersection_4.gxx
++++ b/src/IntPatch/IntPatch_ImpImpIntersection_4.gxx
+@@ -1871,7 +1871,7 @@ static Standard_Boolean AddPointIntoWL( const IntSurf_Quadric& theQuad1,
+     return Standard_False;
+ 
+   if ((theLine->NbPoints() > 0) &&
+-      ((theUlSurf1 - theUfSurf1) >= thePeriodOfSurf1) &&      
++      ((theUlSurf1 - theUfSurf1) >= (thePeriodOfSurf1 - theTol2D)) &&      
+       (((aU1par + thePeriodOfSurf1 - theUlSurf1) <= theTol2D) ||
+        ((aU1par - thePeriodOfSurf1 - theUfSurf1) >= theTol2D)))
+   {
+@@ -3451,6 +3451,90 @@ static IntPatch_ImpImpIntersection::IntStatus
+             if (aPf.IsSame(aPl, Precision::Confusion()))
+               isGood = Standard_False;
+           }
++          else if (aWLine[i]->NbPnts() > 2)
++          {
++            // Sometimes points of the WLine are distributed
++            // linearly and uniformly. However, such position
++            // of the points does not always describe the real intersection
++            // curve. I.e. real tangents at the ends of the intersection
++            // curve can significantly deviate from this "line" direction.
++            // Here we are processing this case by inserting additional points
++            // to the beginning/end of the WLine to make it more precise.
++            // See description to the issue #30082.
++
++            const Standard_Real aSqTol3D = aTol3D*aTol3D;
++            for (Standard_Integer j = 0; j < 2; j++)
++            {
++              // If j == 0 ==> add point at begin of WLine.
++              // If j == 1 ==> add point at end of WLine.
++
++              for (;;)
++              {
++                if (aWLine[i]->NbPnts() >= aNbMaxPoints)
++                {
++                  break;
++                }
++
++                // Take 1st and 2nd point to compute the "line" direction.
++                // For our convenience, we make 2nd point be the ends of the WLine
++                // because it will be used for computation of the normals 
++                // to the surfaces.
++                const Standard_Integer anIdx1 = j ? aWLine[i]->NbPnts() - 1 : 2;
++                const Standard_Integer anIdx2 = j ? aWLine[i]->NbPnts() : 1;
++
++                const gp_Pnt &aP1 = aWLine[i]->Point(anIdx1).Value();
++                const gp_Pnt &aP2 = aWLine[i]->Point(anIdx2).Value();
++
++                const gp_Vec aDir(aP1, aP2);
++
++                if (aDir.SquareMagnitude() < aSqTol3D)
++                {
++                  break;
++                }
++
++                // Compute tangent in first/last point of the WLine.
++                // We do not take into account the flag "isReversed"
++                // because strict direction of the tangent is not
++                // important here (we are interested in the tangent
++                // line itself and nothing to fear if its direction
++                // is reversed).
++                const gp_Vec aN1 = aQuad1.Normale(aP2);
++                const gp_Vec aN2 = aQuad2.Normale(aP2);
++                const gp_Vec aTg(aN1.Crossed(aN2));
++
++                if (aTg.SquareMagnitude() < Precision::SquareConfusion())
++                {
++                  // Tangent zone
++                  break;
++                }
++
++                // Check of the bending
++                Standard_Real anAngle = aDir.Angle(aTg);
++
++                if (anAngle > M_PI_2)
++                  anAngle -= M_PI;
++
++                if (Abs(anAngle) > 0.25) // ~ 14deg.
++                {
++                  const Standard_Integer aNbPntsPrev = aWLine[i]->NbPnts();
++                  SeekAdditionalPoints(aQuad1, aQuad2, aWLine[i]->Curve(),
++                                       anEquationCoeffs, i, 3, anIdx1, anIdx2,
++                                       aTol2D, aPeriod, isReversed);
++
++                  if (aWLine[i]->NbPnts() == aNbPntsPrev)
++                  {
++                    // No points have been added. ==> Exit from a loop.
++                    break;
++                  }
++                }
++                else
++                {
++                  // Good result has been achieved. ==> Exit from a loop.
++                  break;
++                }
++              } // for (;;)
++            }
++          }
+ 
+           if (isGood)
+           {
+@@ -3458,8 +3542,8 @@ static IntPatch_ImpImpIntersection::IntStatus
+             isAddedIntoWL[i] = Standard_True;
+             SeekAdditionalPoints(aQuad1, aQuad2, aWLine[i]->Curve(),
+                                  anEquationCoeffs, i, aNbPoints, 1,
+-              aWLine[i]->NbPnts(), aTol2D, aPeriod,
+-              isReversed);
++                                 aWLine[i]->NbPnts(), aTol2D, aPeriod,
++                                 isReversed);
+ 
+             aWLine[i]->ComputeVertexParameters(aTol3D);
+             theSlin.Append(aWLine[i]);
+diff --git a/src/IntStart/IntStart_SearchOnBoundaries.gxx b/src/IntStart/IntStart_SearchOnBoundaries.gxx
+index 8c013fbce1..59bac00346 100644
+--- a/src/IntStart/IntStart_SearchOnBoundaries.gxx
++++ b/src/IntStart/IntStart_SearchOnBoundaries.gxx
+@@ -354,6 +354,7 @@ void BoundedArc (const TheArc& A,
+   {
+     const IntSurf_Quadric& aQuadric = Func.Quadric();
+     GeomAbs_SurfaceType TypeQuad = aQuadric.TypeQuadric();
++    GeomAbs_CurveType TypeConS = GeomAbs_OtherCurve;
+     
+     IntCurveSurface_HInter IntCS;
+     Standard_Boolean IsIntCSdone = Standard_False;
+@@ -387,7 +388,7 @@ void BoundedArc (const TheArc& A,
+       //Exact solution
+       Handle(Adaptor3d_Surface) aSurf = Func.Surface();
+       Adaptor3d_CurveOnSurface ConS(A, aSurf);
+-      GeomAbs_CurveType TypeConS = ConS.GetType();
++      TypeConS = ConS.GetType();
+ #ifdef OCCT_DEBUG
+       Handle(Geom_Curve) CurveConS;
+       switch(TypeConS)
+@@ -608,13 +609,27 @@ void BoundedArc (const TheArc& A,
+           para = aSI(i).Value();
+ 
+           Standard_Real param=(para+parap1)*0.5;
+-          Standard_Real ym;
+-          if(Func.Value(param,ym)) {
+-            if(Abs(ym)<maxdist) { 
++          Standard_Real yf = 0.0;
++          Standard_Real ym = 0.0;
++          Standard_Real yl = 0.0;
++          if(Func.Value(param,ym) && Abs(ym) < maxdist) {
++            Standard_Real sm = Sign(1., ym);
++            Standard_Boolean aTang = Func.Value(para,yf) && Func.Value(parap1,yl);
++            if (aTang) {
++              //Line can be tangent surface if all distances less then maxdist
++              aTang = aTang && Abs(yf) < maxdist && Abs(yl) < maxdist;
++            }
++            if (aTang && IsIntCSdone && TypeConS == GeomAbs_Line) {
++              //Interval is got by exact intersection
++              //Line can be tangent if all points are on the same side of surface
++              //it means that signs of all distances are the same
++              Standard_Real sf = Sign(1., yf), sl = Sign(1., yl);
++              aTang = aTang && (sm == sf) && (sm == sl);
++            }
++            if(aTang) { 
+               //  Modified by skv - Tue Aug 31 12:13:51 2004 OCC569 Begin
+               // Consider this interval as tangent one. Treat it to find
+               // parameter with the lowest function value.
+-
+               // Compute the number of nodes.
+               Standard_Real    aTol = TolBoundary*1000.0;
+               if(aTol > 0.001)
+@@ -627,6 +642,7 @@ void BoundedArc (const TheArc& A,
+               Standard_Integer aNbNodes = RealToInt(Ceiling((parap1 - para)/aTol));
+ 
+               Standard_Real    aVal     = RealLast();
++              Standard_Real aValMax = 0.;
+               //Standard_Integer aNbNodes = 23;
+               Standard_Real    aDelta   = (parap1 - para)/(aNbNodes + 1.);
+               Standard_Integer ii;
+@@ -637,17 +653,29 @@ void BoundedArc (const TheArc& A,
+                 aCurPar = (ii < aNbNodes + 1) ? para + ii*aDelta : parap1;
+ 
+                 if (Func.Value(aCurPar, aCurVal)) {
+-                  //if (aCurVal < aVal) {
+-                  if (Abs(aCurVal) < aVal) {
+-                    //aVal  = aCurVal;
+-                    aVal  = Abs(aCurVal);
++                  Standard_Real anAbsVal = Abs(aCurVal);
++                  if (anAbsVal < aVal) {
++                    aVal  = anAbsVal;
+                     param = aCurPar;
+                   }
++                  if (anAbsVal > aValMax)
++                  {
++                    aValMax = anAbsVal;
++                  }
+                 }
+               }
+-              //  Modified by skv - Tue Aug 31 12:13:51 2004 OCC569 End
+-              aSI(i).ChangeValue() = Pdeb - 1;
+-              aSI(i + 1).ChangeValue() = param;
++              // At last, interval got by exact intersection can be considered as tangent if
++              // minimal distance is inside interval and
++              // minimal and maximal values are almost the same
++              if (IsIntCSdone && aNbNodes > 1) {
++                aTang = Abs(param - para) > EpsX && Abs(parap1 - param) > EpsX &&
++                  0.01*aValMax <= aVal;
++              }
++              if (aTang)
++              {
++                aSI(i).ChangeValue() = Pdeb - 1;
++                aSI(i + 1).ChangeValue() = param;
++              }
+             }
+           }
+         }

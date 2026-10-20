@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "paths": {
+    "benchmark_root": "benchmarks/occt",
+    "data_dir": null,
+    "cache_dir": null,
+    "work_dir": null
+  },
+  "tools": {
+    "python": null,
+    "python_prefix": null,
+    "conda": null,
+    "conda_env": null,
+    "git": "git",
+    "node": "node",
+    "cmake": "cmake",
+    "c_compiler": "clang-10",
+    "cxx_compiler": "clang++-10",
+    "tcl_dir": null,
+    "tcl_include_dir": null,
+    "tcl_library": null,
+    "tcl_library_dir": null,
+    "extra_library_path": null,
+    "bubblewrap": "bwrap",
+    "codex_cli": null,
+    "codex_version": null
+  },
+  "runtime": {
+    "host": "127.0.0.1",
+    "port": 8765,
+    "gateway_host": "127.0.0.1",
+    "gateway_port": 18991
+  },
+  "dsh_live_enabled": false,
+  "sandbox": {
+    "compiler_jobs": 2
+  },
+  "proxies": {
+    "http": "environment",
+    "https": "environment"
+  },
+  "codex": {
+    "model": null,
+    "codex_live_enabled": false,
+    "codex_isolation_verified": false,
+    "max_output_tokens": 4096
+  },
+  "agents": {
+    "dsh_version": "0.2.0-rc.2",
+    "codex_disabled_reason": "Enable only after fake CLI, bubblewrap and credential-proxy isolation checks pass."
+  }
+}

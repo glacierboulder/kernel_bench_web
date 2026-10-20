@@ -1,0 +1,20 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": true,
+  "test_done_marker": true,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 10,
+  "numeric_assertions": 4,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={half-scale cut BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={half-scale cut checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={half-scale overlap BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={half-scale overlap checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={half-scale cut volume} detail={actual=0.351576 expected=0.351575 tolerance=3.0e-5 absolute_error=9.999999999732445e-7}\nBENCH_ASSERT_PASS kind=numeric label={half-scale Common volume} detail={actual=0.0411234 expected=0.0411235 tolerance=3.0e-6 absolute_error=1.0000000000287557e-7}\nBENCH_ASSERT_PASS kind=numeric label={half-scale cylinder volume} detail={actual=0.392699 expected=0.392699 tolerance=1.0e-6 absolute_error=0.0}\nBENCH_ASSERT_PASS kind=expression label={translated cut BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={translated cut checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={translated cut volume} detail={actual=2.8126 expected=2.8126 tolerance=2.0e-4 absolute_error=0.0}\nBENCH_ORACLE_OK assertions=10 numeric_assertions=4\nTEST_DONE assertions=10 numeric_assertions=4\n",
+  "stderr_tail": "",
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/cases_v2/mantis_33541/neighborhood.tcl",
+  "draw_executable": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04_derived/build_derived_baseline/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.115
+}

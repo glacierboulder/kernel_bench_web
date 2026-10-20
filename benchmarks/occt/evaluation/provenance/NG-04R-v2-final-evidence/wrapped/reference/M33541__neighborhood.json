@@ -1,0 +1,36 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": true,
+  "test_done_marker": true,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 10,
+  "numeric_assertions": 4,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={half-scale cut BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={half-scale cut checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={half-scale overlap BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={half-scale overlap checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={half-scale cut volume} detail={actual=0.351576 expected=0.351575 tolerance=3.0e-5 absolute_error=9.999999999732445e-7}\nBENCH_ASSERT_PASS kind=numeric label={half-scale Common volume} detail={actual=0.0411234 expected=0.0411235 tolerance=3.0e-6 absolute_error=1.0000000000287557e-7}\nBENCH_ASSERT_PASS kind=numeric label={half-scale cylinder volume} detail={actual=0.392699 expected=0.392699 tolerance=1.0e-6 absolute_error=0.0}\nBENCH_ASSERT_PASS kind=expression label={translated cut BOP validity} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={translated cut checkshape validity} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={translated cut volume} detail={actual=2.8126 expected=2.8126 tolerance=2.0e-4 absolute_error=0.0}\nBENCH_ORACLE_OK assertions=10 numeric_assertions=4\nTEST_DONE assertions=10 numeric_assertions=4\n",
+  "stderr_tail": "",
+  "script": "/evaluation/cases/bundle/evaluation/cases/mantis-33541/2/neighborhood.tcl",
+  "draw_executable": "/workspace$BENCH_TMP_DIR/manifest-suite-s60hkk9a/build/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.115,
+  "execution_provenance": {
+    "source_tree_sha256": "f5094f5fa60c3c16fbaeac830ac1f4d6b802431b73e6f527990ce909dfd94bdf",
+    "baseline_source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+    "reference_patch_sha256": "0a657cb55f39cf3f4e4cb381d61f97aecff850db93fd580fc619e9a5ae72e776",
+    "runner_sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+    "case_sha256": "c73267e409637ac865d633d38b470de9bd6b1e5c6b1bb971e5bd13af333764a6"
+  },
+  "evidence_attestation": {
+    "source_run_manifest": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/reference/manifest.json",
+    "source_run_manifest_sha256": "cd5424e93cd69bd26249c3e89876c7c63008abee4ae1633e4dcced0d2bb02582",
+    "build_receipt": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/reference/build_receipt.json",
+    "build_receipt_sha256": "2fa503e18d250a0c4961407ac5b5de67fcce112ac8df3ecd60a8c8155d8408da",
+    "raw_result": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/reference/results/m33541_neighborhood.json",
+    "raw_result_sha256": "f86f2a06fba4f47f5f2a97786e7f964dbe318b9c42aa500a59bea4f682459ed3",
+    "run_phase": "reference"
+  }
+}

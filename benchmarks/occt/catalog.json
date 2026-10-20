@@ -1,0 +1,251 @@
+{
+  "evaluation_suites": [
+    {
+      "id": "occt-single-544",
+      "path": "evaluation/suites/legacy/occt-single-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-group-544",
+      "path": "evaluation/suites/legacy/occt-group-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-active-544",
+      "path": "evaluation/suites/legacy/occt-active-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-visible3",
+      "path": "evaluation/suites/legacy/occt-group-544-506-847/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-visible4",
+      "path": "evaluation/suites/legacy/occt-group-690-693-172/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-visible5",
+      "path": "evaluation/suites/legacy/occt-group-370-872-1452/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-visible5all",
+      "path": "evaluation/suites/legacy/occt-group-690-693-172-370-1452/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-04R-checks-v2",
+      "path": "evaluation/suites/new/occt-30082-30202-33541/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-05T-v1-checks",
+      "path": "evaluation/suites/new/occt-30082-31602-32850/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-suite-d9d310-21494-29807-31835",
+      "path": "evaluation/suites/new/occt-21494-29807-31835/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-suite-b55-27310-27773-27252-oracle-v2",
+      "path": "evaluation/suites/new/occt-27310-27773-27252/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-suite-b2613378-27780-27252-21494-v1",
+      "path": "evaluation/suites/new/occt-21494-27252-27780/1.json",
+      "version": "1"
+    }
+  ],
+  "groups": [
+    {
+      "id": "occt_boolean_single_544",
+      "path": "groups/legacy/occt-single-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_544",
+      "path": "groups/legacy/occt-group-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_active_visible_544",
+      "path": "groups/legacy/occt-active-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_544_506_847",
+      "path": "groups/legacy/occt-group-544-506-847/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_690_693_172",
+      "path": "groups/legacy/occt-group-690-693-172/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_370_872_1452",
+      "path": "groups/legacy/occt-group-370-872-1452/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_690_693_172_370_1452",
+      "path": "groups/legacy/occt-group-690-693-172-370-1452/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-04R-v2",
+      "path": "groups/new/occt-30082-30202-33541/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-05T-v1",
+      "path": "groups/new/occt-30082-31602-32850/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-group-d9d310-21494-29807-31835",
+      "path": "groups/new/occt-21494-29807-31835/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "path": "groups/new/occt-27310-27773-27252/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "path": "groups/new/occt-21494-27252-27780/1.json",
+      "version": "1"
+    }
+  ],
+  "id": "occt",
+  "issues": [
+    {
+      "id": "occt-544",
+      "path": "issues/occt-544/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-506",
+      "path": "issues/occt-506/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-847",
+      "path": "issues/occt-847/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-690",
+      "path": "issues/occt-690/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-693",
+      "path": "issues/occt-693/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-172",
+      "path": "issues/occt-172/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-370",
+      "path": "issues/occt-370/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-872",
+      "path": "issues/occt-872/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-1452",
+      "path": "issues/occt-1452/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "mantis-30082",
+      "path": "issues/occt-30082/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "mantis-30202",
+      "path": "issues/occt-30202/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "mantis-33541",
+      "path": "issues/occt-33541/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "mantis-30082",
+      "path": "issues/occt-30082/4/issue.json",
+      "version": "4"
+    },
+    {
+      "id": "mantis-32850",
+      "path": "issues/occt-32850/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "mantis-31602",
+      "path": "issues/occt-31602/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "occt-21494",
+      "path": "issues/occt-21494/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-29807",
+      "path": "issues/occt-29807/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-31835",
+      "path": "issues/occt-31835/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-27310",
+      "path": "issues/occt-27310/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-27773",
+      "path": "issues/occt-27773/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-27252",
+      "path": "issues/occt-27252/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-21494",
+      "path": "issues/occt-21494/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "occt-27252",
+      "path": "issues/occt-27252/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "occt-27780",
+      "path": "issues/occt-27780/1/issue.json",
+      "version": "1"
+    }
+  ],
+  "schema_version": 1,
+  "title": "Open CASCADE issue benchmark · 新题与旧题"
+}

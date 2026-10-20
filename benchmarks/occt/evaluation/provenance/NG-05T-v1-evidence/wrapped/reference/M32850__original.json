@@ -1,0 +1,36 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": true,
+  "test_done_marker": true,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 6,
+  "numeric_assertions": 5,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": true,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={four intersection branches} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={near-orthogonal cylinder tolerance bound} detail={actual=1.1368683772161603e-13 lower=0 upper=1.0e-12}\nBENCH_ASSERT_PASS kind=numeric label={c_1 finite positive length} detail={actual=0.0010008938272564934 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_2 finite positive length} detail={actual=13.012833486797053 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_3 finite positive length} detail={actual=0.0010008938273849189 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_4 finite positive length} detail={actual=0.0010007069168230824 lower=1.0e-7 upper=1000}\nBENCH_ORACLE_OK assertions=6 numeric_assertions=5\nTEST_DONE assertions=6 numeric_assertions=5\n",
+  "stderr_tail": "",
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/deliverable_bundle/issues/mantis-32850/1/public/original.tcl",
+  "draw_executable": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng05t_v1/build_reference/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.032,
+  "execution_provenance": {
+    "source_tree_sha256": "d48e73eb8ad378ef637c25b2b69d7eed6324f4f23f8c02763770d706249ce8bc",
+    "baseline_source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+    "reference_patch_sha256": "e969460acfdd3e2fd9eba551bf6e4410e3b72615b60f2ad30956c348dce6423d",
+    "runner_sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+    "case_sha256": "c402ec004583dce920b7ab3d257f89441759658b4465c77c5a5f5e85818e9c08"
+  },
+  "evidence_attestation": {
+    "source_run_manifest": "evaluation/provenance/NG-05T-v1-evidence/source_runs/reference/manifest.json",
+    "source_run_manifest_sha256": "947ca1196abb708ca069dcf580e05a76b9cc7e9bf0eca97522aeaf89c6eae39e",
+    "build_receipt": "evaluation/provenance/NG-05T-v1-evidence/source_runs/reference/build_receipt.json",
+    "build_receipt_sha256": "e1ef94238dbdd31fefc10507eb7193739ebbc0242f49f89b4f8eb5a63af06a05",
+    "raw_result": "evaluation/provenance/NG-05T-v1-evidence/source_runs/reference/results/m32850_original.json",
+    "raw_result_sha256": "d8420db1da6f5680700127ff68e8c7ff989fd33df512a54eb89d7bdea0ff84ef",
+    "run_phase": "reference"
+  }
+}

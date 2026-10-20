@@ -1,0 +1,97 @@
+{
+  "checkpoints": [
+    {
+      "case": "issues/occt-370/1/public/reproduce.cpp",
+      "category": "original",
+      "id": "visible_issue_370",
+      "issue_id": "occt-370",
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18,
+        "libraries": [
+          "TKGeomAlgo",
+          "TKShHealing",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    },
+    {
+      "case": "issues/occt-872/1/public/reproduce.cpp",
+      "category": "original",
+      "id": "visible_issue_872",
+      "issue_id": "occt-872",
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18,
+        "inputs": [
+          "issues/occt-872/1/public/stretchError.brep"
+        ],
+        "libraries": [
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    },
+    {
+      "case": "issues/occt-1452/1/public/reproduce.cpp",
+      "category": "original",
+      "id": "visible_issue_1452",
+      "issue_id": "occt-1452",
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 18,
+        "libraries": [
+          "TKOffset",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      },
+      "timeout_seconds": 30,
+      "visibility": "public"
+    }
+  ],
+  "group_ids": [
+    "occt_boolean_group_visible_370_872_1452"
+  ],
+  "id": "occt-visible5",
+  "legacy_task_kind": "visible5",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-3e80fad1779e"
+  ],
+  "title": "OCCT visible5 legacy checks",
+  "version": "1"
+}

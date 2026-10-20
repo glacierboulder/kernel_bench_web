@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "algorithm", "exclusions", "sources"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "algorithm": {"type": "string"},
+    "exclusions": {"type": "array", "items": {"type": "string"}},
+    "sources": {"type": "array", "items": {"type": "object", "required": ["source_id", "upstream_url", "commit", "materialized_tree_sha256", "verification_status", "provenance", "toolchain"], "properties": {"source_id": {"type": "string"}, "upstream_url": {"type": "string", "format": "uri"}, "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}, "materialized_tree_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "verification_status": {"enum": ["verified_git", "unverified_export_without_git_metadata"]}, "provenance": {"type": "string"}, "toolchain": {"type": "string"}}, "additionalProperties": false}}
+  },
+  "additionalProperties": false
+}

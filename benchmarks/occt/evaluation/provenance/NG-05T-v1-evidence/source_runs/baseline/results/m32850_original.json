@@ -1,0 +1,21 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": false,
+  "test_done_marker": false,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 5,
+  "numeric_assertions": 4,
+  "failed_assertions": 1,
+  "tcl_error_detected": true,
+  "expected_oracle_error": true,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": false,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=numeric label={near-orthogonal cylinder tolerance bound} detail={actual=1.1368683772161603e-13 lower=0 upper=1.0e-12}\nBENCH_ASSERT_PASS kind=numeric label={c_1 finite positive length} detail={actual=0.0010008938272564934 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_2 finite positive length} detail={actual=13.012833486797053 lower=1.0e-7 upper=1000}\nBENCH_ASSERT_PASS kind=numeric label={c_3 finite positive length} detail={actual=0.0010007069168230824 lower=1.0e-7 upper=1000}\n",
+  "stderr_tail": "BENCH_ASSERT_FAIL kind=expression label={four intersection branches} detail=value=0\nBENCH_ORACLE_FAILED assertions=5 failures=1\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/cases/M32850/original.tcl\" line 140)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+  "full_log_failure_detected": true,
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/cases/M32850/original.tcl",
+  "draw_executable": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/build_baseline/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.032
+}

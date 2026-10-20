@@ -1,0 +1,36 @@
+{
+  "provenance_schema": "occt-derived-source-v1",
+  "source_kind": "explicitly recorded curator-derived baseline",
+  "baseline_commit": "75fad89c90cf0390a6a053fa43a290b3fbb05069",
+  "baseline_source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+  "baseline_derivation_patch_sha256": "056c6c7356d7d6dc7b49053a09cb3928e5a8c5b7ac954d873c0f6a623e5ff6c7",
+  "baseline_derivation_patch_archive": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/baseline_derivation.patch",
+  "self_contained_git_bundle": "sources/NG-04R-baseline-and-reference.bundle",
+  "self_contained_git_bundle_sha256": "2ca7cd07c717f21b2293ad04e460345516a7f462bdd22b5a872728e0070494c3",
+  "reference_commit": "27d3d2d4d2b1ca23507834f616632524db28eba8",
+  "reference_source_tree_sha256": "f5094f5fa60c3c16fbaeac830ac1f4d6b802431b73e6f527990ce909dfd94bdf",
+  "reference_patch_sha256": "0a657cb55f39cf3f4e4cb381d61f97aecff850db93fd580fc619e9a5ae72e776",
+  "baseline_run_manifest": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/baseline/manifest.json",
+  "reference_run_manifest": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/reference/manifest.json",
+  "baseline_build_receipt_sha256": "405893e4df064b8a9b986db27a48cf4d98948a2d50601cd2596b6fd12474dd1e",
+  "reference_build_receipt_sha256": "2fa503e18d250a0c4961407ac5b5de67fcce112ac8df3ecd60a8c8155d8408da",
+  "reference_extra_check": "The previous immutable v1 manifest contains one additional M30202 regression2 result; it is historical v1 evidence and is not counted in this v2 task suite.",
+  "framework_evaluation_id": "0069678e94731943",
+  "framework_snapshot_sha256": "b00d011fab6d7472792fc4176652374808a325f90f11f46eab91a07347c20ad3",
+  "limitations": [
+    "M30082 archived attachment byte identity has not been independently verified.",
+    "M30202 has no native stack, so this proves the exact DRAW-visible crash signature and call point, not a unique C++ frame.",
+    "The M30202 neighborhood baseline crash is not treated as independent defect evidence because it lacks the original pre-call controls.",
+    "The framework sandbox could not create a network namespace in this environment; the offline replay used the preserved user/PID/IPC/UTS isolation shim, made no model/API calls, and retains this limitation in its run manifest."
+  ],
+  "framework_record_sha256": "aeae4af7974ad5d52fd328e9448971f61ae54ef96b2ff2f1d583ddae35730097",
+  "framework_internal_result_sha256": "1c39edb17d10cc80001ca63b39319d146acb826bfac14952363c5acaf5c3b283",
+  "framework_record_path": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/reference/framework_record.json",
+  "framework_internal_result_path": "evaluation/provenance/NG-04R-v2-final-evidence/source_runs/reference/evaluation.internal.json",
+  "validation_status": "final single-group replay passed; independent delivery review passed; integrated and frozen at the formal benchmark path",
+  "independent_delivery_review": {
+    "path": "evaluation/provenance/NG-04R-v2-delivery-review.json",
+    "sha256": "62fbc040d25c06eac0f7f97f107927f4781ff45bab5f57ae4486e87183eb5648",
+    "verdict": "pass"
+  }
+}

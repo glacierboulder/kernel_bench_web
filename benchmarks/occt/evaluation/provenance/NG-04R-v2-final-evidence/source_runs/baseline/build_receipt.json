@@ -1,0 +1,31 @@
+{
+  "artifacts": {
+    "lin64/clang/bin/DRAWEXE-7.8.2": "c0478210a93ffde7add0e74158c6187a2ab65f193ff0c7a0148a2063fce69708",
+    "lin64/clang/lib/libTKBO.so.7.8.2": "c3de6f74bae3a92c7405594f592d02237834c9999e8a7d7aed214739a70f98ac",
+    "lin64/clang/lib/libTKGeomAlgo.so.7.8.2": "8281f061aedf36cf516770c5bcac4fa26e0ed7d3766eacbfccc22018b9487de6",
+    "lin64/clang/lib/libTKTopAlgo.so.7.8.2": "3248849dc607e196fe09f910aacf31cdad3a42d157e17b84e57671c5d87d258b",
+    "lin64/clang/lib/libTKTopTest.so.7.8.2": "1824b295801feec35e4d5c2c8c7cda1121b04d2898c0c972dad587ca5865466d"
+  },
+  "baseline_derivation_patch_sha256": "056c6c7356d7d6dc7b49053a09cb3928e5a8c5b7ac954d873c0f6a623e5ff6c7",
+  "build_result": "success",
+  "candidate_reference_patch_sha256": "0a657cb55f39cf3f4e4cb381d61f97aecff850db93fd580fc619e9a5ae72e776",
+  "cmake_cache_sha256": "d1f4b9c7988b22bb8a3c3b633536a81180309b8e8386c1d5b652f293d3ca1ee5",
+  "compiler_version": "Clang 10.0.0",
+  "schema_version": "occt_intersection_build_receipt_v1",
+  "source_commit": "75fad89c90cf0390a6a053fa43a290b3fbb05069",
+  "source_kind": "derived_clean_group_failure_baseline",
+  "source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+  "target_build_exit_codes": {
+    "DRAWEXE": 0,
+    "TKTopTest": 0
+  },
+  "rebuild_provenance": {
+    "built_utc": "2026-10-18T10:37:46.799911+00:00",
+    "source_dir": "$BENCH_TMP_DIR/occt_ng04_bundle_trial/clone",
+    "build_dir": "$BENCH_TMP_DIR/occt_ng04_bundle_trial/baseline_build_v2",
+    "source_tree_verified_against_locked_tree": true,
+    "compiler": "Clang 10.0.0",
+    "parallel_jobs": 2,
+    "note": "Isolated rebuild after detecting that the previous build directory had been reused by the reference build; artifact hashes below describe this rebuilt baseline."
+  }
+}

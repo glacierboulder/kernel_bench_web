@@ -1,0 +1,227 @@
+{
+  "source_id": "occt-ng04r-derived-fe81a63b",
+  "origin_similarity_review": "Scope approved as a B-boundary workflow: producer-side WLine endpoint/special-point data and the adjacent consumer-side endpoint-extension eligibility decision before downstream Boolean assembly. No cross-issue causal chain or unique M30202 first hunk is claimed.",
+  "members": [
+    {
+      "id": "mantis-30082",
+      "metadata": {
+        "schema_version": "occt_intersection_case_v1",
+        "case_id": "mantis:30082",
+        "issue_title": "Intersection curve has a large tolerance near its endpoint",
+        "candidate_group": "NG-04R-v2",
+        "target_start_stage": "geometric_intersection",
+        "target_start_substage": "walking-line endpoint refinement when endpoint tangent disagrees with local chord",
+        "origin_evidence_level": "patch-supported",
+        "source_material": "OCCT tests/bugs/modalg_7/bug30082_1 and _2; issue BREP pair embedded; _2 provides generated cylinder case",
+        "issue_url": "https://occt3d.com/dev/tickets/0030082/",
+        "fixtures": [
+          {
+            "name": "bug27928_b1.brep",
+            "bytes": 9099,
+            "sha256": "4769a709715c2a47c7c85cc518c6688839e282fa37651469f2a21f795c0d4e72",
+            "embedded_base64_in_each_test_script": true,
+            "dataset_commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1"
+          },
+          {
+            "name": "bug27928_b2.brep",
+            "bytes": 10002,
+            "sha256": "90a1b02ca034ec7625ea0928b6ccdc206a7eaa5dd9f6ebf5d5b28349ea64db50",
+            "embedded_base64_in_each_test_script": true,
+            "dataset_commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1"
+          }
+        ],
+        "oracle_protocol": "inline agent_bench_web bench.tcl; require bench_finish",
+        "validation": {
+          "reference_build": "Locked derived reference source tree f5094f5fa60c3c16fbaeac830ac1f4d6b802431b73e6f527990ce909dfd94bdf; framework evaluation 0069678e94731943",
+          "reference_build_result": "passed; isolated configure/build succeeded and original, neighborhood, regression all passed in the 9-check framework replay",
+          "historical_failure_baseline": "Locked derived baseline source tree fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93; original and neighborhood each fail the bounded-reached-tolerance numeric oracle; regression passes",
+          "notes": "Archived Mantis attachment byte identity remains unverified; the issue-keyed upstream BREP pair and exact original geometry are embedded. Case version 2 writes temporary BREP files under TMPDIR for the read-only frozen evaluator.",
+          "framework_evaluation_id": "0069678e94731943",
+          "framework_snapshot_sha256": "b00d011fab6d7472792fc4176652374808a325f90f11f46eab91a07347c20ad3",
+          "baseline_evidence": "evidence/approval_candidate_v2/baseline_rebuilt/manifest.json",
+          "reference_evidence": "evidence/approval_candidate_v2/reference_framework_final_single_group/manifest.json"
+        }
+      },
+      "origin_review": "Separate Mantis issue unit. The locked original fails its numeric reached-tolerance oracle; case input is issue-keyed, but archived attachment byte identity remains unverified.",
+      "checks": {
+        "original": {
+          "filename": "original.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-04R-v2-final-evidence/wrapped/reference/M30082__original.json",
+            "case_sha256": "c95ce4a22cb803f7d9e028250206149a9ec1230eb8185b7d14395b4af3dde4b4"
+          },
+          "baseline": {
+            "result_path": "evaluation/provenance/NG-04R-v2-final-evidence/wrapped/baseline/M30082__original.json",
+            "case_sha256": "c95ce4a22cb803f7d9e028250206149a9ec1230eb8185b7d14395b4af3dde4b4",
+            "geometric_failure_description": "Original numeric oracle `bounded reached tolerance` reports actual=0.00031297851399059634, expected=6.5e-7 with tolerance=7.0e-8."
+          }
+        },
+        "neighborhood": {
+          "filename": "neighborhood.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-04R-v2-final-evidence/wrapped/reference/M30082__neighborhood.json",
+            "case_sha256": "6ece46afe217a0c62e423d464b4e38b9e972f1aa3033e6dd116d4448d5ce7040"
+          }
+        },
+        "regression": {
+          "filename": "regression.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-04R-v2-final-evidence/wrapped/reference/M30082__regression.json",
+            "case_sha256": "d7b16bf795d51ed9924aad0888132e0d17a636fd347adc8e7d51382028e3d7e9"
+          }
+        }
+      }
+    },
+    {
+      "id": "mantis-30202",
+      "metadata": {
+        "schema_version": "occt_intersection_case_v1",
+        "case_id": "mantis:30202",
+        "issue_title": "JoinWLines array bounds failure on the supplied intersection case",
+        "candidate_group": "NG-04R-v2",
+        "target_start_stage": "geometric_intersection",
+        "target_start_substage": "WLine joining, special-point handling, and endpoint-parameter initialization",
+        "origin_evidence_level": "upstream-test-and-local-reproducer-backed; attachment identity not independently matched",
+        "source_material": "The original Tcl case embeds its two BREP inputs and applies the same face-pair operation discussed by the local upstream-fix history.",
+        "input_provenance": "Self-contained BREP inputs are embedded in original.tcl; no external input file is required. The local evidence does not byte-match these inputs to archived Mantis attachments.",
+        "fixtures": [],
+        "oracle_protocol": "inline agent_bench_web bench.tcl protocol; require all geometric assertions and bench_finish",
+        "validation": {
+          "baseline_kind": "explicitly recorded derived baseline",
+          "baseline_source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+          "reference_source_tree_sha256": "f5094f5fa60c3c16fbaeac830ac1f4d6b802431b73e6f527990ce909dfd94bdf",
+          "baseline_original": "The original reaches saved r_4 validity, shape-validity, argument-audit and face-pair controls, then DRAW catches the exact bopcurves SIGSEGV. This is a signature-bound kernel-crash failure; no native C++ stack is available.",
+          "reference_result": "Original, neighborhood, and regression checks pass in the locked reference tree.",
+          "notes": "The exact crash signature and call point are preserved; native C++ frame and unique first faulty hunk remain unknown. Embedded inputs are not byte-matched to archived Mantis attachments. Case version 2 writes temporary BREP files under TMPDIR for the read-only frozen evaluator.",
+          "baseline_neighborhood": "A SIGSEGV is observed, but this checkpoint lacks the original pre-call controls and is not treated as independent defect evidence.",
+          "framework_evaluation_id": "0069678e94731943",
+          "framework_snapshot_sha256": "b00d011fab6d7472792fc4176652374808a325f90f11f46eab91a07347c20ad3",
+          "baseline_evidence": "evidence/approval_candidate_v2/baseline_rebuilt/manifest.json",
+          "reference_evidence": "evidence/approval_candidate_v2/reference_framework_final_single_group/manifest.json"
+        }
+      },
+      "origin_review": "Separate Mantis issue unit with a self-contained two-BREP case. The original reaches r_4 controls before the exact face-pair bopcurves SIGSEGV; the native C++ frame and a unique first faulty hunk remain unknown. Multiple official hunks count once.",
+      "checks": {
+        "original": {
+          "filename": "original.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-04R-v2-final-evidence/wrapped/reference/M30202__original.json",
+            "case_sha256": "bab1c3ab3b7962d958715d15559806e595ed2e3b761031115cec0bf0b3d7261c"
+          },
+          "baseline": {
+            "result_path": "evaluation/provenance/NG-04R-v2-final-evidence/wrapped/baseline/M30202__original.json",
+            "case_sha256": "bab1c3ab3b7962d958715d15559806e595ed2e3b761031115cec0bf0b3d7261c",
+            "expected_failure_kind": "kernel_crash",
+            "failure_signature": {
+              "stdout_contains": [
+                "M30202_OPERATION r_4",
+                "BENCH_ASSERT_PASS kind=expression label={r_4 BOP argument audit} detail=value=1"
+              ],
+              "stderr_contains": [
+                "OSD_SIGSEGV: SIGSEGV",
+                "bopcurves b1_5 b2_7 -2d"
+              ]
+            }
+          }
+        },
+        "neighborhood": {
+          "filename": "neighborhood.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-04R-v2-final-evidence/wrapped/reference/M30202__neighborhood.json",
+            "case_sha256": "e4ebad7a7985c132ecc83a8c51bfecef31914d8fc45aabef86f41949a050e1f2"
+          }
+        },
+        "regression": {
+          "filename": "regression.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-04R-v2-final-evidence/wrapped/reference/M30202__regression.json",
+            "case_sha256": "8adfb321c8cd7f85732870e559c50aa06a617d8cfff8c14aadc979914e31b6e0"
+          }
+        }
+      }
+    },
+    {
+      "id": "mantis-33541",
+      "metadata": {
+        "schema_version": "occt_intersection_case_v1",
+        "case_id": "mantis:33541",
+        "issue_title": "Simple sphere cut from cylinder fails",
+        "candidate_group": "NG-04R-v2",
+        "target_start_stage": "geometric_intersection",
+        "target_start_substage": "surface-intersection boundary/endpoint classification for the sphere-cylinder contact",
+        "origin_evidence_level": "issue-reproducer-backed",
+        "source_material": "OCCT tests/bugs/modalg_8/bug33541; self-contained original primitive construction",
+        "issue_url": "https://occt3d.com/dev/tickets/0033541/",
+        "input_provenance": "Self-contained primitive geometry from the original issue-keyed upstream test; no external attachment required.",
+        "fixtures": [],
+        "oracle_protocol": "inline agent_bench_web bench.tcl; require bench_finish",
+        "validation": {
+          "reference_build": "Locked derived reference source tree f5094f5fa60c3c16fbaeac830ac1f4d6b802431b73e6f527990ce909dfd94bdf; framework evaluation 0069678e94731943",
+          "reference_build_result": "passed; isolated configure/build succeeded and original, neighborhood, regression all passed in the 9-check framework replay",
+          "historical_failure_baseline": "Locked derived baseline source tree fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+          "reference_patch_result": "all three checkpoints pass under the locked reference patch",
+          "reproduction_status": "reproduced on the locked common baseline; original volume oracles fail with cut volume 0 vs 2.8126 and Common volume 3.14159 vs 0.328988",
+          "notes": "Upstream test asserts topology; added volume/conservation checks provide independent geometric oracles. Primitive reproducer has no external attachment. The reference build receipt reuses artifact hashes from the prior immutable receipt for this same locked reference tree and patch; the isolated framework replay separately records configure/build success and removes its temporary build directory.",
+          "baseline_result": "Original fails two independent cut/Common volume oracles; neighborhood and regression also fail shape/geometric assertions on this exact baseline. The three baseline cases are not all used as independent issue evidence.",
+          "framework_evaluation_id": "0069678e94731943",
+          "framework_snapshot_sha256": "b00d011fab6d7472792fc4176652374808a325f90f11f46eab91a07347c20ad3",
+          "baseline_evidence": "evidence/approval_candidate_v2/baseline_rebuilt/manifest.json",
+          "reference_evidence": "evidence/approval_candidate_v2/reference_framework_final_single_group/manifest.json"
+        }
+      },
+      "origin_review": "Separate Mantis issue unit. The original fails cut/Common volume oracles; IsNeedSkipWL skips extension processing rather than deleting the WLine. Its 2024 integration is temporally distant from M30082 and is included only under the reviewed adjacent-stage scope.",
+      "checks": {
+        "original": {
+          "filename": "original.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-04R-v2-final-evidence/wrapped/reference/M33541__original.json",
+            "case_sha256": "ce5e8ed08e3882abc9d770614a6e87704f499eb6cc1cf229d9a536f21f854cdd"
+          },
+          "baseline": {
+            "result_path": "evaluation/provenance/NG-04R-v2-final-evidence/wrapped/baseline/M33541__original.json",
+            "case_sha256": "ce5e8ed08e3882abc9d770614a6e87704f499eb6cc1cf229d9a536f21f854cdd",
+            "geometric_failure_description": "Original numeric oracles report cut volume actual=0 instead of 2.8126 (tolerance=2.0e-4) and Common volume actual=3.14159 instead of 0.328988 (tolerance=2.0e-5).",
+            "expected_failure_kind": "shape_oracle_diagnostic",
+            "failure_signature": {
+              "stdout_contains": [
+                "Error :  is WRONG because number of VERTEX entities in shape \"cut_result\" is 0"
+              ],
+              "stderr_contains": [
+                "BENCH_ASSERT_FAIL kind=numeric label={cut volume} detail={actual=0 expected=2.8126 tolerance=2.0e-4 absolute_error=2.8126}",
+                "BENCH_ASSERT_FAIL kind=numeric label={Common volume} detail={actual=3.14159 expected=0.328988 tolerance=2.0e-5 absolute_error=2.812602}"
+              ]
+            }
+          }
+        },
+        "neighborhood": {
+          "filename": "neighborhood.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-04R-v2-final-evidence/wrapped/reference/M33541__neighborhood.json",
+            "case_sha256": "c73267e409637ac865d633d38b470de9bd6b1e5c6b1bb971e5bd13af333764a6"
+          }
+        },
+        "regression": {
+          "filename": "regression.tcl",
+          "reference": {
+            "result_path": "evaluation/provenance/NG-04R-v2-final-evidence/wrapped/reference/M33541__regression.json",
+            "case_sha256": "07beabc8e9c643e299074d421156e4021b0acc182abd618f5bc82dc2ec7b8120"
+          }
+        }
+      }
+    }
+  ],
+  "final_framework_replay": {
+    "evaluation_id": "0069678e94731943",
+    "snapshot_sha256": "b00d011fab6d7472792fc4176652374808a325f90f11f46eab91a07347c20ad3",
+    "manifest_sha256": "cd5424e93cd69bd26249c3e89876c7c63008abee4ae1633e4dcced0d2bb02582",
+    "record_sha256": "aeae4af7974ad5d52fd328e9448971f61ae54ef96b2ff2f1d583ddae35730097",
+    "internal_result_sha256": "1c39edb17d10cc80001ca63b39319d146acb826bfac14952363c5acaf5c3b283",
+    "passed": true,
+    "checks": "9/9; hidden 6/6"
+  },
+  "independent_delivery_review": {
+    "path": "evaluation/provenance/NG-04R-v2-delivery-review.json",
+    "sha256": "62fbc040d25c06eac0f7f97f107927f4781ff45bab5f57ae4486e87183eb5648",
+    "verdict": "pass"
+  }
+}

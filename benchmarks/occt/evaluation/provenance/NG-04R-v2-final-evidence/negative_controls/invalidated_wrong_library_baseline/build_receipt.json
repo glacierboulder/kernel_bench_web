@@ -1,0 +1,22 @@
+{
+  "artifacts": {
+    "lin64/clang/bin/DRAWEXE-7.8.2": "fa641b0f2c9525054a166ebaddb6c1fdba6b458303c2598894fc9b6295aebf95",
+    "lin64/clang/lib/libTKBO.so.7.8.2": "0e39fd232413e7e5f7707304d3d04f23fb66afe87ce5d8340e91438a72562499",
+    "lin64/clang/lib/libTKGeomAlgo.so.7.8.2": "70c20da6695189efb92297ab1de4a5f0ba1c9fbdd6199808e28c605cec647d09",
+    "lin64/clang/lib/libTKTopAlgo.so.7.8.2": "24d94c03fcb42f4d904e11d3be86e53f45d5c945daef806038e019705845d7b2",
+    "lin64/clang/lib/libTKTopTest.so.7.8.2": "d85eee59881d36ca13fbf11550bf5a97d1610acb6fc2d1dc9b820325a665f1c6"
+  },
+  "baseline_derivation_patch_sha256": "056c6c7356d7d6dc7b49053a09cb3928e5a8c5b7ac954d873c0f6a623e5ff6c7",
+  "build_result": "success",
+  "candidate_reference_patch_sha256": "0a657cb55f39cf3f4e4cb381d61f97aecff850db93fd580fc619e9a5ae72e776",
+  "cmake_cache_sha256": "95baf3fe38b91ccac15a916dc17bfd7087806a58d6e74608619aaf765d30d12e",
+  "compiler_version": "Clang 10.0.0",
+  "schema_version": "occt_intersection_build_receipt_v1",
+  "source_commit": "75fad89c90cf0390a6a053fa43a290b3fbb05069",
+  "source_kind": "derived_clean_group_failure_baseline",
+  "source_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+  "target_build_exit_codes": {
+    "DRAWEXE": 0,
+    "TKTopTest": 0
+  }
+}

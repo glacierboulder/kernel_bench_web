@@ -1,0 +1,37 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": false,
+  "test_done_marker": false,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 4,
+  "numeric_assertions": 1,
+  "failed_assertions": 1,
+  "tcl_error_detected": true,
+  "expected_oracle_error": true,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": false,
+  "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={translated issue input intersection exists} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={translated issue input has one curve} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={half-scale cylinder case has four curves} detail=value=1\n",
+  "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={translated reached tolerance} detail={actual=0.00031297847408055107 lower=1.0e-8 upper=1.0e-5}\nBENCH_ORACLE_FAILED assertions=4 failures=1\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/cases/M30082/neighborhood.tcl\" line 172)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+  "full_log_failure_detected": true,
+  "script": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/cases/M30082/neighborhood.tcl",
+  "draw_executable": "$OCCT_EVIDENCE_ROOT/occt_intersection_authoring_20261017/ng04t_v1/build_baseline/lin64/clang/bin/DRAWEXE-7.8.2",
+  "elapsed_seconds": 0.032,
+  "execution_provenance": {
+    "source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+    "baseline_source_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+    "reference_patch_sha256": null,
+    "runner_sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+    "case_sha256": "6ece46afe217a0c62e423d464b4e38b9e972f1aa3033e6dd116d4448d5ce7040"
+  },
+  "evidence_attestation": {
+    "source_run_manifest": "evaluation/provenance/NG-05T-v1-evidence/source_runs/baseline/manifest.json",
+    "source_run_manifest_sha256": "35b1392ced196f5f036199cd02a75cb1aac7839224b5fd84baf0ea3e40899720",
+    "build_receipt": "evaluation/provenance/NG-05T-v1-evidence/source_runs/baseline/build_receipt.json",
+    "build_receipt_sha256": "243cfa5245ba2afa03de5bfadb6c9d77a19be763ee5bc32f5b369f769377793d",
+    "raw_result": "evaluation/provenance/NG-05T-v1-evidence/source_runs/baseline/results/m30082_neighborhood.json",
+    "raw_result_sha256": "a764b1a1eaf4b62e1167acde04a5963c3812a519af9962d39196023cbcf7e417",
+    "run_phase": "baseline"
+  }
+}
