@@ -167,6 +167,90 @@
       },
       "timeout_seconds": 180,
       "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m21494_scale_125_sphere925",
+      "issue_id": "occt-21494",
+      "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m21494_scale_125_sphere925.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m21494_translated_sphere925",
+      "issue_id": "occt-21494",
+      "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m21494_translated_sphere925.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m29807_ring_parameter_low",
+      "issue_id": "occt-29807",
+      "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m29807_ring_parameter_low.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m29807_ring_scaled_high",
+      "issue_id": "occt-29807",
+      "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m29807_ring_scaled_high.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m31835_common_scaled_r10",
+      "issue_id": "occt-31835",
+      "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m31835_common_scaled_r10.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m31835_common_scaled_r20",
+      "issue_id": "occt-31835",
+      "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m31835_common_scaled_r20.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
     }
   ],
   "group_ids": [
@@ -178,5 +262,8 @@
     "occt-d9d3107d8df1"
   ],
   "title": "OCCT B/F intersection group 1",
-  "version": "1"
+  "version": "1",
+  "support_files": [
+    "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+  ]
 }

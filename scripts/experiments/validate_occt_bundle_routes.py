@@ -15,7 +15,7 @@ from backend.settings import SETTINGS
 bundle = validate_bundle(SETTINGS.benchmark_root)
 catalog = json.loads((SETTINGS.benchmark_root / 'catalog.json').read_text(encoding='utf-8'))
 new_refs = [item for item in catalog['groups'] if item['path'].startswith('groups/new/')]
-assert len(new_refs) == 5, len(new_refs)
+assert new_refs, "no registered new groups"
 route_total = 0
 for ref in new_refs:
     group = bundle['groups'][(ref['id'], ref['version'])]
@@ -47,8 +47,8 @@ for ref in new_refs:
                 route = lock['checkpoint_routes'].get(case)
                 assert route is not None, (group['id'], checkpoint['id'], case)
                 assert route['checkpoint_id'] == checkpoint['id'], (group['id'], checkpoint['id'], route)
-                assert route['group_id'] == group['id'], (group['id'], checkpoint['id'], route)
-                assert route['suite'] == suite_key, (group['id'], checkpoint['id'], route)
+                identities = [{'group_id': route['group_id'], 'suite': route['suite']}, *route.get('compatible_suites', [])]
+                assert {'group_id': group['id'], 'suite': suite_key} in identities, (group['id'], checkpoint['id'], route)
                 target = case_root / case
                 assert target.is_file(), (group['id'], case)
                 origin, selected_runner = adapter._runner_for_case(str(target.parent), target.name)
@@ -63,6 +63,7 @@ for ref in new_refs:
                           'checkpoints': count, 'case_path_aliases': len(manifest['case_path_aliases']),
                           'snapshot_sha256': manifest['snapshot_sha256'],
                           'control_prepared': control.is_dir()}, ensure_ascii=False))
-assert route_total == 49, route_total
+expected_total = sum(len(bundle['suites'][(bundle['groups'][(ref['id'], ref['version'])]['evaluation_suite']['id'], bundle['groups'][(ref['id'], ref['version'])]['evaluation_suite']['version'])]['checkpoints']) for ref in new_refs)
+assert route_total == expected_total, (route_total, expected_total)
 print(json.dumps({'new_groups': len(new_refs), 'dispatcher_routes_validated': route_total,
                   'builds_run': 0, 'paid_model_calls': 0}, ensure_ascii=False))

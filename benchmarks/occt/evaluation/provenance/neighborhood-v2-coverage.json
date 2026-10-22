@@ -1,0 +1,3808 @@
+{
+  "schema_version": 1,
+  "policy": {
+    "maximum_neighborhood_scenarios_per_issue": 15,
+    "scope": "canonical issue number across current five suites; includes existing cases; matrix input/order scenarios count individually; sampling points excluded",
+    "in_place_update_authorized": true,
+    "historical_run_snapshots_modified": false,
+    "model_calls": 0
+  },
+  "issue_scenario_totals": {
+    "30082": 12,
+    "30202": 5,
+    "33541": 6,
+    "31602": 5,
+    "32850": 5,
+    "21494": 6,
+    "29807": 3,
+    "31835": 3,
+    "27310": 3,
+    "27773": 4,
+    "27252": 6,
+    "27780": 3
+  },
+  "groups": [
+    {
+      "group_id": "NG-04R-v2",
+      "group_version": "1",
+      "suite_id": "NG-04R-checks-v2",
+      "suite_version": "1",
+      "suite_path": "evaluation/suites/new/occt-30082-30202-33541/1.json",
+      "suite_sha256_before": "58e8b32155cbcf31c5e66bae79a5c040d276eeceac76f0ea9c6e065e158e7822",
+      "suite_sha256_after": "d95acdf187187af31cff9cda7c8845757dc85975a1d2c1afa13208c763a0001e",
+      "original_checkpoints_preserved": true,
+      "original_checkpoint_list_sha256": "1db62813b8c18377bb2fc848b4c2ad2420e54788523a14436788ec8d2c6af906",
+      "old_checkpoint_count": 9,
+      "new_checkpoint_count": 3,
+      "new_scenario_count": 12,
+      "checkpoints": [
+        {
+          "group_id": "NG-04R-v2",
+          "checkpoint": {
+            "case": "evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v2.tcl",
+            "category": "neighborhood",
+            "id": "mantis-30082-neighborhood-dense-residual-v2",
+            "issue_id": "mantis-30082",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "timeout_seconds": 90,
+            "visibility": "hidden"
+          },
+          "dimensions": [
+            "scale",
+            "rotation",
+            "translation",
+            "operand_order",
+            "20_vs_1000_xdistcs_sampling",
+            "reported_tolerance_consistency",
+            "absolute_precision_based_physical_cap",
+            "synthetic_reported_tolerance_inflation_control"
+          ],
+          "scenario_count": 4,
+          "scenarios": [
+            {
+              "scenario_id": "m30082-v2-scale-0.5-forward",
+              "parameters": {
+                "issue_version": 2,
+                "scale": 0.5,
+                "rotation_degrees_about_axis_1_2_3": 31,
+                "translation": [
+                  250,
+                  -80,
+                  40
+                ],
+                "operand_order": "forward",
+                "sample_counts_per_surface": [
+                  20,
+                  1000
+                ]
+              }
+            },
+            {
+              "scenario_id": "m30082-v2-scale-0.5-reverse",
+              "parameters": {
+                "issue_version": 2,
+                "scale": 0.5,
+                "rotation_degrees_about_axis_1_2_3": 31,
+                "translation": [
+                  250,
+                  -80,
+                  40
+                ],
+                "operand_order": "reverse",
+                "sample_counts_per_surface": [
+                  20,
+                  1000
+                ]
+              }
+            },
+            {
+              "scenario_id": "m30082-v2-scale-2-forward",
+              "parameters": {
+                "issue_version": 2,
+                "scale": 2.0,
+                "rotation_degrees_about_axis_1_2_3": 67,
+                "translation": [
+                  -120,
+                  55,
+                  18
+                ],
+                "operand_order": "forward",
+                "sample_counts_per_surface": [
+                  20,
+                  1000
+                ]
+              }
+            },
+            {
+              "scenario_id": "m30082-v2-scale-2-reverse",
+              "parameters": {
+                "issue_version": 2,
+                "scale": 2.0,
+                "rotation_degrees_about_axis_1_2_3": 67,
+                "translation": [
+                  -120,
+                  55,
+                  18
+                ],
+                "operand_order": "reverse",
+                "sample_counts_per_surface": [
+                  20,
+                  1000
+                ]
+              }
+            }
+          ],
+          "support_files": [
+            "evaluation/cases/mantis-30082/5/neighbor_support.tcl"
+          ],
+          "issue_total_scenario_count_after_append": 12,
+          "existing_scenario_count_basis": "Existing neighborhood cases inspected in-tree: 2 distinct issue/input operation scenes; matrix alternatives are counted separately.",
+          "artifact_hashes": {
+            "checkpoint_sha256": "679701cadd55955fc3190c39c7edd552b95f2ee94937cd3faa0f20655a09e3bd",
+            "support_files": {
+              "evaluation/cases/mantis-30082/5/neighbor_support.tcl": "148dc7b8777fab1f729b55d20ad43dfb10d08fb4d68c3dee69ce78c0a445310e"
+            }
+          },
+          "evidence": {
+            "status": "reference_and_candidate_replay_complete",
+            "positive_reference": {
+              "trusted_reference_group": "NG-04R-v2",
+              "build": {
+                "draw_executable": "data/neighborhood-validation/NG04_reference/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                "sha256": "de985586b15afb1cfa56f031dd9a0e2b5da2d9ef5c7fb641a4403c24ead5f7a7",
+                "source_id": "trusted-patched-reference"
+              },
+              "build_receipt": "data/neighborhood-validation/NG04_reference/build-receipt.json",
+              "build_receipt_sha256": "a6c10e966bee33def0fb8772318eb6e45d696ecad4ec42befac3bfa662527f4d",
+              "source_tree_sha256_after_patch": "f5094f5fa60c3c16fbaeac830ac1f4d6b802431b73e6f527990ce909dfd94bdf",
+              "patch_sha256": "0a657cb55f39cf3f4e4cb381d61f97aecff850db93fd580fc619e9a5ae72e776",
+              "run": {
+                "result_json": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs.json",
+                "result_sha256": "dab6d1adff5784e847556c88f55d5c2c4ca6a1c8efb448c2151ec1933c1cfa18",
+                "passed": true,
+                "assertions": 38,
+                "numeric_assertions": 30,
+                "failed_assertions": 0,
+                "test_done_marker": true,
+                "return_code": 0,
+                "timed_out": false,
+                "tcl_error_detected": false,
+                "infrastructure_tcl_error": false,
+                "occt_error_detected": false,
+                "expected_oracle_error": false,
+                "script": "benchmarks/occt/evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v2.tcl",
+                "draw_executable": "data/neighborhood-validation/NG04_reference/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                "elapsed_seconds": 0.115
+              },
+              "raw_log_manifest": {
+                "directory": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs",
+                "file_count": 16,
+                "directory_sha256": "24faef9e985056fc1e2b13775edb14b37dec30d6be6d3b834252dd9a8ac7d97f",
+                "files": [
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-001.txt",
+                    "sha256": "88683da0c25e74c56ac6c93e7e84bc4ce35347da5fc3cc58e1177f06592e2e0f",
+                    "size_bytes": 710
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-002.txt",
+                    "sha256": "516d35d9a735b087f17f0b2c81ba1045e9a651721e5e0332ed6f2e4b661beb70",
+                    "size_bytes": 26052
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-003.txt",
+                    "sha256": "0c7b00a08fd5891ffadcdf66726673d05491049139b795d6684d7f0e78aba07c",
+                    "size_bytes": 724
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-004.txt",
+                    "sha256": "fabc5796b179d9711b828365916b2eecc151e0d42e08e6bbce1296dc38d08f39",
+                    "size_bytes": 26052
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-005.txt",
+                    "sha256": "c9ffea099b6be28e79894aa0ee6ca8cd87fbe03968022a448e96c7a3bc353cbc",
+                    "size_bytes": 718
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-006.txt",
+                    "sha256": "f004cf1a93c47ff3851901bb09c01e2ed004333e2e8d69ebe2f73ecd6894963e",
+                    "size_bytes": 26062
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-007.txt",
+                    "sha256": "94a1bbc599259c8db215109c0cb73a76c95eeb9a591d34b227f297cf195633e5",
+                    "size_bytes": 731
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-008.txt",
+                    "sha256": "73dc0e9ec351a91931579b9cf9ae21c5c8a250802312867c95bb6136eac2c04e",
+                    "size_bytes": 26035
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-009.txt",
+                    "sha256": "b1b6f95769d9ec5061281505d7d146072194c055adee29b9ddc6ff523523f0f5",
+                    "size_bytes": 728
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-010.txt",
+                    "sha256": "e81d9c8e80d326169d5ed3df098f861647eeed74d7471e00e4bae273314a38ab",
+                    "size_bytes": 26052
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-011.txt",
+                    "sha256": "36209883b10a8efb3158c3a17c79f83e8235fa96ab97eb15e37ede3a93623d1a",
+                    "size_bytes": 728
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-012.txt",
+                    "sha256": "2bca40e15b4a7013315d8a2ed83ba96eb8607c34564c67dc691e78d1bc2b1584",
+                    "size_bytes": 26065
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-013.txt",
+                    "sha256": "1c7a318bedb448467f70c81cc8c78800c1b797aadb36808d3d17f4d374068f22",
+                    "size_bytes": 738
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-014.txt",
+                    "sha256": "134a428f673f54525371a7035608266cf1adf47363a49a46558b2cf6f25e870b",
+                    "size_bytes": 26068
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-015.txt",
+                    "sha256": "b5f144cec247ff27459c4e5915d392f51c6f954e6223297d7ad0644d48e7a00d",
+                    "size_bytes": 736
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs/xdistcs-016.txt",
+                    "sha256": "fae69bdaffdbd8fc969f29981b96fac6aeb15b5e7a02e4eeaf3d7d2f7f4fc103",
+                    "size_bytes": 26047
+                  }
+                ]
+              }
+            },
+            "candidate_controls": [
+              {
+                "control_role": "same-issue candidate negative control",
+                "build": {
+                  "draw_executable": "data/runs/b5de75845927f214/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "sha256": "8d0b8962578657aabd4b9cbbd88aea299960888cb882e7e53f3702dde257e8a8",
+                  "source_id": "b5de75845927f214"
+                },
+                "run": {
+                  "result_json": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs.json",
+                  "result_sha256": "e676747e9c44e02ee6e97ef9aaa7838cfa9015f147833cdf58a3b8d25d0c671e",
+                  "passed": false,
+                  "assertions": 38,
+                  "numeric_assertions": 30,
+                  "failed_assertions": 16,
+                  "test_done_marker": false,
+                  "return_code": 0,
+                  "timed_out": false,
+                  "tcl_error_detected": true,
+                  "infrastructure_tcl_error": false,
+                  "occt_error_detected": false,
+                  "expected_oracle_error": true,
+                  "script": "benchmarks/occt/evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v2.tcl",
+                  "draw_executable": "data/runs/b5de75845927f214/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "elapsed_seconds": 0.115
+                },
+                "raw_log_manifest": {
+                  "directory": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs",
+                  "file_count": 16,
+                  "directory_sha256": "5c466d53be859c04d1c08f96684e16f7e14bdca09433fa0788dbd31f6fc71623",
+                  "files": [
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-001.txt",
+                      "sha256": "624fe7decc23a60dd95d5973ce68ddd43ac411cd791b78bdf63e188d71a8dcff",
+                      "size_bytes": 711
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-002.txt",
+                      "sha256": "88ed9e3136981d21aa7188dc1b65b9ea1c24502e8ea22f1bc0a0cc453c1967db",
+                      "size_bytes": 26048
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-003.txt",
+                      "sha256": "e409ca6e61f922573a02d8777f40bda7e7fc6920aafd69f1809cf07a964351bc",
+                      "size_bytes": 724
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-004.txt",
+                      "sha256": "24411b71dee5bfc87c0aacaead3988ef6ac97a970c30d47ddee6c11889c802f4",
+                      "size_bytes": 26046
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-005.txt",
+                      "sha256": "8738726f9436fea791f2ba7a66df576b58b140ce67eddca6520d2922f665d53c",
+                      "size_bytes": 720
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-006.txt",
+                      "sha256": "4226542a715f46162eab57a849723085af740f0e38c50c7e12ac2f9f8785bccb",
+                      "size_bytes": 26063
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-007.txt",
+                      "sha256": "386946be81df119fee4bfa7000a336036029ed588fa7315e799bee2d98ac3cbb",
+                      "size_bytes": 730
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-008.txt",
+                      "sha256": "34f4df3f786bdc434d6dbdff153e591dbdc5ab0392619937120b4c19c16e5284",
+                      "size_bytes": 26052
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-009.txt",
+                      "sha256": "8e64b8a1936a5f65300e4981527ef8544c48ae5a188ca8eed3935ab2e49fc52c",
+                      "size_bytes": 729
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-010.txt",
+                      "sha256": "937aaa900da032b65830d692ea57938ca43a3eb01cd59c432c9562c7e3d835fe",
+                      "size_bytes": 26065
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-011.txt",
+                      "sha256": "5d6e69e8470f6715d371ab0219265e1017ddf1ceb46322fcf5a1addc8329c37a",
+                      "size_bytes": 727
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-012.txt",
+                      "sha256": "03d93630752170f83b034ba9c908f49d24148fccaeae8fc52a220ed8d56eb4b4",
+                      "size_bytes": 26051
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-013.txt",
+                      "sha256": "eb23145bd8521bd7882bdfccae2aac741f22f7e4cc7e66239d13153d4073db78",
+                      "size_bytes": 737
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-014.txt",
+                      "sha256": "84715a80713a691e253cb07143601b7528520b32bfb338ab18bd24f877df2d11",
+                      "size_bytes": 26071
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-015.txt",
+                      "sha256": "ddb8daf27f666e2871f24bf4e3d8b0313b77491f636efb83036d99400e0d2f68",
+                      "size_bytes": 734
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs/xdistcs-016.txt",
+                      "sha256": "c786b7ba17e79b6893cfa654512df430d394d9450afd8f560da3be959fce4325",
+                      "size_bytes": 26075
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "evidence_paths": {
+            "positive_result_json": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs.json",
+            "positive_raw_logs": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30082_v2_abs",
+            "candidate_control_results": [
+              "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs.json"
+            ],
+            "candidate_raw_logs": [
+              "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v2_abs"
+            ]
+          },
+          "issue_scenario_accounting": {
+            "existing_scenario_count_across_issue_versions": 4,
+            "new_scenario_count_across_both_group_versions": 8,
+            "issue_total_scenario_count_after_append": 12,
+            "limit": 15,
+            "within_limit": true
+          },
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "41ceceaab97c17b57268c67a0b0d94f218e7cd843c4642779da8b1e357a81bc4",
+            "script_sha256": "679701cadd55955fc3190c39c7edd552b95f2ee94937cd3faa0f20655a09e3bd",
+            "draw_executable_sha256": "de985586b15afb1cfa56f031dd9a0e2b5da2d9ef5c7fb641a4403c24ead5f7a7",
+            "assertions": 38,
+            "numeric_assertions": 30,
+            "elapsed_seconds": 0.065,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/NG-04R-v2/mantis-30082-neighborhood-dense-residual-v2.json",
+            "result_json_sha256": "4deeed8b5dae2d029f59a73a9853824fd31402561315f604078059d95365b04f",
+            "wall_timeout_seconds": 90,
+            "cpu_limit_seconds": 87,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "NG-04R-v2",
+          "checkpoint": {
+            "case": "evaluation/cases/mantis-30202/2/neighborhood_facepair_matrix.tcl",
+            "category": "neighborhood",
+            "id": "mantis-30202-neighborhood-facepair-matrix",
+            "issue_id": "mantis-30202",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "timeout_seconds": 90,
+            "visibility": "hidden"
+          },
+          "dimensions": [
+            "scale",
+            "rotation",
+            "translation",
+            "operand_order",
+            "selected_trimmed_face_pair",
+            "empty_intersection_oracle"
+          ],
+          "scenario_count": 4,
+          "scenarios": [
+            {
+              "scenario_id": "m30202-scale-0.5-forward",
+              "parameters": {
+                "scale": 0.5,
+                "rotation_degrees_about_axis_1_2_3": 37,
+                "translation": [
+                  100,
+                  -30,
+                  12
+                ],
+                "selected_face_pair": [
+                  "source_face_5",
+                  "tool_face_7"
+                ],
+                "operand_order": "forward",
+                "expected": "empty 3D intersection"
+              }
+            },
+            {
+              "scenario_id": "m30202-scale-0.5-reverse",
+              "parameters": {
+                "scale": 0.5,
+                "rotation_degrees_about_axis_1_2_3": 37,
+                "translation": [
+                  100,
+                  -30,
+                  12
+                ],
+                "selected_face_pair": [
+                  "source_face_5",
+                  "tool_face_7"
+                ],
+                "operand_order": "reverse",
+                "expected": "empty 3D intersection"
+              }
+            },
+            {
+              "scenario_id": "m30202-scale-1.5-forward",
+              "parameters": {
+                "scale": 1.5,
+                "rotation_degrees_about_axis_1_2_3": 71,
+                "translation": [
+                  -240,
+                  55,
+                  36
+                ],
+                "selected_face_pair": [
+                  "source_face_5",
+                  "tool_face_7"
+                ],
+                "operand_order": "forward",
+                "expected": "empty 3D intersection"
+              }
+            },
+            {
+              "scenario_id": "m30202-scale-1.5-reverse",
+              "parameters": {
+                "scale": 1.5,
+                "rotation_degrees_about_axis_1_2_3": 71,
+                "translation": [
+                  -240,
+                  55,
+                  36
+                ],
+                "selected_face_pair": [
+                  "source_face_5",
+                  "tool_face_7"
+                ],
+                "operand_order": "reverse",
+                "expected": "empty 3D intersection"
+              }
+            }
+          ],
+          "support_files": [
+            "evaluation/cases/mantis-30082/5/neighbor_support.tcl"
+          ],
+          "issue_total_scenario_count_after_append": 5,
+          "existing_scenario_count_basis": "Existing neighborhood cases inspected in-tree: 1 distinct issue/input operation scenes; matrix alternatives are counted separately.",
+          "artifact_hashes": {
+            "checkpoint_sha256": "03a8a9eb99abe711d8b6c89e5279397e73efd6fd838b04e52c01b37cd20f354e",
+            "support_files": {
+              "evaluation/cases/mantis-30082/5/neighbor_support.tcl": "148dc7b8777fab1f729b55d20ad43dfb10d08fb4d68c3dee69ce78c0a445310e"
+            }
+          },
+          "evidence": {
+            "status": "reference_and_candidate_replay_complete",
+            "positive_reference": {
+              "trusted_reference_group": "NG-04R-v2",
+              "build": {
+                "draw_executable": "data/neighborhood-validation/NG04_reference/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                "sha256": "de985586b15afb1cfa56f031dd9a0e2b5da2d9ef5c7fb641a4403c24ead5f7a7",
+                "source_id": "trusted-patched-reference"
+              },
+              "build_receipt": "data/neighborhood-validation/NG04_reference/build-receipt.json",
+              "build_receipt_sha256": "a6c10e966bee33def0fb8772318eb6e45d696ecad4ec42befac3bfa662527f4d",
+              "source_tree_sha256_after_patch": "f5094f5fa60c3c16fbaeac830ac1f4d6b802431b73e6f527990ce909dfd94bdf",
+              "patch_sha256": "0a657cb55f39cf3f4e4cb381d61f97aecff850db93fd580fc619e9a5ae72e776",
+              "run": {
+                "result_json": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30202_bop.json",
+                "result_sha256": "e0e454d2a613b21786dfb1bbff8cfc114c721b9f3b16c08be203b96cb4cae116",
+                "passed": true,
+                "assertions": 4,
+                "numeric_assertions": 0,
+                "failed_assertions": 0,
+                "test_done_marker": true,
+                "return_code": 0,
+                "timed_out": false,
+                "tcl_error_detected": false,
+                "infrastructure_tcl_error": false,
+                "occt_error_detected": false,
+                "expected_oracle_error": false,
+                "script": "benchmarks/occt/evaluation/cases/mantis-30202/2/neighborhood_facepair_matrix.tcl",
+                "draw_executable": "data/neighborhood-validation/NG04_reference/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                "elapsed_seconds": 0.065
+              },
+              "raw_log_manifest": {
+                "directory": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30202_bop",
+                "file_count": 0,
+                "directory_sha256": null,
+                "files": []
+              }
+            },
+            "candidate_controls": [
+              {
+                "control_role": "same-issue candidate replay",
+                "build": {
+                  "draw_executable": "data/runs/f30483a65e4ac887/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "sha256": "8d0b8962578657aabd4b9cbbd88aea299960888cb882e7e53f3702dde257e8a8",
+                  "source_id": "f30483a65e4ac887"
+                },
+                "run": {
+                  "result_json": "data/neighborhood-validation/evidence/mantis/f304_candidate_m30202.json",
+                  "result_sha256": "0067cb10ce919b4e966c4082609837ff63d09cf5aaf41df41317b54383a0edb7",
+                  "passed": true,
+                  "assertions": 4,
+                  "numeric_assertions": 0,
+                  "failed_assertions": 0,
+                  "test_done_marker": true,
+                  "return_code": 0,
+                  "timed_out": false,
+                  "tcl_error_detected": false,
+                  "infrastructure_tcl_error": false,
+                  "occt_error_detected": false,
+                  "expected_oracle_error": false,
+                  "script": "benchmarks/occt/evaluation/cases/mantis-30202/2/neighborhood_facepair_matrix.tcl",
+                  "draw_executable": "data/runs/f30483a65e4ac887/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "elapsed_seconds": 0.777
+                },
+                "raw_log_manifest": {
+                  "directory": "data/neighborhood-validation/evidence/mantis/f304_candidate_m30202",
+                  "file_count": 0,
+                  "directory_sha256": null,
+                  "files": []
+                }
+              },
+              {
+                "control_role": "cross_source_candidate; execution_error/signal, not an oracle rejection",
+                "build": {
+                  "draw_executable": "data/runs/b5de75845927f214/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "sha256": "8d0b8962578657aabd4b9cbbd88aea299960888cb882e7e53f3702dde257e8a8",
+                  "source_id": "b5de75845927f214"
+                },
+                "run": {
+                  "result_json": "data/neighborhood-validation/evidence/mantis/b5_cross_m30202.json",
+                  "result_sha256": "65ad4abf08fed71d63870ad3478cc6d4ed4418415389a2809bc9e810c3366c8b",
+                  "passed": false,
+                  "assertions": 0,
+                  "numeric_assertions": 0,
+                  "failed_assertions": 0,
+                  "test_done_marker": false,
+                  "return_code": 0,
+                  "timed_out": false,
+                  "tcl_error_detected": true,
+                  "infrastructure_tcl_error": true,
+                  "occt_error_detected": true,
+                  "expected_oracle_error": false,
+                  "script": "benchmarks/occt/evaluation/cases/mantis-30202/2/neighborhood_facepair_matrix.tcl",
+                  "draw_executable": "data/runs/b5de75845927f214/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "elapsed_seconds": 0.032
+                },
+                "raw_log_manifest": {
+                  "directory": "data/neighborhood-validation/evidence/mantis/b5_cross_m30202",
+                  "file_count": 0,
+                  "directory_sha256": null,
+                  "files": []
+                }
+              }
+            ]
+          },
+          "evidence_paths": {
+            "positive_result_json": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30202_bop.json",
+            "positive_raw_logs": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m30202_bop",
+            "candidate_control_results": [
+              "data/neighborhood-validation/evidence/mantis/f304_candidate_m30202.json",
+              "data/neighborhood-validation/evidence/mantis/b5_cross_m30202.json"
+            ],
+            "candidate_raw_logs": [
+              "data/neighborhood-validation/evidence/mantis/f304_candidate_m30202",
+              "data/neighborhood-validation/evidence/mantis/b5_cross_m30202"
+            ]
+          },
+          "issue_scenario_accounting": {
+            "existing_scenario_count": 1,
+            "issue_total_scenario_count_after_append": 5,
+            "limit": 15,
+            "within_limit": true
+          },
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "41ceceaab97c17b57268c67a0b0d94f218e7cd843c4642779da8b1e357a81bc4",
+            "script_sha256": "03a8a9eb99abe711d8b6c89e5279397e73efd6fd838b04e52c01b37cd20f354e",
+            "draw_executable_sha256": "de985586b15afb1cfa56f031dd9a0e2b5da2d9ef5c7fb641a4403c24ead5f7a7",
+            "assertions": 4,
+            "numeric_assertions": 0,
+            "elapsed_seconds": 0.065,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/NG-04R-v2/mantis-30202-neighborhood-facepair-matrix.json",
+            "result_json_sha256": "a9a060aed4affc55918dd489ba32377b604956aff72ad231bf885ea8133236e0",
+            "wall_timeout_seconds": 90,
+            "cpu_limit_seconds": 87,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "NG-04R-v2",
+          "checkpoint": {
+            "case": "evaluation/cases/mantis-33541/2/neighborhood_boolean_transform.tcl",
+            "category": "neighborhood",
+            "id": "mantis-33541-neighborhood-boolean-transform",
+            "issue_id": "mantis-33541",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "timeout_seconds": 90,
+            "visibility": "hidden"
+          },
+          "dimensions": [
+            "scale",
+            "shared_rigid_pose",
+            "cut_common_operand_order",
+            "analytic_scaled_volume"
+          ],
+          "scenario_count": 4,
+          "scenarios": [
+            {
+              "scenario_id": "m33541-half_scale_pose_a-cut-common-forward",
+              "parameters": {
+                "scale": 0.5,
+                "rotation_degrees_about_axis_1_2_3": 31,
+                "shared_translation": [
+                  80,
+                  -45,
+                  22
+                ],
+                "operations": [
+                  "cylinder-minus-sphere",
+                  "common"
+                ],
+                "physical_oracle": "analytic scaled volumes",
+                "operand_order": "forward"
+              }
+            },
+            {
+              "scenario_id": "m33541-half_scale_pose_a-reverse-cut",
+              "parameters": {
+                "scale": 0.5,
+                "rotation_degrees_about_axis_1_2_3": 31,
+                "shared_translation": [
+                  80,
+                  -45,
+                  22
+                ],
+                "operations": [
+                  "sphere-minus-cylinder"
+                ],
+                "physical_oracle": "analytic scaled volumes",
+                "operand_order": "reverse"
+              }
+            },
+            {
+              "scenario_id": "m33541-enlarged_pose_b-cut-common-forward",
+              "parameters": {
+                "scale": 1.5,
+                "rotation_degrees_about_axis_1_2_3": 67,
+                "shared_translation": [
+                  -120,
+                  35,
+                  19
+                ],
+                "operations": [
+                  "cylinder-minus-sphere",
+                  "common"
+                ],
+                "physical_oracle": "analytic scaled volumes",
+                "operand_order": "forward"
+              }
+            },
+            {
+              "scenario_id": "m33541-enlarged_pose_b-reverse-cut",
+              "parameters": {
+                "scale": 1.5,
+                "rotation_degrees_about_axis_1_2_3": 67,
+                "shared_translation": [
+                  -120,
+                  35,
+                  19
+                ],
+                "operations": [
+                  "sphere-minus-cylinder"
+                ],
+                "physical_oracle": "analytic scaled volumes",
+                "operand_order": "reverse"
+              }
+            }
+          ],
+          "support_files": [
+            "evaluation/cases/mantis-30082/5/neighbor_support.tcl"
+          ],
+          "issue_total_scenario_count_after_append": 6,
+          "existing_scenario_count_basis": "Existing M33541 neighborhood contains two distinct scale/placement scenes; each new pose contributes one forward Cut/Common scene and one reverse-Cut scene.",
+          "artifact_hashes": {
+            "checkpoint_sha256": "532f2db0a41054f82fc3bbb14b3a1d26f468b47fb6b20051b3767e95a098d5e4",
+            "support_files": {
+              "evaluation/cases/mantis-30082/5/neighbor_support.tcl": "148dc7b8777fab1f729b55d20ad43dfb10d08fb4d68c3dee69ce78c0a445310e"
+            }
+          },
+          "evidence": {
+            "status": "reference_and_candidate_replay_complete",
+            "positive_reference": {
+              "trusted_reference_group": "NG-04R-v2",
+              "build": {
+                "draw_executable": "data/neighborhood-validation/NG04_reference/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                "sha256": "de985586b15afb1cfa56f031dd9a0e2b5da2d9ef5c7fb641a4403c24ead5f7a7",
+                "source_id": "trusted-patched-reference"
+              },
+              "build_receipt": "data/neighborhood-validation/NG04_reference/build-receipt.json",
+              "build_receipt_sha256": "a6c10e966bee33def0fb8772318eb6e45d696ecad4ec42befac3bfa662527f4d",
+              "source_tree_sha256_after_patch": "f5094f5fa60c3c16fbaeac830ac1f4d6b802431b73e6f527990ce909dfd94bdf",
+              "patch_sha256": "0a657cb55f39cf3f4e4cb381d61f97aecff850db93fd580fc619e9a5ae72e776",
+              "run": {
+                "result_json": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m33541.json",
+                "result_sha256": "98ad3d4928e723f0f1247f685f27578c73c82957a29a9520975462dffecad691",
+                "passed": true,
+                "assertions": 18,
+                "numeric_assertions": 6,
+                "failed_assertions": 0,
+                "test_done_marker": true,
+                "return_code": 0,
+                "timed_out": false,
+                "tcl_error_detected": false,
+                "infrastructure_tcl_error": false,
+                "occt_error_detected": false,
+                "expected_oracle_error": false,
+                "script": "benchmarks/occt/evaluation/cases/mantis-33541/2/neighborhood_boolean_transform.tcl",
+                "draw_executable": "data/neighborhood-validation/NG04_reference/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                "elapsed_seconds": 0.215
+              },
+              "raw_log_manifest": {
+                "directory": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m33541",
+                "file_count": 0,
+                "directory_sha256": null,
+                "files": []
+              }
+            },
+            "candidate_controls": [
+              {
+                "control_role": "candidate replay; no rejection observed",
+                "build": {
+                  "draw_executable": "data/runs/b5de75845927f214/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "sha256": "8d0b8962578657aabd4b9cbbd88aea299960888cb882e7e53f3702dde257e8a8",
+                  "source_id": "b5de75845927f214"
+                },
+                "run": {
+                  "result_json": "data/neighborhood-validation/evidence/mantis/m33541_fixed_b5.json",
+                  "result_sha256": "f16cc001af3bddc5e808a2081fe9217ccef439da225d2f3700f785ddf9925246",
+                  "passed": true,
+                  "assertions": 18,
+                  "numeric_assertions": 6,
+                  "failed_assertions": 0,
+                  "test_done_marker": true,
+                  "return_code": 0,
+                  "timed_out": false,
+                  "tcl_error_detected": false,
+                  "infrastructure_tcl_error": false,
+                  "occt_error_detected": false,
+                  "expected_oracle_error": false,
+                  "script": "benchmarks/occt/evaluation/cases/mantis-33541/2/neighborhood_boolean_transform.tcl",
+                  "draw_executable": "data/runs/b5de75845927f214/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "elapsed_seconds": 0.165
+                },
+                "raw_log_manifest": {
+                  "directory": "data/neighborhood-validation/evidence/mantis/m33541_fixed_b5",
+                  "file_count": 0,
+                  "directory_sha256": null,
+                  "files": []
+                }
+              }
+            ]
+          },
+          "evidence_paths": {
+            "positive_result_json": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m33541.json",
+            "positive_raw_logs": "data/neighborhood-validation/evidence/mantis/ng04_fixed_m33541",
+            "candidate_control_results": [
+              "data/neighborhood-validation/evidence/mantis/m33541_fixed_b5.json"
+            ],
+            "candidate_raw_logs": [
+              "data/neighborhood-validation/evidence/mantis/m33541_fixed_b5"
+            ]
+          },
+          "issue_scenario_accounting": {
+            "existing_scenario_count": 2,
+            "issue_total_scenario_count_after_append": 6,
+            "limit": 15,
+            "within_limit": true
+          },
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "41ceceaab97c17b57268c67a0b0d94f218e7cd843c4642779da8b1e357a81bc4",
+            "script_sha256": "532f2db0a41054f82fc3bbb14b3a1d26f468b47fb6b20051b3767e95a098d5e4",
+            "draw_executable_sha256": "de985586b15afb1cfa56f031dd9a0e2b5da2d9ef5c7fb641a4403c24ead5f7a7",
+            "assertions": 18,
+            "numeric_assertions": 6,
+            "elapsed_seconds": 0.165,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/NG-04R-v2/mantis-33541-neighborhood-boolean-transform.json",
+            "result_json_sha256": "00adf084df83c4f8ef092b1c20d7653ed71808274c944343383fd16d1ad014e2",
+            "wall_timeout_seconds": 90,
+            "cpu_limit_seconds": 87,
+            "address_space_gib": 4
+          }
+        }
+      ]
+    },
+    {
+      "group_id": "NG-05T-v1",
+      "group_version": "1",
+      "suite_id": "NG-05T-v1-checks",
+      "suite_version": "1",
+      "suite_path": "evaluation/suites/new/occt-30082-31602-32850/1.json",
+      "suite_sha256_before": "6103e5da3f1794ad946482e5783a3375ce423f89951dbc6a6fae40acc8a9b711",
+      "suite_sha256_after": "9f4d62f8563b97a03578aea10e276c998519126842e0c2477eadcbe06bc89b12",
+      "original_checkpoints_preserved": true,
+      "original_checkpoint_list_sha256": "6e91dfdc3f5c5343f34e74f209f0baf2701a7c7855ead773fd57a1e07484e9f9",
+      "old_checkpoint_count": 9,
+      "new_checkpoint_count": 3,
+      "new_scenario_count": 12,
+      "checkpoints": [
+        {
+          "group_id": "NG-05T-v1",
+          "checkpoint": {
+            "case": "evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v4.tcl",
+            "category": "neighborhood",
+            "id": "mantis-30082-neighborhood-dense-residual-v4",
+            "issue_id": "mantis-30082",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "timeout_seconds": 90,
+            "visibility": "hidden"
+          },
+          "dimensions": [
+            "scale",
+            "rotation",
+            "translation",
+            "operand_order",
+            "20_vs_1000_xdistcs_sampling",
+            "reported_tolerance_consistency",
+            "absolute_precision_based_physical_cap",
+            "synthetic_reported_tolerance_inflation_control"
+          ],
+          "scenario_count": 4,
+          "scenarios": [
+            {
+              "scenario_id": "m30082-v4-scale-0.5-forward",
+              "parameters": {
+                "issue_version": 4,
+                "scale": 0.5,
+                "rotation_degrees_about_axis_1_2_3": 31,
+                "translation": [
+                  250,
+                  -80,
+                  40
+                ],
+                "operand_order": "forward",
+                "sample_counts_per_surface": [
+                  20,
+                  1000
+                ]
+              }
+            },
+            {
+              "scenario_id": "m30082-v4-scale-0.5-reverse",
+              "parameters": {
+                "issue_version": 4,
+                "scale": 0.5,
+                "rotation_degrees_about_axis_1_2_3": 31,
+                "translation": [
+                  250,
+                  -80,
+                  40
+                ],
+                "operand_order": "reverse",
+                "sample_counts_per_surface": [
+                  20,
+                  1000
+                ]
+              }
+            },
+            {
+              "scenario_id": "m30082-v4-scale-2-forward",
+              "parameters": {
+                "issue_version": 4,
+                "scale": 2.0,
+                "rotation_degrees_about_axis_1_2_3": 67,
+                "translation": [
+                  -120,
+                  55,
+                  18
+                ],
+                "operand_order": "forward",
+                "sample_counts_per_surface": [
+                  20,
+                  1000
+                ]
+              }
+            },
+            {
+              "scenario_id": "m30082-v4-scale-2-reverse",
+              "parameters": {
+                "issue_version": 4,
+                "scale": 2.0,
+                "rotation_degrees_about_axis_1_2_3": 67,
+                "translation": [
+                  -120,
+                  55,
+                  18
+                ],
+                "operand_order": "reverse",
+                "sample_counts_per_surface": [
+                  20,
+                  1000
+                ]
+              }
+            }
+          ],
+          "support_files": [
+            "evaluation/cases/mantis-30082/5/neighbor_support.tcl"
+          ],
+          "issue_total_scenario_count_after_append": 12,
+          "existing_scenario_count_basis": "Existing neighborhood cases inspected in-tree: 2 distinct issue/input operation scenes; matrix alternatives are counted separately.",
+          "artifact_hashes": {
+            "checkpoint_sha256": "da48650c959e17219129d39111adb84e31b1581698bf423faa4bdcf3c76da7ad",
+            "support_files": {
+              "evaluation/cases/mantis-30082/5/neighbor_support.tcl": "148dc7b8777fab1f729b55d20ad43dfb10d08fb4d68c3dee69ce78c0a445310e"
+            }
+          },
+          "evidence": {
+            "status": "reference_and_candidate_replay_complete",
+            "positive_reference": {
+              "trusted_reference_group": "NG-05T-v1",
+              "build": {
+                "draw_executable": "data/neighborhood-validation/NG05_reference/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                "sha256": "9ec9013fe8971dcd45d7324fefdbdf235268898ab1c79b65d8a52b0f2bc4a33c",
+                "source_id": "trusted-patched-reference"
+              },
+              "build_receipt": "data/neighborhood-validation/NG05_reference/build-receipt.json",
+              "build_receipt_sha256": "bf93bfb99d5a6a4a040e5ebbcbd56f2eafbeae37b77335a5ba33f641ba949ecf",
+              "source_tree_sha256_after_patch": "d48e73eb8ad378ef637c25b2b69d7eed6324f4f23f8c02763770d706249ce8bc",
+              "patch_sha256": "e969460acfdd3e2fd9eba551bf6e4410e3b72615b60f2ad30956c348dce6423d",
+              "run": {
+                "result_json": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs.json",
+                "result_sha256": "587aed264b524c989b0b75acccaae92e6e26dd56996fe3c617ad010ee7763e3b",
+                "passed": true,
+                "assertions": 38,
+                "numeric_assertions": 30,
+                "failed_assertions": 0,
+                "test_done_marker": true,
+                "return_code": 0,
+                "timed_out": false,
+                "tcl_error_detected": false,
+                "infrastructure_tcl_error": false,
+                "occt_error_detected": false,
+                "expected_oracle_error": false,
+                "script": "benchmarks/occt/evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v4.tcl",
+                "draw_executable": "data/neighborhood-validation/NG05_reference/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                "elapsed_seconds": 0.115
+              },
+              "raw_log_manifest": {
+                "directory": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs",
+                "file_count": 16,
+                "directory_sha256": "24faef9e985056fc1e2b13775edb14b37dec30d6be6d3b834252dd9a8ac7d97f",
+                "files": [
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-001.txt",
+                    "sha256": "88683da0c25e74c56ac6c93e7e84bc4ce35347da5fc3cc58e1177f06592e2e0f",
+                    "size_bytes": 710
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-002.txt",
+                    "sha256": "516d35d9a735b087f17f0b2c81ba1045e9a651721e5e0332ed6f2e4b661beb70",
+                    "size_bytes": 26052
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-003.txt",
+                    "sha256": "0c7b00a08fd5891ffadcdf66726673d05491049139b795d6684d7f0e78aba07c",
+                    "size_bytes": 724
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-004.txt",
+                    "sha256": "fabc5796b179d9711b828365916b2eecc151e0d42e08e6bbce1296dc38d08f39",
+                    "size_bytes": 26052
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-005.txt",
+                    "sha256": "c9ffea099b6be28e79894aa0ee6ca8cd87fbe03968022a448e96c7a3bc353cbc",
+                    "size_bytes": 718
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-006.txt",
+                    "sha256": "f004cf1a93c47ff3851901bb09c01e2ed004333e2e8d69ebe2f73ecd6894963e",
+                    "size_bytes": 26062
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-007.txt",
+                    "sha256": "94a1bbc599259c8db215109c0cb73a76c95eeb9a591d34b227f297cf195633e5",
+                    "size_bytes": 731
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-008.txt",
+                    "sha256": "73dc0e9ec351a91931579b9cf9ae21c5c8a250802312867c95bb6136eac2c04e",
+                    "size_bytes": 26035
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-009.txt",
+                    "sha256": "b1b6f95769d9ec5061281505d7d146072194c055adee29b9ddc6ff523523f0f5",
+                    "size_bytes": 728
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-010.txt",
+                    "sha256": "e81d9c8e80d326169d5ed3df098f861647eeed74d7471e00e4bae273314a38ab",
+                    "size_bytes": 26052
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-011.txt",
+                    "sha256": "36209883b10a8efb3158c3a17c79f83e8235fa96ab97eb15e37ede3a93623d1a",
+                    "size_bytes": 728
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-012.txt",
+                    "sha256": "2bca40e15b4a7013315d8a2ed83ba96eb8607c34564c67dc691e78d1bc2b1584",
+                    "size_bytes": 26065
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-013.txt",
+                    "sha256": "1c7a318bedb448467f70c81cc8c78800c1b797aadb36808d3d17f4d374068f22",
+                    "size_bytes": 738
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-014.txt",
+                    "sha256": "134a428f673f54525371a7035608266cf1adf47363a49a46558b2cf6f25e870b",
+                    "size_bytes": 26068
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-015.txt",
+                    "sha256": "b5f144cec247ff27459c4e5915d392f51c6f954e6223297d7ad0644d48e7a00d",
+                    "size_bytes": 736
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs/xdistcs-016.txt",
+                    "sha256": "fae69bdaffdbd8fc969f29981b96fac6aeb15b5e7a02e4eeaf3d7d2f7f4fc103",
+                    "size_bytes": 26047
+                  }
+                ]
+              }
+            },
+            "candidate_controls": [
+              {
+                "control_role": "same-issue candidate negative control",
+                "build": {
+                  "draw_executable": "data/runs/b5de75845927f214/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "sha256": "8d0b8962578657aabd4b9cbbd88aea299960888cb882e7e53f3702dde257e8a8",
+                  "source_id": "b5de75845927f214"
+                },
+                "run": {
+                  "result_json": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs.json",
+                  "result_sha256": "4b4ad48970f44520794af96d0924f4d12fb765083e53e45ae698e725264ceef8",
+                  "passed": false,
+                  "assertions": 38,
+                  "numeric_assertions": 30,
+                  "failed_assertions": 16,
+                  "test_done_marker": false,
+                  "return_code": 0,
+                  "timed_out": false,
+                  "tcl_error_detected": true,
+                  "infrastructure_tcl_error": false,
+                  "occt_error_detected": false,
+                  "expected_oracle_error": true,
+                  "script": "benchmarks/occt/evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v4.tcl",
+                  "draw_executable": "data/runs/b5de75845927f214/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "elapsed_seconds": 0.064
+                },
+                "raw_log_manifest": {
+                  "directory": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs",
+                  "file_count": 16,
+                  "directory_sha256": "5c466d53be859c04d1c08f96684e16f7e14bdca09433fa0788dbd31f6fc71623",
+                  "files": [
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-001.txt",
+                      "sha256": "624fe7decc23a60dd95d5973ce68ddd43ac411cd791b78bdf63e188d71a8dcff",
+                      "size_bytes": 711
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-002.txt",
+                      "sha256": "88ed9e3136981d21aa7188dc1b65b9ea1c24502e8ea22f1bc0a0cc453c1967db",
+                      "size_bytes": 26048
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-003.txt",
+                      "sha256": "e409ca6e61f922573a02d8777f40bda7e7fc6920aafd69f1809cf07a964351bc",
+                      "size_bytes": 724
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-004.txt",
+                      "sha256": "24411b71dee5bfc87c0aacaead3988ef6ac97a970c30d47ddee6c11889c802f4",
+                      "size_bytes": 26046
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-005.txt",
+                      "sha256": "8738726f9436fea791f2ba7a66df576b58b140ce67eddca6520d2922f665d53c",
+                      "size_bytes": 720
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-006.txt",
+                      "sha256": "4226542a715f46162eab57a849723085af740f0e38c50c7e12ac2f9f8785bccb",
+                      "size_bytes": 26063
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-007.txt",
+                      "sha256": "386946be81df119fee4bfa7000a336036029ed588fa7315e799bee2d98ac3cbb",
+                      "size_bytes": 730
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-008.txt",
+                      "sha256": "34f4df3f786bdc434d6dbdff153e591dbdc5ab0392619937120b4c19c16e5284",
+                      "size_bytes": 26052
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-009.txt",
+                      "sha256": "8e64b8a1936a5f65300e4981527ef8544c48ae5a188ca8eed3935ab2e49fc52c",
+                      "size_bytes": 729
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-010.txt",
+                      "sha256": "937aaa900da032b65830d692ea57938ca43a3eb01cd59c432c9562c7e3d835fe",
+                      "size_bytes": 26065
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-011.txt",
+                      "sha256": "5d6e69e8470f6715d371ab0219265e1017ddf1ceb46322fcf5a1addc8329c37a",
+                      "size_bytes": 727
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-012.txt",
+                      "sha256": "03d93630752170f83b034ba9c908f49d24148fccaeae8fc52a220ed8d56eb4b4",
+                      "size_bytes": 26051
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-013.txt",
+                      "sha256": "eb23145bd8521bd7882bdfccae2aac741f22f7e4cc7e66239d13153d4073db78",
+                      "size_bytes": 737
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-014.txt",
+                      "sha256": "84715a80713a691e253cb07143601b7528520b32bfb338ab18bd24f877df2d11",
+                      "size_bytes": 26071
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-015.txt",
+                      "sha256": "ddb8daf27f666e2871f24bf4e3d8b0313b77491f636efb83036d99400e0d2f68",
+                      "size_bytes": 734
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs/xdistcs-016.txt",
+                      "sha256": "c786b7ba17e79b6893cfa654512df430d394d9450afd8f560da3be959fce4325",
+                      "size_bytes": 26075
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "evidence_paths": {
+            "positive_result_json": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs.json",
+            "positive_raw_logs": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m30082_v4_abs",
+            "candidate_control_results": [
+              "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs.json"
+            ],
+            "candidate_raw_logs": [
+              "data/neighborhood-validation/evidence/mantis/b5_fixed_m30082_v4_abs"
+            ]
+          },
+          "issue_scenario_accounting": {
+            "existing_scenario_count_across_issue_versions": 4,
+            "new_scenario_count_across_both_group_versions": 8,
+            "issue_total_scenario_count_after_append": 12,
+            "limit": 15,
+            "within_limit": true
+          },
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7336c5478de77cce2e6c15c7657325e195d8b069d51a21989b97463d82cd9b80",
+            "script_sha256": "da48650c959e17219129d39111adb84e31b1581698bf423faa4bdcf3c76da7ad",
+            "draw_executable_sha256": "9ec9013fe8971dcd45d7324fefdbdf235268898ab1c79b65d8a52b0f2bc4a33c",
+            "assertions": 38,
+            "numeric_assertions": 30,
+            "elapsed_seconds": 0.115,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/NG-05T-v1/mantis-30082-neighborhood-dense-residual-v4.json",
+            "result_json_sha256": "55584e998547f811d0f8da5716ffdc50d373d966b968bae5f4fe5fa28bdb2345",
+            "wall_timeout_seconds": 90,
+            "cpu_limit_seconds": 87,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "NG-05T-v1",
+          "checkpoint": {
+            "case": "evaluation/cases/mantis-31602/2/neighborhood_seam_matrix.tcl",
+            "category": "neighborhood",
+            "id": "mantis-31602-neighborhood-seam-matrix",
+            "issue_id": "mantis-31602",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "timeout_seconds": 90,
+            "visibility": "hidden"
+          },
+          "dimensions": [
+            "scale",
+            "rotation",
+            "translation",
+            "operand_order",
+            "periodic_seam",
+            "201_point_physical_residual",
+            "scaled_branch_length"
+          ],
+          "scenario_count": 4,
+          "scenarios": [
+            {
+              "scenario_id": "m31602-scale-0.5-forward",
+              "parameters": {
+                "scale": 0.5,
+                "rotation_degrees_about_axis_1_2_3": 29,
+                "translation": [
+                  45,
+                  -22,
+                  13
+                ],
+                "operand_order": "forward",
+                "physical_oracle": "201-point surface residual plus scaled branch length"
+              }
+            },
+            {
+              "scenario_id": "m31602-scale-0.5-reverse",
+              "parameters": {
+                "scale": 0.5,
+                "rotation_degrees_about_axis_1_2_3": 29,
+                "translation": [
+                  45,
+                  -22,
+                  13
+                ],
+                "operand_order": "reverse",
+                "physical_oracle": "201-point surface residual plus scaled branch length"
+              }
+            },
+            {
+              "scenario_id": "m31602-scale-2-forward",
+              "parameters": {
+                "scale": 2.0,
+                "rotation_degrees_about_axis_1_2_3": 83,
+                "translation": [
+                  -140,
+                  65,
+                  28
+                ],
+                "operand_order": "forward",
+                "physical_oracle": "201-point surface residual plus scaled branch length"
+              }
+            },
+            {
+              "scenario_id": "m31602-scale-2-reverse",
+              "parameters": {
+                "scale": 2.0,
+                "rotation_degrees_about_axis_1_2_3": 83,
+                "translation": [
+                  -140,
+                  65,
+                  28
+                ],
+                "operand_order": "reverse",
+                "physical_oracle": "201-point surface residual plus scaled branch length"
+              }
+            }
+          ],
+          "support_files": [
+            "evaluation/cases/mantis-30082/5/neighbor_support.tcl"
+          ],
+          "issue_total_scenario_count_after_append": 5,
+          "existing_scenario_count_basis": "Existing neighborhood cases inspected in-tree: 1 distinct issue/input operation scenes; matrix alternatives are counted separately.",
+          "artifact_hashes": {
+            "checkpoint_sha256": "6367584b51e89c129524ac7b03f4c9c6996e93c7860ed5c3ffd2f0aa49374c5c",
+            "support_files": {
+              "evaluation/cases/mantis-30082/5/neighbor_support.tcl": "148dc7b8777fab1f729b55d20ad43dfb10d08fb4d68c3dee69ce78c0a445310e"
+            }
+          },
+          "evidence": {
+            "status": "reference_and_candidate_replay_complete",
+            "positive_reference": {
+              "trusted_reference_group": "NG-05T-v1",
+              "build": {
+                "draw_executable": "data/neighborhood-validation/NG05_reference/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                "sha256": "9ec9013fe8971dcd45d7324fefdbdf235268898ab1c79b65d8a52b0f2bc4a33c",
+                "source_id": "trusted-patched-reference"
+              },
+              "build_receipt": "data/neighborhood-validation/NG05_reference/build-receipt.json",
+              "build_receipt_sha256": "bf93bfb99d5a6a4a040e5ebbcbd56f2eafbeae37b77335a5ba33f641ba949ecf",
+              "source_tree_sha256_after_patch": "d48e73eb8ad378ef637c25b2b69d7eed6324f4f23f8c02763770d706249ce8bc",
+              "patch_sha256": "e969460acfdd3e2fd9eba551bf6e4410e3b72615b60f2ad30956c348dce6423d",
+              "run": {
+                "result_json": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m31602.json",
+                "result_sha256": "1c684ad40b2f09de626b5b8f753f85536085dc2c72256d007ef0f77531a44d64",
+                "passed": true,
+                "assertions": 26,
+                "numeric_assertions": 18,
+                "failed_assertions": 0,
+                "test_done_marker": true,
+                "return_code": 0,
+                "timed_out": false,
+                "tcl_error_detected": false,
+                "infrastructure_tcl_error": false,
+                "occt_error_detected": false,
+                "expected_oracle_error": false,
+                "script": "benchmarks/occt/evaluation/cases/mantis-31602/2/neighborhood_seam_matrix.tcl",
+                "draw_executable": "data/neighborhood-validation/NG05_reference/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                "elapsed_seconds": 0.165
+              },
+              "raw_log_manifest": {
+                "directory": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m31602",
+                "file_count": 8,
+                "directory_sha256": "9f38ef3290470b7b6ae898237a9a011e7dc6718500a4ba503453657bb5f44927",
+                "files": [
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m31602/xdistcs-001.txt",
+                    "sha256": "efdadc08f036ea5f8e1f1bab3678e37ec395c937f00c101b690ba00517c9c07c",
+                    "size_bytes": 4718
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m31602/xdistcs-002.txt",
+                    "sha256": "a8898ed9e64af33e2cadbc0e960452562fc0f77327c2dae78abff32a789bd862",
+                    "size_bytes": 4709
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m31602/xdistcs-003.txt",
+                    "sha256": "aac5d8298d83c83eae21f3867be06bd677f10a6067384b381262469c57550ed6",
+                    "size_bytes": 4716
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m31602/xdistcs-004.txt",
+                    "sha256": "ab9d4f6f201f9774c2ec8affa820d541de0c064dc455a583da98c1b8eff98a50",
+                    "size_bytes": 4718
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m31602/xdistcs-005.txt",
+                    "sha256": "81de98dcee07060d3b65b83416ead33eb264d9dc1cf0a29a0de6ea4ddedda56a",
+                    "size_bytes": 4720
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m31602/xdistcs-006.txt",
+                    "sha256": "44cdd2c182978102e19ee2f3cea37f16a4f7a75e127b582d200a81c7048be019",
+                    "size_bytes": 4726
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m31602/xdistcs-007.txt",
+                    "sha256": "176112764eb45d03a34ea5017b2a6275abce48c95f5ba11cc27e2618ece11dcc",
+                    "size_bytes": 4711
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m31602/xdistcs-008.txt",
+                    "sha256": "7d7d352cd5737ce75867e2a6ba505c3e583500f0bad5bb3907371cacfcc5d491",
+                    "size_bytes": 4725
+                  }
+                ]
+              }
+            },
+            "candidate_controls": [
+              {
+                "control_role": "candidate replay; no rejection observed",
+                "build": {
+                  "draw_executable": "data/runs/b5de75845927f214/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "sha256": "8d0b8962578657aabd4b9cbbd88aea299960888cb882e7e53f3702dde257e8a8",
+                  "source_id": "b5de75845927f214"
+                },
+                "run": {
+                  "result_json": "data/neighborhood-validation/evidence/mantis/m31602_candidate.json",
+                  "result_sha256": "8ea446b177e2960a3b92c340e1685fb37e99e57f6b71c0a2d2974845189ff3b9",
+                  "passed": true,
+                  "assertions": 26,
+                  "numeric_assertions": 18,
+                  "failed_assertions": 0,
+                  "test_done_marker": true,
+                  "return_code": 0,
+                  "timed_out": false,
+                  "tcl_error_detected": false,
+                  "infrastructure_tcl_error": false,
+                  "occt_error_detected": false,
+                  "expected_oracle_error": false,
+                  "script": "benchmarks/occt/evaluation/cases/mantis-31602/2/neighborhood_seam_matrix.tcl",
+                  "draw_executable": "data/runs/b5de75845927f214/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "elapsed_seconds": 0.165
+                },
+                "raw_log_manifest": {
+                  "directory": "data/neighborhood-validation/evidence/mantis/m31602_candidate",
+                  "file_count": 8,
+                  "directory_sha256": "9f38ef3290470b7b6ae898237a9a011e7dc6718500a4ba503453657bb5f44927",
+                  "files": [
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/m31602_candidate/xdistcs-001.txt",
+                      "sha256": "efdadc08f036ea5f8e1f1bab3678e37ec395c937f00c101b690ba00517c9c07c",
+                      "size_bytes": 4718
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/m31602_candidate/xdistcs-002.txt",
+                      "sha256": "a8898ed9e64af33e2cadbc0e960452562fc0f77327c2dae78abff32a789bd862",
+                      "size_bytes": 4709
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/m31602_candidate/xdistcs-003.txt",
+                      "sha256": "aac5d8298d83c83eae21f3867be06bd677f10a6067384b381262469c57550ed6",
+                      "size_bytes": 4716
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/m31602_candidate/xdistcs-004.txt",
+                      "sha256": "ab9d4f6f201f9774c2ec8affa820d541de0c064dc455a583da98c1b8eff98a50",
+                      "size_bytes": 4718
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/m31602_candidate/xdistcs-005.txt",
+                      "sha256": "81de98dcee07060d3b65b83416ead33eb264d9dc1cf0a29a0de6ea4ddedda56a",
+                      "size_bytes": 4720
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/m31602_candidate/xdistcs-006.txt",
+                      "sha256": "44cdd2c182978102e19ee2f3cea37f16a4f7a75e127b582d200a81c7048be019",
+                      "size_bytes": 4726
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/m31602_candidate/xdistcs-007.txt",
+                      "sha256": "176112764eb45d03a34ea5017b2a6275abce48c95f5ba11cc27e2618ece11dcc",
+                      "size_bytes": 4711
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/m31602_candidate/xdistcs-008.txt",
+                      "sha256": "7d7d352cd5737ce75867e2a6ba505c3e583500f0bad5bb3907371cacfcc5d491",
+                      "size_bytes": 4725
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "evidence_paths": {
+            "positive_result_json": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m31602.json",
+            "positive_raw_logs": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m31602",
+            "candidate_control_results": [
+              "data/neighborhood-validation/evidence/mantis/m31602_candidate.json"
+            ],
+            "candidate_raw_logs": [
+              "data/neighborhood-validation/evidence/mantis/m31602_candidate"
+            ]
+          },
+          "issue_scenario_accounting": {
+            "existing_scenario_count": 1,
+            "issue_total_scenario_count_after_append": 5,
+            "limit": 15,
+            "within_limit": true
+          },
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7336c5478de77cce2e6c15c7657325e195d8b069d51a21989b97463d82cd9b80",
+            "script_sha256": "6367584b51e89c129524ac7b03f4c9c6996e93c7860ed5c3ffd2f0aa49374c5c",
+            "draw_executable_sha256": "9ec9013fe8971dcd45d7324fefdbdf235268898ab1c79b65d8a52b0f2bc4a33c",
+            "assertions": 26,
+            "numeric_assertions": 18,
+            "elapsed_seconds": 0.165,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/NG-05T-v1/mantis-31602-neighborhood-seam-matrix.json",
+            "result_json_sha256": "14cc1a7620d9a364d3ff62deb6f0327062e3d6b6515f64ab2b401042981bfa10",
+            "wall_timeout_seconds": 90,
+            "cpu_limit_seconds": 87,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "NG-05T-v1",
+          "checkpoint": {
+            "case": "evaluation/cases/mantis-32850/1/neighborhood_branch_matrix.tcl",
+            "category": "neighborhood",
+            "id": "mantis-32850-neighborhood-branch-matrix",
+            "issue_id": "mantis-32850",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "timeout_seconds": 90,
+            "visibility": "hidden"
+          },
+          "dimensions": [
+            "scale",
+            "rotation",
+            "translation",
+            "operand_order",
+            "analytic_cylinder_residual",
+            "branch_pairwise_distinctness",
+            "short_long_branch_profile",
+            "reverse_order_analytic_cylinder_residual",
+            "reverse_order_branch_pairwise_distinctness"
+          ],
+          "scenario_count": 4,
+          "scenarios": [
+            {
+              "scenario_id": "m32850-scale-0.5-forward",
+              "parameters": {
+                "scale": 0.5,
+                "rotation_degrees_about_axis_1_2_3": 29,
+                "translation": [
+                  80,
+                  -45,
+                  18
+                ],
+                "operand_order": "forward",
+                "physical_oracle": "analytic cylinder residual, pairwise distinct branches, normalized short/long length profile"
+              }
+            },
+            {
+              "scenario_id": "m32850-scale-0.5-reverse",
+              "parameters": {
+                "scale": 0.5,
+                "rotation_degrees_about_axis_1_2_3": 29,
+                "translation": [
+                  80,
+                  -45,
+                  18
+                ],
+                "operand_order": "reverse",
+                "physical_oracle": "analytic cylinder residual, pairwise distinct branches, normalized short/long length profile"
+              }
+            },
+            {
+              "scenario_id": "m32850-scale-2-forward",
+              "parameters": {
+                "scale": 2.0,
+                "rotation_degrees_about_axis_1_2_3": 83,
+                "translation": [
+                  -150,
+                  60,
+                  27
+                ],
+                "operand_order": "forward",
+                "physical_oracle": "analytic cylinder residual, pairwise distinct branches, normalized short/long length profile"
+              }
+            },
+            {
+              "scenario_id": "m32850-scale-2-reverse",
+              "parameters": {
+                "scale": 2.0,
+                "rotation_degrees_about_axis_1_2_3": 83,
+                "translation": [
+                  -150,
+                  60,
+                  27
+                ],
+                "operand_order": "reverse",
+                "physical_oracle": "analytic cylinder residual, pairwise distinct branches, normalized short/long length profile"
+              }
+            }
+          ],
+          "support_files": [
+            "evaluation/cases/mantis-30082/5/neighbor_support.tcl"
+          ],
+          "issue_total_scenario_count_after_append": 5,
+          "existing_scenario_count_basis": "Existing neighborhood cases inspected in-tree: 1 distinct issue/input operation scenes; matrix alternatives are counted separately.",
+          "artifact_hashes": {
+            "checkpoint_sha256": "f5f23d901185a62d6657d92a89a69dfdcc3bb13aa058a47b81df164350abbd86",
+            "support_files": {
+              "evaluation/cases/mantis-30082/5/neighbor_support.tcl": "148dc7b8777fab1f729b55d20ad43dfb10d08fb4d68c3dee69ce78c0a445310e"
+            }
+          },
+          "evidence": {
+            "status": "reference_and_candidate_replay_complete",
+            "positive_reference": {
+              "trusted_reference_group": "NG-05T-v1",
+              "build": {
+                "draw_executable": "data/neighborhood-validation/NG05_reference/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                "sha256": "9ec9013fe8971dcd45d7324fefdbdf235268898ab1c79b65d8a52b0f2bc4a33c",
+                "source_id": "trusted-patched-reference"
+              },
+              "build_receipt": "data/neighborhood-validation/NG05_reference/build-receipt.json",
+              "build_receipt_sha256": "bf93bfb99d5a6a4a040e5ebbcbd56f2eafbeae37b77335a5ba33f641ba949ecf",
+              "source_tree_sha256_after_patch": "d48e73eb8ad378ef637c25b2b69d7eed6324f4f23f8c02763770d706249ce8bc",
+              "patch_sha256": "e969460acfdd3e2fd9eba551bf6e4410e3b72615b60f2ad30956c348dce6423d",
+              "run": {
+                "result_json": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m32850_v3_full/result.json",
+                "result_sha256": "30600b5c39c2654d6ff33cd516983174ad58e5e3ed5fc8e102bd1d39fdd1ce6a",
+                "passed": true,
+                "assertions": 104,
+                "numeric_assertions": 94,
+                "failed_assertions": 0,
+                "test_done_marker": true,
+                "return_code": 0,
+                "timed_out": false,
+                "tcl_error_detected": false,
+                "infrastructure_tcl_error": false,
+                "occt_error_detected": false,
+                "expected_oracle_error": false,
+                "full_log_failure_detected": false,
+                "script": "benchmarks/occt/evaluation/cases/mantis-32850/1/neighborhood_branch_matrix.tcl",
+                "draw_executable": "data/neighborhood-validation/NG05_reference/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                "elapsed_seconds": 0.215
+              },
+              "raw_log_manifest": {
+                "directory": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m32850_v3_full",
+                "file_count": 3,
+                "directory_sha256": "227d3c4e9123f4af319927391338e7fb30286b68efb71a01e6e57f127339cd3e",
+                "files": [
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m32850_v3_full/result.json",
+                    "sha256": "30600b5c39c2654d6ff33cd516983174ad58e5e3ed5fc8e102bd1d39fdd1ce6a",
+                    "size_bytes": 25071
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m32850_v3_full/stderr.log",
+                    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                    "size_bytes": 0
+                  },
+                  {
+                    "path": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m32850_v3_full/stdout.log",
+                    "sha256": "a48271290221e9630b92e9ced429332c08f34588a1e9645029293cae7911acb4",
+                    "size_bytes": 28414
+                  }
+                ]
+              }
+            },
+            "candidate_controls": [
+              {
+                "control_role": "same-issue candidate negative control",
+                "build": {
+                  "draw_executable": "data/runs/b5de75845927f214/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "sha256": "8d0b8962578657aabd4b9cbbd88aea299960888cb882e7e53f3702dde257e8a8",
+                  "source_id": "b5de75845927f214"
+                },
+                "run": {
+                  "result_json": "data/neighborhood-validation/evidence/mantis/b5_fixed_m32850_v3_full/result.json",
+                  "result_sha256": "fd9fb8ac325acedea26df6929e105fec20f8d4bd84e133402221c7ccaf6be653",
+                  "passed": false,
+                  "assertions": 104,
+                  "numeric_assertions": 94,
+                  "failed_assertions": 7,
+                  "test_done_marker": false,
+                  "return_code": 0,
+                  "timed_out": false,
+                  "tcl_error_detected": true,
+                  "infrastructure_tcl_error": false,
+                  "occt_error_detected": false,
+                  "expected_oracle_error": true,
+                  "full_log_failure_detected": true,
+                  "script": "benchmarks/occt/evaluation/cases/mantis-32850/1/neighborhood_branch_matrix.tcl",
+                  "draw_executable": "data/runs/b5de75845927f214/agent-workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+                  "elapsed_seconds": 0.165
+                },
+                "raw_log_manifest": {
+                  "directory": "data/neighborhood-validation/evidence/mantis/b5_fixed_m32850_v3_full",
+                  "file_count": 3,
+                  "directory_sha256": "46959e8dc7b63748041b82dec597b8e4d379a8057f889290a40e133e0607a3c9",
+                  "files": [
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m32850_v3_full/result.json",
+                      "sha256": "fd9fb8ac325acedea26df6929e105fec20f8d4bd84e133402221c7ccaf6be653",
+                      "size_bytes": 26804
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m32850_v3_full/stderr.log",
+                      "sha256": "917a87df75b01ba41a662060d0634f6ca752e6ccd85df8cadfe82d073befce3e",
+                      "size_bytes": 1710
+                    },
+                    {
+                      "path": "data/neighborhood-validation/evidence/mantis/b5_fixed_m32850_v3_full/stdout.log",
+                      "sha256": "33ccfe59a84f0471ed6c2f86cbb9a05f4e0bae7646c54a4884c6fbe7bc0b1892",
+                      "size_bytes": 27019
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "evidence_paths": {
+            "positive_result_json": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m32850_v3_full/result.json",
+            "positive_raw_logs": "data/neighborhood-validation/evidence/mantis/ng05_fixed_m32850_v3_full",
+            "candidate_control_results": [
+              "data/neighborhood-validation/evidence/mantis/b5_fixed_m32850_v3_full/result.json"
+            ],
+            "candidate_raw_logs": [
+              "data/neighborhood-validation/evidence/mantis/b5_fixed_m32850_v3_full"
+            ]
+          },
+          "issue_scenario_accounting": {
+            "existing_scenario_count": 1,
+            "issue_total_scenario_count_after_append": 5,
+            "limit": 15,
+            "within_limit": true
+          },
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7336c5478de77cce2e6c15c7657325e195d8b069d51a21989b97463d82cd9b80",
+            "script_sha256": "f5f23d901185a62d6657d92a89a69dfdcc3bb13aa058a47b81df164350abbd86",
+            "draw_executable_sha256": "9ec9013fe8971dcd45d7324fefdbdf235268898ab1c79b65d8a52b0f2bc4a33c",
+            "assertions": 104,
+            "numeric_assertions": 94,
+            "elapsed_seconds": 0.215,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/NG-05T-v1/mantis-32850-neighborhood-branch-matrix.json",
+            "result_json_sha256": "21b24282202bc73141fa80d1f78b5ee9d8619f89b33bb522a54a3605ad9e4862",
+            "wall_timeout_seconds": 90,
+            "cpu_limit_seconds": 87,
+            "address_space_gib": 4
+          }
+        }
+      ]
+    },
+    {
+      "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+      "group_version": "1",
+      "suite_id": "occt-bf-suite-d9d310-21494-29807-31835",
+      "suite_version": "1",
+      "suite_path": "evaluation/suites/new/occt-21494-29807-31835/1.json",
+      "suite_sha256_before": "8600c93a26cc02d2579f159b2bc1319e27d3ab1d7b9a18a3647f31eb837feb26",
+      "suite_sha256_after": "743ed95f760557e9194ad5e0f7129c5883812b0ce92f18bf8c9f38a7c46baa80",
+      "original_checkpoints_preserved": true,
+      "original_checkpoint_list_sha256": "0eb7a0f818861c7f69e9117e48721542f180ba95bf6bf6090ad25266fff3b26b",
+      "old_checkpoint_count": 12,
+      "new_checkpoint_count": 6,
+      "new_scenario_count": 6,
+      "checkpoints": [
+        {
+          "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+          "source_checkpoint": {
+            "source_id": "occt-d9d3107d8df1",
+            "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+            "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+            "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m21494_scale_125_sphere925",
+            "issue_id": "occt-21494",
+            "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m21494_scale_125_sphere925.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M21494-sphere9.25-scale1.25",
+              "parameters": {
+                "scale": 1.25,
+                "cone_radius": 18.75,
+                "cone_height": 12.5,
+                "sphere_radius": 11.5625
+              }
+            }
+          ],
+          "dimensions": [
+            "uniform_scale",
+            "analytic_double_roots",
+            "two_distinct_closed_curves",
+            "17-point_3D_sampling",
+            "cone_and_sphere_equation_residuals"
+          ],
+          "script_sha256": "b62bdc670ee691fb4f25476bed05cd53628f3c17e3ff6684cc2a47c6ef5838bc",
+          "support_files": [
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-d9d3107d8df1",
+              "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+              "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+              "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "b62bdc670ee691fb4f25476bed05cd53628f3c17e3ff6684cc2a47c6ef5838bc",
+            "natural_F": {
+              "reference_build_id": "f870ae_clang10_o0",
+              "draw_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 78,
+              "numeric_assertions": 72,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 0.065
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7e7e8bbc4343ad502ffdaa06aa95ef6bb53a3417c0c86cf0fd11358fe4121eb8",
+            "script_sha256": "b62bdc670ee691fb4f25476bed05cd53628f3c17e3ff6684cc2a47c6ef5838bc",
+            "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+            "assertions": 78,
+            "numeric_assertions": 72,
+            "elapsed_seconds": 0.065,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-d9d310-21494-29807-31835/neighborhood_v2_m21494_scale_125_sphere925.json",
+            "result_json_sha256": "a5ccedd8da5a3c3acfd91c50327cf50b85384485a21badcfe45a2959907239b9",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+          "source_checkpoint": {
+            "source_id": "occt-d9d3107d8df1",
+            "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+            "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+            "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m21494_translated_sphere925",
+            "issue_id": "occt-21494",
+            "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m21494_translated_sphere925.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M21494-sphere9.25-rigid-translation",
+              "parameters": {
+                "sphere_radius": 9.25,
+                "scale": 1.0,
+                "translation": [
+                  31.5,
+                  -17.25,
+                  8.0
+                ]
+              }
+            }
+          ],
+          "dimensions": [
+            "common_rigid_translation",
+            "analytic_double_roots",
+            "two_distinct_closed_curves",
+            "17-point_3D_sampling",
+            "cone_and_sphere_equation_residuals"
+          ],
+          "script_sha256": "587c5e28794d28cc755cf6f79d937504e41b31ed7727eca75c08a2d79e0cc9ff",
+          "support_files": [
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-d9d3107d8df1",
+              "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+              "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+              "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "587c5e28794d28cc755cf6f79d937504e41b31ed7727eca75c08a2d79e0cc9ff",
+            "natural_F": {
+              "reference_build_id": "f870ae_clang10_o0",
+              "draw_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 78,
+              "numeric_assertions": 72,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 0.065
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7e7e8bbc4343ad502ffdaa06aa95ef6bb53a3417c0c86cf0fd11358fe4121eb8",
+            "script_sha256": "587c5e28794d28cc755cf6f79d937504e41b31ed7727eca75c08a2d79e0cc9ff",
+            "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+            "assertions": 78,
+            "numeric_assertions": 72,
+            "elapsed_seconds": 0.065,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-d9d310-21494-29807-31835/neighborhood_v2_m21494_translated_sphere925.json",
+            "result_json_sha256": "9f3d57787d62c8a08a64175d03862658fcba1b612df735ae0f4522ef223c5656",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+          "source_checkpoint": {
+            "source_id": "occt-d9d3107d8df1",
+            "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+            "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+            "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m29807_ring_parameter_low",
+            "issue_id": "occt-29807",
+            "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m29807_ring_parameter_low.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M29807-z1",
+              "parameters": {
+                "scale": 1.0,
+                "cone_radius": 15.0,
+                "cone_height": 10.0,
+                "plane_z": 1.0,
+                "expected_ring_radius": 13.5
+              }
+            }
+          ],
+          "dimensions": [
+            "cone_plane_parameter_variation",
+            "closed_ring",
+            "analytic_section_radius",
+            "17-point_3D_sampling",
+            "plane_and_cone_equation_residuals"
+          ],
+          "script_sha256": "c6aeda95fb78bb8f00b6440926f9512cd1578faf8004b313f2c48c8b1c47b04b",
+          "support_files": [
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-d9d3107d8df1",
+              "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+              "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+              "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "c6aeda95fb78bb8f00b6440926f9512cd1578faf8004b313f2c48c8b1c47b04b",
+            "natural_F": {
+              "reference_build_id": "f870ae_clang10_o0",
+              "draw_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 36,
+              "numeric_assertions": 35,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 0.065
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7e7e8bbc4343ad502ffdaa06aa95ef6bb53a3417c0c86cf0fd11358fe4121eb8",
+            "script_sha256": "c6aeda95fb78bb8f00b6440926f9512cd1578faf8004b313f2c48c8b1c47b04b",
+            "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+            "assertions": 36,
+            "numeric_assertions": 35,
+            "elapsed_seconds": 0.065,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-d9d310-21494-29807-31835/neighborhood_v2_m29807_ring_parameter_low.json",
+            "result_json_sha256": "56db014d421d38d477b36a67ff4bb344c39de45f2fa4d89eb64a3ea29a65a0b2",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+          "source_checkpoint": {
+            "source_id": "occt-d9d3107d8df1",
+            "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+            "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+            "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m29807_ring_scaled_high",
+            "issue_id": "occt-29807",
+            "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m29807_ring_scaled_high.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M29807-scale1.75-z12.25",
+              "parameters": {
+                "scale": 1.75,
+                "cone_radius": 26.25,
+                "cone_height": 17.5,
+                "input_plane_height": 7.0,
+                "transformed_plane_z": 12.25,
+                "expected_ring_radius": 7.875
+              }
+            }
+          ],
+          "dimensions": [
+            "uniform_scale",
+            "cone_plane_parameter_variation",
+            "closed_ring",
+            "analytic_section_radius",
+            "17-point_3D_sampling",
+            "plane_and_cone_equation_residuals"
+          ],
+          "script_sha256": "db3849b23ed10a459d9bf4f3523a8a94536e5dbce9790438f5f5dbd1c1e1e8d3",
+          "support_files": [
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-d9d3107d8df1",
+              "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+              "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+              "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "db3849b23ed10a459d9bf4f3523a8a94536e5dbce9790438f5f5dbd1c1e1e8d3",
+            "natural_F": {
+              "reference_build_id": "f870ae_clang10_o0",
+              "draw_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 36,
+              "numeric_assertions": 35,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 0.065
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7e7e8bbc4343ad502ffdaa06aa95ef6bb53a3417c0c86cf0fd11358fe4121eb8",
+            "script_sha256": "db3849b23ed10a459d9bf4f3523a8a94536e5dbce9790438f5f5dbd1c1e1e8d3",
+            "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+            "assertions": 36,
+            "numeric_assertions": 35,
+            "elapsed_seconds": 0.065,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-d9d310-21494-29807-31835/neighborhood_v2_m29807_ring_scaled_high.json",
+            "result_json_sha256": "2d97f1134dc4cefb8be056de2af19a6b64b9a8b5b1094607908d514db356a596",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+          "source_checkpoint": {
+            "source_id": "occt-d9d3107d8df1",
+            "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+            "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+            "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m31835_common_scaled_r10",
+            "issue_id": "occt-31835",
+            "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m31835_common_scaled_r10.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M31835-common-r10",
+              "parameters": {
+                "radius": 10.0,
+                "volume_equation": "8*(2-sqrt(2))*r^3"
+              }
+            }
+          ],
+          "dimensions": [
+            "three-cylinder_common",
+            "analytic_volume",
+            "one_solid_topology",
+            "validity_and_bopcheck"
+          ],
+          "script_sha256": "53cb1067e4151de9dc7e130c2350305fd109c3b00333efdadf1a7e9754b5db0e",
+          "support_files": [
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-d9d3107d8df1",
+              "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+              "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+              "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "53cb1067e4151de9dc7e130c2350305fd109c3b00333efdadf1a7e9754b5db0e",
+            "natural_F": {
+              "reference_build_id": "f870ae_clang10_o0",
+              "draw_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 4,
+              "numeric_assertions": 1,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 0.265
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7e7e8bbc4343ad502ffdaa06aa95ef6bb53a3417c0c86cf0fd11358fe4121eb8",
+            "script_sha256": "53cb1067e4151de9dc7e130c2350305fd109c3b00333efdadf1a7e9754b5db0e",
+            "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+            "assertions": 4,
+            "numeric_assertions": 1,
+            "elapsed_seconds": 0.315,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-d9d310-21494-29807-31835/neighborhood_v2_m31835_common_scaled_r10.json",
+            "result_json_sha256": "7abdf018f4b98bf168ffe36496f28c74f4bb4c90d9ecd47c1c26e9af41d99c72",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+          "source_checkpoint": {
+            "source_id": "occt-d9d3107d8df1",
+            "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+            "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+            "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m31835_common_scaled_r20",
+            "issue_id": "occt-31835",
+            "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m31835_common_scaled_r20.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M31835-common-r20",
+              "parameters": {
+                "radius": 20.0,
+                "volume_equation": "8*(2-sqrt(2))*r^3"
+              }
+            }
+          ],
+          "dimensions": [
+            "uniform_scale",
+            "three-cylinder_common",
+            "analytic_volume",
+            "one_solid_topology",
+            "validity_and_bopcheck"
+          ],
+          "script_sha256": "1e5a967874ee387dd926aeb270cbe20ffec450d3fc50016fb99eee59c0a4bcb4",
+          "support_files": [
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-d9d3107d8df1",
+              "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+              "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+              "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "1e5a967874ee387dd926aeb270cbe20ffec450d3fc50016fb99eee59c0a4bcb4",
+            "natural_F": {
+              "reference_build_id": "f870ae_clang10_o0",
+              "draw_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 4,
+              "numeric_assertions": 1,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 0.315
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7e7e8bbc4343ad502ffdaa06aa95ef6bb53a3417c0c86cf0fd11358fe4121eb8",
+            "script_sha256": "1e5a967874ee387dd926aeb270cbe20ffec450d3fc50016fb99eee59c0a4bcb4",
+            "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+            "assertions": 4,
+            "numeric_assertions": 1,
+            "elapsed_seconds": 0.315,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-d9d310-21494-29807-31835/neighborhood_v2_m31835_common_scaled_r20.json",
+            "result_json_sha256": "ea845f9b3584c4aa6e457c179d99d891c5ff00fb278fdc233505749cd5d233b2",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        }
+      ]
+    },
+    {
+      "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "group_version": "1",
+      "suite_id": "occt-bf-suite-b55-27310-27773-27252-oracle-v2",
+      "suite_version": "1",
+      "suite_path": "evaluation/suites/new/occt-27310-27773-27252/1.json",
+      "suite_sha256_before": "5f1e055d198cbf2485ca8aa05d4f764b142119fa805ea09a95efbd592d975720",
+      "suite_sha256_after": "d9e46d37595c0874ebdad1cbbab08071ddd894ceb766eead0e00c1fcbbc3ab3a",
+      "original_checkpoints_preserved": true,
+      "original_checkpoint_list_sha256": "8e314b349352fef794655a51632da3072bc62b13ffaf7e1575bd76a06d242364",
+      "old_checkpoint_count": 10,
+      "new_checkpoint_count": 6,
+      "new_scenario_count": 7,
+      "checkpoints": [
+        {
+          "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+          "source_checkpoint": {
+            "source_id": "occt-b55bd0235351",
+            "source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+            "source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+            "source_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m27310_rigid_translated_original_breps",
+            "issue_id": "occt-27310",
+            "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27310_rigid_translated_original_breps.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M27310-original-breps-common-translation",
+              "parameters": {
+                "inputs": [
+                  "OCC496a.brep",
+                  "OCC496b.brep"
+                ],
+                "translation": [
+                  73.0,
+                  -12.0,
+                  5.0
+                ],
+                "expected_branches": 2
+              }
+            }
+          ],
+          "dimensions": [
+            "real_BRep_inputs",
+            "root_rigid_translation_before_face_extraction",
+            "two_branch_topology",
+            "sampled_3D_transform_residual",
+            "two_support_pcurve_mapping_residual"
+          ],
+          "script_sha256": "33ed187b02876bad609d86b0abe0e7fb5a04071546e890282fc5db400908dd44",
+          "support_files": [
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_pre_finite_guard; raw_runner_SIGXCPU_pending_formal_157s_replay",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-b55bd0235351",
+              "source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+              "source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+              "source_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "33ed187b02876bad609d86b0abe0e7fb5a04071546e890282fc5db400908dd44",
+            "natural_F": {
+              "reference_build_id": "e6afb_gcc_o0",
+              "draw_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f"
+            },
+            "latest_raw_runner_result": {
+              "passed": false,
+              "return_code": -24,
+              "timed_out": false,
+              "assertions": 2,
+              "numeric_assertions": 0,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 25.141
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+              "sha256": "30ca1434011fba9bfd35692c07719a9d4fcb4aa2606c739e8359fe504204cdc5",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+              "sha256": "34dca030b3713fad191dee6f3675680c4b87f7f2624ec5ffb1e8bc661525b08c",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+              "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+              "role": "original_public_issue_input"
+            }
+          ],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7d109731eec5b3a88492871080ecfc23c07f97f2b13c990b365bcda4dda1df33",
+            "script_sha256": "33ed187b02876bad609d86b0abe0e7fb5a04071546e890282fc5db400908dd44",
+            "draw_executable_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+            "assertions": 8,
+            "numeric_assertions": 6,
+            "elapsed_seconds": 72.534,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-b55-27310-27773-27252-oracle-v2/neighborhood_v2_m27310_rigid_translated_original_breps.json",
+            "result_json_sha256": "d21abd733bf00fbd0ef2832137ac92e9a7987e2abd039075b70224b33314f94a",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+          "source_checkpoint": {
+            "source_id": "occt-b55bd0235351",
+            "source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+            "source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+            "source_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m27310_scaled_finite_brep_neighborhood",
+            "issue_id": "occt-27310",
+            "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27310_scaled_finite_brep_neighborhood.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M27310-original-breps-scale-and-finite-face-offset",
+              "parameters": {
+                "inputs": [
+                  "OCC496a.brep",
+                  "OCC496b.brep"
+                ],
+                "root_scale": 1.5,
+                "baseline_face_translation": [
+                  1.8,
+                  0.5,
+                  0.0
+                ],
+                "scaled_face_translation": [
+                  2.7,
+                  0.75,
+                  0.0
+                ],
+                "expected_branches": 1,
+                "transform_witnesses_per_support": 3
+              }
+            }
+          ],
+          "dimensions": [
+            "real_BRep_inputs",
+            "root_scale_before_face_extraction",
+            "finite_face_offset",
+            "single_branch_topology",
+            "three_actual_pcurve_UV_scale_witnesses_per_support",
+            "3D_pcurve_mapping_residuals_on_both_supports"
+          ],
+          "script_sha256": "6b76bfd54b65049814e2cabb21360a5a8ed4573645c93d8a3d21ac4ab1dc064e",
+          "support_files": [
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-b55bd0235351",
+              "source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+              "source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+              "source_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "6b76bfd54b65049814e2cabb21360a5a8ed4573645c93d8a3d21ac4ab1dc064e",
+            "natural_F": {
+              "reference_build_id": "e6afb_gcc_o0",
+              "draw_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 10,
+              "numeric_assertions": 8,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 0.165
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+              "sha256": "30ca1434011fba9bfd35692c07719a9d4fcb4aa2606c739e8359fe504204cdc5",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+              "sha256": "34dca030b3713fad191dee6f3675680c4b87f7f2624ec5ffb1e8bc661525b08c",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+              "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+              "role": "original_public_issue_input"
+            }
+          ],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7d109731eec5b3a88492871080ecfc23c07f97f2b13c990b365bcda4dda1df33",
+            "script_sha256": "6b76bfd54b65049814e2cabb21360a5a8ed4573645c93d8a3d21ac4ab1dc064e",
+            "draw_executable_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+            "assertions": 10,
+            "numeric_assertions": 8,
+            "elapsed_seconds": 0.115,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-b55-27310-27773-27252-oracle-v2/neighborhood_v2_m27310_scaled_finite_brep_neighborhood.json",
+            "result_json_sha256": "764a2123a816bcb3011128a794e8170662c33e93af8aac6378e140bfef21f35e",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+          "source_checkpoint": {
+            "source_id": "occt-b55bd0235351",
+            "source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+            "source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+            "source_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m27773_offset_radius_parameter",
+            "issue_id": "occt-27773",
+            "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27773_offset_radius_parameter.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 2,
+          "scenarios": [
+            {
+              "id": "M27773-radius20-offset10-line-x0.5",
+              "parameters": {
+                "circle_center_x": 1.0,
+                "radius": 20.0,
+                "offset": 10.0,
+                "effective_radius": 30.0,
+                "line_x": 0.5,
+                "line_half_length": 35.0
+              }
+            },
+            {
+              "id": "M27773-radius18-offset3.5-line-x2.5",
+              "parameters": {
+                "circle_center_x": -2.0,
+                "radius": 18.0,
+                "offset": 3.5,
+                "effective_radius": 21.5,
+                "line_x": 2.5,
+                "line_half_length": 25.0
+              }
+            }
+          ],
+          "dimensions": [
+            "offset_curve",
+            "radius_and_offset_variation",
+            "line_parameter_variation",
+            "analytic_circle_roots",
+            "two_distinct_section_vertices",
+            "opposite_sign_roots"
+          ],
+          "script_sha256": "1458be796ac47673ec272b1f95b50ed66cf8435b4d60a1793a14745178ad354c",
+          "support_files": [
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-b55bd0235351",
+              "source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+              "source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+              "source_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "1458be796ac47673ec272b1f95b50ed66cf8435b4d60a1793a14745178ad354c",
+            "natural_F": {
+              "reference_build_id": "e6afb_gcc_o0",
+              "draw_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 16,
+              "numeric_assertions": 12,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 0.065
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+              "sha256": "30ca1434011fba9bfd35692c07719a9d4fcb4aa2606c739e8359fe504204cdc5",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+              "sha256": "34dca030b3713fad191dee6f3675680c4b87f7f2624ec5ffb1e8bc661525b08c",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+              "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+              "role": "original_public_issue_input"
+            }
+          ],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7d109731eec5b3a88492871080ecfc23c07f97f2b13c990b365bcda4dda1df33",
+            "script_sha256": "1458be796ac47673ec272b1f95b50ed66cf8435b4d60a1793a14745178ad354c",
+            "draw_executable_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+            "assertions": 16,
+            "numeric_assertions": 12,
+            "elapsed_seconds": 0.065,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-b55-27310-27773-27252-oracle-v2/neighborhood_v2_m27773_offset_radius_parameter.json",
+            "result_json_sha256": "c63a0f26eeb89e4c319fbe0a412cdf531a5ec8e2653a6d26515daa0e3e20acde",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+          "source_checkpoint": {
+            "source_id": "occt-b55bd0235351",
+            "source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+            "source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+            "source_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m27773_offset_near_tangent",
+            "issue_id": "occt-27773",
+            "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27773_offset_near_tangent.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M27773-near-tangent-0.01-gap",
+              "parameters": {
+                "circle_center_x": 3.0,
+                "radius": 12.0,
+                "offset": 5.0,
+                "effective_radius": 17.0,
+                "line_offset_from_tangent": -0.01,
+                "line_x": 19.99,
+                "line_half_length": 5.0
+              }
+            }
+          ],
+          "dimensions": [
+            "offset_curve",
+            "near_tangent_degeneracy",
+            "analytic_circle_roots",
+            "two_distinct_section_vertices",
+            "opposite_sign_roots"
+          ],
+          "script_sha256": "5b57126c1ae444551e9e21004c04b2c8e04003d4e647a4a34ffab5bc0f7119ec",
+          "support_files": [
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-b55bd0235351",
+              "source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+              "source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+              "source_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "5b57126c1ae444551e9e21004c04b2c8e04003d4e647a4a34ffab5bc0f7119ec",
+            "natural_F": {
+              "reference_build_id": "e6afb_gcc_o0",
+              "draw_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 8,
+              "numeric_assertions": 6,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 0.065
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+              "sha256": "30ca1434011fba9bfd35692c07719a9d4fcb4aa2606c739e8359fe504204cdc5",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+              "sha256": "34dca030b3713fad191dee6f3675680c4b87f7f2624ec5ffb1e8bc661525b08c",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+              "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+              "role": "original_public_issue_input"
+            }
+          ],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7d109731eec5b3a88492871080ecfc23c07f97f2b13c990b365bcda4dda1df33",
+            "script_sha256": "5b57126c1ae444551e9e21004c04b2c8e04003d4e647a4a34ffab5bc0f7119ec",
+            "draw_executable_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+            "assertions": 8,
+            "numeric_assertions": 6,
+            "elapsed_seconds": 0.065,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-b55-27310-27773-27252-oracle-v2/neighborhood_v2_m27773_offset_near_tangent.json",
+            "result_json_sha256": "8f67d73f1006140efe6a426eb91cda046e27042a58b6433e04cb274ee7a3415c",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+          "source_checkpoint": {
+            "source_id": "occt-b55bd0235351",
+            "source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+            "source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+            "source_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m27252_brep_plane_offset005",
+            "issue_id": "occt-27252",
+            "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27252_brep_plane_offset005.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M27252-brep-plane-offset0.05",
+              "parameters": {
+                "input": "bug27221.brep",
+                "root_scale": 1.0,
+                "plane_offset": 0.05,
+                "expected_branches": 1
+              }
+            }
+          ],
+          "dimensions": [
+            "real_BRep_input",
+            "plane_offset_variation",
+            "single_curve_topology",
+            "sampled_3D_transform_residual",
+            "shared_parameter_domain_coverage",
+            "pcurve_to_two_support_residuals"
+          ],
+          "script_sha256": "259974fbdb5e9919efe36b57be23167555f4f51502a8c0f36e222728ac657372",
+          "support_files": [
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-b55bd0235351",
+              "source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+              "source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+              "source_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "259974fbdb5e9919efe36b57be23167555f4f51502a8c0f36e222728ac657372",
+            "natural_F": {
+              "reference_build_id": "e6afb_gcc_o0",
+              "draw_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 5,
+              "numeric_assertions": 3,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 24.691
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+              "sha256": "30ca1434011fba9bfd35692c07719a9d4fcb4aa2606c739e8359fe504204cdc5",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+              "sha256": "34dca030b3713fad191dee6f3675680c4b87f7f2624ec5ffb1e8bc661525b08c",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+              "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+              "role": "original_public_issue_input"
+            }
+          ],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7d109731eec5b3a88492871080ecfc23c07f97f2b13c990b365bcda4dda1df33",
+            "script_sha256": "259974fbdb5e9919efe36b57be23167555f4f51502a8c0f36e222728ac657372",
+            "draw_executable_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+            "assertions": 5,
+            "numeric_assertions": 3,
+            "elapsed_seconds": 24.718,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-b55-27310-27773-27252-oracle-v2/neighborhood_v2_m27252_brep_plane_offset005.json",
+            "result_json_sha256": "195797a82c047d9199405dcbccc4625b0a22fe2c0c0aa0760ce9dceeca375a5f",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+          "source_checkpoint": {
+            "source_id": "occt-b55bd0235351",
+            "source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+            "source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+            "source_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m27252_brep_plane_scale150_offset010",
+            "issue_id": "occt-27252",
+            "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27252_brep_plane_scale150_offset010.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M27252-brep-scale1.5-offset0.15",
+              "parameters": {
+                "input": "bug27221.brep",
+                "root_scale": 1.5,
+                "base_plane_offset": 0.1,
+                "scaled_plane_offset": 0.15,
+                "expected_branches": 1
+              }
+            }
+          ],
+          "dimensions": [
+            "real_BRep_input",
+            "root_scale_before_face_extraction",
+            "plane_offset_variation",
+            "single_curve_topology",
+            "sampled_3D_transform_residual",
+            "shared_parameter_domain_coverage",
+            "pcurve_to_two_support_residuals"
+          ],
+          "script_sha256": "f45c905b8f1870d3de93f53f706bcb9dba2dd7243c6d93a5b7797f7ca5aba329",
+          "support_files": [
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-b55bd0235351",
+              "source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+              "source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+              "source_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "f45c905b8f1870d3de93f53f706bcb9dba2dd7243c6d93a5b7797f7ca5aba329",
+            "natural_F": {
+              "reference_build_id": "e6afb_gcc_o0",
+              "draw_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 5,
+              "numeric_assertions": 3,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 24.992
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+              "sha256": "30ca1434011fba9bfd35692c07719a9d4fcb4aa2606c739e8359fe504204cdc5",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+              "sha256": "34dca030b3713fad191dee6f3675680c4b87f7f2624ec5ffb1e8bc661525b08c",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+              "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+              "role": "original_public_issue_input"
+            }
+          ],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "7d109731eec5b3a88492871080ecfc23c07f97f2b13c990b365bcda4dda1df33",
+            "script_sha256": "f45c905b8f1870d3de93f53f706bcb9dba2dd7243c6d93a5b7797f7ca5aba329",
+            "draw_executable_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+            "assertions": 5,
+            "numeric_assertions": 3,
+            "elapsed_seconds": 24.688,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-b55-27310-27773-27252-oracle-v2/neighborhood_v2_m27252_brep_plane_scale150_offset010.json",
+            "result_json_sha256": "25ad88b98d3ed6970bad0ec633fb798a5e233155dd176e07fd3ef714c285747a",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        }
+      ]
+    },
+    {
+      "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "group_version": "1",
+      "suite_id": "occt-bf-suite-b2613378-27780-27252-21494-v1",
+      "suite_version": "1",
+      "suite_path": "evaluation/suites/new/occt-21494-27252-27780/1.json",
+      "suite_sha256_before": "f2243ca3f86442bcf151be2f516ed3bf9722a4228c1034426253d28e18a8d608",
+      "suite_sha256_after": "b3795357d8436a2ed3f0bf00d8e5460de149f74afb737e6cc2b2a9ec0b0405e4",
+      "original_checkpoints_preserved": true,
+      "original_checkpoint_list_sha256": "728aa1132843a30d66f07356442479a31cf8aabc2bf0eaaaa30ef7480b33b7c0",
+      "old_checkpoint_count": 9,
+      "new_checkpoint_count": 6,
+      "new_scenario_count": 6,
+      "checkpoints": [
+        {
+          "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+          "source_checkpoint": {
+            "source_id": "occt-2613378e60ff",
+            "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+            "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+            "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m21494_scale_075_sphere925",
+            "issue_id": "occt-21494",
+            "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m21494_scale_075_sphere925.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M21494-sphere9.25-scale0.75",
+              "parameters": {
+                "scale": 0.75,
+                "cone_radius": 11.25,
+                "cone_height": 7.5,
+                "sphere_radius": 6.9375
+              }
+            }
+          ],
+          "dimensions": [
+            "uniform_scale",
+            "analytic_double_roots",
+            "two_distinct_closed_curves",
+            "17-point_3D_sampling",
+            "cone_and_sphere_equation_residuals"
+          ],
+          "script_sha256": "ef875e2b5b5f4a14784e14ed8b9fc9f60017fe3dd3169373c2f45e0f2d3dbb16",
+          "support_files": [
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-2613378e60ff",
+              "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+              "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+              "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "ef875e2b5b5f4a14784e14ed8b9fc9f60017fe3dd3169373c2f45e0f2d3dbb16",
+            "natural_F": {
+              "reference_build_id": "f870ae_clang10_o0",
+              "draw_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 78,
+              "numeric_assertions": 72,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 0.065
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+              "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+              "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+              "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc",
+              "role": "original_public_issue_input"
+            }
+          ],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "59eaacbb79fab457a1c399eb8b7496ef4885e455ca323b6ecb16207d9ccc6af3",
+            "script_sha256": "ef875e2b5b5f4a14784e14ed8b9fc9f60017fe3dd3169373c2f45e0f2d3dbb16",
+            "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+            "assertions": 78,
+            "numeric_assertions": 72,
+            "elapsed_seconds": 0.065,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-b2613378-27780-27252-21494-v1/neighborhood_v2_m21494_scale_075_sphere925.json",
+            "result_json_sha256": "f12100956d14ddd32b5a42903165f78b4cf5eaa51939d38231a822ce59244239",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+          "source_checkpoint": {
+            "source_id": "occt-2613378e60ff",
+            "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+            "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+            "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m21494_translated_sphere975",
+            "issue_id": "occt-21494",
+            "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m21494_translated_sphere975.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M21494-sphere9.75-rigid-translation",
+              "parameters": {
+                "sphere_radius": 9.75,
+                "scale": 1.0,
+                "translation": [
+                  -23.0,
+                  41.5,
+                  6.25
+                ]
+              }
+            }
+          ],
+          "dimensions": [
+            "common_rigid_translation",
+            "analytic_double_roots",
+            "two_distinct_closed_curves",
+            "17-point_3D_sampling",
+            "cone_and_sphere_equation_residuals"
+          ],
+          "script_sha256": "4de03423f41efb540dd0c549c38d46c2278e045b0e69fa887db3450a25e6a20d",
+          "support_files": [
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-2613378e60ff",
+              "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+              "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+              "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "4de03423f41efb540dd0c549c38d46c2278e045b0e69fa887db3450a25e6a20d",
+            "natural_F": {
+              "reference_build_id": "f870ae_clang10_o0",
+              "draw_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 78,
+              "numeric_assertions": 72,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 0.064
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+              "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+              "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+              "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc",
+              "role": "original_public_issue_input"
+            }
+          ],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "59eaacbb79fab457a1c399eb8b7496ef4885e455ca323b6ecb16207d9ccc6af3",
+            "script_sha256": "4de03423f41efb540dd0c549c38d46c2278e045b0e69fa887db3450a25e6a20d",
+            "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+            "assertions": 78,
+            "numeric_assertions": 72,
+            "elapsed_seconds": 0.065,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-b2613378-27780-27252-21494-v1/neighborhood_v2_m21494_translated_sphere975.json",
+            "result_json_sha256": "96ec3c3d99fe4998345b3eead311be7b2b8332a22837200095ac37ab261ef309",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+          "source_checkpoint": {
+            "source_id": "occt-2613378e60ff",
+            "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+            "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+            "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m27252_brep_plane_offset020",
+            "issue_id": "occt-27252",
+            "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27252_brep_plane_offset020.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M27252-brep-plane-offset0.20",
+              "parameters": {
+                "input": "M27252_neighbor_translated_plane/bug27221.brep",
+                "root_scale": 1.0,
+                "plane_offset": 0.2,
+                "expected_branches": 1
+              }
+            }
+          ],
+          "dimensions": [
+            "real_BRep_input",
+            "plane_offset_variation",
+            "single_curve_topology",
+            "sampled_3D_transform_residual",
+            "shared_parameter_domain_coverage",
+            "pcurve_to_two_support_residuals"
+          ],
+          "script_sha256": "bbe8d0274ab56c086a798a1ab9b3409d38ba803639f9cf0f897445161225b052",
+          "support_files": [
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-2613378e60ff",
+              "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+              "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+              "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "bbe8d0274ab56c086a798a1ab9b3409d38ba803639f9cf0f897445161225b052",
+            "natural_F": {
+              "reference_build_id": "f870ae_clang10_o0",
+              "draw_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 5,
+              "numeric_assertions": 3,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 24.84
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+              "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+              "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+              "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc",
+              "role": "original_public_issue_input"
+            }
+          ],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "59eaacbb79fab457a1c399eb8b7496ef4885e455ca323b6ecb16207d9ccc6af3",
+            "script_sha256": "bbe8d0274ab56c086a798a1ab9b3409d38ba803639f9cf0f897445161225b052",
+            "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+            "assertions": 5,
+            "numeric_assertions": 3,
+            "elapsed_seconds": 24.79,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-b2613378-27780-27252-21494-v1/neighborhood_v2_m27252_brep_plane_offset020.json",
+            "result_json_sha256": "d5cb4cbe08f8065987a61ee6e1249cbf5eedd7cc933d1c84030f62e453ebba29",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+          "source_checkpoint": {
+            "source_id": "occt-2613378e60ff",
+            "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+            "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+            "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m27252_brep_plane_scale150_offset010",
+            "issue_id": "occt-27252",
+            "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27252_brep_plane_scale150_offset010.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M27252-brep-scale1.5-offset0.15",
+              "parameters": {
+                "input": "bug27221.brep",
+                "root_scale": 1.5,
+                "base_plane_offset": 0.1,
+                "scaled_plane_offset": 0.15,
+                "expected_branches": 1
+              }
+            }
+          ],
+          "dimensions": [
+            "real_BRep_input",
+            "root_scale_before_face_extraction",
+            "plane_offset_variation",
+            "single_curve_topology",
+            "sampled_3D_transform_residual",
+            "shared_parameter_domain_coverage",
+            "pcurve_to_two_support_residuals"
+          ],
+          "script_sha256": "ea87af33e1ee19c13b0ec631016c2a33d511071dc925bb6bc6cb7aeec0598b0c",
+          "support_files": [
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-2613378e60ff",
+              "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+              "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+              "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "ea87af33e1ee19c13b0ec631016c2a33d511071dc925bb6bc6cb7aeec0598b0c",
+            "natural_F": {
+              "reference_build_id": "f870ae_clang10_o0",
+              "draw_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 5,
+              "numeric_assertions": 3,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 24.825
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+              "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+              "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+              "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc",
+              "role": "original_public_issue_input"
+            }
+          ],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "59eaacbb79fab457a1c399eb8b7496ef4885e455ca323b6ecb16207d9ccc6af3",
+            "script_sha256": "ea87af33e1ee19c13b0ec631016c2a33d511071dc925bb6bc6cb7aeec0598b0c",
+            "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+            "assertions": 5,
+            "numeric_assertions": 3,
+            "elapsed_seconds": 24.739,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-b2613378-27780-27252-21494-v1/neighborhood_v2_m27252_brep_plane_scale150_offset010.json",
+            "result_json_sha256": "894d59940a7bd3b9f0ca7f692cd917a7196a5cd929ee4d06000f09db4cac7e97",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+          "source_checkpoint": {
+            "source_id": "occt-2613378e60ff",
+            "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+            "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+            "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m27780_brep_rigid_translation_mapping",
+            "issue_id": "occt-27780",
+            "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27780_brep_rigid_translation_mapping.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M27780-brep-relative0.05-common-translation",
+              "parameters": {
+                "inputs": [
+                  "buc60532a.brep",
+                  "buc60532b.brep"
+                ],
+                "relative_face_translation_x": 0.05,
+                "scale": 1.0,
+                "common_translation": [
+                  43.0,
+                  -19.0,
+                  7.5
+                ],
+                "expected_selected_branches": 1,
+                "bopcurves_seed": "four UV parameters (-p u1 v1 u2 v2)"
+              }
+            }
+          ],
+          "dimensions": [
+            "real_BRep_inputs",
+            "root_rigid_translation_before_face_extraction",
+            "UV_seed_to_physical_point_witnesses",
+            "selected_seed_branch_distance_invariant",
+            "shared_parameter_domain_coverage",
+            "3D_pcurve_two_support_residuals",
+            "pcurve_endpoint_direction"
+          ],
+          "script_sha256": "02b29ae8a681aabbacfd1969ec4c0327e51388574213b6135dadc4e9395e2a82",
+          "support_files": [
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-2613378e60ff",
+              "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+              "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+              "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "02b29ae8a681aabbacfd1969ec4c0327e51388574213b6135dadc4e9395e2a82",
+            "natural_F": {
+              "reference_build_id": "f870ae_clang10_o0",
+              "draw_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 12,
+              "numeric_assertions": 9,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 3.476
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+              "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+              "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+              "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc",
+              "role": "original_public_issue_input"
+            }
+          ],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "59eaacbb79fab457a1c399eb8b7496ef4885e455ca323b6ecb16207d9ccc6af3",
+            "script_sha256": "02b29ae8a681aabbacfd1969ec4c0327e51388574213b6135dadc4e9395e2a82",
+            "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+            "assertions": 12,
+            "numeric_assertions": 9,
+            "elapsed_seconds": 3.475,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-b2613378-27780-27252-21494-v1/neighborhood_v2_m27780_brep_rigid_translation_mapping.json",
+            "result_json_sha256": "fee4f71a6e880e628bac1e7d8347175412956eb736e0e7c966d257c82f1a412f",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        },
+        {
+          "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+          "source_checkpoint": {
+            "source_id": "occt-2613378e60ff",
+            "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+            "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+            "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+          },
+          "checkpoint": {
+            "id": "neighborhood_v2_m27780_brep_scale_mapping",
+            "issue_id": "occt-27780",
+            "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27780_brep_scale_mapping.tcl",
+            "category": "neighborhood",
+            "oracle": "draw_test_done_v1",
+            "required": true,
+            "runner": "draw_case_v1",
+            "runner_options": {
+              "case_timeout_seconds": 160
+            },
+            "timeout_seconds": 180,
+            "visibility": "hidden"
+          },
+          "scenario_count": 1,
+          "scenarios": [
+            {
+              "id": "M27780-brep-relative0.05-scale1.5",
+              "parameters": {
+                "inputs": [
+                  "buc60532a.brep",
+                  "buc60532b.brep"
+                ],
+                "relative_face_translation_x": 0.05,
+                "root_scale": 1.5,
+                "scaled_relative_translation_x": 0.075,
+                "common_translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "expected_selected_branches": 1,
+                "bopcurves_seed": "four UV parameters transformed by per-support svalue physical-point witnesses"
+              }
+            }
+          ],
+          "dimensions": [
+            "real_BRep_inputs",
+            "root_uniform_scale_before_face_extraction",
+            "relative_seed_separation_scales",
+            "selected_seed_branch_distance_scales",
+            "3D_pcurve_two_support_residuals",
+            "shared_parameter_domain_coverage",
+            "pcurve_endpoint_direction"
+          ],
+          "script_sha256": "2687367277ccdb862f2f4e057f23828706d5cb8fb4710cb360df0f5b968612c2",
+          "support_files": [
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+            "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+            "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+          ],
+          "evidence": {
+            "status": "natural_F_pass_latest_finite_guard_raw_runner",
+            "required_eligible": true,
+            "source_checkpoint": {
+              "source_id": "occt-2613378e60ff",
+              "source_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+              "source_tree": "75920cb58780f31d7063633b98095dfb69821abe",
+              "source_archive_sha256": "d863c272a5dd8d0f6d7411b7cf7c840b5306041856c615c8724d948c5969693c"
+            },
+            "helper_sha256": "3a28a8c63dbff154f96a8d9e1f0f802ea772bd9a84f407d8107fbd9686636161",
+            "script_sha256": "2687367277ccdb862f2f4e057f23828706d5cb8fb4710cb360df0f5b968612c2",
+            "natural_F": {
+              "reference_build_id": "f870ae_clang10_o0",
+              "draw_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779"
+            },
+            "latest_raw_runner_result": {
+              "passed": true,
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 11,
+              "numeric_assertions": 8,
+              "failed_assertions": 0,
+              "infrastructure_tcl_error": false,
+              "expected_oracle_error": false,
+              "elapsed_seconds": 0.867
+            },
+            "validation_summary_path": "evaluation/cases/neighborhood_v2/bf/evidence/portable_replay_summary.json",
+            "raw_summary_sha256": "e4bd2681b5e47fc382b2aab4bf0bc886db59fd170e896329faa60f4ad637a9ea"
+          },
+          "input_hashes": [
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+              "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+              "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb",
+              "role": "original_public_issue_input"
+            },
+            {
+              "path": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+              "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc",
+              "role": "original_public_issue_input"
+            }
+          ],
+          "frozen_replay": {
+            "status": "geometry_pass",
+            "source_role": "trusted_reference",
+            "snapshot_sha256": "59eaacbb79fab457a1c399eb8b7496ef4885e455ca323b6ecb16207d9ccc6af3",
+            "script_sha256": "2687367277ccdb862f2f4e057f23828706d5cb8fb4710cb360df0f5b968612c2",
+            "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+            "assertions": 11,
+            "numeric_assertions": 8,
+            "elapsed_seconds": 0.867,
+            "result_json": "data/neighborhood-validation/formal-reference-replay/occt-bf-group-b2613378-27780-27252-21494-v1/neighborhood_v2_m27780_brep_scale_mapping.json",
+            "result_json_sha256": "e52793154f9e207491960817d14cd1fd4e80e8a961e588d79b74b0ee4d5f837e",
+            "wall_timeout_seconds": 160,
+            "cpu_limit_seconds": 157,
+            "address_space_gib": 4
+          }
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "completed_utc": "2026-10-22T09:13:23.266268+00:00",
+    "formal_frozen_new_checkpoints": 24,
+    "formal_frozen_geometry_pass": 24,
+    "unchanged_old_checkpoints": 49,
+    "static_dispatch_routes": 73,
+    "unit_tests_passed": 10,
+    "model_calls": 0,
+    "reference_binaries": {
+      "NG-04R-v2": {
+        "draw_executable_sha256": "de985586b15afb1cfa56f031dd9a0e2b5da2d9ef5c7fb641a4403c24ead5f7a7",
+        "snapshot_sha256": "41ceceaab97c17b57268c67a0b0d94f218e7cd843c4642779da8b1e357a81bc4"
+      },
+      "NG-05T-v1": {
+        "draw_executable_sha256": "9ec9013fe8971dcd45d7324fefdbdf235268898ab1c79b65d8a52b0f2bc4a33c",
+        "snapshot_sha256": "7336c5478de77cce2e6c15c7657325e195d8b069d51a21989b97463d82cd9b80"
+      },
+      "occt-bf-group-d9d310-21494-29807-31835": {
+        "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+        "snapshot_sha256": "7e7e8bbc4343ad502ffdaa06aa95ef6bb53a3417c0c86cf0fd11358fe4121eb8"
+      },
+      "occt-bf-group-b55-27310-27773-27252-oracle-v2": {
+        "draw_executable_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+        "snapshot_sha256": "7d109731eec5b3a88492871080ecfc23c07f97f2b13c990b365bcda4dda1df33"
+      },
+      "occt-bf-group-b2613378-27780-27252-21494-v1": {
+        "draw_executable_sha256": "bc9406526b1c4c2a032c3f332f8bf8a1ba7d22614cdeaa5a09df870bb3dbd779",
+        "snapshot_sha256": "59eaacbb79fab457a1c399eb8b7496ef4885e455ca323b6ecb16207d9ccc6af3"
+      }
+    },
+    "formal_summary": "data/neighborhood-validation/formal-reference-replay/summary.json",
+    "formal_summary_sha256": "7a05444d4660401ea3f030b7ab10b1eb4d2199ca78adf67eb8395d08c1bfb411",
+    "old_geometry_replayed_this_round": false,
+    "task_registration_sync": {
+      "updated_current_tasks": 5,
+      "changed_fields": [
+        "source_hash"
+      ],
+      "audit": "data/neighborhood-validation/task-source-hash-sync.json",
+      "audit_sha256": "56b38d8eb8aebeebee5feddeb717029a8fbc2f46dda6cc53571b832ac836da28",
+      "historical_run_tables_modified": false
+    }
+  }
+}

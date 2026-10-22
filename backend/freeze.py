@@ -73,6 +73,14 @@ def normalize_suite_case_material(bundle: dict, catalog: dict, suite: dict,
         PurePosixPath(item["path"]).parent.as_posix(): item for item in catalog["issues"]
     }
     aliases = []
+    for value in suite.get("support_files", []):
+        source_path = resolve_relative(bundle["root"], value)
+        target = case_root / PurePosixPath(value)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if target.is_symlink():
+            raise ValueError(f"frozen support material is a symlink: {target.name}")
+        if not target.exists():
+            shutil.copy2(source_path, target)
     for checkpoint in frozen_suite["checkpoints"]:
         values = [("case", checkpoint["case"])]
         values.extend(("input", value) for value in checkpoint.get("runner_options", {}).get("inputs", []))

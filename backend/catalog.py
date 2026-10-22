@@ -223,9 +223,16 @@ def validate_bundle(bundle_root: Path | str) -> dict[str, Any]:
     for key, entry in suite_index.items():
         manifest = _read_json(resolve_relative(root, entry.get("path")))
         _fields(manifest,{"schema_version","id","version","title","source_ids","group_ids","checkpoints"},
-                {"schema_version","id","version","title","source_ids","group_ids","legacy_task_kind","checkpoints"},"suite manifest")
+                {"schema_version","id","version","title","source_ids","group_ids","legacy_task_kind","checkpoints","support_files"},"suite manifest")
         if _key_ref(manifest, "suite") != key or manifest.get("schema_version") != 1:
             raise CatalogError(f"suite index/manifest mismatch for {key[0]}@{key[1]}")
+        support_files = manifest.get("support_files", [])
+        if (not isinstance(support_files, list) or any(not isinstance(value, str) for value in support_files)
+                or len(set(support_files)) != len(support_files)):
+            raise CatalogError(f"suite {key[0]} support_files must be unique relative file paths")
+        for value in support_files:
+            if not resolve_relative(root, value).is_file():
+                raise CatalogError(f"suite {key[0]} support file is not a regular file: {value}")
         if not isinstance(manifest.get("source_ids"), list) or not manifest["source_ids"]:
             raise CatalogError(f"suite {key[0]} must list compatible source ids")
         if any(source_id not in sources for source_id in manifest["source_ids"]):

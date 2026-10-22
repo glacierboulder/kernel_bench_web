@@ -47,3 +47,7 @@ my-benchmark/
 ```
 
 `docs/benchmark-example/` 可以直接复制后改名和内容。示例的源码锁引用本项目已经验证过的 OCCT 基线；它验证题库接入格式，不会复制 OCCT 源码缓存，也不会运行示例检查。
+
+## 多维邻域构造
+
+新增邻域前阅读[多维度邻域构造指南](multidimensional-neighborhood-guide.md)。用例数量按机制和维度覆盖灵活确定，每个 issue 最多 15 个实际邻域场景（含已有邻域）；需要同时记录参数样本、实际几何判据、参考正例和错误负对照。隐藏 Tcl helper 或输入依赖可在 suite 的 `support_files` 数组中列出安全的 bundle 相对文件路径；它们会与 case 一起冻结到 supervisor bundle。本轮按用户授权直接扩充现有五套 suite，保留全部旧检查；已有运行的冻结快照不改写，具体审计方式见指南第 7 节。

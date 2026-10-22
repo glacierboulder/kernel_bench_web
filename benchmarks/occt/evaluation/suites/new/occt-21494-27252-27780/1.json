@@ -125,6 +125,90 @@
       },
       "timeout_seconds": 180,
       "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m21494_scale_075_sphere925",
+      "issue_id": "occt-21494",
+      "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m21494_scale_075_sphere925.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m21494_translated_sphere975",
+      "issue_id": "occt-21494",
+      "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m21494_translated_sphere975.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m27252_brep_plane_offset020",
+      "issue_id": "occt-27252",
+      "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27252_brep_plane_offset020.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m27252_brep_plane_scale150_offset010",
+      "issue_id": "occt-27252",
+      "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27252_brep_plane_scale150_offset010.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m27780_brep_rigid_translation_mapping",
+      "issue_id": "occt-27780",
+      "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27780_brep_rigid_translation_mapping.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m27780_brep_scale_mapping",
+      "issue_id": "occt-27780",
+      "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27780_brep_scale_mapping.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
     }
   ],
   "group_ids": [
@@ -136,5 +220,11 @@
     "occt-2613378e60ff"
   ],
   "title": "OCCT B/F intersection group 3 · M27780/M27252/M21494",
-  "version": "1"
+  "version": "1",
+  "support_files": [
+    "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+    "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532a.brep",
+    "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27780_neighbor_translated_face/buc60532b.brep",
+    "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+  ]
 }

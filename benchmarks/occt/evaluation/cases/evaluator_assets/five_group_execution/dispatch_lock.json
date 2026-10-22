@@ -132,10 +132,28 @@
       "origin": "part1",
       "suite": "NG-05T-v1-checks@1"
     },
+    "evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v2.tcl": {
+      "checkpoint_id": "mantis-30082-neighborhood-dense-residual-v2",
+      "group_id": "NG-04R-v2",
+      "origin": "neighborhood_v2",
+      "suite": "NG-04R-checks-v2@1"
+    },
+    "evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v4.tcl": {
+      "checkpoint_id": "mantis-30082-neighborhood-dense-residual-v4",
+      "group_id": "NG-05T-v1",
+      "origin": "neighborhood_v2",
+      "suite": "NG-05T-v1-checks@1"
+    },
     "evaluation/cases/mantis-30202/2/neighborhood.tcl": {
       "checkpoint_id": "mantis-30202-neighborhood",
       "group_id": "NG-04R-v2",
       "origin": "part1",
+      "suite": "NG-04R-checks-v2@1"
+    },
+    "evaluation/cases/mantis-30202/2/neighborhood_facepair_matrix.tcl": {
+      "checkpoint_id": "mantis-30202-neighborhood-facepair-matrix",
+      "group_id": "NG-04R-v2",
+      "origin": "neighborhood_v2",
       "suite": "NG-04R-checks-v2@1"
     },
     "evaluation/cases/mantis-30202/2/regression.tcl": {
@@ -150,6 +168,12 @@
       "origin": "part1",
       "suite": "NG-05T-v1-checks@1"
     },
+    "evaluation/cases/mantis-31602/2/neighborhood_seam_matrix.tcl": {
+      "checkpoint_id": "mantis-31602-neighborhood-seam-matrix",
+      "group_id": "NG-05T-v1",
+      "origin": "neighborhood_v2",
+      "suite": "NG-05T-v1-checks@1"
+    },
     "evaluation/cases/mantis-31602/2/regression.tcl": {
       "checkpoint_id": "mantis-31602-regression",
       "group_id": "NG-05T-v1",
@@ -160,6 +184,12 @@
       "checkpoint_id": "mantis-32850-neighborhood",
       "group_id": "NG-05T-v1",
       "origin": "part1",
+      "suite": "NG-05T-v1-checks@1"
+    },
+    "evaluation/cases/mantis-32850/1/neighborhood_branch_matrix.tcl": {
+      "checkpoint_id": "mantis-32850-neighborhood-branch-matrix",
+      "group_id": "NG-05T-v1",
+      "origin": "neighborhood_v2",
       "suite": "NG-05T-v1-checks@1"
     },
     "evaluation/cases/mantis-32850/1/regression.tcl": {
@@ -174,11 +204,125 @@
       "origin": "part1",
       "suite": "NG-04R-checks-v2@1"
     },
+    "evaluation/cases/mantis-33541/2/neighborhood_boolean_transform.tcl": {
+      "checkpoint_id": "mantis-33541-neighborhood-boolean-transform",
+      "group_id": "NG-04R-v2",
+      "origin": "neighborhood_v2",
+      "suite": "NG-04R-checks-v2@1"
+    },
     "evaluation/cases/mantis-33541/2/regression.tcl": {
       "checkpoint_id": "mantis-33541-regression",
       "group_id": "NG-04R-v2",
       "origin": "part1",
       "suite": "NG-04R-checks-v2@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m21494_scale_075_sphere925.tcl": {
+      "checkpoint_id": "neighborhood_v2_m21494_scale_075_sphere925",
+      "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-b2613378-27780-27252-21494-v1@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m21494_translated_sphere975.tcl": {
+      "checkpoint_id": "neighborhood_v2_m21494_translated_sphere975",
+      "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-b2613378-27780-27252-21494-v1@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27252_brep_plane_offset020.tcl": {
+      "checkpoint_id": "neighborhood_v2_m27252_brep_plane_offset020",
+      "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-b2613378-27780-27252-21494-v1@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27252_brep_plane_scale150_offset010.tcl": {
+      "checkpoint_id": "neighborhood_v2_m27252_brep_plane_scale150_offset010",
+      "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-b2613378-27780-27252-21494-v1@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27780_brep_rigid_translation_mapping.tcl": {
+      "checkpoint_id": "neighborhood_v2_m27780_brep_rigid_translation_mapping",
+      "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-b2613378-27780-27252-21494-v1@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27780_brep_scale_mapping.tcl": {
+      "checkpoint_id": "neighborhood_v2_m27780_brep_scale_mapping",
+      "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-b2613378-27780-27252-21494-v1@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27252_brep_plane_offset005.tcl": {
+      "checkpoint_id": "neighborhood_v2_m27252_brep_plane_offset005",
+      "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-b55-27310-27773-27252-oracle-v2@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27252_brep_plane_scale150_offset010.tcl": {
+      "checkpoint_id": "neighborhood_v2_m27252_brep_plane_scale150_offset010",
+      "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-b55-27310-27773-27252-oracle-v2@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27310_rigid_translated_original_breps.tcl": {
+      "checkpoint_id": "neighborhood_v2_m27310_rigid_translated_original_breps",
+      "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-b55-27310-27773-27252-oracle-v2@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27310_scaled_finite_brep_neighborhood.tcl": {
+      "checkpoint_id": "neighborhood_v2_m27310_scaled_finite_brep_neighborhood",
+      "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-b55-27310-27773-27252-oracle-v2@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27773_offset_near_tangent.tcl": {
+      "checkpoint_id": "neighborhood_v2_m27773_offset_near_tangent",
+      "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-b55-27310-27773-27252-oracle-v2@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27773_offset_radius_parameter.tcl": {
+      "checkpoint_id": "neighborhood_v2_m27773_offset_radius_parameter",
+      "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-b55-27310-27773-27252-oracle-v2@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m21494_scale_125_sphere925.tcl": {
+      "checkpoint_id": "neighborhood_v2_m21494_scale_125_sphere925",
+      "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-d9d310-21494-29807-31835@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m21494_translated_sphere925.tcl": {
+      "checkpoint_id": "neighborhood_v2_m21494_translated_sphere925",
+      "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-d9d310-21494-29807-31835@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m29807_ring_parameter_low.tcl": {
+      "checkpoint_id": "neighborhood_v2_m29807_ring_parameter_low",
+      "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-d9d310-21494-29807-31835@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m29807_ring_scaled_high.tcl": {
+      "checkpoint_id": "neighborhood_v2_m29807_ring_scaled_high",
+      "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-d9d310-21494-29807-31835@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m31835_common_scaled_r10.tcl": {
+      "checkpoint_id": "neighborhood_v2_m31835_common_scaled_r10",
+      "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-d9d310-21494-29807-31835@1"
+    },
+    "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m31835_common_scaled_r20.tcl": {
+      "checkpoint_id": "neighborhood_v2_m31835_common_scaled_r20",
+      "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+      "origin": "neighborhood_v2",
+      "suite": "occt-bf-suite-d9d310-21494-29807-31835@1"
     },
     "issues/mantis-30082/2/public/original.tcl": {
       "checkpoint_id": "mantis-30082-original",
@@ -356,6 +500,10 @@
     "g3": {
       "path": "five_group_originals/g3/run_draw_case.py",
       "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7"
+    },
+    "neighborhood_v2": {
+      "path": "five_group_originals/part1/run_draw_case.py",
+      "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
     },
     "part1": {
       "path": "five_group_originals/part1/run_draw_case.py",

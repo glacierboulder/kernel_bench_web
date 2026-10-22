@@ -98,6 +98,39 @@
       "runner": "draw_case_v1",
       "timeout_seconds": 90,
       "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v2.tcl",
+      "category": "neighborhood",
+      "id": "mantis-30082-neighborhood-dense-residual-v2",
+      "issue_id": "mantis-30082",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-30202/2/neighborhood_facepair_matrix.tcl",
+      "category": "neighborhood",
+      "id": "mantis-30202-neighborhood-facepair-matrix",
+      "issue_id": "mantis-30202",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-33541/2/neighborhood_boolean_transform.tcl",
+      "category": "neighborhood",
+      "id": "mantis-33541-neighborhood-boolean-transform",
+      "issue_id": "mantis-33541",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
     }
   ],
   "group_ids": [
@@ -109,5 +142,8 @@
     "occt-ng04r-derived-fe81a63b"
   ],
   "title": "WLine endpoint construction, special-point refinement, and extension eligibility：几何验收",
-  "version": "1"
+  "version": "1",
+  "support_files": [
+    "evaluation/cases/mantis-30082/5/neighbor_support.tcl"
+  ]
 }
