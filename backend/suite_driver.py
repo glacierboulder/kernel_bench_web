@@ -31,13 +31,13 @@ def _limits(cpu: int, memory_gib: int):
     return apply
 
 
-def _run(argv: list[str], *, cwd: Path, timeout: int, cpu: int, memory_gib: int) -> dict:
+def _run(argv: list[str], *, cwd: Path, timeout: int, cpu: int, memory_gib: int, env=None, output_limit=12000) -> dict:
     started=time.monotonic()
     try:
         proc=subprocess.run(argv,cwd=cwd,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,
-                            text=True,timeout=timeout,check=False,
+                            text=True,timeout=timeout,check=False,env=env,
                             preexec_fn=_limits(cpu,memory_gib))
-        output=proc.stdout[-12000:]
+        output=proc.stdout[-output_limit:]
         return {"return_code":proc.returncode,"elapsed_seconds":round(time.monotonic()-started,3),
                 "output_tail":output,"timed_out":False}
     except subprocess.TimeoutExpired as exc:
@@ -54,17 +54,28 @@ def _execute(checkpoint: dict, *, case_root: Path, build: Path, source: Path,
     case=_resolve(case_root,checkpoint["case"])
     timeout=int(options.get("case_timeout_seconds",checkpoint["timeout_seconds"]))
     if runner=="draw_case_v1":
+        resources = source / "src" if (source / "src" / "DrawResources").is_dir() else source / "resources"
         command=[sys.executable,str(draw_runner),"--build-dir",str(build),
-                 "--resource-dir",str(source/"resources"),"--case-dir",str(case.parent),
+                 "--resource-dir",str(resources),"--case-dir",str(case.parent),
                  "--script",case.name,
                  "--timeout-seconds",str(timeout),"--cpu-limit-seconds",str(max(1,timeout-3))]
-        detail=_run(command,cwd=case.parent,timeout=timeout+12,cpu=timeout+5,memory_gib=4)
+        env = os.environ.copy()
+        env["CASROOT"] = str(source)
+        detail=_run(command,cwd=case.parent,timeout=timeout+12,cpu=timeout+5,memory_gib=4,env=env,output_limit=2*1024*1024)
         output=detail["output_tail"]
         try:
             payload=json.loads(output)
         except json.JSONDecodeError:
             payload=None
         if payload is not None:
+            if payload.get("schema_version") in {"bf-group2-staged-run-v1", "bf-group3-staged-run-v1"}:
+                # These locked runners report the geometry oracle verdict in
+                # a staged record, rather than the legacy TEST_DONE envelope.
+                payload = {"return_code": payload.get("process_return_code"),
+                           "test_done_marker": payload.get("oracle", {}).get("status") == "geometry_pass",
+                           "timed_out": payload.get("process_return_code") == 3,
+                           "elapsed_seconds": payload.get("duration_seconds"),
+                           "runner_record": payload}
             detail=payload
         passed=(detail.get("return_code")==0 and bool(detail.get("test_done_marker"))
                 and not detail.get("timed_out"))
@@ -92,6 +103,14 @@ def _execute(checkpoint: dict, *, case_root: Path, build: Path, source: Path,
     passed=(tested["return_code"]==0 and not tested["timed_out"]
             and all(marker in tested["output_tail"] for marker in markers))
     return {"passed":passed,"compile":compiled,"result":tested}
+
+
+def _writable_case_root(case_root: Path, work: Path, assets: Path) -> Path:
+    target = work / "bundle"
+    shutil.copytree(case_root, target)
+    if assets.is_dir():
+        shutil.copytree(assets, target / "evaluation" / "cases" / "evaluator_assets", dirs_exist_ok=True)
+    return target
 
 
 def main() -> int:
@@ -130,10 +149,15 @@ def main() -> int:
                     "result":{"status":"not_run","reason":"build failed"}} for row in suite["checkpoints"]]
             else:
                 work.mkdir(parents=True,exist_ok=True)
+                # Harnesses create images/logs beside their inputs. Preserve the
+                # frozen materials and run an evaluator-only writable copy.
+                # Hidden harnesses resolve their trusted Tcl helpers relative
+                # to the original bundle layout, not the private Python loader.
+                case_root = _writable_case_root(args.case_root, work, Path("/evaluation/private/evaluator_assets"))
                 draw_runner=Path("/evaluation/scripts/run_draw_case.py")
                 for checkpoint in suite["checkpoints"]:
                     try:
-                        result=_execute(checkpoint,case_root=args.case_root,build=build,source=source,
+                        result=_execute(checkpoint,case_root=case_root,build=build,source=source,
                                         work=work,draw_runner=draw_runner)
                         status="passed" if result.get("passed") else "timeout" if result.get("result",{}).get("timed_out") else "failed"
                     except (OSError,ValueError,KeyError) as exc:

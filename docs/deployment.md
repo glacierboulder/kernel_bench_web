@@ -31,6 +31,11 @@ Do not install OS packages globally. A fresh Python environment can be created f
 | `BENCH_CODEX` | Codex executable probe only; it does not enable live runs |
 | `http_proxy`, `https_proxy`, `no_proxy` | Standard network-client proxy variables |
 
+Current task build tools and supervisor build helpers accept one or two compiler
+jobs and default to two. Frozen run snapshots retain their original helpers;
+after correcting runtime settings, use `backend.reevaluate` to create a new
+evaluation of the saved patch rather than editing a historical snapshot.
+
 The model gateway resolves proxy URL environment variables first, then the optional `proxies.http` and `proxies.https` config values. It does not print proxy URLs. Public-source preparation is local-only and makes no network request. Agent sandboxes receive no proxy variables or public network route.
 
 `config.example.json` contains generic defaults. Never place API credentials in that file. DSH reads its key from the trusted worker environment; the sandbox receives only a placeholder while requests are relayed through the fixed model gateway.

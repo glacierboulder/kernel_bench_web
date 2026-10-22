@@ -32,7 +32,7 @@ def _limit_child(cpu: int, memory_gib: int) -> None:
 
 
 def _helper():
-    path = Path(__file__).resolve().parents[1] / "run_eval.py"
+    path = Path(__file__).resolve().parent / "run_eval.py"
     spec = importlib.util.spec_from_file_location("bf_group2_run_eval", path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"cannot load locked oracle helper: {path}")
@@ -178,7 +178,7 @@ def _record(role, case_id, build_dir, resource_root, script, binary, env_script,
                   "build_record_sha256": digest(build_record) if build_record and build_record.is_file() else None,
                   "artifact_verification_path": str(artifact_verification) if artifact_verification else None,
                   "artifact_verification_sha256": digest(artifact_verification) if artifact_verification and artifact_verification.is_file() else None,
-                  "compiler": "GCC 9.4.0", "optimization": "-O0 -DNDEBUG", "jobs": 1,
+                  "compiler": "GCC 9.4.0", "optimization": "-O0 -DNDEBUG", "jobs": int(os.environ.get("BENCH_COMPILER_JOBS", "2")),
                   "targets": ["DRAWEXE", "TKTopTest"]},
         "execution": result, "runner_id": "bf-group2-gcc9-tcl-physical-oracle-v1",
         "runner_sha256": digest(Path(__file__).resolve()), "runner_process_exit_mapping": {
@@ -230,7 +230,7 @@ def main() -> int:
             "status": "not_run", "oracle_ran": False, "diagnostic": f"{type(exc).__name__}: {exc}"},
             "oracle": {"status": "not_run", "checks": []}, "process_return_code": 2,
             "test_done_marker": False,
-            "required_conda_env": required_conda_env or None,
+            "required_conda_env": os.environ.get("BENCH_REQUIRED_CONDA_ENV") or None,
             "active_conda_env": os.environ.get("CONDA_DEFAULT_ENV")}
     print(json.dumps(record, ensure_ascii=False, sort_keys=True, indent=2))
     return int(record.get("process_return_code", 2))

@@ -100,15 +100,15 @@ def _tcl_values() -> dict[str, str]:
 
 
 def configure_and_build(source: Path, build: Path) -> dict:
-    """Configure/build the frozen natural-source profile with one Clang job."""
+    """Configure/build the frozen natural-source profile with one or two compiler jobs."""
     source = Path(source).resolve()
     build = Path(build).resolve()
     cmake = os.environ.get("BENCH_CMAKE", "cmake")
     cc = os.environ.get("BENCH_CC", "clang-10")
     cxx = os.environ.get("BENCH_CXX", "clang++-10")
-    jobs = os.environ.get("BENCH_COMPILER_JOBS", "1")
-    if jobs != "1":
-        return {"configure": None, "build": None, "failure": "frozen profile requires BENCH_COMPILER_JOBS=1"}
+    jobs = os.environ.get("BENCH_COMPILER_JOBS", "2")
+    if jobs not in {"1", "2"}:
+        return {"configure": None, "build": None, "failure": "BENCH_COMPILER_JOBS must be 1 or 2"}
     overlay = _overlay()
     cmake_args = [
         cmake, "-S", str(source), "-B", str(build),
@@ -149,6 +149,6 @@ def configure_and_build(source: Path, build: Path) -> dict:
     if configured["return_code"] != 0:
         return {"configure": configured, "build": None}
     built = run([cmake, "--build", str(build), "--target", "DRAWEXE", "TKTopTest",
-                 "--parallel", "1"], source, 3600)
+                 "--parallel", jobs], source, 3600)
     return {"configure": configured, "build": built}
 

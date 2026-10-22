@@ -3,7 +3,7 @@ import os
 from .settings import SETTINGS
 
 MODEL = 'deepseek-flash'
-DEFAULT_CUMULATIVE_REQUEST_LIMIT = 200
+DEFAULT_CUMULATIVE_REQUEST_LIMIT = 500
 REQUEST_LIMIT_ENV = 'BENCH_CUMULATIVE_REQUEST_LIMIT'
 DEFAULT_MAX_OUTPUT_TOKENS = 32768
 
@@ -19,7 +19,7 @@ def output_token_limit(override=None):
 def cumulative_request_limit(override=None):
     """Return the paid model-request cap for one cumulative experiment chain.
 
-    The default preserves the original 200-request safety cap.  Operators can
+    The default allows up to 500 requests. Operators can
     set ``BENCH_CUMULATIVE_REQUEST_LIMIT`` or pass the worker's
     ``--request-limit`` option; browser clients cannot change this value.
     """

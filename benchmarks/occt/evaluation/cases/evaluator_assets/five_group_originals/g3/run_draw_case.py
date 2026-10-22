@@ -12,7 +12,7 @@ import tempfile
 from pathlib import Path
 
 GROUP = "occt-bf-group-b2613378-27780-27252-21494-v1"
-CORE_SHA256 = "36c057a5eeb849d3db60ee64bbf5930663c00bb6fc0d8249f09313c156f8b72e"
+CORE_SHA256 = "ab5b3f8e822b3dfcc0ff58cd7c74ad9b7790a796e8de893833b12cb10b61e7db"
 
 
 def sha(path: Path) -> str:

@@ -247,7 +247,7 @@ def main() -> int:
         "oracle": verdict,
         "build": {"status": "passed", "return_code": 0,
                   "drawexe_sha256": actual["drawexe"], "tktoptest_sha256": actual["tktoptest"],
-                  "compiler": "Clang 10", "optimization": "-O0 -DNDEBUG", "jobs": 1,
+                  "compiler": "Clang 10", "optimization": "-O0 -DNDEBUG", "jobs": int(os.environ.get("BENCH_COMPILER_JOBS", "2")),
                   "targets": ["DRAWEXE", "TKTopTest"]},
         "environment_adaptations": {"LIBGL_ALWAYS_SOFTWARE": "1", "DISPLAY": "unset",
                                     "resource_root": str(resource_root),

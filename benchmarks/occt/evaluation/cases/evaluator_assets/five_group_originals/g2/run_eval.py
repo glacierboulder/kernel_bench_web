@@ -83,8 +83,9 @@ def configure_and_build(source: Path, build: Path) -> dict:
     source, build = Path(source).resolve(), Path(build).resolve()
     cmake = os.environ.get("BENCH_CMAKE", "cmake")
     cc, cxx = os.environ.get("BENCH_CC", "gcc"), os.environ.get("BENCH_CXX", "g++")
-    if os.environ.get("BENCH_COMPILER_JOBS", "1") != "1":
-        return {"configure": None, "build": None, "failure": "profile requires one compiler job"}
+    jobs = os.environ.get("BENCH_COMPILER_JOBS", "2")
+    if jobs not in {"1", "2"}:
+        return {"configure": None, "build": None, "failure": "BENCH_COMPILER_JOBS must be 1 or 2"}
     overlay = _overlay()
     args = [cmake, "-S", str(source), "-B", str(build), "-G", "Unix Makefiles",
             "-DCMAKE_BUILD_TYPE=Release", "-DBUILD_LIBRARY_TYPE=Shared",
@@ -111,7 +112,7 @@ def configure_and_build(source: Path, build: Path) -> dict:
     if configured["return_code"] != 0:
         return {"configure": configured, "build": None}
     built = run([cmake, "--build", str(build), "--target", "DRAWEXE", "TKTopTest",
-                 "--parallel", "1"], source, 3600)
+                 "--parallel", jobs], source, 3600)
     return {"configure": configured, "build": built}
 
 
@@ -334,7 +335,7 @@ def _verify_hidden(case_id: str, role: str, text: str) -> dict:
             "max_large_cylinder_residual": max(large), "branch": "lower_z"})
 
     if case_id == "M27310_regression_two_loops":
-        module_path = Path(__file__).resolve().parent.parent / "evaluator_assets" / GROUP / "verify_m27310_endpoint_graph.py"
+        module_path = Path(__file__).resolve().parents[2] / GROUP / "verify_m27310_endpoint_graph.py"
         spec = importlib.util.spec_from_file_location("m27310_endpoint_graph", module_path)
         if spec is None or spec.loader is None:
             raise ValueError("locked physical endpoint-graph verifier is missing")

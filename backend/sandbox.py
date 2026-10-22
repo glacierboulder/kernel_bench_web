@@ -28,14 +28,14 @@ def command(workspace, *, mounts=(), env=None, cwd='/workspace'):
         if Path(path).exists():
             args += ['--ro-bind', path, path]
     args += ['--ro-bind', str(TOOLCHAIN_ROOT), str(TOOLCHAIN_ROOT), '--proc', '/proc', '--dev', '/dev',
-             '--bind', str(workspace / 'tmp'), '$BENCH_TMP_DIR', '--tmpfs', '/run', '--dir', '/etc',
+             '--bind', str(workspace / 'tmp'), '/tmp', '--tmpfs', '/run', '--dir', '/etc',
              '--bind', str(workspace / 'home'), '/home/agent',
              '--bind', str(Path(workspace).resolve()), '/workspace']
     for source, dest, writable in mounts:
         args += ['--bind' if writable else '--ro-bind', str(Path(source).resolve()), dest]
     variables = {'HOME': '/home/agent', 'USER': 'agent', 'LOGNAME': 'agent',
                  'PATH': str(SETTINGS.python.parent) + ':/usr/local/bin:/usr/bin:/bin',
-                 'LANG': 'C.UTF-8', 'TMPDIR': '/workspace$BENCH_TMP_DIR', 'OMP_NUM_THREADS': '2', 'OPENBLAS_NUM_THREADS': '2',
+                 'LANG': 'C.UTF-8', 'TMPDIR': '/tmp', 'OMP_NUM_THREADS': '2', 'OPENBLAS_NUM_THREADS': '2',
                  'CONDA_PREFIX': str(CONDA), 'PYTHONNOUSERSITE': '1',
                  'NODE_OPTIONS': '--max-old-space-size=1024'}
     variables.update(env or {})
