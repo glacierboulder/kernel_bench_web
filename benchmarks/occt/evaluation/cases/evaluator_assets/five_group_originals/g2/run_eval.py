@@ -179,10 +179,14 @@ def _common_draw_checks(text: str, case_id: str, role: str) -> None:
                        r"BF_ORACLE_EVAL_ERROR=|Standard_[A-Za-z0-9_]+Exception|while executing|"
                        r"invoked from within)", re.I)
     allow = []
-    if role == "B" and case_id == "M27310_1":
+    # These are recognized test assertions, regardless of candidate role.
+    # Let the numerical oracle below score them; do not turn an agent/F
+    # assertion failure into a parser/runtime failure. Unknown diagnostics
+    # and Tcl/runtime failures remain fatal.
+    if case_id == "M27310_1":
         allow = [re.compile(r"^Error: Number of curves is bad!$"),
                  re.compile(r"^Error: TolReached = [-+0-9.eE]+ is not equal to expected 1\.0e-7$")]
-    elif role == "B" and case_id == "M27310_2_d308":
+    elif case_id == "M27310_2_d308":
         allow = [re.compile(r"^Error: TolReached = [-+0-9.eE]+ is not equal to expected 6\.9230965382090094e-006$")]
     elif role == "B" and case_id == "M27773":
         allow = [re.compile(r'^Error\s*:\s*is WRONG because number of VERTEX entities in shape "result" is 0$')]
