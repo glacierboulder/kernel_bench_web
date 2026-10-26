@@ -20,7 +20,7 @@ No dependency was installed, no production service was started or restarted, no 
 
 - `benchmarks/occt/`: versioned issues, groups, suites, schemas, source/toolchain locks, provenance, and the DRAW/C++ runners required by the catalog.
 - `backend/`: catalog validation, freezing, suite runner/evaluator dispatch, reevaluation, Codex gateway/runner/adapter, worker routing, and recovery logic.
-- `docs/benchmark-example/`, `docs/benchmark-authoring.md`, `docs/benchmark-format.md`, and `docs/deployment.md`: copyable file-maintained authoring example, version rules, and operating instructions.
+- `docs/benchmark-example/`, the [consolidated authoring and format guide](benchmark-authoring.md#清单格式与目录结构), and `docs/deployment.md`: copyable file-maintained authoring example, version rules, and operating instructions.
 - `tests/`: DRAW selection/missing-file checks, duplicate group ID rejection, example import/queue checks, offline reevaluation provenance, Codex proxy/isolation/recovery, and worker fake-CLI dispatch.
 
 These files are present in the shared working tree/index for review. No commit or push was made.

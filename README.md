@@ -42,7 +42,7 @@ python -m backend.doctor
 python -m backend.source_cache <source-id> --from-dir <local-git-checkout>
 ```
 
-工具从本地 Git 对象导出锁定 commit，验证清单中的物化树哈希，再原子发布到用户缓存。没有 Git 元数据的导出只有在明确传入 `--allow-unverified` 且哈希匹配时才会导入，并保持未验证状态。树哈希定义、材料格式和扩展示例见 [题库格式](docs/benchmark-format.md)。
+工具从本地 Git 对象导出锁定 commit，验证清单中的物化树哈希，再原子发布到用户缓存。没有 Git 元数据的导出只有在明确传入 `--allow-unverified` 且哈希匹配时才会导入，并保持未验证状态。树哈希定义、材料格式和扩展示例见 [题目构造与格式指南](docs/benchmark-authoring.md#清单格式与目录结构)。
 
 ## Agent 与评测
 
