@@ -9,6 +9,8 @@ import re
 import resource
 import signal
 import subprocess
+import sys
+import hashlib
 import tempfile
 import time
 from pathlib import Path
@@ -43,6 +45,17 @@ def scan_failures(handle) -> bool:
                 or "BENCH_ORACLE_FAILED" in line or line.startswith("BENCH_ASSERT_FAIL")):
             return True
     return False
+
+
+def diagnostic_lines(*handles) -> list[str]:
+    """Preserve full-log OCCT diagnostics for failure attribution."""
+    found=[]
+    for handle in handles:
+        handle.seek(0)
+        for raw in handle:
+            line=raw.decode('utf-8',errors='replace').strip()
+            if OCCT_ERROR_RE.search(line): found.append(line)
+    return found
 
 
 def resolve_resource_dirs(resource_arg: Path) -> tuple[Path, Path]:
@@ -104,11 +117,34 @@ def tcl_quote(value: str) -> str:
     return '"' + escaped + '"'
 
 
-def write_wrapper(script: Path, wrapper: Path) -> None:
+def resolve_tcl_init() -> Path | None:
+    """Locate the deployment's real Tcl standard library; never emulate it."""
+    candidates=[]
+    explicit=os.environ.get('BENCH_TCL_INIT')
+    if explicit: candidates.append(Path(explicit))
+    for key,suffix in (('BENCH_TCL_LIBRARY_DIR','tcl8.6/init.tcl'),
+                       ('BENCH_TCL_DIR','lib/tcl8.6/init.tcl'),
+                       ('TCL_LIBRARY','init.tcl')):
+        if os.environ.get(key): candidates.append(Path(os.environ[key])/suffix)
+    candidates.extend((Path(sys.prefix)/'lib/tcl8.6/init.tcl',
+                       Path(sys.prefix).parent.parent/'lib/tcl8.6/init.tcl'))
+    return next((p.resolve() for p in candidates if p.is_file()),None)
+
+
+def tcl_bootstrap(tcl_init: Path | None) -> str:
+    # Tcl_CreateInterp alone lacks the script-defined math functions used by
+    # ordinary Tcl 8.6 expressions. Only initialize interpreters missing them.
+    body=("error {Tcl standard library is unavailable; configure BENCH_TCL_LIBRARY_DIR}" if tcl_init is None else
+          "set ::tcl_library " + tcl_quote(str(tcl_init.parent)) + "\nsource " + tcl_quote(str(tcl_init)))
+    return ("if {![llength [info commands ::tcl::mathfunc::max]] || "
+            "![llength [info commands ::tcl::mathfunc::min]]} {\n"+body+"\n}\n")
+
+
+def write_wrapper(script: Path, wrapper: Path, tcl_init: Path | None = None) -> None:
     quoted = tcl_quote(str(script))
     wrapper.write_text(
         "set ::bench_runner_script " + quoted + "\n"
-        "set ::bench_runner_code [catch {source $::bench_runner_script} "
+        "set ::bench_runner_code [catch {\n" + tcl_bootstrap(tcl_init) + "source $::bench_runner_script\n} "
         "::bench_runner_message ::bench_runner_options]\n"
         "if {$::bench_runner_code != 0} {\n"
         "  puts stderr \"BENCH_TCL_ERROR: $::bench_runner_message\"\n"
@@ -220,7 +256,10 @@ def main() -> int:
 
         with tempfile.TemporaryDirectory(prefix="occt-draw-case-") as temporary:
             wrapper = Path(temporary) / "run_case.tcl"
-            write_wrapper(script, wrapper)
+            tcl_init = resolve_tcl_init()
+            write_wrapper(script, wrapper, tcl_init)
+            result["tcl_standard_library"] = {"init_script":str(tcl_init) if tcl_init else None,
+                "sha256":hashlib.sha256(tcl_init.read_bytes()).hexdigest() if tcl_init else None}
             with tempfile.TemporaryFile() as stdout_file, tempfile.TemporaryFile() as stderr_file:
                 started = time.monotonic()
                 proc = subprocess.Popen(
@@ -244,9 +283,11 @@ def main() -> int:
                     return_code = proc.wait()
                 elapsed = round(time.monotonic() - started, 3)
                 full_log_failed = scan_failures(stdout_file) or scan_failures(stderr_file)
+                errors = diagnostic_lines(stdout_file, stderr_file)
                 stdout = tail(stdout_file)
                 stderr = tail(stderr_file)
             result.update(evaluate_output(return_code, timed_out, stdout, stderr))
+            result["diagnostic_lines"] = errors
             if full_log_failed:
                 result.update(passed=False, test_done_marker=False, full_log_failure_detected=True)
             result.update({

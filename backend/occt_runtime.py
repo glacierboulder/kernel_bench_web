@@ -59,6 +59,13 @@ def install(root: Path, suite: dict, supervisor: Path, *, assets_root: Path | No
         shutil.copy2(RUNTIME/'public_build.py',dst/'public_build.py')
         shutil.copy2(RUNTIME/'public_draw.py',dst/'draw_base.py')
         (dst/'build-profile.json').write_text(json.dumps(config['public_build_profile']))
+    # Every suite receives the same Tcl initialization/standard DRAW runtime.
+    dst=assets_root/'unified_runtime';dst.mkdir(parents=True,exist_ok=True)
+    shutil.copy2(RUNTIME/'public_draw.py',dst/'draw_base.py')
+    for cp in config['checkpoints'].values():
+        if cp['engine']['kind']=='assertions':
+            cp['engine']={'kind':'assertions','path':'unified_runtime/draw_base.py',
+                          'sha256':hashlib.sha256((RUNTIME/'public_draw.py').read_bytes()).hexdigest()}
     expected={c['id'] for c in suite['checkpoints']}
     if set(config['checkpoints'])!=expected: raise ValueError('runtime must cover the exact selected suite')
     for cp in suite['checkpoints']:

@@ -141,12 +141,7 @@ def main():
             spec=importlib.util.spec_from_file_location('occt_assertion_oracle',path)
             module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
             raw=module.validate_base_result(raw,r)
-            # Only completed, explicit failed assertions can establish failure
-            # without a known upstream signature. Preserve unknown OCCT errors.
-            base=raw['base_runner'];failed=any(x['status']=='FAIL' for x in raw['observed_assertion_events'])
-            complete=(raw['summary_pair_valid'] and raw['completion_sentinel_count']==1 and not raw['missing_assertions'] and not raw['unexpected_assertions'] and not raw['duplicate_assertions'])
-            if complete and failed and base.get('return_code')==0 and not base.get('timed_out') and not base.get('tcl_error_detected'):
-                raw['status']='geometry_fail'
+            raw['status']=module.completed_failure_status(raw)
             raw['return_code']=0 if raw['passed'] else 1
         out=_normalize(raw,proc.returncode,r)
         out.update(case_sha256=r['case_sha256'],adapter_sha256=_sha(Path(__file__)))

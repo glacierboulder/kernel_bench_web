@@ -44,3 +44,34 @@ def validate_base_result(base:dict, route:dict)->dict:
             'expected_geometry_failure_signature_seen':expected_error_seen,
             'base_runner':base}
 
+# CheckCommands reports failed geometry by printing diagnostics and returning
+# normally. These are exact diagnostic forms, not a general Error allow-list.
+_GEOMETRY_DIAGNOSTICS = [
+    re.compile(r'^Error\s*:\s*.* is WRONG because number of (?:VERTEX|EDGE|WIRE|FACE|SHELL|SOLID) entities in shape ".*" is \d+\s*$'),
+    re.compile(r'^Error\s*:\s*The (?:area|volume) of result shape is [-+0-9.eE]+, expected [-+0-9.eE]+\s*$'),
+    re.compile(r'^Error\s*:\s*The command is not valid\. The (?:area|volume) is 0\.\s*$'),
+    re.compile(r'^Error\s*:\s*(?:bad tolerance of result|\S+ has bad tolerance|the \S+ is a self-interfering shape)\s*$'),
+    re.compile(r'^ERROR\. Intersection is wrong\s*$'),
+    re.compile(r'^ERROR: reversed (?:scaled|transformed) cone intersection is not exactly two curves\s*$'),
+]
+
+
+def completed_failure_status(result: dict) -> str:
+    """Normalize failure attribution without changing a pass/fail predicate."""
+    base=result.get('base_runner',{})
+    complete=(result.get('summary_pair_valid') and result.get('completion_sentinel_count')==1
+              and not result.get('missing_assertions') and not result.get('unexpected_assertions')
+              and not result.get('duplicate_assertions'))
+    if (not complete or base.get('return_code')!=0 or base.get('timed_out')
+            or base.get('tcl_error_detected')):
+        return result['status']
+    if any(event['status']=='FAIL' for event in result.get('observed_assertion_events',[])):
+        return 'geometry_fail'
+    text=str(base.get('stdout_tail',''))+'\n'+str(base.get('stderr_tail',''))
+    errors=base.get('diagnostic_lines')
+    if errors is None:
+        errors=[line.strip() for line in text.splitlines()
+                if re.match(r'^\s*(?:Error\b|An exception was caught\b|\*\* Exception\b)',line,re.I)]
+    if errors and all(any(p.fullmatch(line.strip()) for p in _GEOMETRY_DIAGNOSTICS) for line in errors):
+        return 'geometry_fail'
+    return result['status']
