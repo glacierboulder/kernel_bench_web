@@ -1,0 +1,26 @@
+{
+  "protocol": "v4_candidate_build_manifest_adapter_v1",
+  "identity": "e6afb_gcc_o0_existing",
+  "binary": {
+    "path": "/home/wz/CADAI/OCCT_bench_proto_v2/validation/bf_batch_2016_2017/build/e6afb_gcc_o0/lin64/gcc/bin/DRAWEXE-7.1.1",
+    "sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+    "bytes": 14472
+  },
+  "library_dir": "/home/wz/CADAI/OCCT_bench_proto_v2/validation/bf_batch_2016_2017/build/e6afb_gcc_o0/lin64/gcc/lib",
+  "plugin_libraries": [
+    {
+      "path": "libTKTopTest.so.7.1.1",
+      "sha256": "afb4b016fb1c1f92d8f47cf57d8e1f56cb138f0165e7791018b2e91d017a9b83",
+      "bytes": 3016608
+    }
+  ],
+  "source": {
+    "commit": "e6afb53983172155891ef175943534e0e1a24f75",
+    "tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b"
+  },
+  "source_manifest_path": "/home/wz/CADAI/OCCT_bench_proto_v2/validation/bf_batch_2016_2017/source_e6afb.json",
+  "source_manifest_sha256": "94819b51371d7b0d33296819274ee0ee8aeb61c1722308522d6b81df21be94de",
+  "original_build_record_path": "/home/wz/CADAI/OCCT_bench_proto_v2/validation/bf_batch_2016_2017/build_e6afb_gcc_o0_test_plugin.json",
+  "original_build_record_sha256": "93ab0eeb30ba221aa241c765140c034dd30581abc7f349b75840d2256771b3e6",
+  "note": "Paths normalized to surviving v2 directory; binary/plugin SHA measured from those exact files."
+}

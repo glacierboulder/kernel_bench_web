@@ -1,0 +1,82 @@
+{
+  "protocol": "occt_stage3_geometry_run_v1",
+  "label": "M30703_original_B_41ccce_rerun",
+  "canonical_issue": "M30703",
+  "case_id": "original",
+  "case_kind": "original",
+  "mode": "B",
+  "started_utc": "2026-10-27T15:23:46Z",
+  "ended_utc": "2026-10-27T15:23:46Z",
+  "wall_seconds": 0.065,
+  "wall_limit_seconds": 180,
+  "cpu_limit_seconds": 150,
+  "return_code": 0,
+  "timed_out": false,
+  "geometry_verdict": "geometry_fail",
+  "assertion_evidence": {
+    "expected_pass_marker_ids": [
+      "solution_count"
+    ],
+    "pass_marker_counts": {
+      "solution_count": 0
+    },
+    "required_output_counts": {},
+    "observed_output_counts": {},
+    "completion_sentinel_count": 1,
+    "missing_or_duplicate_markers": [
+      "solution_count"
+    ],
+    "unmet_output_counts": {},
+    "failure_lines": [
+      "Error: The command cannot be built",
+      "__BENCH_ASSERT_FAIL__ solution_count observed=2 expected=1"
+    ],
+    "exception_lines": []
+  },
+  "source_ref": {
+    "manifest_path": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/occt-single-31016/source_B.json",
+    "manifest_sha256": "84fbf5bbe41752e1f1275df31c454aa30be0cfcada07fca831382327d69bfaee",
+    "commit": "41ccce129d0f39b7a8a5edaaaeb2cf782e3bce2d",
+    "tree": "43d587f9192b1c9ad0f2ce86b72720dbd5955b73",
+    "archive_sha256": "9ecfcce563e26a0ed163a9adf25150b3606d1f8ff29488f940616198f342be63",
+    "materialized_manifest_sha256": "30c3e53313e030df4c3d2c08045841d4188dbb8a36b0b2e13ca296e4e1424bbe"
+  },
+  "build_manifest_ref": {
+    "path": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/B_build_manifest.json",
+    "sha256": "939c1d9c78f2ecc98747aeb49504b07d1ce7078f26158cd4689c79cb4e7f541b",
+    "binary": {
+      "path": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/occt-single-31016/build_B/lin64/clang/bin/DRAWEXE-7.4.1",
+      "sha256": "520c0584fbecb9246f49cded32f764e0282a850993045b5bd0f9d833a46a120c",
+      "bytes": 17040
+    },
+    "plugin": {
+      "path": "libTKTopTest.so",
+      "sha256": "4d4923f7a88dd3d55634005e01c3d7b80e1513bf2db883e4e791f46b70f6d013",
+      "bytes": 2053768
+    }
+  },
+  "case": {
+    "path": "validation/modern_candidates/M30703/run_case.tcl",
+    "sha256": "305b58d57eaba43831984c9d0ba749709d12ca150d1f57cf49d68c17d8f501ea",
+    "bytes": 2039
+  },
+  "bootstrap": {
+    "path": "validation/modern_candidates/M30703/support/intss_begin_B_41ccce.tcl",
+    "sha256": "565df42b02bdfe647e1e38b09db57c925eb91115c8acd06c346f62f379d43e80"
+  },
+  "wrapper": {
+    "path": "validation/modern_candidates/M30703/runs/B_41ccce_rerun/M30703_original_B_41ccce_rerun.wrapper.tcl",
+    "sha256": "fa2792dd5a45ce301911fca5b8e89c31434a39bf41f166107c70cd6874377d81"
+  },
+  "runner_sha256": "3081318b8c3da4c535898311a6f6c7c3f677652624024dfb847464e378a32f27",
+  "command": [
+    "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/occt-single-31016/build_B/lin64/clang/bin/DRAWEXE-7.4.1",
+    "-b",
+    "-f",
+    "/home/wz/CADAI/OCCT_bench_proto_v4/validation/modern_candidates/M30703/runs/B_41ccce_rerun/M30703_original_B_41ccce_rerun.wrapper.tcl"
+  ],
+  "stdout_path": "validation/modern_candidates/M30703/runs/B_41ccce_rerun/M30703_original_B_41ccce_rerun.stdout.log",
+  "stdout_sha256": "6f06a4af3fe0fce7c0921d4f0652309c981cc71178c1831b5b77fc8861e85b33",
+  "stderr_path": "validation/modern_candidates/M30703/runs/B_41ccce_rerun/M30703_original_B_41ccce_rerun.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

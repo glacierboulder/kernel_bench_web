@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "protocol": "v4_portable_calibration_record_v1",
+  "canonical_issue": "M33615",
+  "role": "regression_B",
+  "case_kind": "regression",
+  "geometry_verdict": "geometry_pass",
+  "return_code": 0,
+  "timed_out": false,
+  "wall_seconds": 0.033,
+  "assertion_evidence": {
+    "expected_pass_marker_ids": [
+      "reg_shape_check",
+      "reg_topology",
+      "reg_area_volume",
+      "reg_valid"
+    ],
+    "pass_marker_counts": {
+      "reg_shape_check": 1,
+      "reg_topology": 1,
+      "reg_area_volume": 1,
+      "reg_valid": 1
+    },
+    "required_output_counts": {},
+    "observed_output_counts": {},
+    "completion_sentinel_count": 1,
+    "missing_or_duplicate_markers": [],
+    "unmet_output_counts": {},
+    "failure_lines": [],
+    "exception_lines": []
+  },
+  "source": {
+    "commit": "84f42008b74b4545e18e0ec361fd14e48d6a961d",
+    "git_tree": "17133b036ad46f0ac707f48aa9723a97db9a5d02",
+    "archive_sha256": null,
+    "materialized_manifest_sha256": null
+  },
+  "build": {
+    "binary_sha256": "b9006aefd7958c8104815c0f7b3057b3c5892916d4f505cbb5b0fea58da66bab",
+    "binary_bytes": null,
+    "plugin_sha256": "dc12148779a5c6075d5b13ea06bb497bb1b4f32fec06fd1823cd789c39ef4bb5",
+    "plugin_bytes": null
+  },
+  "candidate_case_sha256": "dd4f9efa49cffd6dc848abfc21adcb09a0ccb531fda4a535d1477fe0c2fbc5da",
+  "raw_candidate_record": "provenance/calibration/M33615/raw/regression_b.candidate_record.json",
+  "stdout": {
+    "path": "provenance/calibration/M33615/raw/regression_b.stdout.log",
+    "sha256": "092fe9d3d86dd8f6f207ad82d162fd4e2e891816c185c04bb48981b169f29214"
+  },
+  "stderr": {
+    "path": "provenance/calibration/M33615/raw/regression_b.stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "active_bundle_case": null,
+  "source_evidence": "../source-and-build-map.json"
+}

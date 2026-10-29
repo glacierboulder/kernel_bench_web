@@ -12,7 +12,22 @@ The catalog keeps stable issue, group, suite, source, and version identities for
 | `groups/new/occt-27310-27773-27252/1.json` | `occt-bf-group-b55-27310-27773-27252-oracle-v2` | `occt-27310@1`, `occt-27773@1`, `occt-27252@1` | `evaluation/suites/new/occt-27310-27773-27252/1.json` (`occt-bf-suite-b55-27310-27773-27252-oracle-v2`) |
 | `groups/new/occt-21494-27252-27780/1.json` | `occt-bf-group-b2613378-27780-27252-21494-v1` | `occt-21494@2`, `occt-27252@2`, `occt-27780@1` | `evaluation/suites/new/occt-21494-27252-27780/1.json` (`occt-bf-suite-b2613378-27780-27252-21494-v1`) |
 
-The public titles follow `新题 · OCCT <ordered numbers>`. Issue identity IDs and source locks retain their original IDs and versions.
+The public titles follow `OCCT · <ordered numbers>`. Issue identity IDs and source locks retain their original IDs and versions.
+
+## Added single-issue tasks
+
+| Group directory | Stable identity | Suite directory |
+|---|---|---|
+| `groups/new/occt-32721/1.json` | `occt-boolean-intersection-v4-mantis-32721` | `evaluation/suites/new/occt-32721/1.json` |
+| `groups/new/occt-32942/1.json` | `occt-boolean-intersection-v4-mantis-32942` | `evaluation/suites/new/occt-32942/1.json` |
+| `groups/new/occt-31404/1.json` | `occt-boolean-intersection-v4-mantis-31404` | `evaluation/suites/new/occt-31404/1.json` |
+| `groups/new/occt-31470/1.json` | `occt-boolean-intersection-v4-mantis-31470` | `evaluation/suites/new/occt-31470/1.json` |
+| `groups/new/occt-32470/1.json` | `occt-boolean-intersection-v4-mantis-32470` | `evaluation/suites/new/occt-32470/1.json` |
+| `groups/new/occt-32502/1.json` | `occt-boolean-intersection-v4-mantis-32502` | `evaluation/suites/new/occt-32502/1.json` |
+| `groups/new/occt-33244/1.json` | `occt-boolean-intersection-v4-mantis-33244` | `evaluation/suites/new/occt-33244/1.json` |
+| `groups/new/occt-30703/1.json` | `occt-boolean-intersection-v4-mantis-30703` | `evaluation/suites/new/occt-30703/1.json` |
+| `groups/new/occt-29972/1.json` | `occt-boolean-intersection-v4-mantis-29972` | `evaluation/suites/new/occt-29972/1.json` |
+| `groups/new/occt-33615/1.json` | `occt-boolean-intersection-v4-mantis-33615` | `evaluation/suites/new/occt-33615/1.json` |
 
 ## Legacy groups
 

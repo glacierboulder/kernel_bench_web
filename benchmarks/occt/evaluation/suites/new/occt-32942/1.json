@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "occt-boolean-intersection-v4-mantis-32942",
+  "version": "1",
+  "title": "OCCT · 32942 · 检查点",
+  "source_ids": [
+    "occt-v4-b84f42008b74"
+  ],
+  "group_ids": [
+    "occt-boolean-intersection-v4-mantis-32942"
+  ],
+  "checkpoints": [
+    {
+      "id": "original-32942-upstream",
+      "issue_id": "mantis-32942",
+      "category": "original",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-32942/1/original_official.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "neighborhood-32942-1-fixture-rigid-z",
+      "issue_id": "mantis-32942",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-32942/1/neighborhood_1_fixture_rigid_z.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "neighborhood-32942-2-fixture-rigid-x",
+      "issue_id": "mantis-32942",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-32942/1/neighborhood_2_fixture_rigid_x.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "regression-32942-quarter-sphere",
+      "issue_id": "mantis-32942",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-32942/1/regression_health_quarter_sphere.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-32942/1/bootstrap.tcl",
+    "issues/occt-32942/1/official_upstream.tcl",
+    "issues/occt-32942/1/original_official.tcl",
+    "issues/occt-32942/1/neighborhood_1_fixture_rigid_z.tcl",
+    "issues/occt-32942/1/neighborhood_2_fixture_rigid_x.tcl",
+    "issues/occt-32942/1/regression_health_quarter_sphere.tcl"
+  ]
+}

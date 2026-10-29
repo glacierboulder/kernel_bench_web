@@ -1,0 +1,87 @@
+{
+  "protocol": "occt_single_v4_frozen_runner_negative_controls_v2",
+  "recorded_utc": "2026-10-27T16:42:50Z",
+  "runtime_root": "staging/runtime/stage4-20261027T163528Z",
+  "task_id_for_shared_frozen_adapter": "occt-boolean-intersection-v4-mantis-29972",
+  "adapter_path": "staging/runtime/stage4-20261027T163528Z/work/tasks/occt-boolean-intersection-v4-mantis-29972/workspace/evaluation-control/scripts/run_draw_case.py",
+  "adapter_sha256": "95a6cd6be2b00dcb50e5d91324456b62cf33f9fab8a489f166270f6658c91f08",
+  "base_runner_path": "staging/runtime/stage4-20261027T163528Z/work/tasks/occt-boolean-intersection-v4-mantis-29972/workspace/evaluation-control/private/evaluator_assets/occt_single_v4/draw_case_v1_base.py",
+  "base_runner_sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149",
+  "dispatch_lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+  "tested_new_route": "issues/mantis-29972/1/original_official.tcl",
+  "tested_assertion_ids": [
+    "curve_count",
+    "edge_count",
+    "section_endpoint_count",
+    "section_distance"
+  ],
+  "controls": [
+    {
+      "name": "marker_only_without_named_assertions",
+      "rejected": true,
+      "adapter_status": "oracle_incomplete",
+      "expected_assertion_ids": [
+        "curve_count",
+        "edge_count",
+        "section_endpoint_count",
+        "section_distance"
+      ],
+      "observed_events": []
+    },
+    {
+      "name": "missing_named_assertion",
+      "rejected": true,
+      "adapter_status": "oracle_incomplete",
+      "expected_assertion_ids": [
+        "curve_count",
+        "edge_count",
+        "section_endpoint_count",
+        "section_distance"
+      ],
+      "missing_ids": [
+        "curve_count"
+      ],
+      "observed_ids": [
+        "edge_count",
+        "section_endpoint_count",
+        "section_distance"
+      ]
+    },
+    {
+      "name": "tcl_error_with_valid_markers",
+      "rejected": true,
+      "adapter_status": "runner_error",
+      "base_tcl_error_detected": true,
+      "observed_events": [
+        {
+          "status": "PASS",
+          "id": "curve_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "edge_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "section_endpoint_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "section_distance",
+          "kind": "expression"
+        }
+      ]
+    },
+    {
+      "name": "unknown_case_route",
+      "rejected": true,
+      "failure_reason": "unknown checkpoint case route",
+      "case_relative_path": "issues/mantis-29972/1/official_upstream.tcl"
+    }
+  ],
+  "all_rejected": true,
+  "note": "Uses the actual frozen base evaluate_output, adapter load_lock, route_for, and validate_base_result functions; mock outputs do not execute geometry."
+}

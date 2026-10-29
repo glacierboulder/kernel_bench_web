@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "protocol": "v4_portable_calibration_record_v1",
+  "canonical_issue": "M33615",
+  "role": "original_B",
+  "case_kind": "original",
+  "geometry_verdict": "geometry_fail",
+  "return_code": 0,
+  "timed_out": false,
+  "wall_seconds": 0.065,
+  "assertion_evidence": {
+    "expected_pass_marker_ids": [
+      "official_test_completed"
+    ],
+    "pass_marker_counts": {
+      "official_test_completed": 1
+    },
+    "required_output_counts": {},
+    "observed_output_counts": {},
+    "completion_sentinel_count": 1,
+    "missing_or_duplicate_markers": [],
+    "unmet_output_counts": {},
+    "failure_lines": [
+      "Error :  is WRONG because number of VERTEX entities in shape \"result\" is 6",
+      "Error :  is WRONG because number of EDGE entities in shape \"result\" is 9"
+    ],
+    "exception_lines": []
+  },
+  "source": {
+    "commit": "84f42008b74b4545e18e0ec361fd14e48d6a961d",
+    "git_tree": "17133b036ad46f0ac707f48aa9723a97db9a5d02",
+    "archive_sha256": null,
+    "materialized_manifest_sha256": null
+  },
+  "build": {
+    "binary_sha256": "b9006aefd7958c8104815c0f7b3057b3c5892916d4f505cbb5b0fea58da66bab",
+    "binary_bytes": null,
+    "plugin_sha256": "dc12148779a5c6075d5b13ea06bb497bb1b4f32fec06fd1823cd789c39ef4bb5",
+    "plugin_bytes": null
+  },
+  "candidate_case_sha256": "0145522bcb90081979333e364f9dd7881e2c5ab7f4145ab24cab0d559e62473f",
+  "raw_candidate_record": "provenance/calibration/M33615/raw/original_b.candidate_record.json",
+  "stdout": {
+    "path": "provenance/calibration/M33615/raw/original_b.stdout.log",
+    "sha256": "98239ace9ac129ecdbb383acbce280674b32f51e1a0a62e4201b2497caba2b65"
+  },
+  "stderr": {
+    "path": "provenance/calibration/M33615/raw/original_b.stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "active_bundle_case": "issues/mantis-33615/1/original_official.tcl",
+  "source_evidence": "../source-and-build-map.json"
+}

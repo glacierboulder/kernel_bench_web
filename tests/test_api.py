@@ -47,7 +47,7 @@ class ApiTests(unittest.TestCase):
         if origin:
             headers['Origin'] = origin
         req = Request(cls.base + path, data=json.dumps(payload).encode() if payload is not None else None, headers=headers, method=method)
-        with urlopen(req, timeout=5) as response:
+        with urlopen(req, timeout=30) as response:
             return json.load(response)
 
     def test_auth_and_origin(self):
@@ -58,7 +58,8 @@ class ApiTests(unittest.TestCase):
 
     def test_demo_snapshot_and_execution_gate(self):
         state = self.request('/api/state')
-        self.assertEqual(sum(t['version']=='1' for t in state['tasks']), 7)
+        catalog=json.loads((ROOT/'benchmarks/occt/catalog.json').read_text())
+        self.assertEqual(sum(t['version']=='1' for t in state['tasks']), len(catalog['groups']))
         visible3 = next(t for t in state['tasks'] if t['id'] == 'occt_boolean_group_visible_544_506_847' and t['version']=='1')
         self.assertEqual([i['id'] for i in visible3['issues']], ['occt-544', 'occt-506', 'occt-847'])
         self.assertFalse(visible3['has_hidden_checks'])

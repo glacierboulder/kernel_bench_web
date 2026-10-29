@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "protocol": "v4_portable_calibration_record_v1",
+  "canonical_issue": "M29972",
+  "role": "N1_F",
+  "case_kind": "neighbor",
+  "geometry_verdict": "geometry_pass",
+  "return_code": 0,
+  "timed_out": false,
+  "wall_seconds": 0.066,
+  "assertion_evidence": {
+    "expected_pass_marker_ids": [
+      "transform_witness",
+      "curve_total",
+      "official_test_completed"
+    ],
+    "pass_marker_counts": {
+      "transform_witness": 1,
+      "curve_total": 1,
+      "official_test_completed": 1
+    },
+    "required_output_counts": {},
+    "observed_output_counts": {},
+    "completion_sentinel_count": 1,
+    "missing_or_duplicate_markers": [],
+    "unmet_output_counts": {},
+    "failure_lines": [],
+    "exception_lines": []
+  },
+  "source": {
+    "commit": "41ccce129d0f39b7a8a5edaaaeb2cf782e3bce2d",
+    "git_tree": "43d587f9192b1c9ad0f2ce86b72720dbd5955b73",
+    "archive_sha256": "9ecfcce563e26a0ed163a9adf25150b3606d1f8ff29488f940616198f342be63",
+    "materialized_manifest_sha256": "30c3e53313e030df4c3d2c08045841d4188dbb8a36b0b2e13ca296e4e1424bbe"
+  },
+  "build": {
+    "binary_sha256": "520c0584fbecb9246f49cded32f764e0282a850993045b5bd0f9d833a46a120c",
+    "binary_bytes": 17040,
+    "plugin_sha256": "4d4923f7a88dd3d55634005e01c3d7b80e1513bf2db883e4e791f46b70f6d013",
+    "plugin_bytes": 2053768
+  },
+  "candidate_case_sha256": "dfb98359e6f60d2c329074a12a0bc04bcc14382c41a345f8d83c2ad669d16251",
+  "raw_candidate_record": "provenance/calibration/M29972/raw/n1_f.candidate_record.json",
+  "stdout": {
+    "path": "provenance/calibration/M29972/raw/n1_f.stdout.log",
+    "sha256": "622483619d5cfb9f0fcdfc70e3ad7305028cac02cff37f845023d66f0f1fa1b8"
+  },
+  "stderr": {
+    "path": "provenance/calibration/M29972/raw/n1_f.stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "active_bundle_case": null,
+  "source_evidence": "../source-and-build-map.json"
+}

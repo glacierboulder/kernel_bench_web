@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-boolean-intersection-v4-mantis-30703",
+  "version": "1",
+  "title": "OCCT · 30703",
+  "kind": "single",
+  "source_id": "occt-v4-b41ccce129d0",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "mantis-30703",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-boolean-intersection-v4-mantis-30703",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

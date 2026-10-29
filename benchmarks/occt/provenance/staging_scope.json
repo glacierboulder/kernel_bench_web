@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-27T02:26:53Z",
+  "stage": "ten-task staging; final frozen replay pending",
+  "scope": "ten distinct single Mantis identities, Boolean/BOP geometric-intersection start stage",
+  "canonical_issues": [
+    "mantis-32721",
+    "mantis-32942",
+    "mantis-31404",
+    "mantis-31470",
+    "mantis-32470",
+    "mantis-32502",
+    "mantis-33244",
+    "mantis-30703",
+    "mantis-29972",
+    "mantis-33615"
+  ],
+  "old_web_catalog_exclusion_file_sha256": "9943f9f96402aca5b55a2ce411353a1267b08e518b5dbf118132c159b71c017e",
+  "hard_exclusions": "Current web catalog 21 canonical identities; v3 identities are reviewed individually, and only the three listed in validation/v3_scope_review/v3_gi_scope_review.json are migrated.",
+  "pending_user_decisions": [],
+  "calibration_status": {
+    "calibrated_issue_count": 10,
+    "staging_issue_count": 10,
+    "formal_issue_count": 0,
+    "new_candidates": [
+      "M30703",
+      "M29972",
+      "M33615"
+    ],
+    "formal_boundary": "The three new issues have historical B/F+neighbor/regression calibration. Final trusted frozen-runner replay, negative controls and isolated ten-task import are still pending."
+  }
+}

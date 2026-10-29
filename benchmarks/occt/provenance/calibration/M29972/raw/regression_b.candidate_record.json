@@ -1,0 +1,79 @@
+{
+  "protocol": "occt_stage3_geometry_run_v1",
+  "label": "M29972_reg_plane_cylinder_B_e6afb_final",
+  "canonical_issue": "M29972",
+  "case_id": "reg_plane_cylinder",
+  "case_kind": "regression",
+  "mode": "B",
+  "started_utc": "2026-10-27T15:45:55Z",
+  "ended_utc": "2026-10-27T15:45:55Z",
+  "wall_seconds": 0.065,
+  "wall_limit_seconds": 180,
+  "cpu_limit_seconds": 150,
+  "return_code": 0,
+  "timed_out": false,
+  "geometry_verdict": "geometry_pass",
+  "assertion_evidence": {
+    "expected_pass_marker_ids": [
+      "solution_count",
+      "curve_length"
+    ],
+    "pass_marker_counts": {
+      "solution_count": 1,
+      "curve_length": 1
+    },
+    "required_output_counts": {},
+    "observed_output_counts": {},
+    "completion_sentinel_count": 1,
+    "missing_or_duplicate_markers": [],
+    "unmet_output_counts": {},
+    "failure_lines": [],
+    "exception_lines": []
+  },
+  "source_ref": {
+    "manifest_path": "/home/wz/CADAI/OCCT_bench_proto_v4/validation/modern_candidates/M29972/source_e6afb_adapter.json",
+    "manifest_sha256": "afe1a1104b0416f40415544326797d15dac58139633fb30e7644f5d145b8052b",
+    "commit": "e6afb53983172155891ef175943534e0e1a24f75",
+    "tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+    "archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8",
+    "materialized_manifest_sha256": null
+  },
+  "build_manifest_ref": {
+    "path": "/home/wz/CADAI/OCCT_bench_proto_v4/validation/modern_candidates/M29972/build_e6afb_adapter.json",
+    "sha256": "c691a1b332e3e7f92a47c3a6afa82430b533b3020b26b12dd2e2f73201511e71",
+    "binary": {
+      "path": "/home/wz/CADAI/OCCT_bench_proto_v2/validation/bf_batch_2016_2017/build/e6afb_gcc_o0/lin64/gcc/bin/DRAWEXE-7.1.1",
+      "sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+      "bytes": 14472
+    },
+    "plugin": {
+      "path": "libTKTopTest.so.7.1.1",
+      "sha256": "afb4b016fb1c1f92d8f47cf57d8e1f56cb138f0165e7791018b2e91d017a9b83",
+      "bytes": 3016608
+    }
+  },
+  "case": {
+    "path": "validation/modern_candidates/M29972/reg_plane_cylinder.tcl.run",
+    "sha256": "3068d510789ed9a2a3aaf814eeab0004d46282a8a20ab4166fc5852182faa602",
+    "bytes": 71
+  },
+  "bootstrap": {
+    "path": "validation/modern_candidates/M29972/support/headless.tcl",
+    "sha256": "cf0925064748e21c5f246fc641fa874d95afd88647243843727b99410a3c3420"
+  },
+  "wrapper": {
+    "path": "validation/modern_candidates/M29972/runs/reg_B_e6afb_final/M29972_reg_plane_cylinder_B_e6afb_final.wrapper.tcl",
+    "sha256": "cbd2456bb880fe3c623218d5ff771a51cec7c2f2382c861fbf2d159bd8a6276f"
+  },
+  "runner_sha256": "3081318b8c3da4c535898311a6f6c7c3f677652624024dfb847464e378a32f27",
+  "command": [
+    "/home/wz/CADAI/OCCT_bench_proto_v2/validation/bf_batch_2016_2017/build/e6afb_gcc_o0/lin64/gcc/bin/DRAWEXE-7.1.1",
+    "-b",
+    "-f",
+    "/home/wz/CADAI/OCCT_bench_proto_v4/validation/modern_candidates/M29972/runs/reg_B_e6afb_final/M29972_reg_plane_cylinder_B_e6afb_final.wrapper.tcl"
+  ],
+  "stdout_path": "validation/modern_candidates/M29972/runs/reg_B_e6afb_final/M29972_reg_plane_cylinder_B_e6afb_final.stdout.log",
+  "stdout_sha256": "57c001690aa2307f8d9906644f33e90c38a253e43ea7aad691c09905dfa33e25",
+  "stderr_path": "validation/modern_candidates/M29972/runs/reg_B_e6afb_final/M29972_reg_plane_cylinder_B_e6afb_final.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

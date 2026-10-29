@@ -148,7 +148,7 @@ def validate_bundle(bundle_root: Path | str) -> dict[str, Any]:
         toolchain=_read_json(resolve_relative(root,f"toolchains/{toolchain_id}.json"))
         required_toolchain={"schema_version","id","title","platforms","executables","compiler_output_directory",
                             "tools_directory","compiler_jobs_max","tcl_version","tcl_paths"}
-        allowed_toolchain=required_toolchain|{"evaluator_directory"}
+        allowed_toolchain=required_toolchain|{"evaluator_directory","optimization_flags"}
         if (not required_toolchain.issubset(toolchain) or not set(toolchain).issubset(allowed_toolchain) or
                 toolchain.get("schema_version")!=1 or
                 toolchain.get("id")!=toolchain_id or not isinstance(toolchain.get("title"),str) or
@@ -158,6 +158,9 @@ def validate_bundle(bundle_root: Path | str) -> dict[str, Any]:
                 not re.fullmatch(r"[A-Za-z0-9_.-]+",toolchain["compiler_output_directory"]) or
                 not isinstance(toolchain.get("tcl_version"),str) or not isinstance(toolchain.get("tcl_paths"),str)):
             raise CatalogError(f"source {identity} has an incompatible toolchain profile")
+        if 'optimization_flags' in toolchain and toolchain['optimization_flags'] not in {
+                '-O0 -DNDEBUG','-O1 -DNDEBUG','-O2 -DNDEBUG','-O3 -DNDEBUG'}:
+            raise CatalogError('unsupported toolchain optimization flags')
         executables=toolchain.get("executables")
         tools_dir=toolchain.get("tools_directory")
         jobs=toolchain.get("compiler_jobs_max")
@@ -279,7 +282,17 @@ def validate_bundle(bundle_root: Path | str) -> dict[str, Any]:
                         f"checkpoint {identity} cannot set runner_options.script; "
                         "case is the only DRAW script path"
                     )
-                _fields(options,set(),{"case_timeout_seconds"},"DRAW runner options")
+                _fields(options,set(),{"case_timeout_seconds","expected_assertion_ids","expected_failure_lines"},"DRAW runner options")
+                assertion_ids=options.get('expected_assertion_ids')
+                if assertion_ids is not None and (not isinstance(assertion_ids,list) or not assertion_ids or
+                        any(not isinstance(x,str) or not re.fullmatch(r'[A-Za-z0-9_.:-]+',x) for x in assertion_ids) or
+                        len(set(assertion_ids))!=len(assertion_ids)):
+                    raise CatalogError('expected_assertion_ids must be unique nonempty assertion names')
+                failure_lines=options.get('expected_failure_lines',[])
+                if not isinstance(failure_lines,list) or any(not isinstance(x,str) or not x.strip() or '\n' in x for x in failure_lines):
+                    raise CatalogError('expected_failure_lines must contain nonempty single-line signatures')
+                if failure_lines and not assertion_ids:
+                    raise CatalogError('failure signatures require an assertion contract')
                 if case_path.suffix.lower() not in {".tcl"}:
                     raise CatalogError(f"checkpoint {identity} DRAW case must be a Tcl script")
             else:

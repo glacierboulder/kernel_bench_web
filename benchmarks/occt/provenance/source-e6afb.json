@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "source_id": "occt-v4-e6afb5398317",
+  "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+  "commit": "e6afb53983172155891ef175943534e0e1a24f75",
+  "git_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+  "git_archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8",
+  "materialized_tree_sha256": "a28f641dad6310bece14379db895a7da1482305273ccffd5ebb3b8774d03e841",
+  "verification_status": "verified_git",
+  "verification_basis": "Existing local source export was measured with backend.source_cache.tree_sha256; the full commit/tree and archive digest are recorded here. No source tree is copied into the task bundle.",
+  "toolchain_id": "occt-v4-clang10-o0-tcl86",
+  "historical_calibration_profile": "GCC 9.4 O0; DRAWEXE-7.1.1"
+}

@@ -1,0 +1,220 @@
+{
+  "protocol": "v4_stage4_harness_adaptation_v1",
+  "recorded_utc": "2026-10-27T03:27:13Z",
+  "scope": "Harness repair for seven-issue frozen role replay; no source/build or geometry threshold changes.",
+  "changes": [
+    {
+      "issue": "mantis:32470",
+      "source_path": "evaluation/cases/occt-single-v3/hidden/mantis-32470/neighborhood_neighborhood_1.tcl",
+      "source_sha256": "676a4a8cb8815b799ad9d7d68222c48d065728fa482afc62604be8f9182f9378",
+      "destination_path": "issues/mantis-32470/1/neighborhood_1_migrated.tcl",
+      "previous_v4_sha256": "4450a526e959b29c2c717925e80bc06236c031041b2ef556d47a4e69d2988bb0",
+      "new_v4_sha256": "676a4a8cb8815b799ad9d7d68222c48d065728fa482afc62604be8f9182f9378",
+      "bytes_copied_unchanged": true
+    },
+    {
+      "issue": "mantis:32470",
+      "source_path": "evaluation/cases/occt-single-v3/hidden/mantis-32470/neighborhood_neighborhood_2.tcl",
+      "source_sha256": "9532802067405fe2fdd058327d1be4b15b769a4bc3c78d2f7eb204802776dca8",
+      "destination_path": "issues/mantis-32470/1/neighborhood_2_migrated.tcl",
+      "previous_v4_sha256": "523bb9a10b4650f4e26e1b193b2084b910e5f32bc41388573ca64e7997eec718",
+      "new_v4_sha256": "9532802067405fe2fdd058327d1be4b15b769a4bc3c78d2f7eb204802776dca8",
+      "bytes_copied_unchanged": true
+    },
+    {
+      "issue": "mantis:32470",
+      "source_path": "evaluation/cases/occt-single-v3/hidden/mantis-32470/regression_regression_health.tcl",
+      "source_sha256": "564dc952dcecee63da0cb77fabd4ea01671ac83c9a8a6b61ee8d184f8546291c",
+      "destination_path": "issues/mantis-32470/1/regression_health_migrated.tcl",
+      "previous_v4_sha256": "9ad84c42ce9b14ef86ace148ff1938c244a72c32c030064c856a1d5d6df01255",
+      "new_v4_sha256": "564dc952dcecee63da0cb77fabd4ea01671ac83c9a8a6b61ee8d184f8546291c",
+      "bytes_copied_unchanged": true
+    },
+    {
+      "issue": "mantis:32502",
+      "source_path": "evaluation/cases/occt-single-v3/hidden/mantis-32502/neighborhood_neighborhood_1.tcl",
+      "source_sha256": "24e7651d3455e804352076cd88316125be9933b143e16a92fb2ddca7985beabc",
+      "destination_path": "issues/mantis-32502/1/neighborhood_1_migrated.tcl",
+      "previous_v4_sha256": "0f1bbe81bb69dae00636be23ebfc3efac638074ac72e8776923d4e7a7b8ded52",
+      "new_v4_sha256": "24e7651d3455e804352076cd88316125be9933b143e16a92fb2ddca7985beabc",
+      "bytes_copied_unchanged": true
+    },
+    {
+      "issue": "mantis:32502",
+      "source_path": "evaluation/cases/occt-single-v3/hidden/mantis-32502/neighborhood_neighborhood_2.tcl",
+      "source_sha256": "78c2617ab8d5cd57e6b3c227b0ea00b79e97859ec7001e73b3b39e2bf65d3768",
+      "destination_path": "issues/mantis-32502/1/neighborhood_2_migrated.tcl",
+      "previous_v4_sha256": "4c130f94127f573377fdc4c4feaf938added37689e81c461ac42e73a8121ea24",
+      "new_v4_sha256": "78c2617ab8d5cd57e6b3c227b0ea00b79e97859ec7001e73b3b39e2bf65d3768",
+      "bytes_copied_unchanged": true
+    },
+    {
+      "issue": "mantis:32502",
+      "source_path": "evaluation/cases/occt-single-v3/hidden/mantis-32502/regression_regression_health.tcl",
+      "source_sha256": "8dd857fc7caabde7008e90e5529e1750a74ab956efc807384f473bf4571f4470",
+      "destination_path": "issues/mantis-32502/1/regression_health_migrated.tcl",
+      "previous_v4_sha256": "e74d33f4ace3dcac52d426569f083d3304000ecca4fb840f19875a27fad579bc",
+      "new_v4_sha256": "8dd857fc7caabde7008e90e5529e1750a74ab956efc807384f473bf4571f4470",
+      "bytes_copied_unchanged": true
+    },
+    {
+      "issue": "mantis:33244",
+      "source_path": "evaluation/cases/occt-single-v3/hidden/mantis-33244/neighborhood_neighborhood_1.tcl",
+      "source_sha256": "48f6d59675d7cebbd0277ded1654dad3c3d9b29103aab1c69263ce72dd8e0f47",
+      "destination_path": "issues/mantis-33244/1/neighborhood_1_migrated.tcl",
+      "previous_v4_sha256": "31acfec6e28979caaf9436e96bdc1c941d2a0a54ccd6a813b8c4eb244bf84a80",
+      "new_v4_sha256": "48f6d59675d7cebbd0277ded1654dad3c3d9b29103aab1c69263ce72dd8e0f47",
+      "bytes_copied_unchanged": true
+    },
+    {
+      "issue": "mantis:33244",
+      "source_path": "evaluation/cases/occt-single-v3/hidden/mantis-33244/neighborhood_neighborhood_2.tcl",
+      "source_sha256": "05bdd6f9cc97dafb8c8be1f5b7762f214f25425d65073290b110fde40dee7b25",
+      "destination_path": "issues/mantis-33244/1/neighborhood_2_migrated.tcl",
+      "previous_v4_sha256": "e5d82cc4bc98a5bd7147749e0d846ea14c3370dea44e39622bb4cc4f0efa5cfd",
+      "new_v4_sha256": "05bdd6f9cc97dafb8c8be1f5b7762f214f25425d65073290b110fde40dee7b25",
+      "bytes_copied_unchanged": true
+    },
+    {
+      "issue": "mantis:33244",
+      "source_path": "evaluation/cases/occt-single-v3/hidden/mantis-33244/regression_regression_health.tcl",
+      "source_sha256": "37fd21a6ebf14b938610757d8d071f561edf0d9668caf5c834482fb75ec549cc",
+      "destination_path": "issues/mantis-33244/1/regression_health_migrated.tcl",
+      "previous_v4_sha256": "a845114191b4b35b9ddb99e10e3de15281b8771f7b427ad12b6ed4bbf4b87c3e",
+      "new_v4_sha256": "37fd21a6ebf14b938610757d8d071f561edf0d9668caf5c834482fb75ec549cc",
+      "bytes_copied_unchanged": true
+    },
+    {
+      "issue": "mantis:32721",
+      "path": "issues/mantis-32721/1/bootstrap.tcl",
+      "previous_sha256": "7bfacd3cf37baee05648b73b965b3ddf089336171b0ce6d34d56d6083b789ba7",
+      "new_sha256": "0f2a308e92c8a56a845e3c06ef562b6d7c083244d10d60baa2b123061c97f27a",
+      "change": "single-line assertion detail serialization; original predicate/ID/kind unchanged",
+      "headless_visual_noop_added": false
+    },
+    {
+      "issue": "mantis:32942",
+      "path": "issues/mantis-32942/1/bootstrap.tcl",
+      "previous_sha256": "7bfacd3cf37baee05648b73b965b3ddf089336171b0ce6d34d56d6083b789ba7",
+      "new_sha256": "0f2a308e92c8a56a845e3c06ef562b6d7c083244d10d60baa2b123061c97f27a",
+      "change": "single-line assertion detail serialization; original predicate/ID/kind unchanged",
+      "headless_visual_noop_added": false
+    },
+    {
+      "issue": "mantis:31404",
+      "path": "issues/mantis-31404/1/bootstrap.tcl",
+      "previous_sha256": "7bfacd3cf37baee05648b73b965b3ddf089336171b0ce6d34d56d6083b789ba7",
+      "new_sha256": "42d490ae5ef04cf40b547b6023c083344d4287d64aabb6e3853e29c2384c7eb4",
+      "change": "single-line assertion detail serialization; original predicate/ID/kind unchanged",
+      "headless_visual_noop_added": true
+    },
+    {
+      "issue": "mantis:31470",
+      "path": "issues/mantis-31470/1/bootstrap.tcl",
+      "previous_sha256": "7bfacd3cf37baee05648b73b965b3ddf089336171b0ce6d34d56d6083b789ba7",
+      "new_sha256": "0f2a308e92c8a56a845e3c06ef562b6d7c083244d10d60baa2b123061c97f27a",
+      "change": "single-line assertion detail serialization; original predicate/ID/kind unchanged",
+      "headless_visual_noop_added": false
+    }
+  ],
+  "preserved_initial_replay": "validation/stage4/final_replay_7/20261027T032201Z/coverage_matrix.json",
+  "rationale": {
+    "multiline_detail": "Serialize embedded newline/carriage return in assertion details as single-line text so the existing fail-closed event parser recognizes the same assertion ID and kind.",
+    "migrated_v3_cases": "Copied exact case bytes from v3 final benchmark bundle, whose final replay matrix reports these cases accepted; no predicates were altered.",
+    "31404_headless": "Only view/donly/2dfit/checkview display commands are stubbed; pcurve, 2dtranslate, checklength and geometry checks remain active."
+  },
+  "dispatch_lock_refresh": {
+    "path": "staging/benchmark/occt-boolean-intersection-v4/evaluation/cases/evaluator_assets/occt_single_v4/dispatch_lock.json",
+    "previous_sha256": "751e5fe5e6dad8834a3ae5974d64a6e8113d44ad2f65c6e39544d4804a0da8c3",
+    "new_sha256": "c5a8312b7574c836b20aecd98c245c03104a9423497446afe0e49ee33de38fad",
+    "updated_case_routes": [
+      {
+        "path": "issues/mantis-32470/1/neighborhood_1_migrated.tcl",
+        "previous_sha256": "4450a526e959b29c2c717925e80bc06236c031041b2ef556d47a4e69d2988bb0",
+        "new_sha256": "676a4a8cb8815b799ad9d7d68222c48d065728fa482afc62604be8f9182f9378",
+        "expected_assertion_ids_unchanged": [
+          "tolerance",
+          "scaled_area_volume"
+        ]
+      },
+      {
+        "path": "issues/mantis-32470/1/neighborhood_2_migrated.tcl",
+        "previous_sha256": "523bb9a10b4650f4e26e1b193b2084b910e5f32bc41388573ca64e7997eec718",
+        "new_sha256": "9532802067405fe2fdd058327d1be4b15b769a4bc3c78d2f7eb204802776dca8",
+        "expected_assertion_ids_unchanged": [
+          "tolerance",
+          "scaled_area_volume"
+        ]
+      },
+      {
+        "path": "issues/mantis-32470/1/regression_health_migrated.tcl",
+        "previous_sha256": "9ad84c42ce9b14ef86ace148ff1938c244a72c32c030064c856a1d5d6df01255",
+        "new_sha256": "564dc952dcecee63da0cb77fabd4ea01671ac83c9a8a6b61ee8d184f8546291c",
+        "expected_assertion_ids_unchanged": [
+          "tolerance",
+          "spherical_cap_area_volume"
+        ]
+      },
+      {
+        "path": "issues/mantis-32502/1/neighborhood_1_migrated.tcl",
+        "previous_sha256": "0f1bbe81bb69dae00636be23ebfc3efac638074ac72e8776923d4e7a7b8ded52",
+        "new_sha256": "24e7651d3455e804352076cd88316125be9933b143e16a92fb2ddca7985beabc",
+        "expected_assertion_ids_unchanged": [
+          "tolerance",
+          "scaled_area_volume"
+        ]
+      },
+      {
+        "path": "issues/mantis-32502/1/neighborhood_2_migrated.tcl",
+        "previous_sha256": "4c130f94127f573377fdc4c4feaf938added37689e81c461ac42e73a8121ea24",
+        "new_sha256": "78c2617ab8d5cd57e6b3c227b0ea00b79e97859ec7001e73b3b39e2bf65d3768",
+        "expected_assertion_ids_unchanged": [
+          "tolerance",
+          "scaled_area_volume"
+        ]
+      },
+      {
+        "path": "issues/mantis-32502/1/regression_health_migrated.tcl",
+        "previous_sha256": "e74d33f4ace3dcac52d426569f083d3304000ecca4fb840f19875a27fad579bc",
+        "new_sha256": "8dd857fc7caabde7008e90e5529e1750a74ab956efc807384f473bf4571f4470",
+        "expected_assertion_ids_unchanged": [
+          "disjoint_solid_union"
+        ]
+      },
+      {
+        "path": "issues/mantis-33244/1/neighborhood_1_migrated.tcl",
+        "previous_sha256": "31acfec6e28979caaf9436e96bdc1c941d2a0a54ccd6a813b8c4eb244bf84a80",
+        "new_sha256": "48f6d59675d7cebbd0277ded1654dad3c3d9b29103aab1c69263ce72dd8e0f47",
+        "expected_assertion_ids_unchanged": [
+          "order_s1_s2",
+          "order_s2_s1"
+        ]
+      },
+      {
+        "path": "issues/mantis-33244/1/neighborhood_2_migrated.tcl",
+        "previous_sha256": "e5d82cc4bc98a5bd7147749e0d846ea14c3370dea44e39622bb4cc4f0efa5cfd",
+        "new_sha256": "05bdd6f9cc97dafb8c8be1f5b7762f214f25425d65073290b110fde40dee7b25",
+        "expected_assertion_ids_unchanged": [
+          "order_s1_s2",
+          "order_s2_s1"
+        ]
+      },
+      {
+        "path": "issues/mantis-33244/1/regression_health_migrated.tcl",
+        "previous_sha256": "a845114191b4b35b9ddb99e10e3de15281b8771f7b427ad12b6ed4bbf4b87c3e",
+        "new_sha256": "37fd21a6ebf14b938610757d8d071f561edf0d9668caf5c834482fb75ec549cc",
+        "expected_assertion_ids_unchanged": [
+          "single_curve_count",
+          "line_type"
+        ]
+      }
+    ],
+    "expected_assertion_ids_changed": false,
+    "reason": "Bind dispatch routes to byte-identical v3-final accepted cases after copying those cases; no oracle predicates changed.",
+    "file_sha256_before_lock_digest_refresh": "c5a8312b7574c836b20aecd98c245c03104a9423497446afe0e49ee33de38fad",
+    "file_sha256_after_lock_digest_refresh": "dc79f1f7b34359eca9023cb000135deb024c914ed45662e9d1103c3ab8c9b783",
+    "previous_declared_lock_sha256": "d78016bc454371b968a0494ab54b731d7cd83393946734564e43e86fe743d915",
+    "canonical_lock_sha256": "66066f4fc909db06008016c1d3dddfbc25be38d6d24ed73205aebd52c554084f",
+    "canonicalization": "sha256(json.dumps(lock_without_lock_sha256, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8'))"
+  }
+}

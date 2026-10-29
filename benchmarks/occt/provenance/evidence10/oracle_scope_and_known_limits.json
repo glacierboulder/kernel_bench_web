@@ -1,0 +1,19 @@
+{
+  "M30703": {
+    "stage": "low-level surface-surface intersection oracle",
+    "active_neighborhoods": [
+      "common translation",
+      "operand-order swap"
+    ],
+    "known_limitations": "Alternative rotations and 2x scale attempts were not promoted to required checkpoints; their run history remains under validation/modern_candidates/M30703."
+  },
+  "M29972": {
+    "stage": "intersection curve section continuity",
+    "scored_oracle": "six curves; six section edges; at least two isolated endpoints; every endpoint-pair distance <= 3e-6",
+    "known_limitations": "The separate full upstream xdistcs face-residual scan has 12 calls x 100 samples; two res3 distances are 5.30909e-7 and 5.31419e-7, above its original 2e-7 limit. This bundle does not claim full upstream test pass and does not score face residual."
+  },
+  "M33615": {
+    "stage": "BOP intersection output affected by IntPatch_ALineToWLine",
+    "known_limitations": "Scores the named V/E/W/F counts and healthy box overlap control; does not claim every final solid Boolean path."
+  }
+}

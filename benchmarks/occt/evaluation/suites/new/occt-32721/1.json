@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "occt-boolean-intersection-v4-mantis-32721",
+  "version": "1",
+  "title": "OCCT · 32721 · 检查点",
+  "source_ids": [
+    "occt-v4-b41ccce129d0"
+  ],
+  "group_ids": [
+    "occt-boolean-intersection-v4-mantis-32721"
+  ],
+  "checkpoints": [
+    {
+      "id": "original-32721-upstream",
+      "issue_id": "mantis-32721",
+      "category": "original",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-32721/1/original_official.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "neighborhood-32721-1-rigid-z",
+      "issue_id": "mantis-32721",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-32721/1/neighborhood_1_rigid90_z.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "neighborhood-32721-2-rigid-x",
+      "issue_id": "mantis-32721",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-32721/1/neighborhood_2_rigid90_x.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "regression-32721-health",
+      "issue_id": "mantis-32721",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-32721/1/regression_health.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-32721/1/bootstrap.tcl",
+    "issues/occt-32721/1/official_upstream.tcl",
+    "issues/occt-32721/1/original_official.tcl",
+    "issues/occt-32721/1/neighborhood_1_rigid90_z.tcl",
+    "issues/occt-32721/1/neighborhood_2_rigid90_x.tcl",
+    "issues/occt-32721/1/regression_health.tcl"
+  ]
+}

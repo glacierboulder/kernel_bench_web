@@ -18,8 +18,8 @@ BUNDLE=ROOT/"benchmarks"/"occt"
 class CatalogContractTests(unittest.TestCase):
     def test_current_catalog_maps_legacy_tasks_and_only_public_issue_material(self):
         bundle=validate_bundle(BUNDLE)
-        self.assertEqual(bundle["counts"],{"issues":24,"groups":12,"evaluation_suites":12})
-        self.assertEqual(len(bundle["groups"]),12)
+        self.assertEqual(bundle["counts"],{"issues":34,"groups":22,"evaluation_suites":22})
+        self.assertEqual(len(bundle["groups"]),22)
         self.assertIn(("NG-04R-v2","1"),bundle["groups"])
         task=public_task(bundle,bundle["groups"][("occt_boolean_group_visible_544","1")])
         self.assertEqual(task["evaluation_suite"],{"id":"occt-group-544","version":"1"})

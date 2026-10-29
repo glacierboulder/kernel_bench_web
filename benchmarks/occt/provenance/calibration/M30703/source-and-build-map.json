@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "canonical_issue": "M30703",
+  "task_baseline_source_id": "occt-v4-b41ccce129d0",
+  "baseline_commit": "41ccce129d0f39b7a8a5edaaaeb2cf782e3bce2d",
+  "baseline_profile_id": "occt-v4-clang10-o3-tcl86",
+  "official_test_origin": {
+    "commit": "9a640cbe72ac9596bace655f8dbf5d917ee4f190",
+    "path": "tests/lowalgos/intss/bug30703",
+    "sha256": "66ad674fec211981fbdeb69d2881f7d84e33d31833461a228fe1c692b0d27fef",
+    "active_bundle_copy": "issues/mantis-30703/1/official_upstream.tcl"
+  },
+  "source_stage_annotation": "IntPatch_ImpPrmIntersection / IntWalk_IWalking surface-surface curve intersection",
+  "baseline_binary": {
+    "sha256": "520c0584fbecb9246f49cded32f764e0282a850993045b5bd0f9d833a46a120c",
+    "profile": "Clang 10 O3; source B41ccce"
+  },
+  "fix_binary": {
+    "commit": "961a306dc4468a3ce5ef1114cfa7389d126b3ca1",
+    "git_tree": "311336740d6e79f95b52d774ce8ef5faddb559bf",
+    "sha256": "297600333341356153536b382879c37cb958fba0ed4c2179d3b69edc2174f2b7",
+    "profile": "Clang 10 O3"
+  },
+  "input_assets": [
+    {
+      "path": "issues/mantis-30703/1/bug30703s1",
+      "sha256": "df580bfdc0680d76d3f98bd97c3e7a58235d7a5f58a3b75d2bc2763f74bfe2e4"
+    },
+    {
+      "path": "issues/mantis-30703/1/bug30703s2",
+      "sha256": "b74ff7a33496d7711b85872951c4d416ad82cea692f0c09bc39ed4ecee40a27d"
+    }
+  ],
+  "no_source_or_build_binary_copied": true,
+  "note": "Logical provenance only; no runtime execution depends on original machine paths."
+}

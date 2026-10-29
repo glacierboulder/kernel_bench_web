@@ -1,0 +1,1 @@
+The report concerns Boolean operations between a right cone and an extruded solid. The supplied BREP is the reported test input. The requested work is a focused OCCT source fix with a concise explanation.

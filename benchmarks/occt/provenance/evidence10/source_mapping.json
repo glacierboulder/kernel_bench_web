@@ -1,0 +1,158 @@
+{
+  "protocol": "occt_boolean_intersection_v4_final_source_mapping_v1",
+  "recorded_utc": "2026-10-27T16:52:44Z",
+  "source_mapping_evidence_files": [
+    {
+      "logical_path": "provenance/evidence10/source_refs/source_lock.json",
+      "source_path": "benchmark/occt-boolean-intersection-v4-10/sources.lock.json",
+      "bytes": 1947,
+      "sha256": "9faad2280a795bfa36c0a1d32ee2e616897a92c96b227ddaf4a9de1abbe07a40"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/dispatch_lock.json",
+      "source_path": "benchmark/occt-boolean-intersection-v4-10/evaluation/cases/evaluator_assets/occt_single_v4/dispatch_lock.json",
+      "bytes": 19901,
+      "sha256": "25f54a77e5b7c4a6292f7d62da5cb17cdbced65fcc131d3158d5ab75dbe41bf2"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/sourcecache_freeze_receipt.json",
+      "source_path": "validation/stage4/sourcecache_freeze_runner_smoke.json",
+      "bytes": 48350,
+      "sha256": "2bad7725b6a4fa6a458a0ce33fa96ef98eb89cc61a4f06a13e345d3588c149d2"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/negative_controls.json",
+      "source_path": "validation/stage4/negative_controls_10/20261027T164250Z/negative_controls.json",
+      "bytes": 2918,
+      "sha256": "8b45a1ba25ffc3739da94e2f2707fda268b72eff255987db8b64e5417be02f49"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/isolated_import_10.json",
+      "source_path": "validation/stage4/isolated_import_10/20261027T164304Z/isolated_import.json",
+      "bytes": 2615,
+      "sha256": "b25d20ae2d0da17fb570a9262bce628679f768238a076ef68bab44cde2e64ecc"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/staging_scope_and_identity.json",
+      "source_path": "staging/benchmark/occt-boolean-intersection-v4/provenance/staging_scope.json",
+      "bytes": 1183,
+      "sha256": "bad6ddd3a5404f07c15e9afc2197bf606ade643c1b791b2f43f68e119abe56e1"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/v3_scope_approval.json",
+      "source_path": "validation/v3_scope_review/v3_gi_scope_review.json",
+      "bytes": 12987,
+      "sha256": "64216316d206bd2d3f4f5697aeab7e4de324b6551011b6aa1ef72e61bf1045d9"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/harness_adaptation_receipt.json",
+      "source_path": "validation/stage4/harness_adaptation_20261027T032713Z.json",
+      "bytes": 12020,
+      "sha256": "58cfd8388dd19cec3d91220870233757c7160f17725d3c67212d9b95f1093a54"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/formal7_sol_acceptance.md",
+      "source_path": "validation/stage4/SOL_ACCEPTANCE_7_ZH.md",
+      "bytes": 1287,
+      "sha256": "e17fc9f6f07aa35229521468f917fdb14700f32227436cc2c7029affad239d49"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/m29972_xdistcs_receipt.json",
+      "source_path": "validation/stage4/diagnostics/m29972_original_f961_xdistcs_fullscan/receipt.json",
+      "bytes": 1489,
+      "sha256": "8d49a4ae70080ebb57606d8f1212426064639e5645888baee6c6732666b2fd2d"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/m29972_xdistcs_stdout.json",
+      "source_path": "validation/stage4/diagnostics/m29972_original_f961_xdistcs_fullscan/runner.stdout.json",
+      "bytes": 2618,
+      "sha256": "ac79e9a19c1c840b537b83c95c581d75af1078a79dc54a56a282a12b02c83ff5"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/m29972_xdistcs_stderr.log",
+      "source_path": "validation/stage4/diagnostics/m29972_original_f961_xdistcs_fullscan/runner.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/m29972_xdistcs_diagnostic.tcl",
+      "source_path": "validation/stage4/diagnostics/m29972_original_f961_xdistcs_fullscan/diagnostic.tcl",
+      "bytes": 1770,
+      "sha256": "8d9e325ec9b3bff36ba78253312a3047e4f642997defb7801a8348faa244ee7e"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/m29972_build_B_receipt.json",
+      "source_path": "validation/modern_candidates/M29972/build_e6afb_adapter.json",
+      "bytes": 1336,
+      "sha256": "c691a1b332e3e7f92a47c3a6afa82430b533b3020b26b12dd2e2f73201511e71"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/m29972_source_B_receipt.json",
+      "source_path": "validation/modern_candidates/M29972/source_e6afb_adapter.json",
+      "bytes": 704,
+      "sha256": "afe1a1104b0416f40415544326797d15dac58139633fb30e7644f5d145b8052b"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/m33615_build_B_receipt.json",
+      "source_path": "validation/modern_candidates/M33615/build_B84_adapter.json",
+      "bytes": 1073,
+      "sha256": "eb01f5429c6de4047ff5b0cbc5e52ba72e63d1de3251cfb8e552dfbce3903b62"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/m33615_build_F_receipt.json",
+      "source_path": "validation/modern_candidates/M33615/build_F_5811a_adapter.json",
+      "bytes": 1086,
+      "sha256": "ef9cbc5de86bb71138e8cff224f8a4c58702508590997eef63246f5a5e9c4efa"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/m33615_source_B_receipt.json",
+      "source_path": "validation/modern_candidates/M33615/source_B84_adapter.json",
+      "bytes": 581,
+      "sha256": "bb0a7ff7a96419dcfef2d974a5ad94072dc8ed45b92b83cb31563315a3da08f1"
+    },
+    {
+      "logical_path": "provenance/evidence10/source_refs/m30703_F_original_record.json",
+      "source_path": "validation/modern_candidates/M30703/runs/F_961a/M30703_original_F_961a306.result.json",
+      "bytes": 3257,
+      "sha256": "8ac532c94cb39201d92d24457bdf971a882d8bc1e83c842bf600526642b28f3d"
+    }
+  ],
+  "new_issue_windows": [
+    {
+      "issue": "M30703",
+      "B_source_commit": "41ccce129d0f39b7a8a5edaaaeb2cf782e3bce2d",
+      "B_source_tree": "43d587f9192b1c9ad0f2ce86b72720dbd5955b73",
+      "B_binary_sha256": "520c0584fbecb9246f49cded32f764e0282a850993045b5bd0f9d833a46a120c",
+      "F_source_commit": "961a306dc4468a3ce5ef1114cfa7389d126b3ca1",
+      "F_source_tree": "311336740d6e79f95b52d774ce8ef5faddb559bf",
+      "F_binary_sha256": "297600333341356153536b382879c37cb958fba0ed4c2179d3b69edc2174f2b7"
+    },
+    {
+      "issue": "M29972",
+      "B_source_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+      "B_source_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+      "B_binary_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+      "F_source_commit": "961a306dc4468a3ce5ef1114cfa7389d126b3ca1",
+      "F_source_tree": "311336740d6e79f95b52d774ce8ef5faddb559bf",
+      "F_binary_sha256": "297600333341356153536b382879c37cb958fba0ed4c2179d3b69edc2174f2b7"
+    },
+    {
+      "issue": "M33615",
+      "B_source_commit": "84f42008b74b4545e18e0ec361fd14e48d6a961d",
+      "B_source_tree": "17133b036ad46f0ac707f48aa9723a97db9a5d02",
+      "B_binary_sha256": "b9006aefd7958c8104815c0f7b3057b3c5892916d4f505cbb5b0fea58da66bab",
+      "F_source_commit": "5811a330c784c49e64c65fdaa88d01bff444da56",
+      "F_source_tree": "8d091c3eb9de4e59a0350bbdd350920762c78dc5",
+      "F_binary_sha256": "9b5b5767ffa6b8e9eef69cd11c18a51b73a9fb94e5896ec2245fa7f55c5b9192"
+    }
+  ],
+  "verified_git_source_cache_entries": 4,
+  "build_trees_copied": false,
+  "source_cache_trees_copied": false,
+  "notes": [
+    "Seven accepted source/cache identities remain represented in their unchanged original source locks and 42-role records.",
+    "M30703 and M29972 reuse the verified 41ccce/961a306 natural source window; M33615 uses B84f42008 and its natural fixing F5811a330 build.",
+    "The final matrix stores the actual DRAW executable SHA per replay role; compact build and source receipts are included where available.",
+    "No absolute owner path is needed to execute the bundle; historical receipt paths are retained only as provenance."
+  ]
+}

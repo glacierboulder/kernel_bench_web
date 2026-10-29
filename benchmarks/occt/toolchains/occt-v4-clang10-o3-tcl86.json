@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "occt-v4-clang10-o3-tcl86",
+  "title": "OCCT v4 · Clang 10 O3 / Tcl 8.6",
+  "platforms": [
+    "linux-x86_64"
+  ],
+  "executables": {
+    "cmake": "cmake",
+    "c_compiler": "clang-10",
+    "cxx_compiler": "clang++-10"
+  },
+  "compiler_output_directory": "clang-o3",
+  "tools_directory": "occt-v4-clang10-o3",
+  "compiler_jobs_max": 2,
+  "tcl_version": "8.6",
+  "tcl_paths": "Use deployment BENCH_TCL_* environment variables",
+  "evaluator_directory": "evaluation/cases/occt-single-v4-runtime-o3"
+}

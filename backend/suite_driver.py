@@ -61,6 +61,8 @@ def _execute(checkpoint: dict, *, case_root: Path, build: Path, source: Path,
                  "--timeout-seconds",str(timeout),"--cpu-limit-seconds",str(max(1,timeout-3))]
         env = os.environ.copy()
         env["CASROOT"] = str(source)
+        # Trusted writable copy of the frozen suite; never supplied by the agent.
+        env["BENCH_FROZEN_CASE_ROOT"] = str(case_root.resolve())
         detail=_run(command,cwd=case.parent,timeout=timeout+12,cpu=timeout+5,memory_gib=4,env=env,output_limit=2*1024*1024)
         output=detail["output_tail"]
         try:
@@ -103,6 +105,19 @@ def _execute(checkpoint: dict, *, case_root: Path, build: Path, source: Path,
     passed=(tested["return_code"]==0 and not tested["timed_out"]
             and all(marker in tested["output_tail"] for marker in markers))
     return {"passed":passed,"compile":compiled,"result":tested}
+
+
+def checkpoint_status(result: dict) -> str:
+    """Keep completed geometric rejection separate from execution failures."""
+    detail=result.get('result',{})
+    if detail.get('protocol')=='occt-checkpoint-v1':
+        if result.get('passed') is True and detail.get('oracle_ran') is True: return 'passed'
+        status=detail.get('status')
+        if detail.get('timed_out') or status=='timeout': return 'timeout'
+        if status=='geometry_fail' and detail.get('oracle_ran') is True: return 'failed'
+        if status=='not_run': return 'not_run'
+        return 'error'
+    return 'passed' if result.get('passed') else 'timeout' if detail.get('timed_out') else 'failed'
 
 
 def _writable_case_root(case_root: Path, work: Path, assets: Path) -> Path:
@@ -159,7 +174,7 @@ def main() -> int:
                     try:
                         result=_execute(checkpoint,case_root=case_root,build=build,source=source,
                                         work=work,draw_runner=draw_runner)
-                        status="passed" if result.get("passed") else "timeout" if result.get("result",{}).get("timed_out") else "failed"
+                        status=checkpoint_status(result)
                     except (OSError,ValueError,KeyError) as exc:
                         result={"passed":False,"reason":str(exc)};status="error"
                     row={"id":checkpoint["id"],"status":status,"passed":status=="passed",

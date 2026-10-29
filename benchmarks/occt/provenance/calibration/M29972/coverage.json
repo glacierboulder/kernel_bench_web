@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "canonical_issue": "M29972",
+  "status": "calibrated_candidate_pending_frozen_replay",
+  "scope_stage": "GeomInt / BOP face-face intersection curve sampling and section-edge construction",
+  "original_case_hash": "cd42f0ffe8fb3b861828293594549863eea6842ebd992bfcae8c6c745a59d9c3",
+  "active_checkpoint_count": 4,
+  "scenario_count": 4,
+  "active_roles": [
+    {
+      "role": "original_B",
+      "geometry_verdict": "geometry_fail",
+      "record": "provenance/calibration/M29972/records/original_b.json",
+      "raw_candidate_record_sha256": "41bbd4e4500f85066ec4d65d63fee12cc89e805d3c585cf9e2945b1951ded4f1",
+      "stdout_sha256": "526a8ffd811cd3a39bff299dab4a2746b0267e89d0dbcdff47484cbeb2e2c16b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "original_F",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M29972/records/original_f.json",
+      "raw_candidate_record_sha256": "651d75b63981fad12180044d5b6325fa9aa920b1ddc245c15ec8c1fb2384e211",
+      "stdout_sha256": "88155b10457f4ec064a26404be1d59d4ab7f4a8f2b67676436626ccfa15e3825",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "N1_F",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M29972/records/n1_f.json",
+      "raw_candidate_record_sha256": "ea15e22ea7ec6bba05241d5e4aa80852a023effca1b552e07755eaa8d5202c2c",
+      "stdout_sha256": "622483619d5cfb9f0fcdfc70e3ad7305028cac02cff37f845023d66f0f1fa1b8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "N2_F",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M29972/records/n2_f.json",
+      "raw_candidate_record_sha256": "1577e25863902740a2fbb548c404b886d0a7455c7c2ebba06cb80427598568f8",
+      "stdout_sha256": "dc924a9ff85c04b433fcf15e2df07230809eb9c0a43168bb7f4e5e235d621515",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "regression_B",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M29972/records/regression_b.json",
+      "raw_candidate_record_sha256": "b4681ab179abafea678c52749f7c0e76ef5c34f29d0e2df88e1a647fbe5049fd",
+      "stdout_sha256": "57c001690aa2307f8d9906644f33e90c38a253e43ea7aad691c09905dfa33e25",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "regression_F",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M29972/records/regression_f.json",
+      "raw_candidate_record_sha256": "04f1c17064876fb1fb0aa488df620975b7db8dca76786c8bda26a7f36f15cf69",
+      "stdout_sha256": "57c001690aa2307f8d9906644f33e90c38a253e43ea7aad691c09905dfa33e25",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "known_limitations": [],
+  "checkpoint_ids": [
+    "original-29972-upstream",
+    "neighborhood-29972-1-common-translation",
+    "neighborhood-29972-2-operand-order",
+    "regression-29972-plane-cylinder"
+  ],
+  "note": "Historical calibration is preserved; final frozen-runner replay is required before v4 formal acceptance."
+}

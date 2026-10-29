@@ -1,0 +1,71 @@
+{
+  "protocol": "occt_boolean_intersection_v4_isolated_catalog_import_v1",
+  "recorded_utc": "2026-10-27T16:43:05Z",
+  "bundle_root": "benchmark/occt-boolean-intersection-v4-10",
+  "bundle_catalog_sha256": "22ccc8829f543f9dc2ab243e5886603cc3f1780e26b3bdfaf6fd976d1ef22ada",
+  "validation_counts": {
+    "issues": 10,
+    "groups": 10,
+    "evaluation_suites": 10
+  },
+  "imported_catalog_versions": 10,
+  "db_path": "staging/runtime/stage4-import10-20261027T164304Z/data/bench.sqlite3",
+  "db_sha256": "8dbfa689f44ff9fc06d746dae621b69e1235149452ce1560ca3790a102d610e5",
+  "db_bytes": 106496,
+  "registered_task_count": 10,
+  "registered_tasks": [
+    {
+      "id": "occt-boolean-intersection-v4-mantis-29972",
+      "version": "1",
+      "payload_sha256": "6d561e59bc1f989b0a88775124b7a0be7b6f8596b7822c035b02320ad38f9939"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-30703",
+      "version": "1",
+      "payload_sha256": "be2e5192d32e0b08a7ccb827f69676ba81b3b750c25f2064fe0627c909b26b81"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-31404",
+      "version": "1",
+      "payload_sha256": "e236cf26a0fb93aaf828251f26f77a4c8ba3e7edfe13b01b3bfc19668cc258bd"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-31470",
+      "version": "1",
+      "payload_sha256": "4c2c2411c2d08bf54940839b73f7eb7875502f00d1ec0e4daa2381da99d2267a"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-32470",
+      "version": "1",
+      "payload_sha256": "8faf4b12d0d6e01185a196d3d54cb9fe6cbf34dfe4b1ed2849557980b055671e"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-32502",
+      "version": "1",
+      "payload_sha256": "8083a0fb79c3f33f8ac7e46cc069a2588a44b301f492911f0dd4ba3fb4750dc7"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-32721",
+      "version": "1",
+      "payload_sha256": "526e7bc8bfb6317cc8fecb78ae6328843ff5c76149cbaee02da97050e8e79e39"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-32942",
+      "version": "1",
+      "payload_sha256": "55e5d24345604d1b2c4d4b908dea998766547dce11c7894ef210a56a9661f539"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-33244",
+      "version": "1",
+      "payload_sha256": "a7f71897c8db5c0d2cdb8291b2c28f027884f1672d3478e5772f322257ebaf49"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-33615",
+      "version": "1",
+      "payload_sha256": "dd4a10fa14090e971b73ff8fefb8e8162fb63c3929528dc6c2b9b07f5f2765d8"
+    }
+  ],
+  "isolated_data_root": "staging/runtime/stage4-import10-20261027T164304Z/data",
+  "config_file_present": false,
+  "result": "PASS"
+}

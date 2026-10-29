@@ -75,7 +75,11 @@ def normalize_suite_case_material(bundle: dict, catalog: dict, suite: dict,
     aliases = []
     for value in suite.get("support_files", []):
         source_path = resolve_relative(bundle["root"], value)
-        target = case_root / PurePosixPath(value)
+        evaluator_value = value
+        if value.startswith("issues/"):
+            issue_ref, _, remainder = _issue_case_reference(value, issue_refs_by_directory, bundle)
+            evaluator_value = _evaluator_issue_case(value, issue_ref, remainder)
+        target = case_root / PurePosixPath(evaluator_value)
         target.parent.mkdir(parents=True, exist_ok=True)
         if target.is_symlink():
             raise ValueError(f"frozen support material is a symlink: {target.name}")
@@ -197,13 +201,25 @@ def freeze_catalog_task(task: dict, run_root: Path | str, *, suite_override: dic
             source_file = resolve_relative(issue_root, material)
             shutil.copy2(source_file, issue_dir / source_file.name)
 
+    from .occt_runtime import enabled as common_runtime_enabled, RUNTIME
+    common_runtime = common_runtime_enabled(bundle["root"], suite_value)
     for item in ("build.sh", "run_draw_case.py"):
         src = bundle["root"] / "tools" / toolchain_value.get("tools_directory",source["toolchain"]) / item
         if src.is_symlink() or not src.is_file():
             raise ValueError(f"locked task tool is missing: {item}")
+        if common_runtime and item == "build.sh":
+            src = RUNTIME / "build.sh"
+        if common_runtime and item == "run_draw_case.py":
+            src = RUNTIME / "public_draw.py"
         target = snapshot / "tools" / item
         target.parent.mkdir(exist_ok=True)
         shutil.copy2(src, target)
+
+    if common_runtime:
+        shutil.copy2(RUNTIME/'public_build.py', snapshot/'tools/public_build.py')
+        from .occt_runtime import configuration as runtime_configuration
+        runtime_config=runtime_configuration(bundle['root'],suite_value)
+        _write_json(snapshot/'tools/build-profile.json', runtime_config['public_build_profile'])
 
     supervisor = snapshot / "supervisor"
     cases = bundle["root"] / "evaluation" / "cases"
@@ -236,6 +252,9 @@ def freeze_catalog_task(task: dict, run_root: Path | str, *, suite_override: dic
 
     case_root=supervisor/"cases"/"bundle"
     frozen_suite, case_path_aliases = normalize_suite_case_material(bundle, catalog, suite_value, case_root)
+
+    from .occt_runtime import install as install_occt_runtime
+    install_occt_runtime(bundle["root"], frozen_suite, supervisor)
 
     _write_json(snapshot / "suite.json", frozen_suite)
 

@@ -1,0 +1,20 @@
+{
+  "protocol": "v4_candidate_build_manifest_adapter_v1",
+  "identity": "B84f42008_existing",
+  "binary": {
+    "path": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-32942-parent-B/build/lin64/clang/bin/DRAWEXE-7.7.0",
+    "sha256": "b9006aefd7958c8104815c0f7b3057b3c5892916d4f505cbb5b0fea58da66bab"
+  },
+  "library_dir": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-32942-parent-B/build/lin64/clang/lib",
+  "plugin_libraries": [
+    {
+      "path": "libTKTopTest.so.7.7.0",
+      "sha256": "dc12148779a5c6075d5b13ea06bb497bb1b4f32fec06fd1823cd789c39ef4bb5"
+    }
+  ],
+  "source_manifest_path": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-32942-parent-B/source_manifest.json",
+  "source_manifest_sha256": "8acbbb3156b331b864b7fbf772163197f9fc7d69eb5fea9a2007b54b682fe9c7",
+  "build_ref_path": "/home/wz/CADAI/OCCT_bench_proto_v4/validation/stage3/build_refs/m32942_B_84f42008.json",
+  "build_ref_sha256": "c6b627dfe8aaad80c25a4ff9702afa6efb8b00c9faab8814fc31e223a359bbe5",
+  "note": "Normalized view of existing build reference; binary/plugin hashes unchanged."
+}

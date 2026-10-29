@@ -1,0 +1,78 @@
+{
+  "protocol": "occt_stage3_geometry_run_v1",
+  "label": "M33615_original_B_B84f42008",
+  "canonical_issue": "M33615",
+  "case_id": "original_official",
+  "case_kind": "original",
+  "mode": "B",
+  "started_utc": "2026-10-27T15:38:59Z",
+  "ended_utc": "2026-10-27T15:38:59Z",
+  "wall_seconds": 0.065,
+  "wall_limit_seconds": 180,
+  "cpu_limit_seconds": 150,
+  "return_code": 0,
+  "timed_out": false,
+  "geometry_verdict": "geometry_fail",
+  "assertion_evidence": {
+    "expected_pass_marker_ids": [
+      "official_test_completed"
+    ],
+    "pass_marker_counts": {
+      "official_test_completed": 1
+    },
+    "required_output_counts": {},
+    "observed_output_counts": {},
+    "completion_sentinel_count": 1,
+    "missing_or_duplicate_markers": [],
+    "unmet_output_counts": {},
+    "failure_lines": [
+      "Error :  is WRONG because number of VERTEX entities in shape \"result\" is 6",
+      "Error :  is WRONG because number of EDGE entities in shape \"result\" is 9"
+    ],
+    "exception_lines": []
+  },
+  "source_ref": {
+    "manifest_path": "/home/wz/CADAI/OCCT_bench_proto_v4/validation/modern_candidates/M33615/source_B84_adapter.json",
+    "manifest_sha256": "bb0a7ff7a96419dcfef2d974a5ad94072dc8ed45b92b83cb31563315a3da08f1",
+    "commit": "84f42008b74b4545e18e0ec361fd14e48d6a961d",
+    "tree": "17133b036ad46f0ac707f48aa9723a97db9a5d02",
+    "archive_sha256": null,
+    "materialized_manifest_sha256": null
+  },
+  "build_manifest_ref": {
+    "path": "/home/wz/CADAI/OCCT_bench_proto_v4/validation/modern_candidates/M33615/build_B84_adapter.json",
+    "sha256": "eb01f5429c6de4047ff5b0cbc5e52ba72e63d1de3251cfb8e552dfbce3903b62",
+    "binary": {
+      "path": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-32942-parent-B/build/lin64/clang/bin/DRAWEXE-7.7.0",
+      "sha256": "b9006aefd7958c8104815c0f7b3057b3c5892916d4f505cbb5b0fea58da66bab"
+    },
+    "plugin": {
+      "path": "libTKTopTest.so.7.7.0",
+      "sha256": "dc12148779a5c6075d5b13ea06bb497bb1b4f32fec06fd1823cd789c39ef4bb5"
+    }
+  },
+  "case": {
+    "path": "validation/modern_candidates/M33615/run_original.tcl",
+    "sha256": "0145522bcb90081979333e364f9dd7881e2c5ab7f4145ab24cab0d559e62473f",
+    "bytes": 123
+  },
+  "bootstrap": {
+    "path": "validation/modern_candidates/M33615/support/headless.tcl",
+    "sha256": "cf0925064748e21c5f246fc641fa874d95afd88647243843727b99410a3c3420"
+  },
+  "wrapper": {
+    "path": "validation/modern_candidates/M33615/runs/B_B84f42008/M33615_original_B_B84f42008.wrapper.tcl",
+    "sha256": "a4bcb326d014e9301dc9478071544054dcc8c2142b38660c6491b74cbe251c7f"
+  },
+  "runner_sha256": "3081318b8c3da4c535898311a6f6c7c3f677652624024dfb847464e378a32f27",
+  "command": [
+    "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-32942-parent-B/build/lin64/clang/bin/DRAWEXE-7.7.0",
+    "-b",
+    "-f",
+    "/home/wz/CADAI/OCCT_bench_proto_v4/validation/modern_candidates/M33615/runs/B_B84f42008/M33615_original_B_B84f42008.wrapper.tcl"
+  ],
+  "stdout_path": "validation/modern_candidates/M33615/runs/B_B84f42008/M33615_original_B_B84f42008.stdout.log",
+  "stdout_sha256": "98239ace9ac129ecdbb383acbce280674b32f51e1a0a62e4201b2497caba2b65",
+  "stderr_path": "validation/modern_candidates/M33615/runs/B_B84f42008/M33615_original_B_B84f42008.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

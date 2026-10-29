@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "algorithm": "agent-bench-tree-sha256-v1",
+  "exclusions": [
+    ".git",
+    "__pycache__",
+    "CMakeFiles",
+    "build path components",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "sources": [
+    {
+      "source_id": "occt-v4-b41ccce129d0",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "41ccce129d0f39b7a8a5edaaaeb2cf782e3bce2d",
+      "materialized_tree_sha256": "3cb819f514037d3ae0e90bda77e4883b03695ad34d0eff66de7dc5edf352d22e",
+      "verification_status": "verified_git",
+      "provenance": "provenance/source-B41ccce.json",
+      "toolchain": "occt-v4-clang10-o3-tcl86"
+    },
+    {
+      "source_id": "occt-v4-b84f42008b74",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "84f42008b74b4545e18e0ec361fd14e48d6a961d",
+      "materialized_tree_sha256": "5b99158d0acbca6f7f83138b52a4fc67a128208e4cac3804501834c271004eb4",
+      "verification_status": "verified_git",
+      "provenance": "provenance/source-B84f42008.json",
+      "toolchain": "occt-v4-clang10-o3-tcl86"
+    },
+    {
+      "source_id": "occt-v4-bdeea0a89759",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "bdeea0a89759f4f1117022267807f79aad55d3e2",
+      "materialized_tree_sha256": "bafb9568643aa78e29a198267e20ce905525eac77d0bb73f608efd521520d5ff",
+      "verification_status": "verified_git",
+      "provenance": "provenance/source-Bdeea0.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt-v4-e6afb5398317",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "e6afb53983172155891ef175943534e0e1a24f75",
+      "materialized_tree_sha256": "a28f641dad6310bece14379db895a7da1482305273ccffd5ebb3b8774d03e841",
+      "verification_status": "verified_git",
+      "provenance": "provenance/source-e6afb.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    }
+  ]
+}

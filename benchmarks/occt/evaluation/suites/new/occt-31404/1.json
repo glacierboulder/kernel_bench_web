@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "occt-boolean-intersection-v4-mantis-31404",
+  "version": "1",
+  "title": "OCCT · 31404 · 检查点",
+  "source_ids": [
+    "occt-v4-bdeea0a89759"
+  ],
+  "group_ids": [
+    "occt-boolean-intersection-v4-mantis-31404"
+  ],
+  "checkpoints": [
+    {
+      "id": "original-31404-upstream",
+      "issue_id": "mantis-31404",
+      "category": "original",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-31404/1/original_official.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "neighborhood-31404-1-official-pair-rigid-z-v2",
+      "issue_id": "mantis-31404",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-31404/1/neighborhood_1_official_pair_rigid_z_v2.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "neighborhood-31404-2-official-pair-rigid-x-v2",
+      "issue_id": "mantis-31404",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-31404/1/neighborhood_2_official_pair_rigid_x_v2.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "regression-31404-contained-spheres",
+      "issue_id": "mantis-31404",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-31404/1/regression_health_contained_spheres.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-31404/1/bootstrap.tcl",
+    "issues/occt-31404/1/official_upstream.tcl",
+    "issues/occt-31404/1/original_official.tcl",
+    "issues/occt-31404/1/neighborhood_1_official_pair_rigid_z_v2.tcl",
+    "issues/occt-31404/1/neighborhood_2_official_pair_rigid_x_v2.tcl",
+    "issues/occt-31404/1/regression_health_contained_spheres.tcl"
+  ]
+}

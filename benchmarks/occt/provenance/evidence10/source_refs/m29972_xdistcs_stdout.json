@@ -1,0 +1,20 @@
+{
+  "protocol": "draw_case_oracle_v1",
+  "passed": false,
+  "test_done_marker": false,
+  "return_code": 0,
+  "timed_out": false,
+  "assertions": 0,
+  "numeric_assertions": 0,
+  "failed_assertions": 0,
+  "tcl_error_detected": false,
+  "expected_oracle_error": false,
+  "infrastructure_tcl_error": false,
+  "occt_error_detected": false,
+  "oracle_summary_found": false,
+  "stdout_tail": "DRAW is running in batch mode\n========\nOCC29972: Intersection curve has a weird gap in the middle of it\n========\n\nchecknbshapes rs -edge 6\nOK :  is GOOD because number of EDGE entities is equal to number of expected EDGE entities\nM29972_DIAG_XDISTCS curve=res_1 surface=s1 samples=100 max_sample_distance=4.60165e-8 tolerance=2.0e-7 errors=0\nM29972_DIAG_XDISTCS curve=res_1 surface=s2 samples=100 max_sample_distance=1.06268e-8 tolerance=2.0e-7 errors=0\nM29972_DIAG_XDISTCS curve=res_2 surface=s1 samples=100 max_sample_distance=4.26667e-8 tolerance=2.0e-7 errors=0\nM29972_DIAG_XDISTCS curve=res_2 surface=s2 samples=100 max_sample_distance=2.29904e-8 tolerance=2.0e-7 errors=0\nM29972_DIAG_XDISTCS curve=res_3 surface=s1 samples=100 max_sample_distance=5.30909e-7 tolerance=2.0e-7 errors=1\nM29972_DIAG_ERROR curve=res_3 surface=s1 Error in res_3: T=0.989899\tD=5.30909e-07\nM29972_DIAG_XDISTCS curve=res_3 surface=s2 samples=100 max_sample_distance=5.31419e-7 tolerance=2.0e-7 errors=1\nM29972_DIAG_ERROR curve=res_3 surface=s2 Error in res_3: T=0.989899\tD=5.31419e-07\nM29972_DIAG_XDISTCS curve=res_4 surface=s1 samples=100 max_sample_distance=3.21826e-8 tolerance=2.0e-7 errors=0\nM29972_DIAG_XDISTCS curve=res_4 surface=s2 samples=100 max_sample_distance=2.30106e-8 tolerance=2.0e-7 errors=0\nM29972_DIAG_XDISTCS curve=res_5 surface=s1 samples=100 max_sample_distance=2.34489e-8 tolerance=2.0e-7 errors=0\nM29972_DIAG_XDISTCS curve=res_5 surface=s2 samples=100 max_sample_distance=1.78959e-8 tolerance=2.0e-7 errors=0\nM29972_DIAG_XDISTCS curve=res_6 surface=s1 samples=100 max_sample_distance=1.8081e-8 tolerance=2.0e-7 errors=0\nM29972_DIAG_XDISTCS curve=res_6 surface=s2 samples=100 max_sample_distance=1.96647e-8 tolerance=2.0e-7 errors=0\nM29972_DIAG_SUMMARY calls=12 total_sample_distances=1200 max_sample_distance=5.31419e-7 official_tolerance=2.0e-7 error_count=2\n",
+  "stderr_tail": "",
+  "script": "/home/wz/CADAI/OCCT_bench_proto_v4/validation/stage4/diagnostics/m29972_original_f961_xdistcs_fullscan/case/original_xdistcs_fullscan_diagnostic.tcl",
+  "draw_executable": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/build_F/lin64/clang/bin/DRAWEXE-7.8.0",
+  "elapsed_seconds": 0.065
+}

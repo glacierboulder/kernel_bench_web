@@ -1,0 +1,79 @@
+{
+  "protocol": "occt_stage3_geometry_run_v1",
+  "label": "M29972_reg_plane_cylinder_F_41ccce_final",
+  "canonical_issue": "M29972",
+  "case_id": "reg_plane_cylinder",
+  "case_kind": "regression",
+  "mode": "F",
+  "started_utc": "2026-10-27T15:46:04Z",
+  "ended_utc": "2026-10-27T15:46:04Z",
+  "wall_seconds": 0.033,
+  "wall_limit_seconds": 180,
+  "cpu_limit_seconds": 150,
+  "return_code": 0,
+  "timed_out": false,
+  "geometry_verdict": "geometry_pass",
+  "assertion_evidence": {
+    "expected_pass_marker_ids": [
+      "solution_count",
+      "curve_length"
+    ],
+    "pass_marker_counts": {
+      "solution_count": 1,
+      "curve_length": 1
+    },
+    "required_output_counts": {},
+    "observed_output_counts": {},
+    "completion_sentinel_count": 1,
+    "missing_or_duplicate_markers": [],
+    "unmet_output_counts": {},
+    "failure_lines": [],
+    "exception_lines": []
+  },
+  "source_ref": {
+    "manifest_path": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/occt-single-31016/source_B.json",
+    "manifest_sha256": "84fbf5bbe41752e1f1275df31c454aa30be0cfcada07fca831382327d69bfaee",
+    "commit": "41ccce129d0f39b7a8a5edaaaeb2cf782e3bce2d",
+    "tree": "43d587f9192b1c9ad0f2ce86b72720dbd5955b73",
+    "archive_sha256": "9ecfcce563e26a0ed163a9adf25150b3606d1f8ff29488f940616198f342be63",
+    "materialized_manifest_sha256": "30c3e53313e030df4c3d2c08045841d4188dbb8a36b0b2e13ca296e4e1424bbe"
+  },
+  "build_manifest_ref": {
+    "path": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/B_build_manifest.json",
+    "sha256": "939c1d9c78f2ecc98747aeb49504b07d1ce7078f26158cd4689c79cb4e7f541b",
+    "binary": {
+      "path": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/occt-single-31016/build_B/lin64/clang/bin/DRAWEXE-7.4.1",
+      "sha256": "520c0584fbecb9246f49cded32f764e0282a850993045b5bd0f9d833a46a120c",
+      "bytes": 17040
+    },
+    "plugin": {
+      "path": "libTKTopTest.so",
+      "sha256": "4d4923f7a88dd3d55634005e01c3d7b80e1513bf2db883e4e791f46b70f6d013",
+      "bytes": 2053768
+    }
+  },
+  "case": {
+    "path": "validation/modern_candidates/M29972/reg_plane_cylinder.tcl.run",
+    "sha256": "3068d510789ed9a2a3aaf814eeab0004d46282a8a20ab4166fc5852182faa602",
+    "bytes": 71
+  },
+  "bootstrap": {
+    "path": "validation/modern_candidates/M29972/support/headless.tcl",
+    "sha256": "cf0925064748e21c5f246fc641fa874d95afd88647243843727b99410a3c3420"
+  },
+  "wrapper": {
+    "path": "validation/modern_candidates/M29972/runs/reg_F_41ccce_final/M29972_reg_plane_cylinder_F_41ccce_final.wrapper.tcl",
+    "sha256": "cbd2456bb880fe3c623218d5ff771a51cec7c2f2382c861fbf2d159bd8a6276f"
+  },
+  "runner_sha256": "3081318b8c3da4c535898311a6f6c7c3f677652624024dfb847464e378a32f27",
+  "command": [
+    "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/occt-single-31016/build_B/lin64/clang/bin/DRAWEXE-7.4.1",
+    "-b",
+    "-f",
+    "/home/wz/CADAI/OCCT_bench_proto_v4/validation/modern_candidates/M29972/runs/reg_F_41ccce_final/M29972_reg_plane_cylinder_F_41ccce_final.wrapper.tcl"
+  ],
+  "stdout_path": "validation/modern_candidates/M29972/runs/reg_F_41ccce_final/M29972_reg_plane_cylinder_F_41ccce_final.stdout.log",
+  "stdout_sha256": "57c001690aa2307f8d9906644f33e90c38a253e43ea7aad691c09905dfa33e25",
+  "stderr_path": "validation/modern_candidates/M29972/runs/reg_F_41ccce_final/M29972_reg_plane_cylinder_F_41ccce_final.stderr.log",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -315,7 +315,7 @@ reevaluate 对 patch 文件要求显式 source-id，并将结果作为独立 eva
 - b55 组：occt-27310@1、occt-27773@1、occt-27252@1，各 3 条。
 - b2613378 组：occt-21494@2、occt-27252@2、occt-27780@1，各 3 条。
 
-全 catalog 当前通过只读 validator 后报告 24 issue versions、12 groups、12 suites 和 6 source identities。现有五组每组有三个成员只是历史布局事实，不是单题配额。较新的 [neighborhood-v2-coverage record](../benchmarks/occt/evaluation/provenance/neighborhood-v2-coverage.json) 记录 73 条静态 dispatch routes、24 条新增 frozen geometry pass 和此前 49 条保持不变；该轮没有重放旧 49 条。本轮没有重跑。较早的 [NAMING_MAP](../benchmarks/occt/NAMING_MAP.md) 与 [integration-validation record](../benchmarks/occt/evaluation/provenance/integration-validation.json) 中的 49 项/19-15-15 是更早快照；不要将它们视为当前清单计数。
+全 catalog 当前包含 34 issue versions、22 groups、22 suites 和 10 source identities；其中本轮十五个研究任务包含 113 个检查点。此前五组的快照计数是24 issue versions、12 groups、12 suites。现有五组每组有三个成员只是历史布局事实，不是单题配额。较新的 [neighborhood-v2-coverage record](../benchmarks/occt/evaluation/provenance/neighborhood-v2-coverage.json) 记录 73 条静态 dispatch routes、24 条新增 frozen geometry pass 和此前 49 条保持不变；该轮没有重放旧 49 条。本轮没有重跑。较早的 [NAMING_MAP](../benchmarks/occt/NAMING_MAP.md) 与 [integration-validation record](../benchmarks/occt/evaluation/provenance/integration-validation.json) 中的 49 项/19-15-15 是更早快照；不要将它们视为当前清单计数。
 
 ## 现有示例与证据链接
 
@@ -324,3 +324,7 @@ reevaluate 对 patch 文件要求显式 source-id，并将结果作为独立 eva
 - [neighborhood-v2-coverage record](../benchmarks/occt/evaluation/provenance/neighborhood-v2-coverage.json) 包含现行 73 路由统计、24 个新增 frozen checkpoint 的几何通过结果及旧 checkpoint 是否重放的边界；它不能单独证明旧 49 项在该轮又重跑一次。
 - [integration validation record](../benchmarks/occt/evaluation/provenance/integration-validation.json) 保留较早的 catalog、freeze、dispatcher 和验证边界；它是历史证据，不追溯证明本次或之后修改的 suite。
 - NG-04R-v2 和 NG-05T-v1 的参考补丁分别保存在 [NG-04R reference patch](../benchmarks/occt/evaluation/provenance/NG-04R-v2-reference.patch) 与 [NG-05T reference patch](../benchmarks/occt/evaluation/provenance/NG-05T-v1-reference.patch)。三个 BF 组的自然 F commit、原 B/F 身份和历史几何证据入口，见 [g1 original-bundle notes](../benchmarks/occt/evaluation/provenance/source-packs/occt-five-groups/docs/original-bundles/g1/README_ZH.md)、[g2 notes](../benchmarks/occt/evaluation/provenance/source-packs/occt-five-groups/docs/original-bundles/g2/README_ZH.md)、[g3 notes](../benchmarks/occt/evaluation/provenance/source-packs/occt-five-groups/docs/original-bundles/g3/README_ZH.md) 和 [external evidence archive manifest](../benchmarks/occt/evaluation/provenance/external-evidence-archive.json)。原始 sidecar/日志的 archive hash 仍按这些记录追溯；本指导合并不改动或替代历史实验材料。
+
+## 新题使用共用运行基础设施
+
+旧五组和 v4 十题已统一到框架维护的适配器。后续新题只增加题面、检查点、输入及依赖；使用 `runner_options.expected_assertion_ids` 声明严格断言契约，不再复制评测适配器。见 [共用 OCCT 运行基础设施与新题格式](unified-occt-runtime.md)。

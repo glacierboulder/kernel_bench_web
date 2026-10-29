@@ -171,6 +171,12 @@ def _prepare_control(root: Path, frozen_task: Path | None, suites: list[dict],
         source=supervisor/name if snapshot_root else case_root/name
         if source.is_dir():
             shutil.copytree(source,private/name,dirs_exist_ok=True)
+    if not snapshot_root and len(suites)==1:
+        from .occt_runtime import install as install_occt_runtime
+        selected=json.loads((control/'suite.json').read_text()) if (control/'suite.json').is_file() else suites[0]
+        install_occt_runtime(BENCHMARK_ROOT,selected,control,
+            assets_root=private/'evaluator_assets',case_root=control/'cases/bundle',
+            build_target=evaluator/'run_eval.py',draw_target=scripts/'run_draw_case.py')
     source_dir=(frozen_task/"repo" if frozen_task and (frozen_task/"repo").is_dir()
                 else SETTINGS.cache_dir/"sources"/str(source_id)/"source")
     if not source_dir.is_dir():

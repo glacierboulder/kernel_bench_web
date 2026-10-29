@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "protocol": "v4_portable_calibration_record_v1",
+  "canonical_issue": "M29972",
+  "role": "original_B",
+  "case_kind": "original",
+  "geometry_verdict": "geometry_fail",
+  "return_code": 0,
+  "timed_out": false,
+  "wall_seconds": 0.768,
+  "assertion_evidence": {
+    "expected_pass_marker_ids": [
+      "official_test_completed"
+    ],
+    "pass_marker_counts": {
+      "official_test_completed": 1
+    },
+    "required_output_counts": {},
+    "observed_output_counts": {},
+    "completion_sentinel_count": 1,
+    "missing_or_duplicate_markers": [],
+    "unmet_output_counts": {},
+    "failure_lines": [
+      "Error: The distance between alone_1 and alone_2 is too big"
+    ],
+    "exception_lines": []
+  },
+  "source": {
+    "commit": "e6afb53983172155891ef175943534e0e1a24f75",
+    "git_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+    "archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8",
+    "materialized_manifest_sha256": null
+  },
+  "build": {
+    "binary_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+    "binary_bytes": 14472,
+    "plugin_sha256": "afb4b016fb1c1f92d8f47cf57d8e1f56cb138f0165e7791018b2e91d017a9b83",
+    "plugin_bytes": 3016608
+  },
+  "candidate_case_sha256": "0145522bcb90081979333e364f9dd7881e2c5ab7f4145ab24cab0d559e62473f",
+  "raw_candidate_record": "provenance/calibration/M29972/raw/original_b.candidate_record.json",
+  "stdout": {
+    "path": "provenance/calibration/M29972/raw/original_b.stdout.log",
+    "sha256": "526a8ffd811cd3a39bff299dab4a2746b0267e89d0dbcdff47484cbeb2e2c16b"
+  },
+  "stderr": {
+    "path": "provenance/calibration/M29972/raw/original_b.stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "active_bundle_case": "issues/mantis-29972/1/original_official.tcl",
+  "source_evidence": "../source-and-build-map.json"
+}

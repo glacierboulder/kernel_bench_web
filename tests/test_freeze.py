@@ -102,9 +102,11 @@ class FreezeTests(unittest.TestCase):
                 self.assertEqual(route["suite"],f'{frozen["id"]}@{frozen["version"]}')
                 target=case_root/case
                 self.assertTrue(target.is_file(),case)
-                origin,runner=adapter._runner_for_case(str(target.parent),target.name)
-                self.assertEqual(origin,route["origin"])
-                self.assertTrue(runner.is_file())
+                with patch.dict("os.environ", {"BENCH_FROZEN_CASE_ROOT":str(case_root)}):
+                    selected=adapter._route(target,adapter._contract())
+                self.assertEqual(selected["checkpoint_id"],checkpoint["id"])
+                self.assertEqual(selected["engine"]["path"],lock["runner_routes"][route["origin"]]["path"])
+                self.assertTrue(adapter._asset(selected["engine"]).is_file())
             self.assertEqual(result["case_path_aliases"],aliases)
             verify_snapshot(snapshot)
 
@@ -140,9 +142,11 @@ class FreezeTests(unittest.TestCase):
                 self.assertEqual(route["group_id"],group["id"])
                 target=case_root/case
                 self.assertTrue(target.is_file(),case)
-                origin,runner=adapter._runner_for_case(str(target.parent),target.name)
-                self.assertEqual(origin,route["origin"])
-                self.assertTrue(runner.is_file())
+                with patch.dict("os.environ", {"BENCH_FROZEN_CASE_ROOT":str(case_root)}):
+                    selected=adapter._route(target,adapter._contract())
+                self.assertEqual(selected["checkpoint_id"],checkpoint["id"])
+                self.assertEqual(selected["engine"]["path"],lock["runner_routes"][route["origin"]]["path"])
+                self.assertTrue(adapter._asset(selected["engine"]).is_file())
 
     def test_snapshot_hash_detects_changes_after_enqueue(self):
         with tempfile.TemporaryDirectory() as directory:

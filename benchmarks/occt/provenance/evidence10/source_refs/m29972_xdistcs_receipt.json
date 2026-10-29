@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/home/wz/anaconda3/envs/consisqa/bin/python",
+    "/home/wz/CADAI/OCCT_bench_proto_v4/staging/runtime/stage4-20261027T161453Z/work/tasks/occt-boolean-intersection-v4-mantis-29972/workspace/evaluation-control/private/evaluator_assets/occt_single_v4/draw_case_v1_base.py",
+    "--build-dir",
+    "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/build_F",
+    "--resource-dir",
+    "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/source_F/src",
+    "--case-dir",
+    "/home/wz/CADAI/OCCT_bench_proto_v4/validation/stage4/diagnostics/m29972_original_f961_xdistcs_fullscan/case",
+    "--script",
+    "original_xdistcs_fullscan_diagnostic.tcl",
+    "--timeout-seconds",
+    "180",
+    "--cpu-limit-seconds",
+    "177"
+  ],
+  "cwd": "/home/wz/CADAI/OCCT_bench_proto_v4/validation/stage4/diagnostics/m29972_original_f961_xdistcs_fullscan/case",
+  "return_code": 0,
+  "base_status": false,
+  "build": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/build_F",
+  "resource": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/source_F/src",
+  "diag_tcl_sha256": "8d9e325ec9b3bff36ba78253312a3047e4f642997defb7801a8348faa244ee7e",
+  "stdout_path": "/home/wz/CADAI/OCCT_bench_proto_v4/validation/stage4/diagnostics/m29972_original_f961_xdistcs_fullscan/runner.stdout.json",
+  "stderr_path": "/home/wz/CADAI/OCCT_bench_proto_v4/validation/stage4/diagnostics/m29972_original_f961_xdistcs_fullscan/runner.stderr.log"
+}

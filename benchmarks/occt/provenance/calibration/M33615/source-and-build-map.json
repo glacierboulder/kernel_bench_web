@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "canonical_issue": "M33615",
+  "task_baseline_source_id": "occt-v4-b84f42008b74",
+  "baseline_commit": "84f42008b74b4545e18e0ec361fd14e48d6a961d",
+  "baseline_profile_id": "occt-v4-clang10-o3-tcl86",
+  "official_test_origin": {
+    "commit": "5811a330c784c49e64c65fdaa88d01bff444da56",
+    "path": "tests/bugs/modalg_8/bug33615",
+    "sha256": "59e8e77de52b85913d7eb486904463ea090033c4fbb6f2518b5f3249b87d332d",
+    "active_bundle_copy": "issues/mantis-33615/1/official_upstream.tcl"
+  },
+  "source_stage_annotation": "IntTools_FaceFace / IntPatch_ALineToWLine intersection output used in BOP partition construction",
+  "baseline_binary": {
+    "sha256": "b9006aefd7958c8104815c0f7b3057b3c5892916d4f505cbb5b0fea58da66bab",
+    "profile": "Clang 10 O3; OCCT 7.7.0"
+  },
+  "fix_binary": {
+    "commit": "5811a330c784c49e64c65fdaa88d01bff444da56",
+    "git_tree": "8d091c3eb9de4e59a0350bbdd350920762c78dc5",
+    "sha256": "9b5b5767ffa6b8e9eef69cd11c18a51b73a9fb94e5896ec2245fa7f55c5b9192",
+    "plugin_sha256": "c3a2c6047f956d557388d6c1c8c5defa68f099630abea810cf9a957ca14449d5",
+    "profile": "Clang 10 O0; OCCT 7.8.2"
+  },
+  "input_assets": [],
+  "no_source_or_build_binary_copied": true,
+  "note": "Logical provenance only; no runtime execution depends on original machine paths."
+}

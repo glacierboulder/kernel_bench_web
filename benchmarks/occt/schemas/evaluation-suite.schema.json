@@ -1,17 +1,163 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": ["schema_version", "id", "version", "title", "source_ids", "group_ids", "checkpoints"],
+  "required": [
+    "schema_version",
+    "id",
+    "version",
+    "title",
+    "source_ids",
+    "group_ids",
+    "checkpoints"
+  ],
   "properties": {
-    "schema_version": {"const": 1},
-    "id": {"type": "string"},
-    "version": {"type": "string"},
-    "title": {"type": "string"},
-    "source_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
-    "group_ids": {"type": "array", "items": {"type": "string"}},
-    "support_files": {"type": "array", "uniqueItems": true, "items": {"type": "string"}, "description": "Safe bundle-relative supervisor dependencies copied into the frozen case bundle"},
-    "legacy_task_kind": {"type": "string"},
-    "checkpoints": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "category", "visibility", "runner", "case", "oracle", "timeout_seconds", "required"], "properties": {"id": {"type": "string"}, "issue_id": {"type": ["string", "null"]}, "category": {"enum": ["original", "neighborhood", "regression"]}, "visibility": {"enum": ["public", "hidden"]}, "runner": {"enum": ["draw_case_v1", "cpp_case_v1"]}, "case": {"type": "string", "description": "Safe bundle-relative file path; for DRAW this is the only script path and is passed to the runner as --script"}, "oracle": {"enum": ["draw_test_done_v1", "stdout_contains_v1"]}, "timeout_seconds": {"type": "integer", "minimum": 1, "maximum": 3600}, "required": {"type": "boolean"}, "runner_options": {"type": "object", "properties": {"libraries": {"type": "array", "items": {"type": "string"}}, "inputs": {"type": "array", "items": {"type": "string"}}, "stdout_contains": {"type": "array", "items": {"type": "string"}}, "case_timeout_seconds": {"type": "integer", "minimum": 1, "maximum": 3600}}, "additionalProperties": false}}, "additionalProperties": false}}
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "source_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "group_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "support_files": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      },
+      "description": "Safe bundle-relative supervisor dependencies copied into the frozen case bundle"
+    },
+    "legacy_task_kind": {
+      "type": "string"
+    },
+    "checkpoints": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "visibility",
+          "runner",
+          "case",
+          "oracle",
+          "timeout_seconds",
+          "required"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "issue_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "category": {
+            "enum": [
+              "original",
+              "neighborhood",
+              "regression"
+            ]
+          },
+          "visibility": {
+            "enum": [
+              "public",
+              "hidden"
+            ]
+          },
+          "runner": {
+            "enum": [
+              "draw_case_v1",
+              "cpp_case_v1"
+            ]
+          },
+          "case": {
+            "type": "string",
+            "description": "Safe bundle-relative file path; for DRAW this is the only script path and is passed to the runner as --script"
+          },
+          "oracle": {
+            "enum": [
+              "draw_test_done_v1",
+              "stdout_contains_v1"
+            ]
+          },
+          "timeout_seconds": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3600
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "runner_options": {
+            "type": "object",
+            "properties": {
+              "libraries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "inputs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "stdout_contains": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "case_timeout_seconds": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3600
+              },
+              "expected_assertion_ids": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_.:-]+$"
+                }
+              },
+              "expected_failure_lines": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
   },
   "additionalProperties": false
 }

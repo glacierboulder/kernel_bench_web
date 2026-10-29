@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "occt-boolean-intersection-v4-mantis-33244",
+  "version": "1",
+  "title": "OCCT · 33244 · 检查点",
+  "source_ids": [
+    "occt-v4-b41ccce129d0"
+  ],
+  "group_ids": [
+    "occt-boolean-intersection-v4-mantis-33244"
+  ],
+  "checkpoints": [
+    {
+      "id": "original-33244-upstream",
+      "issue_id": "mantis-33244",
+      "category": "original",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-33244/1/original_bug33244.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "neighborhood-33244-1-v3-migrated",
+      "issue_id": "mantis-33244",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-33244/1/neighborhood_1_migrated.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "neighborhood-33244-2-v3-migrated",
+      "issue_id": "mantis-33244",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-33244/1/neighborhood_2_migrated.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "regression-33244-health-v3-migrated",
+      "issue_id": "mantis-33244",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-33244/1/regression_health_migrated.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-33244/1/original_bug33244.tcl",
+    "issues/occt-33244/1/official_bug33244.tcl",
+    "issues/occt-33244/1/neighborhood_1_migrated.tcl",
+    "issues/occt-33244/1/neighborhood_2_migrated.tcl",
+    "issues/occt-33244/1/regression_health_migrated.tcl"
+  ]
+}

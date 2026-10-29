@@ -1,0 +1,1828 @@
+{
+  "schema_version": 1,
+  "suites": {
+    "NG-04R-checks-v2@1": {
+      "schema_version": 1,
+      "suite": "NG-04R-checks-v2@1",
+      "group_id": "NG-04R-v2",
+      "source_id": "occt-ng04r-derived-fe81a63b",
+      "build_helper": {
+        "path": "five_group_execution/helpers/part1_run_eval.py",
+        "sha256": "1da15e35caccc73c88b97900184543f1912879b696cb5d0405a00184d2373d05"
+      },
+      "checkpoints": {
+        "mantis-30082-original": {
+          "checkpoint_id": "mantis-30082-original",
+          "case": "issues/mantis-30082/2/public/original.tcl",
+          "case_sha256": "c95ce4a22cb803f7d9e028250206149a9ec1230eb8185b7d14395b4af3dde4b4",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30082-neighborhood": {
+          "checkpoint_id": "mantis-30082-neighborhood",
+          "case": "evaluation/cases/mantis-30082/2/neighborhood.tcl",
+          "case_sha256": "6ece46afe217a0c62e423d464b4e38b9e972f1aa3033e6dd116d4448d5ce7040",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30082-regression": {
+          "checkpoint_id": "mantis-30082-regression",
+          "case": "evaluation/cases/mantis-30082/2/regression.tcl",
+          "case_sha256": "d7b16bf795d51ed9924aad0888132e0d17a636fd347adc8e7d51382028e3d7e9",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30202-original": {
+          "checkpoint_id": "mantis-30202-original",
+          "case": "issues/mantis-30202/2/public/original.tcl",
+          "case_sha256": "bab1c3ab3b7962d958715d15559806e595ed2e3b761031115cec0bf0b3d7261c",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30202-neighborhood": {
+          "checkpoint_id": "mantis-30202-neighborhood",
+          "case": "evaluation/cases/mantis-30202/2/neighborhood.tcl",
+          "case_sha256": "e4ebad7a7985c132ecc83a8c51bfecef31914d8fc45aabef86f41949a050e1f2",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30202-regression": {
+          "checkpoint_id": "mantis-30202-regression",
+          "case": "evaluation/cases/mantis-30202/2/regression.tcl",
+          "case_sha256": "8adfb321c8cd7f85732870e559c50aa06a617d8cfff8c14aadc979914e31b6e0",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-33541-original": {
+          "checkpoint_id": "mantis-33541-original",
+          "case": "issues/mantis-33541/2/public/original.tcl",
+          "case_sha256": "ce5e8ed08e3882abc9d770614a6e87704f499eb6cc1cf229d9a536f21f854cdd",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-33541-neighborhood": {
+          "checkpoint_id": "mantis-33541-neighborhood",
+          "case": "evaluation/cases/mantis-33541/2/neighborhood.tcl",
+          "case_sha256": "c73267e409637ac865d633d38b470de9bd6b1e5c6b1bb971e5bd13af333764a6",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-33541-regression": {
+          "checkpoint_id": "mantis-33541-regression",
+          "case": "evaluation/cases/mantis-33541/2/regression.tcl",
+          "case_sha256": "07beabc8e9c643e299074d421156e4021b0acc182abd618f5bc82dc2ec7b8120",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30082-neighborhood-dense-residual-v2": {
+          "checkpoint_id": "mantis-30082-neighborhood-dense-residual-v2",
+          "case": "evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v2.tcl",
+          "case_sha256": "679701cadd55955fc3190c39c7edd552b95f2ee94937cd3faa0f20655a09e3bd",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30202-neighborhood-facepair-matrix": {
+          "checkpoint_id": "mantis-30202-neighborhood-facepair-matrix",
+          "case": "evaluation/cases/mantis-30202/2/neighborhood_facepair_matrix.tcl",
+          "case_sha256": "03a8a9eb99abe711d8b6c89e5279397e73efd6fd838b04e52c01b37cd20f354e",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-33541-neighborhood-boolean-transform": {
+          "checkpoint_id": "mantis-33541-neighborhood-boolean-transform",
+          "case": "evaluation/cases/mantis-33541/2/neighborhood_boolean_transform.tcl",
+          "case_sha256": "532f2db0a41054f82fc3bbb14b3a1d26f468b47fb6b20051b3767e95a098d5e4",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O3 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "NG-05T-v1-checks@1": {
+      "schema_version": 1,
+      "suite": "NG-05T-v1-checks@1",
+      "group_id": "NG-05T-v1",
+      "source_id": "occt-ng04t-v1-baseline-ef5af939",
+      "build_helper": {
+        "path": "five_group_execution/helpers/part1_run_eval.py",
+        "sha256": "1da15e35caccc73c88b97900184543f1912879b696cb5d0405a00184d2373d05"
+      },
+      "checkpoints": {
+        "mantis-30082-original": {
+          "checkpoint_id": "mantis-30082-original",
+          "case": "issues/mantis-30082/4/public/original.tcl",
+          "case_sha256": "c95ce4a22cb803f7d9e028250206149a9ec1230eb8185b7d14395b4af3dde4b4",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30082-neighborhood": {
+          "checkpoint_id": "mantis-30082-neighborhood",
+          "case": "evaluation/cases/mantis-30082/4/neighborhood.tcl",
+          "case_sha256": "6ece46afe217a0c62e423d464b4e38b9e972f1aa3033e6dd116d4448d5ce7040",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30082-regression": {
+          "checkpoint_id": "mantis-30082-regression",
+          "case": "evaluation/cases/mantis-30082/4/regression.tcl",
+          "case_sha256": "d7b16bf795d51ed9924aad0888132e0d17a636fd347adc8e7d51382028e3d7e9",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-31602-original": {
+          "checkpoint_id": "mantis-31602-original",
+          "case": "issues/mantis-31602/2/public/original.tcl",
+          "case_sha256": "8d4531787a0e2de8abdccecd8916cc07a9b92f2c63de5506854951803550ebc8",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-31602-neighborhood": {
+          "checkpoint_id": "mantis-31602-neighborhood",
+          "case": "evaluation/cases/mantis-31602/2/neighborhood.tcl",
+          "case_sha256": "72267ff317028dcc4e3f8cc6c3ed4f19e09d3a43871e795606a2a1e17b0e73ef",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-31602-regression": {
+          "checkpoint_id": "mantis-31602-regression",
+          "case": "evaluation/cases/mantis-31602/2/regression.tcl",
+          "case_sha256": "49b6c2b0e8a3ce069249f68122f3e9448d9d7101a5ce1847e87c4f3835d924bf",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-32850-original": {
+          "checkpoint_id": "mantis-32850-original",
+          "case": "issues/mantis-32850/1/public/original.tcl",
+          "case_sha256": "c402ec004583dce920b7ab3d257f89441759658b4465c77c5a5f5e85818e9c08",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-32850-neighborhood": {
+          "checkpoint_id": "mantis-32850-neighborhood",
+          "case": "evaluation/cases/mantis-32850/1/neighborhood.tcl",
+          "case_sha256": "4b8a570ee1fd79fbf3868347370f88dd5c14896ca282513cac7e34687df0a713",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-32850-regression": {
+          "checkpoint_id": "mantis-32850-regression",
+          "case": "evaluation/cases/mantis-32850/1/regression.tcl",
+          "case_sha256": "afa33395aa692d7b1cac5c1014d8692095b0821a777f07a21684da092b4ccc6d",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30082-neighborhood-dense-residual-v4": {
+          "checkpoint_id": "mantis-30082-neighborhood-dense-residual-v4",
+          "case": "evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v4.tcl",
+          "case_sha256": "da48650c959e17219129d39111adb84e31b1581698bf423faa4bdcf3c76da7ad",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-31602-neighborhood-seam-matrix": {
+          "checkpoint_id": "mantis-31602-neighborhood-seam-matrix",
+          "case": "evaluation/cases/mantis-31602/2/neighborhood_seam_matrix.tcl",
+          "case_sha256": "6367584b51e89c129524ac7b03f4c9c6996e93c7860ed5c3ffd2f0aa49374c5c",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-32850-neighborhood-branch-matrix": {
+          "checkpoint_id": "mantis-32850-neighborhood-branch-matrix",
+          "case": "evaluation/cases/mantis-32850/1/neighborhood_branch_matrix.tcl",
+          "case_sha256": "f5f23d901185a62d6657d92a89a69dfdcc3bb13aa058a47b81df164350abbd86",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O3 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-bf-suite-d9d310-21494-29807-31835@1": {
+      "schema_version": 1,
+      "suite": "occt-bf-suite-d9d310-21494-29807-31835@1",
+      "group_id": "occt-bf-group-d9d310-21494-29807-31835",
+      "source_id": "occt-d9d3107d8df1",
+      "build_helper": {
+        "path": "occt-bf-group-d9d310-21494-29807-31835/routed_run_eval.py",
+        "sha256": "8aafeeaaf8ad3c012975b74543175084d575ff125a41663cfe3d51f00591e9ba"
+      },
+      "checkpoints": {
+        "original_M21494_2": {
+          "checkpoint_id": "original_M21494_2",
+          "case": "issues/occt-21494/1/public/harness_bug21494_2.tcl",
+          "case_sha256": "13e70818e5365e10acb90b43db1b5450a6ac6ccc05b8bc4672cd3ddfae6e34d8",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "original_M29807_i5002": {
+          "checkpoint_id": "original_M29807_i5002",
+          "case": "issues/occt-29807/1/public/harness_bug29807_i5002.tcl",
+          "case_sha256": "343d4f467a4168bbe5210c918873408010de998151598d4b8ef790b7abe4f3b9",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "original_M29807_svm01": {
+          "checkpoint_id": "original_M29807_svm01",
+          "case": "issues/occt-29807/1/public/harness_bug29807_svm01.tcl",
+          "case_sha256": "91069422a88d009c91bb08d05fc6c2a62704ad2de418b75ab37b689a8e3d6d79",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "original_M29807_svm02": {
+          "checkpoint_id": "original_M29807_svm02",
+          "case": "issues/occt-29807/1/public/harness_bug29807_svm02.tcl",
+          "case_sha256": "d5c7b1d58ae2706e374db110d92fd5bc91975791e7c639ba1ecde15d1d41f83c",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "original_M31835_1": {
+          "checkpoint_id": "original_M31835_1",
+          "case": "issues/occt-31835/1/public/harness_bug31835_1.tcl",
+          "case_sha256": "c593a09ba82b7762743b7f8039fd41cff15518bcef47dfc92216c5d04bf4377f",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "original_M31835_2": {
+          "checkpoint_id": "original_M31835_2",
+          "case": "issues/occt-31835/1/public/harness_bug31835_2.tcl",
+          "case_sha256": "dccb364115a708890f459d349f5840f238a039bb3f34db1d6cfea6fa0702041f",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "M21494_neighbor_sphere9p5": {
+          "checkpoint_id": "M21494_neighbor_sphere9p5",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M21494_neighbor_sphere9p5.tcl",
+          "case_sha256": "14dea7550fd64df29481458f1f3b7e70d04d7e8a9c3e5b60687464892b1cc352",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "M21494_regression_cone10_sphere9": {
+          "checkpoint_id": "M21494_regression_cone10_sphere9",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M21494_regression_cone10_sphere9.tcl",
+          "case_sha256": "6a8e2e791a2917f917fa7f88dca74b078341b96b5bfa364505a3930ec36bc0d2",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "M29807_neighbor_i1002": {
+          "checkpoint_id": "M29807_neighbor_i1002",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M29807_neighbor_i1002.tcl",
+          "case_sha256": "5feeefbe19ea6b3f6b2a1c8ddc5a6586349061da63ade89941e04e01e65f697d",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "M29807_cone_plane_ring_control": {
+          "checkpoint_id": "M29807_cone_plane_ring_control",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M29807_cone_plane_ring_control.tcl",
+          "case_sha256": "ec0c671c88801797c27aea946db38d6c375d934d2bac9e9329be7f79b72d7a79",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "M31835_neighbor_axis_offset5": {
+          "checkpoint_id": "M31835_neighbor_axis_offset5",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M31835_neighbor_axis_offset5.tcl",
+          "case_sha256": "8b68fb9eb10a4b86d310248c026e820fdcf82899b2f8d422524eb9dc13b8aaad",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "M31835_regression_steinmetz_r80": {
+          "checkpoint_id": "M31835_regression_steinmetz_r80",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M31835_regression_steinmetz_r80.tcl",
+          "case_sha256": "6935600c84c3364e2806f58a9fe1ef705253d434e7ed2f0341e180bac0904283",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "neighborhood_v2_m21494_scale_125_sphere925": {
+          "checkpoint_id": "neighborhood_v2_m21494_scale_125_sphere925",
+          "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m21494_scale_125_sphere925.tcl",
+          "case_sha256": "b62bdc670ee691fb4f25476bed05cd53628f3c17e3ff6684cc2a47c6ef5838bc",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m21494_translated_sphere925": {
+          "checkpoint_id": "neighborhood_v2_m21494_translated_sphere925",
+          "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m21494_translated_sphere925.tcl",
+          "case_sha256": "587c5e28794d28cc755cf6f79d937504e41b31ed7727eca75c08a2d79e0cc9ff",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m29807_ring_parameter_low": {
+          "checkpoint_id": "neighborhood_v2_m29807_ring_parameter_low",
+          "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m29807_ring_parameter_low.tcl",
+          "case_sha256": "c6aeda95fb78bb8f00b6440926f9512cd1578faf8004b313f2c48c8b1c47b04b",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m29807_ring_scaled_high": {
+          "checkpoint_id": "neighborhood_v2_m29807_ring_scaled_high",
+          "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m29807_ring_scaled_high.tcl",
+          "case_sha256": "db3849b23ed10a459d9bf4f3523a8a94536e5dbce9790438f5f5dbd1c1e1e8d3",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m31835_common_scaled_r10": {
+          "checkpoint_id": "neighborhood_v2_m31835_common_scaled_r10",
+          "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m31835_common_scaled_r10.tcl",
+          "case_sha256": "53cb1067e4151de9dc7e130c2350305fd109c3b00333efdadf1a7e9754b5db0e",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m31835_common_scaled_r20": {
+          "checkpoint_id": "neighborhood_v2_m31835_common_scaled_r20",
+          "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m31835_common_scaled_r20.tcl",
+          "case_sha256": "1e5a967874ee387dd926aeb270cbe20ffec450d3fc50016fb99eee59c0a4bcb4",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O0 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-bf-suite-b55-27310-27773-27252-oracle-v2@1": {
+      "schema_version": 1,
+      "suite": "occt-bf-suite-b55-27310-27773-27252-oracle-v2@1",
+      "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "source_id": "occt-b55bd0235351",
+      "build_helper": {
+        "path": "occt-bf-group-b55-27310-27773-27252-oracle-v2/routed_run_eval.py",
+        "sha256": "d065b782f1fe5f843ab57f7a99d11d7c1b333536a1caaaf6abc3be14d633d25b"
+      },
+      "checkpoints": {
+        "M27310_1": {
+          "checkpoint_id": "M27310_1",
+          "case": "issues/occt-27310/1/public/harness_bug27310_1.tcl",
+          "case_sha256": "f9acda947a60a072d880fade9cdc4ea16b7283792976ca3f84ae4ad01ff4f392",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27310_2_d308": {
+          "checkpoint_id": "M27310_2_d308",
+          "case": "issues/occt-27310/1/public/harness_bug27310_2_d308.tcl",
+          "case_sha256": "05baa5b8aeff8f3684150b6d8d211c646c8e2c26ed1c029683c58e03b0491b9c",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27773": {
+          "checkpoint_id": "M27773",
+          "case": "issues/occt-27773/1/public/harness_bug27773.tcl",
+          "case_sha256": "92c210445156b9e064f379972da197a914680b4ae66cbc9f4d8a113a9ffbb287",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27252": {
+          "checkpoint_id": "M27252",
+          "case": "issues/occt-27252/1/public/harness_bug27252_1.tcl",
+          "case_sha256": "752a8382552078f2647318412730163e8f0def19a3eb7f1b83fd8f6b5c2ac450",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27310_neighbor_finite_face": {
+          "checkpoint_id": "M27310_neighbor_finite_face",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27310_neighbor_finite_face.tcl",
+          "case_sha256": "e025d3718d5ced85ff3d44b3a4bba126f0e49b95c1936301a235e657e765aa9a",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27310_regression_two_loops": {
+          "checkpoint_id": "M27310_regression_two_loops",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27310_regression_two_loops.tcl",
+          "case_sha256": "27085018781829f4e76d9ccb65b2859871459581614c481810f634fd046254c9",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27773_neighbor_offset_line": {
+          "checkpoint_id": "M27773_neighbor_offset_line",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27773_neighbor_offset_line.tcl",
+          "case_sha256": "917c4c5b0ba256a24ca9ff487f12d8e64ecb85bb144372583d6b8f30ac253cde",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27773_regression_circle_line": {
+          "checkpoint_id": "M27773_regression_circle_line",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27773_regression_circle_line.tcl",
+          "case_sha256": "aa02e6f88fb03824066186c9038d9fd846b78c170664d76834718b976524f2e3",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27252_neighbor_translated_plane": {
+          "checkpoint_id": "M27252_neighbor_translated_plane",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27252_neighbor_translated_plane.tcl",
+          "case_sha256": "14c99594426c9a949225670bc4543bb038ce10f14c74808e122b7f79f089872d",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27252_regression_cylinder_plane": {
+          "checkpoint_id": "M27252_regression_cylinder_plane",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27252_regression_cylinder_plane.tcl",
+          "case_sha256": "8a8c92c161210c4c4c3e5db8fde50810835f4af38d76acfceab48895009f1221",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "neighborhood_v2_m27310_rigid_translated_original_breps": {
+          "checkpoint_id": "neighborhood_v2_m27310_rigid_translated_original_breps",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27310_rigid_translated_original_breps.tcl",
+          "case_sha256": "33ed187b02876bad609d86b0abe0e7fb5a04071546e890282fc5db400908dd44",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27310_scaled_finite_brep_neighborhood": {
+          "checkpoint_id": "neighborhood_v2_m27310_scaled_finite_brep_neighborhood",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27310_scaled_finite_brep_neighborhood.tcl",
+          "case_sha256": "6b76bfd54b65049814e2cabb21360a5a8ed4573645c93d8a3d21ac4ab1dc064e",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27773_offset_radius_parameter": {
+          "checkpoint_id": "neighborhood_v2_m27773_offset_radius_parameter",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27773_offset_radius_parameter.tcl",
+          "case_sha256": "1458be796ac47673ec272b1f95b50ed66cf8435b4d60a1793a14745178ad354c",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27773_offset_near_tangent": {
+          "checkpoint_id": "neighborhood_v2_m27773_offset_near_tangent",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27773_offset_near_tangent.tcl",
+          "case_sha256": "5b57126c1ae444551e9e21004c04b2c8e04003d4e647a4a34ffab5bc0f7119ec",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27252_brep_plane_offset005": {
+          "checkpoint_id": "neighborhood_v2_m27252_brep_plane_offset005",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27252_brep_plane_offset005.tcl",
+          "case_sha256": "259974fbdb5e9919efe36b57be23167555f4f51502a8c0f36e222728ac657372",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27252_brep_plane_scale150_offset010": {
+          "checkpoint_id": "neighborhood_v2_m27252_brep_plane_scale150_offset010",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27252_brep_plane_scale150_offset010.tcl",
+          "case_sha256": "f45c905b8f1870d3de93f53f706bcb9dba2dd7243c6d93a5b7797f7ca5aba329",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "gcc",
+        "optimization_flags": "-O0 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-bf-suite-b2613378-27780-27252-21494-v1@1": {
+      "schema_version": 1,
+      "suite": "occt-bf-suite-b2613378-27780-27252-21494-v1@1",
+      "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "source_id": "occt-2613378e60ff",
+      "build_helper": {
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      },
+      "checkpoints": {
+        "M21494_original": {
+          "checkpoint_id": "M21494_original",
+          "case": "issues/occt-21494/2/public/harness_bug21494_2.tcl",
+          "case_sha256": "6bc394b1d4da3dae6a7bfc7cb58778074b50e70981e2814e92ca345edb2df109",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g3/run_draw_case.py",
+            "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+            "role": "agent"
+          }
+        },
+        "M27252_original": {
+          "checkpoint_id": "M27252_original",
+          "case": "issues/occt-27252/2/public/harness_bug27252_1.tcl",
+          "case_sha256": "6d8652828f821c3ec5b7929490239a758d69ac2e3b20c90c3d85e8a3156eeca3",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g3/run_draw_case.py",
+            "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+            "role": "agent"
+          }
+        },
+        "M27780_original": {
+          "checkpoint_id": "M27780_original",
+          "case": "issues/occt-27780/1/public/harness_bug27780.tcl",
+          "case_sha256": "fcb755741b0323aa64907f102b1c62f9cb16464e0c2e6793a424a24348f05fcf",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g3/run_draw_case.py",
+            "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+            "role": "agent"
+          }
+        },
+        "M21494_neighbor_sphere9p5": {
+          "checkpoint_id": "M21494_neighbor_sphere9p5",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M21494_neighbor_sphere9p5.tcl",
+          "case_sha256": "46613cebcbc4c5d694913082afcf224c3ac60d920926f9ab64f183a733ed504f",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g3/run_draw_case.py",
+            "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+            "role": "agent"
+          }
+        },
+        "M27252_neighbor_translated_plane": {
+          "checkpoint_id": "M27252_neighbor_translated_plane",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27252_neighbor_translated_plane.tcl",
+          "case_sha256": "d83b4091476cd52e05d68d2a6684b31a5de9a143b537606bf5a4e41da9dd9892",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g3/run_draw_case.py",
+            "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+            "role": "agent"
+          }
+        },
+        "M27780_neighbor_translated_face": {
+          "checkpoint_id": "M27780_neighbor_translated_face",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27780_neighbor_translated_face.tcl",
+          "case_sha256": "e04d148186d229b93050bb84ebb65d9290e0ee1a31a4cb57e1c7c92386e7417c",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g3/run_draw_case.py",
+            "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+            "role": "agent"
+          }
+        },
+        "M21494_regression_cone10_sphere9": {
+          "checkpoint_id": "M21494_regression_cone10_sphere9",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M21494_regression_cone10_sphere9.tcl",
+          "case_sha256": "00fe99a744ab0c201e2ee5f2e6e6084621a39d15a62a52b809cfac35c14cbbbf",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g3/run_draw_case.py",
+            "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+            "role": "agent"
+          }
+        },
+        "M27252_regression_cylinder_plane": {
+          "checkpoint_id": "M27252_regression_cylinder_plane",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27252_regression_cylinder_plane.tcl",
+          "case_sha256": "9447cc01a79d08ff4490859674bcb0390e036211a8067ba076a32b26883acdde",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g3/run_draw_case.py",
+            "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+            "role": "agent"
+          }
+        },
+        "M27780_regression_finite_plane": {
+          "checkpoint_id": "M27780_regression_finite_plane",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27780_regression_finite_plane.tcl",
+          "case_sha256": "480bae209e70cf47c5d474ef5f6ea27eae9e8186a7978ee54621e0440a065017",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g3/run_draw_case.py",
+            "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+            "role": "agent"
+          }
+        },
+        "neighborhood_v2_m21494_scale_075_sphere925": {
+          "checkpoint_id": "neighborhood_v2_m21494_scale_075_sphere925",
+          "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m21494_scale_075_sphere925.tcl",
+          "case_sha256": "ef875e2b5b5f4a14784e14ed8b9fc9f60017fe3dd3169373c2f45e0f2d3dbb16",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m21494_translated_sphere975": {
+          "checkpoint_id": "neighborhood_v2_m21494_translated_sphere975",
+          "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m21494_translated_sphere975.tcl",
+          "case_sha256": "4de03423f41efb540dd0c549c38d46c2278e045b0e69fa887db3450a25e6a20d",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27252_brep_plane_offset020": {
+          "checkpoint_id": "neighborhood_v2_m27252_brep_plane_offset020",
+          "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27252_brep_plane_offset020.tcl",
+          "case_sha256": "bbe8d0274ab56c086a798a1ab9b3409d38ba803639f9cf0f897445161225b052",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27252_brep_plane_scale150_offset010": {
+          "checkpoint_id": "neighborhood_v2_m27252_brep_plane_scale150_offset010",
+          "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27252_brep_plane_scale150_offset010.tcl",
+          "case_sha256": "ea87af33e1ee19c13b0ec631016c2a33d511071dc925bb6bc6cb7aeec0598b0c",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27780_brep_rigid_translation_mapping": {
+          "checkpoint_id": "neighborhood_v2_m27780_brep_rigid_translation_mapping",
+          "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27780_brep_rigid_translation_mapping.tcl",
+          "case_sha256": "02b29ae8a681aabbacfd1969ec4c0327e51388574213b6135dadc4e9395e2a82",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27780_brep_scale_mapping": {
+          "checkpoint_id": "neighborhood_v2_m27780_brep_scale_mapping",
+          "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27780_brep_scale_mapping.tcl",
+          "case_sha256": "2687367277ccdb862f2f4e057f23828706d5cb8fb4710cb360df0f5b968612c2",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O0 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-boolean-intersection-v4-mantis-32721@1": {
+      "schema_version": 1,
+      "suite": "occt-boolean-intersection-v4-mantis-32721@1",
+      "group_id": "occt-boolean-intersection-v4-mantis-32721",
+      "source_id": "occt-v4-b41ccce129d0",
+      "build_helper": {
+        "path": "unified_runtime/occt-v4-clang10-o3-tcl86-build.py",
+        "sha256": "ab412a4268c41c6d6ad58d17ac1095cdae10897087f3158d60eff97658cd4e84"
+      },
+      "checkpoints": {
+        "original-32721-upstream": {
+          "checkpoint_id": "original-32721-upstream",
+          "case": "issues/mantis-32721/1/original_official.tcl",
+          "case_sha256": "4971299a70fbfdaf5df770610bba99414f5fb34264fc5380330f6380c5c726bb",
+          "category": "original",
+          "expected_assertion_ids": [
+            "official_oracle_completed"
+          ],
+          "expected_failure_lines": [
+            "Error: bad tolerance of result"
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-32721-1-rigid-z": {
+          "checkpoint_id": "neighborhood-32721-1-rigid-z",
+          "case": "issues/mantis-32721/1/neighborhood_1_rigid90_z.tcl",
+          "case_sha256": "185fc98105a4ac04d3ae4432b934ed26b7916cfca0fef65d391954d875ae772d",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "operands_created",
+            "checkshape_r1",
+            "topology_r1",
+            "checkshape_r2",
+            "topology_r2",
+            "checkshape_r3",
+            "topology_r3",
+            "checkshape_r4",
+            "topology_r4",
+            "max_tolerance_r1",
+            "official_props_r1",
+            "official_props_r2",
+            "official_props_r3",
+            "official_props_r4"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-32721-2-rigid-x": {
+          "checkpoint_id": "neighborhood-32721-2-rigid-x",
+          "case": "issues/mantis-32721/1/neighborhood_2_rigid90_x.tcl",
+          "case_sha256": "db338deccbaa44909902eda0f21ca02a5d6d60b93ebf550b43ef309eeae64062",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "operands_created",
+            "checkshape_r1",
+            "topology_r1",
+            "checkshape_r2",
+            "topology_r2",
+            "checkshape_r3",
+            "topology_r3",
+            "checkshape_r4",
+            "topology_r4",
+            "max_tolerance_r1",
+            "official_props_r1",
+            "official_props_r2",
+            "official_props_r3",
+            "official_props_r4"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "regression-32721-health": {
+          "checkpoint_id": "regression-32721-health",
+          "case": "issues/mantis-32721/1/regression_health.tcl",
+          "case_sha256": "b9a26170cd5cf5d03aeabab563f3448970efdc233f6ebcd774623514194b993f",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "bop_valid",
+            "analytic_volume"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang-o3",
+        "optimization_flags": "-O3 -DNDEBUG"
+      }
+    },
+    "occt-boolean-intersection-v4-mantis-32942@1": {
+      "schema_version": 1,
+      "suite": "occt-boolean-intersection-v4-mantis-32942@1",
+      "group_id": "occt-boolean-intersection-v4-mantis-32942",
+      "source_id": "occt-v4-b84f42008b74",
+      "build_helper": {
+        "path": "unified_runtime/occt-v4-clang10-o3-tcl86-build.py",
+        "sha256": "ab412a4268c41c6d6ad58d17ac1095cdae10897087f3158d60eff97658cd4e84"
+      },
+      "checkpoints": {
+        "original-32942-upstream": {
+          "checkpoint_id": "original-32942-upstream",
+          "case": "issues/mantis-32942/1/original_official.tcl",
+          "case_sha256": "4971299a70fbfdaf5df770610bba99414f5fb34264fc5380330f6380c5c726bb",
+          "category": "original",
+          "expected_assertion_ids": [
+            "official_oracle_completed"
+          ],
+          "expected_failure_lines": [
+            "Error :  is WRONG because number of VERTEX entities in shape \"result\" is 0"
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-32942-1-fixture-rigid-z": {
+          "checkpoint_id": "neighborhood-32942-1-fixture-rigid-z",
+          "case": "issues/mantis-32942/1/neighborhood_1_fixture_rigid_z.tcl",
+          "case_sha256": "a12a7989dbd0f49e7897e380bf8f53eaf3ba46535fb7bf081d365a38e61a92b0",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "shape_check",
+            "topology_counts",
+            "min_tolerance_check",
+            "official_area"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-32942-2-fixture-rigid-x": {
+          "checkpoint_id": "neighborhood-32942-2-fixture-rigid-x",
+          "case": "issues/mantis-32942/1/neighborhood_2_fixture_rigid_x.tcl",
+          "case_sha256": "af94efdf0213ec22572b41c6ed191768126da63575623601ed831d4b3c10c8a9",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "shape_check",
+            "topology_counts",
+            "min_tolerance_check",
+            "official_area"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "regression-32942-quarter-sphere": {
+          "checkpoint_id": "regression-32942-quarter-sphere",
+          "case": "issues/mantis-32942/1/regression_health_quarter_sphere.tcl",
+          "case_sha256": "33ca4cc9986e9d28ed2dc9107b4483eb538fda87132f29c45903a74523b9c8ab",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "bop_valid",
+            "analytic_volume"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang-o3",
+        "optimization_flags": "-O3 -DNDEBUG"
+      }
+    },
+    "occt-boolean-intersection-v4-mantis-31404@1": {
+      "schema_version": 1,
+      "suite": "occt-boolean-intersection-v4-mantis-31404@1",
+      "group_id": "occt-boolean-intersection-v4-mantis-31404",
+      "source_id": "occt-v4-bdeea0a89759",
+      "build_helper": {
+        "path": "unified_runtime/occt-v4-clang10-o0-tcl86-build.py",
+        "sha256": "ab412a4268c41c6d6ad58d17ac1095cdae10897087f3158d60eff97658cd4e84"
+      },
+      "checkpoints": {
+        "original-31404-upstream": {
+          "checkpoint_id": "original-31404-upstream",
+          "case": "issues/mantis-31404/1/original_official.tcl",
+          "case_sha256": "4971299a70fbfdaf5df770610bba99414f5fb34264fc5380330f6380c5c726bb",
+          "category": "original",
+          "expected_assertion_ids": [
+            "official_oracle_completed"
+          ],
+          "expected_failure_lines": [
+            "Error: the f1 is a self-interfering shape"
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-31404-1-official-pair-rigid-z-v2": {
+          "checkpoint_id": "neighborhood-31404-1-official-pair-rigid-z-v2",
+          "case": "issues/mantis-31404/1/neighborhood_1_official_pair_rigid_z_v2.tcl",
+          "case_sha256": "93a1579c9fc25c61f955071bf0079b26da30029791ec9ae4c083b78f89c7fc4a",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "checkshape_f1",
+            "bopcheck_f1",
+            "max_tolerance_f1",
+            "checkshape_f2",
+            "bopcheck_f2",
+            "max_tolerance_f2",
+            "topology_f1",
+            "topology_f2",
+            "area_f1",
+            "area_f2",
+            "arc_length_f1",
+            "arc_length_f2"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-31404-2-official-pair-rigid-x-v2": {
+          "checkpoint_id": "neighborhood-31404-2-official-pair-rigid-x-v2",
+          "case": "issues/mantis-31404/1/neighborhood_2_official_pair_rigid_x_v2.tcl",
+          "case_sha256": "5c751bf6087ca3c637cd271a9495ca5727637ceacb3c70acfd080e68cd1903eb",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "checkshape_f1",
+            "bopcheck_f1",
+            "max_tolerance_f1",
+            "checkshape_f2",
+            "bopcheck_f2",
+            "max_tolerance_f2",
+            "topology_f1",
+            "topology_f2",
+            "area_f1",
+            "area_f2",
+            "arc_length_f1",
+            "arc_length_f2"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "regression-31404-contained-spheres": {
+          "checkpoint_id": "regression-31404-contained-spheres",
+          "case": "issues/mantis-31404/1/regression_health_contained_spheres.tcl",
+          "case_sha256": "1ac167114e802edb3501d4fea4bc55ea8155eef3c102c3f3d3161c966c1d0f25",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "checkshape_f1",
+            "bopcheck_f1",
+            "max_tolerance_f1",
+            "checkshape_f2",
+            "bopcheck_f2",
+            "max_tolerance_f2",
+            "both_areas"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang-o0",
+        "optimization_flags": "-O0 -DNDEBUG"
+      }
+    },
+    "occt-boolean-intersection-v4-mantis-31470@1": {
+      "schema_version": 1,
+      "suite": "occt-boolean-intersection-v4-mantis-31470@1",
+      "group_id": "occt-boolean-intersection-v4-mantis-31470",
+      "source_id": "occt-v4-bdeea0a89759",
+      "build_helper": {
+        "path": "unified_runtime/occt-v4-clang10-o0-tcl86-build.py",
+        "sha256": "ab412a4268c41c6d6ad58d17ac1095cdae10897087f3158d60eff97658cd4e84"
+      },
+      "checkpoints": {
+        "original-31470-upstream": {
+          "checkpoint_id": "original-31470-upstream",
+          "case": "issues/mantis-31470/1/original_official.tcl",
+          "case_sha256": "4971299a70fbfdaf5df770610bba99414f5fb34264fc5380330f6380c5c726bb",
+          "category": "original",
+          "expected_assertion_ids": [
+            "official_oracle_completed"
+          ],
+          "expected_failure_lines": [
+            "Error: bad tolerance of result"
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-31470-1-official-shell-rigid-z": {
+          "checkpoint_id": "neighborhood-31470-1-official-shell-rigid-z",
+          "case": "issues/mantis-31470/1/neighborhood_1_official_shell_rigid_z.tcl",
+          "case_sha256": "b150705c23dbe9b1782116e6907ffe2486aadd17905c0a8ff7779600368ab0ee",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "shape_check",
+            "topology_counts",
+            "max_tolerance",
+            "official_volume"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-31470-2-official-shell-rigid-x": {
+          "checkpoint_id": "neighborhood-31470-2-official-shell-rigid-x",
+          "case": "issues/mantis-31470/1/neighborhood_2_official_shell_rigid_x.tcl",
+          "case_sha256": "3b7a71a491f6250fff9344f1b90715b4f3e908734a91cc32a3f19857b372b989",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "shape_check",
+            "topology_counts",
+            "max_tolerance",
+            "official_volume"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "regression-31470-contained-shell": {
+          "checkpoint_id": "regression-31470-contained-shell",
+          "case": "issues/mantis-31470/1/regression_health_contained_shell.tcl",
+          "case_sha256": "b7a202a49135cb743664f5c468a8b46724a551c612aa900af89d04d7d3a243d9",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "shape_check",
+            "bop_valid",
+            "max_tolerance",
+            "shell_volume"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang-o0",
+        "optimization_flags": "-O0 -DNDEBUG"
+      }
+    },
+    "occt-boolean-intersection-v4-mantis-32470@1": {
+      "schema_version": 1,
+      "suite": "occt-boolean-intersection-v4-mantis-32470@1",
+      "group_id": "occt-boolean-intersection-v4-mantis-32470",
+      "source_id": "occt-v4-b41ccce129d0",
+      "build_helper": {
+        "path": "unified_runtime/occt-v4-clang10-o3-tcl86-build.py",
+        "sha256": "ab412a4268c41c6d6ad58d17ac1095cdae10897087f3158d60eff97658cd4e84"
+      },
+      "checkpoints": {
+        "original-32470-upstream": {
+          "checkpoint_id": "original-32470-upstream",
+          "case": "issues/mantis-32470/1/original_bug32470.tcl",
+          "case_sha256": "fc3b3718ff3c66bcac599cafc80b45ce75e5d0d736b7b4ba03f923e5b4226400",
+          "category": "original",
+          "expected_assertion_ids": [
+            "official_oracle_completed"
+          ],
+          "expected_failure_lines": [
+            "The area of result shape is 1256.64, expected 1229.69"
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-32470-1-v3-migrated": {
+          "checkpoint_id": "neighborhood-32470-1-v3-migrated",
+          "case": "issues/mantis-32470/1/neighborhood_1_migrated.tcl",
+          "case_sha256": "676a4a8cb8815b799ad9d7d68222c48d065728fa482afc62604be8f9182f9378",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "tolerance",
+            "scaled_area_volume"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-32470-2-v3-migrated": {
+          "checkpoint_id": "neighborhood-32470-2-v3-migrated",
+          "case": "issues/mantis-32470/1/neighborhood_2_migrated.tcl",
+          "case_sha256": "9532802067405fe2fdd058327d1be4b15b769a4bc3c78d2f7eb204802776dca8",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "tolerance",
+            "scaled_area_volume"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "regression-32470-health-v3-migrated": {
+          "checkpoint_id": "regression-32470-health-v3-migrated",
+          "case": "issues/mantis-32470/1/regression_health_migrated.tcl",
+          "case_sha256": "564dc952dcecee63da0cb77fabd4ea01671ac83c9a8a6b61ee8d184f8546291c",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "tolerance",
+            "spherical_cap_area_volume"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang-o3",
+        "optimization_flags": "-O3 -DNDEBUG"
+      }
+    },
+    "occt-boolean-intersection-v4-mantis-32502@1": {
+      "schema_version": 1,
+      "suite": "occt-boolean-intersection-v4-mantis-32502@1",
+      "group_id": "occt-boolean-intersection-v4-mantis-32502",
+      "source_id": "occt-v4-b41ccce129d0",
+      "build_helper": {
+        "path": "unified_runtime/occt-v4-clang10-o3-tcl86-build.py",
+        "sha256": "ab412a4268c41c6d6ad58d17ac1095cdae10897087f3158d60eff97658cd4e84"
+      },
+      "checkpoints": {
+        "original-32502-upstream": {
+          "checkpoint_id": "original-32502-upstream",
+          "case": "issues/mantis-32502/1/original_bug32502.tcl",
+          "case_sha256": "bf153beafbce9e788ef0f3715ba0e78a11ee55f084113b4be531911bd145d542",
+          "category": "original",
+          "expected_assertion_ids": [
+            "official_oracle_completed"
+          ],
+          "expected_failure_lines": [
+            "The area of result shape is 1503.37, expected 1750.1"
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-32502-1-v3-migrated": {
+          "checkpoint_id": "neighborhood-32502-1-v3-migrated",
+          "case": "issues/mantis-32502/1/neighborhood_1_migrated.tcl",
+          "case_sha256": "24e7651d3455e804352076cd88316125be9933b143e16a92fb2ddca7985beabc",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "tolerance",
+            "scaled_area_volume"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-32502-2-v3-migrated": {
+          "checkpoint_id": "neighborhood-32502-2-v3-migrated",
+          "case": "issues/mantis-32502/1/neighborhood_2_migrated.tcl",
+          "case_sha256": "78c2617ab8d5cd57e6b3c227b0ea00b79e97859ec7001e73b3b39e2bf65d3768",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "tolerance",
+            "scaled_area_volume"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "regression-32502-health-v3-migrated": {
+          "checkpoint_id": "regression-32502-health-v3-migrated",
+          "case": "issues/mantis-32502/1/regression_health_migrated.tcl",
+          "case_sha256": "8dd857fc7caabde7008e90e5529e1750a74ab956efc807384f473bf4571f4470",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "disjoint_solid_union"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang-o3",
+        "optimization_flags": "-O3 -DNDEBUG"
+      }
+    },
+    "occt-boolean-intersection-v4-mantis-33244@1": {
+      "schema_version": 1,
+      "suite": "occt-boolean-intersection-v4-mantis-33244@1",
+      "group_id": "occt-boolean-intersection-v4-mantis-33244",
+      "source_id": "occt-v4-b41ccce129d0",
+      "build_helper": {
+        "path": "unified_runtime/occt-v4-clang10-o3-tcl86-build.py",
+        "sha256": "ab412a4268c41c6d6ad58d17ac1095cdae10897087f3158d60eff97658cd4e84"
+      },
+      "checkpoints": {
+        "original-33244-upstream": {
+          "checkpoint_id": "original-33244-upstream",
+          "case": "issues/mantis-33244/1/original_bug33244.tcl",
+          "case_sha256": "df1dee8f06b377c2d4776a43e56264ee5419bde2ce718455ee7d89c119f533ce",
+          "category": "original",
+          "expected_assertion_ids": [
+            "official_oracle_completed"
+          ],
+          "expected_failure_lines": [
+            "ERROR. Intersection is wrong"
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-33244-1-v3-migrated": {
+          "checkpoint_id": "neighborhood-33244-1-v3-migrated",
+          "case": "issues/mantis-33244/1/neighborhood_1_migrated.tcl",
+          "case_sha256": "48f6d59675d7cebbd0277ded1654dad3c3d9b29103aab1c69263ce72dd8e0f47",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "order_s1_s2",
+            "order_s2_s1"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-33244-2-v3-migrated": {
+          "checkpoint_id": "neighborhood-33244-2-v3-migrated",
+          "case": "issues/mantis-33244/1/neighborhood_2_migrated.tcl",
+          "case_sha256": "05bdd6f9cc97dafb8c8be1f5b7762f214f25425d65073290b110fde40dee7b25",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "order_s1_s2",
+            "order_s2_s1"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "regression-33244-health-v3-migrated": {
+          "checkpoint_id": "regression-33244-health-v3-migrated",
+          "case": "issues/mantis-33244/1/regression_health_migrated.tcl",
+          "case_sha256": "37fd21a6ebf14b938610757d8d071f561edf0d9668caf5c834482fb75ec549cc",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "single_curve_count",
+            "line_type"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang-o3",
+        "optimization_flags": "-O3 -DNDEBUG"
+      }
+    },
+    "occt-boolean-intersection-v4-mantis-30703@1": {
+      "schema_version": 1,
+      "suite": "occt-boolean-intersection-v4-mantis-30703@1",
+      "group_id": "occt-boolean-intersection-v4-mantis-30703",
+      "source_id": "occt-v4-b41ccce129d0",
+      "build_helper": {
+        "path": "unified_runtime/occt-v4-clang10-o3-tcl86-build.py",
+        "sha256": "ab412a4268c41c6d6ad58d17ac1095cdae10897087f3158d60eff97658cd4e84"
+      },
+      "checkpoints": {
+        "original-30703-upstream": {
+          "checkpoint_id": "original-30703-upstream",
+          "case": "issues/mantis-30703/1/original_official.tcl",
+          "case_sha256": "89eeb320d215b9f77aa4c43723141038c03b457abaac2e6cf1f686fd516993b2",
+          "category": "original",
+          "expected_assertion_ids": [
+            "solution_count",
+            "curve_length",
+            "official_oracle_completed"
+          ],
+          "expected_failure_lines": [
+            "Error: Incorrect number of solutions."
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-30703-1-common-translation": {
+          "checkpoint_id": "neighborhood-30703-1-common-translation",
+          "case": "issues/mantis-30703/1/neighborhood_1_common_translation.tcl",
+          "case_sha256": "56e11a0afb4fea50fa016635ef1556576b9346fb246888c1447116d60cbcc860",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "curve_length",
+            "solution_count",
+            "transform_witness"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-30703-2-operand-order": {
+          "checkpoint_id": "neighborhood-30703-2-operand-order",
+          "case": "issues/mantis-30703/1/neighborhood_2_operand_order.tcl",
+          "case_sha256": "14120b3486adfe0c8f196b69ce3892a57710d2e0dec41eccb1495eceda2fc5bd",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "curve_length",
+            "operand_order",
+            "solution_count"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "regression-30703-plane-cylinder": {
+          "checkpoint_id": "regression-30703-plane-cylinder",
+          "case": "issues/mantis-30703/1/regression_plane_cylinder.tcl",
+          "case_sha256": "eeb6215c1520cc752ffb284313541ee983f86be47a9d26446e0def6f65d33716",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "curve_length",
+            "solution_count"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang-o3",
+        "optimization_flags": "-O3 -DNDEBUG"
+      }
+    },
+    "occt-boolean-intersection-v4-mantis-29972@1": {
+      "schema_version": 1,
+      "suite": "occt-boolean-intersection-v4-mantis-29972@1",
+      "group_id": "occt-boolean-intersection-v4-mantis-29972",
+      "source_id": "occt-v4-e6afb5398317",
+      "build_helper": {
+        "path": "unified_runtime/occt-v4-clang10-o0-tcl86-build.py",
+        "sha256": "ab412a4268c41c6d6ad58d17ac1095cdae10897087f3158d60eff97658cd4e84"
+      },
+      "checkpoints": {
+        "original-29972-upstream": {
+          "checkpoint_id": "original-29972-upstream",
+          "case": "issues/mantis-29972/1/original_official.tcl",
+          "case_sha256": "c220065d929ab46bcdfff10641bec2fc5133a9ba1e6d68caaa4f66bf4a23e603",
+          "category": "original",
+          "expected_assertion_ids": [
+            "curve_count",
+            "edge_count",
+            "section_endpoint_count",
+            "section_distance"
+          ],
+          "expected_failure_lines": [
+            "Error: The distance between alone_",
+            "is WRONG because number of EDGE entities",
+            "The section is closed."
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-29972-1-common-translation": {
+          "checkpoint_id": "neighborhood-29972-1-common-translation",
+          "case": "issues/mantis-29972/1/neighborhood_1_common_translation.tcl",
+          "case_sha256": "56e11a0afb4fea50fa016635ef1556576b9346fb246888c1447116d60cbcc860",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "curve_count",
+            "transform_witness",
+            "edge_count",
+            "section_endpoint_count",
+            "section_distance"
+          ],
+          "expected_failure_lines": [
+            "Error: The distance between alone_",
+            "is WRONG because number of EDGE entities",
+            "The section is closed."
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-29972-2-operand-order": {
+          "checkpoint_id": "neighborhood-29972-2-operand-order",
+          "case": "issues/mantis-29972/1/neighborhood_2_operand_order.tcl",
+          "case_sha256": "14120b3486adfe0c8f196b69ce3892a57710d2e0dec41eccb1495eceda2fc5bd",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "curve_count",
+            "operand_order",
+            "edge_count",
+            "section_endpoint_count",
+            "section_distance"
+          ],
+          "expected_failure_lines": [
+            "Error: The distance between alone_",
+            "is WRONG because number of EDGE entities",
+            "The section is closed."
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "regression-29972-plane-cylinder": {
+          "checkpoint_id": "regression-29972-plane-cylinder",
+          "case": "issues/mantis-29972/1/regression_plane_cylinder.tcl",
+          "case_sha256": "eeb6215c1520cc752ffb284313541ee983f86be47a9d26446e0def6f65d33716",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "curve_length",
+            "solution_count"
+          ],
+          "expected_failure_lines": [
+            "Error: The distance between alone_",
+            "is WRONG because number of EDGE entities",
+            "The section is closed."
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang-o0",
+        "optimization_flags": "-O0 -DNDEBUG"
+      }
+    },
+    "occt-boolean-intersection-v4-mantis-33615@1": {
+      "schema_version": 1,
+      "suite": "occt-boolean-intersection-v4-mantis-33615@1",
+      "group_id": "occt-boolean-intersection-v4-mantis-33615",
+      "source_id": "occt-v4-b84f42008b74",
+      "build_helper": {
+        "path": "unified_runtime/occt-v4-clang10-o3-tcl86-build.py",
+        "sha256": "ab412a4268c41c6d6ad58d17ac1095cdae10897087f3158d60eff97658cd4e84"
+      },
+      "checkpoints": {
+        "original-33615-upstream": {
+          "checkpoint_id": "original-33615-upstream",
+          "case": "issues/mantis-33615/1/original_official.tcl",
+          "case_sha256": "fb9d652c0416c28eb47a8dd7ca54c286c0bb82e0b51b7a185ce1907a81ba6691",
+          "category": "original",
+          "expected_assertion_ids": [
+            "vertex_count",
+            "edge_count",
+            "wire_count",
+            "face_count",
+            "official_oracle_completed"
+          ],
+          "expected_failure_lines": [
+            "is WRONG because number of VERTEX entities"
+          ],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-33615-1-common-translation": {
+          "checkpoint_id": "neighborhood-33615-1-common-translation",
+          "case": "issues/mantis-33615/1/neighborhood_1_common_translation.tcl",
+          "case_sha256": "56e11a0afb4fea50fa016635ef1556576b9346fb246888c1447116d60cbcc860",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "official_topology",
+            "transform_witness"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "neighborhood-33615-2-common-rotation-z90": {
+          "checkpoint_id": "neighborhood-33615-2-common-rotation-z90",
+          "case": "issues/mantis-33615/1/neighborhood_2_common_rotation.tcl",
+          "case_sha256": "bb49bdb388ac0f6a54dec2acff81b574aba3a9ec00cf5313d51ab09c490022bf",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "official_topology",
+            "transform_witness"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        },
+        "regression-33615-overlap-boxes": {
+          "checkpoint_id": "regression-33615-overlap-boxes",
+          "case": "issues/mantis-33615/1/regression_overlap_boxes.tcl",
+          "case_sha256": "445a468fe1d8a37fb18c2cf4b1d3275eea6855d5c89be1d4874257027f7d4ccc",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "reg_area_volume",
+            "reg_shape_check",
+            "reg_topology",
+            "reg_valid"
+          ],
+          "expected_failure_lines": [],
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang-o3",
+        "optimization_flags": "-O3 -DNDEBUG"
+      }
+    }
+  }
+}

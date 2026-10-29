@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "occt-boolean-intersection-v4-mantis-29972",
+  "version": "1",
+  "title": "OCCT · 29972 · 检查点",
+  "source_ids": [
+    "occt-v4-e6afb5398317"
+  ],
+  "group_ids": [
+    "occt-boolean-intersection-v4-mantis-29972"
+  ],
+  "checkpoints": [
+    {
+      "id": "original-29972-upstream",
+      "issue_id": "mantis-29972",
+      "category": "original",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-29972/1/original_official.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "neighborhood-29972-1-common-translation",
+      "issue_id": "mantis-29972",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-29972/1/neighborhood_1_common_translation.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "neighborhood-29972-2-operand-order",
+      "issue_id": "mantis-29972",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-29972/1/neighborhood_2_operand_order.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    },
+    {
+      "id": "regression-29972-plane-cylinder",
+      "issue_id": "mantis-29972",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "case": "issues/occt-29972/1/regression_plane_cylinder.tcl",
+      "oracle": "draw_test_done_v1",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-29972/1/bootstrap.tcl",
+    "issues/occt-29972/1/official_upstream.tcl",
+    "issues/occt-29972/1/original_official.tcl",
+    "issues/occt-29972/1/neighborhood_1_common_translation_payload.tcl",
+    "issues/occt-29972/1/neighborhood_1_common_translation.tcl",
+    "issues/occt-29972/1/neighborhood_2_operand_order_payload.tcl",
+    "issues/occt-29972/1/neighborhood_2_operand_order.tcl",
+    "issues/occt-29972/1/regression_plane_cylinder_payload.tcl",
+    "issues/occt-29972/1/regression_plane_cylinder.tcl"
+  ]
+}

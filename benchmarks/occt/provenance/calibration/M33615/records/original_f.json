@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "protocol": "v4_portable_calibration_record_v1",
+  "canonical_issue": "M33615",
+  "role": "original_F",
+  "case_kind": "original",
+  "geometry_verdict": "geometry_pass",
+  "return_code": 0,
+  "timed_out": false,
+  "wall_seconds": 0.115,
+  "assertion_evidence": {
+    "expected_pass_marker_ids": [
+      "official_test_completed"
+    ],
+    "pass_marker_counts": {
+      "official_test_completed": 1
+    },
+    "required_output_counts": {},
+    "observed_output_counts": {},
+    "completion_sentinel_count": 1,
+    "missing_or_duplicate_markers": [],
+    "unmet_output_counts": {},
+    "failure_lines": [],
+    "exception_lines": []
+  },
+  "source": {
+    "commit": "5811a330c784c49e64c65fdaa88d01bff444da56",
+    "git_tree": "8d091c3eb9de4e59a0350bbdd350920762c78dc5",
+    "archive_sha256": null,
+    "materialized_manifest_sha256": null
+  },
+  "build": {
+    "binary_sha256": "9b5b5767ffa6b8e9eef69cd11c18a51b73a9fb94e5896ec2245fa7f55c5b9192",
+    "binary_bytes": 17088,
+    "plugin_sha256": "c3a2c6047f956d557388d6c1c8c5defa68f099630abea810cf9a957ca14449d5",
+    "plugin_bytes": 2939112
+  },
+  "candidate_case_sha256": "0145522bcb90081979333e364f9dd7881e2c5ab7f4145ab24cab0d559e62473f",
+  "raw_candidate_record": "provenance/calibration/M33615/raw/original_f.candidate_record.json",
+  "stdout": {
+    "path": "provenance/calibration/M33615/raw/original_f.stdout.log",
+    "sha256": "075d6bc1557a52646fdb583d5e59bbbdc28dbfb4a7272e70cc3b62246f3b9249"
+  },
+  "stderr": {
+    "path": "provenance/calibration/M33615/raw/original_f.stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "active_bundle_case": "issues/mantis-33615/1/original_official.tcl",
+  "source_evidence": "../source-and-build-map.json"
+}

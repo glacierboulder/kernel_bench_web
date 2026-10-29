@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "canonical_issue": "M33615",
+  "status": "calibrated_candidate_pending_frozen_replay",
+  "scope_stage": "IntTools_FaceFace / IntPatch_ALineToWLine intersection output used in BOP partition construction",
+  "original_case_hash": "59e8e77de52b85913d7eb486904463ea090033c4fbb6f2518b5f3249b87d332d",
+  "active_checkpoint_count": 4,
+  "scenario_count": 4,
+  "active_roles": [
+    {
+      "role": "original_B",
+      "geometry_verdict": "geometry_fail",
+      "record": "provenance/calibration/M33615/records/original_b.json",
+      "raw_candidate_record_sha256": "342cdf205921068d6c3f18b2da3fc52a8a922ba6a194cbf3f8e299f0b2b3b542",
+      "stdout_sha256": "98239ace9ac129ecdbb383acbce280674b32f51e1a0a62e4201b2497caba2b65",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "original_F",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M33615/records/original_f.json",
+      "raw_candidate_record_sha256": "f3c25fd37a3e12ead849e32ca8f49d7e6e2acaae3f89082096073c93106d1122",
+      "stdout_sha256": "075d6bc1557a52646fdb583d5e59bbbdc28dbfb4a7272e70cc3b62246f3b9249",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "N1_F",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M33615/records/n1_f.json",
+      "raw_candidate_record_sha256": "d0611f5c5b94eb04c9fbb02edb6e023e9962c1c5c895888e8a35f3e63469660e",
+      "stdout_sha256": "f91ec69e8cf5c74f0c43c859c37e6e0e2f53f78a9485cfb142b91b5b2ec34a5d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "N2_F",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M33615/records/n2_f.json",
+      "raw_candidate_record_sha256": "c00b505f597eeb176fbc16e7ec1670781c19a65639282b18967707746ad0913d",
+      "stdout_sha256": "d8d8a477f03287334c8301f729470d21ee7339aca2dff6dd3aa0d4e2a8471a17",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "regression_B",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M33615/records/regression_b.json",
+      "raw_candidate_record_sha256": "74ff1ce348f42400915b938365f5c27878b6308302d7e10c73234136c0ec7042",
+      "stdout_sha256": "092fe9d3d86dd8f6f207ad82d162fd4e2e891816c185c04bb48981b169f29214",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "regression_F",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M33615/records/regression_f.json",
+      "raw_candidate_record_sha256": "a940de89d2b855f89418e0dba276b347c5ee32bba3072c5187e98a4997a8c7c0",
+      "stdout_sha256": "092fe9d3d86dd8f6f207ad82d162fd4e2e891816c185c04bb48981b169f29214",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "known_limitations": [],
+  "checkpoint_ids": [
+    "original-33615-upstream",
+    "neighborhood-33615-1-common-translation",
+    "neighborhood-33615-2-common-rotation-z90",
+    "regression-33615-overlap-boxes"
+  ],
+  "note": "Historical calibration is preserved; final frozen-runner replay is required before v4 formal acceptance."
+}

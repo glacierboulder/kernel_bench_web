@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "canonical_issue": "M29972",
+  "task_baseline_source_id": "occt-v4-e6afb5398317",
+  "baseline_commit": "e6afb53983172155891ef175943534e0e1a24f75",
+  "baseline_profile_id": "occt-v4-clang10-o0-tcl86",
+  "official_test_origin": {
+    "commit": "98974dccef283573c1b7899e144919d3f637d469",
+    "path": "tests/bugs/modalg_7/bug29972_3",
+    "sha256": "cd42f0ffe8fb3b861828293594549863eea6842ebd992bfcae8c6c745a59d9c3",
+    "active_bundle_copy": "issues/mantis-29972/1/official_upstream.tcl"
+  },
+  "source_stage_annotation": "GeomInt / BOP face-face intersection curve sampling and section-edge construction",
+  "baseline_binary": {
+    "sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+    "profile": "GCC 9.4 O0; OCCT 7.1.1"
+  },
+  "fix_binary": {
+    "commit": "41ccce129d0f39b7a8a5edaaaeb2cf782e3bce2d",
+    "git_tree": "43d587f9192b1c9ad0f2ce86b72720dbd5955b73",
+    "sha256": "520c0584fbecb9246f49cded32f764e0282a850993045b5bd0f9d833a46a120c",
+    "profile": "Clang 10 O3; OCCT 7.4.1"
+  },
+  "input_assets": [],
+  "no_source_or_build_binary_copied": true,
+  "note": "Logical provenance only; no runtime execution depends on original machine paths."
+}

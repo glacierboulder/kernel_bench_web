@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "protocol": "v4_portable_calibration_record_v1",
+  "canonical_issue": "M29972",
+  "role": "regression_B",
+  "case_kind": "regression",
+  "geometry_verdict": "geometry_pass",
+  "return_code": 0,
+  "timed_out": false,
+  "wall_seconds": 0.065,
+  "assertion_evidence": {
+    "expected_pass_marker_ids": [
+      "solution_count",
+      "curve_length"
+    ],
+    "pass_marker_counts": {
+      "solution_count": 1,
+      "curve_length": 1
+    },
+    "required_output_counts": {},
+    "observed_output_counts": {},
+    "completion_sentinel_count": 1,
+    "missing_or_duplicate_markers": [],
+    "unmet_output_counts": {},
+    "failure_lines": [],
+    "exception_lines": []
+  },
+  "source": {
+    "commit": "e6afb53983172155891ef175943534e0e1a24f75",
+    "git_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+    "archive_sha256": "1f552f13369eb9ff070a676d8d2b485e324b064bf41b4db75b7a49aa2ed681c8",
+    "materialized_manifest_sha256": null
+  },
+  "build": {
+    "binary_sha256": "270c5502efc151acf835e680165dbde6f31fcbfe55c41b53cdaf586701586d2f",
+    "binary_bytes": 14472,
+    "plugin_sha256": "afb4b016fb1c1f92d8f47cf57d8e1f56cb138f0165e7791018b2e91d017a9b83",
+    "plugin_bytes": 3016608
+  },
+  "candidate_case_sha256": "3068d510789ed9a2a3aaf814eeab0004d46282a8a20ab4166fc5852182faa602",
+  "raw_candidate_record": "provenance/calibration/M29972/raw/regression_b.candidate_record.json",
+  "stdout": {
+    "path": "provenance/calibration/M29972/raw/regression_b.stdout.log",
+    "sha256": "57c001690aa2307f8d9906644f33e90c38a253e43ea7aad691c09905dfa33e25"
+  },
+  "stderr": {
+    "path": "provenance/calibration/M29972/raw/regression_b.stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "active_bundle_case": null,
+  "source_evidence": "../source-and-build-map.json"
+}

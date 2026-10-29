@@ -1,6 +1,10 @@
 # OCCT shared benchmark bundle
 
-This is the framework default OCCT catalog. It combines 5 new three-issue groups and 7 legacy tasks, for 12 independently runnable registered groups. New group directories use groups/new/occt-N-N-N/1.json; legacy task directories use groups/legacy/occt-{single|group|active}-N.../1.json. Issue directories use issues/occt-N/<version>/, while issue identity IDs remain stable for existing evaluator and result compatibility. Evaluation suites use matching evaluation/suites/{new,legacy}/... paths.
+This is the default OCCT catalog. It contains 5 multi-issue tasks, 10 single-issue tasks, and 7 legacy tasks: 22 registered tasks in total. The current 15 research tasks share the same framework runtime.
+
+Current task directories use `groups/new/occt-N[-N...]/1.json`; matching suites use `evaluation/suites/new/occt-N[-N...]/1.json`. Issue directories use `issues/occt-N/<version>/`. Display names use `OCCT · N / N...`. Historical identity IDs remain stable so saved runs and frozen evidence retain their original identity.
+
+`benchmarks/occt` is the only active benchmark directory. Import copies belong under ignored `data/imports/`; execution evidence belongs under `data/`. Reports are collected under `CADAI/tmp/kernel_bench_web_report/` and named `<object>_<content>_<YYYYMMDD>.md`.
 
 The five new task IDs (also their catalog group IDs) are:
 

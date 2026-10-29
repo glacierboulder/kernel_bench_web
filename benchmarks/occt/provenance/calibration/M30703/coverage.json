@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "canonical_issue": "M30703",
+  "status": "calibrated_candidate_pending_frozen_replay",
+  "scope_stage": "IntPatch_ImpPrmIntersection / IntWalk_IWalking surface-surface curve intersection",
+  "original_case_hash": "66ad674fec211981fbdeb69d2881f7d84e33d31833461a228fe1c692b0d27fef",
+  "active_checkpoint_count": 4,
+  "scenario_count": 4,
+  "active_roles": [
+    {
+      "role": "original_B",
+      "geometry_verdict": "geometry_fail",
+      "record": "provenance/calibration/M30703/records/original_b.json",
+      "raw_candidate_record_sha256": "9841c06fa9df0dcf2680597f4d50df532f8f09dad48cd0acf4030a4032a193ff",
+      "stdout_sha256": "6f06a4af3fe0fce7c0921d4f0652309c981cc71178c1831b5b77fc8861e85b33",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "original_F",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M30703/records/original_f.json",
+      "raw_candidate_record_sha256": "8ac532c94cb39201d92d24457bdf971a882d8bc1e83c842bf600526642b28f3d",
+      "stdout_sha256": "15847a158ef4a9cf3516ebe078e77faa3f56fa2028d8fd329b6c1c3730d7477a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "N1_F",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M30703/records/n1_f.json",
+      "raw_candidate_record_sha256": "2420b62a46693a0ef7e738f3588c2f6fb1bfebdfefbf5e5d6eea62a6d8e1e662",
+      "stdout_sha256": "c61ed960868c217020547b2a84d279b26b863e349a1f2410ede8fe5735d42587",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "N2_F",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M30703/records/n2_f.json",
+      "raw_candidate_record_sha256": "e673e9ee4cbb563b7ea964a678acdf6e08a55fa4e2a0083719ac145848455062",
+      "stdout_sha256": "1a258c63ae2a3bf2fab2723c47bd38c1402b6e9bdea203c69977e5f0b20c7d60",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "regression_B",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M30703/records/regression_b.json",
+      "raw_candidate_record_sha256": "2f7aae03bb3bbfea8cc05c228f51a457724314f2bbc729e3fa516f3ba771676d",
+      "stdout_sha256": "db24fe5971dbe7cb42cd739657cc40eeef444e8eaabdd396b82f91c21f250454",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "regression_F",
+      "geometry_verdict": "geometry_pass",
+      "record": "provenance/calibration/M30703/records/regression_f.json",
+      "raw_candidate_record_sha256": "88592bdeebb1c2d9d5fe7155d288cf5892a2642f0ef04fbcfa02e8770314cb88",
+      "stdout_sha256": "db24fe5971dbe7cb42cd739657cc40eeef444e8eaabdd396b82f91c21f250454",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "known_limitations": [
+    "90-degree and 10-degree common rotations and 2x scale did not preserve the one-curve reference; these are retained as unsupported exploratory cases and are not required checkpoints."
+  ],
+  "checkpoint_ids": [
+    "original-30703-upstream",
+    "neighborhood-30703-1-common-translation",
+    "neighborhood-30703-2-operand-order",
+    "regression-30703-plane-cylinder"
+  ],
+  "note": "Historical calibration is preserved; final frozen-runner replay is required before v4 formal acceptance."
+}

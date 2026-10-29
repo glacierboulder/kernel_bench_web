@@ -1,0 +1,288 @@
+{
+  "protocol": "v4_v3_gi_scope_migration_v1",
+  "recorded_utc": "2026-10-27T02:26:53Z",
+  "review_decision": "Sol approved M32470, M32502, M33244 for individual migration on 2026-10-27 UTC.",
+  "read_only_source": "/home/wz/CADAI/OCCT_bench_proto_v3",
+  "source_commit": "41ccce129d0f39b7a8a5edaaaeb2cf782e3bce2d",
+  "shared_F_commit": "961a306dc4468a3ce5ef1114cfa7389d126b3ca1",
+  "old_v3_catalog_path": "benchmark/occt-single-v3/catalog.json",
+  "old_v3_catalog_sha256": "5cd1d89e9be598c1bbcf4b3e45129bd05f2a280a1c14f400507103c4bed9092b",
+  "old_v3_source_evidence_path": "benchmark/occt-single-v3/provenance/source_evidence.json",
+  "old_v3_source_evidence_sha256": "54da92d26a3cd2c66e23e21efb9fa89271cd8beff0564bb31e924c20dcc1fae8",
+  "stage3_matrix_path": "stage3/coverage_matrix.json",
+  "stage3_matrix_sha256": "b93255b3d6fda623a78c9a5ef3a61ac405cc6e67c28f1780ac37703df31244d6",
+  "decision_boundary": "The three identities are scope-approved and use existing accepted v3 original B/F plus 2N+1reg evidence. No v3 source/test/run record was modified; no v4 geometry replay was performed by this migration script.",
+  "migrations": [
+    {
+      "canonical_issue": "mantis:32470",
+      "decision": "approved_for_v4_migration_by_Sol",
+      "scope_basis": "approved: specifically the pcurve construction/approximation of BOP face-face intersection output; not generic projection.",
+      "fix": {
+        "commit": "1a75fcddae35ccebd7ccac797dc9dfeb68935fe8",
+        "parent_receipt": {
+          "argv": [
+            "git",
+            "-C",
+            "/home/wz/CADAI/OCCT",
+            "rev-parse",
+            "1a75fcddae35ccebd7ccac797dc9dfeb68935fe8^"
+          ],
+          "return_code": 0,
+          "stdout": "286e9f13f3eb3d21e12cc352ff74aafb2e6a3c22",
+          "stderr": ""
+        },
+        "in_shared_F_receipt": {
+          "argv": [
+            "git",
+            "-C",
+            "/home/wz/CADAI/OCCT",
+            "merge-base",
+            "--is-ancestor",
+            "1a75fcddae35ccebd7ccac797dc9dfeb68935fe8",
+            "961a306dc4468a3ce5ef1114cfa7389d126b3ca1"
+          ],
+          "return_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        "source_file": "src/ProjLib/ProjLib_ComputeApprox.cxx",
+        "function": "ProjLib_ComputeApprox::Perform",
+        "supported_stage": "BOP GI intersection-output pcurve construction/approximation after 3D curve search and before pave/topology assembly"
+      },
+      "BOP_GI_call_chain": [
+        "BOPAlgo_PaveFiller_6::PerformFaces -> IntTools_FaceFace::Perform -> GeomInt_IntSS::BuildPCurves -> GeomProjLib::Curve2d -> ProjLib_ProjectedCurve -> ProjLib_ComputeApprox::Perform"
+      ],
+      "original_case": {
+        "official_source_test": "tests/bugs/modalg_7/bug32470",
+        "upstream_tcl_path": "benchmark/occt-single-v3/evaluation/cases/occt-single-v3/hidden/mantis-32470/official_bug32470.tcl",
+        "upstream_tcl_sha256": "3022cd19fa12890b70c8ade9609666bace279c4ea980c920564e14e83cd0ed32",
+        "input": "Inline DRAW geometry; no external BREP",
+        "B": {
+          "status": "geometry_fail",
+          "accepted": true,
+          "run_record": "validation/stage4/evidence_pack/run_records_portability_replay/mantis-32470/original-32470-bug32470__B.json",
+          "observed_geometry_lines": [
+            "Error :  is WRONG because number of EDGE entities in shape \"result\" is 6",
+            "Error : The area of result shape is 1256.64, expected 1229.69",
+            "Error : The volume of result shape is 4188.79, expected 3945.6"
+          ]
+        },
+        "F": {
+          "status": "geometry_pass",
+          "accepted": true,
+          "run_record": "validation/stage4/evidence_pack/run_records_portability_replay/mantis-32470/original-32470-bug32470__F.json"
+        }
+      },
+      "stage3_coverage": {
+        "required_coverage_pass": true,
+        "neighborhoods": 2,
+        "regressions": 1,
+        "case_source_paths": [
+          "stage3/cases/mantis-32470/neighborhood_1_v2_v3.tcl",
+          "stage3/cases/mantis-32470/neighborhood_2.tcl",
+          "stage3/cases/mantis-32470/regression_health.tcl"
+        ]
+      },
+      "v4_copied_cases": [
+        {
+          "path": "issues/mantis-32470/1/original_bug32470.tcl",
+          "sha256": "fc3b3718ff3c66bcac599cafc80b45ce75e5d0d736b7b4ba03f923e5b4226400"
+        },
+        {
+          "path": "issues/mantis-32470/1/neighborhood_1_migrated.tcl",
+          "sha256": "4450a526e959b29c2c717925e80bc06236c031041b2ef556d47a4e69d2988bb0"
+        },
+        {
+          "path": "issues/mantis-32470/1/neighborhood_2_migrated.tcl",
+          "sha256": "523bb9a10b4650f4e26e1b193b2084b910e5f32bc41388573ca64e7997eec718"
+        },
+        {
+          "path": "issues/mantis-32470/1/regression_health_migrated.tcl",
+          "sha256": "9ad84c42ce9b14ef86ace148ff1938c244a72c32c030064c856a1d5d6df01255"
+        }
+      ],
+      "scope_warning": "No runtime experiment was repeated during migration; copied testcase wrappers/predicates retain v3 evidence and source run records."
+    },
+    {
+      "canonical_issue": "mantis:32502",
+      "decision": "approved_for_v4_migration_by_Sol",
+      "scope_basis": "approved: direct BOP GI intersection-line conversion defect.",
+      "fix": {
+        "commit": "13584d1468739555db4ae23bf203c76625ec2ad5",
+        "parent_receipt": {
+          "argv": [
+            "git",
+            "-C",
+            "/home/wz/CADAI/OCCT",
+            "rev-parse",
+            "13584d1468739555db4ae23bf203c76625ec2ad5^"
+          ],
+          "return_code": 0,
+          "stdout": "c1b3ce202ab35c1e28902d4df6c5b617fba819f7",
+          "stderr": ""
+        },
+        "in_shared_F_receipt": {
+          "argv": [
+            "git",
+            "-C",
+            "/home/wz/CADAI/OCCT",
+            "merge-base",
+            "--is-ancestor",
+            "13584d1468739555db4ae23bf203c76625ec2ad5",
+            "961a306dc4468a3ce5ef1114cfa7389d126b3ca1"
+          ],
+          "return_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        "source_file": "src/IntPatch/IntPatch_ALineToWLine.cxx",
+        "function": "IntPatch_ALineToWLine::MakeWLine",
+        "supported_stage": "analytic surface-intersection line to walking/discrete intersection-line representation, before BOP pave/topology assembly"
+      },
+      "BOP_GI_call_chain": [
+        "BOPAlgo_PaveFiller_6::PerformFaces -> IntTools_FaceFace::Perform -> IntPatch_Intersection::GeomGeomPerfom -> IntPatch_ImpImpIntersection::IntCoCo -> IntPatch_ALineToWLine::MakeWLine"
+      ],
+      "original_case": {
+        "official_source_test": "tests/bugs/modalg_7/bug32502",
+        "upstream_tcl_path": "benchmark/occt-single-v3/evaluation/cases/occt-single-v3/hidden/mantis-32502/official_bug32502.tcl",
+        "upstream_tcl_sha256": "c75adbddbe63a4453c5463b14bf9f1c2c03fa1777041975a9f5870dc386b0608",
+        "input": "Inline DRAW geometry; no external BREP",
+        "B": {
+          "status": "geometry_fail",
+          "accepted": true,
+          "run_record": "validation/stage4/evidence_pack/run_records_portability_replay/mantis-32502/original-32502-bug32502__B.json",
+          "observed_geometry_lines": [
+            "Error :  is WRONG because number of EDGE entities in shape \"result\" is 9",
+            "Error :  is WRONG because number of WIRE entities in shape \"result\" is 4",
+            "Error :  is WRONG because number of FACE entities in shape \"result\" is 3",
+            "Error : The area of result shape is 1503.37, expected 1750.1",
+            "Error : The volume of result shape is 4567.99, expected 4947.2"
+          ]
+        },
+        "F": {
+          "status": "geometry_pass",
+          "accepted": true,
+          "run_record": "validation/stage4/evidence_pack/run_records_portability_replay/mantis-32502/original-32502-bug32502__F.json"
+        }
+      },
+      "stage3_coverage": {
+        "required_coverage_pass": true,
+        "neighborhoods": 2,
+        "regressions": 1,
+        "case_source_paths": [
+          "stage3/cases/mantis-32502/neighborhood_1_v2.tcl",
+          "stage3/cases/mantis-32502/neighborhood_2.tcl",
+          "stage3/cases/mantis-32502/regression_health.tcl"
+        ]
+      },
+      "v4_copied_cases": [
+        {
+          "path": "issues/mantis-32502/1/original_bug32502.tcl",
+          "sha256": "bf153beafbce9e788ef0f3715ba0e78a11ee55f084113b4be531911bd145d542"
+        },
+        {
+          "path": "issues/mantis-32502/1/neighborhood_1_migrated.tcl",
+          "sha256": "0f1bbe81bb69dae00636be23ebfc3efac638074ac72e8776923d4e7a7b8ded52"
+        },
+        {
+          "path": "issues/mantis-32502/1/neighborhood_2_migrated.tcl",
+          "sha256": "4c130f94127f573377fdc4c4feaf938added37689e81c461ac42e73a8121ea24"
+        },
+        {
+          "path": "issues/mantis-32502/1/regression_health_migrated.tcl",
+          "sha256": "e74d33f4ace3dcac52d426569f083d3304000ecca4fb840f19875a27fad579bc"
+        }
+      ],
+      "scope_warning": "No runtime experiment was repeated during migration; copied testcase wrappers/predicates retain v3 evidence and source run records."
+    },
+    {
+      "canonical_issue": "mantis:33244",
+      "decision": "approved_for_v4_migration_by_Sol",
+      "scope_basis": "approved for the BOP GI component, with a low-level surface-intersection oracle; do not claim a final solid Boolean failure.",
+      "fix": {
+        "commit": "961a306dc4468a3ce5ef1114cfa7389d126b3ca1",
+        "parent_receipt": {
+          "argv": [
+            "git",
+            "-C",
+            "/home/wz/CADAI/OCCT",
+            "rev-parse",
+            "961a306dc4468a3ce5ef1114cfa7389d126b3ca1^"
+          ],
+          "return_code": 0,
+          "stdout": "195a068c4fbc1a30fde53dabcd99ac38d280acfc",
+          "stderr": ""
+        },
+        "in_shared_F_receipt": {
+          "argv": [
+            "git",
+            "-C",
+            "/home/wz/CADAI/OCCT",
+            "merge-base",
+            "--is-ancestor",
+            "961a306dc4468a3ce5ef1114cfa7389d126b3ca1",
+            "961a306dc4468a3ce5ef1114cfa7389d126b3ca1"
+          ],
+          "return_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        "source_file": "src/IntAna/IntAna_QuadQuadGeo.cxx",
+        "function": "IntAna_QuadQuadGeo::Perform(gp_Cone,gp_Cone)",
+        "supported_stage": "analytic cone-cone surface-intersection calculation used by IntPatch and BOP GI"
+      },
+      "BOP_GI_call_chain": [
+        "BOPAlgo_PaveFiller_6::PerformFaces -> IntTools_FaceFace::Perform -> IntPatch_Intersection::GeomGeomPerfom -> IntPatch_ImpImpIntersection_2.gxx Cone/Cone -> IntCoCo -> IntAna_QuadQuadGeo::Perform(gp_Cone,gp_Cone)"
+      ],
+      "original_case": {
+        "official_source_test": "tests/lowalgos/intss/bug33244",
+        "upstream_tcl_path": "benchmark/occt-single-v3/evaluation/cases/occt-single-v3/hidden/mantis-33244/official_bug33244.tcl",
+        "upstream_tcl_sha256": "2d35669b4056832cfde57ecf8b9b4ba5520c6d88196764eba64c3ef9631a0f03",
+        "input": "Inline DRAW geometry; no external BREP",
+        "B": {
+          "status": "geometry_fail",
+          "accepted": true,
+          "run_record": "validation/stage4/evidence_pack/run_records_portability_replay/mantis-33244/original-33244-bug33244__B.json",
+          "observed_geometry_lines": [
+            "ERROR. Intersection is wrong",
+            "ERROR. Intersection is wrong"
+          ]
+        },
+        "F": {
+          "status": "geometry_pass",
+          "accepted": true,
+          "run_record": "validation/stage4/evidence_pack/run_records_portability_replay/mantis-33244/original-33244-bug33244__F.json"
+        }
+      },
+      "stage3_coverage": {
+        "required_coverage_pass": true,
+        "neighborhoods": 2,
+        "regressions": 1,
+        "case_source_paths": [
+          "stage3/cases/mantis-33244/neighborhood_1_v2.tcl",
+          "stage3/cases/mantis-33244/neighborhood_2_v2.tcl",
+          "stage3/cases/mantis-33244/regression_health_v2_v3.tcl"
+        ]
+      },
+      "v4_copied_cases": [
+        {
+          "path": "issues/mantis-33244/1/original_bug33244.tcl",
+          "sha256": "df1dee8f06b377c2d4776a43e56264ee5419bde2ce718455ee7d89c119f533ce"
+        },
+        {
+          "path": "issues/mantis-33244/1/neighborhood_1_migrated.tcl",
+          "sha256": "31acfec6e28979caaf9436e96bdc1c941d2a0a54ccd6a813b8c4eb244bf84a80"
+        },
+        {
+          "path": "issues/mantis-33244/1/neighborhood_2_migrated.tcl",
+          "sha256": "e5d82cc4bc98a5bd7147749e0d846ea14c3370dea44e39622bb4cc4f0efa5cfd"
+        },
+        {
+          "path": "issues/mantis-33244/1/regression_health_migrated.tcl",
+          "sha256": "a845114191b4b35b9ddb99e10e3de15281b8771f7b427ad12b6ed4bbf4b87c3e"
+        }
+      ],
+      "scope_warning": "No runtime experiment was repeated during migration; copied testcase wrappers/predicates retain v3 evidence and source run records."
+    }
+  ]
+}

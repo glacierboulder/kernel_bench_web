@@ -1,0 +1,1054 @@
+{
+  "schema_version": 1,
+  "protocol": "v4_new3_final_frozen_replay_v1",
+  "recorded_utc": "2026-10-27T16:33:51Z",
+  "bundle_catalog_counts": {
+    "issues": 10,
+    "groups": 10,
+    "evaluation_suites": 10
+  },
+  "dispatch_lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+  "actual_adapter_load_lock_route_count": 12,
+  "routes": [
+    {
+      "issue": "M30703",
+      "case": "issues/mantis-30703/1/original_official.tcl",
+      "checkpoint_id": "original-30703-upstream",
+      "category": "original",
+      "case_sha256": "89eeb320d215b9f77aa4c43723141038c03b457abaac2e6cf1f686fd516993b2",
+      "expected_assertion_ids": [
+        "solution_count",
+        "curve_length",
+        "official_oracle_completed"
+      ],
+      "expected_failure_lines": [
+        "Error: Incorrect number of solutions."
+      ],
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+    },
+    {
+      "issue": "M30703",
+      "case": "issues/mantis-30703/1/neighborhood_1_common_translation.tcl",
+      "checkpoint_id": "neighborhood-30703-1-common-translation",
+      "category": "neighborhood",
+      "case_sha256": "56e11a0afb4fea50fa016635ef1556576b9346fb246888c1447116d60cbcc860",
+      "expected_assertion_ids": [
+        "curve_length",
+        "solution_count",
+        "transform_witness"
+      ],
+      "expected_failure_lines": [],
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+    },
+    {
+      "issue": "M30703",
+      "case": "issues/mantis-30703/1/neighborhood_2_operand_order.tcl",
+      "checkpoint_id": "neighborhood-30703-2-operand-order",
+      "category": "neighborhood",
+      "case_sha256": "14120b3486adfe0c8f196b69ce3892a57710d2e0dec41eccb1495eceda2fc5bd",
+      "expected_assertion_ids": [
+        "curve_length",
+        "operand_order",
+        "solution_count"
+      ],
+      "expected_failure_lines": [],
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+    },
+    {
+      "issue": "M30703",
+      "case": "issues/mantis-30703/1/regression_plane_cylinder.tcl",
+      "checkpoint_id": "regression-30703-plane-cylinder",
+      "category": "regression",
+      "case_sha256": "eeb6215c1520cc752ffb284313541ee983f86be47a9d26446e0def6f65d33716",
+      "expected_assertion_ids": [
+        "curve_length",
+        "solution_count"
+      ],
+      "expected_failure_lines": [],
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+    },
+    {
+      "issue": "M29972",
+      "case": "issues/mantis-29972/1/original_official.tcl",
+      "checkpoint_id": "original-29972-upstream",
+      "category": "original",
+      "case_sha256": "c220065d929ab46bcdfff10641bec2fc5133a9ba1e6d68caaa4f66bf4a23e603",
+      "expected_assertion_ids": [
+        "curve_count",
+        "edge_count",
+        "section_endpoint_count",
+        "section_distance"
+      ],
+      "expected_failure_lines": [
+        "Error: The distance between alone_",
+        "is WRONG because number of EDGE entities",
+        "The section is closed."
+      ],
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+    },
+    {
+      "issue": "M29972",
+      "case": "issues/mantis-29972/1/neighborhood_1_common_translation.tcl",
+      "checkpoint_id": "neighborhood-29972-1-common-translation",
+      "category": "neighborhood",
+      "case_sha256": "56e11a0afb4fea50fa016635ef1556576b9346fb246888c1447116d60cbcc860",
+      "expected_assertion_ids": [
+        "curve_count",
+        "transform_witness",
+        "edge_count",
+        "section_endpoint_count",
+        "section_distance"
+      ],
+      "expected_failure_lines": [
+        "Error: The distance between alone_",
+        "is WRONG because number of EDGE entities",
+        "The section is closed."
+      ],
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+    },
+    {
+      "issue": "M29972",
+      "case": "issues/mantis-29972/1/neighborhood_2_operand_order.tcl",
+      "checkpoint_id": "neighborhood-29972-2-operand-order",
+      "category": "neighborhood",
+      "case_sha256": "14120b3486adfe0c8f196b69ce3892a57710d2e0dec41eccb1495eceda2fc5bd",
+      "expected_assertion_ids": [
+        "curve_count",
+        "operand_order",
+        "edge_count",
+        "section_endpoint_count",
+        "section_distance"
+      ],
+      "expected_failure_lines": [
+        "Error: The distance between alone_",
+        "is WRONG because number of EDGE entities",
+        "The section is closed."
+      ],
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+    },
+    {
+      "issue": "M29972",
+      "case": "issues/mantis-29972/1/regression_plane_cylinder.tcl",
+      "checkpoint_id": "regression-29972-plane-cylinder",
+      "category": "regression",
+      "case_sha256": "eeb6215c1520cc752ffb284313541ee983f86be47a9d26446e0def6f65d33716",
+      "expected_assertion_ids": [
+        "curve_length",
+        "solution_count"
+      ],
+      "expected_failure_lines": [
+        "Error: The distance between alone_",
+        "is WRONG because number of EDGE entities",
+        "The section is closed."
+      ],
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+    },
+    {
+      "issue": "M33615",
+      "case": "issues/mantis-33615/1/original_official.tcl",
+      "checkpoint_id": "original-33615-upstream",
+      "category": "original",
+      "case_sha256": "fb9d652c0416c28eb47a8dd7ca54c286c0bb82e0b51b7a185ce1907a81ba6691",
+      "expected_assertion_ids": [
+        "vertex_count",
+        "edge_count",
+        "wire_count",
+        "face_count",
+        "official_oracle_completed"
+      ],
+      "expected_failure_lines": [
+        "is WRONG because number of VERTEX entities"
+      ],
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+    },
+    {
+      "issue": "M33615",
+      "case": "issues/mantis-33615/1/neighborhood_1_common_translation.tcl",
+      "checkpoint_id": "neighborhood-33615-1-common-translation",
+      "category": "neighborhood",
+      "case_sha256": "56e11a0afb4fea50fa016635ef1556576b9346fb246888c1447116d60cbcc860",
+      "expected_assertion_ids": [
+        "official_topology",
+        "transform_witness"
+      ],
+      "expected_failure_lines": [],
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+    },
+    {
+      "issue": "M33615",
+      "case": "issues/mantis-33615/1/neighborhood_2_common_rotation.tcl",
+      "checkpoint_id": "neighborhood-33615-2-common-rotation-z90",
+      "category": "neighborhood",
+      "case_sha256": "bb49bdb388ac0f6a54dec2acff81b574aba3a9ec00cf5313d51ab09c490022bf",
+      "expected_assertion_ids": [
+        "official_topology",
+        "transform_witness"
+      ],
+      "expected_failure_lines": [],
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+    },
+    {
+      "issue": "M33615",
+      "case": "issues/mantis-33615/1/regression_overlap_boxes.tcl",
+      "checkpoint_id": "regression-33615-overlap-boxes",
+      "category": "regression",
+      "case_sha256": "445a468fe1d8a37fb18c2cf4b1d3275eea6855d5c89be1d4874257027f7d4ccc",
+      "expected_assertion_ids": [
+        "reg_area_volume",
+        "reg_shape_check",
+        "reg_topology",
+        "reg_valid"
+      ],
+      "expected_failure_lines": [],
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+    }
+  ],
+  "role_count": 18,
+  "expected_role_count": 18,
+  "counts": {
+    "geometry_fail": 2,
+    "geometry_pass": 12,
+    "runner_error": 4,
+    "timeout_unmeasured": 0
+  },
+  "rows": [
+    {
+      "issue": "M30703",
+      "role": "original_B",
+      "binary_role": "B",
+      "checkpoint_id": "original-30703-upstream",
+      "case_relative_path": "issues/mantis-30703/1/original_official.tcl",
+      "case_sha256": "89eeb320d215b9f77aa4c43723141038c03b457abaac2e6cf1f686fd516993b2",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_fail",
+      "observed_status": "geometry_fail",
+      "passed": false,
+      "adapter_process_return_code": 1,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "solution_count",
+        "curve_length",
+        "official_oracle_completed"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "FAIL",
+          "id": "solution_count",
+          "kind": "expression"
+        },
+        {
+          "status": "FAIL",
+          "id": "curve_length",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "official_oracle_completed",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": true,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M30703/original_B/adapter.stdout.json",
+      "stdout_sha256": "94f8b97b4d2df79fd91393938a689c96caab6a63c2141565f8f0eba0e36d8827",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M30703/original_B/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/occt-single-31016/build_B",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v4/staging/runtime/stage4-20261027T163307Z/cache/sources/occt-v4-b41ccce129d0/source/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M30703",
+      "role": "original_F",
+      "binary_role": "F",
+      "checkpoint_id": "original-30703-upstream",
+      "case_relative_path": "issues/mantis-30703/1/original_official.tcl",
+      "case_sha256": "89eeb320d215b9f77aa4c43723141038c03b457abaac2e6cf1f686fd516993b2",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "geometry_pass",
+      "passed": true,
+      "adapter_process_return_code": 0,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "solution_count",
+        "curve_length",
+        "official_oracle_completed"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "solution_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "curve_length",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "official_oracle_completed",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M30703/original_F/adapter.stdout.json",
+      "stdout_sha256": "3c768ccebbaa8e0457e165d044a3de5f05a02be1d512db0c433cff227080c8bd",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M30703/original_F/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/build_F",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/source_F/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M30703",
+      "role": "N1_F",
+      "binary_role": "F",
+      "checkpoint_id": "neighborhood-30703-1-common-translation",
+      "case_relative_path": "issues/mantis-30703/1/neighborhood_1_common_translation.tcl",
+      "case_sha256": "56e11a0afb4fea50fa016635ef1556576b9346fb246888c1447116d60cbcc860",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "geometry_pass",
+      "passed": true,
+      "adapter_process_return_code": 0,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "transform_witness",
+        "solution_count",
+        "curve_length"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "transform_witness",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "solution_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "curve_length",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M30703/N1_F/adapter.stdout.json",
+      "stdout_sha256": "67ead161c98a93315b5a572079463223d67977de3c796d5122c33905afd50db5",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M30703/N1_F/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/build_F",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/source_F/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M30703",
+      "role": "N2_F",
+      "binary_role": "F",
+      "checkpoint_id": "neighborhood-30703-2-operand-order",
+      "case_relative_path": "issues/mantis-30703/1/neighborhood_2_operand_order.tcl",
+      "case_sha256": "14120b3486adfe0c8f196b69ce3892a57710d2e0dec41eccb1495eceda2fc5bd",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "geometry_pass",
+      "passed": true,
+      "adapter_process_return_code": 0,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "operand_order",
+        "solution_count",
+        "curve_length"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "operand_order",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "solution_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "curve_length",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M30703/N2_F/adapter.stdout.json",
+      "stdout_sha256": "2fd337fc79c0a3ec718fb5eb40adc63d686b0d0a685a619d66e1bf3d3293b501",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M30703/N2_F/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/build_F",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/source_F/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M30703",
+      "role": "regression_B",
+      "binary_role": "B",
+      "checkpoint_id": "regression-30703-plane-cylinder",
+      "case_relative_path": "issues/mantis-30703/1/regression_plane_cylinder.tcl",
+      "case_sha256": "eeb6215c1520cc752ffb284313541ee983f86be47a9d26446e0def6f65d33716",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "geometry_pass",
+      "passed": true,
+      "adapter_process_return_code": 0,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "solution_count",
+        "curve_length"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "solution_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "curve_length",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M30703/regression_B/adapter.stdout.json",
+      "stdout_sha256": "110bee60b3cd6c00dac341738868937cbe18763492ce89ea9e0117d0456ef30d",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M30703/regression_B/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/occt-single-31016/build_B",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v4/staging/runtime/stage4-20261027T163307Z/cache/sources/occt-v4-b41ccce129d0/source/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M30703",
+      "role": "regression_F",
+      "binary_role": "F",
+      "checkpoint_id": "regression-30703-plane-cylinder",
+      "case_relative_path": "issues/mantis-30703/1/regression_plane_cylinder.tcl",
+      "case_sha256": "eeb6215c1520cc752ffb284313541ee983f86be47a9d26446e0def6f65d33716",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "geometry_pass",
+      "passed": true,
+      "adapter_process_return_code": 0,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "solution_count",
+        "curve_length"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "solution_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "curve_length",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M30703/regression_F/adapter.stdout.json",
+      "stdout_sha256": "c0bc23c9169a36362db6f4172e295016fadceb1c7e9a69043d64ea741786cf44",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M30703/regression_F/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/build_F",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/source_F/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M29972",
+      "role": "original_B",
+      "binary_role": "B",
+      "checkpoint_id": "original-29972-upstream",
+      "case_relative_path": "issues/mantis-29972/1/original_official.tcl",
+      "case_sha256": "c220065d929ab46bcdfff10641bec2fc5133a9ba1e6d68caaa4f66bf4a23e603",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_fail",
+      "observed_status": "runner_error",
+      "passed": false,
+      "adapter_process_return_code": 1,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "curve_count",
+        "edge_count"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "curve_count",
+          "kind": "expression"
+        },
+        {
+          "status": "FAIL",
+          "id": "edge_count",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 0,
+      "summary_pair_valid": false,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M29972/original_B/adapter.stdout.json",
+      "stdout_sha256": "895b6c1701494fb38d54055681448ace62e43636ff97da8cbb47e683add86b66",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M29972/original_B/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v2/validation/bf_batch_2016_2017/build/e6afb_gcc_o0",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v4/staging/runtime/stage4-20261027T163307Z/cache/sources/occt-v4-e6afb5398317/source/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M29972",
+      "role": "original_F",
+      "binary_role": "F",
+      "checkpoint_id": "original-29972-upstream",
+      "case_relative_path": "issues/mantis-29972/1/original_official.tcl",
+      "case_sha256": "c220065d929ab46bcdfff10641bec2fc5133a9ba1e6d68caaa4f66bf4a23e603",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "runner_error",
+      "passed": false,
+      "adapter_process_return_code": 1,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "curve_count",
+        "edge_count"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "curve_count",
+          "kind": "expression"
+        },
+        {
+          "status": "FAIL",
+          "id": "edge_count",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 0,
+      "summary_pair_valid": false,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M29972/original_F/adapter.stdout.json",
+      "stdout_sha256": "2fad295cb8a56d748e030b852aeff0eb5b7e4cd9af21a766e7e91637e26547b8",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M29972/original_F/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/build_F",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/source_F/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M29972",
+      "role": "N1_F",
+      "binary_role": "F",
+      "checkpoint_id": "neighborhood-29972-1-common-translation",
+      "case_relative_path": "issues/mantis-29972/1/neighborhood_1_common_translation.tcl",
+      "case_sha256": "56e11a0afb4fea50fa016635ef1556576b9346fb246888c1447116d60cbcc860",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "runner_error",
+      "passed": false,
+      "adapter_process_return_code": 1,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "transform_witness",
+        "curve_count",
+        "edge_count"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "transform_witness",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "curve_count",
+          "kind": "expression"
+        },
+        {
+          "status": "FAIL",
+          "id": "edge_count",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 0,
+      "summary_pair_valid": false,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M29972/N1_F/adapter.stdout.json",
+      "stdout_sha256": "e3c29dbdf30e6aa55727d9e04fd02d2c3c9c346795323bd585010053d70610ca",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M29972/N1_F/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/build_F",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/source_F/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M29972",
+      "role": "N2_F",
+      "binary_role": "F",
+      "checkpoint_id": "neighborhood-29972-2-operand-order",
+      "case_relative_path": "issues/mantis-29972/1/neighborhood_2_operand_order.tcl",
+      "case_sha256": "14120b3486adfe0c8f196b69ce3892a57710d2e0dec41eccb1495eceda2fc5bd",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "runner_error",
+      "passed": false,
+      "adapter_process_return_code": 1,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "operand_order",
+        "curve_count",
+        "edge_count"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "operand_order",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "curve_count",
+          "kind": "expression"
+        },
+        {
+          "status": "FAIL",
+          "id": "edge_count",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 0,
+      "summary_pair_valid": false,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M29972/N2_F/adapter.stdout.json",
+      "stdout_sha256": "dc32d2690e9668fbdeb10c2269c71ed43f7dc505bfdc42247345eba241ff43d7",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M29972/N2_F/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/build_F",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/source_F/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M29972",
+      "role": "regression_B",
+      "binary_role": "B",
+      "checkpoint_id": "regression-29972-plane-cylinder",
+      "case_relative_path": "issues/mantis-29972/1/regression_plane_cylinder.tcl",
+      "case_sha256": "eeb6215c1520cc752ffb284313541ee983f86be47a9d26446e0def6f65d33716",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "geometry_pass",
+      "passed": true,
+      "adapter_process_return_code": 0,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "solution_count",
+        "curve_length"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "solution_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "curve_length",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M29972/regression_B/adapter.stdout.json",
+      "stdout_sha256": "22ed5fb29ffcea46a4c41ce0f5134ec0fe807fb8e95a89fa1510562c6bdf46f0",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M29972/regression_B/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v2/validation/bf_batch_2016_2017/build/e6afb_gcc_o0",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v4/staging/runtime/stage4-20261027T163307Z/cache/sources/occt-v4-e6afb5398317/source/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M29972",
+      "role": "regression_F",
+      "binary_role": "F",
+      "checkpoint_id": "regression-29972-plane-cylinder",
+      "case_relative_path": "issues/mantis-29972/1/regression_plane_cylinder.tcl",
+      "case_sha256": "eeb6215c1520cc752ffb284313541ee983f86be47a9d26446e0def6f65d33716",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "geometry_pass",
+      "passed": true,
+      "adapter_process_return_code": 0,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "solution_count",
+        "curve_length"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "solution_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "curve_length",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M29972/regression_F/adapter.stdout.json",
+      "stdout_sha256": "f4dcc9ef80b40efb70fa343463e9b4200d579e02dd8d5b6f82142ebd1ad47efb",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M29972/regression_F/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/build_F",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v3/stage2/shared-41ccce-961a306/source_F/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M33615",
+      "role": "original_B",
+      "binary_role": "B",
+      "checkpoint_id": "original-33615-upstream",
+      "case_relative_path": "issues/mantis-33615/1/original_official.tcl",
+      "case_sha256": "fb9d652c0416c28eb47a8dd7ca54c286c0bb82e0b51b7a185ce1907a81ba6691",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_fail",
+      "observed_status": "geometry_fail",
+      "passed": false,
+      "adapter_process_return_code": 1,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "vertex_count",
+        "edge_count",
+        "wire_count",
+        "face_count",
+        "official_oracle_completed"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "FAIL",
+          "id": "vertex_count",
+          "kind": "expression"
+        },
+        {
+          "status": "FAIL",
+          "id": "edge_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "wire_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "face_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "official_oracle_completed",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": true,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M33615/original_B/adapter.stdout.json",
+      "stdout_sha256": "ae3c2ee00108caddc4fb830ebb635247b8ed6898ddbefa5e3037a6597bfe8d7f",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M33615/original_B/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-32942-parent-B/build",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v4/staging/runtime/stage4-20261027T163307Z/cache/sources/occt-v4-b84f42008b74/source/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M33615",
+      "role": "original_F",
+      "binary_role": "F",
+      "checkpoint_id": "original-33615-upstream",
+      "case_relative_path": "issues/mantis-33615/1/original_official.tcl",
+      "case_sha256": "fb9d652c0416c28eb47a8dd7ca54c286c0bb82e0b51b7a185ce1907a81ba6691",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "geometry_pass",
+      "passed": true,
+      "adapter_process_return_code": 0,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "vertex_count",
+        "edge_count",
+        "wire_count",
+        "face_count",
+        "official_oracle_completed"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "vertex_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "edge_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "wire_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "face_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "official_oracle_completed",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M33615/original_F/adapter.stdout.json",
+      "stdout_sha256": "9cf32e41bd6d72302e4244e190561ac9ff6ba505e8d4dd2d3a68da330022029c",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M33615/original_F/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-5811a-M33615-F/build",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-5811a-M33615-F/source/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M33615",
+      "role": "N1_F",
+      "binary_role": "F",
+      "checkpoint_id": "neighborhood-33615-1-common-translation",
+      "case_relative_path": "issues/mantis-33615/1/neighborhood_1_common_translation.tcl",
+      "case_sha256": "56e11a0afb4fea50fa016635ef1556576b9346fb246888c1447116d60cbcc860",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "geometry_pass",
+      "passed": true,
+      "adapter_process_return_code": 0,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "transform_witness",
+        "official_topology"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "transform_witness",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "official_topology",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M33615/N1_F/adapter.stdout.json",
+      "stdout_sha256": "ba46b58864cf68dab8125c1ae537bb245d0c5bf1e68e182ae56fa27cd89ee6d1",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M33615/N1_F/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-5811a-M33615-F/build",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-5811a-M33615-F/source/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M33615",
+      "role": "N2_F",
+      "binary_role": "F",
+      "checkpoint_id": "neighborhood-33615-2-common-rotation-z90",
+      "case_relative_path": "issues/mantis-33615/1/neighborhood_2_common_rotation.tcl",
+      "case_sha256": "bb49bdb388ac0f6a54dec2acff81b574aba3a9ec00cf5313d51ab09c490022bf",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "geometry_pass",
+      "passed": true,
+      "adapter_process_return_code": 0,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "transform_witness",
+        "official_topology"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "transform_witness",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "official_topology",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M33615/N2_F/adapter.stdout.json",
+      "stdout_sha256": "9b8ccb95e489678b9d8b878b8f209d43054abb6543a7aaed4766b8bb7d8cf4cd",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M33615/N2_F/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-5811a-M33615-F/build",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-5811a-M33615-F/source/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M33615",
+      "role": "regression_B",
+      "binary_role": "B",
+      "checkpoint_id": "regression-33615-overlap-boxes",
+      "case_relative_path": "issues/mantis-33615/1/regression_overlap_boxes.tcl",
+      "case_sha256": "445a468fe1d8a37fb18c2cf4b1d3275eea6855d5c89be1d4874257027f7d4ccc",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "geometry_pass",
+      "passed": true,
+      "adapter_process_return_code": 0,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "reg_shape_check",
+        "reg_topology",
+        "reg_area_volume",
+        "reg_valid"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "reg_shape_check",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "reg_topology",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "reg_area_volume",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "reg_valid",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M33615/regression_B/adapter.stdout.json",
+      "stdout_sha256": "2842a26d5d272092b61ad33a547716764eaf3b23f7e673cc0ee7ef77dbb91d1a",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M33615/regression_B/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-32942-parent-B/build",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v4/staging/runtime/stage4-20261027T163307Z/cache/sources/occt-v4-b84f42008b74/source/src",
+      "runner_error": null
+    },
+    {
+      "issue": "M33615",
+      "role": "regression_F",
+      "binary_role": "F",
+      "checkpoint_id": "regression-33615-overlap-boxes",
+      "case_relative_path": "issues/mantis-33615/1/regression_overlap_boxes.tcl",
+      "case_sha256": "445a468fe1d8a37fb18c2cf4b1d3275eea6855d5c89be1d4874257027f7d4ccc",
+      "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd",
+      "expected_status": "geometry_pass",
+      "observed_status": "geometry_pass",
+      "passed": true,
+      "adapter_process_return_code": 0,
+      "base_return_code": 0,
+      "timed_out": false,
+      "assertion_ids": [
+        "reg_shape_check",
+        "reg_topology",
+        "reg_area_volume",
+        "reg_valid"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "reg_shape_check",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "reg_topology",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "reg_area_volume",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "reg_valid",
+          "kind": "expression"
+        }
+      ],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_failure_signature_seen": false,
+      "stdout_json": "validation/stage4/final_replay_new3/20261027T163349Z/M33615/regression_F/adapter.stdout.json",
+      "stdout_sha256": "765adda7ed5098db4a7b44eeacf35a4c3503693e1beec5c628980aff0709c3f8",
+      "stderr_log": "validation/stage4/final_replay_new3/20261027T163349Z/M33615/regression_F/adapter.stderr.log",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "build_dir": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-5811a-M33615-F/build",
+      "resource_source": "/home/wz/CADAI/OCCT_bench_proto_v4/stage2/occt-5811a-M33615-F/source/src",
+      "runner_error": null
+    }
+  ],
+  "limitations": [
+    "These are frozen historical B/F replays of calibrated cases, not fresh Agent patch/apply/build runs.",
+    "No second-machine portability validation was performed."
+  ]
+}

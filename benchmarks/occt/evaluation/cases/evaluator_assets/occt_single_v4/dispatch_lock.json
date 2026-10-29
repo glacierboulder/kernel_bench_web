@@ -1,0 +1,549 @@
+{
+  "schema_version": 1,
+  "routing_contract": "occt-single-v4-explicit-checkpoint-v1",
+  "base_runner_sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149",
+  "checkpoint_routes": {
+    "issues/mantis-32721/1/original_official.tcl": {
+      "canonical_issue": "mantis:32721",
+      "checkpoint_id": "original-32721-upstream",
+      "category": "original",
+      "expected_assertion_ids": [
+        "official_oracle_completed"
+      ],
+      "expected_failure_lines": [
+        "Error: bad tolerance of result"
+      ],
+      "case_sha256": "4971299a70fbfdaf5df770610bba99414f5fb34264fc5380330f6380c5c726bb"
+    },
+    "issues/mantis-32721/1/neighborhood_1_rigid90_z.tcl": {
+      "canonical_issue": "mantis:32721",
+      "checkpoint_id": "neighborhood-32721-1-rigid-z",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operands_created",
+        "checkshape_r1",
+        "topology_r1",
+        "checkshape_r2",
+        "topology_r2",
+        "checkshape_r3",
+        "topology_r3",
+        "checkshape_r4",
+        "topology_r4",
+        "max_tolerance_r1",
+        "official_props_r1",
+        "official_props_r2",
+        "official_props_r3",
+        "official_props_r4"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "185fc98105a4ac04d3ae4432b934ed26b7916cfca0fef65d391954d875ae772d"
+    },
+    "issues/mantis-32721/1/neighborhood_2_rigid90_x.tcl": {
+      "canonical_issue": "mantis:32721",
+      "checkpoint_id": "neighborhood-32721-2-rigid-x",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operands_created",
+        "checkshape_r1",
+        "topology_r1",
+        "checkshape_r2",
+        "topology_r2",
+        "checkshape_r3",
+        "topology_r3",
+        "checkshape_r4",
+        "topology_r4",
+        "max_tolerance_r1",
+        "official_props_r1",
+        "official_props_r2",
+        "official_props_r3",
+        "official_props_r4"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "db338deccbaa44909902eda0f21ca02a5d6d60b93ebf550b43ef309eeae64062"
+    },
+    "issues/mantis-32721/1/regression_health.tcl": {
+      "canonical_issue": "mantis:32721",
+      "checkpoint_id": "regression-32721-health",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "bop_valid",
+        "analytic_volume"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "b9a26170cd5cf5d03aeabab563f3448970efdc233f6ebcd774623514194b993f"
+    },
+    "issues/mantis-32942/1/original_official.tcl": {
+      "canonical_issue": "mantis:32942",
+      "checkpoint_id": "original-32942-upstream",
+      "category": "original",
+      "expected_assertion_ids": [
+        "official_oracle_completed"
+      ],
+      "expected_failure_lines": [
+        "Error :  is WRONG because number of VERTEX entities in shape \"result\" is 0"
+      ],
+      "case_sha256": "4971299a70fbfdaf5df770610bba99414f5fb34264fc5380330f6380c5c726bb"
+    },
+    "issues/mantis-32942/1/neighborhood_1_fixture_rigid_z.tcl": {
+      "canonical_issue": "mantis:32942",
+      "checkpoint_id": "neighborhood-32942-1-fixture-rigid-z",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "shape_check",
+        "topology_counts",
+        "min_tolerance_check",
+        "official_area"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "a12a7989dbd0f49e7897e380bf8f53eaf3ba46535fb7bf081d365a38e61a92b0"
+    },
+    "issues/mantis-32942/1/neighborhood_2_fixture_rigid_x.tcl": {
+      "canonical_issue": "mantis:32942",
+      "checkpoint_id": "neighborhood-32942-2-fixture-rigid-x",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "shape_check",
+        "topology_counts",
+        "min_tolerance_check",
+        "official_area"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "af94efdf0213ec22572b41c6ed191768126da63575623601ed831d4b3c10c8a9"
+    },
+    "issues/mantis-32942/1/regression_health_quarter_sphere.tcl": {
+      "canonical_issue": "mantis:32942",
+      "checkpoint_id": "regression-32942-quarter-sphere",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "bop_valid",
+        "analytic_volume"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "33ca4cc9986e9d28ed2dc9107b4483eb538fda87132f29c45903a74523b9c8ab"
+    },
+    "issues/mantis-31404/1/original_official.tcl": {
+      "canonical_issue": "mantis:31404",
+      "checkpoint_id": "original-31404-upstream",
+      "category": "original",
+      "expected_assertion_ids": [
+        "official_oracle_completed"
+      ],
+      "expected_failure_lines": [
+        "Error: the f1 is a self-interfering shape"
+      ],
+      "case_sha256": "4971299a70fbfdaf5df770610bba99414f5fb34264fc5380330f6380c5c726bb"
+    },
+    "issues/mantis-31404/1/neighborhood_1_official_pair_rigid_z_v2.tcl": {
+      "canonical_issue": "mantis:31404",
+      "checkpoint_id": "neighborhood-31404-1-official-pair-rigid-z-v2",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "checkshape_f1",
+        "bopcheck_f1",
+        "max_tolerance_f1",
+        "checkshape_f2",
+        "bopcheck_f2",
+        "max_tolerance_f2",
+        "topology_f1",
+        "topology_f2",
+        "area_f1",
+        "area_f2",
+        "arc_length_f1",
+        "arc_length_f2"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "93a1579c9fc25c61f955071bf0079b26da30029791ec9ae4c083b78f89c7fc4a"
+    },
+    "issues/mantis-31404/1/neighborhood_2_official_pair_rigid_x_v2.tcl": {
+      "canonical_issue": "mantis:31404",
+      "checkpoint_id": "neighborhood-31404-2-official-pair-rigid-x-v2",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "checkshape_f1",
+        "bopcheck_f1",
+        "max_tolerance_f1",
+        "checkshape_f2",
+        "bopcheck_f2",
+        "max_tolerance_f2",
+        "topology_f1",
+        "topology_f2",
+        "area_f1",
+        "area_f2",
+        "arc_length_f1",
+        "arc_length_f2"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "5c751bf6087ca3c637cd271a9495ca5727637ceacb3c70acfd080e68cd1903eb"
+    },
+    "issues/mantis-31404/1/regression_health_contained_spheres.tcl": {
+      "canonical_issue": "mantis:31404",
+      "checkpoint_id": "regression-31404-contained-spheres",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "checkshape_f1",
+        "bopcheck_f1",
+        "max_tolerance_f1",
+        "checkshape_f2",
+        "bopcheck_f2",
+        "max_tolerance_f2",
+        "both_areas"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "1ac167114e802edb3501d4fea4bc55ea8155eef3c102c3f3d3161c966c1d0f25"
+    },
+    "issues/mantis-31470/1/original_official.tcl": {
+      "canonical_issue": "mantis:31470",
+      "checkpoint_id": "original-31470-upstream",
+      "category": "original",
+      "expected_assertion_ids": [
+        "official_oracle_completed"
+      ],
+      "expected_failure_lines": [
+        "Error: bad tolerance of result"
+      ],
+      "case_sha256": "4971299a70fbfdaf5df770610bba99414f5fb34264fc5380330f6380c5c726bb"
+    },
+    "issues/mantis-31470/1/neighborhood_1_official_shell_rigid_z.tcl": {
+      "canonical_issue": "mantis:31470",
+      "checkpoint_id": "neighborhood-31470-1-official-shell-rigid-z",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "shape_check",
+        "topology_counts",
+        "max_tolerance",
+        "official_volume"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "b150705c23dbe9b1782116e6907ffe2486aadd17905c0a8ff7779600368ab0ee"
+    },
+    "issues/mantis-31470/1/neighborhood_2_official_shell_rigid_x.tcl": {
+      "canonical_issue": "mantis:31470",
+      "checkpoint_id": "neighborhood-31470-2-official-shell-rigid-x",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "shape_check",
+        "topology_counts",
+        "max_tolerance",
+        "official_volume"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "3b7a71a491f6250fff9344f1b90715b4f3e908734a91cc32a3f19857b372b989"
+    },
+    "issues/mantis-31470/1/regression_health_contained_shell.tcl": {
+      "canonical_issue": "mantis:31470",
+      "checkpoint_id": "regression-31470-contained-shell",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "shape_check",
+        "bop_valid",
+        "max_tolerance",
+        "shell_volume"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "b7a202a49135cb743664f5c468a8b46724a551c612aa900af89d04d7d3a243d9"
+    },
+    "issues/mantis-32470/1/original_bug32470.tcl": {
+      "canonical_issue": "mantis:32470",
+      "checkpoint_id": "original-32470-upstream",
+      "category": "original",
+      "expected_assertion_ids": [
+        "official_oracle_completed"
+      ],
+      "expected_failure_lines": [
+        "The area of result shape is 1256.64, expected 1229.69"
+      ],
+      "case_sha256": "fc3b3718ff3c66bcac599cafc80b45ce75e5d0d736b7b4ba03f923e5b4226400"
+    },
+    "issues/mantis-32470/1/neighborhood_1_migrated.tcl": {
+      "canonical_issue": "mantis:32470",
+      "checkpoint_id": "neighborhood-32470-1-v3-migrated",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "tolerance",
+        "scaled_area_volume"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "676a4a8cb8815b799ad9d7d68222c48d065728fa482afc62604be8f9182f9378"
+    },
+    "issues/mantis-32470/1/neighborhood_2_migrated.tcl": {
+      "canonical_issue": "mantis:32470",
+      "checkpoint_id": "neighborhood-32470-2-v3-migrated",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "tolerance",
+        "scaled_area_volume"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "9532802067405fe2fdd058327d1be4b15b769a4bc3c78d2f7eb204802776dca8"
+    },
+    "issues/mantis-32470/1/regression_health_migrated.tcl": {
+      "canonical_issue": "mantis:32470",
+      "checkpoint_id": "regression-32470-health-v3-migrated",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "tolerance",
+        "spherical_cap_area_volume"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "564dc952dcecee63da0cb77fabd4ea01671ac83c9a8a6b61ee8d184f8546291c"
+    },
+    "issues/mantis-32502/1/original_bug32502.tcl": {
+      "canonical_issue": "mantis:32502",
+      "checkpoint_id": "original-32502-upstream",
+      "category": "original",
+      "expected_assertion_ids": [
+        "official_oracle_completed"
+      ],
+      "expected_failure_lines": [
+        "The area of result shape is 1503.37, expected 1750.1"
+      ],
+      "case_sha256": "bf153beafbce9e788ef0f3715ba0e78a11ee55f084113b4be531911bd145d542"
+    },
+    "issues/mantis-32502/1/neighborhood_1_migrated.tcl": {
+      "canonical_issue": "mantis:32502",
+      "checkpoint_id": "neighborhood-32502-1-v3-migrated",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "tolerance",
+        "scaled_area_volume"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "24e7651d3455e804352076cd88316125be9933b143e16a92fb2ddca7985beabc"
+    },
+    "issues/mantis-32502/1/neighborhood_2_migrated.tcl": {
+      "canonical_issue": "mantis:32502",
+      "checkpoint_id": "neighborhood-32502-2-v3-migrated",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "tolerance",
+        "scaled_area_volume"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "78c2617ab8d5cd57e6b3c227b0ea00b79e97859ec7001e73b3b39e2bf65d3768"
+    },
+    "issues/mantis-32502/1/regression_health_migrated.tcl": {
+      "canonical_issue": "mantis:32502",
+      "checkpoint_id": "regression-32502-health-v3-migrated",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "disjoint_solid_union"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "8dd857fc7caabde7008e90e5529e1750a74ab956efc807384f473bf4571f4470"
+    },
+    "issues/mantis-33244/1/original_bug33244.tcl": {
+      "canonical_issue": "mantis:33244",
+      "checkpoint_id": "original-33244-upstream",
+      "category": "original",
+      "expected_assertion_ids": [
+        "official_oracle_completed"
+      ],
+      "expected_failure_lines": [
+        "ERROR. Intersection is wrong"
+      ],
+      "case_sha256": "df1dee8f06b377c2d4776a43e56264ee5419bde2ce718455ee7d89c119f533ce"
+    },
+    "issues/mantis-33244/1/neighborhood_1_migrated.tcl": {
+      "canonical_issue": "mantis:33244",
+      "checkpoint_id": "neighborhood-33244-1-v3-migrated",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "order_s1_s2",
+        "order_s2_s1"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "48f6d59675d7cebbd0277ded1654dad3c3d9b29103aab1c69263ce72dd8e0f47"
+    },
+    "issues/mantis-33244/1/neighborhood_2_migrated.tcl": {
+      "canonical_issue": "mantis:33244",
+      "checkpoint_id": "neighborhood-33244-2-v3-migrated",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "order_s1_s2",
+        "order_s2_s1"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "05bdd6f9cc97dafb8c8be1f5b7762f214f25425d65073290b110fde40dee7b25"
+    },
+    "issues/mantis-33244/1/regression_health_migrated.tcl": {
+      "canonical_issue": "mantis:33244",
+      "checkpoint_id": "regression-33244-health-v3-migrated",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "single_curve_count",
+        "line_type"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "37fd21a6ebf14b938610757d8d071f561edf0d9668caf5c834482fb75ec549cc"
+    },
+    "issues/mantis-30703/1/original_official.tcl": {
+      "canonical_issue": "mantis:30703",
+      "checkpoint_id": "original-30703-upstream",
+      "category": "original",
+      "expected_assertion_ids": [
+        "solution_count",
+        "curve_length",
+        "official_oracle_completed"
+      ],
+      "expected_failure_lines": [
+        "Error: Incorrect number of solutions."
+      ],
+      "case_sha256": "89eeb320d215b9f77aa4c43723141038c03b457abaac2e6cf1f686fd516993b2"
+    },
+    "issues/mantis-30703/1/neighborhood_1_common_translation.tcl": {
+      "canonical_issue": "mantis:30703",
+      "checkpoint_id": "neighborhood-30703-1-common-translation",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "curve_length",
+        "solution_count",
+        "transform_witness"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "56e11a0afb4fea50fa016635ef1556576b9346fb246888c1447116d60cbcc860"
+    },
+    "issues/mantis-30703/1/neighborhood_2_operand_order.tcl": {
+      "canonical_issue": "mantis:30703",
+      "checkpoint_id": "neighborhood-30703-2-operand-order",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "curve_length",
+        "operand_order",
+        "solution_count"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "14120b3486adfe0c8f196b69ce3892a57710d2e0dec41eccb1495eceda2fc5bd"
+    },
+    "issues/mantis-30703/1/regression_plane_cylinder.tcl": {
+      "canonical_issue": "mantis:30703",
+      "checkpoint_id": "regression-30703-plane-cylinder",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "curve_length",
+        "solution_count"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "eeb6215c1520cc752ffb284313541ee983f86be47a9d26446e0def6f65d33716"
+    },
+    "issues/mantis-29972/1/original_official.tcl": {
+      "canonical_issue": "mantis:29972",
+      "checkpoint_id": "original-29972-upstream",
+      "category": "original",
+      "expected_assertion_ids": [
+        "curve_count",
+        "edge_count",
+        "section_endpoint_count",
+        "section_distance"
+      ],
+      "expected_failure_lines": [
+        "Error: The distance between alone_",
+        "is WRONG because number of EDGE entities",
+        "The section is closed."
+      ],
+      "case_sha256": "c220065d929ab46bcdfff10641bec2fc5133a9ba1e6d68caaa4f66bf4a23e603"
+    },
+    "issues/mantis-29972/1/neighborhood_1_common_translation.tcl": {
+      "canonical_issue": "mantis:29972",
+      "checkpoint_id": "neighborhood-29972-1-common-translation",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "curve_count",
+        "transform_witness",
+        "edge_count",
+        "section_endpoint_count",
+        "section_distance"
+      ],
+      "expected_failure_lines": [
+        "Error: The distance between alone_",
+        "is WRONG because number of EDGE entities",
+        "The section is closed."
+      ],
+      "case_sha256": "56e11a0afb4fea50fa016635ef1556576b9346fb246888c1447116d60cbcc860"
+    },
+    "issues/mantis-29972/1/neighborhood_2_operand_order.tcl": {
+      "canonical_issue": "mantis:29972",
+      "checkpoint_id": "neighborhood-29972-2-operand-order",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "curve_count",
+        "operand_order",
+        "edge_count",
+        "section_endpoint_count",
+        "section_distance"
+      ],
+      "expected_failure_lines": [
+        "Error: The distance between alone_",
+        "is WRONG because number of EDGE entities",
+        "The section is closed."
+      ],
+      "case_sha256": "14120b3486adfe0c8f196b69ce3892a57710d2e0dec41eccb1495eceda2fc5bd"
+    },
+    "issues/mantis-29972/1/regression_plane_cylinder.tcl": {
+      "canonical_issue": "mantis:29972",
+      "checkpoint_id": "regression-29972-plane-cylinder",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "curve_length",
+        "solution_count"
+      ],
+      "expected_failure_lines": [
+        "Error: The distance between alone_",
+        "is WRONG because number of EDGE entities",
+        "The section is closed."
+      ],
+      "case_sha256": "eeb6215c1520cc752ffb284313541ee983f86be47a9d26446e0def6f65d33716"
+    },
+    "issues/mantis-33615/1/original_official.tcl": {
+      "canonical_issue": "mantis:33615",
+      "checkpoint_id": "original-33615-upstream",
+      "category": "original",
+      "expected_assertion_ids": [
+        "vertex_count",
+        "edge_count",
+        "wire_count",
+        "face_count",
+        "official_oracle_completed"
+      ],
+      "expected_failure_lines": [
+        "is WRONG because number of VERTEX entities"
+      ],
+      "case_sha256": "fb9d652c0416c28eb47a8dd7ca54c286c0bb82e0b51b7a185ce1907a81ba6691"
+    },
+    "issues/mantis-33615/1/neighborhood_1_common_translation.tcl": {
+      "canonical_issue": "mantis:33615",
+      "checkpoint_id": "neighborhood-33615-1-common-translation",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "official_topology",
+        "transform_witness"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "56e11a0afb4fea50fa016635ef1556576b9346fb246888c1447116d60cbcc860"
+    },
+    "issues/mantis-33615/1/neighborhood_2_common_rotation.tcl": {
+      "canonical_issue": "mantis:33615",
+      "checkpoint_id": "neighborhood-33615-2-common-rotation-z90",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "official_topology",
+        "transform_witness"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "bb49bdb388ac0f6a54dec2acff81b574aba3a9ec00cf5313d51ab09c490022bf"
+    },
+    "issues/mantis-33615/1/regression_overlap_boxes.tcl": {
+      "canonical_issue": "mantis:33615",
+      "checkpoint_id": "regression-33615-overlap-boxes",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "reg_area_volume",
+        "reg_shape_check",
+        "reg_topology",
+        "reg_valid"
+      ],
+      "expected_failure_lines": [],
+      "case_sha256": "445a468fe1d8a37fb18c2cf4b1d3275eea6855d5c89be1d4874257027f7d4ccc"
+    }
+  },
+  "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+}

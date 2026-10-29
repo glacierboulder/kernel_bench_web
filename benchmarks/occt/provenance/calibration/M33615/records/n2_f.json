@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "protocol": "v4_portable_calibration_record_v1",
+  "canonical_issue": "M33615",
+  "role": "N2_F",
+  "case_kind": "neighbor",
+  "geometry_verdict": "geometry_pass",
+  "return_code": 0,
+  "timed_out": false,
+  "wall_seconds": 0.115,
+  "assertion_evidence": {
+    "expected_pass_marker_ids": [
+      "transform_witness",
+      "official_topology"
+    ],
+    "pass_marker_counts": {
+      "transform_witness": 1,
+      "official_topology": 1
+    },
+    "required_output_counts": {},
+    "observed_output_counts": {},
+    "completion_sentinel_count": 1,
+    "missing_or_duplicate_markers": [],
+    "unmet_output_counts": {},
+    "failure_lines": [],
+    "exception_lines": []
+  },
+  "source": {
+    "commit": "5811a330c784c49e64c65fdaa88d01bff444da56",
+    "git_tree": "8d091c3eb9de4e59a0350bbdd350920762c78dc5",
+    "archive_sha256": null,
+    "materialized_manifest_sha256": null
+  },
+  "build": {
+    "binary_sha256": "9b5b5767ffa6b8e9eef69cd11c18a51b73a9fb94e5896ec2245fa7f55c5b9192",
+    "binary_bytes": 17088,
+    "plugin_sha256": "c3a2c6047f956d557388d6c1c8c5defa68f099630abea810cf9a957ca14449d5",
+    "plugin_bytes": 2939112
+  },
+  "candidate_case_sha256": "64af4bac149ec24aac09fb2f958f03f39f402fc49219a04af7e7f36f489f4100",
+  "raw_candidate_record": "provenance/calibration/M33615/raw/n2_f.candidate_record.json",
+  "stdout": {
+    "path": "provenance/calibration/M33615/raw/n2_f.stdout.log",
+    "sha256": "d8d8a477f03287334c8301f729470d21ee7339aca2dff6dd3aa0d4e2a8471a17"
+  },
+  "stderr": {
+    "path": "provenance/calibration/M33615/raw/n2_f.stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "active_bundle_case": null,
+  "source_evidence": "../source-and-build-map.json"
+}

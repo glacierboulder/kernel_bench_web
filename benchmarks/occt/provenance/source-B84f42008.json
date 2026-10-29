@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "source_id": "occt-v4-b84f42008b74",
+  "commit": "84f42008b74b4545e18e0ec361fd14e48d6a961d",
+  "git_tree": "17133b036ad46f0ac707f48aa9723a97db9a5d02",
+  "materialized_tree_sha256": "5b99158d0acbca6f7f83138b52a4fc67a128208e4cac3804501834c271004eb4",
+  "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+  "verification_basis": "Local Git commit/archive verified; materialized tree hash computed with backend.source_cache.tree_sha256 over the cited existing Stage2 source export.",
+  "source_export_reference": "OCCT_bench_proto_v4/stage2/occt-32942-parent-B/source",
+  "build_profile": {
+    "build_type": "Release",
+    "c_compiler": "clang-10",
+    "cxx_compiler": "clang++-10",
+    "flags": "-O3 -DNDEBUG",
+    "compiler_jobs_max": 2,
+    "tcl_version": "8.6"
+  }
+}
