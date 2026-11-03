@@ -1,0 +1,35 @@
+{
+  "sha": "d33222c108e49e3db564f209ded4fe25935c3731",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOmQzMzIyMmMxMDhlNDllM2RiNTY0ZjIwOWRlZDRmZTI1OTM1YzM3MzE=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/d33222c108e49e3db564f209ded4fe25935c3731",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/d33222c108e49e3db564f209ded4fe25935c3731",
+  "author": {
+    "name": "apl",
+    "email": "apl@opencascade.com",
+    "date": "2014-09-25T09:54:33Z"
+  },
+  "committer": {
+    "name": "bugmaster",
+    "email": "bugmaster@opencascade.com",
+    "date": "2014-09-25T11:58:15Z"
+  },
+  "tree": {
+    "sha": "9f3b2aa49d1e544d76dca43520a459b494bfebff",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/9f3b2aa49d1e544d76dca43520a459b494bfebff"
+  },
+  "message": "﻿0025129: Visualization - add interactive object for Points Cloud objects\n\nNew class AIS_PointCloud for displaying point sets.\nUpdate Graphic3d_ArrayOfPoints, OpenGl_PrimitiveArray and OpenGl_VertexBuffer classes to be able to use normals for points.\n\nAdd Draw Harness command vpointcloud.\nAdd test case v3d/point_cloud/sphere.\n\nMove protected method AIS_Shape::DisplayBox() to public function StdPrs_WFDeflectionRestrictedFace::AddBox().\n\nSmall correction of grids.list for v3d tests",
+  "parents": [
+    {
+      "sha": "a9b30f0acb62a71c17670e4a1c2bfc2a40fec6c9",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/a9b30f0acb62a71c17670e4a1c2bfc2a40fec6c9",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/a9b30f0acb62a71c17670e4a1c2bfc2a40fec6c9"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

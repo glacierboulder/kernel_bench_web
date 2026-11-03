@@ -1,0 +1,2318 @@
+{
+  "repository_baseline": "c5184df5e161c72cfa389249a8b052efe1b87cf6",
+  "new_tasks": 20,
+  "frozen_checks": 160,
+  "reference_negative_controls_rejected": 61,
+  "outcomes": [
+    {
+      "role": "b",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "count": 37
+    },
+    {
+      "role": "b",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "count": 3
+    },
+    {
+      "role": "b",
+      "category": "original",
+      "status": "geometry_fail",
+      "count": 20
+    },
+    {
+      "role": "b",
+      "category": "regression",
+      "status": "geometry_pass",
+      "count": 20
+    },
+    {
+      "role": "f",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "count": 40
+    },
+    {
+      "role": "f",
+      "category": "original",
+      "status": "geometry_pass",
+      "count": 20
+    },
+    {
+      "role": "f",
+      "category": "regression",
+      "status": "geometry_pass",
+      "count": 20
+    }
+  ],
+  "historical_catalog_entries_unchanged": true,
+  "historical_source_locks_unchanged": true,
+  "evidence_archive": "evidence/occt-single20-evidence-20261103.tar.gz",
+  "result_path_namespace": "tar archive member path",
+  "model_evaluation_runs": 0,
+  "tasks": [
+    {
+      "issue_id": "occt-24097",
+      "issue_version": "1",
+      "title": "OCCT · 短截交曲线被截断",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-24097",
+      "suite": {
+        "id": "occt-single20-24097-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-5163f4671951",
+      "baseline_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "baseline_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-10",
+      "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "upstream_url": "https://occt3d.com/dev/tickets/0024097/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "24097-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-10/occt-single20-24097/b/24097-original/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "b",
+          "id": "24097-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-10/occt-single20-24097/b/24097-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "b",
+          "id": "24097-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-10/occt-single20-24097/b/24097-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "b",
+          "id": "24097-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-10/occt-single20-24097/b/24097-regression_healthy/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "f",
+          "id": "24097-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-10/occt-single20-24097/f/24097-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "24097-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-10/occt-single20-24097/f/24097-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "24097-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-10/occt-single20-24097/f/24097-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "24097-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-10/occt-single20-24097/f/24097-regression_healthy/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        }
+      ],
+      "snapshots": {
+        "b": "234fc15f95aa41f88a7f7b12108a7d3a6a994e509b189514d01be5bcd141458c",
+        "f": "234fc15f95aa41f88a7f7b12108a7d3a6a994e509b189514d01be5bcd141458c"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m24097-f2016-qualification-01",
+        "rejected": [
+          "negative_empty",
+          "negative_missing",
+          "negative_shifted"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-24313",
+      "issue_version": "1",
+      "title": "OCCT M24313 · 线性拉伸曲面与平面的双母线求交",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-24313",
+      "suite": {
+        "id": "occt-single20-24313-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-m24313-78b6b239841f",
+      "baseline_commit": "78b6b239841fdbe47b9cf51493739def58c01848",
+      "baseline_tree_sha256": "793845f1abc97f49cbf4570663181ff195688429c8f84e3b65399d52d59eac89",
+      "source_kind": "curator-derived inverse source patch",
+      "frozen_replay": "frozen-replay-02",
+      "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "upstream_url": "https://occt3d.com/dev/tickets/0024313/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "24313-neighborhood_frame",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-02/occt-single20-24313/b/24313-neighborhood_frame/result.json",
+          "runtime_binaries_sha256": "30c39b511c18f5605f110c17e83ba529583ea04feb696ea0f42e762211553826"
+        },
+        {
+          "role": "b",
+          "id": "24313-neighborhood_radius",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-02/occt-single20-24313/b/24313-neighborhood_radius/result.json",
+          "runtime_binaries_sha256": "30c39b511c18f5605f110c17e83ba529583ea04feb696ea0f42e762211553826"
+        },
+        {
+          "role": "b",
+          "id": "24313-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-02/occt-single20-24313/b/24313-original/result.json",
+          "runtime_binaries_sha256": "30c39b511c18f5605f110c17e83ba529583ea04feb696ea0f42e762211553826"
+        },
+        {
+          "role": "b",
+          "id": "24313-regression_analytic_cylinder",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-02/occt-single20-24313/b/24313-regression_analytic_cylinder/result.json",
+          "runtime_binaries_sha256": "30c39b511c18f5605f110c17e83ba529583ea04feb696ea0f42e762211553826"
+        },
+        {
+          "role": "f",
+          "id": "24313-neighborhood_frame",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-02/occt-single20-24313/f/24313-neighborhood_frame/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "24313-neighborhood_radius",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-02/occt-single20-24313/f/24313-neighborhood_radius/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "24313-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-02/occt-single20-24313/f/24313-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "24313-regression_analytic_cylinder",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-02/occt-single20-24313/f/24313-regression_analytic_cylinder/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        }
+      ],
+      "snapshots": {
+        "b": "3a51dca705cb048d6116466b8076e6742577ff5979dae7676f580b198c6fefd6",
+        "f": "3a51dca705cb048d6116466b8076e6742577ff5979dae7676f580b198c6fefd6"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m24313-f-calibration-02",
+        "rejected": [
+          "negative_duplicate",
+          "negative_missing",
+          "negative_shifted",
+          "negative_truncated"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-24418",
+      "issue_version": "1",
+      "title": "OCCT M24418 · 圆环面与圆锥求交精度",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-24418",
+      "suite": {
+        "id": "occt-single20-24418-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-1511c7e90f1a",
+      "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-03",
+      "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "upstream_url": "https://occt3d.com/dev/tickets/0024418/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "24418-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-03/occt-single20-24418/b/24418-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "24418-neighborhood_translation",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-03/occt-single20-24418/b/24418-neighborhood_translation/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "24418-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-03/occt-single20-24418/b/24418-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "24418-regression_separated",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-03/occt-single20-24418/b/24418-regression_separated/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "24418-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-03/occt-single20-24418/f/24418-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "24418-neighborhood_translation",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-03/occt-single20-24418/f/24418-neighborhood_translation/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "24418-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-03/occt-single20-24418/f/24418-original/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "24418-regression_separated",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-03/occt-single20-24418/f/24418-regression_separated/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        }
+      ],
+      "snapshots": {
+        "b": "8e99946260c68864c3347d7efe4a6bdafc645735244272bad27ef71979ac61e2",
+        "f": "8e99946260c68864c3347d7efe4a6bdafc645735244272bad27ef71979ac61e2"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m24418-f-calibration-02",
+        "rejected": [
+          "negative_missing",
+          "negative_shifted",
+          "negative_truncated"
+        ]
+      },
+      "supplementary_input_legality": [
+        "m24418-b-input-legality-01",
+        "m24418-f-input-legality-01"
+      ],
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-24429",
+      "issue_version": "1",
+      "title": "OCCT · 圆柱与圆环面求交异常",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-24429",
+      "suite": {
+        "id": "occt-single20-24429-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-1511c7e90f1a",
+      "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-08",
+      "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "upstream_url": "https://occt3d.com/dev/tickets/0024429/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "24429-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-08/occt-single20-24429/b/24429-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "24429-neighborhood_translation",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-08/occt-single20-24429/b/24429-neighborhood_translation/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "24429-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-08/occt-single20-24429/b/24429-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "24429-regression_plane",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-24429/b/24429-regression_plane/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "24429-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-24429/f/24429-original/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "24429-neighborhood_translation",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-24429/f/24429-neighborhood_translation/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "24429-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-24429/f/24429-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "24429-regression_plane",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-24429/f/24429-regression_plane/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        }
+      ],
+      "snapshots": {
+        "b": "c15533b3a7017699e0465a2ed20c9ea2d59c3628579b606c18004c0e446ab7f8",
+        "f": "c15533b3a7017699e0465a2ed20c9ea2d59c3628579b606c18004c0e446ab7f8"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m24429-f-qualification-01",
+        "rejected": [
+          "negative_empty",
+          "negative_shifted",
+          "negative_truncated"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-25102",
+      "issue_version": "1",
+      "title": "OCCT · 复杂面截交遗漏部分交线",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-25102",
+      "suite": {
+        "id": "occt-single20-25102-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-5163f4671951",
+      "baseline_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "baseline_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-07",
+      "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "upstream_url": "https://occt3d.com/dev/tickets/0025102/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "25102-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25102/b/25102-original/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "b",
+          "id": "25102-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25102/b/25102-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "b",
+          "id": "25102-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25102/b/25102-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "b",
+          "id": "25102-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25102/b/25102-regression_healthy/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "f",
+          "id": "25102-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25102/f/25102-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "25102-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25102/f/25102-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "25102-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25102/f/25102-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "25102-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25102/f/25102-regression_healthy/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        }
+      ],
+      "snapshots": {
+        "b": "a3c4fd3226bf2b40f6c424aa03a62be47e5eeb3e21f2dc34e1b1862810eca309",
+        "f": "a3c4fd3226bf2b40f6c424aa03a62be47e5eeb3e21f2dc34e1b1862810eca309"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m25102-f-qualification-01",
+        "rejected": [
+          "negative_empty",
+          "negative_missing",
+          "negative_shifted"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-25111",
+      "issue_version": "1",
+      "title": "OCCT · 圆锥与圆环面的截交曲线缺失",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-25111",
+      "suite": {
+        "id": "occt-single20-25111-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-029311e00f28",
+      "baseline_commit": "029311e00f2822c762f676f863f9b932ad8ca8ef",
+      "baseline_tree_sha256": "dbf7237b12b0712f11b7d3fb020950577fdec9eb6b1f66a95bad6a29239248b6",
+      "source_kind": "curator-derived inverse patch",
+      "frozen_replay": "frozen-replay-06",
+      "reference_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "reference_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "upstream_url": "https://occt3d.com/dev/tickets/0025111/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "25111-neighborhood_scale",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-06/occt-single20-25111/b/25111-neighborhood_scale/result.json",
+          "runtime_binaries_sha256": "a86ec4e962eee806093351d05f86d6fe14c21191a776cf4ef67b4ac529d4a0d6"
+        },
+        {
+          "role": "b",
+          "id": "25111-neighborhood_translation",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-06/occt-single20-25111/b/25111-neighborhood_translation/result.json",
+          "runtime_binaries_sha256": "a86ec4e962eee806093351d05f86d6fe14c21191a776cf4ef67b4ac529d4a0d6"
+        },
+        {
+          "role": "b",
+          "id": "25111-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-06/occt-single20-25111/b/25111-original/result.json",
+          "runtime_binaries_sha256": "a86ec4e962eee806093351d05f86d6fe14c21191a776cf4ef67b4ac529d4a0d6"
+        },
+        {
+          "role": "b",
+          "id": "25111-regression_cone_plane",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-25111/b/25111-regression_cone_plane/result.json",
+          "runtime_binaries_sha256": "a86ec4e962eee806093351d05f86d6fe14c21191a776cf4ef67b4ac529d4a0d6"
+        },
+        {
+          "role": "f",
+          "id": "25111-neighborhood_scale",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-25111/f/25111-neighborhood_scale/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "f",
+          "id": "25111-neighborhood_translation",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-25111/f/25111-neighborhood_translation/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "f",
+          "id": "25111-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-25111/f/25111-original/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "f",
+          "id": "25111-regression_cone_plane",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-25111/f/25111-regression_cone_plane/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        }
+      ],
+      "snapshots": {
+        "b": "6a54e11ccca952c18a3752aa02642df0d396fc122e932519520599d344a5cfa4",
+        "f": "6a54e11ccca952c18a3752aa02642df0d396fc122e932519520599d344a5cfa4"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m25111-f-calibration-01",
+        "rejected": [
+          "negative_empty",
+          "negative_missing",
+          "negative_shifted"
+        ]
+      },
+      "supplementary_input_legality": [
+        "m25111-b-input-legality-01",
+        "m25111-f-input-legality-01"
+      ],
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-25342",
+      "issue_version": "1",
+      "title": "OCCT · Section 返回错误的边数",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-25342",
+      "suite": {
+        "id": "occt-single20-25342-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-5163f4671951",
+      "baseline_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "baseline_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-07",
+      "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "upstream_url": "https://occt3d.com/dev/tickets/0025342/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "25342-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25342/b/25342-original/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "b",
+          "id": "25342-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25342/b/25342-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "b",
+          "id": "25342-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25342/b/25342-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "b",
+          "id": "25342-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25342/b/25342-regression_healthy/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "f",
+          "id": "25342-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25342/f/25342-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "25342-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25342/f/25342-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "25342-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25342/f/25342-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "25342-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-25342/f/25342-regression_healthy/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        }
+      ],
+      "snapshots": {
+        "b": "f5febb5b6ca59063835dd0a3360b94ad3006a7dbbfc49f02ad6820611c9cde32",
+        "f": "f5febb5b6ca59063835dd0a3360b94ad3006a7dbbfc49f02ad6820611c9cde32"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m25342-f-qualification-01",
+        "rejected": [
+          "negative_empty",
+          "negative_missing",
+          "negative_shifted"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-25542",
+      "issue_version": "1",
+      "title": "OCCT · 圆柱与圆锥 Common 丢失结果",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-25542",
+      "suite": {
+        "id": "occt-single20-25542-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-1511c7e90f1a",
+      "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-08",
+      "reference_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+      "reference_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+      "upstream_url": "https://occt3d.com/dev/tickets/0025542/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "25542-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-08/occt-single20-25542/b/25542-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "25542-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-25542/b/25542-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "25542-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-08/occt-single20-25542/b/25542-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "25542-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-25542/b/25542-regression_healthy/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "25542-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-25542/f/25542-original/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "f",
+          "id": "25542-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-25542/f/25542-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "f",
+          "id": "25542-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-25542/f/25542-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "f",
+          "id": "25542-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-25542/f/25542-regression_healthy/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        }
+      ],
+      "snapshots": {
+        "b": "dde01db0e265338b5db07271335bce5243e988aec7de3797ec480e540916fa8e",
+        "f": "dde01db0e265338b5db07271335bce5243e988aec7de3797ec480e540916fa8e"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m25542-2025-qualification-01",
+        "rejected": [
+          "negative_empty",
+          "negative_missing",
+          "negative_shifted"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-25818",
+      "issue_version": "1",
+      "title": "OCCT M25818 · 无界平面求交的完整直线",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-25818",
+      "suite": {
+        "id": "occt-single20-25818-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-m25818-32ab8bfc4f09",
+      "baseline_commit": "32ab8bfc4f09acb95d1f8403f4d44f5afad97b8b",
+      "baseline_tree_sha256": "cca2aa3bd5541ec361da198125ab731fec5cd6849b992136be0de552f77d3df5",
+      "source_kind": "curator-derived inverse source patch",
+      "frozen_replay": "frozen-replay-02",
+      "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "upstream_url": "https://occt3d.com/dev/tickets/0025818/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "25818-neighborhood_mixed_domain",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-02/occt-single20-25818/b/25818-neighborhood_mixed_domain/result.json",
+          "runtime_binaries_sha256": "5cde4849a5614db5ce944d68f461476b580a24018332f96a1333fdb259091189"
+        },
+        {
+          "role": "b",
+          "id": "25818-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-02/occt-single20-25818/b/25818-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "5cde4849a5614db5ce944d68f461476b580a24018332f96a1333fdb259091189"
+        },
+        {
+          "role": "b",
+          "id": "25818-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-02/occt-single20-25818/b/25818-original/result.json",
+          "runtime_binaries_sha256": "5cde4849a5614db5ce944d68f461476b580a24018332f96a1333fdb259091189"
+        },
+        {
+          "role": "b",
+          "id": "25818-regression_bounded",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-02/occt-single20-25818/b/25818-regression_bounded/result.json",
+          "runtime_binaries_sha256": "5cde4849a5614db5ce944d68f461476b580a24018332f96a1333fdb259091189"
+        },
+        {
+          "role": "f",
+          "id": "25818-neighborhood_mixed_domain",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-02/occt-single20-25818/f/25818-neighborhood_mixed_domain/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "25818-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-02/occt-single20-25818/f/25818-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "25818-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-02/occt-single20-25818/f/25818-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "25818-regression_bounded",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-02/occt-single20-25818/f/25818-regression_bounded/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        }
+      ],
+      "snapshots": {
+        "b": "d79a6689feb768facb1e58cdfb8154b91c78928db5aad738a00ea5808d3f2ab5",
+        "f": "d79a6689feb768facb1e58cdfb8154b91c78928db5aad738a00ea5808d3f2ab5"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m25818-f-calibration-02",
+        "rejected": [
+          "negative_missing",
+          "negative_shifted",
+          "negative_truncated"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-26243",
+      "issue_version": "1",
+      "title": "OCCT · 带圆角模型的 Common 运算失败",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-26243",
+      "suite": {
+        "id": "occt-single20-26243-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-5163f4671951",
+      "baseline_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "baseline_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-06",
+      "reference_commit": "2199db4a362bc0917f1d01d1ad5922b81055cab8",
+      "reference_tree_sha256": "54da0037e9c3896c30050b7266744d713dc6741caa3dba72ce36b891f7cc786a",
+      "upstream_url": "https://occt3d.com/dev/tickets/0026243/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "26243-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26243/b/26243-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "b",
+          "id": "26243-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26243/b/26243-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "b",
+          "id": "26243-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26243/b/26243-original/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "b",
+          "id": "26243-regression_boxes",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26243/b/26243-regression_boxes/result.json",
+          "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+        },
+        {
+          "role": "f",
+          "id": "26243-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26243/f/26243-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "90857d9a1891c9f9c92585951e7fe538186a3121c731478dbe7b73d740982f5e"
+        },
+        {
+          "role": "f",
+          "id": "26243-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26243/f/26243-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "90857d9a1891c9f9c92585951e7fe538186a3121c731478dbe7b73d740982f5e"
+        },
+        {
+          "role": "f",
+          "id": "26243-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26243/f/26243-original/result.json",
+          "runtime_binaries_sha256": "90857d9a1891c9f9c92585951e7fe538186a3121c731478dbe7b73d740982f5e"
+        },
+        {
+          "role": "f",
+          "id": "26243-regression_boxes",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26243/f/26243-regression_boxes/result.json",
+          "runtime_binaries_sha256": "90857d9a1891c9f9c92585951e7fe538186a3121c731478dbe7b73d740982f5e"
+        }
+      ],
+      "snapshots": {
+        "b": "31463e3baf5bf06261af0dfab634839772383cc391e44678e7c53885b271d0c8",
+        "f": "31463e3baf5bf06261af0dfab634839772383cc391e44678e7c53885b271d0c8"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m26243-direct-f-calibration-01",
+        "rejected": [
+          "negative_empty",
+          "negative_input_only",
+          "negative_shifted"
+        ]
+      },
+      "supplementary_input_legality": [
+        "m26243-b-input-legality-01",
+        "m26243-f-input-legality-01"
+      ],
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-26310",
+      "issue_version": "1",
+      "title": "OCCT · 圆柱求交产生错误曲线",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-26310",
+      "suite": {
+        "id": "occt-single20-26310-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-ea80ac2f61af",
+      "baseline_commit": "ea80ac2f61af25a4bcf4516a89e0b302e10e7e82",
+      "baseline_tree_sha256": "68c2998046770a79ef06930800143bda51405c3ed162bcc91c973c1c40101973",
+      "source_kind": "curator-derived inverse patch",
+      "frozen_replay": "frozen-replay-10",
+      "reference_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+      "reference_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+      "upstream_url": "https://occt3d.com/dev/tickets/0026310/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "26310-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-10/occt-single20-26310/b/26310-original/result.json",
+          "runtime_binaries_sha256": "a45489b24cc2b85cc792d052956c477ab457be2ddf94c45618a2eee56f9eee23"
+        },
+        {
+          "role": "b",
+          "id": "26310-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-10/occt-single20-26310/b/26310-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "a45489b24cc2b85cc792d052956c477ab457be2ddf94c45618a2eee56f9eee23"
+        },
+        {
+          "role": "b",
+          "id": "26310-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-10/occt-single20-26310/b/26310-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "a45489b24cc2b85cc792d052956c477ab457be2ddf94c45618a2eee56f9eee23"
+        },
+        {
+          "role": "b",
+          "id": "26310-regression_separated",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-10/occt-single20-26310/b/26310-regression_separated/result.json",
+          "runtime_binaries_sha256": "a45489b24cc2b85cc792d052956c477ab457be2ddf94c45618a2eee56f9eee23"
+        },
+        {
+          "role": "f",
+          "id": "26310-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-10/occt-single20-26310/f/26310-original/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "f",
+          "id": "26310-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-10/occt-single20-26310/f/26310-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "f",
+          "id": "26310-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-10/occt-single20-26310/f/26310-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "f",
+          "id": "26310-regression_separated",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-10/occt-single20-26310/f/26310-regression_separated/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        }
+      ],
+      "snapshots": {
+        "b": "0f54bf7943045c4df6086107b400fa0844614b5d636798a8a6501398e84db87e",
+        "f": "0f54bf7943045c4df6086107b400fa0844614b5d636798a8a6501398e84db87e"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m26310-f-qualification-01",
+        "rejected": [
+          "negative_empty",
+          "negative_missing",
+          "negative_shifted"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-26776",
+      "issue_version": "1",
+      "title": "OCCT · 偏置曲面与拉伸面截交不完整",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-26776",
+      "suite": {
+        "id": "occt-single20-26776-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-1511c7e90f1a",
+      "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-07",
+      "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "upstream_url": "https://occt3d.com/dev/tickets/0026776/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "26776-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-07/occt-single20-26776/b/26776-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "26776-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-07/occt-single20-26776/b/26776-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "26776-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-07/occt-single20-26776/b/26776-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "26776-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-26776/b/26776-regression_healthy/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "26776-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-26776/f/26776-original/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "26776-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-26776/f/26776-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "26776-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-26776/f/26776-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "26776-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-07/occt-single20-26776/f/26776-regression_healthy/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        }
+      ],
+      "snapshots": {
+        "b": "baaa70c8a70d26faca3189e38302d131f1ffc14c6c019edc1be5b50231e35dd0",
+        "f": "baaa70c8a70d26faca3189e38302d131f1ffc14c6c019edc1be5b50231e35dd0"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m26776-f-qualification-01",
+        "rejected": [
+          "negative_empty",
+          "negative_missing",
+          "negative_shifted"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-26796",
+      "issue_version": "1",
+      "title": "OCCT · 近接触盒体的 General Fuse 分块错误",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-26796",
+      "suite": {
+        "id": "occt-single20-26796-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-6435b9c7fafd",
+      "baseline_commit": "6435b9c7fafd294680a3be589deb61de2fdb3d3c",
+      "baseline_tree_sha256": "bfcd5874f51898884c55c0e35f4bb701a612ad91bdc6e0ab106b31d45afc692c",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-05",
+      "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "upstream_url": "https://occt3d.com/dev/tickets/0026796/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "26796-neighborhood_angle",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-05/occt-single20-26796/b/26796-neighborhood_angle/result.json",
+          "runtime_binaries_sha256": "5cfc12f73c08cef333ae0f179ff88cbf15ae6dae024c6f7f96324efebbf8da87"
+        },
+        {
+          "role": "b",
+          "id": "26796-neighborhood_translation",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-05/occt-single20-26796/b/26796-neighborhood_translation/result.json",
+          "runtime_binaries_sha256": "5cfc12f73c08cef333ae0f179ff88cbf15ae6dae024c6f7f96324efebbf8da87"
+        },
+        {
+          "role": "b",
+          "id": "26796-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-05/occt-single20-26796/b/26796-original/result.json",
+          "runtime_binaries_sha256": "5cfc12f73c08cef333ae0f179ff88cbf15ae6dae024c6f7f96324efebbf8da87"
+        },
+        {
+          "role": "b",
+          "id": "26796-regression_separated",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-05/occt-single20-26796/b/26796-regression_separated/result.json",
+          "runtime_binaries_sha256": "5cfc12f73c08cef333ae0f179ff88cbf15ae6dae024c6f7f96324efebbf8da87"
+        },
+        {
+          "role": "f",
+          "id": "26796-neighborhood_angle",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-05/occt-single20-26796/f/26796-neighborhood_angle/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "26796-neighborhood_translation",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-05/occt-single20-26796/f/26796-neighborhood_translation/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "26796-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-05/occt-single20-26796/f/26796-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "26796-regression_separated",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-05/occt-single20-26796/f/26796-regression_separated/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        }
+      ],
+      "snapshots": {
+        "b": "19df2913126fc3248831e0c281c65cddf42a9a17edf546ae55abea659e18a373",
+        "f": "19df2913126fc3248831e0c281c65cddf42a9a17edf546ae55abea659e18a373"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m26796-f-calibration-01",
+        "rejected": [
+          "negative_empty",
+          "negative_missing",
+          "negative_shifted"
+        ]
+      },
+      "supplementary_input_legality": [
+        "m26796-b-input-legality-01",
+        "m26796-f-input-legality-01"
+      ],
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-26910",
+      "issue_version": "1",
+      "title": "OCCT · 直线与圆弧 General Fuse 漏掉近交点",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-26910",
+      "suite": {
+        "id": "occt-single20-26910-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-6435b9c7fafd",
+      "baseline_commit": "6435b9c7fafd294680a3be589deb61de2fdb3d3c",
+      "baseline_tree_sha256": "bfcd5874f51898884c55c0e35f4bb701a612ad91bdc6e0ab106b31d45afc692c",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-06",
+      "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "upstream_url": "https://occt3d.com/dev/tickets/0026910/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "26910-neighborhood_scale",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26910/b/26910-neighborhood_scale/result.json",
+          "runtime_binaries_sha256": "5cfc12f73c08cef333ae0f179ff88cbf15ae6dae024c6f7f96324efebbf8da87"
+        },
+        {
+          "role": "b",
+          "id": "26910-neighborhood_translation",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26910/b/26910-neighborhood_translation/result.json",
+          "runtime_binaries_sha256": "5cfc12f73c08cef333ae0f179ff88cbf15ae6dae024c6f7f96324efebbf8da87"
+        },
+        {
+          "role": "b",
+          "id": "26910-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26910/b/26910-original/result.json",
+          "runtime_binaries_sha256": "5cfc12f73c08cef333ae0f179ff88cbf15ae6dae024c6f7f96324efebbf8da87"
+        },
+        {
+          "role": "b",
+          "id": "26910-regression_separated",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26910/b/26910-regression_separated/result.json",
+          "runtime_binaries_sha256": "5cfc12f73c08cef333ae0f179ff88cbf15ae6dae024c6f7f96324efebbf8da87"
+        },
+        {
+          "role": "f",
+          "id": "26910-neighborhood_scale",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26910/f/26910-neighborhood_scale/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "26910-neighborhood_translation",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26910/f/26910-neighborhood_translation/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "26910-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26910/f/26910-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "26910-regression_separated",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-06/occt-single20-26910/f/26910-regression_separated/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        }
+      ],
+      "snapshots": {
+        "b": "04e65ed8e3ada21bdf17922f3772f67ad0f35ff03dc9393e070f9bae7ddfa94f",
+        "f": "04e65ed8e3ada21bdf17922f3772f67ad0f35ff03dc9393e070f9bae7ddfa94f"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m26910-f-calibration-03",
+        "rejected": [
+          "negative_empty",
+          "negative_shifted",
+          "negative_unchanged"
+        ]
+      },
+      "supplementary_input_legality": [
+        "m26910-b-input-legality-01",
+        "m26910-f-input-legality-01"
+      ],
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-27227",
+      "issue_version": "1",
+      "title": "OCCT · 正交圆环交线未延伸至边界",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-27227",
+      "suite": {
+        "id": "occt-single20-27227-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-cfde7eebb37b",
+      "baseline_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "baseline_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-09",
+      "reference_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+      "reference_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+      "upstream_url": "https://occt3d.com/dev/tickets/0027227/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "27227-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-09/occt-single20-27227/b/27227-original/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "b",
+          "id": "27227-neighborhood_translation",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-09/occt-single20-27227/b/27227-neighborhood_translation/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "b",
+          "id": "27227-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-09/occt-single20-27227/b/27227-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "b",
+          "id": "27227-regression_plane",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-09/occt-single20-27227/b/27227-regression_plane/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "27227-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-09/occt-single20-27227/f/27227-original/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "f",
+          "id": "27227-neighborhood_translation",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-09/occt-single20-27227/f/27227-neighborhood_translation/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "f",
+          "id": "27227-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-09/occt-single20-27227/f/27227-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "f",
+          "id": "27227-regression_plane",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-09/occt-single20-27227/f/27227-regression_plane/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        }
+      ],
+      "snapshots": {
+        "b": "2aa8a75e8c639f729663c9c922a42252f67a46bbe2f1711f51b8deba326a9350",
+        "f": "2aa8a75e8c639f729663c9c922a42252f67a46bbe2f1711f51b8deba326a9350"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m27227-f-qualification-01",
+        "rejected": [
+          "negative_empty",
+          "negative_shifted",
+          "negative_truncated"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-28195",
+      "issue_version": "1",
+      "title": "OCCT · 复杂实体 Common 丢失公共体",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-28195",
+      "suite": {
+        "id": "occt-single20-28195-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-1511c7e90f1a",
+      "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-08",
+      "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "upstream_url": "https://occt3d.com/dev/tickets/0028195/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "28195-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28195/b/28195-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "28195-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28195/b/28195-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "28195-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28195/b/28195-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "28195-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28195/b/28195-regression_healthy/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "28195-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28195/f/28195-original/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "28195-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28195/f/28195-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "28195-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28195/f/28195-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "28195-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28195/f/28195-regression_healthy/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        }
+      ],
+      "snapshots": {
+        "b": "e00539401a7a680c3fa188387464aa563258644dc3aa884173aa420276060df7",
+        "f": "e00539401a7a680c3fa188387464aa563258644dc3aa884173aa420276060df7"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m28195-f-membership-02",
+        "rejected": [
+          "negative_empty",
+          "negative_input_only",
+          "negative_shifted"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-28216",
+      "issue_version": "1",
+      "title": "OCCT · 薄壁锥形实体与曲面 Common 为空",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-28216",
+      "suite": {
+        "id": "occt-single20-28216-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-1511c7e90f1a",
+      "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-08",
+      "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "upstream_url": "https://occt3d.com/dev/tickets/0028216/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "28216-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28216/b/28216-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "28216-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28216/b/28216-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "28216-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28216/b/28216-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "28216-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28216/b/28216-regression_healthy/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "28216-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28216/f/28216-original/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "28216-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28216/f/28216-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "28216-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28216/f/28216-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "28216-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-08/occt-single20-28216/f/28216-regression_healthy/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        }
+      ],
+      "snapshots": {
+        "b": "5db28b24f07eabbeec4930624cf25c436a6fb9e33e5014bddf4d9b5a28a5ef49",
+        "f": "5db28b24f07eabbeec4930624cf25c436a6fb9e33e5014bddf4d9b5a28a5ef49"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m28216-f-membership-02",
+        "rejected": [
+          "negative_empty",
+          "negative_input_only",
+          "negative_shifted"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-28388",
+      "issue_version": "1",
+      "title": "OCCT · 薄壁圆柱实体与曲面 Common 为空",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-28388",
+      "suite": {
+        "id": "occt-single20-28388-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-1511c7e90f1a",
+      "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-09",
+      "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "upstream_url": "https://occt3d.com/dev/tickets/0028388/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "28388-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-09/occt-single20-28388/b/28388-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "28388-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-09/occt-single20-28388/b/28388-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "28388-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-09/occt-single20-28388/b/28388-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "b",
+          "id": "28388-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-09/occt-single20-28388/b/28388-regression_healthy/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "28388-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-09/occt-single20-28388/f/28388-original/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "28388-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-09/occt-single20-28388/f/28388-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "28388-neighborhood_swap",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-09/occt-single20-28388/f/28388-neighborhood_swap/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        },
+        {
+          "role": "f",
+          "id": "28388-regression_healthy",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-09/occt-single20-28388/f/28388-regression_healthy/result.json",
+          "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+        }
+      ],
+      "snapshots": {
+        "b": "346538a0c8a6efb75b0e0d2653aad5f1ce2a67359288b4d71e00e5396e975bee",
+        "f": "346538a0c8a6efb75b0e0d2653aad5f1ce2a67359288b4d71e00e5396e975bee"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m28388-f-membership-02",
+        "rejected": [
+          "negative_empty",
+          "negative_input_only",
+          "negative_shifted"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-33639",
+      "issue_version": "1",
+      "title": "OCCT · 圆锥尖点接触圆环时 Cut 失效",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-33639",
+      "suite": {
+        "id": "occt-single20-33639-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-a016080bf673",
+      "baseline_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+      "baseline_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-11",
+      "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "upstream_url": "https://occt3d.com/dev/tickets/0033639/",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "33639-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-11/occt-single20-33639/b/33639-original/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "b",
+          "id": "33639-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-11/occt-single20-33639/b/33639-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "b",
+          "id": "33639-neighborhood_scale",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-11/occt-single20-33639/b/33639-neighborhood_scale/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "b",
+          "id": "33639-regression_separated",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-11/occt-single20-33639/b/33639-regression_separated/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "f",
+          "id": "33639-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-11/occt-single20-33639/f/33639-original/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "33639-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-11/occt-single20-33639/f/33639-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "33639-neighborhood_scale",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-11/occt-single20-33639/f/33639-neighborhood_scale/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        },
+        {
+          "role": "f",
+          "id": "33639-regression_separated",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-11/occt-single20-33639/f/33639-regression_separated/result.json",
+          "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+        }
+      ],
+      "snapshots": {
+        "b": "6f4033202102bd45eaf3876e838f15e99a03487c1ba58f358dd8fc4dc212d2e2",
+        "f": "6f4033202102bd45eaf3876e838f15e99a03487c1ba58f358dd8fc4dc212d2e2"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "m33639-f2016-qualification-01",
+        "rejected": [
+          "negative_empty",
+          "negative_shifted",
+          "negative_unchanged"
+        ]
+      },
+      "full_snapshots_reverified": true
+    },
+    {
+      "issue_id": "occt-github-1543",
+      "issue_version": "1",
+      "title": "OCCT · 螺旋工具穿过端面时 Boolean Cut 未移除材料",
+      "budget": {
+        "scope": "group",
+        "wall_seconds": 7200
+      },
+      "group_id": "occt-single20-github-1543",
+      "suite": {
+        "id": "occt-single20-github-1543-checks",
+        "version": "1"
+      },
+      "source_id": "occt-single20-a016080bf673",
+      "baseline_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+      "baseline_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+      "source_kind": "natural historical commit",
+      "frozen_replay": "frozen-replay-05",
+      "reference_commit": "d3c3366e548feb691481082dac90e9c5274010bb",
+      "reference_tree_sha256": "d5de5fa56ada88f607e4242890eaae6a85f9fa266586d5f49f0dc2cbbff38b2e",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT/issues/1543",
+      "verdict": "PASS",
+      "checkpoints": [
+        {
+          "role": "b",
+          "id": "github-1543-neighborhood_offset",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/b/github-1543-neighborhood_offset/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "b",
+          "id": "github-1543-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/b/github-1543-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "b",
+          "id": "github-1543-original",
+          "category": "original",
+          "status": "geometry_fail",
+          "process_return_code": 1,
+          "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/b/github-1543-original/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "b",
+          "id": "github-1543-regression_passing_phase",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/b/github-1543-regression_passing_phase/result.json",
+          "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+        },
+        {
+          "role": "f",
+          "id": "github-1543-neighborhood_offset",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/f/github-1543-neighborhood_offset/result.json",
+          "runtime_binaries_sha256": "1f9fac347e7762dda19fc26d1ee6c26d721720475e7647c82242262e08be668c"
+        },
+        {
+          "role": "f",
+          "id": "github-1543-neighborhood_rigid",
+          "category": "neighborhood",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/f/github-1543-neighborhood_rigid/result.json",
+          "runtime_binaries_sha256": "1f9fac347e7762dda19fc26d1ee6c26d721720475e7647c82242262e08be668c"
+        },
+        {
+          "role": "f",
+          "id": "github-1543-original",
+          "category": "original",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/f/github-1543-original/result.json",
+          "runtime_binaries_sha256": "1f9fac347e7762dda19fc26d1ee6c26d721720475e7647c82242262e08be668c"
+        },
+        {
+          "role": "f",
+          "id": "github-1543-regression_passing_phase",
+          "category": "regression",
+          "status": "geometry_pass",
+          "process_return_code": 0,
+          "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/f/github-1543-regression_passing_phase/result.json",
+          "runtime_binaries_sha256": "1f9fac347e7762dda19fc26d1ee6c26d721720475e7647c82242262e08be668c"
+        }
+      ],
+      "snapshots": {
+        "b": "84f07061d1a3c7f0f75b7afd6936241c88ae97d2a3cd6176d78b9b96e914fdc4",
+        "f": "84f07061d1a3c7f0f75b7afd6936241c88ae97d2a3cd6176d78b9b96e914fdc4"
+      },
+      "evidence_file": "evidence.json",
+      "result_path_namespace": "tar archive member path",
+      "negative_controls": {
+        "job": "github1543-f-calibration-01",
+        "rejected": [
+          "negative_empty",
+          "negative_shifted",
+          "negative_unchanged"
+        ]
+      },
+      "full_snapshots_reverified": true
+    }
+  ]
+}

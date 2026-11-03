@@ -1,0 +1,62 @@
+[
+  {
+    "issue": 26243,
+    "label": "m26243-b-input-legality-01",
+    "build_job": "m26243-natural-b-build-01",
+    "plan": "m26243-input-legality-plan.json"
+  },
+  {
+    "issue": 26243,
+    "label": "m26243-f-input-legality-01",
+    "build_job": "m26243-direct-reference-build-01",
+    "plan": "m26243-input-legality-plan.json"
+  },
+  {
+    "issue": 26910,
+    "label": "m26910-b-input-legality-01",
+    "build_job": "m26796-natural-b-build-01",
+    "plan": "m26910-input-legality-plan.json"
+  },
+  {
+    "issue": 26910,
+    "label": "m26910-f-input-legality-01",
+    "build_job": "common-2016-f-build-02",
+    "plan": "m26910-input-legality-plan.json"
+  },
+  {
+    "issue": 25111,
+    "label": "m25111-b-input-legality-01",
+    "build_job": "m25111-derived-b-build-01",
+    "plan": "m25111-input-legality-plan.json"
+  },
+  {
+    "issue": 25111,
+    "label": "m25111-f-input-legality-01",
+    "build_job": "m26243-natural-b-build-01",
+    "plan": "m25111-input-legality-plan.json"
+  },
+  {
+    "issue": 26796,
+    "label": "m26796-b-input-legality-01",
+    "build_job": "m26796-natural-b-build-01",
+    "plan": "m26796-input-legality-plan.json"
+  },
+  {
+    "issue": 26796,
+    "label": "m26796-f-input-legality-01",
+    "build_job": "common-2016-f-build-02",
+    "plan": "m26796-input-legality-plan.json"
+  },
+  {
+    "issue": 24418,
+    "label": "m24418-b-input-legality-01",
+    "build_job": "common-2016-f-build-02",
+    "plan": "m24418-input-legality-plan.json"
+  },
+  {
+    "issue": 24418,
+    "label": "m24418-f-input-legality-01",
+    "build_job": "m24418-natural-f-build-01",
+    "plan": "m24418-input-legality-plan.json"
+  }
+]

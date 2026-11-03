@@ -1,0 +1,112 @@
+{
+  "issue_id": "occt-25818",
+  "issue_version": "1",
+  "title": "OCCT M25818 · 无界平面求交的完整直线",
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "group_id": "occt-single20-25818",
+  "suite": {
+    "id": "occt-single20-25818-checks",
+    "version": "1"
+  },
+  "source_id": "occt-single20-m25818-32ab8bfc4f09",
+  "baseline_commit": "32ab8bfc4f09acb95d1f8403f4d44f5afad97b8b",
+  "baseline_tree_sha256": "cca2aa3bd5541ec361da198125ab731fec5cd6849b992136be0de552f77d3df5",
+  "source_kind": "curator-derived inverse source patch",
+  "frozen_replay": "frozen-replay-02",
+  "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+  "upstream_url": "https://occt3d.com/dev/tickets/0025818/",
+  "verdict": "PASS",
+  "checkpoints": [
+    {
+      "role": "b",
+      "id": "25818-neighborhood_mixed_domain",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-02/occt-single20-25818/b/25818-neighborhood_mixed_domain/result.json",
+      "runtime_binaries_sha256": "5cde4849a5614db5ce944d68f461476b580a24018332f96a1333fdb259091189"
+    },
+    {
+      "role": "b",
+      "id": "25818-neighborhood_rigid",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-02/occt-single20-25818/b/25818-neighborhood_rigid/result.json",
+      "runtime_binaries_sha256": "5cde4849a5614db5ce944d68f461476b580a24018332f96a1333fdb259091189"
+    },
+    {
+      "role": "b",
+      "id": "25818-original",
+      "category": "original",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-02/occt-single20-25818/b/25818-original/result.json",
+      "runtime_binaries_sha256": "5cde4849a5614db5ce944d68f461476b580a24018332f96a1333fdb259091189"
+    },
+    {
+      "role": "b",
+      "id": "25818-regression_bounded",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-02/occt-single20-25818/b/25818-regression_bounded/result.json",
+      "runtime_binaries_sha256": "5cde4849a5614db5ce944d68f461476b580a24018332f96a1333fdb259091189"
+    },
+    {
+      "role": "f",
+      "id": "25818-neighborhood_mixed_domain",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-02/occt-single20-25818/f/25818-neighborhood_mixed_domain/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "f",
+      "id": "25818-neighborhood_rigid",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-02/occt-single20-25818/f/25818-neighborhood_rigid/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "f",
+      "id": "25818-original",
+      "category": "original",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-02/occt-single20-25818/f/25818-original/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "f",
+      "id": "25818-regression_bounded",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-02/occt-single20-25818/f/25818-regression_bounded/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    }
+  ],
+  "snapshots": {
+    "b": "d79a6689feb768facb1e58cdfb8154b91c78928db5aad738a00ea5808d3f2ab5",
+    "f": "d79a6689feb768facb1e58cdfb8154b91c78928db5aad738a00ea5808d3f2ab5"
+  },
+  "evidence_file": "evidence.json",
+  "result_path_namespace": "tar archive member path",
+  "negative_controls": {
+    "job": "m25818-f-calibration-02",
+    "rejected": [
+      "negative_missing",
+      "negative_shifted",
+      "negative_truncated"
+    ]
+  },
+  "full_snapshots_reverified": true
+}

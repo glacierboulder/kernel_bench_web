@@ -1,0 +1,35 @@
+{
+  "sha": "9d32c463ad2e3a2abc768dcaabd01e69a7e00b27",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOjlkMzJjNDYzYWQyZTNhMmFiYzc2OGRjYWFiZDAxZTY5YTdlMDBiMjc=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/9d32c463ad2e3a2abc768dcaabd01e69a7e00b27",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/9d32c463ad2e3a2abc768dcaabd01e69a7e00b27",
+  "author": {
+    "name": "nbv",
+    "email": "nbv@opencascade.com",
+    "date": "2015-05-07T13:14:09Z"
+  },
+  "committer": {
+    "name": "abv",
+    "email": "abv@opencascade.com",
+    "date": "2015-05-08T05:51:43Z"
+  },
+  "tree": {
+    "sha": "ec3a9a589b41cbd2f041af44bcbf295d40aedcaf",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/ec3a9a589b41cbd2f041af44bcbf295d40aedcaf"
+  },
+  "message": "0025890: Intersection algorithm produces curves overlaped\n\n1. Function IntImp_Int2S::ChangePoint() has been added (see cdl for detail information).\n2. Attempt to forbidden break WLine if it goes along surface boundary.\n\nCode optimization.\n\n2nd optimization\n\nTest case for issue CR25890",
+  "parents": [
+    {
+      "sha": "4946f2d8efa30a59a20134b3cc39b0048ad18692",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/4946f2d8efa30a59a20134b3cc39b0048ad18692",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/4946f2d8efa30a59a20134b3cc39b0048ad18692"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

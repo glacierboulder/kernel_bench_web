@@ -1,0 +1,29 @@
+{
+  "label": "m25818-derived-b-build-01",
+  "started_at": "2026-11-02T11:46:27.876522+00:00",
+  "source_commit": "32ab8bfc4f09acb95d1f8403f4d44f5afad97b8b",
+  "git_tree": "db328c324886998c3d39ce114c7c1caf0649d786",
+  "source_tree_sha256": "cca2aa3bd5541ec361da198125ab731fec5cd6849b992136be0de552f77d3df5",
+  "model_called": false,
+  "compiler_jobs": 2,
+  "toolchain": "occt-v4-clang10-o0-tcl86",
+  "worker_sha256": "3bace75af607a1c52aca0191cb7f5f950f35cb52d32064cc81fcbcbd7ee12c38",
+  "status": "built",
+  "origin_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "origin_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+  "source_kind": "curator-derived inverse patch",
+  "inverse_patch_sha256": "391c3a094bba4e97d3560bbd5de532079f9249aba8025b192343849b89d506c1",
+  "reference_patch_sha256": "d234b93e0ed3ff6ea37b381574de9a866cef7e1edeeafb9a1dc102aa3dc35fde",
+  "changed_files": [
+    "src/IntTools/IntTools_FaceFace.cxx"
+  ],
+  "cache_receipt_sha256": "e9e8f08e77fc823099dad504aa655935f7bae163ce14ff66c9d92af522598715",
+  "build_helper_sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305",
+  "build_exit_code": 0,
+  "build_seconds": 8.417622620996553,
+  "build_log_sha256": "3d01fdd6113ad74b1800c6b9da2b0a642ccd0ebd0f0a2bbf2b0de0658cea8682",
+  "libraries": {},
+  "final_source_tree_sha256": "cca2aa3bd5541ec361da198125ab731fec5cd6849b992136be0de552f77d3df5",
+  "source_unchanged": true,
+  "finished_at": "2026-11-02T11:46:42.223821+00:00"
+}

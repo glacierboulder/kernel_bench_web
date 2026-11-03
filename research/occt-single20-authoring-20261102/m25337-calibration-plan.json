@@ -1,0 +1,125 @@
+{
+  "issue": 25337,
+  "cases": [
+    {
+      "script": "occt-25337/1/negative_duplicate.tcl",
+      "id": "negative_duplicate",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "fuse_completed",
+        "fuse_valid",
+        "fuse_area",
+        "fuse_centroid",
+        "common_completed",
+        "common_valid",
+        "common_area",
+        "common_centroid"
+      ]
+    },
+    {
+      "script": "occt-25337/1/negative_empty.tcl",
+      "id": "negative_empty",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "fuse_completed",
+        "fuse_valid",
+        "fuse_area",
+        "fuse_centroid",
+        "common_completed",
+        "common_valid",
+        "common_area",
+        "common_centroid"
+      ]
+    },
+    {
+      "script": "occt-25337/1/negative_input_only.tcl",
+      "id": "negative_input_only",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "fuse_completed",
+        "fuse_valid",
+        "fuse_area",
+        "fuse_centroid",
+        "common_completed",
+        "common_valid",
+        "common_area",
+        "common_centroid"
+      ]
+    },
+    {
+      "script": "occt-25337/1/negative_shifted.tcl",
+      "id": "negative_shifted",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "fuse_completed",
+        "fuse_valid",
+        "fuse_area",
+        "fuse_centroid",
+        "common_completed",
+        "common_valid",
+        "common_area",
+        "common_centroid"
+      ]
+    },
+    {
+      "script": "occt-25337/1/neighborhood_frame.tcl",
+      "id": "neighborhood_frame",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "fuse_completed",
+        "fuse_valid",
+        "fuse_area",
+        "fuse_centroid",
+        "common_completed",
+        "common_valid",
+        "common_area",
+        "common_centroid"
+      ]
+    },
+    {
+      "script": "occt-25337/1/neighborhood_overlap.tcl",
+      "id": "neighborhood_overlap",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "fuse_completed",
+        "fuse_valid",
+        "fuse_area",
+        "fuse_centroid",
+        "common_completed",
+        "common_valid",
+        "common_area",
+        "common_centroid"
+      ]
+    },
+    {
+      "script": "occt-25337/1/original.tcl",
+      "id": "original",
+      "category": "original",
+      "expected_assertion_ids": [
+        "fuse_completed",
+        "fuse_valid",
+        "fuse_area",
+        "fuse_centroid",
+        "common_completed",
+        "common_valid",
+        "common_area",
+        "common_centroid"
+      ]
+    },
+    {
+      "script": "occt-25337/1/regression_disjoint.tcl",
+      "id": "regression_disjoint",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "fuse_completed",
+        "fuse_valid",
+        "fuse_area",
+        "fuse_centroid",
+        "common_completed",
+        "common_valid",
+        "common_area",
+        "common_centroid"
+      ]
+    }
+  ]
+}

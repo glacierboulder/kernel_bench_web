@@ -1,0 +1,35 @@
+{
+  "sha": "a3d4053c158a7fc1300fa1a8d0a4e94bc43ca07d",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOmEzZDQwNTNjMTU4YTdmYzEzMDBmYTFhOGQwYTRlOTRiYzQzY2EwN2Q=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/a3d4053c158a7fc1300fa1a8d0a4e94bc43ca07d",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/a3d4053c158a7fc1300fa1a8d0a4e94bc43ca07d",
+  "author": {
+    "name": "vpa",
+    "email": "vpa@opencascade.com",
+    "date": "2016-10-31T13:34:15Z"
+  },
+  "committer": {
+    "name": "apn",
+    "email": "apn@opencascade.com",
+    "date": "2016-11-07T13:32:39Z"
+  },
+  "tree": {
+    "sha": "096f7f41e68371383dbd75502aff11c8f83eb330",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/096f7f41e68371383dbd75502aff11c8f83eb330"
+  },
+  "message": "0027868: Visualization - AIS_InteractiveContext::Remove() might keep removed object in selection list\n\n- AIS_InteractiveContext::unhighlightOwners is corrected to handle all objects in selection regardless of owner's selection state",
+  "parents": [
+    {
+      "sha": "10c5aa00b03ee01fa5f1ab0278b2d4f5b0668d27",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/10c5aa00b03ee01fa5f1ab0278b2d4f5b0668d27",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/10c5aa00b03ee01fa5f1ab0278b2d4f5b0668d27"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

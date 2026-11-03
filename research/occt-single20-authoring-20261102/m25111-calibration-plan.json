@@ -1,0 +1,96 @@
+{
+  "issue": 25111,
+  "cases": [
+    {
+      "script": "occt-25111/1/negative_empty.tcl",
+      "id": "negative_empty",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "section_length",
+        "analytic_support",
+        "connected_component",
+        "endpoint_and_branch_coverage"
+      ]
+    },
+    {
+      "script": "occt-25111/1/negative_missing.tcl",
+      "id": "negative_missing",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "section_length",
+        "analytic_support",
+        "connected_component",
+        "endpoint_and_branch_coverage"
+      ]
+    },
+    {
+      "script": "occt-25111/1/negative_shifted.tcl",
+      "id": "negative_shifted",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "section_length",
+        "analytic_support",
+        "connected_component",
+        "endpoint_and_branch_coverage"
+      ]
+    },
+    {
+      "script": "occt-25111/1/neighborhood_scale.tcl",
+      "id": "neighborhood_scale",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "section_length",
+        "analytic_support",
+        "connected_component",
+        "endpoint_and_branch_coverage"
+      ]
+    },
+    {
+      "script": "occt-25111/1/neighborhood_translation.tcl",
+      "id": "neighborhood_translation",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "section_length",
+        "analytic_support",
+        "connected_component",
+        "endpoint_and_branch_coverage"
+      ]
+    },
+    {
+      "script": "occt-25111/1/original.tcl",
+      "id": "original",
+      "category": "original",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "section_length",
+        "analytic_support",
+        "connected_component",
+        "endpoint_and_branch_coverage"
+      ]
+    },
+    {
+      "script": "occt-25111/1/regression_cone_plane.tcl",
+      "id": "regression_cone_plane",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "section_length",
+        "analytic_support",
+        "connected_component",
+        "endpoint_and_branch_coverage"
+      ]
+    }
+  ]
+}

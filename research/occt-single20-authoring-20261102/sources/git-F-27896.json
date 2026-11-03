@@ -1,0 +1,35 @@
+{
+  "sha": "f73c584ceb841cd6558e61ca694f60af7c0cec44",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOmY3M2M1ODRjZWI4NDFjZDY1NThlNjFjYTY5NGY2MGFmN2MwY2VjNDQ=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/f73c584ceb841cd6558e61ca694f60af7c0cec44",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/f73c584ceb841cd6558e61ca694f60af7c0cec44",
+  "author": {
+    "name": "nbv",
+    "email": "nbv@opencascade.com",
+    "date": "2016-10-28T06:37:38Z"
+  },
+  "committer": {
+    "name": "apn",
+    "email": "apn@opencascade.com",
+    "date": "2016-11-08T12:15:11Z"
+  },
+  "tree": {
+    "sha": "0351c5118fc32feaac812060b322d115cf3e46dc",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/0351c5118fc32feaac812060b322d115cf3e46dc"
+  },
+  "message": "0027896: Prm-Prm intersection algo returns wrong result if it is called with start intersection point, which lies in the domain boundary\n\nPurger has been disabled (in IntPatch_PrmPrmIntersection algorithm) if some points have been added in the Walking line (it is stupidly, first, to insert some points in the line and, after that, to delete points from this line).\n\nSome improvements in IntWalk_PWalking::SeekPointOnBoundary(...) method have been made (see comments in the code for detail information).\n\nSome test cases have been adjusted according to their new behavior.",
+  "parents": [
+    {
+      "sha": "a3d4053c158a7fc1300fa1a8d0a4e94bc43ca07d",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/a3d4053c158a7fc1300fa1a8d0a4e94bc43ca07d",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/a3d4053c158a7fc1300fa1a8d0a4e94bc43ca07d"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

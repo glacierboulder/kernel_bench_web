@@ -1,0 +1,14 @@
+{
+  "issue": 12507,
+  "cases": [
+    {
+      "script": "occt-12507/1/original_probe.tcl",
+      "id": "original_probe",
+      "category": "original",
+      "expected_assertion_ids": [
+        "tangent_vertex",
+        "circle_lengths"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-24097",
+  "version": "1",
+  "title": "OCCT · 短截交曲线被截断",
+  "kind": "single",
+  "source_id": "occt-single20-5163f4671951",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-24097",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single20-24097-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

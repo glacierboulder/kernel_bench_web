@@ -1,0 +1,14 @@
+{
+  "issue": 33904,
+  "cases": [
+    {
+      "script": "occt-33904/1/original_probe.tcl",
+      "id": "original_probe",
+      "category": "original",
+      "expected_assertion_ids": [
+        "hollow_volume",
+        "valid_result"
+      ]
+    }
+  ]
+}

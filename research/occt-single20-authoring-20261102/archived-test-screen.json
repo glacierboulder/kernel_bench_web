@@ -1,0 +1,776 @@
+[
+  {
+    "issue": 12507,
+    "path": "tests/bugs/modalg_1/bug12507",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/12507/bug12507",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checknbshapes result -vertex 3 -edge 4 -wire 0 -face 0 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 8"
+    ]
+  },
+  {
+    "issue": 17194,
+    "path": "tests/bugs/modalg_1/bug17194_1",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/17194/bug17194_1",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checknbshapes result -vertex 4 -edge 2 -wire 0 -face 0 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 7",
+      "checkprops result -l 15.8064",
+      "checkshape result"
+    ]
+  },
+  {
+    "issue": 17194,
+    "path": "tests/bugs/modalg_1/bug17194_2",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/17194/bug17194_2",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checknbshapes result -vertex 2 -edge 1 -wire 0 -face 0 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 4",
+      "checkprops result -l 54.6122",
+      "checkshape result"
+    ]
+  },
+  {
+    "issue": 22790,
+    "path": "tests/bugs/modalg_2/bug22790",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/22790/bug22790",
+    "inputs": [
+      "OCC22790-cx.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkprops result -s 1.21408e+09",
+      "checkshape result",
+      "checknbshapes result -vertex 11 -edge 12 -wire 4 -face 2 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 30"
+    ]
+  },
+  {
+    "issue": 23933,
+    "path": "tests/bugs/modalg_5/bug23933",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/23933/bug23933",
+    "inputs": [
+      "bug23933_a.brep",
+      "bug23933_b.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape a",
+      "checkshape b",
+      "checkshape result",
+      "checkprops result -s 246487"
+    ]
+  },
+  {
+    "issue": 23985,
+    "path": "tests/bugs/modalg_5/bug23985",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/23985/bug23985",
+    "inputs": [
+      "bug23985_b1.brep",
+      "bug23985_b2.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 23998,
+    "path": "tests/bugs/modalg_5/bug23998",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/23998/bug23998",
+    "inputs": [
+      "bug23998_m1s.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape result",
+      "checkprops result -l 67.026",
+      "checknbshapes result -vertex 1 -edge 1 -wire 0 -face 0 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 3"
+    ]
+  },
+  {
+    "issue": 24220,
+    "path": "tests/bugs/modalg_5/bug24220",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/24220/bug24220",
+    "inputs": [
+      "bug24220_A.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 24299,
+    "path": "tests/bugs/modalg_5/bug24299",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/24299/bug24299",
+    "inputs": [
+      "pro19653a.brep",
+      "pro19653b.brep"
+    ],
+    "missing": [
+      "pro19653a.brep",
+      "pro19653b.brep"
+    ],
+    "has_TODO": false,
+    "checks": [
+      "xdistcs i_2 s1 0 1 10 1e-5"
+    ]
+  },
+  {
+    "issue": 24313,
+    "path": "tests/bugs/modalg_5/bug24313",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/24313/bug24313",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 24811,
+    "path": "tests/bugs/modalg_5/bug24811",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/24811/bug24811",
+    "inputs": [
+      "bug24811_e1.brep",
+      "bug24811_e2.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 25111,
+    "path": "tests/bugs/modalg_5/bug25111",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/25111/bug25111",
+    "inputs": [
+      "bug25111_s1.draw",
+      "bug25111_s2.draw"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkprops result -l 53.1714",
+      "checkshape result",
+      "checknbshapes result -vertex 4 -edge 2 -wire 0 -face 0 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 7"
+    ]
+  },
+  {
+    "issue": 25237,
+    "path": "tests/bugs/modalg_5/bug25237",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/25237/bug25237",
+    "inputs": [
+      "bug25237_b26.brep",
+      "bug25237_b5.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checknbshapes result -vertex 2 -edge 1 -wire 0 -face 0 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 4"
+    ]
+  },
+  {
+    "issue": 25242,
+    "path": "tests/bugs/modalg_5/bug25242",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/25242/bug25242",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checknbshapes result -vertex 8 -edge 12 -wire 6 -face 6 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 35"
+    ]
+  },
+  {
+    "issue": 25337,
+    "path": "tests/bugs/modalg_5/bug25337_1",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/25337/bug25337_1",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkprops result -s 582.987",
+      "checkshape result",
+      "checknbshapes result -vertex 4 -edge 6 -wire 3 -face 3 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 17"
+    ]
+  },
+  {
+    "issue": 25337,
+    "path": "tests/bugs/modalg_5/bug25337_2",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/25337/bug25337_2",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkprops result -s 45.3312",
+      "checkshape result",
+      "checknbshapes result -vertex 3 -edge 3 -wire 1 -face 1 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 9"
+    ]
+  },
+  {
+    "issue": 25818,
+    "path": "tests/bugs/modalg_5/bug25818",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/25818/bug25818",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 24097,
+    "path": "tests/bugs/modalg_6/bug24097",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/24097/bug24097",
+    "inputs": [
+      "bug24097_face1.brep",
+      "bug24097_face2.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape a",
+      "checkshape b",
+      "checknbshapes result -vertex 2 -edge 1",
+      "checkprops result -l 0.125"
+    ]
+  },
+  {
+    "issue": 24161,
+    "path": "tests/bugs/modalg_6/bug24161",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/24161/bug24161",
+    "inputs": [
+      "bug24161_MirrorSolids.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape result"
+    ]
+  },
+  {
+    "issue": 25102,
+    "path": "tests/bugs/modalg_6/bug25102",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/25102/bug25102",
+    "inputs": [
+      "bug25102.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkprops result -l 49.734",
+      "checknbshapes result -edge 44"
+    ]
+  },
+  {
+    "issue": 25342,
+    "path": "tests/bugs/modalg_6/bug25342",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/25342/bug25342",
+    "inputs": [
+      "bug25342_pump2.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checknbshapes result -ref ${nbshapes_expected} -t -m \"Number of edges\""
+    ]
+  },
+  {
+    "issue": 25890,
+    "path": "tests/bugs/modalg_6/bug25890",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/25890/bug25890",
+    "inputs": [
+      "bug25890_f1.brep",
+      "bug25890_f2.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checknbshapes rr -ref \"${nbshapes_expected}\" -t -m \"Partition of 2 shapes\""
+    ]
+  },
+  {
+    "issue": 26243,
+    "path": "tests/bugs/modalg_6/bug26243_1",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26243/bug26243_1",
+    "inputs": [
+      "bug26243_anc101.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkprops result -s 272911",
+      "checkshape result",
+      "checknbshapes result -ref ${nbshapes_expected} -t -m \"Boolean operations on shapes with fillets\""
+    ]
+  },
+  {
+    "issue": 26243,
+    "path": "tests/bugs/modalg_6/bug26243_2",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26243/bug26243_2",
+    "inputs": [
+      "bug26243_anc101.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkprops result -s 278545",
+      "checkshape result",
+      "checknbshapes result -ref ${nbshapes_expected} -t -m \"Boolean operations on shapes with fillets\""
+    ]
+  },
+  {
+    "issue": 26243,
+    "path": "tests/bugs/modalg_6/bug26243_3",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26243/bug26243_3",
+    "inputs": [
+      "bug26243_anc101.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkprops result -s 606195",
+      "checkshape result",
+      "checknbshapes result -ref ${nbshapes_expected} -t -m \"Boolean operations on shapes with fillets\""
+    ]
+  },
+  {
+    "issue": 26310,
+    "path": "tests/bugs/modalg_6/bug26310_2",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26310/bug26310_2",
+    "inputs": [
+      "OCC26310-b1.brep",
+      "OCC26310-b2.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 26310,
+    "path": "tests/bugs/modalg_6/bug26310_3",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26310/bug26310_3",
+    "inputs": [
+      "OCC26310-b1.brep",
+      "OCC26310-b2.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape res1",
+      "checkshape res2",
+      "checknbshapes res1 -wire 6 -face 6 -shell 1 -solid 1 -t",
+      "checknbshapes res2 -wire 6 -face 6 -shell 1 -solid 1 -t"
+    ]
+  },
+  {
+    "issue": 26310,
+    "path": "tests/bugs/modalg_6/bug26310_4",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26310/bug26310_4",
+    "inputs": [
+      "OCC26310-b1.brep",
+      "OCC26310-b2.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape res1",
+      "checkshape res2",
+      "checknbshapes res1 -wire 6 -face 6 -shell 1 -solid 1 -t",
+      "checknbshapes res2 -wire 6 -face 6 -shell 1 -solid 1 -t"
+    ]
+  },
+  {
+    "issue": 26450,
+    "path": "tests/bugs/modalg_6/bug26450",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26450/bug26450",
+    "inputs": [
+      "bug26450_a.brep",
+      "bug26450_b.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 26675,
+    "path": "tests/bugs/modalg_6/bug26675",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26675/bug26675",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "set GoodNbCurv 1",
+      "xdistcs res_$ic ss_1 U1 U2 10 4.6e-6",
+      "xdistcs res_$ic ss_2 U1 U2 10 4.3e-6",
+      "if {[expr {$ic - 1}] == $GoodNbCurv} {"
+    ]
+  },
+  {
+    "issue": 26796,
+    "path": "tests/bugs/modalg_6/bug26796",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26796/bug26796",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape result",
+      "checknbshapes result -solid 4",
+      "checkprops result -v 2852.9 -s 41403.1"
+    ]
+  },
+  {
+    "issue": 26910,
+    "path": "tests/bugs/modalg_6/bug26910",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26910/bug26910",
+    "inputs": [
+      "bug26910.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 27221,
+    "path": "tests/bugs/modalg_6/bug27221",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/27221/bug27221",
+    "inputs": [
+      "bug27221.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkprops result -v 56860.2",
+      "checkprops result -s 72076",
+      "checkshape result",
+      "checknbshapes result -solid 1 -shell 1 -face 18 -t -m \"NbShapes in result\""
+    ]
+  },
+  {
+    "issue": 27269,
+    "path": "tests/bugs/modalg_6/bug27269",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/27269/bug27269",
+    "inputs": [
+      "bug27267_cmpd.brep"
+    ],
+    "missing": [
+      "bug27267_cmpd.brep"
+    ],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 27896,
+    "path": "tests/bugs/modalg_6/bug27896",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/27896/bug27896",
+    "inputs": [
+      "bug25319_S1.brep",
+      "bug25319_S2.brep"
+    ],
+    "missing": [
+      "bug25319_S1.brep",
+      "bug25319_S2.brep"
+    ],
+    "has_TODO": false,
+    "checks": [
+      "set GoodNbCurves 2",
+      "if { $NbCurv1 != $GoodNbCurves } {",
+      "puts \"Error in case 1: $GoodNbCurves curve(s) is expected but $NbCurv1 is found\"",
+      "if { $NbCurv2 != $GoodNbCurves } {",
+      "puts \"Error in case 2: $GoodNbCurves curve(s) is expected but $NbCurv2 is found\""
+    ]
+  },
+  {
+    "issue": 24418,
+    "path": "tests/bugs/modalg_7/bug24418_1",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/24418/bug24418_1",
+    "inputs": [
+      "OCC20964_revsolid.brep",
+      "OCC20964_sphere.brep"
+    ],
+    "missing": [
+      "OCC20964_revsolid.brep",
+      "OCC20964_sphere.brep"
+    ],
+    "has_TODO": true,
+    "checks": [
+      "xdistcs ii_2 s1 u1 u2 10 2.0e-7",
+      "xdistcs ii_2 s2 u1 u2 10 2.0e-7"
+    ]
+  },
+  {
+    "issue": 24418,
+    "path": "tests/bugs/modalg_7/bug24418_2",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/24418/bug24418_2",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": true,
+    "checks": [
+      "xdistcs ii_1 s1 u1 u2 10 2.0e-7",
+      "xdistcs ii_1 s2 u1 u2 10 2.0e-7"
+    ]
+  },
+  {
+    "issue": 24429,
+    "path": "tests/bugs/modalg_7/bug24429",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/24429/bug24429",
+    "inputs": [
+      "bug24429_s1.draw",
+      "bug24429_s2.draw"
+    ],
+    "missing": [],
+    "has_TODO": true,
+    "checks": []
+  },
+  {
+    "issue": 25385,
+    "path": "tests/bugs/modalg_7/bug25385",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/25385/bug25385",
+    "inputs": [
+      "bug25385_shell2.brep"
+    ],
+    "missing": [],
+    "has_TODO": true,
+    "checks": []
+  },
+  {
+    "issue": 25983,
+    "path": "tests/bugs/modalg_7/bug25983",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/25983/bug25983",
+    "inputs": [
+      "bug25983_deform-fusion1-tcl-BSpline.brep"
+    ],
+    "missing": [],
+    "has_TODO": true,
+    "checks": [
+      "checkshape result"
+    ]
+  },
+  {
+    "issue": 26776,
+    "path": "tests/bugs/modalg_7/bug26776",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26776/bug26776",
+    "inputs": [
+      "bug26580-plate-2.brep",
+      "bug26776_b2.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape result",
+      "checknbshapes result -vertex 2 -edge 1",
+      "checkprops result -l 27.3439"
+    ]
+  },
+  {
+    "issue": 27227,
+    "path": "tests/bugs/modalg_7/bug27227",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/27227/bug27227",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 28195,
+    "path": "tests/bugs/modalg_7/bug28195_1",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/28195/bug28195_1",
+    "inputs": [
+      "bug28195_solidsOK.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape s",
+      "checkshape r_1"
+    ]
+  },
+  {
+    "issue": 28195,
+    "path": "tests/bugs/modalg_7/bug28195_2",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/28195/bug28195_2",
+    "inputs": [
+      "bug28195_solidsKO.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape s",
+      "checkshape r_1"
+    ]
+  },
+  {
+    "issue": 28216,
+    "path": "tests/bugs/modalg_7/bug28216",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/28216/bug28216",
+    "inputs": [
+      "bug28216_initSurf.brep",
+      "bug28216_solid.brep"
+    ],
+    "missing": [],
+    "has_TODO": true,
+    "checks": [
+      "checknbshapes r_section -vertex 4 -edge 3 -m \"bopsection\"",
+      "checknbshapes r_common -vertex 4 -edge 3 -m \"bopcommon\""
+    ]
+  },
+  {
+    "issue": 28274,
+    "path": "tests/bugs/modalg_7/bug28274",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/28274/bug28274",
+    "inputs": [
+      "bug28274_tmp.brep"
+    ],
+    "missing": [],
+    "has_TODO": true,
+    "checks": [
+      "checkshape result"
+    ]
+  },
+  {
+    "issue": 28366,
+    "path": "tests/bugs/modalg_7/bug28366",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/28366/bug28366",
+    "inputs": [
+      "bug28366_fuselage.stp"
+    ],
+    "missing": [
+      "bug28366_fuselage.stp"
+    ],
+    "has_TODO": true,
+    "checks": []
+  },
+  {
+    "issue": 28388,
+    "path": "tests/bugs/modalg_7/bug28388_1",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/28388/bug28388_1",
+    "inputs": [
+      "bug28388_extKO.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape e_1",
+      "checkshape e_2",
+      "checkshape r_1"
+    ]
+  },
+  {
+    "issue": 28388,
+    "path": "tests/bugs/modalg_7/bug28388_2",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/28388/bug28388_2",
+    "inputs": [
+      "bug28388_extOK.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape e_1",
+      "checkshape e_2",
+      "checkshape r_1"
+    ]
+  },
+  {
+    "issue": 29038,
+    "path": "tests/bugs/modalg_7/bug29038",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/29038/bug29038",
+    "inputs": [
+      "bug29038_bfuse_hang.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 2755,
+    "path": "tests/bugs/moddata_2/bug2755",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/2755/bug2755",
+    "inputs": [
+      "OCC2755.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "checkshape a"
+    ]
+  },
+  {
+    "issue": 23981,
+    "path": "tests/bugs/moddata_3/bug23981",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/23981/bug23981",
+    "inputs": [
+      "bug23981_s1.draw",
+      "bug23981_s2.draw"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "xdistcs i_1 s1 0 1 100 1e-7",
+      "xdistcs i_2 s1 0 1 100 1e-7"
+    ]
+  },
+  {
+    "issue": 24142,
+    "path": "tests/bugs/moddata_3/bug24142",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/24142/bug24142",
+    "inputs": [
+      "OCC152.brep"
+    ],
+    "missing": [
+      "OCC152.brep"
+    ],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 24696,
+    "path": "tests/perf/modalg/bug24696",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/24696/bug24696",
+    "inputs": [
+      "bug24696_cx_e1200_nurbs.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 26310,
+    "path": "tests/perf/modalg/bug26310_1",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26310/bug26310_1",
+    "inputs": [
+      "OCC26310-b1.brep",
+      "OCC26310-b2.brep"
+    ],
+    "missing": [],
+    "has_TODO": false,
+    "checks": [
+      "set GoodNbCurv 4",
+      "if {${NbCurv} != ${GoodNbCurv}} {",
+      "if {${NbCurv} != ${GoodNbCurv}} {"
+    ]
+  },
+  {
+    "issue": 26327,
+    "path": "tests/perf/modalg/bug26327",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26327/bug26327",
+    "inputs": [
+      "bug26327_fuse_input.stp"
+    ],
+    "missing": [
+      "bug26327_fuse_input.stp"
+    ],
+    "has_TODO": false,
+    "checks": []
+  },
+  {
+    "issue": 26447,
+    "path": "tests/perf/modalg/bug26447",
+    "file": "/Users/fengxic/Desktop/cad experiment/authoring-inputs/20261102/archived-tests/26447/bug26447",
+    "inputs": [],
+    "missing": [],
+    "has_TODO": false,
+    "checks": []
+  }
+]

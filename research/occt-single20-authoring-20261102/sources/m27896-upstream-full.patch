@@ -1,0 +1,417 @@
+diff --git a/src/Draft/Draft_Modification_1.cxx b/src/Draft/Draft_Modification_1.cxx
+index e7928c9766..26bd3106f3 100644
+--- a/src/Draft/Draft_Modification_1.cxx
++++ b/src/Draft/Draft_Modification_1.cxx
+@@ -1574,10 +1574,22 @@ void Draft_Modification::Perform ()
+         anIntCurv->D1(aParF, aPf, aDirNF);
+         anIntCurv->D1(aParL, aPl, aDirNL);
+ 
+-        aDirNF.Normalize();
+-        aDirNL.Normalize();
+-        aDirOF.Normalize();
+-        aDirOL.Normalize();
++        Standard_Real aSqMagn = aDirNF.SquareMagnitude();
++
++        if (aSqMagn > Precision::SquareConfusion())
++          aDirNF.Divide(sqrt(aSqMagn));
++
++        aSqMagn = aDirNL.SquareMagnitude();
++        if (aSqMagn > Precision::SquareConfusion())
++          aDirNL.Divide(sqrt(aSqMagn));
++
++        aSqMagn = aDirOF.SquareMagnitude();
++        if (aSqMagn > Precision::SquareConfusion())
++          aDirOF.Divide(sqrt(aSqMagn));
++
++        aSqMagn = aDirOL.SquareMagnitude();
++        if (aSqMagn > Precision::SquareConfusion())
++          aDirOL.Divide(sqrt(aSqMagn));
+ 
+         const Standard_Real aCosF = aDirNF.Dot(aDirOF), aCosL = aDirNL.Dot(aDirOL);
+         const Standard_Real aCosMax = Abs(aCosF) > Abs(aCosL) ? aCosF : aCosL;
+diff --git a/src/IntPatch/IntPatch_ImpPrmIntersection.cxx b/src/IntPatch/IntPatch_ImpPrmIntersection.cxx
+index 5c270f05ff..8f773cd058 100644
+--- a/src/IntPatch/IntPatch_ImpPrmIntersection.cxx
++++ b/src/IntPatch/IntPatch_ImpPrmIntersection.cxx
+@@ -1404,13 +1404,28 @@ void IntPatch_ImpPrmIntersection::Perform (const Handle(Adaptor3d_HSurface)& Sur
+ 
+   for (Standard_Integer i=1, aNbLin = slin.Length(); i<=aNbLin; i++)
+   {
+-    Handle(IntPatch_Line)& aL = slin(i);
++    Handle(IntPatch_PointLine) aL = Handle(IntPatch_PointLine)::DownCast(slin(i));
+     
+     if (!reversed)
+       IntPatch_RstInt::PutVertexOnLine(aL,Surf1,D1,Surf2,Standard_True,TolTang);
+     else
+       IntPatch_RstInt::PutVertexOnLine(aL,Surf2,D2,Surf1,Standard_False,TolTang);
+ 
++    if (aL->NbPnts() <= 2)
++    {
++      Standard_Boolean aCond = aL->NbPnts() < 2;
++      if (!aCond)
++        aCond = (aL->Point(1).IsSame(aL->Point(2), Precision::Confusion()));
++
++      if (aCond)
++      {
++        slin.Remove(i);
++        i--;
++        aNbLin--;
++        continue;
++      }
++    }
++
+     if(aL->ArcType() == IntPatch_Walking)
+     {
+       const Handle(IntPatch_WLine) aWL = Handle(IntPatch_WLine)::DownCast(aL);
+diff --git a/src/IntPatch/IntPatch_PrmPrmIntersection.cxx b/src/IntPatch/IntPatch_PrmPrmIntersection.cxx
+index bed58756f9..b33c66102e 100644
+--- a/src/IntPatch/IntPatch_PrmPrmIntersection.cxx
++++ b/src/IntPatch/IntPatch_PrmPrmIntersection.cxx
+@@ -2331,30 +2331,29 @@ void IntPatch_PrmPrmIntersection::Perform (const Handle(Adaptor3d_HSurface)& Sur
+ 
+                 //
+                 Standard_Boolean bPWIsDone;
+-                Standard_Integer iPWNbPoints, aNbPointsVer;
+                 Standard_Real aD11, aD12, aD21, aD22, aDx;
+                 //
+                 bPWIsDone=PW.IsDone();
+ 
+                 if(bPWIsDone)
+                 {
+-                  iPWNbPoints=PW.NbPoints();
+-                  //
+-                  if( iPWNbPoints > 2 )
++                  Standard_Boolean hasBeenAdded = Standard_False;
++                  if(PW.NbPoints() > 2 )
+                   {
+-                    //Try to extend the intersection line to boundary, if it is possibly
++                    //Try to extend the intersection line to the boundary,
++                    //if it is possibly
+                     PW.PutToBoundary(Surf1, Surf2);
+ 
+                     const Standard_Integer aMinNbPoints = 40;
+-                    if(iPWNbPoints < aMinNbPoints)
++                    if(PW.NbPoints() < aMinNbPoints)
+                     {
+-                      PW.SeekAdditionalPoints(Surf1, Surf2, aMinNbPoints);
+-                      iPWNbPoints = PW.NbPoints();
++                      hasBeenAdded = PW.SeekAdditionalPoints(Surf1, Surf2, aMinNbPoints);
+                     }
+                     
++                    Standard_Integer iPWNbPoints = PW.NbPoints(), aNbPointsVer = 0;
+                     RejectLine = Standard_False;
+                     Point3dDebut = PW.Value(1).Value();
+-                    Point3dFin   = PW.Value(iPWNbPoints).Value();
++                    Point3dFin = PW.Value(iPWNbPoints).Value();
+                     for( ver = 1; (!RejectLine) && (ver<= NbLigCalculee); ++ver)
+                     {
+                       const Handle(IntPatch_WLine)& verwline = *((Handle(IntPatch_WLine)*)&SLin.Value(ver));
+@@ -2450,6 +2449,7 @@ void IntPatch_PrmPrmIntersection::Perform (const Handle(Adaptor3d_HSurface)& Sur
+ 
+                       Standard_Real TolTang = TolTangency;
+                       Handle(IntPatch_WLine) wline = new IntPatch_WLine(PW.Line(),Standard_False,trans1,trans2);
++                      wline->EnablePurging(!hasBeenAdded);
+                       IntPatch_RstInt::PutVertexOnLine(wline,Surf1,D1,Surf2,Standard_True,TolTang);
+                       IntPatch_RstInt::PutVertexOnLine(wline,Surf2,D2,Surf1,Standard_False,TolTang);
+                       if(wline->NbVertex() == 0)
+@@ -2583,12 +2583,13 @@ void IntPatch_PrmPrmIntersection::Perform (const Handle(Adaptor3d_HSurface)& Sur
+ 
+           if(PW.IsDone())
+           {
++            Standard_Boolean hasBeenAdded = Standard_False;
+             if(PW.NbPoints()>2)
+             { 
+               const Standard_Integer aMinNbPoints = 40;
+               if(PW.NbPoints() < aMinNbPoints)
+               {
+-                PW.SeekAdditionalPoints(Surf1, Surf2, aMinNbPoints);
++                hasBeenAdded = PW.SeekAdditionalPoints(Surf1, Surf2, aMinNbPoints);
+               }
+ 
+               //-----------------------------------------------
+@@ -2657,6 +2658,7 @@ void IntPatch_PrmPrmIntersection::Perform (const Handle(Adaptor3d_HSurface)& Sur
+ 
+                 Standard_Real TolTang = TolTangency;
+                 Handle(IntPatch_WLine) wline = new IntPatch_WLine(PW.Line(),Standard_False,trans1,trans2);
++                wline->EnablePurging(!hasBeenAdded);
+                 IntPatch_RstInt::PutVertexOnLine(wline,Surf1,D1,Surf2,Standard_True,TolTang);
+                 IntPatch_RstInt::PutVertexOnLine(wline,Surf2,D2,Surf1,Standard_False,TolTang);
+ 
+diff --git a/src/IntPatch/IntPatch_WLine.cxx b/src/IntPatch/IntPatch_WLine.cxx
+index f570a56a9b..2600d72cc9 100644
+--- a/src/IntPatch/IntPatch_WLine.cxx
++++ b/src/IntPatch/IntPatch_WLine.cxx
+@@ -479,7 +479,7 @@ void IntPatch_WLine::ComputeVertexParameters( const Standard_Real RTol)
+   //-- On detecte les points confondus dans la LineOn2S
+   Standard_Real dmini = Precision::Confusion();
+   dmini*=dmini;
+-  for(i=2; i<=nbponline; i++) { 
++  for(i=2; (i<=nbponline) && (nbponline > 2); i++) { 
+     const IntSurf_PntOn2S& aPnt1=curv->Value(i-1);
+     const IntSurf_PntOn2S& aPnt2=curv->Value(i);
+     Standard_Real d = (aPnt1.Value()).SquareDistance((aPnt2.Value()));
+diff --git a/src/IntWalk/IntWalk_PWalking.cxx b/src/IntWalk/IntWalk_PWalking.cxx
+index 9f585fcb5e..d11d1f164e 100644
+--- a/src/IntWalk/IntWalk_PWalking.cxx
++++ b/src/IntWalk/IntWalk_PWalking.cxx
+@@ -2298,25 +2298,131 @@ SeekPointOnBoundary(const Handle(Adaptor3d_HSurface)& theASurf1,
+   if (aSingularStatus)
+     aPnt = aSingularPnt;
+ 
+-  if(aStatus || aSingularStatus)
++  if (!aStatus && !aSingularStatus)
+   {
+-    gp_Pnt  aP1 = theASurf1->Value(aPnt(1), aPnt(2)),
+-            aP2 = theASurf2->Value(aPnt(3), aPnt(4));
+-    gp_Pnt aPInt(0.5*(aP1.XYZ() + aP2.XYZ()));
++    return isOK;
++  }
++
++  const gp_Pnt  aP1 = theASurf1->Value(aPnt(1), aPnt(2)),
++                aP2 = theASurf2->Value(aPnt(3), aPnt(4));
++  const gp_Pnt aPInt(0.5*(aP1.XYZ() + aP2.XYZ()));
++
++  const Standard_Real aSQDist = aPInt.SquareDistance(aP1);
++  if (aSQDist > aTol * aTol)
++  {
++    return isOK;
++  }
++
++  //Found point is true intersection point
++  IntSurf_PntOn2S anIP;
++  anIP.SetValue(aPInt, aPnt(1), aPnt(2), aPnt(3), aPnt(4));
+ 
+-    const Standard_Real aSQDist = aPInt.SquareDistance(aP1);
+-    if (aSQDist < aTol * aTol)
++  //The main idea of checks below is to define if insertion of
++  //addition point (on the boundary) does not lead to invalid
++  //intersection curve (e.g. having a loop).
++  //
++  //Loops are detected with rotation angle of the Walking-line (WL).
++  //If there is hairpin bend then insertion is forbidden.
++
++  //There are at least two possible problems:
++  //  1. There are some cases when two neighbor points of the WL
++  //      are almost coincident (the distance between them is less
++  //      than Precision::Confusion). It is impossible to define
++  //      rotation angle in these cases. Therefore, points with
++  //      "good" distances should be selected.
++
++  //  2. Intersection point on the surface boundary has highest
++  //      priority in compare with other "middle" points. Therefore,
++  //      if insertion of new point will result in a bend then some
++  //      "middle" points should be deleted in order to provide
++  //      correct insertion.
++
++  //Problem test cases:
++  //  test bugs modalg_5 bug24585_1
++  //  test boolean bcut_complex G7
++  //  test bugs moddata_2 bug469
++
++  if (isTheFirst)
++  {
++    while (line->NbPoints() > 1)
+     {
+-      IntSurf_PntOn2S anIP;
+-      anIP.SetValue(aPInt, aPnt(1), aPnt(2), aPnt(3), aPnt(4));
++      const Standard_Integer aNbPnts = line->NbPoints();
+ 
+-      if(isTheFirst)
+-        line->InsertBefore(1,anIP);
+-      else
+-        line->Add(anIP);
++      gp_Pnt aP1, aP2;
++      Standard_Integer aPInd = 1;
++      for (; aPInd <= aNbPnts; aPInd++)
++      {
++        aP1.SetXYZ(line->Value(aPInd).Value().XYZ());
++        if (aP1.SquareDistance(aPInt) > Precision::SquareConfusion())
++          break;
++      }
++
++      for (++aPInd; aPInd <= aNbPnts; aPInd++)
++      {
++        aP2.SetXYZ(line->Value(aPInd).Value().XYZ());
++        if (aP1.SquareDistance(aP2) > Precision::SquareConfusion())
++          break;
++      }
++
++      if (aPInd > aNbPnts)
++      {
++        return isOK;
++      }
++
++      const gp_XYZ aDir01(aP1.XYZ() - aPInt.XYZ());
++      const gp_XYZ aDir12(aP2.XYZ() - aP1.XYZ());
++
++      if (aDir01.Dot(aDir12) > 0.0)
++      {
++        break;
++      }
+ 
+-      isOK = Standard_True;
++      line->RemovePoint(1);
+     }
++
++    line->InsertBefore(1, anIP);
++    isOK = Standard_True;
++  }
++  else
++  {
++    while (line->NbPoints() > 1)
++    {
++      const Standard_Integer aNbPnts = line->NbPoints();
++
++      gp_Pnt aPPrev, aPCurr;
++      Standard_Integer aPInd = aNbPnts;
++      for (; aPInd > 0; aPInd--)
++      {
++        aPCurr.SetXYZ(line->Value(aPInd).Value().XYZ());
++        if (aPCurr.SquareDistance(aPInt) > Precision::SquareConfusion())
++          break;
++      }
++
++      for (--aPInd; aPInd > 0; aPInd--)
++      {
++        aPPrev.SetXYZ(line->Value(aPInd).Value().XYZ());
++        if (aPCurr.SquareDistance(aPPrev) > Precision::SquareConfusion())
++          break;
++      }
++
++      if (aPInd < 1)
++      {
++        return isOK;
++      }
++
++      const gp_XYZ aDirPC(aPCurr.XYZ() - aPPrev.XYZ());
++      const gp_XYZ aDirCN(aPInt.XYZ() - aPCurr.XYZ());
++
++      if (aDirPC.Dot(aDirCN) > 0.0)
++      {
++        break;
++      }
++
++      line->RemovePoint(aNbPnts);
++    }
++
++    line->Add(anIP);
++    isOK = Standard_True;
+   }
+ 
+   return isOK;
+diff --git a/src/IntWalk/IntWalk_PWalking.hxx b/src/IntWalk/IntWalk_PWalking.hxx
+index 3bac88c41c..9dd8ecb6ad 100644
+--- a/src/IntWalk/IntWalk_PWalking.hxx
++++ b/src/IntWalk/IntWalk_PWalking.hxx
+@@ -177,6 +177,12 @@ protected:
+   //! theU1, theV1, theU2 and theV2 parameters are initial parameters in
+   //! for used numeric algorithms. If isTheFirst == TRUE then
+   //! a point on theASurf1 is searched. Otherwise, the point on theASurf2 is searched.
++  //!
++  //! ATTENTION!!!
++  //!   This method can delete some points from the curve if it is necessary
++  //!   (in order to obtain correct result after insertion).
++  //!   Returns TRUE in case of success adding (i.e. can return FALSE even after
++  //!   removing some points).
+   Standard_EXPORT Standard_Boolean SeekPointOnBoundary (const Handle(Adaptor3d_HSurface)& theASurf1,
+                                                         const Handle(Adaptor3d_HSurface)& theASurf2,
+                                                         const Standard_Real theU1,
+diff --git a/tests/bugs/modalg_5/bug24585_1 b/tests/bugs/modalg_5/bug24585_1
+index 892c758e0e..9d21b945e6 100644
+--- a/tests/bugs/modalg_5/bug24585_1
++++ b/tests/bugs/modalg_5/bug24585_1
+@@ -6,7 +6,7 @@ puts ""
+ # Wrong pcurve of the section curve
+ ###########################################################
+ 
+-set ExpectedTol 5.6061116035240048e-005
++set ExpectedTol 6.0859390083974326e-005
+ set NbCurv_OK 1
+ 
+ restore [locate_data_file bug24585_b1.brep] b1
+diff --git a/tests/bugs/modalg_5/bug25319_1 b/tests/bugs/modalg_5/bug25319_1
+index fc35232bf6..1cfc1e5cba 100644
+--- a/tests/bugs/modalg_5/bug25319_1
++++ b/tests/bugs/modalg_5/bug25319_1
+@@ -6,8 +6,6 @@ puts ""
+ # Bop Common produces strange results with same shapes.
+ ########################################################################
+ 
+-puts "TODO #OCC27896 ALL: Faulty shapes in variables faulty_1 to faulty_"
+-
+ restore [locate_data_file bug25319_S1.brep] b1
+ restore [locate_data_file bug25319_S2.brep] b2
+ 
+@@ -16,5 +14,5 @@ bcommon result b1 b2
+ checkprops result -s 1690.81 
+ checkshape result
+ 
+-checknbshapes result -vertex 19 -edge 30 -wire 13 -face 13 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 78
++checknbshapes result -vertex 21 -edge 32 -wire 13 -face 13 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 82
+ checkview -display result -2d -path ${imagedir}/${test_image}.png
+diff --git a/tests/bugs/modalg_5/bug25319_2 b/tests/bugs/modalg_5/bug25319_2
+index 60cf73ecb8..8072e1f329 100644
+--- a/tests/bugs/modalg_5/bug25319_2
++++ b/tests/bugs/modalg_5/bug25319_2
+@@ -6,8 +6,6 @@ puts ""
+ # Bop Common produces strange results with same shapes.
+ ########################################################################
+ 
+-puts "TODO #OCC27896 ALL: Faulty shapes in variables faulty_1 to faulty_"
+-
+ restore [locate_data_file bug25319_S1.brep] b1
+ restore [locate_data_file bug25319_S2.brep] b2
+ 
+@@ -19,5 +17,5 @@ bcommon result b1 b2
+ checkprops result -s 1690.81 
+ checkshape result
+ 
+-checknbshapes result -vertex 19 -edge 30 -wire 13 -face 13 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 78
++checknbshapes result -vertex 21 -edge 32 -wire 13 -face 13 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 82
+ checkview -display result -2d -path ${imagedir}/${test_image}.png
+diff --git a/tests/bugs/modalg_6/bug27896 b/tests/bugs/modalg_6/bug27896
+new file mode 100644
+index 0000000000..47e1c18bc9
+--- /dev/null
++++ b/tests/bugs/modalg_6/bug27896
+@@ -0,0 +1,40 @@
++puts "============"
++puts "OCC27896"
++puts "============"
++puts ""
++###############################
++## Prm-Prm intersection algo returns wrong result if it is called with start
++## intersection point, which lies in the domain boundary
++###############################
++
++set tol_abs_Tolerance_Reached 1.0e-7
++set tol_rel_Tolerance_Reached 0.1
++set GoodNbCurves 2
++
++restore [locate_data_file bug25319_S1.brep] b1
++restore [locate_data_file bug25319_S2.brep] b2
++explode b1 f
++explode b2 f
++
++# GOOD result before the fix
++set log1 [bopcurves b1_8 b2_17 -2d -p +1.09444207768950010000 +29.00000000000000000000 +0.17740001678466785000 +2.79671571032639710000 -p +0.00000000000000000000 +26.87779254288926400000 +0.17767342824312710000 +2.80622040022304510000]
++
++# BAD result before the fix
++set log2 [bopcurves b1_8 b2_17 -2d -p +1.09444207768949960000 +29.00000000000000000000 +0.17740001678466785000 +2.79671571032639750000 -p +0.00000000000000000000 +26.87779254288926400000 +0.17767342824312710000 +2.80622040022304510000]
++
++regexp {Tolerance Reached=+([-0-9.+eE]+)\n+([-0-9.+eE]+)} ${log1} full Tolerance_Reached1 NbCurv1
++regexp {Tolerance Reached=+([-0-9.+eE]+)\n+([-0-9.+eE]+)} ${log2} full Tolerance_Reached2 NbCurv2
++
++set expected_Tolerance_Reached1 2.2611960020325053e-007
++set expected_Tolerance_Reached2 5.6963104817869286e-006
++
++checkreal "Tolerance Reached" ${Tolerance_Reached1} ${expected_Tolerance_Reached1} ${tol_abs_Tolerance_Reached} ${tol_rel_Tolerance_Reached}
++checkreal "Tolerance Reached" ${Tolerance_Reached2} ${expected_Tolerance_Reached2} ${tol_abs_Tolerance_Reached} ${tol_rel_Tolerance_Reached}
++
++if { $NbCurv1 != $GoodNbCurves } {
++  puts "Error in case 1: $GoodNbCurves curve(s) is expected but $NbCurv1 is found"
++}
++
++if { $NbCurv2 != $GoodNbCurves } {
++  puts "Error in case 2: $GoodNbCurves curve(s) is expected but $NbCurv2 is found"
++}

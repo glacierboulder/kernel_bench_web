@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "issue": "occt-github-1543",
+  "status": "qualified",
+  "source_kind": "natural historical commit",
+  "source_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+  "git_tree": "29ea14e7dce1ccb003a42e297192d4a0c561eb2b",
+  "materialized_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+  "reference": {
+    "kind": "curator port of upstream proposed patch",
+    "commit": "d3c3366e548feb691481082dac90e9c5274010bb",
+    "git_tree": "ed38a693500f75cc5dc06ad052866da16cdfc6cf",
+    "materialized_tree_sha256": "d5de5fa56ada88f607e4242890eaae6a85f9fa266586d5f49f0dc2cbbff38b2e",
+    "upstream_proposal": "https://github.com/Open-Cascade-SAS/OCCT/pull/1544",
+    "upstream_proposal_head": "850d86c592896a8b35edebb004a57f405b6d27c7",
+    "proposal_state_at_retrieval": "open",
+    "reference_patch_sha256": "71550b800438e825997080fde4726a9fcc60d34c782f5871b440ab0b4c60b0d3"
+  },
+  "qualification": {
+    "b": {
+      "label": "github1543-b-calibration-01",
+      "model_called": false,
+      "source_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+      "source_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+      "build_receipt_sha256": "b852753001bec69e1d20ba96350b0d765016f43fd302260f9ed56a0e5d1cea17",
+      "binary_manifest_sha256": "28b9c89463781222704628b1fdf4330a4732008c9904e449ffb1397dacd79d66",
+      "results": {
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_unchanged": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_offset": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_passing_phase": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T13:28:46.943831+00:00"
+    },
+    "f": {
+      "label": "github1543-f-calibration-01",
+      "model_called": false,
+      "source_commit": "d3c3366e548feb691481082dac90e9c5274010bb",
+      "source_tree_sha256": "d5de5fa56ada88f607e4242890eaae6a85f9fa266586d5f49f0dc2cbbff38b2e",
+      "build_receipt_sha256": "db5683ec1e4ab848896ccad0bb2a254afd6553bdc57f945a8764c54ad414c78a",
+      "binary_manifest_sha256": "7bb136e14502a5cee3953a795769630beee5f72c3f8363c3bd042bbfff728260",
+      "results": {
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_unchanged": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_offset": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_passing_phase": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T13:28:23.580881+00:00"
+    }
+  },
+  "stage": "unknown",
+  "stage_note": "The earliest failing internal stage has not been localized by this authoring run.",
+  "oracle": {
+    "volume_limit": 0.1,
+    "volume_expected": "Independent ideal circular-tube integral, with allowance predeclared in mgithub-1543-calibration-plan-v2.json for the 1e-4 default sweep construction tolerance and Boolean approximation.",
+    "point_classifier_tolerance": 1e-07,
+    "point_semantics": [
+      "retained cylinder core IN",
+      "interior swept profile point OUT at z=22",
+      "interior swept profile point OUT near the exit at z=29.7"
+    ],
+    "input_source": "Generated with the original upstream C++ construction on the unpatched natural baseline. The unvalidated upstream DRAW port is not used.",
+    "limits": [
+      "The volume allowance is an engineering acceptance threshold, not a certified global error bound.",
+      "Witness classification uses OCCT BRepClass3d, independently of the changed IntPatch routines."
+    ]
+  },
+  "final_qualification": "qualification.json",
+  "issue_source": "https://github.com/Open-Cascade-SAS/OCCT/issues/1543"
+}

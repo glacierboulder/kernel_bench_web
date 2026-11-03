@@ -1,0 +1,21 @@
+diff --git a/src/IntPolyh/IntPolyh_Intersection.cxx b/src/IntPolyh/IntPolyh_Intersection.cxx
+index c5be347e3e..22f05177aa 100755
+--- a/src/IntPolyh/IntPolyh_Intersection.cxx
++++ b/src/IntPolyh/IntPolyh_Intersection.cxx
+@@ -352,13 +352,15 @@ Standard_Boolean IntPolyh_Intersection::PerformMaillage(IntPolyh_PMaillageAffina
+     theMaillageS->SetEnlargeZone( myZone );
+   }
+ 
++  /*
+   // if too many intersections, consider surfaces parallel (eap)
+   if(FinTTC > 200 &&
+      (FinTTC >= theMaillageS->GetArrayOfTriangles(1).NbTriangles() ||
+       FinTTC >= theMaillageS->GetArrayOfTriangles(2).NbTriangles()) ) {
+     return Standard_False;
+   }
+-
++  */
++  
+   return Standard_True;
+ }
+ 

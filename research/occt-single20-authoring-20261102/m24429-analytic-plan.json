@@ -1,0 +1,16 @@
+{
+  "issue": 24429,
+  "qualification": "original analytic screening only",
+  "cases": [
+    {
+      "id": "analytic_probe",
+      "script": "occt-24429/1/analytic_probe.tcl",
+      "category": "original",
+      "expected_assertion_ids": [
+        "nonempty",
+        "support",
+        "coverage"
+      ]
+    }
+  ]
+}

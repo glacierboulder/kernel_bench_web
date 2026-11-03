@@ -1,0 +1,112 @@
+{
+  "issue_id": "occt-27227",
+  "issue_version": "1",
+  "title": "OCCT · 正交圆环交线未延伸至边界",
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "group_id": "occt-single20-27227",
+  "suite": {
+    "id": "occt-single20-27227-checks",
+    "version": "1"
+  },
+  "source_id": "occt-single20-cfde7eebb37b",
+  "baseline_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+  "baseline_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+  "source_kind": "natural historical commit",
+  "frozen_replay": "frozen-replay-09",
+  "reference_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+  "reference_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+  "upstream_url": "https://occt3d.com/dev/tickets/0027227/",
+  "verdict": "PASS",
+  "checkpoints": [
+    {
+      "role": "b",
+      "id": "27227-original",
+      "category": "original",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-09/occt-single20-27227/b/27227-original/result.json",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+    },
+    {
+      "role": "b",
+      "id": "27227-neighborhood_translation",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-09/occt-single20-27227/b/27227-neighborhood_translation/result.json",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+    },
+    {
+      "role": "b",
+      "id": "27227-neighborhood_swap",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-09/occt-single20-27227/b/27227-neighborhood_swap/result.json",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+    },
+    {
+      "role": "b",
+      "id": "27227-regression_plane",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-09/occt-single20-27227/b/27227-regression_plane/result.json",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+    },
+    {
+      "role": "f",
+      "id": "27227-original",
+      "category": "original",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-09/occt-single20-27227/f/27227-original/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "f",
+      "id": "27227-neighborhood_translation",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-09/occt-single20-27227/f/27227-neighborhood_translation/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "f",
+      "id": "27227-neighborhood_swap",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-09/occt-single20-27227/f/27227-neighborhood_swap/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "f",
+      "id": "27227-regression_plane",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-09/occt-single20-27227/f/27227-regression_plane/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    }
+  ],
+  "snapshots": {
+    "b": "2aa8a75e8c639f729663c9c922a42252f67a46bbe2f1711f51b8deba326a9350",
+    "f": "2aa8a75e8c639f729663c9c922a42252f67a46bbe2f1711f51b8deba326a9350"
+  },
+  "evidence_file": "evidence.json",
+  "result_path_namespace": "tar archive member path",
+  "negative_controls": {
+    "job": "m27227-f-qualification-01",
+    "rejected": [
+      "negative_empty",
+      "negative_shifted",
+      "negative_truncated"
+    ]
+  },
+  "full_snapshots_reverified": true
+}

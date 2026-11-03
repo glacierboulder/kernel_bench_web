@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-27227-checks",
+  "version": "1",
+  "title": "正交圆环交线未延伸至边界 · 几何检查",
+  "source_ids": [
+    "occt-single20-cfde7eebb37b"
+  ],
+  "group_ids": [
+    "occt-single20-27227"
+  ],
+  "checkpoints": [
+    {
+      "id": "27227-original",
+      "issue_id": "occt-27227",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-27227/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "nonempty",
+          "support",
+          "coverage"
+        ]
+      }
+    },
+    {
+      "id": "27227-neighborhood_translation",
+      "issue_id": "occt-27227",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-27227/1/neighborhood_translation.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "nonempty",
+          "support",
+          "coverage"
+        ]
+      }
+    },
+    {
+      "id": "27227-neighborhood_swap",
+      "issue_id": "occt-27227",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-27227/1/neighborhood_swap.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "nonempty",
+          "support",
+          "coverage"
+        ]
+      }
+    },
+    {
+      "id": "27227-regression_plane",
+      "issue_id": "occt-27227",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-27227/1/regression_plane.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "nonempty",
+          "support",
+          "coverage"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/single20/solid_checks.tcl",
+    "evaluation/cases/single20/occt-27227/1/analytic_geometry.tcl"
+  ]
+}

@@ -1,0 +1,107 @@
+diff --git a/src/GeomInt/GeomInt_IntSS_1.cxx b/src/GeomInt/GeomInt_IntSS_1.cxx
+index 1a3f583084..f95970b1c9 100644
+--- a/src/GeomInt/GeomInt_IntSS_1.cxx
++++ b/src/GeomInt/GeomInt_IntSS_1.cxx
+@@ -224,6 +224,37 @@ static void IntersectCurveAndBoundary(const Handle(Geom2d_Curve)& theC2d,
+   }
+ }
+ 
++//=======================================================================
++//function : isDegenerated
++//purpose  : Check if theAHC2d corresponds to a degenerated edge.
++//=======================================================================
++static Standard_Boolean isDegenerated(const Handle(GeomAdaptor_HSurface)& theGAHS,
++                                      const Handle(Adaptor2d_HCurve2d)& theAHC2d,
++                                      const Standard_Real theFirstPar,
++                                      const Standard_Real theLastPar)
++{
++  const Standard_Real aSqTol = Precision::Confusion()*Precision::Confusion();
++  gp_Pnt2d aP2d;
++  gp_Pnt aP1, aP2;
++
++  theAHC2d->D0(theFirstPar, aP2d);
++  theGAHS->D0(aP2d.X(), aP2d.Y(), aP1);
++
++  theAHC2d->D0(theLastPar, aP2d);
++  theGAHS->D0(aP2d.X(), aP2d.Y(), aP2);
++
++  if(aP1.SquareDistance(aP2) > aSqTol)
++    return Standard_False;
++
++  theAHC2d->D0(0.5*(theFirstPar+theLastPar), aP2d);
++  theGAHS->D0(aP2d.X(), aP2d.Y(), aP2);
++
++  if(aP1.SquareDistance(aP2) > aSqTol)
++    return Standard_False;
++
++  return Standard_True;
++}
++
+ //=======================================================================
+ //function : MakeCurve
+ //purpose  : 
+@@ -1117,6 +1148,12 @@ void GeomInt_IntSS::TreatRLine(const Handle(IntPatch_RLine)& theRL,
+   {
+     return;
+   }
++
++  //Restriction line can correspond to a degenerated edge.
++  //In this case we return null-curve.
++  if(isDegenerated(aGAHS, anAHC2d, tf, tl))
++    return;
++
+   //
+   //To provide sameparameter it is necessary to get 3d curve as
+   //approximation of curve on surface.
+diff --git a/tests/bugs/modalg_6/bug27269 b/tests/bugs/modalg_6/bug27269
+new file mode 100644
+index 0000000000..b8a5e200c9
+--- /dev/null
++++ b/tests/bugs/modalg_6/bug27269
+@@ -0,0 +1,36 @@
++puts "============"
++puts "OCC27269"
++puts "============"
++puts ""
++###############################
++## Intersection algorithm produces null-length curve
++###############################
++
++
++restore [locate_data_file bug27267_cmpd.brep] a
++explode a f
++
++#############################
++set log [bopcurves a_1 a_7 -2d]
++#############################
++
++regexp {Tolerance Reached=+([-0-9.+eE]+)\n+([-0-9.+eE]+)} ${log} full Toler NbCurv
++
++for {set i 1} {$i <= ${NbCurv}} {incr i} {
++  bounds c_$i U1 U2
++  
++  dump U1 U2
++  
++  if {[dval U2-U1] < 1.0e-20} {
++    puts "Error: Wrong curve's range!"
++  }
++  
++  set le [length c_$i]
++  regexp "The length c_$i is +(\[-0-9.+eE\]+)" ${le} full ll
++  
++  if { $ll < 1.0e-7 } {
++    puts "Error: Curve c_$i is too small!"
++  }
++}
++
++
+diff --git a/tests/bugs/modalg_6/bug27325 b/tests/bugs/modalg_6/bug27325
+index 2c3f19e399..e0ec80c88e 100644
+--- a/tests/bugs/modalg_6/bug27325
++++ b/tests/bugs/modalg_6/bug27325
+@@ -1,4 +1,4 @@
+-   puts "============"
++puts "============"
+ puts "OCC27325"
+ puts "============"
+ puts ""

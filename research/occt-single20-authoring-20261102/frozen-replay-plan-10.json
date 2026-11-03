@@ -1,0 +1,20 @@
+{
+  "tasks": [
+    {
+      "group_id": "occt-single20-24097",
+      "build_jobs": {
+        "b": "m26243-natural-b-build-01",
+        "f": "common-2016-f-build-02"
+      },
+      "natural_reference_source": "/var/tmp/cad-bench-lzy-round2-qualification-20261028/jobs/m27270-f1/source"
+    },
+    {
+      "group_id": "occt-single20-26310",
+      "build_jobs": {
+        "b": "m26310-derived-b-build-01",
+        "f": "occt-7.9.3-build-01"
+      },
+      "natural_reference_source": "prepared/occt-7.9.3/source"
+    }
+  ]
+}

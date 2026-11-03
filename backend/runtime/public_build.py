@@ -12,6 +12,7 @@ from pathlib import Path
 
 
 VERSION_MACRO_RE = re.compile(r"^\s*#define\s+OCC_VERSION_(MAJOR|MINOR)\s+(\d+)", re.M)
+CMAKE_VERSION_RE = re.compile(r"^\s*set\s*\(\s*OCC_VERSION_(MAJOR|MINOR)\s+(\d+)\s*\)", re.M | re.I)
 MAX_PATCH_BYTES = 20 * 1024 * 1024
 
 
@@ -97,7 +98,14 @@ def occt_version(source: Path) -> tuple[int, int]:
         found = dict(VERSION_MACRO_RE.findall(path.read_text(encoding="utf-8", errors="replace")))
         if "MAJOR" in found and "MINOR" in found:
             return int(found["MAJOR"]), int(found["MINOR"])
-    raise ValueError("could not identify OCCT major/minor version from Standard_Version.hxx")
+    # Recent releases generate Standard_Version.hxx during configuration.
+    version_file = source / "adm" / "cmake" / "version.cmake"
+    if version_file.is_file():
+        found = {key.upper(): value for key, value in
+                 CMAKE_VERSION_RE.findall(version_file.read_text(encoding="utf-8"))}
+        if "MAJOR" in found and "MINOR" in found:
+            return int(found["MAJOR"]), int(found["MINOR"])
+    raise ValueError("could not identify OCCT major/minor version from its header or CMake version file")
 
 
 def _legacy_build_aliases(source: Path, build: Path, toolchain_name: str) -> dict:

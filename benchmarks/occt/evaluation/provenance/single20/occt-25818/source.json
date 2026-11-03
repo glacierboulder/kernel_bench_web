@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "issue": "occt-25818",
+  "status": "qualified",
+  "source_kind": "curator-derived inverse source patch",
+  "source_commit": "32ab8bfc4f09acb95d1f8403f4d44f5afad97b8b",
+  "git_tree": "db328c324886998c3d39ce114c7c1caf0649d786",
+  "materialized_tree_sha256": "cca2aa3bd5541ec361da198125ab731fec5cd6849b992136be0de552f77d3df5",
+  "origin_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "origin_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+  "upstream_fix": "9a5a19e98f025ef0c955b01408d2a7b23b5679ba",
+  "reference_patch_sha256": "d234b93e0ed3ff6ea37b381574de9a866cef7e1edeeafb9a1dc102aa3dc35fde",
+  "derivation": "Apply inverse-source.patch in reverse to origin_commit. The resulting verified Git commit is the task baseline. Apply reference.patch to restore the complete natural reference tree.",
+  "derivation_scope": "Complete upstream source-only repair",
+  "geometry_evidence": {
+    "b": {
+      "label": "m25818-b-calibration-02",
+      "model_called": false,
+      "source_commit": "32ab8bfc4f09acb95d1f8403f4d44f5afad97b8b",
+      "source_tree_sha256": "cca2aa3bd5541ec361da198125ab731fec5cd6849b992136be0de552f77d3df5",
+      "build_receipt_sha256": "448f98273b26b0c5a76b40faf5798a2e1c3b22167b202e89142c922f057be8f0",
+      "binary_manifest_sha256": "2cb7bb934534f8e94a9c12cdb803ffe1401b9b4741b778154b187c172b9972a8",
+      "results": {
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_truncated": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_mixed_domain": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_bounded": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T12:07:38.212442+00:00"
+    },
+    "f": {
+      "label": "m25818-f-calibration-02",
+      "model_called": false,
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "build_receipt_sha256": "e9e8f08e77fc823099dad504aa655935f7bae163ce14ff66c9d92af522598715",
+      "binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "results": {
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_truncated": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_mixed_domain": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_bounded": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T12:07:42.735885+00:00"
+    }
+  },
+  "limits": [
+    "Point residuals use fixed diagnostic positions and do not prove arbitrary curve equivalence.",
+    "No model evaluation has been run for this new task."
+  ],
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0025818/",
+  "upstream_fix_lead": "9a5a19e98f025ef0c955b01408d2a7b23b5679ba"
+}

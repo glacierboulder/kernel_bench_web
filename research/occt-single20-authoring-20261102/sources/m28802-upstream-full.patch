@@ -1,0 +1,130 @@
+diff --git a/src/IntTools/IntTools_FaceFace.cxx b/src/IntTools/IntTools_FaceFace.cxx
+index e03fa41628..5030a3e0c1 100644
+--- a/src/IntTools/IntTools_FaceFace.cxx
++++ b/src/IntTools/IntTools_FaceFace.cxx
+@@ -1313,9 +1313,6 @@ void IntTools_FaceFace::MakeCurve(const Standard_Integer Index,
+         }
+         else {
+           if (typs1 == GeomAbs_Plane || typs2 == GeomAbs_Plane) {
+-            if (aTolC <  theapp3d.TolReached2d()) {
+-              aTolC = theapp3d.TolReached2d();
+-            }
+             //
+             if (typs1 == GeomAbs_Torus || typs2 == GeomAbs_Torus) {
+               if (aTolC < 1.e-6) {
+@@ -1323,9 +1320,6 @@ void IntTools_FaceFace::MakeCurve(const Standard_Integer Index,
+               }
+             }
+           }
+-          else if (aTolC < theapp3d.TolReached3d()) {
+-            aTolC = theapp3d.TolReached3d();
+-          }
+           //
+           Standard_Integer aNbMultiCurves, nbpoles;
+           aNbMultiCurves=theapp3d.NbMultiCurves(); 
+diff --git a/tests/boolean/bsection/M3 b/tests/boolean/bsection/M3
+index db6579c76b..28b4a6fe15 100644
+--- a/tests/boolean/bsection/M3
++++ b/tests/boolean/bsection/M3
+@@ -7,7 +7,7 @@ set GoodNbCurv 1
+ set log [bopcurves a_1 a_2 -2d -p 0.20639206339545224 0.69260832843385300 0.0 0.017002507022347624]
+ regexp {Tolerance Reached=+([-0-9.+eE]+)\n+([-0-9.+eE]+)} ${log} full Tolerance_Reached NbCurv
+ 
+-set expected_Tolerance_Reached 2.2797192759881918e-005
++set expected_Tolerance_Reached 2.4318051256224198e-07
+ set tol_abs_Tolerance_Reached 0.0
+ set tol_rel_Tolerance_Reached 1.0e-2
+ checkreal "Tolerance Reached" ${Tolerance_Reached} ${expected_Tolerance_Reached} ${tol_abs_Tolerance_Reached} ${tol_rel_Tolerance_Reached}
+diff --git a/tests/bugs/modalg_6/bug26896_1 b/tests/bugs/modalg_6/bug26896_1
+index 487785e842..9376228267 100755
+--- a/tests/bugs/modalg_6/bug26896_1
++++ b/tests/bugs/modalg_6/bug26896_1
+@@ -29,7 +29,7 @@ bsection result b1 f1
+ 
+ regexp {Tolerance +MAX=([-0-9.+eE]+)} [tolerance result] full MaxTolerance
+ 
+-set expected_MaxTolerance 0.0023471981939699712
++set expected_MaxTolerance 0.0020855537098296495
+ set tol_abs_MaxTolerance 0.0
+ set tol_rel_MaxTolerance 1.0e-4
+ checkreal "MaxTolerance" ${MaxTolerance} ${expected_MaxTolerance} ${tol_abs_MaxTolerance} ${tol_rel_MaxTolerance}
+diff --git a/tests/bugs/modalg_6/bug26896_3 b/tests/bugs/modalg_6/bug26896_3
+index 78253c28e6..94cfd931b4 100755
+--- a/tests/bugs/modalg_6/bug26896_3
++++ b/tests/bugs/modalg_6/bug26896_3
+@@ -25,7 +25,7 @@ bsection result b1 f3
+ 
+ regexp {Tolerance +MAX=([-0-9.+eE]+)} [tolerance result] full MaxTolerance
+ 
+-set expected_MaxTolerance 0.0023476472179396139
++set expected_MaxTolerance 0.0020859166104267744
+ set tol_abs_MaxTolerance 0.0
+ set tol_rel_MaxTolerance 1.0e-4
+ checkreal "MaxTolerance" ${MaxTolerance} ${expected_MaxTolerance} ${tol_abs_MaxTolerance} ${tol_rel_MaxTolerance}
+diff --git a/tests/bugs/modalg_6/bug26938_1 b/tests/bugs/modalg_6/bug26938_1
+index 5da2404b57..b4c23234ed 100644
+--- a/tests/bugs/modalg_6/bug26938_1
++++ b/tests/bugs/modalg_6/bug26938_1
+@@ -1,3 +1,7 @@
++puts "TODO OCC28802 Linux: Faulty shapes in variables faulty_1 to"
++puts "TODO OCC28802 Linux: Error : The area of result shape is"
++puts "TODO OCC28802 Linux: Error : The result of General Fuse operation is self-interfered shape"
++
+ puts "=========="
+ puts "OCC26938  "
+ puts "=========="
+diff --git a/tests/bugs/modalg_6/bug26938_2 b/tests/bugs/modalg_6/bug26938_2
+index ad0544db55..fb528374e8 100644
+--- a/tests/bugs/modalg_6/bug26938_2
++++ b/tests/bugs/modalg_6/bug26938_2
+@@ -1,3 +1,6 @@
++puts "TODO OCC28802 Linux: Error : The command is not valid. The area is 0"
++puts "TODO OCC28802 Linux: Error : The area of result shape is 0"
++
+ puts "=========="
+ puts "OCC26938  "
+ puts "=========="
+diff --git a/tests/bugs/modalg_6/bug26938_3 b/tests/bugs/modalg_6/bug26938_3
+index 76c5619a0b..da850d7b36 100644
+--- a/tests/bugs/modalg_6/bug26938_3
++++ b/tests/bugs/modalg_6/bug26938_3
+@@ -1,4 +1,6 @@
+-puts "TODO OCC24694 ALL: Error : The result of cut operation is self-interfered shape"
++puts "TODO OCC28802 Linux: Error : The area of result shape is"
++puts "TODO OCC24694 Windows: Error : The result of cut operation is self-interfered shape"
++
+ puts "=========="
+ puts "OCC26938  "
+ puts "=========="
+diff --git a/tests/bugs/modalg_6/bug27310_2 b/tests/bugs/modalg_6/bug27310_2
+index 38eda856fe..80f3cc008c 100644
+--- a/tests/bugs/modalg_6/bug27310_2
++++ b/tests/bugs/modalg_6/bug27310_2
+@@ -10,7 +10,7 @@ puts ""
+ # The main reason of the bug #27310 was a HUGE TOLERANCE VALUE (TolReached > 10).
+ # See test "bugs moddata_2 bug496" in case of doubt.
+ 
+-set ExpTol 1.3609186093470008e-005
++set ExpTol 9.9999999999999995e-08
+ 
+ restore [locate_data_file OCC496a.brep] a 
+ restore [locate_data_file OCC496b.brep] b
+diff --git a/tests/bugs/modalg_6/bug28718 b/tests/bugs/modalg_6/bug28718
+index a19b8f965b..ee83596057 100644
+--- a/tests/bugs/modalg_6/bug28718
++++ b/tests/bugs/modalg_6/bug28718
+@@ -20,12 +20,12 @@ fit
+ set log [bopcurves b1_1 b2_61 -2d]
+ 
+ regexp {Tolerance Reached=+([-0-9.+eE]+)\n+([-0-9.+eE]+)} ${log} full Toler NbCurv
+-checkreal TolReached $Toler 5.6917962071676512e-008 0.0 0.1
++checkreal TolReached $Toler 3.589120933029448e-08 0.0 0.1
+ 
+ nurbsconvert ff b2_61
+ set log [bopcurves b1_1 ff -2d]
+ regexp {Tolerance Reached=+([-0-9.+eE]+)\n+([-0-9.+eE]+)} ${log} full Toler NbCurv
+-checkreal TolReached $Toler 6.2331348315760405e-008 0.0 0.1
++checkreal TolReached $Toler 3.9019558966741645e-08 0.0 0.1
+ 
+ bsection result b1 b2
+ 

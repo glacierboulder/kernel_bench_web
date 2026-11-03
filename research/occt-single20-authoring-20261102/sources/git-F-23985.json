@@ -1,0 +1,35 @@
+{
+  "sha": "04cbc9d384cc163efb088e10a8c6d638c899bcc0",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOjA0Y2JjOWQzODRjYzE2M2VmYjA4OGUxMGE4YzZkNjM4Yzg5OWJjYzA=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/04cbc9d384cc163efb088e10a8c6d638c899bcc0",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/04cbc9d384cc163efb088e10a8c6d638c899bcc0",
+  "author": {
+    "name": "emv",
+    "email": "emv@opencascade.com",
+    "date": "2013-05-31T13:17:34Z"
+  },
+  "committer": {
+    "name": "emv",
+    "email": "emv@opencascade.com",
+    "date": "2013-05-31T13:17:34Z"
+  },
+  "tree": {
+    "sha": "583f886f5815c14ec47a8b6463b9bef5443c16b1",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/583f886f5815c14ec47a8b6463b9bef5443c16b1"
+  },
+  "message": "0023985: There is no section between attached faces.\nAdded new parameter for checking whether the plane and cylinder are parallel - the height of the cylinder.\nThis parameter is needed for the cases when angle between AXIS and plane's normal is very close to PI,\nbut the \"height\" is big enough that point, translated from intersection point between cylinder's axis and plane\non the \"height\" distance in the direction of cylinder's axis, does not belong to the plane.\nSuch plane and cylinder cannot be considered as parallel.\nAdd test case for this fix",
+  "parents": [
+    {
+      "sha": "470ebb43f263973e26902e8526bbf3f6ccdf01b1",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/470ebb43f263973e26902e8526bbf3f6ccdf01b1",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/470ebb43f263973e26902e8526bbf3f6ccdf01b1"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

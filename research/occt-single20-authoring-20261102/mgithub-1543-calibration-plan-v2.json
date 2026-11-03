@@ -1,0 +1,105 @@
+{
+  "issue": "github-1543",
+  "volume_limit": 0.1,
+  "limit_rationale": "Predeclared allowance for the original MakePipeShell 1e-4 construction tolerance and Boolean numerical approximation on this ~10^3-unit^2 local interface. Ideal-tube volume is independently integrated. Required witness classification and validity are separate predicates. No claim of certified global Hausdorff/volume bound.",
+  "cases": [
+    {
+      "script": "occt-github-1543/1/negative_empty.tcl",
+      "id": "negative_empty",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "analytic_volume",
+        "kept_core",
+        "removed_middle",
+        "removed_top"
+      ]
+    },
+    {
+      "script": "occt-github-1543/1/negative_shifted.tcl",
+      "id": "negative_shifted",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "analytic_volume",
+        "kept_core",
+        "removed_middle",
+        "removed_top"
+      ]
+    },
+    {
+      "script": "occt-github-1543/1/negative_unchanged.tcl",
+      "id": "negative_unchanged",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "analytic_volume",
+        "kept_core",
+        "removed_middle",
+        "removed_top"
+      ]
+    },
+    {
+      "script": "occt-github-1543/1/neighborhood_offset.tcl",
+      "id": "neighborhood_offset",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "analytic_volume",
+        "kept_core",
+        "removed_middle",
+        "removed_top"
+      ]
+    },
+    {
+      "script": "occt-github-1543/1/neighborhood_rigid.tcl",
+      "id": "neighborhood_rigid",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "analytic_volume",
+        "kept_core",
+        "removed_middle",
+        "removed_top"
+      ]
+    },
+    {
+      "script": "occt-github-1543/1/original.tcl",
+      "id": "original",
+      "category": "original",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "analytic_volume",
+        "kept_core",
+        "removed_middle",
+        "removed_top"
+      ]
+    },
+    {
+      "script": "occt-github-1543/1/regression_passing_phase.tcl",
+      "id": "regression_passing_phase",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "analytic_volume",
+        "kept_core",
+        "removed_middle",
+        "removed_top"
+      ]
+    }
+  ]
+}

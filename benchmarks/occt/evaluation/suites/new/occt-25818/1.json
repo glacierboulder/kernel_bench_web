@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-25818-checks",
+  "version": "1",
+  "title": "M25818 geometry checks",
+  "source_ids": [
+    "occt-single20-m25818-32ab8bfc4f09"
+  ],
+  "group_ids": [
+    "occt-single20-25818"
+  ],
+  "checkpoints": [
+    {
+      "id": "25818-neighborhood_mixed_domain",
+      "issue_id": "occt-25818",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-25818/1/neighborhood_mixed_domain.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "operation_completed",
+          "branch_count",
+          "support_residual",
+          "domain_coverage"
+        ],
+        "case_timeout_seconds": 90
+      }
+    },
+    {
+      "id": "25818-neighborhood_rigid",
+      "issue_id": "occt-25818",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-25818/1/neighborhood_rigid.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "operation_completed",
+          "branch_count",
+          "support_residual",
+          "domain_coverage"
+        ],
+        "case_timeout_seconds": 90
+      }
+    },
+    {
+      "id": "25818-original",
+      "issue_id": "occt-25818",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-25818/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "operation_completed",
+          "branch_count",
+          "support_residual",
+          "domain_coverage"
+        ],
+        "case_timeout_seconds": 90
+      }
+    },
+    {
+      "id": "25818-regression_bounded",
+      "issue_id": "occt-25818",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-25818/1/regression_bounded.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "operation_completed",
+          "branch_count",
+          "support_residual",
+          "domain_coverage"
+        ],
+        "case_timeout_seconds": 90
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/single20/occt-25818/1/plane_intersection.tcl"
+  ]
+}

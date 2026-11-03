@@ -1,0 +1,1633 @@
+{
+  "repository_baseline": "c5184df5e161c72cfa389249a8b052efe1b87cf6",
+  "catalog_sha256": "88faf5a852defb98b489bee63c2a25175060b5572c92de682f846050cd09692b",
+  "existing_canonical_issue_numbers": [
+    172,
+    370,
+    506,
+    544,
+    690,
+    693,
+    847,
+    872,
+    1452,
+    21494,
+    27252,
+    27310,
+    27773,
+    27780,
+    29807,
+    29972,
+    30082,
+    30202,
+    30703,
+    31404,
+    31470,
+    31602,
+    31835,
+    32470,
+    32502,
+    32721,
+    32850,
+    32942,
+    33244,
+    33541,
+    33615
+  ],
+  "candidate_count": 108,
+  "duplicate_count": 9,
+  "candidates": [
+    {
+      "canonical_id": "github:1288",
+      "title": "Boolean operation \"section\" hangs-up for a pair of cylindrical shapes",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "900e755245a924e27b8ff57e1b3db5a4ed1f8c3baf90a350171a747d93c83a95",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "github:1543",
+      "title": "Modeling Algorithms - Boolean Cut with a helical swept tool silently removes nothing when the tool exits through a planar face (IntPatch loses the boundary vertex after seam decomposition)",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "7672f1d98254c2dd9e3a271e950a9ca5f4ec22b0041ddd2550c851af527bc7fe",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "github:1610",
+      "title": "github:1610",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "72cff05793d2e7911023d42e5c0a7e544641332bb96e9b6f4bdf0dd74f8a6010",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "github:245",
+      "title": "Boolean cut has issues when it involves a common Edge between argument and the tool.",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "e90a68c4be9754b6d67d94921083760fff85d87db70a5d182c72b4d3dd4dcdf5",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "github:724",
+      "title": "More than 10GB of memory needed for boolean operation between two simple faces",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "159f24748b2f3f11451f7d23019164661dad4084fa4b091f2d9a575028e4c11a",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:12507",
+      "title": "Wrong result of fuse operation",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "f650276d514e9321adb0a5344f32c1258b8507dc543f7786e7f22b0bdaec741d",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:12829",
+      "title": "IntPatch_Point has unitialized fileds.",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "b1b5e65d7c44d932be425e716c54daa8ad477cc38be346342f1616013c73ea3f",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:14530",
+      "title": "Boolean Operation Algorithm failed",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "37b8567bdef6716f441c0362caf8594c4508f67eddd394d79b704ed4bc65fbc7",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:17194",
+      "title": "Incorrect section of a face got by extrusion of an arc of circle",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "80c28de326d2d73b608efde9b2c733d794bb479cfc0407a3ea662ae664784bab",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:21494",
+      "title": "Intersection between cone and sphere fails",
+      "duplicate_current_catalog_number": true,
+      "candidate_record_sha256": "4e5a24d5c5304c3ac74ecce04f60c6e84d9d60801e20ab43e1394a990878a142",
+      "reference_commit_lead": "9bc5f5850a61be8afe2bd8c2490903a418fa8fc4",
+      "reference_date": "2018-11-02T17:06:43+03:00",
+      "source_patch_paths": [
+        "src/IntPatch/IntPatch_ImpImpIntersection_5.gxx"
+      ],
+      "upstream_test_paths": [
+        "tests/lowalgos/intss/bug21494_1",
+        "tests/lowalgos/intss/bug21494_2"
+      ],
+      "state": "duplicate",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:22790",
+      "title": "Boolean opeation Fuse fails.",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "6c36bcbd40c779d5c5444a2b8dd2bc2758f6b003adf0bcd6493a05e41433eb00",
+      "reference_commit_lead": "f793011ee61ea62242341e501aa9961a73877a12",
+      "reference_date": "2012-03-05T19:31:35+04:00",
+      "source_patch_paths": [
+        "src/IFSelect/IFSelect_WorkSession.cxx",
+        "src/IntImp/IntImp_ComputeTangence.cxx",
+        "src/IntTools/IntTools_EdgeEdge.cdl",
+        "src/IntTools/IntTools_EdgeEdge.cxx"
+      ],
+      "upstream_test_paths": [],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:23389",
+      "title": "(OCC 6.5.3 regression) BRepAlgoAPI_Cut returns invalid solid",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "78176631ed479e11b34f521bc9192e5a71c93e2f45cc5a9fd3b6507fd7730fbd",
+      "reference_commit_lead": "3d063ba65fbe2ca2a4ed5d7cb9bab1b1dd202c6f",
+      "reference_date": "2012-09-14T17:27:38+04:00",
+      "source_patch_paths": [
+        "src/IntPolyh/IntPolyh_Intersection.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/boolean/bopcut_complex/P8"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:23463",
+      "title": "Boolean operations provide wrong results for solids with faces formed by bspline surfaces.",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "884b49f7a9e6eb8852d30e91a61352dc482e1f4e24fe422142a78a567b09af7a",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:23933",
+      "title": "Self intersection reported after Fuse operation",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "b7eeca264f2ee6cb5b52caca1ea71e0e64d7079c0b3851f9881228d349a52a38",
+      "reference_commit_lead": "f14190252ba1e65bd89ad46ea7e9c304251d8a4d",
+      "reference_date": "2013-05-23T11:55:08+04:00",
+      "source_patch_paths": [
+        "src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx",
+        "src/BOPTest/BOPTest_CheckCommands.cxx",
+        "src/IntTools/IntTools_BeanFaceIntersector.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_5/bug23933"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:23981",
+      "title": "Wrong section curves",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "984a9a9705e5a7c502185806c3ecda63cdbe6bff8ea6d652ed3a09c1cd931bd4",
+      "reference_commit_lead": "7c4e9501b4845cb293ced0c3bfe3089ae75571ea",
+      "reference_date": "2013-10-03T16:14:55+04:00",
+      "source_patch_paths": [
+        "src/Adaptor3d/Adaptor3d_TopolTool.cxx",
+        "src/Extrema/Extrema_ExtPElS.cxx",
+        "src/GeomInt/GeomInt_IntSS_1.cxx",
+        "src/IntPatch/IntPatch_RstInt.cxx",
+        "src/IntStart/IntStart_SearchOnBoundaries.gxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/moddata_3/bug23981"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:23985",
+      "title": "There is no section between attached faces",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "7d1c2ea5f1a431c54ffcd1a82077f81dab46cf30098eda345b0e67d54ee31b37",
+      "reference_commit_lead": "04cbc9d384cc163efb088e10a8c6d638c899bcc0",
+      "reference_date": "2013-05-31T17:17:34+04:00",
+      "source_patch_paths": [
+        "src/IntAna/IntAna_IntConicQuad.cdl",
+        "src/IntAna/IntAna_IntConicQuad.cxx",
+        "src/IntAna/IntAna_QuadQuadGeo.cdl",
+        "src/IntAna/IntAna_QuadQuadGeo.cxx",
+        "src/IntPatch/IntPatch_ImpImpIntersection_1.gxx",
+        "src/IntPatch/IntPatch_ImpImpIntersection_2.gxx",
+        "src/IntPatch/IntPatch_ImpImpIntersection_3.gxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_5/bug23985"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:23998",
+      "title": "Bad result of intersection of two faces: curve has a loop",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "85b00f42be4a82f85c58ef1a946ed5a532df5e6f25e2a2e4aa2f1a3f6f019d31",
+      "reference_commit_lead": "d42d186778f1b19e6e839b86ce79b992df0964cf",
+      "reference_date": "2013-06-20T15:46:20+04:00",
+      "source_patch_paths": [
+        "src/IntWalk/IntWalk_PWalking_4.gxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_5/bug23998"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24097",
+      "title": "BRepAlgoAPI_Section returns wrong result",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "5b2fce1cddcce41898bdae58f2f487d6423865242480091053a1a07cce9c71c2",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24142",
+      "title": "Wrong section curve",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "ee3e1b6083117c3005eef90109fa6a05dd36ef0fbf69e1a411aecaf99ccc4621",
+      "reference_commit_lead": "b045e6a40b8b155b533e6e384a62142a680ef5b2",
+      "reference_date": "2013-09-26T20:36:30+04:00",
+      "source_patch_paths": [
+        "src/IntAna/IntAna_QuadQuadGeo.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/moddata_3/bug24142"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24161",
+      "title": "boolean operation hanging",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "e48b1939b6aa6e7e4a32aba966e57cf0352d0f6e04641c6d06e231ff3ba86a9d",
+      "reference_commit_lead": "6b5b88d70726548d087d441a4d8365d60a151080",
+      "reference_date": "2015-04-30T13:58:51+03:00",
+      "source_patch_paths": [
+        "src/IntWalk/IntWalk_PWalking.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_6/bug24161"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24220",
+      "title": "bopargcheck returns valid for C0 shape but results of boolean operations are broken with such shapes",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "3ca6078040d3a19b0b269cd19d3a22200f09e3912d60f49cb6ebe40664da1aec",
+      "reference_commit_lead": "0e09ee8ee5d8791aa14fa43e64de23ee2aa5bfb1",
+      "reference_date": "2013-10-10T14:28:02+04:00",
+      "source_patch_paths": [
+        "src/BOPAlgo/BOPAlgo.cdl",
+        "src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cdl",
+        "src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx",
+        "src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.lxx",
+        "src/BOPTest/BOPTest_CheckCommands.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_5/bug24220"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24299",
+      "title": "Wrong section curve",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "b0c1cb4e73b2c68b505cb1e81dd123190b62182cbd68b4a6b498004f90573e66",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24313",
+      "title": "BRepAlgoAPI_Section and IntTools_FaceFace aren't written to handle Geom_SurfaceOfLinearExtrusion",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "bfa523a9b4f0c77603473cfca1de0f01d8ecc58d047673d0c13ac81568fc777d",
+      "reference_commit_lead": "94218044fe194a784e93eb6cf18c13c1319fd558",
+      "reference_date": "2013-12-06T13:10:39+04:00",
+      "source_patch_paths": [
+        "src/IntTools/IntTools_FaceFace.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_5/bug24313"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24418",
+      "title": "Modeling Algorithms - Wrong section curves when intersecting analytical surfaces",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "fc095180e3df9a7506c5c821498116554c0bfa410f9fa09b0c677b79ae71e87a",
+      "reference_commit_lead": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "reference_date": "2022-02-22T20:07:12+03:00",
+      "source_patch_paths": [
+        "src/IntPatch/IntPatch_ALineToWLine.cxx",
+        "src/IntPatch/IntPatch_WLineTool.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/lowalgos/intss/bug24418_1"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24429",
+      "title": "Cylinder-torus intersection throws an exception and produces no result",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "04402c16490b3e1908d3656595e4fda7e3c84af5296ce134b769aea3ec375729",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24678",
+      "title": "Invalid result of Boolean fuse operation",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "455165fdf2c4014585f3555116a10a072d4fe52bdd76e74135cc3a01451d3c91",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24696",
+      "title": "Lower performance of the new Edge/Edge intersection algorithm",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "d0f41cc1b6a869e2710cee54c9af2a6fbab34f38262cec832abfd15995483311",
+      "reference_commit_lead": "0d19eb340ec60a8a6c0ca53d66391654ebf16911",
+      "reference_date": "2014-03-20T13:37:28+04:00",
+      "source_patch_paths": [
+        "src/IntTools/IntTools_EdgeEdge.cdl",
+        "src/IntTools/IntTools_EdgeEdge.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_5/bug24696"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24790",
+      "title": "Modeling Algorithms - missing intersection curve between two surfaces",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "d1986848aeebb803339e36ffeb3fee2da8a2ccb96f29ad8fe727771ea722109e",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24811",
+      "title": "Intersection is insufficient",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "38aff0123056aea1165c68ad46bbe525a04e28398380168e06f1ab9739ec7806",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:24832",
+      "title": "Performance of new boolean operations has become worse",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "5ac1ed9b95d8ee71c16cd547e2fcc5a2b4cbc3b72c4ee7bfde8ce4e1bd8d2137",
+      "reference_commit_lead": "0734c53d68ccd602e93925f9b1830e909e002784",
+      "reference_date": "2014-05-22T17:54:23+04:00",
+      "source_patch_paths": [
+        "src/Extrema/Extrema_ExtCS.cxx",
+        "src/Extrema/Extrema_ExtPExtS.cdl",
+        "src/Extrema/Extrema_ExtPExtS.cxx",
+        "src/Extrema/Extrema_ExtPRevS.cdl",
+        "src/Extrema/Extrema_ExtPRevS.cxx",
+        "src/Extrema/Extrema_ExtPS.cdl",
+        "src/Extrema/Extrema_ExtPS.cxx"
+      ],
+      "upstream_test_paths": [],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:2500",
+      "title": "BRepAlgoAPI_Section has problem with calculation",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "84042ddf955aceefeaee24bb59b6f2ad76a2e5dacc9056e348e9c35655faff25",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25102",
+      "title": "A part of intersection cannot be found",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "dc47d75e7afe461aacc8fcc370ceda63552105c103e9143d5c5cdcbfcfb42a20",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25111",
+      "title": "Incomplete section curve between Conical and Toroidal surfaces",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "09dc05ab92b25c522f337b63bca6c4275df963ee3c57a0a7d07faa270e45e19d",
+      "reference_commit_lead": "10ee997695095e4e62d0d197153665326a6939f3",
+      "reference_date": "2014-08-21T15:51:05+04:00",
+      "source_patch_paths": [
+        "src/IntPatch/IntPatch_ImpPrmIntersection.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_5/bug25111"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25237",
+      "title": "Wrong result of COMMON operation",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "0a63cba0ff3dca70430246b3178ab629178287bfe37d3c7da57f201d6c3c2e0c",
+      "reference_commit_lead": "3e594885aa461fecca912e2daa80a003460faf9b",
+      "reference_date": "2014-09-25T15:58:17+04:00",
+      "source_patch_paths": [
+        "src/IntTools/IntTools_EdgeEdge.cdl",
+        "src/IntTools/IntTools_EdgeEdge.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_5/bug25237"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25242",
+      "title": "Wrong result of cut operation.",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "db8efa1a4e412a7a0b294463657c4cc29bf99b02444a8fe7dfa54a0e85dbcb80",
+      "reference_commit_lead": "955b3e71028d2295439b0d9671e9c8b9b35301e2",
+      "reference_date": "2014-09-25T15:58:10+04:00",
+      "source_patch_paths": [
+        "src/BOPAlgo/BOPAlgo_BOP.cxx",
+        "src/BOPAlgo/BOPAlgo_CheckerSI.cdl",
+        "src/BOPAlgo/BOPAlgo_CheckerSI.cxx",
+        "src/BOPAlgo/BOPAlgo_CheckerSI_1.cxx",
+        "src/BOPAlgo/BOPAlgo_PaveFiller.cdl",
+        "src/BOPAlgo/BOPAlgo_PaveFiller.cxx",
+        "src/BOPAlgo/BOPAlgo_PaveFiller_10.cxx",
+        "src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx",
+        "src/BOPAlgo/FILES",
+        "src/BOPDS/BOPDS_Iterator.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_5/bug25242"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25337",
+      "title": "Regression to version 6.7.1 : boolean operations fail on two planar circular faces lying in the same plane",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "684da7632ed7628836a6aad8e95c18d24012fdbbbee58e4d3ab9bba557dee13c",
+      "reference_commit_lead": "524a5f7aa775cac7a9b8d47adc5700a586b1b9ce",
+      "reference_date": "2014-10-30T13:49:30+03:00",
+      "source_patch_paths": [
+        "src/IntTools/IntTools_EdgeEdge.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_5/bug25337_1",
+        "tests/bugs/modalg_5/bug25337_2"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25342",
+      "title": "[Regression] BRepAlgoAPI_Section returns wrong number of edges",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "af2ca8db47c3ec152e649a4466525a8403e152c644dbac0de12ae6e1d5cef0cf",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25385",
+      "title": "steep increase in tolerance by intersection",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "152e2ce8760e4b3cc3066f5c971c5e59c5baa9d59d6a8dfcc0538310a5c1d551",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25404",
+      "title": "Even for analytical surfaces (cylinder-cylinder) intersection result is not commutative",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "fc9b4cb64a5051ea25ae207b109b27f3c8539ef7e8b7ea6dd288d64b78b02ef8",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25531",
+      "title": "Difference in intersection result on Windows and Linux platform is very significant",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "ea2f9cba073d91230bad9d643b73fbc71c56aa77ad0759b83c139cf2d5023e0c",
+      "reference_commit_lead": "7c32c7c41fa04f6f714524b3a3128bc1b6c93a63",
+      "reference_date": "2014-12-25T18:06:15+03:00",
+      "source_patch_paths": [
+        "src/ApproxInt/ApproxInt_Approx.gxx",
+        "src/ApproxInt/ApproxInt_MultiLine.cdl",
+        "src/ApproxInt/ApproxInt_MultiLine.gxx",
+        "src/ApproxInt/ApproxInt_MultiLineTool.cdl",
+        "src/ApproxInt/ApproxInt_MultiLineTool.lxx",
+        "src/IntPatch/IntPatch_ImpImpIntersection_4.gxx",
+        "src/IntPatch/IntPatch_WLine.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_1/bug16517_1",
+        "tests/bugs/modalg_1/bug16517_2",
+        "tests/bugs/modalg_5/bug24915",
+        "tests/bugs/modalg_5/bug25292_15",
+        "tests/bugs/modalg_5/bug25292_16",
+        "tests/bugs/modalg_5/bug25292_25",
+        "tests/bugs/modalg_5/bug25292_26",
+        "tests/bugs/modalg_5/bug25292_31",
+        "tests/bugs/modalg_5/bug25292_32",
+        "tests/bugs/modalg_5/bug25292_35",
+        "tests/bugs/modalg_5/bug25292_36",
+        "tests/bugs/modalg_5/bug25488"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25542",
+      "title": "Boolean operation failure for Cylinder and Cone in critical location.",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "a5cc557c954e779c5b09043f132d3d2134350669f19d87ede295237b18e04fe6",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25781",
+      "title": "BOP of coincident torus and cylinder fails in BeanFaceIntersector",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "71def45eaf08ef8092f516c5369e1745e95ef78c436873ae8ebf897848b06ce5",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25818",
+      "title": "IntTools_FaceFace throws Standard_ConstructionError with two unbounded planes",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "fa0d2a53ec3f14450b946c360d4ba99cda60c3b13bd1b6e0c031213778a6e3d8",
+      "reference_commit_lead": "9a5a19e98f025ef0c955b01408d2a7b23b5679ba",
+      "reference_date": "2015-03-05T15:48:54+03:00",
+      "source_patch_paths": [
+        "src/IntTools/IntTools_FaceFace.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_5/bug25818"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25890",
+      "title": "Intersection algorithm produces curves overlaped",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "dc1c2ce1b7786e83940b2902241a1e9c53d61ac6b0a14e1a1380c8dcc0e6d347",
+      "reference_commit_lead": "9d32c463ad2e3a2abc768dcaabd01e69a7e00b27",
+      "reference_date": "2015-05-08T08:51:43+03:00",
+      "source_patch_paths": [
+        "src/IntImp/IntImp_Int2S.cdl",
+        "src/IntImp/IntImp_Int2S.lxx",
+        "src/IntPolyh/IntPolyh_Intersection.cxx",
+        "src/IntWalk/IntWalk_PWalking.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_6/bug25890"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25915",
+      "title": "Incorrect result of Boolean cut operation",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "495d6eaff4fb70f425469100c67f6a97b2206aeebf86ac9f50378a98075da156",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25952",
+      "title": "Modeling Algorithms - Wrong intersection curve",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "d88bb1ac552077476528ff3676676a47f6e13fffb3c99f40a17e0026d616791c",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25956",
+      "title": "Modeling Algorithms - Wrong result obtained by intersection algorithm.",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "aba9c800dc7c851b93d1c004b7debbc1cdaae9e6bd384c713832d22a4467f596",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:25983",
+      "title": "Fusion of sweep and its mirror invalid",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "94d3c4c31bd4b73f68a3e5396ccd1f4305cbb7c22c9ce51ee768b07ad1344f39",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26243",
+      "title": "Boolean operations failed on shapes with fillets",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "de7683b75c3dc8c84a05f15270be23a5f9f140fcca35e36b11c871bb6e36bbae",
+      "reference_commit_lead": "577c6f0d0ff52e9dd5d94b20ce9cf69407d86961",
+      "reference_date": "2015-08-06T12:28:29+03:00",
+      "source_patch_paths": [
+        "src/IntAna/IntAna_QuadQuadGeo.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_6/bug26243_1",
+        "tests/bugs/modalg_6/bug26243_2",
+        "tests/bugs/modalg_6/bug26243_3"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26250",
+      "title": "Boolean operation should check, if faces are overlapped, before finding intersection result between these faces",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "ca1f2011fc83f1d42b59235890c1964ab8edb7e2e2b58ffbd813334c0a01e3da",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26310",
+      "title": "Very slow boolean cut operations on cylinders",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "709d6b24af980683e20e5e7f9b25364ad0d790913d44f2b55f082137e3e717eb",
+      "reference_commit_lead": "7365fad60b92a2fa1bd3616eb8eaeceda5b567ef",
+      "reference_date": "2015-07-22T16:11:31+03:00",
+      "source_patch_paths": [
+        "src/IntPatch/IntPatch_ImpImpIntersection_4.gxx",
+        "src/IntPatch/IntPatch_Intersection.cxx",
+        "src/IntTools/IntTools_FaceFace.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_6/bug26310_1",
+        "tests/bugs/modalg_6/bug26310_2",
+        "tests/bugs/modalg_6/bug26310_3",
+        "tests/bugs/modalg_6/bug26310_4"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26327",
+      "title": "Performance degradation from version 6.8.0 on Boolean operations",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "fee249c8a46bf8822e2bddad31aba8ab3a678ab1d203add6fe4cdbc97897c33d",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26383",
+      "title": "Incorrect tolerance computing in IntTools_FaceFace::ComputeTolerance()",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "17ff15fcdc8073d4fad1262147bd0adc915003515b3fed823d50b7639bd548e0",
+      "reference_commit_lead": "260f924fe38a8950dafc89351f0b2481d7858758",
+      "reference_date": "2015-07-03T13:39:33+03:00",
+      "source_patch_paths": [
+        "src/IntTools/IntTools_FaceFace.cxx"
+      ],
+      "upstream_test_paths": [],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26447",
+      "title": "Performance degradation intersecting cylindrical surfaces",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "eed704aa4c7439f877147d3bb43c2ab15a7e55b87e9123cf30382514e6fbc91f",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26450",
+      "title": "Boolean operation is running endless",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "c5a32133f18f7cfbb67b17715595dc4f497394dc8c2d8a61aae4e174d6810696",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26452",
+      "title": "Infinite loop in Edge/Edge intersection.",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "88d2f526a018ad3ad443bea9e6d1e02d826ce4e3b6ad3f146f6d097f23bb261d",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26463",
+      "title": "The result of intersection between two faces depends on the order of arguments",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "211e1741184f7984b8380c680c320ea052058ed296e627e3478170ec4f6bee20",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26530",
+      "title": "Bad result of cut operation",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "71fb00df98abfb61569a61b421f9879f99b360ba65e8199895136732e31ad7e7",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26557",
+      "title": "Cutting a cylinder with polygonal solid very slow",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "2c936f59179a3e863f8a9808b65aaa3a35666dd70793ab3f9ff9a83e5a50c21f",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26562",
+      "title": "BRepAlgoAPI_Section generates incorrect result",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "e9517313e84a04504534537d51241116706acedb6b5d71159da67ffe144383e9",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26675",
+      "title": "Eliminate normalization of coordinates in ApproxInt package",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "b2be1270f4d0bb4cd1e3ffb88901bda4cb316ec5eb17c71fb50d7a6ae7070ac4",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26776",
+      "title": "Bad result of section algorithm",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "f5968288bacabb5d8c02e6c09be49a66064010ccdcd581981761ae43cd7ae649",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26796",
+      "title": "The result of General Fuse operation is self-intersecting shape",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "897c6d1834787310c48455ffc5e4158657456e193a469dae144515faf4824b21",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:26910",
+      "title": "General fuse does not find intersection between line and circle",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "10f1a3b8374801a15ca716b35e58f6a92ed1a43fdfe82e865acbb71afc3ae34c",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:27024",
+      "title": "Invalid result of fuse in test case bugs modalg_1 buc60462_2",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "20fc52bb9b628f80dd43fc548d73da7fd844d25f8b8d283e9e645be93752c617",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:27221",
+      "title": "Regression vs. 6.7.0: bcut fails without notice",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "5fd9f1160b0178386f37ca40fe216648b33b4a44344ec41f11197e0716e0321d",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:27227",
+      "title": "Intersection curve is not continued to the surface boundary",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "e70c2aabcc598b0bbf04b3317c1292e7768dbc1dd0997e18080ce10c3ec301fa",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:27252",
+      "title": "Implicit-implicit intersection (Cylinder-Plane) loses intersection curve",
+      "duplicate_current_catalog_number": true,
+      "candidate_record_sha256": "88ddbe34ef66d2ce4069eb712c8c48b25cb085dcd060d119b38ef28296538a8a",
+      "reference_commit_lead": "f542b7bbf1f3bc0b36b33c158580fb1909561a08",
+      "reference_date": "2017-01-26T13:34:16+03:00",
+      "source_patch_paths": [
+        "src/Contap/Contap_ArcFunction.hxx",
+        "src/Contap/Contap_ArcFunction.lxx",
+        "src/IntPatch/IntPatch_ArcFunction.hxx",
+        "src/IntPatch/IntPatch_ArcFunction.lxx",
+        "src/IntStart/IntStart_SearchOnBoundaries.gxx",
+        "src/IntTools/IntTools_FaceFace.cxx",
+        "src/math/math_BrentMinimum.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_6/bug27252_1",
+        "tests/bugs/modalg_6/bug27252_2",
+        "tests/bugs/modalg_6/bug27252_3",
+        "tests/bugs/modalg_6/bug27252_4"
+      ],
+      "state": "duplicate",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:27269",
+      "title": "Intersection algorithm produces null-length curve",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "a8d5e30c2dbb0cf825098f414938774c283304d87036333fbfda3e66b029f6ed",
+      "reference_commit_lead": "b55bd02353519ebba14575f8056bb2b14585089e",
+      "reference_date": "2016-04-28T14:21:40+03:00",
+      "source_patch_paths": [
+        "src/GeomInt/GeomInt_IntSS_1.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_6/bug27269"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:27310",
+      "title": "Boolean intersection gives too large reached tolerance",
+      "duplicate_current_catalog_number": true,
+      "candidate_record_sha256": "3ecd64bc322af3f36fc232a176de1de9666f2ce131d4d05dd2b4449acaf9584b",
+      "reference_commit_lead": "79997052f158c0512ff4d10ecb896e4899d24077",
+      "reference_date": "2016-04-28T17:04:58+03:00",
+      "source_patch_paths": [
+        "src/IntPatch/IntPatch_ImpImpIntersection_4.gxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_6/bug27310_1",
+        "tests/bugs/modalg_6/bug27310_2"
+      ],
+      "state": "duplicate",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:2755",
+      "title": "Boolean Bug in OCC5.0 with the shape having a ellipse curve",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "e1c7abc72a3b78d5ccd372ae12871d4a8a5b43ffc657d280e9ebf12f0f5f4a9b",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:27553",
+      "title": "Modeling Algorithms - BRepFeat_SplitShape returns self-intersecting result since OCC 7.0.0",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "c108902632fa4ace1ffc5639cf2f644a2dbc6ed3f3020279b65a287d7a3e2ea9",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:27648",
+      "title": "[Regression to 6.9.1] Section produces self-intersecting curve",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "bdd329dbacec49df5f8e6a95f91bbeaa5c52ef7adef5fe46c74cfd7afaeb59eb",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:27773",
+      "title": "Empty result of section operation between line and offset of a circle",
+      "duplicate_current_catalog_number": true,
+      "candidate_record_sha256": "83e30cd50c8a6226c224759aa7aae62befdc9f7abfb81490672dfa64ce615674",
+      "reference_commit_lead": "e91a710c7eb4d0f82f90d7618034d8db536fa3cf",
+      "reference_date": "2016-08-18T14:46:20+03:00",
+      "source_patch_paths": [
+        "src/IntTools/IntTools_EdgeEdge.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_6/bug27773"
+      ],
+      "state": "duplicate",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:27780",
+      "title": "Face-face intersection produces 2D curve that has reversed derivative at its end",
+      "duplicate_current_catalog_number": true,
+      "candidate_record_sha256": "030b9bb1032fc4eab7d4652e3303d70af7efb7ecdb188fe4a54a75340ff0dbe7",
+      "reference_commit_lead": "5185b1617a89397a36400e4af65e4f477e3c2ca2",
+      "reference_date": "2016-08-25T11:26:05+03:00",
+      "source_patch_paths": [
+        "src/IntPatch/IntPatch_Intersection.cxx",
+        "src/IntPatch/IntPatch_WLineTool.cxx",
+        "src/IntPatch/IntPatch_WLineTool.hxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_6/bug27780"
+      ],
+      "state": "duplicate",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:27872",
+      "title": "BRepAlgoAPI_Common returns invalid shape",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "dba5450e9b13a987190dc7ca3a5ddcf0a099199aa4b5624ab6f63edd29630c75",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:27896",
+      "title": "Prm-Prm intersection algo returns wrong result if it is called with start intersection point, which lies in the domain boundary",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "b026cdf8a92fde3585b84b4533073a65b91048b388006f2481e540fd51ac7285",
+      "reference_commit_lead": "f73c584ceb841cd6558e61ca694f60af7c0cec44",
+      "reference_date": "2016-11-08T15:15:11+03:00",
+      "source_patch_paths": [
+        "src/Draft/Draft_Modification_1.cxx",
+        "src/IntPatch/IntPatch_ImpPrmIntersection.cxx",
+        "src/IntPatch/IntPatch_PrmPrmIntersection.cxx",
+        "src/IntPatch/IntPatch_WLine.cxx",
+        "src/IntWalk/IntWalk_PWalking.cxx",
+        "src/IntWalk/IntWalk_PWalking.hxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_6/bug27896"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:28195",
+      "title": "Boolean common returns empty result for a solid where some surfaces of revolution touch the axis",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "e30d039357bf13b32362ab9e6e9d8c8038b34b2e45cd67895566bd85682ecf82",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:28216",
+      "title": "Intersection of a face and a solid is broken up leading to empty result of Boolean common operation",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "3c7d3155cac87705b94062a710876ffd058fec605762ce5088a05647309d662d",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:28274",
+      "title": "BOPAlgo_MakerVolume fails to create solid",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "4ce6c7367634b3da9bd5b9cb62027e537c80b36f80877069cfe434062c9e1e14",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:28366",
+      "title": "BOP Common fails with solid and planar face",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "b76272962c981113996dd37cab3bf62551d83a3d52d4fadcead72b7bc65bf524",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:2838",
+      "title": "Empty result of section between an edge and a face; wrong Extrema value",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "82def12550becea39b52dc95f0dca2c499c5a0eb93f524192dc88f796e200a19",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:28388",
+      "title": "Boolean common of simple face and solid results in empty compound",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "1dc2316c39359533f5d3f9660f1991f5d0c36eb1b03b5d4d170fe188fec06d89",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:28503",
+      "title": "Incomplete result of making volume operation due to incorrect intersection of conical faces",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "14fa854ea3dfee3fc8d7d1c4e343a4bcc55cb9165053dd9d441cde3f1d224bf8",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:28802",
+      "title": "The tolerance reached by approximator is used in creation of an edge, it is incorrect",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "fb349f737ccb0158cf50e8eb4481bad3b21bf4c4e4de963b969892286b0c56f6",
+      "reference_commit_lead": "bdae3beb87cab7d4c34d4e31a1654a19088100a9",
+      "reference_date": "2017-06-15T15:27:34+03:00",
+      "source_patch_paths": [
+        "src/IntTools/IntTools_FaceFace.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/boolean/bsection/M3",
+        "tests/bugs/modalg_6/bug26896_1",
+        "tests/bugs/modalg_6/bug26896_3",
+        "tests/bugs/modalg_6/bug26938_1",
+        "tests/bugs/modalg_6/bug26938_2",
+        "tests/bugs/modalg_6/bug26938_3",
+        "tests/bugs/modalg_6/bug27310_2",
+        "tests/bugs/modalg_6/bug28718"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:28833",
+      "title": "Modeling Algorithms - Unstable result of intersection of the faces",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "c02942b04c074865c0dfc5ae7abd17eb96d9888a38edfcb137888f9aac39a56e",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:29028",
+      "title": "Wrong result of Boolean Operations with plane and torus",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "0e5d628ce9df2de29bf4c1a43a83d79100d3d22595ebb07e4a048b2dbe1bd65a",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:29038",
+      "title": "Modeling - IntTools_EdgeEdge::FindParameters() hangs on bad curve",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "5387f253ea3833d0204164c4c01b8e6312e5d95d05d1b8ec89bf4a38741fdd0a",
+      "reference_commit_lead": "28c08a7d40e6736f29fdcf6c20b05de48af198f1",
+      "reference_date": "2017-09-22T11:51:56+03:00",
+      "source_patch_paths": [
+        "src/BOPTools/BOPTools_AlgoTools.cxx",
+        "src/IntTools/IntTools_EdgeEdge.cxx",
+        "src/IntTools/IntTools_EdgeEdge.hxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_7/bug29038"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:29807",
+      "title": "[Regression to 7.0.0] Impossible to cut cone from prism",
+      "duplicate_current_catalog_number": true,
+      "candidate_record_sha256": "eb0a3e9b1a021e4c8b679eb05921b27050be77e9cf2f948447c6071e4299ec82",
+      "reference_commit_lead": "3306fdd954ad583d2652f0454612b6183176eb2e",
+      "reference_date": "2018-07-06T15:52:48+03:00",
+      "source_patch_paths": [
+        "src/BRepTest/BRepTest_CheckCommands.cxx",
+        "src/Geom/Geom_ConicalSurface.hxx",
+        "src/IntAna/IntAna_Curve.cxx",
+        "src/IntAna/IntAna_Curve.hxx",
+        "src/IntAna/IntAna_IntQuadQuad.cxx",
+        "src/IntAna/IntAna_Quadric.cxx",
+        "src/IntAna/IntAna_Quadric.hxx",
+        "src/IntPatch/IntPatch_ALine.hxx",
+        "src/IntPatch/IntPatch_ALine.lxx",
+        "src/IntPatch/IntPatch_ALineToWLine.cxx",
+        "src/IntPatch/IntPatch_ALineToWLine.hxx",
+        "src/IntPatch/IntPatch_ImpImpIntersection_0.gxx",
+        "src/IntPatch/IntPatch_ImpImpIntersection_2.gxx",
+        "src/IntPatch/IntPatch_ImpImpIntersection_4.gxx",
+        "src/IntPatch/IntPatch_ImpPrmIntersection.cxx",
+        "src/IntPatch/IntPatch_Intersection.cxx",
+        "src/IntPatch/IntPatch_Point.cxx",
+        "src/IntPatch/IntPatch_Point.hxx",
+        "src/IntPatch/IntPatch_PointLine.cxx",
+        "src/IntPatch/IntPatch_SpecialPoints.cxx",
+        "src/IntPatch/IntPatch_SpecialPoints.hxx",
+        "src/IntPatch/IntPatch_WLineTool.cxx",
+        "src/IntPatch/IntPatch_WLineTool.hxx",
+        "src/IntStart/IntStart_SearchOnBoundaries.gxx",
+        "src/QABugs/QABugs_19.cxx",
+        "src/QABugs/QABugs_20.cxx",
+        "src/gp/gp_Cone.hxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_7/bug29807_b1",
+        "tests/bugs/modalg_7/bug29807_b2",
+        "tests/bugs/modalg_7/bug29807_b3a",
+        "tests/bugs/modalg_7/bug29807_b3b",
+        "tests/bugs/modalg_7/bug29807_b4a",
+        "tests/bugs/modalg_7/bug29807_b4b",
+        "tests/bugs/modalg_7/bug29807_b5a",
+        "tests/bugs/modalg_7/bug29807_b5b",
+        "tests/bugs/modalg_7/bug29807_i1001",
+        "tests/bugs/modalg_7/bug29807_i1002",
+        "tests/bugs/modalg_7/bug29807_i1003",
+        "tests/bugs/modalg_7/bug29807_i1004",
+        "tests/bugs/modalg_7/bug29807_i1005",
+        "tests/bugs/modalg_7/bug29807_i1006",
+        "tests/bugs/modalg_7/bug29807_i2001",
+        "tests/bugs/modalg_7/bug29807_i2002",
+        "tests/bugs/modalg_7/bug29807_i2003",
+        "tests/bugs/modalg_7/bug29807_i2004",
+        "tests/bugs/modalg_7/bug29807_i2005",
+        "tests/bugs/modalg_7/bug29807_i2006",
+        "tests/bugs/modalg_7/bug29807_i3001",
+        "tests/bugs/modalg_7/bug29807_i3002",
+        "tests/bugs/modalg_7/bug29807_i3003",
+        "tests/bugs/modalg_7/bug29807_i3004",
+        "tests/bugs/modalg_7/bug29807_i3005",
+        "tests/bugs/modalg_7/bug29807_i4001",
+        "tests/bugs/modalg_7/bug29807_i4002",
+        "tests/bugs/modalg_7/bug29807_i4003",
+        "tests/bugs/modalg_7/bug29807_i4004",
+        "tests/bugs/modalg_7/bug29807_i4005",
+        "tests/bugs/modalg_7/bug29807_i5001",
+        "tests/bugs/modalg_7/bug29807_i5002",
+        "tests/bugs/modalg_7/bug29807_sc01",
+        "tests/bugs/modalg_7/bug29807_svm01",
+        "tests/bugs/modalg_7/bug29807_svm02"
+      ],
+      "state": "duplicate",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:29824",
+      "title": "Intersection of cylinder and sphere is incorrect",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "8aef2e4e8ad549542da19e048a14361f4c7b4356758918e949937b484d907ca9",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:30198",
+      "title": "Regression to 7.1.0: BRepAlgoAPI_Fuse unlimited memory usage",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "5ed1d18f35e85c560e7163fbd6655bd09d37120e387c53ea9b7d9ab89d10e4d8",
+      "reference_commit_lead": "dce5b3eb0c3814802bade97009739d8a9b2f6a91",
+      "reference_date": "2018-10-10T18:47:18+03:00",
+      "source_patch_paths": [
+        "src/IntPolyh/IntPolyh_Triangle.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_7/bug30198"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:31835",
+      "title": "Modeling Algorithms - step by step Boolean common produces bad shape on given three cylinders",
+      "duplicate_current_catalog_number": true,
+      "candidate_record_sha256": "5e0dc9991ac583399605abc128e3f2b430cec7ca8880f923294a309ec8f13cdf",
+      "reference_commit_lead": "135c2bd90858f779bb4557a909e18adf8422649e",
+      "reference_date": "2020-10-14T19:23:26+03:00",
+      "source_patch_paths": [
+        "src/IntAna/IntAna_QuadQuadGeo.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_7/bug31835_1",
+        "tests/bugs/modalg_7/bug31835_2"
+      ],
+      "state": "duplicate",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:31850",
+      "title": "Modeling Algorithms - boolean cut and common generate unexpected result",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "aac808b52a64587ef82c39e9726d0f97289f47752e13a429330de55f5f33f697",
+      "reference_commit_lead": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+      "reference_date": "2020-10-14T19:25:45+03:00",
+      "source_patch_paths": [
+        "src/IntPatch/IntPatch_WLineTool.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_7/bug31850_1",
+        "tests/bugs/modalg_7/bug31850_2"
+      ],
+      "state": "source_fix_lead",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:32345",
+      "title": "CellsBuilder infinite loop",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "2aa64376a1422644a60c6decda10cc7404495b8cbf13035669e0d5c9878114cd",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:32443",
+      "title": "Boolean operations fail with fuzzy values, and tolerance is large",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "75fbae27af7ccdf4d060958f4a306595d0a348a89a4b2e0feb56d975dbfca820",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:32942",
+      "title": "Modeling Algorithms - Boolean operation Common has no result in specific example",
+      "duplicate_current_catalog_number": true,
+      "candidate_record_sha256": "2b07bdc6b395986cdb62a529955b6ae93a08af2266175064d14e585626474ace",
+      "reference_commit_lead": "33463eef63b49915024a8dd2e461cd68d7efd69b",
+      "reference_date": "2022-05-06T00:44:14+03:00",
+      "source_patch_paths": [
+        "src/IntTools/IntTools_BeanFaceIntersector.cxx"
+      ],
+      "upstream_test_paths": [
+        "tests/bugs/modalg_8/bug32942"
+      ],
+      "state": "duplicate",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:33064",
+      "title": "BRepAlgoAPI_Common fails to find common shape",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "acec7857ac480d4cdd708b38f9453b9c20d7176f1b39b02e3e8bdca8cb4f7e14",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:33516",
+      "title": "Incorrect boolean intersection (BRepAlgoAPI_Common)",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "87736d68070713730211316f869b5fa1a5700d7211b80387766af70001ad36b4",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:33639",
+      "title": "Modeling Algorithms - Boolean torus cut cone failed",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "4fd283c71cee41eafbadba21d45484190f3cb8f9a4e5c72db3f7dc60b6c4269c",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:33677",
+      "title": "Modeling Algorithms - Fuse operation Extrema_GenExtCS problem",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "8d3f0f80f68dbc397b2e25b3d9cca8f0bbedf575146265028271facb08743cae",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:33899",
+      "title": "Overlap found/not found depending on translation value",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "85b5e8d38cd012ddbb5cfe0a64b7434ae8209778829045a79c71bef5a2c36aab",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:33904",
+      "title": "Issue with cutting of 1 cylinder by another one",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "564742cd8e21f3a4f9f837f243ec2ae733fbf53cf8021e3edc0d5638b5cd1f7c",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:4904",
+      "title": "Bug in edge edge intersection",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "303320cdb245febe6dd3dbaa5c4b1a0ce88be78d2e5bcad24928050f684fb0a6",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:506",
+      "title": "Draw hungs up in BRepAlgoAPI_Cut function during loading e3i-file in Gallery but does not hung up in Gallerydeb",
+      "duplicate_current_catalog_number": true,
+      "candidate_record_sha256": "6bcb87f2c71f292b923f0f28e3309ebb83f09f1746333cfba824998259bf39ea",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "duplicate",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:6279",
+      "title": "Incorrect section between two solids",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "8a89a1e2e3d893dbaedf292d296211cdf05df4971e0f138004162b8a93352296",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:6281",
+      "title": "Cut operation is invalid.",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "cae18937f85f4825fcf6d5d51133c013dafc86b0140c3723c07b8a5955378f83",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:6282",
+      "title": "Cut operation is invalid.",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "9816de4739e885e537d2d119600552b6b55465b1d94f889d3e0075981e8d2509",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    },
+    {
+      "canonical_id": "mantis:9500",
+      "title": "Regress of the patch to bug 9134 - exception cutting one cylinder from another",
+      "duplicate_current_catalog_number": false,
+      "candidate_record_sha256": "88bb2ba750760a8b799ac2722c22ddf0a2771d852e885ef09cda9599446645bc",
+      "reference_commit_lead": null,
+      "reference_date": null,
+      "source_patch_paths": [],
+      "upstream_test_paths": [],
+      "state": "needs_fix_or_baseline_evidence",
+      "geometry_qualification": "not_run"
+    }
+  ]
+}

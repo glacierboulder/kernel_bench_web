@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-26310-checks",
+  "version": "1",
+  "title": "圆柱求交产生错误曲线 · 几何检查",
+  "source_ids": [
+    "occt-single20-ea80ac2f61af"
+  ],
+  "group_ids": [
+    "occt-single20-26310"
+  ],
+  "checkpoints": [
+    {
+      "id": "26310-original",
+      "issue_id": "occt-26310",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-26310/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "branches",
+          "support",
+          "section_closure"
+        ]
+      }
+    },
+    {
+      "id": "26310-neighborhood_rigid",
+      "issue_id": "occt-26310",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-26310/1/neighborhood_rigid.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "branches",
+          "support",
+          "section_closure"
+        ]
+      }
+    },
+    {
+      "id": "26310-neighborhood_swap",
+      "issue_id": "occt-26310",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-26310/1/neighborhood_swap.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "branches",
+          "support",
+          "section_closure"
+        ]
+      }
+    },
+    {
+      "id": "26310-regression_separated",
+      "issue_id": "occt-26310",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-26310/1/regression_separated.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "branches",
+          "support",
+          "section_closure"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/single20/solid_checks.tcl",
+    "evaluation/cases/single20/occt-26310/1/cylinder_geometry.tcl",
+    "evaluation/cases/single20/occt-26310/1/OCC26310-b1.brep",
+    "evaluation/cases/single20/occt-26310/1/OCC26310-b2.brep"
+  ]
+}

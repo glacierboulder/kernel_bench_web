@@ -1,0 +1,35 @@
+{
+  "sha": "9a5a19e98f025ef0c955b01408d2a7b23b5679ba",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOjlhNWExOWU5OGYwMjVlZjBjOTU1YjAxNDA4ZDJhN2IyM2I1Njc5YmE=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/9a5a19e98f025ef0c955b01408d2a7b23b5679ba",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/9a5a19e98f025ef0c955b01408d2a7b23b5679ba",
+  "author": {
+    "name": "pkv",
+    "email": "pkv@opencascade.com",
+    "date": "2015-03-05T12:02:49Z"
+  },
+  "committer": {
+    "name": "bugmaster",
+    "email": "bugmaster@opencascade.com",
+    "date": "2015-03-05T12:48:54Z"
+  },
+  "tree": {
+    "sha": "c5eafa358078cdbacbb4781306ba063cc75509ed",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/c5eafa358078cdbacbb4781306ba063cc75509ed"
+  },
+  "message": "0025818: IntTools_FaceFace throws Standard_ConstructionError with two unbounded planes\n\nChanges:\nclass IntTools_FaceFace\n    - method:\n void IntTools_FaceFace::Perform(const TopoDS_Face& aF1,\n                                const TopoDS_Face& aF2)\nThe treatment of infinite planes was corrected.\n\nTest case for issue CR25818",
+  "parents": [
+    {
+      "sha": "ef237d732d1907f1fac3624ef698457a1a83a09f",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/ef237d732d1907f1fac3624ef698457a1a83a09f",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/ef237d732d1907f1fac3624ef698457a1a83a09f"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

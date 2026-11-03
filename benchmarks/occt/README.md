@@ -1,12 +1,12 @@
 # OCCT shared benchmark bundle
 
-This is the default OCCT catalog. It contains 5 multi-issue tasks, 10 single-issue tasks, and 7 legacy tasks: 22 registered tasks in total. The current 15 research tasks share the same framework runtime.
+This is the default OCCT catalog. It contains 5 multi-issue tasks, 30 single-issue tasks, and 7 legacy tasks, for 42 registered tasks in total. The current 35 research tasks share the same framework runtime.
 
 Current task directories use `groups/new/occt-N[-N...]/1.json`; matching suites use `evaluation/suites/new/occt-N[-N...]/1.json`. Issue directories use `issues/occt-N/<version>/`. Display names use `OCCT · N / N...`. Historical identity IDs remain stable so saved runs and frozen evidence retain their original identity.
 
 `benchmarks/occt` is the only active benchmark directory. Import copies belong under ignored `data/imports/`; execution evidence belongs under `data/`. Reports are collected under `CADAI/tmp/kernel_bench_web_report/` and named `<object>_<content>_<YYYYMMDD>.md`.
 
-The five new task IDs (also their catalog group IDs) are:
+The five multi-issue tasks use the following catalog group IDs.
 
 - NG-04R-v2 — 新题 · OCCT 30082 / 30202 / 33541
 - NG-05T-v1 — 新题 · OCCT 30082 / 31602 / 32850
@@ -21,3 +21,11 @@ Each new group is runnable independently from its group manifest and compatible 
 ## Authoring and acceptance
 
 The single authoring source is the [OCCT benchmark construction and acceptance guide](../../docs/benchmark-authoring.md). It includes the end-to-end author workflow, Agent patch acceptance criteria, manifest structure, current suite counts, and portable validation commands. The [catalog format section of the main authoring guide](../../docs/benchmark-authoring.md#清单格式与目录结构) is the authoring reference; the schemas remain the exact field contract.
+
+## Single-issue expansion of 2026-11-03
+
+The twenty `occt-single20-*` tasks add 80 required checkpoints. All 160 frozen B/F executions completed. The defective original case fails on each B baseline, and every required F checkpoint passes. Calibration also rejects 61 reference-side negative controls.
+
+The [qualification report](../../CADAI/tmp/kernel_bench_web_report/occt_single20_authoring_20261103.md) records task identities, geometric predicates, reference limitations, and evidence. The [machine-readable matrix](../../research/occt-single20-authoring-20261102/qualification-matrix.json) links each result to its preserved log. M33639 uses a verified older working commit as its geometric positive reference.
+
+Use `scripts/prepare_single20_source.py` to reconstruct the new locked baselines from existing upstream Git objects. Derived baselines include their inverse source patch and exact Git commit object in `evaluation/provenance/single20/`.

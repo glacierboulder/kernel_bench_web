@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "issue": "occt-25111",
+  "status": "qualified",
+  "source_kind": "curator-derived inverse patch",
+  "source_commit": "029311e00f2822c762f676f863f9b932ad8ca8ef",
+  "git_tree": "34e68697f4f90e8c82493a9a2fb8bdb8b30cd846",
+  "materialized_tree_sha256": "dbf7237b12b0712f11b7d3fb020950577fdec9eb6b1f66a95bad6a29239248b6",
+  "reference": {
+    "source_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+    "git_tree": "a0520348e5dddfcec577466f2587763ae7640d56",
+    "source_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+    "kind": "natural later commit",
+    "patch_sha256": "fda8d44923affb961a6dfa6ef8e08b6d5ae59f4a3addae25c5ade5a4a25f1346"
+  },
+  "qualification": {
+    "b": {
+      "label": "m25111-b-calibration-01",
+      "model_called": false,
+      "source_commit": "029311e00f2822c762f676f863f9b932ad8ca8ef",
+      "source_tree_sha256": "dbf7237b12b0712f11b7d3fb020950577fdec9eb6b1f66a95bad6a29239248b6",
+      "build_receipt_sha256": "573f51b5c03a82eb783c386af1a8f0ce80a97a5a54f4cdad5bde4073193b5e88",
+      "binary_manifest_sha256": "71a118b809bb6da1425987e7356ca9ff4697e30b8e53e9a72d766efcba50a2c4",
+      "results": {
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_scale": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_translation": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_cone_plane": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T13:59:46.193371+00:00"
+    },
+    "f": {
+      "label": "m25111-f-calibration-01",
+      "model_called": false,
+      "source_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "source_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "build_receipt_sha256": "cc1788e23ded226625073e80fe5bd8ce44d1411f314dc078e051d2247c8df804",
+      "binary_manifest_sha256": "7b147181424fffb426b6b6cd62b420b0a7888646a2426ddf0237d80d8ac20026",
+      "results": {
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_scale": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_translation": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_cone_plane": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T13:59:40.243456+00:00"
+    }
+  },
+  "stage": "unknown",
+  "stage_note": "The earliest internal failing stage has not been localized by this authoring run.",
+  "limits": [
+    "The isolated outer tangency point at z=0 is outside this task’s non-degenerate section-curve contract.",
+    "Analytic support samples and independent witnesses are finite checks, not a certified global error bound."
+  ],
+  "origin_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+  "origin_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+  "source_patch_sha256": "c76a83a734dd337558b7f4470ff9f0362f89542534d7697e05fed2264e580476",
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0025111/",
+  "upstream_fix_lead": "10ee997695095e4e62d0d197153665326a6939f3",
+  "input_provenance": {
+    "repository": "a-betenev/opencascade-dataset",
+    "commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1",
+    "files": [
+      {
+        "name": "bug25111_s1.draw",
+        "git_blob": "394719c8807b9f923535d45a60d4e02d2a38d34d",
+        "sha256": "f016e8ae1a09b70760a1d89a61927f14f3776501f5f2a78f1186c8350555da8c",
+        "bytes": 133
+      },
+      {
+        "name": "bug25111_s2.draw",
+        "git_blob": "772bdf6a67c2acf486e1a854a6551aaedef196d0",
+        "sha256": "41d3d546f01b56b93c6b278a5dbe32b7eb7e390bd4009f17bddf3b57ec15a1b4",
+        "bytes": 55
+      }
+    ]
+  }
+}

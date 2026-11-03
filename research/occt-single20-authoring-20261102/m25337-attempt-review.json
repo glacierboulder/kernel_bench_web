@@ -1,0 +1,8 @@
+{
+  "issue": 25337,
+  "attempts": {
+    "calibration-01": "Invalid oracle expectation due to integer division in Tcl acos argument; raw verdicts are not valid B/F evidence. Corrected before calibration-02.",
+    "derived-b-build-01/calibration-02": "Defect not reproduced. Preserving the later FindBestSolution kept all tested outputs correct. This baseline is not admitted."
+  },
+  "next_attempt": "Restore historical pre-fix FindBestSolution along with the reverse-ported functional hunks. This is a distinct derived baseline."
+}

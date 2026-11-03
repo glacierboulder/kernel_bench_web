@@ -1,0 +1,104 @@
+{
+  "issue": 26310,
+  "cases": [
+    {
+      "id": "original",
+      "script": "occt-26310/1/original.tcl",
+      "category": "original",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "branches",
+        "support",
+        "section_closure"
+      ]
+    },
+    {
+      "id": "neighborhood_rigid",
+      "script": "occt-26310/1/neighborhood_rigid.tcl",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "branches",
+        "support",
+        "section_closure"
+      ]
+    },
+    {
+      "id": "neighborhood_swap",
+      "script": "occt-26310/1/neighborhood_swap.tcl",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "branches",
+        "support",
+        "section_closure"
+      ]
+    },
+    {
+      "id": "regression_separated",
+      "script": "occt-26310/1/regression_separated.tcl",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "branches",
+        "support",
+        "section_closure"
+      ]
+    },
+    {
+      "id": "negative_empty",
+      "script": "occt-26310/1/negative_empty.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "branches",
+        "support",
+        "section_closure"
+      ]
+    },
+    {
+      "id": "negative_missing",
+      "script": "occt-26310/1/negative_missing.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "branches",
+        "support",
+        "section_closure"
+      ]
+    },
+    {
+      "id": "negative_shifted",
+      "script": "occt-26310/1/negative_shifted.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "branches",
+        "support",
+        "section_closure"
+      ]
+    }
+  ],
+  "support_sha256": {
+    "occt-26310/1/OCC26310-b2.brep": "d9d64d7bfe9837b8fc94975f4fcc5c8970555adf3171b186d2fab7e04fbed2f7",
+    "occt-26310/1/neighborhood_swap.tcl": "a89a9c45ab023b4e821ffae86881bca1e0d2c48845e14447e37c8b813e3b1528",
+    "occt-26310/1/original_probe.tcl": "b5392fde7fb5a820046ce017236d94474a7d483ea49c3480f686b2f66b883033",
+    "occt-26310/1/analytic_probe.tcl": "7d691a91a11c619785ca2df84491253df0cc1234a9748dcff9909cd0cc476f70",
+    "occt-26310/1/regression_separated.tcl": "c14bb108b607810fc770d8204685e135eea5b10c68aa511116955c81a5ae1354",
+    "occt-26310/1/negative_missing.tcl": "110c26e1ceb24ab0b34d7597906c62e598c28ed07417d0a7a325876d47930f0c",
+    "occt-26310/1/cylinder_geometry.tcl": "20b23f8516f11535c17fb8a139f5c146ac40e9962077c284f53fa385e7bca8fe",
+    "occt-26310/1/negative_empty.tcl": "fc5ee361576209a1418638bbc3fc4b37d67eb9cf44a3a0f2c9e77869612024a8",
+    "occt-26310/1/neighborhood_rigid.tcl": "d60c61ae4b136a4e8b3a77f5c2c303b5583f08de40584b94b0487dfad68bc21d",
+    "occt-26310/1/original.tcl": "46434d79a01a76b2ad8aeddfabddfbaa63f31b1ae9f230b5cd5850f1befa24a1",
+    "occt-26310/1/negative_shifted.tcl": "61b549cd7b54f1ef89f52b8e0575406f8bd743b1a3fcf1cc4a1565c2c1f156b2",
+    "occt-26310/1/OCC26310-b1.brep": "4170359cac6702745069e56666e3291d49bd8ed60b6123738539622301b33401",
+    "assertions.tcl": "f456e1d2e107d2eb3673ff7c5edbf43578516958231578ea53d976a8b6adb2f0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-26910",
+  "version": "1",
+  "title": "OCCT · 直线与圆弧 General Fuse 漏掉近交点",
+  "kind": "single",
+  "source_id": "occt-single20-6435b9c7fafd",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-26910",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single20-26910-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

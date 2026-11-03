@@ -1,0 +1,93 @@
+{
+  "issue": 24313,
+  "cases": [
+    {
+      "script": "occt-24313/1/negative_duplicate.tcl",
+      "id": "negative_duplicate",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-24313/1/negative_missing.tcl",
+      "id": "negative_missing",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-24313/1/negative_shifted.tcl",
+      "id": "negative_shifted",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-24313/1/negative_truncated.tcl",
+      "id": "negative_truncated",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-24313/1/neighborhood_frame.tcl",
+      "id": "neighborhood_frame",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-24313/1/neighborhood_radius.tcl",
+      "id": "neighborhood_radius",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-24313/1/original.tcl",
+      "id": "original",
+      "category": "original",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-24313/1/regression_analytic_cylinder.tcl",
+      "id": "regression_analytic_cylinder",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    }
+  ]
+}

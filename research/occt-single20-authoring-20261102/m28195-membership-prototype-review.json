@@ -1,0 +1,9 @@
+{
+  "issue": 28195,
+  "superseded_jobs": [
+    "m28195-f-membership-01",
+    "m28195-b-membership-01"
+  ],
+  "problem": "The healthy intersecting-box control sampled only the common bounding box, so every grid point was IN and the required OUT count was zero.",
+  "correction": "Sample the union of the two input bounding boxes. The geometric predicates and distance thresholds are unchanged. Re-run both complete B/F plans with new labels."
+}

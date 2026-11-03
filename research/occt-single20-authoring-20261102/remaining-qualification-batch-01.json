@@ -1,0 +1,38 @@
+[
+  {
+    "issue": "github-1610",
+    "label": "github1610-natural-reference-01",
+    "build_job": "m24418-natural-f-build-01",
+    "plan": "mgithub-1610-qualification-plan.json"
+  },
+  {
+    "issue": 26310,
+    "label": "m26310-b-qualification-01",
+    "build_job": "m26310-derived-b-build-01",
+    "plan": "m26310-qualification-plan.json"
+  },
+  {
+    "issue": 26310,
+    "label": "m26310-f-qualification-01",
+    "build_job": "occt-7.9.3-build-01",
+    "plan": "m26310-qualification-plan.json"
+  },
+  {
+    "issue": 24097,
+    "label": "m24097-b-qualification-01",
+    "build_job": "m26243-natural-b-build-01",
+    "plan": "m24097-qualification-plan.json"
+  },
+  {
+    "issue": 24097,
+    "label": "m24097-f2016-qualification-01",
+    "build_job": "common-2016-f-build-02",
+    "plan": "m24097-qualification-plan.json"
+  },
+  {
+    "issue": 24097,
+    "label": "m24097-f2025-qualification-01",
+    "build_job": "occt-7.9.3-build-01",
+    "plan": "m24097-qualification-plan.json"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "group_id": "occt-single20-25111",
+      "build_jobs": {
+        "b": "m25111-derived-b-build-01",
+        "f": "m26243-natural-b-build-01"
+      },
+      "reference_patch": "evaluation/provenance/single20/occt-25111/reference.patch"
+    },
+    {
+      "group_id": "occt-single20-26243",
+      "build_jobs": {
+        "b": "m26243-natural-b-build-01",
+        "f": "m26243-direct-reference-build-01"
+      },
+      "reference_patch": "evaluation/provenance/single20/occt-26243/reference.patch"
+    },
+    {
+      "group_id": "occt-single20-26910",
+      "build_jobs": {
+        "b": "m26796-natural-b-build-01",
+        "f": "common-2016-f-build-02"
+      },
+      "natural_reference_source": "/var/tmp/cad-bench-lzy-round2-qualification-20261028/jobs/m27270-f1/source"
+    }
+  ]
+}

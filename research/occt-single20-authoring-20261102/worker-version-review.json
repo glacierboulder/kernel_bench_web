@@ -1,0 +1,11 @@
+{
+  "event": "build worker file was extended while already-started build workers waited on compiler.lock",
+  "affected_jobs": [
+    "m26243-derived-b-build-01",
+    "m23998-derived-b-build-01"
+  ],
+  "loaded_worker": "tools/build_verified_source_v4.py",
+  "loaded_worker_sha256": "8b15eeaa80adfa60d6407167a775710c66e85cfb45c80e1dad76c920986d1cc7",
+  "change": "Optional --shared-build branch was added. Already-started processes used the prior version. Their original file-at-lock worker hash must not be interpreted as the loaded program identity.",
+  "future_fix": "Capture worker bytes before waiting on the compiler lock."
+}

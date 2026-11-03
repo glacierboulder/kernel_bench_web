@@ -1,0 +1,16 @@
+{
+  "issue": 28274,
+  "qualification": "original screening only; no admission or final oracle claim",
+  "cases": [
+    {
+      "script": "occt-28274/1/diagnostic_probe.tcl",
+      "id": "diagnostic_probe",
+      "category": "original",
+      "expected_assertion_ids": [
+        "solid_count",
+        "volume",
+        "validity"
+      ]
+    }
+  ]
+}

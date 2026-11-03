@@ -1,0 +1,116 @@
+{
+  "issue_id": "occt-24418",
+  "issue_version": "1",
+  "title": "OCCT M24418 · 圆环面与圆锥求交精度",
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "group_id": "occt-single20-24418",
+  "suite": {
+    "id": "occt-single20-24418-checks",
+    "version": "1"
+  },
+  "source_id": "occt-single20-1511c7e90f1a",
+  "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+  "source_kind": "natural historical commit",
+  "frozen_replay": "frozen-replay-03",
+  "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+  "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+  "upstream_url": "https://occt3d.com/dev/tickets/0024418/",
+  "verdict": "PASS",
+  "checkpoints": [
+    {
+      "role": "b",
+      "id": "24418-neighborhood_swap",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-03/occt-single20-24418/b/24418-neighborhood_swap/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "b",
+      "id": "24418-neighborhood_translation",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-03/occt-single20-24418/b/24418-neighborhood_translation/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "b",
+      "id": "24418-original",
+      "category": "original",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-03/occt-single20-24418/b/24418-original/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "b",
+      "id": "24418-regression_separated",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-03/occt-single20-24418/b/24418-regression_separated/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "f",
+      "id": "24418-neighborhood_swap",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-03/occt-single20-24418/f/24418-neighborhood_swap/result.json",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+    },
+    {
+      "role": "f",
+      "id": "24418-neighborhood_translation",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-03/occt-single20-24418/f/24418-neighborhood_translation/result.json",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+    },
+    {
+      "role": "f",
+      "id": "24418-original",
+      "category": "original",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-03/occt-single20-24418/f/24418-original/result.json",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+    },
+    {
+      "role": "f",
+      "id": "24418-regression_separated",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-03/occt-single20-24418/f/24418-regression_separated/result.json",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+    }
+  ],
+  "snapshots": {
+    "b": "8e99946260c68864c3347d7efe4a6bdafc645735244272bad27ef71979ac61e2",
+    "f": "8e99946260c68864c3347d7efe4a6bdafc645735244272bad27ef71979ac61e2"
+  },
+  "evidence_file": "evidence.json",
+  "result_path_namespace": "tar archive member path",
+  "negative_controls": {
+    "job": "m24418-f-calibration-02",
+    "rejected": [
+      "negative_missing",
+      "negative_shifted",
+      "negative_truncated"
+    ]
+  },
+  "supplementary_input_legality": [
+    "m24418-b-input-legality-01",
+    "m24418-f-input-legality-01"
+  ],
+  "full_snapshots_reverified": true
+}

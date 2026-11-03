@@ -1,0 +1,1180 @@
+{
+  "issue_id": "occt-24313",
+  "frozen_results": [
+    {
+      "group_id": "occt-single20-24313",
+      "role": "b",
+      "checkpoint_id": "24313-neighborhood_frame",
+      "category": "neighborhood",
+      "source_commit": "78b6b239841fdbe47b9cf51493739def58c01848",
+      "source_tree_sha256": "793845f1abc97f49cbf4570663181ff195688429c8f84e3b65399d52d59eac89",
+      "reference_patch_sha256": null,
+      "snapshot_sha256": "3a51dca705cb048d6116466b8076e6742577ff5979dae7676f580b198c6fefd6",
+      "prebuild_binary_manifest_sha256": "d84a3f97d652c5969278996b70e3c2009665789f9411d8804e3e224c14b3028b",
+      "runtime_binaries_sha256": "30c39b511c18f5605f110c17e83ba529583ea04feb696ea0f42e762211553826",
+      "process_return_code": 1,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "24313-neighborhood_frame",
+        "category": "neighborhood",
+        "passed": false,
+        "status": "geometry_fail",
+        "oracle_ran": true,
+        "return_code": 1,
+        "test_done_marker": false,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": false,
+          "status": "geometry_fail",
+          "checkpoint_id": "24313-neighborhood_frame",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "branch_count",
+            "support_residual",
+            "domain_coverage"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "FAIL",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "FAIL",
+              "id": "branch_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "support_residual",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "domain_coverage",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": false,
+            "test_done_marker": false,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 4,
+            "numeric_assertions": 3,
+            "failed_assertions": 4,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": true,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nAn exception was caught 0x18263b60 : Standard_ConstructionError: GeomInt_IntSS::MakeCurve\nBENCH_ASSERT_FAIL operation_completed error=1 report=** Exception ** 0x18263b60 : Standard_ConstructionError: GeomInt_IntSS::MakeCurve kind=expression\nBENCH_ASSERT_FAIL branch_count observed=0 expected=2 kind=numeric\nBENCH_ASSERT_FAIL support_residual max_distance=0.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_FAIL domain_coverage unbounded=0 positive_generator=0 negative_generator=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [
+              "An exception was caught 0x18263b60 : Standard_ConstructionError: GeomInt_IntSS::MakeCurve"
+            ],
+            "full_log_failure_detected": true,
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-24313/1/neighborhood_frame.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+            "elapsed_seconds": 0.032
+          },
+          "return_code": 1
+        },
+        "case_sha256": "f4c9c2244048f551bd71fbb4e012b9ebf6946b9864a4668a7d04720416028c5a",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-24313",
+      "role": "b",
+      "checkpoint_id": "24313-neighborhood_radius",
+      "category": "neighborhood",
+      "source_commit": "78b6b239841fdbe47b9cf51493739def58c01848",
+      "source_tree_sha256": "793845f1abc97f49cbf4570663181ff195688429c8f84e3b65399d52d59eac89",
+      "reference_patch_sha256": null,
+      "snapshot_sha256": "3a51dca705cb048d6116466b8076e6742577ff5979dae7676f580b198c6fefd6",
+      "prebuild_binary_manifest_sha256": "d84a3f97d652c5969278996b70e3c2009665789f9411d8804e3e224c14b3028b",
+      "runtime_binaries_sha256": "30c39b511c18f5605f110c17e83ba529583ea04feb696ea0f42e762211553826",
+      "process_return_code": 1,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "24313-neighborhood_radius",
+        "category": "neighborhood",
+        "passed": false,
+        "status": "geometry_fail",
+        "oracle_ran": true,
+        "return_code": 1,
+        "test_done_marker": false,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": false,
+          "status": "geometry_fail",
+          "checkpoint_id": "24313-neighborhood_radius",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "branch_count",
+            "support_residual",
+            "domain_coverage"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "FAIL",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "FAIL",
+              "id": "branch_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "support_residual",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "domain_coverage",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": false,
+            "test_done_marker": false,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 4,
+            "numeric_assertions": 3,
+            "failed_assertions": 4,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": true,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nAn exception was caught 0x117b4b60 : Standard_ConstructionError: GeomInt_IntSS::MakeCurve\nBENCH_ASSERT_FAIL operation_completed error=1 report=** Exception ** 0x117b4b60 : Standard_ConstructionError: GeomInt_IntSS::MakeCurve kind=expression\nBENCH_ASSERT_FAIL branch_count observed=0 expected=2 kind=numeric\nBENCH_ASSERT_FAIL support_residual max_distance=0.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_FAIL domain_coverage unbounded=0 positive_generator=0 negative_generator=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [
+              "An exception was caught 0x117b4b60 : Standard_ConstructionError: GeomInt_IntSS::MakeCurve"
+            ],
+            "full_log_failure_detected": true,
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-24313/1/neighborhood_radius.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+            "elapsed_seconds": 0.032
+          },
+          "return_code": 1
+        },
+        "case_sha256": "6976f681576745c633e9891f6d6d1bcf92698a54ec8a1f89db6b2b640e6b7ea1",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-24313",
+      "role": "b",
+      "checkpoint_id": "24313-original",
+      "category": "original",
+      "source_commit": "78b6b239841fdbe47b9cf51493739def58c01848",
+      "source_tree_sha256": "793845f1abc97f49cbf4570663181ff195688429c8f84e3b65399d52d59eac89",
+      "reference_patch_sha256": null,
+      "snapshot_sha256": "3a51dca705cb048d6116466b8076e6742577ff5979dae7676f580b198c6fefd6",
+      "prebuild_binary_manifest_sha256": "d84a3f97d652c5969278996b70e3c2009665789f9411d8804e3e224c14b3028b",
+      "runtime_binaries_sha256": "30c39b511c18f5605f110c17e83ba529583ea04feb696ea0f42e762211553826",
+      "process_return_code": 1,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "24313-original",
+        "category": "original",
+        "passed": false,
+        "status": "geometry_fail",
+        "oracle_ran": true,
+        "return_code": 1,
+        "test_done_marker": false,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": false,
+          "status": "geometry_fail",
+          "checkpoint_id": "24313-original",
+          "category": "original",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "branch_count",
+            "support_residual",
+            "domain_coverage"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "FAIL",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "FAIL",
+              "id": "branch_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "support_residual",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "domain_coverage",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": false,
+            "test_done_marker": false,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 4,
+            "numeric_assertions": 3,
+            "failed_assertions": 4,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": true,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nAn exception was caught 0x1de9bb60 : Standard_ConstructionError: GeomInt_IntSS::MakeCurve\nBENCH_ASSERT_FAIL operation_completed error=1 report=** Exception ** 0x1de9bb60 : Standard_ConstructionError: GeomInt_IntSS::MakeCurve kind=expression\nBENCH_ASSERT_FAIL branch_count observed=0 expected=2 kind=numeric\nBENCH_ASSERT_FAIL support_residual max_distance=0.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_FAIL domain_coverage unbounded=0 positive_generator=0 negative_generator=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [
+              "An exception was caught 0x1de9bb60 : Standard_ConstructionError: GeomInt_IntSS::MakeCurve"
+            ],
+            "full_log_failure_detected": true,
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-24313/1/original.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+            "elapsed_seconds": 0.032
+          },
+          "return_code": 1
+        },
+        "case_sha256": "e94e273cb3221459a732231398fcb8b87f9873d852c59f5c5de5a1f9476df56f",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-24313",
+      "role": "b",
+      "checkpoint_id": "24313-regression_analytic_cylinder",
+      "category": "regression",
+      "source_commit": "78b6b239841fdbe47b9cf51493739def58c01848",
+      "source_tree_sha256": "793845f1abc97f49cbf4570663181ff195688429c8f84e3b65399d52d59eac89",
+      "reference_patch_sha256": null,
+      "snapshot_sha256": "3a51dca705cb048d6116466b8076e6742577ff5979dae7676f580b198c6fefd6",
+      "prebuild_binary_manifest_sha256": "d84a3f97d652c5969278996b70e3c2009665789f9411d8804e3e224c14b3028b",
+      "runtime_binaries_sha256": "30c39b511c18f5605f110c17e83ba529583ea04feb696ea0f42e762211553826",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "24313-regression_analytic_cylinder",
+        "category": "regression",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "24313-regression_analytic_cylinder",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "branch_count",
+            "support_residual",
+            "domain_coverage"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "branch_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "support_residual",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "domain_coverage",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 4,
+            "numeric_assertions": 3,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_PASS branch_count observed=2 expected=2 kind=numeric\nBENCH_ASSERT_PASS support_residual max_distance=0.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_PASS domain_coverage unbounded=1 positive_generator=1 negative_generator=1 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-24313/1/regression_analytic_cylinder.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+            "elapsed_seconds": 0.032
+          },
+          "return_code": 0
+        },
+        "case_sha256": "ef0ab7f15e5fe01c0109cf5cd189d64556fa0e74a2c1c9b8e7289c22dff8d82d",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-24313",
+      "role": "f",
+      "checkpoint_id": "24313-neighborhood_frame",
+      "category": "neighborhood",
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "reference_patch_sha256": "27f0781d306815684d2e5c8b311298e02595f90d12f557f1f2db7453c3102c8a",
+      "snapshot_sha256": "3a51dca705cb048d6116466b8076e6742577ff5979dae7676f580b198c6fefd6",
+      "prebuild_binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "24313-neighborhood_frame",
+        "category": "neighborhood",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "24313-neighborhood_frame",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "branch_count",
+            "support_residual",
+            "domain_coverage"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "branch_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "support_residual",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "domain_coverage",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 4,
+            "numeric_assertions": 3,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_PASS branch_count observed=2 expected=2 kind=numeric\nBENCH_ASSERT_PASS support_residual max_distance=5.684341886080801e-14 limit=1e-7 kind=numeric\nBENCH_ASSERT_PASS domain_coverage unbounded=1 positive_generator=1 negative_generator=1 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-24313/1/neighborhood_frame.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+            "elapsed_seconds": 0.032
+          },
+          "return_code": 0
+        },
+        "case_sha256": "f4c9c2244048f551bd71fbb4e012b9ebf6946b9864a4668a7d04720416028c5a",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-24313",
+      "role": "f",
+      "checkpoint_id": "24313-neighborhood_radius",
+      "category": "neighborhood",
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "reference_patch_sha256": "27f0781d306815684d2e5c8b311298e02595f90d12f557f1f2db7453c3102c8a",
+      "snapshot_sha256": "3a51dca705cb048d6116466b8076e6742577ff5979dae7676f580b198c6fefd6",
+      "prebuild_binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "24313-neighborhood_radius",
+        "category": "neighborhood",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "24313-neighborhood_radius",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "branch_count",
+            "support_residual",
+            "domain_coverage"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "branch_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "support_residual",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "domain_coverage",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 4,
+            "numeric_assertions": 3,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_PASS branch_count observed=2 expected=2 kind=numeric\nBENCH_ASSERT_PASS support_residual max_distance=3.552713678800501e-15 limit=1e-7 kind=numeric\nBENCH_ASSERT_PASS domain_coverage unbounded=1 positive_generator=1 negative_generator=1 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-24313/1/neighborhood_radius.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+            "elapsed_seconds": 0.032
+          },
+          "return_code": 0
+        },
+        "case_sha256": "6976f681576745c633e9891f6d6d1bcf92698a54ec8a1f89db6b2b640e6b7ea1",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-24313",
+      "role": "f",
+      "checkpoint_id": "24313-original",
+      "category": "original",
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "reference_patch_sha256": "27f0781d306815684d2e5c8b311298e02595f90d12f557f1f2db7453c3102c8a",
+      "snapshot_sha256": "3a51dca705cb048d6116466b8076e6742577ff5979dae7676f580b198c6fefd6",
+      "prebuild_binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "24313-original",
+        "category": "original",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "24313-original",
+          "category": "original",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "branch_count",
+            "support_residual",
+            "domain_coverage"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "branch_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "support_residual",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "domain_coverage",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 4,
+            "numeric_assertions": 3,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_PASS branch_count observed=2 expected=2 kind=numeric\nBENCH_ASSERT_PASS support_residual max_distance=1.4210854715202004e-14 limit=1e-7 kind=numeric\nBENCH_ASSERT_PASS domain_coverage unbounded=1 positive_generator=1 negative_generator=1 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-24313/1/original.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+            "elapsed_seconds": 0.032
+          },
+          "return_code": 0
+        },
+        "case_sha256": "e94e273cb3221459a732231398fcb8b87f9873d852c59f5c5de5a1f9476df56f",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-24313",
+      "role": "f",
+      "checkpoint_id": "24313-regression_analytic_cylinder",
+      "category": "regression",
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "reference_patch_sha256": "27f0781d306815684d2e5c8b311298e02595f90d12f557f1f2db7453c3102c8a",
+      "snapshot_sha256": "3a51dca705cb048d6116466b8076e6742577ff5979dae7676f580b198c6fefd6",
+      "prebuild_binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "24313-regression_analytic_cylinder",
+        "category": "regression",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "24313-regression_analytic_cylinder",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "branch_count",
+            "support_residual",
+            "domain_coverage"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "branch_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "support_residual",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "domain_coverage",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 4,
+            "numeric_assertions": 3,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_PASS branch_count observed=2 expected=2 kind=numeric\nBENCH_ASSERT_PASS support_residual max_distance=0.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_PASS domain_coverage unbounded=1 positive_generator=1 negative_generator=1 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-24313/1/regression_analytic_cylinder.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+            "elapsed_seconds": 0.032
+          },
+          "return_code": 0
+        },
+        "case_sha256": "ef0ab7f15e5fe01c0109cf5cd189d64556fa0e74a2c1c9b8e7289c22dff8d82d",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    }
+  ],
+  "negative_controls": [
+    {
+      "case": "negative_duplicate",
+      "result": {
+        "passed": false,
+        "status": "geometry_fail",
+        "checkpoint_id": null,
+        "category": null,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "branch_count",
+          "support_residual",
+          "domain_coverage"
+        ],
+        "observed_assertion_events": [
+          {
+            "status": "PASS",
+            "id": "operation_completed",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "branch_count",
+            "kind": "numeric"
+          },
+          {
+            "status": "PASS",
+            "id": "support_residual",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "domain_coverage",
+            "kind": "numeric"
+          }
+        ],
+        "missing_assertions": [],
+        "unexpected_assertions": [],
+        "duplicate_assertions": [],
+        "completion_sentinel_count": 1,
+        "summary_pair_valid": true,
+        "expected_geometry_failure_signature_seen": false,
+        "base_runner": {
+          "protocol": "draw_case_oracle_v1",
+          "oracle_scope": "public_script_only",
+          "passed": false,
+          "test_done_marker": false,
+          "tcl_standard_library": {
+            "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+            "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+          },
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 4,
+          "numeric_assertions": 3,
+          "failed_assertions": 1,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_PASS branch_count observed=2 expected=2 kind=numeric\nBENCH_ASSERT_PASS support_residual max_distance=0.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_FAIL domain_coverage unbounded=1 positive_generator=1 negative_generator=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+          "stderr_tail": "",
+          "diagnostic_lines": [],
+          "full_log_failure_detected": true,
+          "script": "/workspace/cases/occt-24313/1/negative_duplicate.tcl",
+          "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+          "elapsed_seconds": 0.032
+        },
+        "case": "negative_duplicate.tcl",
+        "runner_process_code": 0,
+        "case_sha256": "69b19ab570e0d5d7b99320bfe8dc1d8e8579ce43a34e9e5820b885501fee5ed0",
+        "log_sha256": "ec9e618f8545ffe4d909d5d862fecf2d3004cb54ecb264520196d5ee1f59287f"
+      },
+      "runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": false,
+        "test_done_marker": false,
+        "tcl_standard_library": {
+          "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 4,
+        "numeric_assertions": 3,
+        "failed_assertions": 1,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_PASS branch_count observed=2 expected=2 kind=numeric\nBENCH_ASSERT_PASS support_residual max_distance=0.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_FAIL domain_coverage unbounded=1 positive_generator=1 negative_generator=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "full_log_failure_detected": true,
+        "script": "/workspace/cases/occt-24313/1/negative_duplicate.tcl",
+        "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+        "elapsed_seconds": 0.032
+      }
+    },
+    {
+      "case": "negative_missing",
+      "result": {
+        "passed": false,
+        "status": "geometry_fail",
+        "checkpoint_id": null,
+        "category": null,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "branch_count",
+          "support_residual",
+          "domain_coverage"
+        ],
+        "observed_assertion_events": [
+          {
+            "status": "PASS",
+            "id": "operation_completed",
+            "kind": "expression"
+          },
+          {
+            "status": "FAIL",
+            "id": "branch_count",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "support_residual",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "domain_coverage",
+            "kind": "numeric"
+          }
+        ],
+        "missing_assertions": [],
+        "unexpected_assertions": [],
+        "duplicate_assertions": [],
+        "completion_sentinel_count": 1,
+        "summary_pair_valid": true,
+        "expected_geometry_failure_signature_seen": false,
+        "base_runner": {
+          "protocol": "draw_case_oracle_v1",
+          "oracle_scope": "public_script_only",
+          "passed": false,
+          "test_done_marker": false,
+          "tcl_standard_library": {
+            "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+            "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+          },
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 4,
+          "numeric_assertions": 3,
+          "failed_assertions": 3,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_FAIL branch_count observed=1 expected=2 kind=numeric\nBENCH_ASSERT_FAIL support_residual max_distance=0.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_FAIL domain_coverage unbounded=0 positive_generator=1 negative_generator=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+          "stderr_tail": "",
+          "diagnostic_lines": [],
+          "full_log_failure_detected": true,
+          "script": "/workspace/cases/occt-24313/1/negative_missing.tcl",
+          "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+          "elapsed_seconds": 0.032
+        },
+        "case": "negative_missing.tcl",
+        "runner_process_code": 0,
+        "case_sha256": "fecfead20b9bc550cc0b97556320314253f3d55b8332d461d602f4a473d7d7d8",
+        "log_sha256": "d0f2486659f81cda1971b38632367d880f5fe8764e3dffeaf94ec78d1684f6e5"
+      },
+      "runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": false,
+        "test_done_marker": false,
+        "tcl_standard_library": {
+          "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 4,
+        "numeric_assertions": 3,
+        "failed_assertions": 3,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_FAIL branch_count observed=1 expected=2 kind=numeric\nBENCH_ASSERT_FAIL support_residual max_distance=0.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_FAIL domain_coverage unbounded=0 positive_generator=1 negative_generator=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "full_log_failure_detected": true,
+        "script": "/workspace/cases/occt-24313/1/negative_missing.tcl",
+        "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+        "elapsed_seconds": 0.032
+      }
+    },
+    {
+      "case": "negative_shifted",
+      "result": {
+        "passed": false,
+        "status": "geometry_fail",
+        "checkpoint_id": null,
+        "category": null,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "branch_count",
+          "support_residual",
+          "domain_coverage"
+        ],
+        "observed_assertion_events": [
+          {
+            "status": "PASS",
+            "id": "operation_completed",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "branch_count",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "support_residual",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "domain_coverage",
+            "kind": "numeric"
+          }
+        ],
+        "missing_assertions": [],
+        "unexpected_assertions": [],
+        "duplicate_assertions": [],
+        "completion_sentinel_count": 1,
+        "summary_pair_valid": true,
+        "expected_geometry_failure_signature_seen": false,
+        "base_runner": {
+          "protocol": "draw_case_oracle_v1",
+          "oracle_scope": "public_script_only",
+          "passed": false,
+          "test_done_marker": false,
+          "tcl_standard_library": {
+            "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+            "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+          },
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 4,
+          "numeric_assertions": 3,
+          "failed_assertions": 2,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_PASS branch_count observed=2 expected=2 kind=numeric\nBENCH_ASSERT_FAIL support_residual max_distance=100.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_FAIL domain_coverage unbounded=1 positive_generator=0 negative_generator=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+          "stderr_tail": "",
+          "diagnostic_lines": [],
+          "full_log_failure_detected": true,
+          "script": "/workspace/cases/occt-24313/1/negative_shifted.tcl",
+          "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+          "elapsed_seconds": 0.032
+        },
+        "case": "negative_shifted.tcl",
+        "runner_process_code": 0,
+        "case_sha256": "338e7775b84de242e7873d0c671d5c03369c8a11008c900d7c802dc7774cb1ee",
+        "log_sha256": "bbf57ce049c1fba5f8f1d77c2407550945541997c424051b02d8fefac500826b"
+      },
+      "runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": false,
+        "test_done_marker": false,
+        "tcl_standard_library": {
+          "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 4,
+        "numeric_assertions": 3,
+        "failed_assertions": 2,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_PASS branch_count observed=2 expected=2 kind=numeric\nBENCH_ASSERT_FAIL support_residual max_distance=100.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_FAIL domain_coverage unbounded=1 positive_generator=0 negative_generator=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "full_log_failure_detected": true,
+        "script": "/workspace/cases/occt-24313/1/negative_shifted.tcl",
+        "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+        "elapsed_seconds": 0.032
+      }
+    },
+    {
+      "case": "negative_truncated",
+      "result": {
+        "passed": false,
+        "status": "geometry_fail",
+        "checkpoint_id": null,
+        "category": null,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "branch_count",
+          "support_residual",
+          "domain_coverage"
+        ],
+        "observed_assertion_events": [
+          {
+            "status": "PASS",
+            "id": "operation_completed",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "branch_count",
+            "kind": "numeric"
+          },
+          {
+            "status": "PASS",
+            "id": "support_residual",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "domain_coverage",
+            "kind": "numeric"
+          }
+        ],
+        "missing_assertions": [],
+        "unexpected_assertions": [],
+        "duplicate_assertions": [],
+        "completion_sentinel_count": 1,
+        "summary_pair_valid": true,
+        "expected_geometry_failure_signature_seen": false,
+        "base_runner": {
+          "protocol": "draw_case_oracle_v1",
+          "oracle_scope": "public_script_only",
+          "passed": false,
+          "test_done_marker": false,
+          "tcl_standard_library": {
+            "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+            "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+          },
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 4,
+          "numeric_assertions": 3,
+          "failed_assertions": 1,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_PASS branch_count observed=2 expected=2 kind=numeric\nBENCH_ASSERT_PASS support_residual max_distance=1.4210854715202004e-14 limit=1e-7 kind=numeric\nBENCH_ASSERT_FAIL domain_coverage unbounded=0 positive_generator=1 negative_generator=1 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+          "stderr_tail": "",
+          "diagnostic_lines": [],
+          "full_log_failure_detected": true,
+          "script": "/workspace/cases/occt-24313/1/negative_truncated.tcl",
+          "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+          "elapsed_seconds": 0.032
+        },
+        "case": "negative_truncated.tcl",
+        "runner_process_code": 0,
+        "case_sha256": "03a03662dd94606c70e9407220d06053626a67950a73f1a1813e9e4d4f1c3bad",
+        "log_sha256": "520e20894b9d55c8567f17ca5af552aa3e70777962ea6c732cfc34f77c99c5a0"
+      },
+      "runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": false,
+        "test_done_marker": false,
+        "tcl_standard_library": {
+          "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 4,
+        "numeric_assertions": 3,
+        "failed_assertions": 1,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression\nBENCH_ASSERT_PASS branch_count observed=2 expected=2 kind=numeric\nBENCH_ASSERT_PASS support_residual max_distance=1.4210854715202004e-14 limit=1e-7 kind=numeric\nBENCH_ASSERT_FAIL domain_coverage unbounded=0 positive_generator=1 negative_generator=1 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "full_log_failure_detected": true,
+        "script": "/workspace/cases/occt-24313/1/negative_truncated.tcl",
+        "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+        "elapsed_seconds": 0.032
+      }
+    }
+  ]
+}

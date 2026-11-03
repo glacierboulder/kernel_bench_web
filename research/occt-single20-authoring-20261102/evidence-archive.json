@@ -1,0 +1,12 @@
+{
+  "archive": "occt-single20-evidence-20261103.tar.gz",
+  "sha256": "2bf07a479959ec76243887cf0808fbb63bafb505f022262ae6ce8d01a0c895cd",
+  "bytes": 12077704,
+  "regular_files": 180044,
+  "uncompressed_file_bytes": 1741262798,
+  "distinct_content_and_mode_pairs": 2813,
+  "compact_review_files": 3524,
+  "format": "gzip tar, with safe jobs-relative hard links for identical content and mode",
+  "scope": "All collected authoring input snapshots, frozen evaluator snapshots, raw logs, result JSON, worker copies and binary identity records. Source checkouts and compiled runtime caches remain identified by their pinned hashes.",
+  "restore": "Extract into an empty directory, then use jobs as --evidence-root for tools/finalize_qualification.py."
+}

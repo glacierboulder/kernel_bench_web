@@ -1,0 +1,18 @@
+{
+  "issue": 33639,
+  "qualification": "original screening only",
+  "cases": [
+    {
+      "id": "original_probe",
+      "script": "occt-33639/1/original_probe.tcl",
+      "category": "original",
+      "expected_assertion_ids": [
+        "valid",
+        "solid_count",
+        "volume",
+        "kept",
+        "removed"
+      ]
+    }
+  ]
+}

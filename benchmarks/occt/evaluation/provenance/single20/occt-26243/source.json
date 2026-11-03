@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "issue": "occt-26243",
+  "status": "qualified",
+  "source_kind": "natural historical commit",
+  "source_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+  "git_tree": "a0520348e5dddfcec577466f2587763ae7640d56",
+  "materialized_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+  "reference": {
+    "source_commit": "2199db4a362bc0917f1d01d1ad5922b81055cab8",
+    "git_tree": "bc1926231b0d4e1c62c8bc504aef566cb55d4818",
+    "source_tree_sha256": "54da0037e9c3896c30050b7266744d713dc6741caa3dba72ce36b891f7cc786a",
+    "kind": "curator-derived forward patch",
+    "patch_sha256": "abd9acd198e211bb3be1a73beb7a4858b742668bec4612f4ff93761526f72534"
+  },
+  "qualification": {
+    "b": {
+      "label": "m26243-natural-b-calibration-01",
+      "model_called": false,
+      "source_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "source_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "build_receipt_sha256": "cc1788e23ded226625073e80fe5bd8ce44d1411f314dc078e051d2247c8df804",
+      "binary_manifest_sha256": "7b147181424fffb426b6b6cd62b420b0a7888646a2426ddf0237d80d8ac20026",
+      "results": {
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_input_only": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_swap": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_boxes": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T14:08:20.453259+00:00"
+    },
+    "f": {
+      "label": "m26243-direct-f-calibration-01",
+      "model_called": false,
+      "source_commit": "2199db4a362bc0917f1d01d1ad5922b81055cab8",
+      "source_tree_sha256": "54da0037e9c3896c30050b7266744d713dc6741caa3dba72ce36b891f7cc786a",
+      "build_receipt_sha256": "112ed89eae5eff5893c5f5a5abc32045c9129d32210da08c7e03a4ac4c53aac9",
+      "binary_manifest_sha256": "af00d37f04ba0a10899a3761dae9c58c8e1e86571fe23272b639786ad3b864d9",
+      "results": {
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_input_only": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_swap": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_boxes": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T14:35:59.677369+00:00"
+    }
+  },
+  "stage": "unknown",
+  "stage_note": "The earliest internal failing stage has not been localized by this authoring run.",
+  "limits": [
+    "Area 272911 ±0.5 is a curator-selected stricter threshold around the published rounded value. Upstream checkprops itself uses relative epsilon 1e-4.",
+    "GProp and BRepCheck share OCCT implementations. Finite properties do not establish arbitrary set equality."
+  ],
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0026243/",
+  "upstream_fix_lead": "577c6f0d0ff52e9dd5d94b20ce9cf69407d86961",
+  "input_provenance": {
+    "repository": "a-betenev/opencascade-dataset",
+    "commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1",
+    "files": [
+      {
+        "name": "bug26243_anc101.brep",
+        "git_blob": "0a211be7d6709641a9b1412021a4aab6b5247420",
+        "sha256": "2ff0d69d66b6f8538e5ee7be15252dbe82d07d0c22852299d3913562947f8428",
+        "bytes": 151109
+      }
+    ]
+  }
+}

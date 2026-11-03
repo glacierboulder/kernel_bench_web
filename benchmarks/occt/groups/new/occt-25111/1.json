@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-25111",
+  "version": "1",
+  "title": "OCCT · 圆锥与圆环面的截交曲线缺失",
+  "kind": "single",
+  "source_id": "occt-single20-029311e00f28",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-25111",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single20-25111-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

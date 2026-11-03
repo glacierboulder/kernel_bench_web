@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "issue": "occt-25102",
+  "status": "qualified",
+  "source_kind": "natural historical commit",
+  "source_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+  "git_tree": "a0520348e5dddfcec577466f2587763ae7640d56",
+  "materialized_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+  "reference": {
+    "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "git_tree": "12c23eb7bbf0b6d6c841cbb1c7aac6e2e7d14e62",
+    "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "kind": "natural later commit"
+  },
+  "qualification": {
+    "b": {
+      "label": "m25102-b-qualification-01",
+      "model_called": false,
+      "source_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "source_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "build_receipt_sha256": "cc1788e23ded226625073e80fe5bd8ce44d1411f314dc078e051d2247c8df804",
+      "binary_manifest_sha256": "7b147181424fffb426b6b6cd62b420b0a7888646a2426ddf0237d80d8ac20026",
+      "results": {
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_swap": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_healthy": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T15:08:36.335994+00:00"
+    },
+    "f": {
+      "label": "m25102-f-qualification-01",
+      "model_called": false,
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "build_receipt_sha256": "e9e8f08e77fc823099dad504aa655935f7bae163ce14ff66c9d92af522598715",
+      "binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "results": {
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_swap": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_healthy": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T15:08:41.407538+00:00"
+    }
+  },
+  "stage": "unknown",
+  "stage_note": "The earliest internal failing stage has not been localized by this authoring run.",
+  "limits": [
+    "Published topology and length expectations come from the issue-linked upstream test. GProp, BndLib and BRepCheck share OCCT implementations.",
+    "The checks cover the declared finite cases and do not prove full geometric set equivalence."
+  ],
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0025102/",
+  "input_provenance": {
+    "repository": "a-betenev/opencascade-dataset",
+    "commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1",
+    "files": [
+      {
+        "name": "bug25102.brep",
+        "git_blob": "6995904b31d2b44c3e074fc4b1748d5690c28686",
+        "sha256": "d36decc3cc3299406ad94d26b497fbf456bdb6d434d8c9ae60180c28a8a03b6e",
+        "bytes": 114792
+      }
+    ]
+  }
+}

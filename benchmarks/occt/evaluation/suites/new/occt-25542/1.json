@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-25542-checks",
+  "version": "1",
+  "title": "圆柱与圆锥 Common 丢失结果 · 几何检查",
+  "source_ids": [
+    "occt-single20-1511c7e90f1a"
+  ],
+  "group_ids": [
+    "occt-single20-25542"
+  ],
+  "checkpoints": [
+    {
+      "id": "25542-original",
+      "issue_id": "occt-25542",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-25542/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "validity",
+          "component_count",
+          "measure",
+          "centroid_domain"
+        ]
+      }
+    },
+    {
+      "id": "25542-neighborhood_rigid",
+      "issue_id": "occt-25542",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-25542/1/neighborhood_rigid.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "validity",
+          "component_count",
+          "measure",
+          "centroid_domain"
+        ]
+      }
+    },
+    {
+      "id": "25542-neighborhood_swap",
+      "issue_id": "occt-25542",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-25542/1/neighborhood_swap.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "validity",
+          "component_count",
+          "measure",
+          "centroid_domain"
+        ]
+      }
+    },
+    {
+      "id": "25542-regression_healthy",
+      "issue_id": "occt-25542",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-25542/1/regression_healthy.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "validity",
+          "component_count",
+          "measure",
+          "centroid_domain"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/single20/solid_checks.tcl",
+    "evaluation/cases/single20/occt-25542/1/qualified_geometry.tcl",
+    "evaluation/cases/single20/occt-25542/1/bug25542_cone.brep",
+    "evaluation/cases/single20/occt-25542/1/bug25542_cylinder.brep"
+  ]
+}

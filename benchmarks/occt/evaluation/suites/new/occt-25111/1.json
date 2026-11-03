@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-25111-checks",
+  "version": "1",
+  "title": "圆锥与圆环面的截交曲线缺失 · 几何检查",
+  "source_ids": [
+    "occt-single20-029311e00f28"
+  ],
+  "group_ids": [
+    "occt-single20-25111"
+  ],
+  "checkpoints": [
+    {
+      "id": "25111-neighborhood_scale",
+      "issue_id": "occt-25111",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-25111/1/neighborhood_scale.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "shape_valid",
+          "section_length",
+          "analytic_support",
+          "connected_component",
+          "endpoint_and_branch_coverage"
+        ]
+      }
+    },
+    {
+      "id": "25111-neighborhood_translation",
+      "issue_id": "occt-25111",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-25111/1/neighborhood_translation.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "shape_valid",
+          "section_length",
+          "analytic_support",
+          "connected_component",
+          "endpoint_and_branch_coverage"
+        ]
+      }
+    },
+    {
+      "id": "25111-original",
+      "issue_id": "occt-25111",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-25111/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "shape_valid",
+          "section_length",
+          "analytic_support",
+          "connected_component",
+          "endpoint_and_branch_coverage"
+        ]
+      }
+    },
+    {
+      "id": "25111-regression_cone_plane",
+      "issue_id": "occt-25111",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-25111/1/regression_cone_plane.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "shape_valid",
+          "section_length",
+          "analytic_support",
+          "connected_component",
+          "endpoint_and_branch_coverage"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/single20/solid_checks.tcl",
+    "evaluation/cases/single20/occt-25111/1/cone_torus_section.tcl",
+    "evaluation/cases/single20/occt-25111/1/bug25111_s1.draw",
+    "evaluation/cases/single20/occt-25111/1/bug25111_s2.draw"
+  ]
+}

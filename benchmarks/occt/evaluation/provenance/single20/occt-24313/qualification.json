@@ -1,0 +1,113 @@
+{
+  "issue_id": "occt-24313",
+  "issue_version": "1",
+  "title": "OCCT M24313 · 线性拉伸曲面与平面的双母线求交",
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "group_id": "occt-single20-24313",
+  "suite": {
+    "id": "occt-single20-24313-checks",
+    "version": "1"
+  },
+  "source_id": "occt-single20-m24313-78b6b239841f",
+  "baseline_commit": "78b6b239841fdbe47b9cf51493739def58c01848",
+  "baseline_tree_sha256": "793845f1abc97f49cbf4570663181ff195688429c8f84e3b65399d52d59eac89",
+  "source_kind": "curator-derived inverse source patch",
+  "frozen_replay": "frozen-replay-02",
+  "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+  "upstream_url": "https://occt3d.com/dev/tickets/0024313/",
+  "verdict": "PASS",
+  "checkpoints": [
+    {
+      "role": "b",
+      "id": "24313-neighborhood_frame",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-02/occt-single20-24313/b/24313-neighborhood_frame/result.json",
+      "runtime_binaries_sha256": "30c39b511c18f5605f110c17e83ba529583ea04feb696ea0f42e762211553826"
+    },
+    {
+      "role": "b",
+      "id": "24313-neighborhood_radius",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-02/occt-single20-24313/b/24313-neighborhood_radius/result.json",
+      "runtime_binaries_sha256": "30c39b511c18f5605f110c17e83ba529583ea04feb696ea0f42e762211553826"
+    },
+    {
+      "role": "b",
+      "id": "24313-original",
+      "category": "original",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-02/occt-single20-24313/b/24313-original/result.json",
+      "runtime_binaries_sha256": "30c39b511c18f5605f110c17e83ba529583ea04feb696ea0f42e762211553826"
+    },
+    {
+      "role": "b",
+      "id": "24313-regression_analytic_cylinder",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-02/occt-single20-24313/b/24313-regression_analytic_cylinder/result.json",
+      "runtime_binaries_sha256": "30c39b511c18f5605f110c17e83ba529583ea04feb696ea0f42e762211553826"
+    },
+    {
+      "role": "f",
+      "id": "24313-neighborhood_frame",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-02/occt-single20-24313/f/24313-neighborhood_frame/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "f",
+      "id": "24313-neighborhood_radius",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-02/occt-single20-24313/f/24313-neighborhood_radius/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "f",
+      "id": "24313-original",
+      "category": "original",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-02/occt-single20-24313/f/24313-original/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "f",
+      "id": "24313-regression_analytic_cylinder",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-02/occt-single20-24313/f/24313-regression_analytic_cylinder/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    }
+  ],
+  "snapshots": {
+    "b": "3a51dca705cb048d6116466b8076e6742577ff5979dae7676f580b198c6fefd6",
+    "f": "3a51dca705cb048d6116466b8076e6742577ff5979dae7676f580b198c6fefd6"
+  },
+  "evidence_file": "evidence.json",
+  "result_path_namespace": "tar archive member path",
+  "negative_controls": {
+    "job": "m24313-f-calibration-02",
+    "rejected": [
+      "negative_duplicate",
+      "negative_missing",
+      "negative_shifted",
+      "negative_truncated"
+    ]
+  },
+  "full_snapshots_reverified": true
+}

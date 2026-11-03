@@ -1,0 +1,12 @@
+{
+  "issue": 28274,
+  "raw_input_problem": "The raw archive lacks the older DRAW object header and contains invalid cached polygon-on-triangulation data. BREP geometry remains restorable.",
+  "recovery": "Write the exact shape with triangles/normals excluded using TopTools format V1 and add the DRAW header. Re-read it, require BRepCheck validity, preserve vertex/edge/wire/face counts and surface area.",
+  "recovery_job": "m28274-input-recovery-01",
+  "excluded_calibrations": [
+    "qualification-01",
+    "qualification-02",
+    "qualification-03"
+  ],
+  "additional_measurement_fix": "DRAW explode does not count a root solid itself. Wrap the result in a measurement compound to count all solids, including the healthy MakerVolume cube."
+}

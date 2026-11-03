@@ -1,0 +1,135 @@
+{
+  "method": "Independent de Boor evaluation plus bicubic Y/Z Newton solve",
+  "input_sha256": {
+    "bug24097_face1.brep": "1ddd65ea55317a3d5869fc7457d0469138ed7951a7485e6491d4dd853108a1dd",
+    "bug24097_face2.brep": "c2ae5726310e39f6ddbc8ed140675652092cdcea329566eabaeed72f03f027e4"
+  },
+  "original_upstream_approximate_length": 0.125,
+  "convergence": [
+    {
+      "intervals": 256,
+      "polyline_length": 0.125055907400372
+    },
+    {
+      "intervals": 512,
+      "polyline_length": 0.12505590740074243
+    },
+    {
+      "intervals": 1024,
+      "polyline_length": 0.12505590740083497
+    },
+    {
+      "intervals": 2048,
+      "polyline_length": 0.12505590740085806
+    }
+  ],
+  "maximum_equation_residual": 3.03543989777123e-14,
+  "global_inverse_checks": {
+    "z_u_derivative_lower_bound": 0.9996471300000032,
+    "y_derivative_at_fixed_z_upper_bound": -2.0490468845383085,
+    "basis_y_range": [
+      17.215999600000004,
+      17.256486415194114
+    ],
+    "basis_z_range": [
+      19.190000000000012,
+      19.192862261264267
+    ],
+    "entire_basis_range_bracketed_by_patch": true,
+    "argument": "Z increases strictly in U. At fixed Z, Y decreases strictly in V. The patch boundaries bracket the whole basis-curve convex hull. Each basis parameter therefore has exactly one interior patch point."
+  },
+  "witnesses": [
+    {
+      "basis_parameter": 0.0,
+      "point": [
+        227.64587032755415,
+        17.256486415194125,
+        19.190000000000012
+      ],
+      "patch_u": 0.18998950235869577,
+      "patch_v": 0.22510760963959753
+    },
+    {
+      "basis_parameter": 0.125,
+      "point": [
+        227.6607085833758,
+        17.251425563295694,
+        19.190357782657983
+      ],
+      "patch_u": 0.19034717348535363,
+      "patch_v": 0.22744692323970095
+    },
+    {
+      "basis_parameter": 0.25,
+      "point": [
+        227.67553185003874,
+        17.246364711397028,
+        19.19071556531598
+      ],
+      "patch_u": 0.19070484423082387,
+      "patch_v": 0.22978551667256317
+    },
+    {
+      "basis_parameter": 0.375,
+      "point": [
+        227.69034012239229,
+        17.24130385949814,
+        19.191073347973973
+      ],
+      "patch_u": 0.19106251459661983,
+      "patch_v": 0.23212338014894718
+    },
+    {
+      "basis_parameter": 0.5,
+      "point": [
+        227.7051333955729,
+        17.236243007598997,
+        19.191431130632
+      ],
+      "patch_u": 0.19142018458431923,
+      "patch_v": 0.23446050391191028
+    },
+    {
+      "basis_parameter": 0.625,
+      "point": [
+        227.71991166500356,
+        17.231182155699614,
+        19.191788913290047
+      ],
+      "patch_u": 0.19177785419545687,
+      "patch_v": 0.23679687823709286
+    },
+    {
+      "basis_parameter": 0.75,
+      "point": [
+        227.73467492639344,
+        17.226121303800007,
+        19.192146695948114
+      ],
+      "patch_u": 0.1921355234316028,
+      "patch_v": 0.23913249343311788
+    },
+    {
+      "basis_parameter": 0.875,
+      "point": [
+        227.74942317573698,
+        17.22106045190012,
+        19.192504478606185
+      ],
+      "patch_u": 0.19249319229431658,
+      "patch_v": 0.24146733984194801
+    },
+    {
+      "basis_parameter": 1.0,
+      "point": [
+        227.7641564093142,
+        17.215999600000004,
+        19.192862261264267
+      ],
+      "patch_u": 0.1928508607851709,
+      "patch_v": 0.2438014078391971
+    }
+  ],
+  "bounds": "All derived points lie inside both finite parameter rectangles.",
+  "limits": "Finite convergence and witnesses do not certify a global continuous error bound."
+}

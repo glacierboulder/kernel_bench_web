@@ -1,0 +1,92 @@
+diff --git a/src/IntWalk/IntWalk_PWalking.cxx b/src/IntWalk/IntWalk_PWalking.cxx
+--- a/src/IntWalk/IntWalk_PWalking.cxx
++++ b/src/IntWalk/IntWalk_PWalking.cxx
+@@ -21,6 +21,7 @@
+ #include <gp_Pnt2d.hxx>
+ #include <IntImp_ComputeTangence.hxx>
+ #include <IntSurf_LineOn2S.hxx>
++#include <cmath>
+ #include <IntSurf_PntOn2S.hxx>
+ #include <IntWalk_PWalking.hxx>
+ #include <IntWalk_StatusDeflection.hxx>
+@@ -1781,38 +1782,48 @@
+ 
+   previousPoint.Parameters(Param(1), Param(2), Param(3), Param(4));
+ 
+-  if (Param(1) - UFirst1 < ResoU1)
+-  {
+-    return bOutOfTangentZone;
+-  }
+-  else if (Param(2) - VFirst1 < ResoV1)
+-  {
+-    return bOutOfTangentZone;
+-  }
+-  else if (Param(3) - UFirst2 < ResoU2)
+-  {
+-    return bOutOfTangentZone;
+-  }
+-  else if (Param(4) - VFirst2 < ResoV2)
+-  {
+-    return bOutOfTangentZone;
+-  }
+-
+-  if (Param(1) - ULast1 > -ResoU1)
+-  {
+-    return bOutOfTangentZone;
+-  }
+-  else if (Param(2) - VLast1 > -ResoV1)
+-  {
+-    return bOutOfTangentZone;
+-  }
+-  else if (Param(3) - ULast2 > -ResoU2)
+-  {
+-    return bOutOfTangentZone;
+-  }
+-  else if (Param(4) - VLast2 > -ResoV2)
+-  {
+-    return bOutOfTangentZone;
++  const double aLow[4]  = {UFirst1, VFirst1, UFirst2, VFirst2};
++  const double aHigh[4] = {ULast1, VLast1, ULast2, VLast2};
++  const double aReso[4] = {ResoU1, ResoV1, ResoU2, ResoV2};
++
++  // Bit i is set when parameter i lies within its resolution of the lower bound,
++  // bit i + 4 when it lies within its resolution of the upper bound.
++  auto aBoundMask = [&](const double theParam[4]) {
++    int aMask = 0;
++    for (int i = 0; i < 4; ++i)
++    {
++      if (theParam[i] - aLow[i] < aReso[i])
++      {
++        aMask |= (1 << i);
++      }
++      if (theParam[i] - aHigh[i] > -aReso[i])
++      {
++        aMask |= (1 << (i + 4));
++      }
++    }
++    return aMask;
++  };
++
++  // A line that merely ends on a parametric bound must still be extended: the
++  // extension is what bridges two half curves that stop short of a shared crest.
++  // Only a line that runs along the bound has nothing left to extend.
++  const int aLastMask = aBoundMask(&Param(1));
++  if (aLastMask != 0 && line->NbPoints() >= 2)
++  {
++    double aLastLine[4];
++    line->Value(line->NbPoints()).Parameters(aLastLine[0], aLastLine[1], aLastLine[2], aLastLine[3]);
++    bool aLastIsPrevious = true;
++    for (int i = 0; i < 4; ++i)
++    {
++      aLastIsPrevious = aLastIsPrevious && std::abs(aLastLine[i] - Param(i + 1)) < 1.e-12;
++    }
++    const int aBeforeIndex = aLastIsPrevious ? line->NbPoints() - 1 : line->NbPoints();
++    double    aBefore[4];
++    line->Value(aBeforeIndex).Parameters(aBefore[0], aBefore[1], aBefore[2], aBefore[3]);
++    if ((aBoundMask(aBefore) & aLastMask) != 0)
++    {
++      return bOutOfTangentZone;
++    }
+   }
+ 
+   while (!bStop)

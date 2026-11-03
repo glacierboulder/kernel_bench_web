@@ -1,0 +1,26 @@
+[
+  {
+    "issue": 24429,
+    "label": "m24429-b-qualification-01",
+    "build_job": "common-2016-f-build-02",
+    "plan": "m24429-qualification-plan.json"
+  },
+  {
+    "issue": 24429,
+    "label": "m24429-f-qualification-01",
+    "build_job": "m24418-natural-f-build-01",
+    "plan": "m24429-qualification-plan.json"
+  },
+  {
+    "issue": 27227,
+    "label": "m27227-b-qualification-01",
+    "build_job": "m24418-natural-f-build-01",
+    "plan": "m27227-qualification-plan.json"
+  },
+  {
+    "issue": 27227,
+    "label": "m27227-f-qualification-01",
+    "build_job": "occt-7.9.3-build-01",
+    "plan": "m27227-qualification-plan.json"
+  }
+]

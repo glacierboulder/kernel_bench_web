@@ -1,0 +1,14 @@
+{
+  "issue": 25781,
+  "cases": [
+    {
+      "script": "occt-25781/1/original_probe.tcl",
+      "id": "original_probe",
+      "category": "original",
+      "expected_assertion_ids": [
+        "valid_result",
+        "connected_union"
+      ]
+    }
+  ]
+}

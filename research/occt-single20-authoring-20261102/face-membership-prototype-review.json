@@ -1,0 +1,9 @@
+{
+  "issues": [
+    28216,
+    28388
+  ],
+  "invalid_jobs": "membership-01 healthy controls",
+  "cause": "mksurface returns an unbounded support plane for the healthy finite planar face. Surface bounds were therefore inappropriate witness parameters.",
+  "correction": "Use the explicit healthy face UV limits -5..15. Keep the original input cases, predicate thresholds and analytic solid membership unchanged."
+}

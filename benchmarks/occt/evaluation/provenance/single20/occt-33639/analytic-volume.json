@@ -1,0 +1,55 @@
+{
+  "input": {
+    "torus_major_radius": 750,
+    "torus_minor_radius": 250,
+    "cone_base_radius": 200,
+    "cone_height": 2000,
+    "cone_base_center": [
+      0,
+      1000,
+      0
+    ],
+    "cone_axis": [
+      0,
+      -1,
+      0
+    ]
+  },
+  "method": "Analytic X/Z cross-sections, exact cone circular-segment integral, endpoint-regularized tensor Gauss-Legendre quadrature.",
+  "normalized_y_breakpoints": [
+    -4.0,
+    -2.01980198019802,
+    -2.0,
+    -1.9898728320388326,
+    1.9106649112467533,
+    2.0,
+    2.2167225197101015,
+    3.64466361890376,
+    3.9207920792079207,
+    4.0
+  ],
+  "convergence": [
+    {
+      "gauss_order_per_dimension": 32,
+      "overlap_volume": 46071798.068009235,
+      "cut_volume": 879203614.534118
+    },
+    {
+      "gauss_order_per_dimension": 64,
+      "overlap_volume": 46071798.06797836,
+      "cut_volume": 879203614.5341489
+    },
+    {
+      "gauss_order_per_dimension": 128,
+      "overlap_volume": 46071798.06797821,
+      "cut_volume": 879203614.534149
+    },
+    {
+      "gauss_order_per_dimension": 256,
+      "overlap_volume": 46071798.0679782,
+      "cut_volume": 879203614.534149
+    }
+  ],
+  "predeclared_cut_volume_absolute_limit": 1.0,
+  "limits": "The volume limit allows OCCT construction/intersection approximation. Quadrature convergence is numerical evidence, not a certified global bound."
+}

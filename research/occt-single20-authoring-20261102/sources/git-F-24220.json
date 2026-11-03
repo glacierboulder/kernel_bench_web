@@ -1,0 +1,35 @@
+{
+  "sha": "0e09ee8ee5d8791aa14fa43e64de23ee2aa5bfb1",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOjBlMDllZThlZTVkODc5MWFhMTRmYTQzZTY0ZGUyM2VlMmFhNWJmYjE=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/0e09ee8ee5d8791aa14fa43e64de23ee2aa5bfb1",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/0e09ee8ee5d8791aa14fa43e64de23ee2aa5bfb1",
+  "author": {
+    "name": "emv",
+    "email": "emv@opencascade.com",
+    "date": "2013-10-10T10:27:16Z"
+  },
+  "committer": {
+    "name": "bugmaster",
+    "email": "bugmaster@opencascade.com",
+    "date": "2013-10-10T10:28:02Z"
+  },
+  "tree": {
+    "sha": "83d7204d148f25208fba953f37d8431236e0a3cb",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/83d7204d148f25208fba953f37d8431236e0a3cb"
+  },
+  "message": "0024220: bopargcheck returns valid for C0 shape but results of boolean operations are broken with such shapes\n\nAdded check for C0 geometries to bopargcheck command.\nTest cases for issue CR24220",
+  "parents": [
+    {
+      "sha": "eb7c351adf736d5169703c2118a7dcab9234d3fc",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/eb7c351adf736d5169703c2118a7dcab9234d3fc",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/eb7c351adf736d5169703c2118a7dcab9234d3fc"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

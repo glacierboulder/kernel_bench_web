@@ -1,0 +1,422 @@
+[
+  {
+    "issue_id": "occt-24097",
+    "issue_version": "1",
+    "title": "OCCT · 短截交曲线被截断",
+    "group_id": "occt-single20-24097",
+    "suite": {
+      "id": "occt-single20-24097-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-5163f4671951",
+    "baseline_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+    "baseline_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+    "source_kind": "natural historical commit",
+    "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "upstream_url": "https://occt3d.com/dev/tickets/0024097/"
+  },
+  {
+    "issue_id": "occt-24313",
+    "issue_version": "1",
+    "title": "OCCT M24313 · 线性拉伸曲面与平面的双母线求交",
+    "group_id": "occt-single20-24313",
+    "suite": {
+      "id": "occt-single20-24313-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-m24313-78b6b239841f",
+    "baseline_commit": "78b6b239841fdbe47b9cf51493739def58c01848",
+    "baseline_tree_sha256": "793845f1abc97f49cbf4570663181ff195688429c8f84e3b65399d52d59eac89",
+    "source_kind": "curator-derived inverse source patch",
+    "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "upstream_url": "https://occt3d.com/dev/tickets/0024313/"
+  },
+  {
+    "issue_id": "occt-24418",
+    "issue_version": "1",
+    "title": "OCCT M24418 · 圆环面与圆锥求交精度",
+    "group_id": "occt-single20-24418",
+    "suite": {
+      "id": "occt-single20-24418-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-1511c7e90f1a",
+    "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "source_kind": "natural historical commit",
+    "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+    "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+    "upstream_url": "https://occt3d.com/dev/tickets/0024418/"
+  },
+  {
+    "issue_id": "occt-24429",
+    "issue_version": "1",
+    "title": "OCCT · 圆柱与圆环面求交异常",
+    "group_id": "occt-single20-24429",
+    "suite": {
+      "id": "occt-single20-24429-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-1511c7e90f1a",
+    "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "source_kind": "natural historical commit",
+    "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+    "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+    "upstream_url": "https://occt3d.com/dev/tickets/0024429/"
+  },
+  {
+    "issue_id": "occt-25102",
+    "issue_version": "1",
+    "title": "OCCT · 复杂面截交遗漏部分交线",
+    "group_id": "occt-single20-25102",
+    "suite": {
+      "id": "occt-single20-25102-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-5163f4671951",
+    "baseline_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+    "baseline_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+    "source_kind": "natural historical commit",
+    "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "upstream_url": "https://occt3d.com/dev/tickets/0025102/"
+  },
+  {
+    "issue_id": "occt-25111",
+    "issue_version": "1",
+    "title": "OCCT · 圆锥与圆环面的截交曲线缺失",
+    "group_id": "occt-single20-25111",
+    "suite": {
+      "id": "occt-single20-25111-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-029311e00f28",
+    "baseline_commit": "029311e00f2822c762f676f863f9b932ad8ca8ef",
+    "baseline_tree_sha256": "dbf7237b12b0712f11b7d3fb020950577fdec9eb6b1f66a95bad6a29239248b6",
+    "source_kind": "curator-derived inverse patch",
+    "reference_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+    "reference_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+    "upstream_url": "https://occt3d.com/dev/tickets/0025111/"
+  },
+  {
+    "issue_id": "occt-25342",
+    "issue_version": "1",
+    "title": "OCCT · Section 返回错误的边数",
+    "group_id": "occt-single20-25342",
+    "suite": {
+      "id": "occt-single20-25342-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-5163f4671951",
+    "baseline_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+    "baseline_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+    "source_kind": "natural historical commit",
+    "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "upstream_url": "https://occt3d.com/dev/tickets/0025342/"
+  },
+  {
+    "issue_id": "occt-25542",
+    "issue_version": "1",
+    "title": "OCCT · 圆柱与圆锥 Common 丢失结果",
+    "group_id": "occt-single20-25542",
+    "suite": {
+      "id": "occt-single20-25542-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-1511c7e90f1a",
+    "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "source_kind": "natural historical commit",
+    "reference_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+    "reference_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+    "upstream_url": "https://occt3d.com/dev/tickets/0025542/"
+  },
+  {
+    "issue_id": "occt-25818",
+    "issue_version": "1",
+    "title": "OCCT M25818 · 无界平面求交的完整直线",
+    "group_id": "occt-single20-25818",
+    "suite": {
+      "id": "occt-single20-25818-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-m25818-32ab8bfc4f09",
+    "baseline_commit": "32ab8bfc4f09acb95d1f8403f4d44f5afad97b8b",
+    "baseline_tree_sha256": "cca2aa3bd5541ec361da198125ab731fec5cd6849b992136be0de552f77d3df5",
+    "source_kind": "curator-derived inverse source patch",
+    "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "upstream_url": "https://occt3d.com/dev/tickets/0025818/"
+  },
+  {
+    "issue_id": "occt-26243",
+    "issue_version": "1",
+    "title": "OCCT · 带圆角模型的 Common 运算失败",
+    "group_id": "occt-single20-26243",
+    "suite": {
+      "id": "occt-single20-26243-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-5163f4671951",
+    "baseline_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+    "baseline_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+    "source_kind": "natural historical commit",
+    "reference_commit": "2199db4a362bc0917f1d01d1ad5922b81055cab8",
+    "reference_tree_sha256": "54da0037e9c3896c30050b7266744d713dc6741caa3dba72ce36b891f7cc786a",
+    "upstream_url": "https://occt3d.com/dev/tickets/0026243/"
+  },
+  {
+    "issue_id": "occt-26310",
+    "issue_version": "1",
+    "title": "OCCT · 圆柱求交产生错误曲线",
+    "group_id": "occt-single20-26310",
+    "suite": {
+      "id": "occt-single20-26310-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-ea80ac2f61af",
+    "baseline_commit": "ea80ac2f61af25a4bcf4516a89e0b302e10e7e82",
+    "baseline_tree_sha256": "68c2998046770a79ef06930800143bda51405c3ed162bcc91c973c1c40101973",
+    "source_kind": "curator-derived inverse patch",
+    "reference_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+    "reference_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+    "upstream_url": "https://occt3d.com/dev/tickets/0026310/"
+  },
+  {
+    "issue_id": "occt-26776",
+    "issue_version": "1",
+    "title": "OCCT · 偏置曲面与拉伸面截交不完整",
+    "group_id": "occt-single20-26776",
+    "suite": {
+      "id": "occt-single20-26776-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-1511c7e90f1a",
+    "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "source_kind": "natural historical commit",
+    "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+    "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+    "upstream_url": "https://occt3d.com/dev/tickets/0026776/"
+  },
+  {
+    "issue_id": "occt-26796",
+    "issue_version": "1",
+    "title": "OCCT · 近接触盒体的 General Fuse 分块错误",
+    "group_id": "occt-single20-26796",
+    "suite": {
+      "id": "occt-single20-26796-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-6435b9c7fafd",
+    "baseline_commit": "6435b9c7fafd294680a3be589deb61de2fdb3d3c",
+    "baseline_tree_sha256": "bfcd5874f51898884c55c0e35f4bb701a612ad91bdc6e0ab106b31d45afc692c",
+    "source_kind": "natural historical commit",
+    "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "upstream_url": "https://occt3d.com/dev/tickets/0026796/"
+  },
+  {
+    "issue_id": "occt-26910",
+    "issue_version": "1",
+    "title": "OCCT · 直线与圆弧 General Fuse 漏掉近交点",
+    "group_id": "occt-single20-26910",
+    "suite": {
+      "id": "occt-single20-26910-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-6435b9c7fafd",
+    "baseline_commit": "6435b9c7fafd294680a3be589deb61de2fdb3d3c",
+    "baseline_tree_sha256": "bfcd5874f51898884c55c0e35f4bb701a612ad91bdc6e0ab106b31d45afc692c",
+    "source_kind": "natural historical commit",
+    "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "upstream_url": "https://occt3d.com/dev/tickets/0026910/"
+  },
+  {
+    "issue_id": "occt-27227",
+    "issue_version": "1",
+    "title": "OCCT · 正交圆环交线未延伸至边界",
+    "group_id": "occt-single20-27227",
+    "suite": {
+      "id": "occt-single20-27227-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-cfde7eebb37b",
+    "baseline_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+    "baseline_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+    "source_kind": "natural historical commit",
+    "reference_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+    "reference_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+    "upstream_url": "https://occt3d.com/dev/tickets/0027227/"
+  },
+  {
+    "issue_id": "occt-28195",
+    "issue_version": "1",
+    "title": "OCCT · 复杂实体 Common 丢失公共体",
+    "group_id": "occt-single20-28195",
+    "suite": {
+      "id": "occt-single20-28195-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-1511c7e90f1a",
+    "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "source_kind": "natural historical commit",
+    "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+    "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+    "upstream_url": "https://occt3d.com/dev/tickets/0028195/"
+  },
+  {
+    "issue_id": "occt-28216",
+    "issue_version": "1",
+    "title": "OCCT · 薄壁锥形实体与曲面 Common 为空",
+    "group_id": "occt-single20-28216",
+    "suite": {
+      "id": "occt-single20-28216-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-1511c7e90f1a",
+    "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "source_kind": "natural historical commit",
+    "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+    "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+    "upstream_url": "https://occt3d.com/dev/tickets/0028216/"
+  },
+  {
+    "issue_id": "occt-28388",
+    "issue_version": "1",
+    "title": "OCCT · 薄壁圆柱实体与曲面 Common 为空",
+    "group_id": "occt-single20-28388",
+    "suite": {
+      "id": "occt-single20-28388-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-1511c7e90f1a",
+    "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "source_kind": "natural historical commit",
+    "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+    "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+    "upstream_url": "https://occt3d.com/dev/tickets/0028388/"
+  },
+  {
+    "issue_id": "occt-33639",
+    "issue_version": "1",
+    "title": "OCCT · 圆锥尖点接触圆环时 Cut 失效",
+    "group_id": "occt-single20-33639",
+    "suite": {
+      "id": "occt-single20-33639-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-a016080bf673",
+    "baseline_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+    "baseline_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+    "source_kind": "natural historical commit",
+    "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "upstream_url": "https://occt3d.com/dev/tickets/0033639/"
+  },
+  {
+    "issue_id": "occt-github-1543",
+    "issue_version": "1",
+    "title": "OCCT · 螺旋工具穿过端面时 Boolean Cut 未移除材料",
+    "group_id": "occt-single20-github-1543",
+    "suite": {
+      "id": "occt-single20-github-1543-checks",
+      "version": "1"
+    },
+    "budget": {
+      "scope": "group",
+      "wall_seconds": 7200
+    },
+    "source_id": "occt-single20-a016080bf673",
+    "baseline_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+    "baseline_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+    "source_kind": "natural historical commit",
+    "reference_commit": "d3c3366e548feb691481082dac90e9c5274010bb",
+    "reference_tree_sha256": "d5de5fa56ada88f607e4242890eaae6a85f9fa266586d5f49f0dc2cbbff38b2e",
+    "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT/issues/1543"
+  }
+]

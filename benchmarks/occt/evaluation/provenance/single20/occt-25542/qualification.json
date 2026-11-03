@@ -1,0 +1,112 @@
+{
+  "issue_id": "occt-25542",
+  "issue_version": "1",
+  "title": "OCCT · 圆柱与圆锥 Common 丢失结果",
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "group_id": "occt-single20-25542",
+  "suite": {
+    "id": "occt-single20-25542-checks",
+    "version": "1"
+  },
+  "source_id": "occt-single20-1511c7e90f1a",
+  "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+  "source_kind": "natural historical commit",
+  "frozen_replay": "frozen-replay-08",
+  "reference_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+  "reference_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+  "upstream_url": "https://occt3d.com/dev/tickets/0025542/",
+  "verdict": "PASS",
+  "checkpoints": [
+    {
+      "role": "b",
+      "id": "25542-original",
+      "category": "original",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-08/occt-single20-25542/b/25542-original/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "b",
+      "id": "25542-neighborhood_rigid",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-08/occt-single20-25542/b/25542-neighborhood_rigid/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "b",
+      "id": "25542-neighborhood_swap",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-08/occt-single20-25542/b/25542-neighborhood_swap/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "b",
+      "id": "25542-regression_healthy",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-08/occt-single20-25542/b/25542-regression_healthy/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "f",
+      "id": "25542-original",
+      "category": "original",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-08/occt-single20-25542/f/25542-original/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "f",
+      "id": "25542-neighborhood_rigid",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-08/occt-single20-25542/f/25542-neighborhood_rigid/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "f",
+      "id": "25542-neighborhood_swap",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-08/occt-single20-25542/f/25542-neighborhood_swap/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "f",
+      "id": "25542-regression_healthy",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-08/occt-single20-25542/f/25542-regression_healthy/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    }
+  ],
+  "snapshots": {
+    "b": "dde01db0e265338b5db07271335bce5243e988aec7de3797ec480e540916fa8e",
+    "f": "dde01db0e265338b5db07271335bce5243e988aec7de3797ec480e540916fa8e"
+  },
+  "evidence_file": "evidence.json",
+  "result_path_namespace": "tar archive member path",
+  "negative_controls": {
+    "job": "m25542-2025-qualification-01",
+    "rejected": [
+      "negative_empty",
+      "negative_missing",
+      "negative_shifted"
+    ]
+  },
+  "full_snapshots_reverified": true
+}

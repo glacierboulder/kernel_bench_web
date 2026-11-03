@@ -1,0 +1,96 @@
+{
+  "issue": 26243,
+  "cases": [
+    {
+      "script": "occt-26243/1/negative_empty.tcl",
+      "id": "negative_empty",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-26243/1/negative_input_only.tcl",
+      "id": "negative_input_only",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-26243/1/negative_shifted.tcl",
+      "id": "negative_shifted",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-26243/1/neighborhood_rigid.tcl",
+      "id": "neighborhood_rigid",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-26243/1/neighborhood_swap.tcl",
+      "id": "neighborhood_swap",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-26243/1/original.tcl",
+      "id": "original",
+      "category": "original",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-26243/1/regression_boxes.tcl",
+      "id": "regression_boxes",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain"
+      ]
+    }
+  ]
+}

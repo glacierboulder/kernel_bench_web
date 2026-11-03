@@ -1,0 +1,138 @@
+{
+  "issue": 31850,
+  "cases": [
+    {
+      "script": "occt-31850/1/negative_empty.tcl",
+      "id": "negative_empty",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "common_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain",
+        "cut_completed",
+        "cut_valid",
+        "cut_solid_count",
+        "cut_area",
+        "cut_volume",
+        "cut_centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-31850/1/negative_input_only.tcl",
+      "id": "negative_input_only",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "common_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain",
+        "cut_completed",
+        "cut_valid",
+        "cut_solid_count",
+        "cut_area",
+        "cut_volume",
+        "cut_centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-31850/1/negative_shifted.tcl",
+      "id": "negative_shifted",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "common_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain",
+        "cut_completed",
+        "cut_valid",
+        "cut_solid_count",
+        "cut_area",
+        "cut_volume",
+        "cut_centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-31850/1/neighborhood_fuzzy.tcl",
+      "id": "neighborhood_fuzzy",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "common_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain",
+        "cut_completed",
+        "cut_valid",
+        "cut_solid_count",
+        "cut_area",
+        "cut_volume",
+        "cut_centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-31850/1/neighborhood_rigid.tcl",
+      "id": "neighborhood_rigid",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "common_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain",
+        "cut_completed",
+        "cut_valid",
+        "cut_solid_count",
+        "cut_area",
+        "cut_volume",
+        "cut_centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-31850/1/original.tcl",
+      "id": "original",
+      "category": "original",
+      "expected_assertion_ids": [
+        "common_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain",
+        "cut_completed",
+        "cut_valid",
+        "cut_solid_count",
+        "cut_area",
+        "cut_volume",
+        "cut_centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-31850/1/regression_boxes.tcl",
+      "id": "regression_boxes",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "common_completed",
+        "common_valid",
+        "common_solid_count",
+        "common_area",
+        "common_volume",
+        "common_centroid_domain",
+        "cut_completed",
+        "cut_valid",
+        "cut_solid_count",
+        "cut_area",
+        "cut_volume",
+        "cut_centroid_domain"
+      ]
+    }
+  ]
+}

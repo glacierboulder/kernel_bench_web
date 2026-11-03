@@ -1,0 +1,650 @@
+[
+  {
+    "canonical_id": "github:1288",
+    "title": "Boolean operation \"section\" hangs-up for a pair of cylindrical shapes",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "github:1543",
+    "title": "Modeling Algorithms - Boolean Cut with a helical swept tool silently removes nothing when the tool exits through a planar face (IntPatch loses the boundary vertex after seam decomposition)",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "github:1610",
+    "title": "github:1610",
+    "status": "INCONCLUSIVE",
+    "reason": "Both the ported candidate patch and older natural reference fail the rigid neighborhood."
+  },
+  {
+    "canonical_id": "github:245",
+    "title": "Boolean cut has issues when it involves a common Edge between argument and the tool.",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "github:724",
+    "title": "More than 10GB of memory needed for boolean operation between two simple faces",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:12507",
+    "title": "Wrong result of fuse operation",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:12829",
+    "title": "IntPatch_Point has unitialized fileds.",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:14530",
+    "title": "Boolean Operation Algorithm failed",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:17194",
+    "title": "Incorrect section of a face got by extrusion of an arc of circle",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:21494",
+    "title": "Intersection between cone and sphere fails",
+    "status": "EXCLUDED",
+    "reason": "Duplicate canonical issue or existing M27252 input/repair coverage."
+  },
+  {
+    "canonical_id": "mantis:22790",
+    "title": "Boolean opeation Fuse fails.",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:23389",
+    "title": "(OCC 6.5.3 regression) BRepAlgoAPI_Cut returns invalid solid",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:23463",
+    "title": "Boolean operations provide wrong results for solids with faces formed by bspline surfaces.",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:23933",
+    "title": "Self intersection reported after Fuse operation",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:23981",
+    "title": "Wrong section curves",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:23985",
+    "title": "There is no section between attached faces",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:23998",
+    "title": "Bad result of intersection of two faces: curve has a loop",
+    "status": "INCONCLUSIVE",
+    "reason": "Reviewed derived baseline does not reproduce the defect."
+  },
+  {
+    "canonical_id": "mantis:24097",
+    "title": "BRepAlgoAPI_Section returns wrong result",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:24142",
+    "title": "Wrong section curve",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:24161",
+    "title": "boolean operation hanging",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:24220",
+    "title": "bopargcheck returns valid for C0 shape but results of boolean operations are broken with such shapes",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:24299",
+    "title": "Wrong section curve",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:24313",
+    "title": "BRepAlgoAPI_Section and IntTools_FaceFace aren't written to handle Geom_SurfaceOfLinearExtrusion",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:24418",
+    "title": "Modeling Algorithms - Wrong section curves when intersecting analytical surfaces",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:24429",
+    "title": "Cylinder-torus intersection throws an exception and produces no result",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:24678",
+    "title": "Invalid result of Boolean fuse operation",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:24696",
+    "title": "Lower performance of the new Edge/Edge intersection algorithm",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:24790",
+    "title": "Modeling Algorithms - missing intersection curve between two surfaces",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:24811",
+    "title": "Intersection is insufficient",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:24832",
+    "title": "Performance of new boolean operations has become worse",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:2500",
+    "title": "BRepAlgoAPI_Section has problem with calculation",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:25102",
+    "title": "A part of intersection cannot be found",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:25111",
+    "title": "Incomplete section curve between Conical and Toroidal surfaces",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:25237",
+    "title": "Wrong result of COMMON operation",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:25242",
+    "title": "Wrong result of cut operation.",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:25337",
+    "title": "Regression to version 6.7.1 : boolean operations fail on two planar circular faces lying in the same plane",
+    "status": "INCONCLUSIVE",
+    "reason": "Two reviewed derived baselines do not reproduce the defect."
+  },
+  {
+    "canonical_id": "mantis:25342",
+    "title": "[Regression] BRepAlgoAPI_Section returns wrong number of edges",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:25385",
+    "title": "steep increase in tolerance by intersection",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:25404",
+    "title": "Even for analytical surfaces (cylinder-cylinder) intersection result is not commutative",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:25531",
+    "title": "Difference in intersection result on Windows and Linux platform is very significant",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:25542",
+    "title": "Boolean operation failure for Cylinder and Cone in critical location.",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:25781",
+    "title": "BOP of coincident torus and cylinder fails in BeanFaceIntersector",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:25818",
+    "title": "IntTools_FaceFace throws Standard_ConstructionError with two unbounded planes",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:25890",
+    "title": "Intersection algorithm produces curves overlaped",
+    "status": "INCONCLUSIVE",
+    "reason": "Reference loses all curves under the fixed translated neighborhood."
+  },
+  {
+    "canonical_id": "mantis:25915",
+    "title": "Incorrect result of Boolean cut operation",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:25952",
+    "title": "Modeling Algorithms - Wrong intersection curve",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:25956",
+    "title": "Modeling Algorithms - Wrong result obtained by intersection algorithm.",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:25983",
+    "title": "Fusion of sweep and its mirror invalid",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:26243",
+    "title": "Boolean operations failed on shapes with fillets",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:26250",
+    "title": "Boolean operation should check, if faces are overlapped, before finding intersection result between these faces",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:26310",
+    "title": "Very slow boolean cut operations on cylinders",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:26327",
+    "title": "Performance degradation from version 6.8.0 on Boolean operations",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:26383",
+    "title": "Incorrect tolerance computing in IntTools_FaceFace::ComputeTolerance()",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:26447",
+    "title": "Performance degradation intersecting cylindrical surfaces",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:26450",
+    "title": "Boolean operation is running endless",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:26452",
+    "title": "Infinite loop in Edge/Edge intersection.",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:26463",
+    "title": "The result of intersection between two faces depends on the order of arguments",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:26530",
+    "title": "Bad result of cut operation",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:26557",
+    "title": "Cutting a cylinder with polygonal solid very slow",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:26562",
+    "title": "BRepAlgoAPI_Section generates incorrect result",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:26675",
+    "title": "Eliminate normalization of coordinates in ApproxInt package",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:26776",
+    "title": "Bad result of section algorithm",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:26796",
+    "title": "The result of General Fuse operation is self-intersecting shape",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:26910",
+    "title": "General fuse does not find intersection between line and circle",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:27024",
+    "title": "Invalid result of fuse in test case bugs modalg_1 buc60462_2",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:27221",
+    "title": "Regression vs. 6.7.0: bcut fails without notice",
+    "status": "EXCLUDED",
+    "reason": "Duplicate canonical issue or existing M27252 input/repair coverage."
+  },
+  {
+    "canonical_id": "mantis:27227",
+    "title": "Intersection curve is not continued to the surface boundary",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:27252",
+    "title": "Implicit-implicit intersection (Cylinder-Plane) loses intersection curve",
+    "status": "EXCLUDED",
+    "reason": "Duplicate canonical issue or existing M27252 input/repair coverage."
+  },
+  {
+    "canonical_id": "mantis:27269",
+    "title": "Intersection algorithm produces null-length curve",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:27310",
+    "title": "Boolean intersection gives too large reached tolerance",
+    "status": "EXCLUDED",
+    "reason": "Duplicate canonical issue or existing M27252 input/repair coverage."
+  },
+  {
+    "canonical_id": "mantis:2755",
+    "title": "Boolean Bug in OCC5.0 with the shape having a ellipse curve",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:27553",
+    "title": "Modeling Algorithms - BRepFeat_SplitShape returns self-intersecting result since OCC 7.0.0",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:27648",
+    "title": "[Regression to 6.9.1] Section produces self-intersecting curve",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:27773",
+    "title": "Empty result of section operation between line and offset of a circle",
+    "status": "EXCLUDED",
+    "reason": "Duplicate canonical issue or existing M27252 input/repair coverage."
+  },
+  {
+    "canonical_id": "mantis:27780",
+    "title": "Face-face intersection produces 2D curve that has reversed derivative at its end",
+    "status": "EXCLUDED",
+    "reason": "Duplicate canonical issue or existing M27252 input/repair coverage."
+  },
+  {
+    "canonical_id": "mantis:27872",
+    "title": "BRepAlgoAPI_Common returns invalid shape",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:27896",
+    "title": "Prm-Prm intersection algo returns wrong result if it is called with start intersection point, which lies in the domain boundary",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:28195",
+    "title": "Boolean common returns empty result for a solid where some surfaces of revolution touch the axis",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:28216",
+    "title": "Intersection of a face and a solid is broken up leading to empty result of Boolean common operation",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:28274",
+    "title": "BOPAlgo_MakerVolume fails to create solid",
+    "status": "INCONCLUSIVE",
+    "reason": "Legal mesh-cache-free input passes both tested baselines."
+  },
+  {
+    "canonical_id": "mantis:28366",
+    "title": "BOP Common fails with solid and planar face",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:2838",
+    "title": "Empty result of section between an edge and a face; wrong Extrema value",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:28388",
+    "title": "Boolean common of simple face and solid results in empty compound",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:28503",
+    "title": "Incomplete result of making volume operation due to incorrect intersection of conical faces",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:28802",
+    "title": "The tolerance reached by approximator is used in creation of an edge, it is incorrect",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:28833",
+    "title": "Modeling Algorithms - Unstable result of intersection of the faces",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:29028",
+    "title": "Wrong result of Boolean Operations with plane and torus",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:29038",
+    "title": "Modeling - IntTools_EdgeEdge::FindParameters() hangs on bad curve",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:29807",
+    "title": "[Regression to 7.0.0] Impossible to cut cone from prism",
+    "status": "EXCLUDED",
+    "reason": "Duplicate canonical issue or existing M27252 input/repair coverage."
+  },
+  {
+    "canonical_id": "mantis:29824",
+    "title": "Intersection of cylinder and sphere is incorrect",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:30198",
+    "title": "Regression to 7.1.0: BRepAlgoAPI_Fuse unlimited memory usage",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:31835",
+    "title": "Modeling Algorithms - step by step Boolean common produces bad shape on given three cylinders",
+    "status": "EXCLUDED",
+    "reason": "Duplicate canonical issue or existing M27252 input/repair coverage."
+  },
+  {
+    "canonical_id": "mantis:31850",
+    "title": "Modeling Algorithms - boolean cut and common generate unexpected result",
+    "status": "INCONCLUSIVE",
+    "reason": "Exact shared-PaveFiller entry does not reproduce a B/F defect difference."
+  },
+  {
+    "canonical_id": "mantis:32345",
+    "title": "CellsBuilder infinite loop",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:32443",
+    "title": "Boolean operations fail with fuzzy values, and tolerance is large",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:32942",
+    "title": "Modeling Algorithms - Boolean operation Common has no result in specific example",
+    "status": "EXCLUDED",
+    "reason": "Duplicate canonical issue or existing M27252 input/repair coverage."
+  },
+  {
+    "canonical_id": "mantis:33064",
+    "title": "BRepAlgoAPI_Common fails to find common shape",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:33516",
+    "title": "Incorrect boolean intersection (BRepAlgoAPI_Common)",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:33639",
+    "title": "Modeling Algorithms - Boolean torus cut cone failed",
+    "status": "PASS",
+    "reason": "All admission gates and frozen B/F replay completed."
+  },
+  {
+    "canonical_id": "mantis:33677",
+    "title": "Modeling Algorithms - Fuse operation Extrema_GenExtCS problem",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:33899",
+    "title": "Overlap found/not found depending on translation value",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:33904",
+    "title": "Issue with cutting of 1 cylinder by another one",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:4904",
+    "title": "Bug in edge edge intersection",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:506",
+    "title": "Draw hungs up in BRepAlgoAPI_Cut function during loading e3i-file in Gallery but does not hung up in Gallerydeb",
+    "status": "EXCLUDED",
+    "reason": "Duplicate canonical issue or existing M27252 input/repair coverage."
+  },
+  {
+    "canonical_id": "mantis:6279",
+    "title": "Incorrect section between two solids",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:6281",
+    "title": "Cut operation is invalid.",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:6282",
+    "title": "Cut operation is invalid.",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  },
+  {
+    "canonical_id": "mantis:9500",
+    "title": "Regress of the patch to bug 9134 - exception cutting one cylinder from another",
+    "status": "INCONCLUSIVE",
+    "reason": "Complete valid-input B/F and neighborhood qualification has not been established."
+  }
+]

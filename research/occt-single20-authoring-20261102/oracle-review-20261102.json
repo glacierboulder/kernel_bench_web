@@ -1,0 +1,7 @@
+{
+  "m24418-calibration-01": "Unqualified oracle assumption: one closed physical component was incorrectly equated with one closed curve object. Both B and F return two fragments. Revision 02 checks endpoint-graph connectivity/degree with the unchanged 2e-7 joining/residual/witness limit.",
+  "m24418-natural-b-build-01": "The natural parent and F gave identical measured support and witness residuals in probe 01. Defect is not yet reproduced by the available programmatic input. Also test the earlier verified 2016 source.",
+  "solid_checks-before-revision-02": "DRAW shape variables were accessed inside Tcl procedures without global evaluation. These runner errors are not geometry failures or qualification evidence.",
+  "centroid-domain-revision-03": "Bounding boxes of B-splines are conservative enclosures. Comparing two such enclosures does not establish curve containment and falsely rejected the qualified M23998 F. The necessary centroid-in-input-box predicate replaces that invalid inference. Original length/topology/validity requirements and numeric thresholds are unchanged. This predicate detects the deliberate large translation control and does not prove full set containment.",
+  "modern-DRAW-compatibility": "Use bounding -save when boundingstr is absent. The upstream GH1543 untested script used unavailable 2dline and mkwire commands; replace them with the corresponding line (four 2D coordinates) and wire interfaces."
+}

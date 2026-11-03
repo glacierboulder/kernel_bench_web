@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "group_id": "occt-single20-26776",
+      "build_jobs": {
+        "b": "common-2016-f-build-02",
+        "f": "m24418-natural-f-build-01"
+      },
+      "natural_reference_source": "prepared/m24418-f/source"
+    },
+    {
+      "group_id": "occt-single20-25102",
+      "build_jobs": {
+        "b": "m26243-natural-b-build-01",
+        "f": "common-2016-f-build-02"
+      },
+      "natural_reference_source": "/var/tmp/cad-bench-lzy-round2-qualification-20261028/jobs/m27270-f1/source"
+    },
+    {
+      "group_id": "occt-single20-25342",
+      "build_jobs": {
+        "b": "m26243-natural-b-build-01",
+        "f": "common-2016-f-build-02"
+      },
+      "natural_reference_source": "/var/tmp/cad-bench-lzy-round2-qualification-20261028/jobs/m27270-f1/source"
+    }
+  ]
+}

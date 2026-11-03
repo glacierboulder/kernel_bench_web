@@ -1,0 +1,15 @@
+{
+  "issue": 17194,
+  "cases": [
+    {
+      "script": "occt-17194/1/original_probe.tcl",
+      "id": "original_probe",
+      "category": "original",
+      "expected_assertion_ids": [
+        "branch_count",
+        "section_length",
+        "valid_result"
+      ]
+    }
+  ]
+}

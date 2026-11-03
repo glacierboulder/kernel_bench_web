@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-26796-checks",
+  "version": "1",
+  "title": "近接触盒体的 General Fuse 分块错误 · 几何检查",
+  "source_ids": [
+    "occt-single20-6435b9c7fafd"
+  ],
+  "group_ids": [
+    "occt-single20-26796"
+  ],
+  "checkpoints": [
+    {
+      "id": "26796-neighborhood_angle",
+      "issue_id": "occt-26796",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-26796/1/neighborhood_angle.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "four_solids",
+          "solid_validity",
+          "component_volumes",
+          "solid_area",
+          "preserved_centroid"
+        ]
+      }
+    },
+    {
+      "id": "26796-neighborhood_translation",
+      "issue_id": "occt-26796",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-26796/1/neighborhood_translation.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "four_solids",
+          "solid_validity",
+          "component_volumes",
+          "solid_area",
+          "preserved_centroid"
+        ]
+      }
+    },
+    {
+      "id": "26796-original",
+      "issue_id": "occt-26796",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-26796/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "four_solids",
+          "solid_validity",
+          "component_volumes",
+          "solid_area",
+          "preserved_centroid"
+        ]
+      }
+    },
+    {
+      "id": "26796-regression_separated",
+      "issue_id": "occt-26796",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-26796/1/regression_separated.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "four_solids",
+          "solid_validity",
+          "component_volumes",
+          "solid_area",
+          "preserved_centroid"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/single20/occt-26796/1/general_fuse.tcl",
+    "evaluation/cases/single20/solid_checks.tcl"
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "issue": "github-1610",
+    "label": "github1610-b-qualification-02",
+    "build_job": "occt-7.9.3-build-01",
+    "plan": "mgithub-1610-qualification-plan.json"
+  },
+  {
+    "issue": "github-1610",
+    "label": "github1610-f-qualification-02",
+    "build_job": "github1610-reference-build-01",
+    "plan": "mgithub-1610-qualification-plan.json"
+  },
+  {
+    "issue": 26310,
+    "label": "m26310-2021-screen-01",
+    "build_job": "m24418-natural-f-build-01",
+    "plan": "m26310-screen-plan.json"
+  },
+  {
+    "issue": 26310,
+    "label": "m26310-2025-screen-01",
+    "build_job": "occt-7.9.3-build-01",
+    "plan": "m26310-screen-plan.json"
+  }
+]

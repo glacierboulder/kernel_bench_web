@@ -1,0 +1,65 @@
+diff --git a/src/IntPolyh/IntPolyh_Triangle.cxx b/src/IntPolyh/IntPolyh_Triangle.cxx
+index 4308a8c21f..527da5e232 100644
+--- a/src/IntPolyh/IntPolyh_Triangle.cxx
++++ b/src/IntPolyh/IntPolyh_Triangle.cxx
+@@ -574,10 +574,14 @@ void IntPolyh_Triangle::MultipleMiddleRefinement(const Standard_Real theRefineCr
+ {
+   // Number of triangles before refinement of current triangle
+   const Standard_Integer FinTTInit = TTriangles.NbItems();
++  // Criteria to stop splitting - double of the initial number of triangles,
++  // i.e. allow each triangle to be split at least once. Add a constant
++  // to allow the splits of triangles to be checked.
++  const Standard_Integer MaxNbTT = 2*FinTTInit + 1000;
+   // Split the current triangle
+   MiddleRefinement(theTriangleNumber, theSurface, TPoints, TTriangles, TEdges);
+   // Refine the new triangles
+-  for (Standard_Integer i = FinTTInit; i < TTriangles.NbItems(); ++i) {
++  for (Standard_Integer i = FinTTInit; i < TTriangles.NbItems() && i < MaxNbTT; ++i) {
+     IntPolyh_Triangle& aTriangle = TTriangles[i];
+     if(theBox.IsOut(aTriangle.BoundingBox(TPoints))) {
+       aTriangle.SetIntersectionPossible(Standard_False);
+diff --git a/tests/bugs/modalg_7/bug30198 b/tests/bugs/modalg_7/bug30198
+new file mode 100644
+index 0000000000..9499c324b7
+--- /dev/null
++++ b/tests/bugs/modalg_7/bug30198
+@@ -0,0 +1,39 @@
++puts "========"
++puts "0030198: Regression to 7.1.0: BRepAlgoAPI_Fuse unlimited memory usage"
++puts "========"
++puts ""
++
++restore [locate_data_file bug30198_src.brep] b1
++restore [locate_data_file bug30198_tool.brep] b2
++
++bclearobjects
++bcleartools
++baddobjects b1
++baddtools b2
++bfillds
++
++bapibop r0 0
++bapibop r1 1
++bapibop r2 2
++bapibop r3 3
++bapibop r4 4
++
++checkshape r0
++checknbshapes r0 -wire 33 -face 32 -shell 1 -solid 1
++checkprops r0 -s 46.2958 -v 11.2502
++
++checkshape r1
++checknbshapes r1 -wire 163 -face 151 -shell 1 -solid 1
++checkprops r1 -s  216.217 -v 62.6126
++
++checkshape r2
++checknbshapes r2 -wire 153 -face 142 -shell 2 -solid 2
++checkprops r2 -s 222.03 -v 47.9412
++
++checkshape r3
++checknbshapes r3 -wire 43 -face 41 -shell 1 -solid 1
++checkprops r3 -s 40.5104 -v 3.42122
++
++checksection r4 -r 0
++
++checkview -display r1 -2d -path ${imagedir}/${test_image}.png

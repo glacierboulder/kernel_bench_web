@@ -1,0 +1,16 @@
+{
+  "issue": 25542,
+  "qualification": "original screening only; no admission or final oracle claim",
+  "cases": [
+    {
+      "script": "occt-25542/1/diagnostic_probe.tcl",
+      "id": "diagnostic_probe",
+      "category": "original",
+      "expected_assertion_ids": [
+        "topology",
+        "area",
+        "validity"
+      ]
+    }
+  ]
+}

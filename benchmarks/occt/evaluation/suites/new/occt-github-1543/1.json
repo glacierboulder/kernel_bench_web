@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-github-1543-checks",
+  "version": "1",
+  "title": "螺旋工具穿过端面时 Boolean Cut 未移除材料 · 几何检查",
+  "source_ids": [
+    "occt-single20-a016080bf673"
+  ],
+  "group_ids": [
+    "occt-single20-github-1543"
+  ],
+  "checkpoints": [
+    {
+      "id": "github-1543-neighborhood_offset",
+      "issue_id": "occt-github-1543",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-github-1543/1/neighborhood_offset.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "shape_valid",
+          "solid_count",
+          "analytic_volume",
+          "kept_core",
+          "removed_middle",
+          "removed_top"
+        ]
+      }
+    },
+    {
+      "id": "github-1543-neighborhood_rigid",
+      "issue_id": "occt-github-1543",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-github-1543/1/neighborhood_rigid.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "shape_valid",
+          "solid_count",
+          "analytic_volume",
+          "kept_core",
+          "removed_middle",
+          "removed_top"
+        ]
+      }
+    },
+    {
+      "id": "github-1543-original",
+      "issue_id": "occt-github-1543",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-github-1543/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "shape_valid",
+          "solid_count",
+          "analytic_volume",
+          "kept_core",
+          "removed_middle",
+          "removed_top"
+        ]
+      }
+    },
+    {
+      "id": "github-1543-regression_passing_phase",
+      "issue_id": "occt-github-1543",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-github-1543/1/regression_passing_phase.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "shape_valid",
+          "solid_count",
+          "analytic_volume",
+          "kept_core",
+          "removed_middle",
+          "removed_top"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/single20/occt-github-1543/1/helical_cut.tcl",
+    "evaluation/cases/single20/occt-github-1543/1/inputs/cylinder.brep",
+    "evaluation/cases/single20/occt-github-1543/1/inputs/tool-health.brep",
+    "evaluation/cases/single20/occt-github-1543/1/inputs/tool-offset.brep",
+    "evaluation/cases/single20/occt-github-1543/1/inputs/tool-original.brep"
+  ]
+}

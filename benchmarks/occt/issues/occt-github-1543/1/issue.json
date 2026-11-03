@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1543",
+  "version": "1",
+  "title": "螺旋工具穿过端面时 Boolean Cut 未移除材料",
+  "source_id": "occt-single20-a016080bf673",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/reproduce.tcl",
+    "public/cylinder.brep",
+    "public/tool-original.brep"
+  ]
+}

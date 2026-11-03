@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-26310",
+  "version": "1",
+  "title": "OCCT · 圆柱求交产生错误曲线",
+  "kind": "single",
+  "source_id": "occt-single20-ea80ac2f61af",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-26310",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single20-26310-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

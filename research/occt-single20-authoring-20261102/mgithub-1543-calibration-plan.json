@@ -1,0 +1,16 @@
+{
+  "issue": "github-1543",
+  "qualification": "screen only, removal interval is not a final acceptance rule",
+  "cases": [
+    {
+      "script": "occt-github-1543/1/original_probe.tcl",
+      "id": "original_probe",
+      "category": "original",
+      "expected_assertion_ids": [
+        "valid_result",
+        "single_solid",
+        "removal_screen"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "issue": "github:1543",
+  "source": "exact C++ geometric construction from live upstream issue, input export main added",
+  "radius": 8.0,
+  "profile_radius": 0.6,
+  "pitch": 2.0,
+  "height": 15.0,
+  "cylinder_height": 30.0,
+  "derivation": "Centerline H(theta)=(R*cos(theta),R*sin(theta),k*theta+dz). Tube coordinates H+u*N+v*B, u^2+v^2<=a^2, curvature c=R/(R^2+k^2), Jacobian L*(1-c*u). Cylinder containment requires (R-u)^2+(k/L*v)^2<=R^2. Since both clipping bounds are away from tube start/end for dz in {16.0,16.2,16.6}, theta integral is [(30-dz)-(R/L)*v]/k. The odd v term integrates to zero. Integrate u from R-sqrt(R^2-q^2*v^2) to sqrt(a^2-v^2), and v over the intersection of the two disks.",
+  "double_precision_predictions": [
+    {
+      "dz": 16.2,
+      "analytic_removed_volume": 190.04099238717146,
+      "analytic_cut_volume": 5841.816902505231
+    },
+    {
+      "dz": 16.6,
+      "analytic_removed_volume": 184.53255782522442,
+      "analytic_cut_volume": 5847.325337067178
+    },
+    {
+      "dz": 16.0,
+      "analytic_removed_volume": 192.79520966814493,
+      "analytic_cut_volume": 5839.062685224258
+    }
+  ],
+  "qualification": "Analytic ideal-tube predictions must be compared to validated generated input geometry and numerical integration error before freezing final thresholds. The upstream DRAW script uses an incorrect stated spine tangent for the profile and is not used to define these inputs."
+}
