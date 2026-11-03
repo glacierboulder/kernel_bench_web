@@ -15,8 +15,14 @@ ROOT=Path(__file__).resolve().parents[1]
 class UnifiedOcctRuntimeTests(unittest.TestCase):
     def test_registry_covers_fifteen_suites_and_113_checkpoints(self):
         value=json.loads((ROOT/'benchmarks/occt/evaluation/runtime.json').read_text())
-        self.assertEqual(len(value['suites']),15)
-        self.assertEqual(sum(len(c['checkpoints']) for c in value['suites'].values()),113)
+        catalog=json.loads((ROOT/'benchmarks/occt/catalog.json').read_text())
+        active=[]
+        for ref in catalog['groups']:
+            group=json.loads((ROOT/'benchmarks/occt'/ref['path']).read_text())
+            key=group['evaluation_suite']['id']+'@'+group['evaluation_suite']['version']
+            if key in value['suites']: active.append(value['suites'][key])
+        self.assertEqual(len(active),15)
+        self.assertEqual(sum(len(c['checkpoints']) for c in active),113)
         for c in value['suites'].values():
             for key,r in c['checkpoints'].items():
                 self.assertEqual(key,r['checkpoint_id'])

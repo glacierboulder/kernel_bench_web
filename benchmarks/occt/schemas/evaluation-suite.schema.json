@@ -150,6 +150,13 @@
                   "type": "string",
                   "minLength": 1
                 }
+              },
+              "pending_requirements": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
               }
             },
             "additionalProperties": false

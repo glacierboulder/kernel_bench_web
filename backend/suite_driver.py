@@ -115,6 +115,7 @@ def checkpoint_status(result: dict) -> str:
         status=detail.get('status')
         if detail.get('timed_out') or status=='timeout': return 'timeout'
         if status=='geometry_fail' and detail.get('oracle_ran') is True: return 'failed'
+        if status=='inconclusive': return 'inconclusive'
         if status=='not_run': return 'not_run'
         return 'error'
     return 'passed' if result.get('passed') else 'timeout' if detail.get('timed_out') else 'failed'

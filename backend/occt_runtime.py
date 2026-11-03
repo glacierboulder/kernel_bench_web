@@ -37,7 +37,7 @@ def configuration(root: Path, suite: dict, *, case_root: Path | None = None) -> 
         material=resolve_relative(case_root or root,cp['case'])
         config['checkpoints'][cp['id']]={'checkpoint_id':cp['id'],'case':cp['case'],'category':cp['category'],
             'case_sha256':hashlib.sha256(material.read_bytes()).hexdigest(),
-            'expected_assertion_ids':options['expected_assertion_ids'],'expected_failure_lines':options.get('expected_failure_lines',[]),
+            'expected_assertion_ids':options['expected_assertion_ids'],'expected_failure_lines':options.get('expected_failure_lines',[]),'pending_requirements':options.get('pending_requirements',[]),
             'engine':{'kind':'assertions','path':'unified_runtime/draw_base.py','sha256':hashlib.sha256((RUNTIME/'public_draw.py').read_bytes()).hexdigest()}}
     return config
 

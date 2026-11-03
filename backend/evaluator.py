@@ -199,7 +199,7 @@ def _combine_suites(raw: dict, suites: list[dict]) -> dict:
         summary[category]={"declared":len(rows),
             "executed":sum(row["status"] not in {"not_run","skipped"} for row in rows),
             **{status:sum(row["status"]==status for row in rows)
-               for status in ("passed","failed","timeout","error","not_run","skipped")},
+               for status in ("passed","failed","timeout","error","not_run","skipped","inconclusive")},
             "state":"未配置" if not rows else "configured"}
     passed=bool(checkpoints) and all(not row["required"] or row["status"]=="passed" for row in checkpoints)
     raw["evaluation_suites"]=[{"id":suite["id"],"version":suite["version"]} for suite in suites]

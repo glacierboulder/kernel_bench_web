@@ -1823,6 +1823,213 @@
         "compiler_output_directory": "clang-o3",
         "optimization_flags": "-O3 -DNDEBUG"
       }
+    },
+    "occt-bf-suite-b55-27310-27773-27252-geometry-v2@1": {
+      "schema_version": 1,
+      "suite": "occt-bf-suite-b55-27310-27773-27252-geometry-v2@1",
+      "group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "source_id": "occt-b55bd0235351",
+      "build_helper": {
+        "path": "occt-bf-group-b55-27310-27773-27252-oracle-v2/routed_run_eval.py",
+        "sha256": "d065b782f1fe5f843ab57f7a99d11d7c1b333536a1caaaf6abc3be14d633d25b"
+      },
+      "checkpoints": {
+        "M27310_1": {
+          "checkpoint_id": "M27310_1",
+          "case": "issues/occt-27310/1/public/harness_bug27310_1.tcl",
+          "case_sha256": "f9acda947a60a072d880fade9cdc4ea16b7283792976ca3f84ae4ad01ff4f392",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27310_2_d308": {
+          "checkpoint_id": "M27310_2_d308",
+          "case": "evaluation/cases/checkpoint_v2/m27310_d308.tcl",
+          "case_sha256": "3f5e08cc99ed785654362cec8e8139b70946049c77ef79eb3273b872bf1f4368",
+          "category": "original",
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          },
+          "expected_assertion_ids": [
+            "reported_value_valid",
+            "nonempty_measurements",
+            "surface_residual",
+            "pcurve_mapping"
+          ],
+          "pending_requirements": [
+            "independent_endpoint_and_complete_intersection_coverage_reference"
+          ]
+        },
+        "M27773": {
+          "checkpoint_id": "M27773",
+          "case": "issues/occt-27773/1/public/harness_bug27773.tcl",
+          "case_sha256": "92c210445156b9e064f379972da197a914680b4ae66cbc9f4d8a113a9ffbb287",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27252": {
+          "checkpoint_id": "M27252",
+          "case": "issues/occt-27252/1/public/harness_bug27252_1.tcl",
+          "case_sha256": "752a8382552078f2647318412730163e8f0def19a3eb7f1b83fd8f6b5c2ac450",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27310_neighbor_finite_face": {
+          "checkpoint_id": "M27310_neighbor_finite_face",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27310_neighbor_finite_face.tcl",
+          "case_sha256": "e025d3718d5ced85ff3d44b3a4bba126f0e49b95c1936301a235e657e765aa9a",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27310_regression_two_loops": {
+          "checkpoint_id": "M27310_regression_two_loops",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27310_regression_two_loops.tcl",
+          "case_sha256": "27085018781829f4e76d9ccb65b2859871459581614c481810f634fd046254c9",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27773_neighbor_offset_line": {
+          "checkpoint_id": "M27773_neighbor_offset_line",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27773_neighbor_offset_line.tcl",
+          "case_sha256": "917c4c5b0ba256a24ca9ff487f12d8e64ecb85bb144372583d6b8f30ac253cde",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27773_regression_circle_line": {
+          "checkpoint_id": "M27773_regression_circle_line",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27773_regression_circle_line.tcl",
+          "case_sha256": "aa02e6f88fb03824066186c9038d9fd846b78c170664d76834718b976524f2e3",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27252_neighbor_translated_plane": {
+          "checkpoint_id": "M27252_neighbor_translated_plane",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27252_neighbor_translated_plane.tcl",
+          "case_sha256": "14c99594426c9a949225670bc4543bb038ce10f14c74808e122b7f79f089872d",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27252_regression_cylinder_plane": {
+          "checkpoint_id": "M27252_regression_cylinder_plane",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27252_regression_cylinder_plane.tcl",
+          "case_sha256": "8a8c92c161210c4c4c3e5db8fde50810835f4af38d76acfceab48895009f1221",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "neighborhood_v2_m27310_rigid_translated_original_breps": {
+          "checkpoint_id": "neighborhood_v2_m27310_rigid_translated_original_breps",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27310_rigid_translated_original_breps.tcl",
+          "case_sha256": "33ed187b02876bad609d86b0abe0e7fb5a04071546e890282fc5db400908dd44",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27310_scaled_finite_brep_neighborhood": {
+          "checkpoint_id": "neighborhood_v2_m27310_scaled_finite_brep_neighborhood",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27310_scaled_finite_brep_neighborhood.tcl",
+          "case_sha256": "6b76bfd54b65049814e2cabb21360a5a8ed4573645c93d8a3d21ac4ab1dc064e",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27773_offset_radius_parameter": {
+          "checkpoint_id": "neighborhood_v2_m27773_offset_radius_parameter",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27773_offset_radius_parameter.tcl",
+          "case_sha256": "1458be796ac47673ec272b1f95b50ed66cf8435b4d60a1793a14745178ad354c",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27773_offset_near_tangent": {
+          "checkpoint_id": "neighborhood_v2_m27773_offset_near_tangent",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27773_offset_near_tangent.tcl",
+          "case_sha256": "5b57126c1ae444551e9e21004c04b2c8e04003d4e647a4a34ffab5bc0f7119ec",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27252_brep_plane_offset005": {
+          "checkpoint_id": "neighborhood_v2_m27252_brep_plane_offset005",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27252_brep_plane_offset005.tcl",
+          "case_sha256": "259974fbdb5e9919efe36b57be23167555f4f51502a8c0f36e222728ac657372",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27252_brep_plane_scale150_offset010": {
+          "checkpoint_id": "neighborhood_v2_m27252_brep_plane_scale150_offset010",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27252_brep_plane_scale150_offset010.tcl",
+          "case_sha256": "f45c905b8f1870d3de93f53f706bcb9dba2dd7243c6d93a5b7797f7ca5aba329",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "gcc",
+        "optimization_flags": "-O0 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
     }
   }
 }

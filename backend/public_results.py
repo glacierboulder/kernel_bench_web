@@ -87,7 +87,7 @@ def public_evaluation(value: dict | None, run: dict | None = None) -> dict | Non
 
 
 def _status_counts(rows: list[dict]) -> dict:
-    statuses=("passed","failed","timeout","error","not_run","skipped")
+    statuses=("passed","failed","timeout","error","not_run","skipped","inconclusive")
     return {"declared":len(rows),**{status:sum(item.get("status")==status for item in rows) for status in statuses}}
 
 

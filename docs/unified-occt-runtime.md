@@ -73,6 +73,7 @@ TEST_DONE assertions=2 numeric_assertions=1
 | `timeout` | 资源限制内没有完成判定 | timeout |
 | `runner_error` / `oracle_incomplete` | 执行入口、依赖或判据输出不完整 | error |
 | `not_run` | 判据未运行 | not_run |
+| `inconclusive` | 有已测必要条件，但尚缺必需参考或覆盖证据 | inconclusive |
 
 不能将进程返回 0 当成几何通过，也不能将缺文件、路径错误或缺动态库记成几何失败。
 
@@ -98,3 +99,5 @@ python scripts/experiments/validate_occt_bundle_routes.py
 部分旧版OCCT构建只创建Tcl解释器，没有加载标准`init.tcl`；此时`expr`可用，但由标准脚本定义的`max/min`可能缺失。共用DRAW运行器在执行用例前检查这两个函数，缺失时加载部署环境实际提供的Tcl标准初始化脚本，并记录路径与SHA256。优先使用`BENCH_TCL_INIT`或`BENCH_TCL_LIBRARY_DIR`等配置，不在测试中伪造函数或修改几何阈值。标准库不可用或版本不匹配时仍明确报错。
 
 历史解析器使用各自原有的版本自举流程，避免给它们强行加载另一版本Tcl的标准脚本。新标准题使用同一个共用DRAW运行器，不需要按题目补初始化代码。
+
+`runner_options.pending_requirements` 可列出尚未完成资格校准的必需规则。框架允许已确认的几何违例返回失败，但在这些条件未解除前不授予通过；详情见 [d308检查点修订](issues/issue-1-d308.md)。

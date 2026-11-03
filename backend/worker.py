@@ -404,7 +404,7 @@ You must investigate the supplied source and reproduce every visible issue, fix 
                          ('544', '506', '847', '690', '693', '172', '370', '872', '1452')
                          if number in test_name), None)
         current['checks']=[dict(issue_id=t.get('issue_id') or issue_id(t['test']),name=t['test'],
-            status='passed' if t['passed'] else 'failed',detail=t.get('result')) for t in result.get('tests',[])]
+            status=t.get('status') or ('passed' if t['passed'] else 'failed'),detail=t.get('result')) for t in result.get('tests',[])]
         current['evaluation_returncode']=eval_code
         current['evaluation_passed']=bool(result.get('passed')) and eval_code==0
         if run.get('plan1a_protocol'):
@@ -419,13 +419,14 @@ You must investigate the supplied source and reproduce every visible issue, fix 
         current['artifacts'] += ['evaluation.json','provenance.json','gateway-audit.json']
         current['artifacts'] += [n for n in ['repro-resource-events.jsonl','resource-limit-agent-workspace.json','resource-limit-evaluation-workspace.json'] if (root/n).is_file() and n not in current['artifacts']]
         current['elapsed_seconds']=round(time.monotonic()-started,2)
-        current['status']='completed' if result.get('passed') and eval_code==0 and current.get('submission_contract',{}).get('passed',True) else 'failed'
-        current['failure_kind']=(None if current['status']=='completed' else 'submission_invalid' if not current.get('submission_contract',{}).get('passed',True) or result.get('failure_stage')=='submission' or result.get('patch_error') else 'build_error' if not current['checks'] else 'fix_failed')
+        from .checkpoints import evaluation_run_status
+        current['status']=evaluation_run_status(result,eval_code,current.get('submission_contract',{}).get('passed',True))
+        current['failure_kind']=(None if current['status']=='completed' else 'evaluation_inconclusive' if current['status']=='inconclusive' else 'submission_invalid' if not current.get('submission_contract',{}).get('passed',True) or result.get('failure_stage')=='submission' or result.get('patch_error') else 'build_error' if not current['checks'] else 'fix_failed')
         save(current)
         if current['status']=='completed':
             (DATA/'live-verified.json').write_text(json.dumps(dict(run_id=identity,at=now(),task_id=current['task']['id'],
                 task_version=current['task']['version'],adapter=current['agent']['adapter'],source_hash=current['task'].get('source_hash'))))
-        event(identity,current['status'],'真实评测通过' if current['status']=='completed' else '真实评测未通过；详见评测结果')
+        event(identity,current['status'],'真实评测通过' if current['status']=='completed' else '评测无法判定：必需几何证据尚未齐备' if current['status']=='inconclusive' else '真实评测未通过；详见评测结果')
     except Exception as exc:
         if proc and proc.poll() is None:
             stop(proc)

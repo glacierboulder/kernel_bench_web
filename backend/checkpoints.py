@@ -7,7 +7,7 @@ from pathlib import Path
 from .catalog import CatalogError, validate_bundle
 
 
-STATUSES = ("passed","failed","timeout","error","not_run","skipped")
+STATUSES = ("passed","failed","timeout","error","not_run","skipped","inconclusive")
 CATEGORIES = ("original","neighborhood","regression")
 
 
@@ -68,3 +68,16 @@ def normalize_checkpoints(suite: dict, raw_result: dict) -> dict:
     return {"suite_id":suite["id"],"suite_version":suite["version"],
             "checkpoints":checkpoints,"category_summary":breakdown,
             "technical_passed":complete}
+
+
+def evaluation_run_status(result: dict, returncode: int | None, submission_passed: bool = True) -> str:
+    """Preserve a known candidate failure ahead of missing geometric evidence."""
+    if not submission_passed or result.get('failure_stage') in {'submission','build'} or result.get('patch_error'):
+        return 'failed'
+    if result.get('passed') and returncode==0:
+        return 'completed'
+    statuses=[t.get('status') or ('passed' if t.get('passed') else 'failed') for t in result.get('tests',[])]
+    if 'failed' not in statuses and (result.get('failure_stage')=='infrastructure'
+            or any(s in {'inconclusive','error','timeout','not_run'} for s in statuses)):
+        return 'inconclusive'
+    return 'failed'

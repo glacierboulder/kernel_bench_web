@@ -88,7 +88,9 @@ def _normalize(raw,process_code,route):
     timeout=bool(raw.get('timed_out')) or oracle_status in {'timeout','timeout_unmeasured'} or (staged and code==3)
     passed=(process_code==0 and not timeout and
             (oracle_status=='geometry_pass' if staged else raw.get('passed',raw.get('test_done_marker',False)) is True and code==0))
-    if oracle_status in {'geometry_pass','geometry_fail'}:
+    if oracle_status=='inconclusive':
+        ran=False;status='inconclusive'
+    elif oracle_status in {'geometry_pass','geometry_fail'}:
         ran=True;status=oracle_status if not passed else 'geometry_pass'
         if status=='geometry_pass' and not passed:status='runner_error';ran=False
     elif timeout:ran=False;status='timeout'
@@ -104,6 +106,7 @@ def _normalize(raw,process_code,route):
     return {'protocol':PROTOCOL,'checkpoint_id':route['checkpoint_id'],'category':route['category'],
             'passed':passed,'status':status,'oracle_ran':ran,'return_code':0 if passed else 1,
             'test_done_marker':passed,'timed_out':timeout,'runner_process_return_code':process_code,
+            'pending_requirements':raw.get('pending_requirements',[]),
             'elapsed_seconds':raw.get('elapsed_seconds',raw.get('duration_seconds')),'raw_result':raw}
 
 def main():
@@ -142,6 +145,7 @@ def main():
             module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
             raw=module.validate_base_result(raw,r)
             raw['status']=module.completed_failure_status(raw)
+            raw=module.apply_pending_requirements(raw,r)
             raw['return_code']=0 if raw['passed'] else 1
         out=_normalize(raw,proc.returncode,r)
         out.update(case_sha256=r['case_sha256'],adapter_sha256=_sha(Path(__file__)))

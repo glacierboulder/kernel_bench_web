@@ -1,0 +1,23 @@
+{
+  "scope": "Only M27310_2_d308 in the B55 three-issue group; #544 unchanged",
+  "historical_suite_sha256": "d9e46d37595c0874ebdad1cbbab08071ddd894ceb766eead0e00c1fcbbc3ab3a",
+  "historical_suite_unchanged": true,
+  "new_suite_id": "occt-bf-suite-b55-27310-27773-27252-geometry-v2@1",
+  "reference_coverage_qualified": false,
+  "positive_acceptance_enabled": false,
+  "sampled_surface_rejection_limit": 0.0001,
+  "budget_source": "Existing M27310 BREP neighborhood support-mapping rejection envelope; not a sufficient acceptance budget",
+  "sampling": "101 points per branch, including endpoints; finite witnesses only, not continuous coverage proof",
+  "coverage_status": "INCONCLUSIVE until independent clipping-domain, boundary-event and complete branch reference is qualified",
+  "input_sha256": {
+    "OCC496b.brep": "34dca030b3713fad191dee6f3675680c4b87f7f2624ec5ffb1e8bc661525b08c",
+    "OCC496a.brep": "30ca1434011fba9bfd35692c07719a9d4fcb4aa2606c739e8359fe504204cdc5"
+  },
+  "missing_remote_submissions": [
+    "Sol run002-v2",
+    "Sol run004",
+    "Astra run006",
+    "Astra run008"
+  ],
+  "api_calls": 0
+}

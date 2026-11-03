@@ -282,12 +282,17 @@ def validate_bundle(bundle_root: Path | str) -> dict[str, Any]:
                         f"checkpoint {identity} cannot set runner_options.script; "
                         "case is the only DRAW script path"
                     )
-                _fields(options,set(),{"case_timeout_seconds","expected_assertion_ids","expected_failure_lines"},"DRAW runner options")
+                _fields(options,set(),{"case_timeout_seconds","expected_assertion_ids","expected_failure_lines","pending_requirements"},"DRAW runner options")
                 assertion_ids=options.get('expected_assertion_ids')
                 if assertion_ids is not None and (not isinstance(assertion_ids,list) or not assertion_ids or
                         any(not isinstance(x,str) or not re.fullmatch(r'[A-Za-z0-9_.:-]+',x) for x in assertion_ids) or
                         len(set(assertion_ids))!=len(assertion_ids)):
                     raise CatalogError('expected_assertion_ids must be unique nonempty assertion names')
+                pending=options.get('pending_requirements',[])
+                if not isinstance(pending,list) or any(not isinstance(x,str) or not x.strip() for x in pending):
+                    raise CatalogError('pending_requirements must be a list of nonempty requirements')
+                if pending and not assertion_ids:
+                    raise CatalogError('pending requirements require an explicit assertion contract')
                 failure_lines=options.get('expected_failure_lines',[])
                 if not isinstance(failure_lines,list) or any(not isinstance(x,str) or not x.strip() or '\n' in x for x in failure_lines):
                     raise CatalogError('expected_failure_lines must contain nonempty single-line signatures')

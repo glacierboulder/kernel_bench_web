@@ -75,3 +75,10 @@ def completed_failure_status(result: dict) -> str:
     if errors and all(any(p.fullmatch(line.strip()) for p in _GEOMETRY_DIAGNOSTICS) for line in errors):
         return 'geometry_fail'
     return result['status']
+
+
+def apply_pending_requirements(result: dict, route: dict) -> dict:
+    """An unqualified necessary check can reject, but cannot grant PASS."""
+    if result.get('passed') and route.get('pending_requirements'):
+        return dict(result,passed=False,status='inconclusive',pending_requirements=list(route['pending_requirements']))
+    return result

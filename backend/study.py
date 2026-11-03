@@ -107,7 +107,7 @@ def evaluation_record(run_id,result,code,kind='repair',directory=None):
     for phase in ('configure','build'):
         code_phase=(result.get('build',{}).get(phase) or {}).get('return_code')
         stages.append({'name':phase,'status':'not_run' if code_phase is None else 'passed' if code_phase==0 else 'failed'})
-    stages.extend({'name':t['test'],'status':'passed' if t['passed'] else 'failed'} for t in result.get('tests',[]))
+    stages.extend({'name':t['test'],'status':t.get('status') or ('passed' if t['passed'] else 'failed')} for t in result.get('tests',[]))
     item={'id':secrets.token_hex(8),'created_at':now(),'run_id':run_id,'experiment_id':run.get('experiment_id') if run else None,
           'kind':kind,'result':result,'returncode':code,'stages':stages,
           'patch_sha256':digest(root/'patch.diff') if (root/'patch.diff').exists() else None,
