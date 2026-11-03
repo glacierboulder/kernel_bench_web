@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "issue": "occt-27227",
+  "status": "qualified",
+  "source_kind": "natural historical commit",
+  "source_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+  "git_tree": "b72dfb3316a1f3124107b0901d01cb5d433eacb3",
+  "materialized_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+  "reference": {
+    "source_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+    "git_tree": "29ea14e7dce1ccb003a42e297192d4a0c561eb2b",
+    "source_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+    "kind": "natural later commit"
+  },
+  "qualification": {
+    "b": {
+      "label": "m27227-b-qualification-01",
+      "model_called": false,
+      "source_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "source_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "build_receipt_sha256": "bdedc9253129a1b351f314a64007fa10a98dd2862442c33e54250e4ed6a8b020",
+      "binary_manifest_sha256": "555e974cab4987c738f6122f4fdf91b07c81b59cd460da7cdd56609e5a3ac189",
+      "results": {
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_translation": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_swap": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_plane": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_truncated": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T15:34:58.203223+00:00"
+    },
+    "f": {
+      "label": "m27227-f-qualification-01",
+      "model_called": false,
+      "source_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+      "source_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+      "build_receipt_sha256": "b852753001bec69e1d20ba96350b0d765016f43fd302260f9ed56a0e5d1cea17",
+      "binary_manifest_sha256": "28b9c89463781222704628b1fdf4330a4732008c9904e449ffb1397dacd79d66",
+      "results": {
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_translation": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_swap": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_plane": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_truncated": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T15:35:16.548117+00:00"
+    }
+  },
+  "stage": "unknown",
+  "stage_note": "The earliest internal failing stage has not been localized by this authoring run.",
+  "limits": [
+    "For the equal-radius orthogonal tori, subtracting their equations gives y^2=z^2. Intersections of these two planes with the torus provide 56 analytic witnesses including the inner and outer seam endpoints.",
+    "The distance limit is fixed at 1e-5. The natural 2021 B has approximately 6.47e-4 worst witness error while its reported tolerance is a separate quantity.",
+    "API curve segmentation count is not treated as a universal physical branch count. Finite support samples and witnesses do not certify a continuous global error bound."
+  ],
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0027227/"
+}

@@ -1,0 +1,129 @@
+{
+  "issue": 33639,
+  "cases": [
+    {
+      "id": "original",
+      "script": "occt-33639/1/original.tcl",
+      "category": "original",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "one_solid",
+        "analytic_volume",
+        "kept_positive",
+        "kept_negative",
+        "removed_positive",
+        "removed_negative"
+      ]
+    },
+    {
+      "id": "neighborhood_rigid",
+      "script": "occt-33639/1/neighborhood_rigid.tcl",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "one_solid",
+        "analytic_volume",
+        "kept_positive",
+        "kept_negative",
+        "removed_positive",
+        "removed_negative"
+      ]
+    },
+    {
+      "id": "neighborhood_scale",
+      "script": "occt-33639/1/neighborhood_scale.tcl",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "one_solid",
+        "analytic_volume",
+        "kept_positive",
+        "kept_negative",
+        "removed_positive",
+        "removed_negative"
+      ]
+    },
+    {
+      "id": "regression_separated",
+      "script": "occt-33639/1/regression_separated.tcl",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "one_solid",
+        "analytic_volume",
+        "kept_positive",
+        "kept_negative",
+        "removed_positive",
+        "removed_negative"
+      ]
+    },
+    {
+      "id": "negative_empty",
+      "script": "occt-33639/1/negative_empty.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "one_solid",
+        "analytic_volume",
+        "kept_positive",
+        "kept_negative",
+        "removed_positive",
+        "removed_negative"
+      ]
+    },
+    {
+      "id": "negative_unchanged",
+      "script": "occt-33639/1/negative_unchanged.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "one_solid",
+        "analytic_volume",
+        "kept_positive",
+        "kept_negative",
+        "removed_positive",
+        "removed_negative"
+      ]
+    },
+    {
+      "id": "negative_shifted",
+      "script": "occt-33639/1/negative_shifted.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "one_solid",
+        "analytic_volume",
+        "kept_positive",
+        "kept_negative",
+        "removed_positive",
+        "removed_negative"
+      ]
+    }
+  ],
+  "support_sha256": {
+    "occt-33639/1/original_probe.tcl": "acf6ca084ad3db3076ea2243695732168846d166ca3aeff386dd0f58ff10f909",
+    "occt-33639/1/neighborhood_scale.tcl": "9ae108854bc043c9468454dc3848e3c4d88427777de5ad033cdd7ac125adf139",
+    "occt-33639/1/torus_cone_cut.tcl": "22f6cc446d2a6750362c60f46fc3987752ede9f6e273307e88402f8accbbed59",
+    "occt-33639/1/regression_separated.tcl": "c0710b5ac1fddb5962d0286c93ffda0fc9078e62108117f36c86a3115a22480e",
+    "occt-33639/1/negative_unchanged.tcl": "4a41f7ae60b363431e7d7b2dc1459e68fab0752ffa30849ce859cb092c08543b",
+    "occt-33639/1/negative_empty.tcl": "d27d89a541361ef24402311c3a61e16666f6ffb44035c5fad6328ae97dabb2d2",
+    "occt-33639/1/neighborhood_rigid.tcl": "6b12b35846fd5fc3cc3b7b1ccfb9b63a5132252ee224075bc0dcfc86dea1ddc3",
+    "occt-33639/1/original.tcl": "d29b6ebb0da2a41fc63f3d6bef8a06429404be5363b380feef497aba15e50498",
+    "occt-33639/1/negative_shifted.tcl": "c0a1f22ed538777e0c55d7c18b6aa69edc3cffabe21c5d1bd88296cd249a3d29",
+    "assertions.tcl": "f456e1d2e107d2eb3673ff7c5edbf43578516958231578ea53d976a8b6adb2f0"
+  }
+}

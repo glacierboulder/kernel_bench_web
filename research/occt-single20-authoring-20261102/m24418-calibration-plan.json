@@ -1,0 +1,89 @@
+{
+  "issue": 24418,
+  "cases": [
+    {
+      "script": "occt-24418/1/negative_missing.tcl",
+      "id": "negative_missing",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty_result",
+        "support_residual",
+        "branch_closed",
+        "analytic_coverage"
+      ]
+    },
+    {
+      "script": "occt-24418/1/negative_shifted.tcl",
+      "id": "negative_shifted",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty_result",
+        "support_residual",
+        "branch_closed",
+        "analytic_coverage"
+      ]
+    },
+    {
+      "script": "occt-24418/1/negative_truncated.tcl",
+      "id": "negative_truncated",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty_result",
+        "support_residual",
+        "branch_closed",
+        "analytic_coverage"
+      ]
+    },
+    {
+      "script": "occt-24418/1/neighborhood_swap.tcl",
+      "id": "neighborhood_swap",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty_result",
+        "support_residual",
+        "branch_closed",
+        "analytic_coverage"
+      ]
+    },
+    {
+      "script": "occt-24418/1/neighborhood_translation.tcl",
+      "id": "neighborhood_translation",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty_result",
+        "support_residual",
+        "branch_closed",
+        "analytic_coverage"
+      ]
+    },
+    {
+      "script": "occt-24418/1/original.tcl",
+      "id": "original",
+      "category": "original",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty_result",
+        "support_residual",
+        "branch_closed",
+        "analytic_coverage"
+      ]
+    },
+    {
+      "script": "occt-24418/1/regression_separated.tcl",
+      "id": "regression_separated",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty_result",
+        "support_residual",
+        "branch_closed",
+        "analytic_coverage"
+      ]
+    }
+  ]
+}

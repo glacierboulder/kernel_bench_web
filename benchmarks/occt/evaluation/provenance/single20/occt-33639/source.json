@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "issue": "occt-33639",
+  "status": "qualified",
+  "source_kind": "natural historical commit",
+  "source_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+  "git_tree": "29ea14e7dce1ccb003a42e297192d4a0c561eb2b",
+  "materialized_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+  "reference": {
+    "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "git_tree": "12c23eb7bbf0b6d6c841cbb1c7aac6e2e7d14e62",
+    "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "kind": "natural older working reference"
+  },
+  "qualification": {
+    "b": {
+      "label": "m33639-b-qualification-01",
+      "model_called": false,
+      "source_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+      "source_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+      "build_receipt_sha256": "b852753001bec69e1d20ba96350b0d765016f43fd302260f9ed56a0e5d1cea17",
+      "binary_manifest_sha256": "28b9c89463781222704628b1fdf4330a4732008c9904e449ffb1397dacd79d66",
+      "results": {
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_scale": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_separated": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_unchanged": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T16:22:29.301040+00:00"
+    },
+    "f": {
+      "label": "m33639-f2016-qualification-01",
+      "model_called": false,
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "build_receipt_sha256": "e9e8f08e77fc823099dad504aa655935f7bae163ce14ff66c9d92af522598715",
+      "binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "results": {
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_scale": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_separated": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_unchanged": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T16:22:33.848224+00:00"
+    }
+  },
+  "stage": "unknown",
+  "stage_note": "The earliest internal failing stage has not been localized by this authoring run.",
+  "limits": [
+    "The locked defective baseline is natural OCCT 7.9.3. The positive reference is the exact older working natural commit 1511c7e90f1ab04e3ee01d94fc146a04c07da160, not a later repair commit.",
+    "Independent analytic cross-section integration gives cut volume 879203614.534149 cubic units. Tensor Gauss orders 64, 128 and 256 agree within 1e-6 cubic units.",
+    "The predeclared engineering volume allowance is 1.0 cubic unit, scaled cubically. Separate predicates require a valid solid and four retained/removed membership witnesses.",
+    "The older 2015-08 candidate fails the strict volume predicate. Only the 2016 working reference qualifies. There is no claim that a complete historical source replacement is an appropriate agent patch.",
+    "Finite numerical quadrature and witnesses do not certify arbitrary global set equality."
+  ],
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0033639/"
+}

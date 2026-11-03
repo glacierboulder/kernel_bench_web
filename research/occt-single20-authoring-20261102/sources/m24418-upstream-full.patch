@@ -1,0 +1,391 @@
+diff --git a/src/IntPatch/IntPatch_ALineToWLine.cxx b/src/IntPatch/IntPatch_ALineToWLine.cxx
+index 59cbff38ae..8d9480f3b0 100644
+--- a/src/IntPatch/IntPatch_ALineToWLine.cxx
++++ b/src/IntPatch/IntPatch_ALineToWLine.cxx
+@@ -433,10 +433,32 @@ void IntPatch_ALineToWLine::MakeWLine(const Handle(IntPatch_ALine)& theALine,
+     if(aStep < Epsilon(theLPar))
+       break;
+ 
++    Standard_Boolean isStepReduced = Standard_False;
++    Standard_Real aLPar = theLPar;
++
++    for (Standard_Integer i = aVertexParams.Lower(); i <= aVertexParams.Upper(); i++)
++    {
++      if (hasVertexBeenChecked(i))
++        continue;
++
++      aLPar = aVertexParams(i);
++      if (Abs(aLPar - aParameter) < aPrmTol)
++        continue;
++
++      break;
++    }
++
++    if ((aStep - (aLPar - aParameter) > aPrmTol) &&
++        (Abs(aLPar - aParameter) > aPrmTol))
++    {
++      aStep = Max((aLPar - aParameter) / 5, 1.e-5); 
++      isStepReduced = Standard_True;
++    }
++
+     Standard_Integer aNewVertID = 0;
+     aLinOn2S = new IntSurf_LineOn2S;
+     
+-    const Standard_Real aStepMin = 0.1*aStep, aStepMax = 10.0*aStep;
++    Standard_Real aStepMin = 0.1 * aStep, aStepMax = 10.0 * aStep;
+ 
+     Standard_Boolean isLast = Standard_False;
+     Standard_Real aPrevParam = aParameter;
+@@ -586,8 +608,12 @@ void IntPatch_ALineToWLine::MakeWLine(const Handle(IntPatch_ALine)& theALine,
+       {
+         if (isPointValid)
+         {
+-          StepComputing(theALine, aPOn2S, theLPar, aParameter, aTgMagn,
+-                        aStepMin, aStepMax, myTol3D, aStep);
++          if (!isStepReduced)
++          {
++            StepComputing(theALine, aPOn2S, theLPar, aParameter, aTgMagn,
++                          aStepMin, aStepMax, myTol3D, aStep);
++          }
++
+           AddPointIntoLine(aLinOn2S, anArrPeriods, aPOn2S);
+           aPrevLPoint = aPOn2S;
+         }
+@@ -694,6 +720,38 @@ void IntPatch_ALineToWLine::MakeWLine(const Handle(IntPatch_ALine)& theALine,
+ 
+       if ((aPrePointExist != IntPatch_SPntNone) && (aLinOn2S->NbPoints() > 1))
+         break;
++
++      if (isStepReduced)
++      {
++        isStepReduced = Standard_False;
++
++        aStep = (theLPar - aParameter) / (Standard_Real)(myNbPointsInWline - 1);
++        if(aStep < Epsilon(theLPar))
++          break;
++  
++        aLPar = aVertexParams(aNbVert);
++        for (Standard_Integer i = aVertexParams.Lower(); i <= aVertexParams.Upper(); i++)
++        {
++          if (hasVertexBeenChecked(i))
++            continue;
++  
++          aLPar = aVertexParams(i);
++          if (Abs(aLPar - aParameter) < aPrmTol)
++            continue;
++  
++          break;
++        }
++
++        if ((aStep - (aLPar - aParameter) > aPrmTol) &&
++            (Abs(aLPar - aParameter) > aPrmTol))
++        {
++          aStep = Max((aLPar - aParameter) / 5, 1.e-5);
++          isStepReduced = Standard_True;
++        }
++  
++        aStepMin = 0.1 * aStep;
++        aStepMax = 10.0 * aStep;
++      }
+     }//for(; !isLast; aParameter += aStep)
+ 
+     if(aLinOn2S->NbPoints() < 2)
+diff --git a/src/IntPatch/IntPatch_WLineTool.cxx b/src/IntPatch/IntPatch_WLineTool.cxx
+index 5e9e0103cc..9132bf33e0 100644
+--- a/src/IntPatch/IntPatch_WLineTool.cxx
++++ b/src/IntPatch/IntPatch_WLineTool.cxx
+@@ -1717,6 +1717,38 @@ void IntPatch_WLineTool::JoinWLines(IntPatch_SequenceOfLine& theSlin,
+   }
+ }
+ 
++//=======================================================================
++//function : IsNeedSkipWL
++//purpose  : Detect is WLine need to skip.
++//=======================================================================
++static Standard_Boolean IsNeedSkipWL(const Handle(IntPatch_WLine)& theWL,
++                                     const Bnd_Box2d& theBoxS1,
++                                     const Bnd_Box2d& theBoxS2,
++                                     const Standard_Real* const theArrPeriods)
++{
++  Standard_Real aFirstp, aLastp;
++  Standard_Integer aNbVtx = theWL->NbVertex();
++  Standard_Boolean isNeedSkip = Standard_True;
++
++  for (Standard_Integer i = 1; i < aNbVtx; i++) {
++    aFirstp = theWL->Vertex (i).ParameterOnLine();
++    aLastp  = theWL->Vertex (i + 1).ParameterOnLine();
++
++    Standard_Real aU1, aV1, aU2, aV2;
++    const Standard_Integer pmid = (Standard_Integer)((aFirstp + aLastp) / 2);
++    const IntSurf_PntOn2S& aPmid = theWL->Point (pmid);
++    aPmid.Parameters (aU1, aV1, aU2, aV2);
++
++    if (!IsOutOfDomain (theBoxS1, theBoxS2, aPmid, theArrPeriods))
++    {
++      isNeedSkip = Standard_False;
++      break;
++    }
++  }
++
++  return isNeedSkip;
++}
++
+ //=======================================================================
+ //function : ExtendTwoWLines
+ //purpose  : Performs extending theWLine1 and theWLine2 through their
+@@ -1737,8 +1769,17 @@ void IntPatch_WLineTool::
+ 
+   gp_Vec aVec1, aVec2, aVec3;
+ 
++  unsigned int hasBeenJoinedCounter = 0;
++
+   for(Standard_Integer aNumOfLine1 = 1; aNumOfLine1 <= theSlin.Length(); aNumOfLine1++)
+   {
++    if (hasBeenJoinedCounter > 0)
++    {
++      aNumOfLine1--;
++    }
++
++    hasBeenJoinedCounter = 0;
++
+     Handle(IntPatch_WLine) aWLine1 (Handle(IntPatch_WLine)::
+                                     DownCast(theSlin.Value(aNumOfLine1)));
+ 
+@@ -1761,6 +1802,11 @@ void IntPatch_WLineTool::
+     const IntSurf_PntOn2S& aPntLWL1 = aWLine1->Point(aNbPntsWL1);
+     const IntSurf_PntOn2S& aPntLm1WL1 = aWLine1->Point(aNbPntsWL1-1);
+ 
++    if (IsNeedSkipWL(aWLine1, theBoxS1, theBoxS2, theArrPeriods))
++    {
++      continue;
++    }
++
+     //Enable/Disable of some ckeck. Bit-mask is used for it.
+     //E.g. if 1st point of aWLine1 matches with
+     //1st point of aWLine2 then we do not need in check
+@@ -1781,16 +1827,24 @@ void IntPatch_WLineTool::
+       const IntSurf_PntOn2S& aPntFWL2 = aWLine2->Point(1);
+       const IntSurf_PntOn2S& aPntLWL2 = aWLine2->Point(aWLine2->NbPnts());
+ 
+-      if( aPntFWL1.IsSame(aPntFWL2, theToler3D) ||
+-          aPntFWL1.IsSame(aPntLWL2, theToler3D) )
++      if (!(aPntFWL1.IsSame(aPntFWL2, theToler3D, Precision::PConfusion())) &&
++          !(aPntFWL1.IsSame(aPntLWL2, theToler3D, Precision::PConfusion())))
+       {
+-        aCheckResult |= IntPatchWT_DisFirstFirst | IntPatchWT_DisFirstLast;
++        if (aPntFWL1.IsSame(aPntFWL2, theToler3D) ||
++            aPntFWL1.IsSame(aPntLWL2, theToler3D))
++        {
++          aCheckResult |= IntPatchWT_DisFirstFirst | IntPatchWT_DisFirstLast;
++        }
+       }
+ 
+-      if( aPntLWL1.IsSame(aPntFWL2, theToler3D) ||
+-          aPntLWL1.IsSame(aPntFWL2, theToler3D))
++      if (!(aPntLWL1.IsSame(aPntFWL2, theToler3D, Precision::PConfusion())) &&
++          !(aPntLWL1.IsSame(aPntLWL2, theToler3D, Precision::PConfusion())))
+       {
+-        aCheckResult |= IntPatchWT_DisLastFirst | IntPatchWT_DisLastLast;
++        if (aPntLWL1.IsSame(aPntFWL2, theToler3D) ||
++            aPntLWL1.IsSame(aPntLWL2, theToler3D))
++        {
++          aCheckResult |= IntPatchWT_DisLastFirst | IntPatchWT_DisLastLast;
++        }
+       }
+ 
+       if (!theListOfCriticalPoints.IsEmpty())
+@@ -1862,8 +1916,13 @@ void IntPatch_WLineTool::
+ 
+       const IntSurf_PntOn2S& aPntLWL2 = aWLine2->Point(aNbPntsWL2);
+       const IntSurf_PntOn2S& aPntLm1WL2 = aWLine2->Point(aNbPntsWL2-1);
+-      
+-      //if(!(aCheckResult & IntPatchWT_DisFirstFirst))
++
++      if (IsNeedSkipWL(aWLine2, theBoxS1, theBoxS2, theArrPeriods))
++      {
++        continue;
++      }
++
++      if(!(aCheckResult & IntPatchWT_DisFirstFirst))
+       {// First/First
+         aVec1.SetXYZ(aPntFp1WL1.Value().XYZ() - aPntFWL1.Value().XYZ());
+         aVec2.SetXYZ(aPntFWL2.Value().XYZ() - aPntFp1WL2.Value().XYZ());
+@@ -1909,6 +1968,7 @@ void IntPatch_WLineTool::
+ 
+       if(hasBeenJoined)
+       {
++        hasBeenJoinedCounter++;
+         theSlin.Remove(aNumOfLine2);
+         aNumOfLine2--;
+       }
+diff --git a/tests/bugs/modalg_1/bug10606_1 b/tests/bugs/modalg_1/bug10606_1
+index b54e243bfb..d6b7c4e0b9 100755
+--- a/tests/bugs/modalg_1/bug10606_1
++++ b/tests/bugs/modalg_1/bug10606_1
+@@ -22,5 +22,5 @@ checkprops result -s 66.672
+ checkshape result
+ 
+ # Analysis of "nbshapes res"
+-checknbshapes result -vertex 6 -edge 8 -wire 2 -face 2 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 21
++checknbshapes result -vertex 5 -edge 7 -wire 2 -face 2 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 19
+ checkview -display result -2d -path ${imagedir}/${test_image}.png
+diff --git a/tests/bugs/modalg_1/bug10606_2 b/tests/bugs/modalg_1/bug10606_2
+index fb9d06c59e..a8a1b8e52e 100755
+--- a/tests/bugs/modalg_1/bug10606_2
++++ b/tests/bugs/modalg_1/bug10606_2
+@@ -22,5 +22,5 @@ checkprops result -s 1450.22
+ checkshape result
+ 
+ # Analysis of "nbshapes res"
+-checknbshapes result -vertex 6 -edge 8 -wire 4 -face 4 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 25
++checknbshapes result -vertex 5 -edge 7 -wire 4 -face 4 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 23
+ checkview -display result -2d -path ${imagedir}/${test_image}.png
+diff --git a/tests/bugs/modalg_1/bug10606_3 b/tests/bugs/modalg_1/bug10606_3
+index e3b85ede1c..e93912ca41 100755
+--- a/tests/bugs/modalg_1/bug10606_3
++++ b/tests/bugs/modalg_1/bug10606_3
+@@ -22,5 +22,5 @@ checkprops result -s 761.355
+ checkshape result
+ 
+ # Analysis of "nbshapes res"
+-checknbshapes result -vertex 6 -edge 8 -wire 3 -face 3 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 23
++checknbshapes result -vertex 5 -edge 7 -wire 3 -face 3 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 21
+ checkview -display result -2d -path ${imagedir}/${test_image}.png
+diff --git a/tests/bugs/modalg_1/bug10606_4 b/tests/bugs/modalg_1/bug10606_4
+index 4e482e6203..fd7e0db5dd 100755
+--- a/tests/bugs/modalg_1/bug10606_4
++++ b/tests/bugs/modalg_1/bug10606_4
+@@ -22,5 +22,5 @@ checkprops result -s 755.54
+ checkshape result
+ 
+ # Analysis of "nbshapes res"
+-checknbshapes result -vertex 6 -edge 8 -wire 3 -face 3 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 23
++checknbshapes result -vertex 5 -edge 7 -wire 3 -face 3 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 21
+ checkview -display result -2d -path ${imagedir}/${test_image}.png
+diff --git a/tests/bugs/modalg_1/bug10606_5 b/tests/bugs/modalg_1/bug10606_5
+index 93e561ba85..494b5a317f 100755
+--- a/tests/bugs/modalg_1/bug10606_5
++++ b/tests/bugs/modalg_1/bug10606_5
+@@ -22,5 +22,5 @@ checkprops result -l 18.3861
+ checkshape result
+ checksection result
+ # Analysis of "nbshapes res"
+-checknbshapes result -vertex 4 -edge 4 -wire 0 -face 0 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 9
++checknbshapes result -vertex 3 -edge 3 -wire 0 -face 0 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 7
+ checkview -display result -2d -path ${imagedir}/${test_image}.png
+diff --git a/tests/bugs/modalg_1/bug10842_5 b/tests/bugs/modalg_1/bug10842_5
+index 26ec4e68ee..6257e9a92a 100755
+--- a/tests/bugs/modalg_1/bug10842_5
++++ b/tests/bugs/modalg_1/bug10842_5
+@@ -22,5 +22,5 @@ checkprops result -l 122.816
+ checkshape result
+ checksection result
+ # Analysis of "nbshapes res"
+-checknbshapes result -vertex 6 -edge 6 -wire 0 -face 0 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 13
++checknbshapes result -vertex 5 -edge 5 -wire 0 -face 0 -shell 0 -solid 0 -compsolid 0 -compound 1 -shape 11
+ checkview -display result -2d -path ${imagedir}/${test_image}.png
+diff --git a/tests/bugs/modalg_2/bug20964_1 b/tests/bugs/modalg_2/bug20964_1
+index 5498d877c7..defacfb9ab 100755
+--- a/tests/bugs/modalg_2/bug20964_1
++++ b/tests/bugs/modalg_2/bug20964_1
+@@ -33,6 +33,6 @@ Number of shapes in .*
+ "
+ 
+ checknbshapes result -ref $NbShapesRef
+-checkmaxtol result -ref 0.013928665225777443
++checkmaxtol result -ref 2.0849512334752456e-05
+ 
+ checkview -display result -2d -path ${imagedir}/${test_image}.png
+diff --git a/tests/bugs/modalg_2/bug20964_2 b/tests/bugs/modalg_2/bug20964_2
+index 3b80f1addb..e21e43dab4 100755
+--- a/tests/bugs/modalg_2/bug20964_2
++++ b/tests/bugs/modalg_2/bug20964_2
+@@ -33,7 +33,7 @@ Number of shapes in .*
+ 
+ checknbshapes result -ref $NbShapesRef
+ 
+-checkmaxtol result -ref 0.013928665225777443
++checkmaxtol result -ref 2.0849512334752456e-05
+ 
+ checkview -display result -2d -path ${imagedir}/${test_image}_axo.png
+ 
+diff --git a/tests/bugs/modalg_2/bug20964_3 b/tests/bugs/modalg_2/bug20964_3
+index 54e744cd78..960c5b9cb1 100755
+--- a/tests/bugs/modalg_2/bug20964_3
++++ b/tests/bugs/modalg_2/bug20964_3
+@@ -33,7 +33,7 @@ Number of shapes in .*
+ 
+ checknbshapes result -ref $NbShapesRef
+ 
+-checkmaxtol result -ref 0.013928665225777443
++checkmaxtol result -ref 2.0849512334752456e-05
+ 
+ checkview -display result -2d -path ${imagedir}/${test_image}_axo.png
+ 
+diff --git a/tests/bugs/modalg_2/bug20964_4 b/tests/bugs/modalg_2/bug20964_4
+index d803d4e56b..9ad925f323 100755
+--- a/tests/bugs/modalg_2/bug20964_4
++++ b/tests/bugs/modalg_2/bug20964_4
+@@ -32,7 +32,7 @@ Number of shapes in .*
+ "
+ 
+ checknbshapes result -ref $NbShapesRef
+-checkmaxtol result -ref 0.013928665225777443
++checkmaxtol result -ref 2.0849512334752456e-05
+ 
+ checkview -display result -2d -path ${imagedir}/${test_image}_axo.png
+ 
+diff --git a/tests/bugs/modalg_2/bug20964_5 b/tests/bugs/modalg_2/bug20964_5
+index 4601eaf834..11abf56981 100755
+--- a/tests/bugs/modalg_2/bug20964_5
++++ b/tests/bugs/modalg_2/bug20964_5
+@@ -33,7 +33,7 @@ Number of shapes in .*
+ 
+ checknbshapes result -ref $NbShapesRef
+ 
+-checkmaxtol result -ref 0.013928665225777443
++checkmaxtol result -ref 2.0849512334752456e-05
+ 
+ checkview -display result -2d -path ${imagedir}/${test_image}_axo.png
+ 
+diff --git a/tests/bugs/modalg_5/bug25715_3 b/tests/bugs/modalg_5/bug25715_3
+index f48acb8d9f..851f92dedd 100644
+--- a/tests/bugs/modalg_5/bug25715_3
++++ b/tests/bugs/modalg_5/bug25715_3
+@@ -1,4 +1,3 @@
+-puts "TODO OCC24418 ALL: Error :  is WRONG because number of"
+ puts "=========="
+ puts "OCC25715"
+ puts "=========="
+@@ -11,6 +10,7 @@ puts ""
+ restore [locate_data_file bug25715_p02c3s1.brep] s1
+ restore [locate_data_file bug25715_p02c3s3.brep] s3
+ bfuse result s1 s3
++unifysamedom result result +b
+ 
+-checknbshapes result -vertex 8 -edge 14 -wire 6 -face 5 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 36
++checknbshapes result -vertex 6 -edge 9 -wire 5 -face 4 -shell 1 -solid 1 -compsolid 0 -compound 1 -shape 27
+ checkview -display result -2d -path ${imagedir}/${test_image}.png
+diff --git a/tests/bugs/modalg_6/bug28626_3 b/tests/bugs/modalg_6/bug28626_3
+index 893aa7d0f8..1a25d0ec8c 100644
+--- a/tests/bugs/modalg_6/bug28626_3
++++ b/tests/bugs/modalg_6/bug28626_3
+@@ -20,7 +20,7 @@ bopsection result
+ 
+ checkshape result
+ 
+-checknbshapes result -edge 5 -vertex 6
++checknbshapes result -edge 4 -vertex 5
+ 
+ checkmaxtol result -ref 6.02982e-007
+ 
+diff --git a/tests/lowalgos/intss/bug24418_1 b/tests/lowalgos/intss/bug24418_1
+index 6c058615df..e85f3cee76 100644
+--- a/tests/lowalgos/intss/bug24418_1
++++ b/tests/lowalgos/intss/bug24418_1
+@@ -1,5 +1,3 @@
+-puts "TODO OCC24418 ALL: Error in ii_2: T="
+-
+ puts "========"
+ puts "OCC24418"
+ puts "========"

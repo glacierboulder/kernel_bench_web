@@ -1,0 +1,23 @@
+diff --git a/src/IntTools/IntTools_FaceFace.cxx b/src/IntTools/IntTools_FaceFace.cxx
+index 258ddfe..1d1e814 100644
+--- a/src/IntTools/IntTools_FaceFace.cxx
++++ b/src/IntTools/IntTools_FaceFace.cxx
+@@ -1054,6 +1054,18 @@ void IntTools_FaceFace::MakeCurve(const Standard_Integer Index,
+         //
+         gp_Pnt ptref(newc->Value(aTestPrm));
+         //
++        GeomAbs_SurfaceType typS1 = myHS1->GetType();
++        GeomAbs_SurfaceType typS2 = myHS2->GetType();
++        if( typS1 == GeomAbs_SurfaceOfExtrusion ||
++            typS1 == GeomAbs_OffsetSurface ||
++            typS1 == GeomAbs_SurfaceOfRevolution ||
++            typS2 == GeomAbs_SurfaceOfExtrusion ||
++            typS2 == GeomAbs_OffsetSurface ||
++            typS2 == GeomAbs_SurfaceOfRevolution) {
++          Handle(Geom2d_BSplineCurve) H1;
++          mySeqOfCurve.Append(IntTools_Curve(newc, H1, H1));
++          continue;
++        }
+ 
+         Standard_Real u1, v1, u2, v2, Tol;
+         

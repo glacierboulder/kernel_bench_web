@@ -1,0 +1,127 @@
+{
+  "issue": "github-1610",
+  "volume_limit": 0.01,
+  "oracle_limit": "The ideal cap-wedge expression is an approximation for swept helical tubes. This fixed engineering allowance is not a certified global volume bound. Closed section, validity and retained tube witnesses are separate predicates.",
+  "cases": [
+    {
+      "id": "original",
+      "script": "occt-github-1610/1/original.tcl",
+      "category": "original",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "overlap_volume",
+        "kept_tube_1",
+        "kept_tube_2",
+        "closed_section"
+      ]
+    },
+    {
+      "id": "neighborhood_rigid",
+      "script": "occt-github-1610/1/neighborhood_rigid.tcl",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "overlap_volume",
+        "kept_tube_1",
+        "kept_tube_2",
+        "closed_section"
+      ]
+    },
+    {
+      "id": "neighborhood_radius",
+      "script": "occt-github-1610/1/neighborhood_radius.tcl",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "overlap_volume",
+        "kept_tube_1",
+        "kept_tube_2",
+        "closed_section"
+      ]
+    },
+    {
+      "id": "regression_separated",
+      "script": "occt-github-1610/1/regression_separated.tcl",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "overlap_volume",
+        "kept_tube_1",
+        "kept_tube_2",
+        "closed_section"
+      ]
+    },
+    {
+      "id": "negative_unchanged",
+      "script": "occt-github-1610/1/negative_unchanged.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "overlap_volume",
+        "kept_tube_1",
+        "kept_tube_2",
+        "closed_section"
+      ]
+    },
+    {
+      "id": "negative_empty",
+      "script": "occt-github-1610/1/negative_empty.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "overlap_volume",
+        "kept_tube_1",
+        "kept_tube_2",
+        "closed_section"
+      ]
+    },
+    {
+      "id": "negative_shifted",
+      "script": "occt-github-1610/1/negative_shifted.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "shape_valid",
+        "solid_count",
+        "overlap_volume",
+        "kept_tube_1",
+        "kept_tube_2",
+        "closed_section"
+      ]
+    }
+  ],
+  "support_sha256": {
+    "occt-github-1610/1/neighborhood_radius.tcl": "ffa6fc02619c5a614292ecdec2c2e35f459194531b701a21f739003f8efa285a",
+    "occt-github-1610/1/regression_separated.tcl": "221b0e4d0b780bed55fd2d089e7e91ac3c6f5dcaa90f10f8d6a65ac26ebc6003",
+    "occt-github-1610/1/negative_unchanged.tcl": "11bff9c893602a7dc9f712de83c6d9fe0cc05d7938bffc2650bbe91716b46ca1",
+    "occt-github-1610/1/negative_empty.tcl": "702d9adb291edb41dde4213ec1ad6c9663d1b96d005d81dc83d70cc597aef124",
+    "occt-github-1610/1/tube_fuse.tcl": "d9203589ccf974456cb747a835e29e56499485f3104e30ba488c4061a686f76d",
+    "occt-github-1610/1/neighborhood_rigid.tcl": "f99b793857036f0babd640723e1b98f928fd3a25c71ca8f9e8752f71fbbb85ac",
+    "occt-github-1610/1/original.tcl": "d2d1b22073a0fc1e29f6262dd810dc4c6b894f1ede3335d85626fa7ea82d41d6",
+    "occt-github-1610/1/negative_shifted.tcl": "c6f07ab9b94550a27e3db8c93b646453d158f181ecfc2018da4a3a3e305ab805",
+    "occt-github-1610/1/inputs/second-radius.brep": "e340c636fca359b3f8334e01ae2c2d1a68f6743bb6c25d1e0036fac872ea170f",
+    "occt-github-1610/1/inputs/first-original.brep": "f787d3666d97685f056c2d7ccc8c5212ba77cf4eb5851802f3fd72d5469d8d0b",
+    "occt-github-1610/1/inputs/second-original.brep": "0356d806dc7b9ece6845feb52dad895fb29a6270333cd09ac169531109eceb30",
+    "occt-github-1610/1/inputs/first-radius.brep": "551d79d6025dce288baba738184b4624963e7f6f4f94f3129ec97ef9e4e687a8",
+    "assertions.tcl": "f456e1d2e107d2eb3673ff7c5edbf43578516958231578ea53d976a8b6adb2f0"
+  }
+}

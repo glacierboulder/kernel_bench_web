@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "issue": "occt-26796",
+  "status": "qualified",
+  "source_kind": "natural historical commit",
+  "source_commit": "6435b9c7fafd294680a3be589deb61de2fdb3d3c",
+  "git_tree": "98d012867c9ec543b645de8f5e75ba56caece1f4",
+  "materialized_tree_sha256": "bfcd5874f51898884c55c0e35f4bb701a612ad91bdc6e0ab106b31d45afc692c",
+  "reference": {
+    "kind": "natural later commit",
+    "commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "git_tree": "12c23eb7bbf0b6d6c841cbb1c7aac6e2e7d14e62",
+    "materialized_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "upstream_fix": "3510db6201eb97af9143ec2b4c5addd863871155"
+  },
+  "qualification": {
+    "b": {
+      "label": "m26796-b-calibration-01",
+      "model_called": false,
+      "source_commit": "6435b9c7fafd294680a3be589deb61de2fdb3d3c",
+      "source_tree_sha256": "bfcd5874f51898884c55c0e35f4bb701a612ad91bdc6e0ab106b31d45afc692c",
+      "build_receipt_sha256": "7bb5503401859f2f027df4a982d97bededaeefc4600dc8dd6e69d33b67f0c2ec",
+      "binary_manifest_sha256": "e2e52d244be96127ec7326fa837277bd82758ab1a05ba38112bce184e6bdc013",
+      "results": {
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_angle": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_translation": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_separated": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T13:31:01.352342+00:00"
+    },
+    "f": {
+      "label": "m26796-f-calibration-01",
+      "model_called": false,
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "build_receipt_sha256": "e9e8f08e77fc823099dad504aa655935f7bae163ce14ff66c9d92af522598715",
+      "binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "results": {
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_angle": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_translation": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_separated": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T13:30:56.852950+00:00"
+    }
+  },
+  "stage": "unknown",
+  "stage_note": "The earliest failing internal stage has not been localized by this authoring run.",
+  "oracle": {
+    "component_count": 4,
+    "volume_limit": 0.0001,
+    "area_limit": 0.001,
+    "centroid_limit": 1e-06,
+    "expectation": "Four box wedges are integrated analytically from x(z)=intercept+slope*z. Properties of closed solids are measured separately from the additional open splitter face. The upstream compound volume 2852.9 includes an open-face contribution and is not used.",
+    "limits": [
+      "GProp and BRepCheck share OCCT implementation, while the expected geometry is analytic.",
+      "Matching finite properties does not prove arbitrary set equality."
+    ]
+  },
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0026796/"
+}

@@ -1,0 +1,1213 @@
+{
+  "issue_id": "occt-28195",
+  "frozen_results": [
+    {
+      "group_id": "occt-single20-28195",
+      "role": "b",
+      "checkpoint_id": "28195-original",
+      "category": "original",
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "reference_patch_sha256": null,
+      "reference_kind": "locked_baseline",
+      "snapshot_sha256": "e00539401a7a680c3fa188387464aa563258644dc3aa884173aa420276060df7",
+      "prebuild_binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1",
+      "process_return_code": 1,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "28195-original",
+        "category": "original",
+        "passed": false,
+        "status": "geometry_fail",
+        "oracle_ran": true,
+        "return_code": 1,
+        "test_done_marker": false,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": false,
+          "status": "geometry_fail",
+          "checkpoint_id": "28195-original",
+          "category": "original",
+          "expected_assertion_ids": [
+            "input_validity",
+            "operation_completed",
+            "validity",
+            "topology",
+            "volume_bounds",
+            "volume_membership"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "input_validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "validity",
+              "kind": "expression"
+            },
+            {
+              "status": "FAIL",
+              "id": "topology",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "volume_bounds",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "volume_membership",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": false,
+            "test_done_marker": false,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 3,
+            "failed_assertions": 3,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_FAIL topology solids=0 expected=1 kind=numeric\nBENCH_ASSERT_FAIL volume_bounds volume=0 max=190578321.74481627 relative_limit=1e-4 kind=numeric\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1111.9578346786525 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1111.9578346786525 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nBENCH_ASSERT_FAIL volume_membership tested=125 inside=17 outside=108 mismatches=125 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "full_log_failure_detected": true,
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-28195/1/original.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+            "elapsed_seconds": 27.349
+          },
+          "return_code": 1
+        },
+        "case_sha256": "fa5184ea61d5151c26834fed16cee5f19ac31b572b922d6ee9e3df3cabfc13f3",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-28195",
+      "role": "b",
+      "checkpoint_id": "28195-neighborhood_rigid",
+      "category": "neighborhood",
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "reference_patch_sha256": null,
+      "reference_kind": "locked_baseline",
+      "snapshot_sha256": "e00539401a7a680c3fa188387464aa563258644dc3aa884173aa420276060df7",
+      "prebuild_binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1",
+      "process_return_code": 1,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "28195-neighborhood_rigid",
+        "category": "neighborhood",
+        "passed": false,
+        "status": "geometry_fail",
+        "oracle_ran": true,
+        "return_code": 1,
+        "test_done_marker": false,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": false,
+          "status": "geometry_fail",
+          "checkpoint_id": "28195-neighborhood_rigid",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "input_validity",
+            "operation_completed",
+            "validity",
+            "topology",
+            "volume_bounds",
+            "volume_membership"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "input_validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "FAIL",
+              "id": "validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "topology",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "volume_bounds",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "volume_membership",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": false,
+            "test_done_marker": false,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 3,
+            "failed_assertions": 1,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_FAIL validity checkshape=On Shape faulty_1 :|BRepCheck_UnorientableShape|Shape faulty_2  on shape faulty_1 :|BRepCheck_NotClosed||Faulty shapes in variables faulty_1 to faulty_2 || kind=expression\nBENCH_ASSERT_PASS topology solids=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS volume_bounds volume=172189833.55367523 max=190578321.74481627 relative_limit=1e-4 kind=numeric\nBENCH_ASSERT_PASS volume_membership tested=125 inside=17 outside=108 mismatches=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "full_log_failure_detected": true,
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-28195/1/neighborhood_rigid.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+            "elapsed_seconds": 30.154
+          },
+          "return_code": 1
+        },
+        "case_sha256": "9c3590b88ad19450945242fb95e6735b86874007c7937151d185e99b0a5921d0",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-28195",
+      "role": "b",
+      "checkpoint_id": "28195-neighborhood_swap",
+      "category": "neighborhood",
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "reference_patch_sha256": null,
+      "reference_kind": "locked_baseline",
+      "snapshot_sha256": "e00539401a7a680c3fa188387464aa563258644dc3aa884173aa420276060df7",
+      "prebuild_binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1",
+      "process_return_code": 1,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "28195-neighborhood_swap",
+        "category": "neighborhood",
+        "passed": false,
+        "status": "geometry_fail",
+        "oracle_ran": true,
+        "return_code": 1,
+        "test_done_marker": false,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": false,
+          "status": "geometry_fail",
+          "checkpoint_id": "28195-neighborhood_swap",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "input_validity",
+            "operation_completed",
+            "validity",
+            "topology",
+            "volume_bounds",
+            "volume_membership"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "input_validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "validity",
+              "kind": "expression"
+            },
+            {
+              "status": "FAIL",
+              "id": "topology",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "volume_bounds",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "volume_membership",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": false,
+            "test_done_marker": false,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 3,
+            "failed_assertions": 3,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_FAIL topology solids=0 expected=1 kind=numeric\nBENCH_ASSERT_FAIL volume_bounds volume=0 max=190578321.74481627 relative_limit=1e-4 kind=numeric\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1111.9578346786525 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1111.9578346786525 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nBENCH_ASSERT_FAIL volume_membership tested=125 inside=17 outside=108 mismatches=125 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "full_log_failure_detected": true,
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-28195/1/neighborhood_swap.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+            "elapsed_seconds": 27.248
+          },
+          "return_code": 1
+        },
+        "case_sha256": "21ddc67bd08d77c8b5dd3dfa62d18acb4167e7f9a41cded010f3dbd439e86eff",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-28195",
+      "role": "b",
+      "checkpoint_id": "28195-regression_healthy",
+      "category": "regression",
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "reference_patch_sha256": null,
+      "reference_kind": "locked_baseline",
+      "snapshot_sha256": "e00539401a7a680c3fa188387464aa563258644dc3aa884173aa420276060df7",
+      "prebuild_binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "28195-regression_healthy",
+        "category": "regression",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "28195-regression_healthy",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "input_validity",
+            "operation_completed",
+            "validity",
+            "topology",
+            "volume_bounds",
+            "volume_membership"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "input_validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "topology",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "volume_bounds",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "volume_membership",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 3,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS topology solids=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS volume_bounds volume=499.99999999999989 max=999.9999999999998 relative_limit=1e-4 kind=numeric\nBENCH_ASSERT_PASS volume_membership tested=125 inside=25 outside=100 mismatches=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-28195/1/regression_healthy.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+            "elapsed_seconds": 0.114
+          },
+          "return_code": 0
+        },
+        "case_sha256": "4b62409c1bdca402f2235e727bfb637f2ce4cefe36829b6171b31ec2ecc52cb9",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-28195",
+      "role": "f",
+      "checkpoint_id": "28195-original",
+      "category": "original",
+      "source_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "source_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "reference_patch_sha256": null,
+      "reference_kind": "natural_commit",
+      "snapshot_sha256": "e00539401a7a680c3fa188387464aa563258644dc3aa884173aa420276060df7",
+      "prebuild_binary_manifest_sha256": "555e974cab4987c738f6122f4fdf91b07c81b59cd460da7cdd56609e5a3ac189",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "28195-original",
+        "category": "original",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "28195-original",
+          "category": "original",
+          "expected_assertion_ids": [
+            "input_validity",
+            "operation_completed",
+            "validity",
+            "topology",
+            "volume_bounds",
+            "volume_membership"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "input_validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "topology",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "volume_bounds",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "volume_membership",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 3,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report=Warning: Unable to orient the shape correctly| kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS topology solids=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS volume_bounds volume=172189705.92920932 max=190578321.74481627 relative_limit=1e-4 kind=numeric\nBENCH_ASSERT_PASS volume_membership tested=125 inside=17 outside=108 mismatches=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-28195/1/original.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.7.0",
+            "elapsed_seconds": 33.254
+          },
+          "return_code": 0
+        },
+        "case_sha256": "fa5184ea61d5151c26834fed16cee5f19ac31b572b922d6ee9e3df3cabfc13f3",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-28195",
+      "role": "f",
+      "checkpoint_id": "28195-neighborhood_rigid",
+      "category": "neighborhood",
+      "source_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "source_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "reference_patch_sha256": null,
+      "reference_kind": "natural_commit",
+      "snapshot_sha256": "e00539401a7a680c3fa188387464aa563258644dc3aa884173aa420276060df7",
+      "prebuild_binary_manifest_sha256": "555e974cab4987c738f6122f4fdf91b07c81b59cd460da7cdd56609e5a3ac189",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "28195-neighborhood_rigid",
+        "category": "neighborhood",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "28195-neighborhood_rigid",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "input_validity",
+            "operation_completed",
+            "validity",
+            "topology",
+            "volume_bounds",
+            "volume_membership"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "input_validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "topology",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "volume_bounds",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "volume_membership",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 3,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report=Warning: Unable to orient the shape correctly| kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS topology solids=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS volume_bounds volume=172189705.92913616 max=190578321.74481627 relative_limit=1e-4 kind=numeric\nBENCH_ASSERT_PASS volume_membership tested=125 inside=17 outside=108 mismatches=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-28195/1/neighborhood_rigid.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.7.0",
+            "elapsed_seconds": 33.808
+          },
+          "return_code": 0
+        },
+        "case_sha256": "9c3590b88ad19450945242fb95e6735b86874007c7937151d185e99b0a5921d0",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-28195",
+      "role": "f",
+      "checkpoint_id": "28195-neighborhood_swap",
+      "category": "neighborhood",
+      "source_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "source_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "reference_patch_sha256": null,
+      "reference_kind": "natural_commit",
+      "snapshot_sha256": "e00539401a7a680c3fa188387464aa563258644dc3aa884173aa420276060df7",
+      "prebuild_binary_manifest_sha256": "555e974cab4987c738f6122f4fdf91b07c81b59cd460da7cdd56609e5a3ac189",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "28195-neighborhood_swap",
+        "category": "neighborhood",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "28195-neighborhood_swap",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "input_validity",
+            "operation_completed",
+            "validity",
+            "topology",
+            "volume_bounds",
+            "volume_membership"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "input_validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "topology",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "volume_bounds",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "volume_membership",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 3,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report=Warning: Unable to orient the shape correctly| kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS topology solids=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS volume_bounds volume=172193324.50314072 max=190578321.74481627 relative_limit=1e-4 kind=numeric\nBENCH_ASSERT_PASS volume_membership tested=125 inside=17 outside=108 mismatches=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-28195/1/neighborhood_swap.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.7.0",
+            "elapsed_seconds": 27.05
+          },
+          "return_code": 0
+        },
+        "case_sha256": "21ddc67bd08d77c8b5dd3dfa62d18acb4167e7f9a41cded010f3dbd439e86eff",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-28195",
+      "role": "f",
+      "checkpoint_id": "28195-regression_healthy",
+      "category": "regression",
+      "source_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "source_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "reference_patch_sha256": null,
+      "reference_kind": "natural_commit",
+      "snapshot_sha256": "e00539401a7a680c3fa188387464aa563258644dc3aa884173aa420276060df7",
+      "prebuild_binary_manifest_sha256": "555e974cab4987c738f6122f4fdf91b07c81b59cd460da7cdd56609e5a3ac189",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "28195-regression_healthy",
+        "category": "regression",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "28195-regression_healthy",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "input_validity",
+            "operation_completed",
+            "validity",
+            "topology",
+            "volume_bounds",
+            "volume_membership"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "input_validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "validity",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "topology",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "volume_bounds",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "volume_membership",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 3,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS topology solids=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS volume_bounds volume=499.99999999999989 max=999.9999999999998 relative_limit=1e-4 kind=numeric\nBENCH_ASSERT_PASS volume_membership tested=125 inside=25 outside=100 mismatches=0 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-28195/1/regression_healthy.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.7.0",
+            "elapsed_seconds": 0.164
+          },
+          "return_code": 0
+        },
+        "case_sha256": "4b62409c1bdca402f2235e727bfb637f2ce4cefe36829b6171b31ec2ecc52cb9",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    }
+  ],
+  "negative_controls": [
+    {
+      "case": "negative_empty",
+      "result": {
+        "passed": false,
+        "status": "geometry_fail",
+        "checkpoint_id": null,
+        "category": null,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "validity",
+          "topology",
+          "volume_bounds",
+          "volume_membership"
+        ],
+        "observed_assertion_events": [
+          {
+            "status": "PASS",
+            "id": "input_validity",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "operation_completed",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "validity",
+            "kind": "expression"
+          },
+          {
+            "status": "FAIL",
+            "id": "topology",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "volume_bounds",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "volume_membership",
+            "kind": "numeric"
+          }
+        ],
+        "missing_assertions": [],
+        "unexpected_assertions": [],
+        "duplicate_assertions": [],
+        "completion_sentinel_count": 1,
+        "summary_pair_valid": true,
+        "expected_geometry_failure_signature_seen": false,
+        "base_runner": {
+          "protocol": "draw_case_oracle_v1",
+          "oracle_scope": "public_script_only",
+          "passed": false,
+          "test_done_marker": false,
+          "tcl_standard_library": {
+            "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+            "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+          },
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 6,
+          "numeric_assertions": 3,
+          "failed_assertions": 3,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report=Warning: Unable to orient the shape correctly| kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_FAIL topology solids=0 expected=1 kind=numeric\nBENCH_ASSERT_FAIL volume_bounds volume=0 max=190578321.74481627 relative_limit=1e-4 kind=numeric\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1111.9578346786525 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1111.9578346786525 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nBENCH_ASSERT_FAIL volume_membership tested=125 inside=17 outside=108 mismatches=125 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+          "stderr_tail": "",
+          "diagnostic_lines": [],
+          "full_log_failure_detected": true,
+          "script": "/workspace/cases/occt-28195/1/negative_empty.tcl",
+          "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.7.0",
+          "elapsed_seconds": 19.639
+        },
+        "case": "negative_empty.tcl",
+        "runner_process_code": 0,
+        "case_sha256": "9acc4799dbe85ff4c4fd13d89ce407b962f18321bf55264c2a69422e34270510",
+        "log_sha256": "fdb677d7bd05564266803be9a2deda76c5cdd1dd029b1796984cb74b7df80554"
+      },
+      "runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": false,
+        "test_done_marker": false,
+        "tcl_standard_library": {
+          "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 6,
+        "numeric_assertions": 3,
+        "failed_assertions": 3,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report=Warning: Unable to orient the shape correctly| kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_FAIL topology solids=0 expected=1 kind=numeric\nBENCH_ASSERT_FAIL volume_bounds volume=0 max=190578321.74481627 relative_limit=1e-4 kind=numeric\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1111.9578346786525 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1111.9578346786525 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nBENCH_ASSERT_FAIL volume_membership tested=125 inside=17 outside=108 mismatches=125 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "full_log_failure_detected": true,
+        "script": "/workspace/cases/occt-28195/1/negative_empty.tcl",
+        "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.7.0",
+        "elapsed_seconds": 19.639
+      }
+    },
+    {
+      "case": "negative_input_only",
+      "result": {
+        "passed": false,
+        "status": "geometry_fail",
+        "checkpoint_id": null,
+        "category": null,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "validity",
+          "topology",
+          "volume_bounds",
+          "volume_membership"
+        ],
+        "observed_assertion_events": [
+          {
+            "status": "PASS",
+            "id": "input_validity",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "operation_completed",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "validity",
+            "kind": "expression"
+          },
+          {
+            "status": "FAIL",
+            "id": "topology",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "volume_bounds",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "volume_membership",
+            "kind": "numeric"
+          }
+        ],
+        "missing_assertions": [],
+        "unexpected_assertions": [],
+        "duplicate_assertions": [],
+        "completion_sentinel_count": 1,
+        "summary_pair_valid": true,
+        "expected_geometry_failure_signature_seen": false,
+        "base_runner": {
+          "protocol": "draw_case_oracle_v1",
+          "oracle_scope": "public_script_only",
+          "passed": false,
+          "test_done_marker": false,
+          "tcl_standard_library": {
+            "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+            "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+          },
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 6,
+          "numeric_assertions": 3,
+          "failed_assertions": 3,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report=Warning: Unable to orient the shape correctly| kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_FAIL topology solids=0 expected=1 kind=numeric\nBENCH_ASSERT_FAIL volume_bounds volume=725572727.01198173 max=190578321.74481627 relative_limit=1e-4 kind=numeric\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1111.9578346786525 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1111.9578346786525 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nBENCH_ASSERT_FAIL volume_membership tested=125 inside=17 outside=108 mismatches=125 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+          "stderr_tail": "",
+          "diagnostic_lines": [],
+          "full_log_failure_detected": true,
+          "script": "/workspace/cases/occt-28195/1/negative_input_only.tcl",
+          "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.7.0",
+          "elapsed_seconds": 19.738
+        },
+        "case": "negative_input_only.tcl",
+        "runner_process_code": 0,
+        "case_sha256": "9a1cdc8da90ac2b3eee479a89ef21fbacf9a4c741c23090e0fda782c89ad1b38",
+        "log_sha256": "ebf8435ad928340f6360faae9d8f0a411e5292f71fce4d9691797185afe5cfef"
+      },
+      "runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": false,
+        "test_done_marker": false,
+        "tcl_standard_library": {
+          "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 6,
+        "numeric_assertions": 3,
+        "failed_assertions": 3,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report=Warning: Unable to orient the shape correctly| kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_FAIL topology solids=0 expected=1 kind=numeric\nBENCH_ASSERT_FAIL volume_bounds volume=725572727.01198173 max=190578321.74481627 relative_limit=1e-4 kind=numeric\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -401.86433054419786 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-397.39679995576546 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-205.14030327629467 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=-2.202890114631032 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1111.9578346786525 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 2018.17160422954 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1111.9578346786525 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=200.73452304703255 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -401.86433054419786 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1419.4232207762752 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1726.8886068738975 expected=IN actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 -4.276487125210679 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 199.89024327913398 2018.17160422954 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 820.6748373230103 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1111.9578346786525 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1419.4232207762752 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 1726.8886068738975 expected=OUT actual=UNKNOWN\nMEMBERSHIP_MISMATCH point=392.9910197265034 393.3113562937765 2018.17160422954 expected=OUT actual=UNKNOWN\nBENCH_ASSERT_FAIL volume_membership tested=125 inside=17 outside=108 mismatches=125 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "full_log_failure_detected": true,
+        "script": "/workspace/cases/occt-28195/1/negative_input_only.tcl",
+        "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.7.0",
+        "elapsed_seconds": 19.738
+      }
+    },
+    {
+      "case": "negative_shifted",
+      "result": {
+        "passed": false,
+        "status": "geometry_fail",
+        "checkpoint_id": null,
+        "category": null,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "validity",
+          "topology",
+          "volume_bounds",
+          "volume_membership"
+        ],
+        "observed_assertion_events": [
+          {
+            "status": "PASS",
+            "id": "input_validity",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "operation_completed",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "validity",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "topology",
+            "kind": "numeric"
+          },
+          {
+            "status": "PASS",
+            "id": "volume_bounds",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "volume_membership",
+            "kind": "numeric"
+          }
+        ],
+        "missing_assertions": [],
+        "unexpected_assertions": [],
+        "duplicate_assertions": [],
+        "completion_sentinel_count": 1,
+        "summary_pair_valid": true,
+        "expected_geometry_failure_signature_seen": false,
+        "base_runner": {
+          "protocol": "draw_case_oracle_v1",
+          "oracle_scope": "public_script_only",
+          "passed": false,
+          "test_done_marker": false,
+          "tcl_standard_library": {
+            "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+            "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+          },
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 6,
+          "numeric_assertions": 3,
+          "failed_assertions": 1,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report=Warning: Unable to orient the shape correctly| kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS topology solids=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS volume_bounds volume=172189705.92921031 max=190578321.74481627 relative_limit=1e-4 kind=numeric\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 2018.17160422954 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1419.4232207762752 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1726.8886068738975 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 2018.17160422954 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1419.4232207762752 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1726.8886068738975 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 2018.17160422954 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1419.4232207762752 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1726.8886068738975 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 2018.17160422954 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1111.9578346786525 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1419.4232207762752 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1726.8886068738975 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 2018.17160422954 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1111.9578346786525 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1419.4232207762752 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1726.8886068738975 expected=IN actual=OUT\nBENCH_ASSERT_FAIL volume_membership tested=125 inside=17 outside=108 mismatches=17 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+          "stderr_tail": "",
+          "diagnostic_lines": [],
+          "full_log_failure_detected": true,
+          "script": "/workspace/cases/occt-28195/1/negative_shifted.tcl",
+          "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.7.0",
+          "elapsed_seconds": 33.206
+        },
+        "case": "negative_shifted.tcl",
+        "runner_process_code": 0,
+        "case_sha256": "cb0ee34441a907ad518b4c865830ca0f7790b85e09295403fb320bd2a0d4b896",
+        "log_sha256": "6c234edb4344ea0ca65dc1aebea2310af18d27fb814b9e78c8d7ba0a081f1067"
+      },
+      "runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": false,
+        "test_done_marker": false,
+        "tcl_standard_library": {
+          "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 6,
+        "numeric_assertions": 3,
+        "failed_assertions": 1,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nINPUT_VALIDITY first This shape seems to be valid\nINPUT_VALIDITY second This shape seems to be valid\nBENCH_ASSERT_PASS input_validity both_inputs_valid=1 kind=expression\nBENCH_ASSERT_PASS operation_completed error=0 report=Warning: Unable to orient the shape correctly| kind=expression\nBENCH_ASSERT_PASS validity checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS topology solids=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS volume_bounds volume=172189705.92921031 max=190578321.74481627 relative_limit=1e-4 kind=numeric\nMEMBERSHIP_MISMATCH point=-205.14030327629467 -401.86433054419786 2018.17160422954 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1419.4232207762752 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 1726.8886068738975 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -401.86433054419786 2018.17160422954 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1419.4232207762752 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 1726.8886068738975 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=-2.202890114631032 -208.44321752955545 2018.17160422954 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1419.4232207762752 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 1726.8886068738975 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -401.86433054419786 2018.17160422954 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1111.9578346786525 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1419.4232207762752 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 1726.8886068738975 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -208.44321752955545 2018.17160422954 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=200.73452304703255 -4.276487125210679 1111.9578346786525 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1419.4232207762752 expected=IN actual=OUT\nMEMBERSHIP_MISMATCH point=392.9910197265034 -208.44321752955545 1726.8886068738975 expected=IN actual=OUT\nBENCH_ASSERT_FAIL volume_membership tested=125 inside=17 outside=108 mismatches=17 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=3\nTEST_DONE assertions=6 numeric_assertions=3\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "full_log_failure_detected": true,
+        "script": "/workspace/cases/occt-28195/1/negative_shifted.tcl",
+        "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.7.0",
+        "elapsed_seconds": 33.206
+      }
+    }
+  ]
+}

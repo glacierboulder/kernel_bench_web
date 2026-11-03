@@ -12,6 +12,31 @@ from backend.suite_driver import checkpoint_status
 
 ROOT=Path(__file__).resolve().parents[1]
 
+class OcctVersionDetectionTests(unittest.TestCase):
+    def test_generated_header_release_uses_cmake_version(self):
+        from backend.runtime.public_build import occt_version
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            version = root / 'adm/cmake/version.cmake'
+            version.parent.mkdir(parents=True)
+            version.write_text('set (OCC_VERSION_MAJOR 7 )\nset (OCC_VERSION_MINOR 9 )\n')
+            self.assertEqual(occt_version(root), (7, 9))
+            version.write_text('set (OCC_VERSION_MAJOR 7 )\n')
+            with self.assertRaises(ValueError):
+                occt_version(root)
+
+    def test_existing_header_keeps_precedence(self):
+        from backend.runtime.public_build import occt_version
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            header = root / 'src/Standard/Standard_Version.hxx'
+            header.parent.mkdir(parents=True)
+            header.write_text('#define OCC_VERSION_MAJOR 7\n#define OCC_VERSION_MINOR 0\n')
+            version = root / 'adm/cmake/version.cmake'
+            version.parent.mkdir(parents=True)
+            version.write_text('set (OCC_VERSION_MAJOR 7 )\nset (OCC_VERSION_MINOR 9 )\n')
+            self.assertEqual(occt_version(root), (7, 0))
+
 class UnifiedOcctRuntimeTests(unittest.TestCase):
     def test_registry_covers_fifteen_suites_and_113_checkpoints(self):
         value=json.loads((ROOT/'benchmarks/occt/evaluation/runtime.json').read_text())

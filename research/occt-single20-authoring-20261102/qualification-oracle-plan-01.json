@@ -1,0 +1,64 @@
+{
+  "scope": "Five candidate qualification rules fixed before execution",
+  "cases": {
+    "26776": {
+      "load": "restore [file join $here bug26580-plate-2.brep] first\nrestore [file join $here bug26776_b2.brep] second",
+      "operation": "bsection result first second",
+      "type": "e",
+      "count": 1,
+      "measure": "lprops",
+      "expected": 27.3439,
+      "vertices": 2,
+      "b": "common-2016-f-build-02",
+      "f": "m24418-natural-f-build-01"
+    },
+    "25542": {
+      "load": "restore [file join $here bug25542_cylinder.brep] first\nrestore [file join $here bug25542_cone.brep] second",
+      "operation": "bop first second\nbopcommon result",
+      "type": "so",
+      "count": 1,
+      "measure": "sprops",
+      "expected": 6951.3,
+      "b": "common-2016-f-build-02",
+      "f": "m24418-natural-f-build-01"
+    },
+    "25102": {
+      "load": "restore [file join $here bug25102.brep] input\nexplode input\ncopy input_1 first\ncopy input_2 second",
+      "operation": "bsection result first second",
+      "type": "e",
+      "count": 44,
+      "measure": "lprops",
+      "expected": 49.734,
+      "alone": 2,
+      "b": "m26243-natural-b-build-01",
+      "f": "common-2016-f-build-02"
+    },
+    "25342": {
+      "load": "restore [file join $here bug25342_pump2.brep] input\nexplode input\ncopy input_1 first\ncopy input_2 second",
+      "operation": "bop first second\nbopsection result",
+      "type": "e",
+      "count": 4,
+      "measure": "lprops",
+      "expected": null,
+      "b": "m26243-natural-b-build-01",
+      "f": "common-2016-f-build-02"
+    },
+    "28274": {
+      "load": "brestore [file join $here bug28274_tmp.brep] first\ncopy first second",
+      "operation": "set faces [explode first f]\nif {$::single20_case eq \"swap\"} {set faces [lreverse $faces]}\neval mkvolume result $faces",
+      "type": "so",
+      "count": 3,
+      "measure": "vprops",
+      "expected": 741.787,
+      "area": 985.692,
+      "b": "common-2016-f-build-02",
+      "f": "m24418-natural-f-build-01"
+    }
+  },
+  "limits": [
+    "Published checkprops quantities retain upstream relative epsilon 1e-4.",
+    "M25342 checks the published four-edge contract with positive length and validity, without an independent numeric length gold.",
+    "Bounds and GProp checks use separate OCCT facilities and do not establish global set equality.",
+    "Negative outputs are empty, missing component or half-curve, and translated outside both input domains."
+  ]
+}

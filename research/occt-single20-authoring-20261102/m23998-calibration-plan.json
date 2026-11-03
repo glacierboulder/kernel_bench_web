@@ -1,0 +1,89 @@
+{
+  "issue": 23998,
+  "cases": [
+    {
+      "script": "occt-23998/1/negative_duplicate.tcl",
+      "id": "negative_duplicate",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "closed_single_edge",
+        "section_length",
+        "centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-23998/1/negative_empty.tcl",
+      "id": "negative_empty",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "closed_single_edge",
+        "section_length",
+        "centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-23998/1/negative_shifted.tcl",
+      "id": "negative_shifted",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "closed_single_edge",
+        "section_length",
+        "centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-23998/1/neighborhood_rigid.tcl",
+      "id": "neighborhood_rigid",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "closed_single_edge",
+        "section_length",
+        "centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-23998/1/neighborhood_scale.tcl",
+      "id": "neighborhood_scale",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "closed_single_edge",
+        "section_length",
+        "centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-23998/1/original.tcl",
+      "id": "original",
+      "category": "original",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "closed_single_edge",
+        "section_length",
+        "centroid_domain"
+      ]
+    },
+    {
+      "script": "occt-23998/1/regression_sphere.tcl",
+      "id": "regression_sphere",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "shape_valid",
+        "closed_single_edge",
+        "section_length",
+        "centroid_domain"
+      ]
+    }
+  ]
+}

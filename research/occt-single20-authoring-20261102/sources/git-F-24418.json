@@ -1,0 +1,35 @@
+{
+  "sha": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+  "node_id": "C_kwDODsQtDdoAKGNmZGU3ZWViYjM3YjgyOTAwZjI5ZmQ1ZGE5OWEwMDhiYWM4ZDVhYTM",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+  "author": {
+    "name": "knosulko",
+    "email": "knosulko@opencascade.com",
+    "date": "2021-11-15T14:02:03Z"
+  },
+  "committer": {
+    "name": "smoskvin",
+    "email": "smoskvin@opencascade.com",
+    "date": "2022-02-22T17:07:12Z"
+  },
+  "tree": {
+    "sha": "b72dfb3316a1f3124107b0901d01cb5d433eacb3",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/b72dfb3316a1f3124107b0901d01cb5d433eacb3"
+  },
+  "message": "0024418: Modeling Algorithms - Wrong section curves when intersecting analytical surfaces\n\nIntPatch_ALineToWLine.cxx - setting minimal number of points in a WLine depending on step size\nIntPatch_WLineTool.cxx - fix WLines connecting check condition\ntest cases has been changed according to new behavior",
+  "parents": [
+    {
+      "sha": "600ee856316c1a9eb340779b32de511b74465896",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/600ee856316c1a9eb340779b32de511b74465896",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/600ee856316c1a9eb340779b32de511b74465896"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

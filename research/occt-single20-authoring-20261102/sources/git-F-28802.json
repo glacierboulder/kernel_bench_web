@@ -1,0 +1,35 @@
+{
+  "sha": "bdae3beb87cab7d4c34d4e31a1654a19088100a9",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOmJkYWUzYmViODdjYWI3ZDRjMzRkNGUzMWExNjU0YTE5MDg4MTAwYTk=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/bdae3beb87cab7d4c34d4e31a1654a19088100a9",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/bdae3beb87cab7d4c34d4e31a1654a19088100a9",
+  "author": {
+    "name": "jgv",
+    "email": "jgv@opencascade.com",
+    "date": "2017-06-09T12:21:04Z"
+  },
+  "committer": {
+    "name": "bugmaster",
+    "email": "bugmaster@opencascade.com",
+    "date": "2017-06-15T12:27:34Z"
+  },
+  "tree": {
+    "sha": "b1b69a304e78577161e4379fcbb33465b56f458b",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/b1b69a304e78577161e4379fcbb33465b56f458b"
+  },
+  "message": "0028802: The tolerance reached by approximator is used in creation of an edge, it is incorrect\n\nMethod IntTools_FaceFace::MakeCurve is modified: reached tolerances 2d and 3d of approximator are not used for edges.",
+  "parents": [
+    {
+      "sha": "4201bf79fb8c1022a611cfc1ed779464d1fb170e",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/4201bf79fb8c1022a611cfc1ed779464d1fb170e",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/4201bf79fb8c1022a611cfc1ed779464d1fb170e"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

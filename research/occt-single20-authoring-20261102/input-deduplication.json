@@ -1,0 +1,43 @@
+{
+  "baseline": "c5184df5e161c72cfa389249a8b052efe1b87cf6",
+  "scope": "registered public materials plus declared evaluator geometry support files",
+  "matches": [
+    {
+      "candidate_input": "bug27221.brep",
+      "sha256": "dc10841b1bc1c767cf4e8304e515cbacfababb469c7f22593d9259d637014192",
+      "existing": [
+        {
+          "path": "benchmarks/occt/issues/occt-27252/1/public/inputs/bug27221.brep",
+          "owners": [
+            "occt-27252@1"
+          ]
+        },
+        {
+          "path": "benchmarks/occt/issues/occt-27252/2/public/inputs/bug27221.brep",
+          "owners": [
+            "occt-27252@2"
+          ]
+        },
+        {
+          "path": "benchmarks/occt/evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+          "owners": [
+            "suite:occt-bf-suite-b55-27310-27773-27252-oracle-v2"
+          ]
+        },
+        {
+          "path": "benchmarks/occt/evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/inputs/M27252_neighbor_translated_plane/bug27221.brep",
+          "owners": [
+            "suite:occt-bf-suite-b2613378-27780-27252-21494-v1"
+          ]
+        }
+      ]
+    }
+  ],
+  "decision": [
+    {
+      "candidate": "mantis:27221",
+      "status": "excluded_duplicate_coverage",
+      "reason": "The exact bug27221.brep is already public and hidden material for existing M27252. The upstream discussion identifies the same M27252 repair. A new canonical ID does not provide an independent benchmark problem."
+    }
+  ]
+}

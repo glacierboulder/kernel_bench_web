@@ -1,0 +1,116 @@
+{
+  "issue_id": "occt-25111",
+  "issue_version": "1",
+  "title": "OCCT · 圆锥与圆环面的截交曲线缺失",
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "group_id": "occt-single20-25111",
+  "suite": {
+    "id": "occt-single20-25111-checks",
+    "version": "1"
+  },
+  "source_id": "occt-single20-029311e00f28",
+  "baseline_commit": "029311e00f2822c762f676f863f9b932ad8ca8ef",
+  "baseline_tree_sha256": "dbf7237b12b0712f11b7d3fb020950577fdec9eb6b1f66a95bad6a29239248b6",
+  "source_kind": "curator-derived inverse patch",
+  "frozen_replay": "frozen-replay-06",
+  "reference_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+  "reference_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+  "upstream_url": "https://occt3d.com/dev/tickets/0025111/",
+  "verdict": "PASS",
+  "checkpoints": [
+    {
+      "role": "b",
+      "id": "25111-neighborhood_scale",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-06/occt-single20-25111/b/25111-neighborhood_scale/result.json",
+      "runtime_binaries_sha256": "a86ec4e962eee806093351d05f86d6fe14c21191a776cf4ef67b4ac529d4a0d6"
+    },
+    {
+      "role": "b",
+      "id": "25111-neighborhood_translation",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-06/occt-single20-25111/b/25111-neighborhood_translation/result.json",
+      "runtime_binaries_sha256": "a86ec4e962eee806093351d05f86d6fe14c21191a776cf4ef67b4ac529d4a0d6"
+    },
+    {
+      "role": "b",
+      "id": "25111-original",
+      "category": "original",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-06/occt-single20-25111/b/25111-original/result.json",
+      "runtime_binaries_sha256": "a86ec4e962eee806093351d05f86d6fe14c21191a776cf4ef67b4ac529d4a0d6"
+    },
+    {
+      "role": "b",
+      "id": "25111-regression_cone_plane",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-06/occt-single20-25111/b/25111-regression_cone_plane/result.json",
+      "runtime_binaries_sha256": "a86ec4e962eee806093351d05f86d6fe14c21191a776cf4ef67b4ac529d4a0d6"
+    },
+    {
+      "role": "f",
+      "id": "25111-neighborhood_scale",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-06/occt-single20-25111/f/25111-neighborhood_scale/result.json",
+      "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+    },
+    {
+      "role": "f",
+      "id": "25111-neighborhood_translation",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-06/occt-single20-25111/f/25111-neighborhood_translation/result.json",
+      "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+    },
+    {
+      "role": "f",
+      "id": "25111-original",
+      "category": "original",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-06/occt-single20-25111/f/25111-original/result.json",
+      "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+    },
+    {
+      "role": "f",
+      "id": "25111-regression_cone_plane",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-06/occt-single20-25111/f/25111-regression_cone_plane/result.json",
+      "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195"
+    }
+  ],
+  "snapshots": {
+    "b": "6a54e11ccca952c18a3752aa02642df0d396fc122e932519520599d344a5cfa4",
+    "f": "6a54e11ccca952c18a3752aa02642df0d396fc122e932519520599d344a5cfa4"
+  },
+  "evidence_file": "evidence.json",
+  "result_path_namespace": "tar archive member path",
+  "negative_controls": {
+    "job": "m25111-f-calibration-01",
+    "rejected": [
+      "negative_empty",
+      "negative_missing",
+      "negative_shifted"
+    ]
+  },
+  "supplementary_input_legality": [
+    "m25111-b-input-legality-01",
+    "m25111-f-input-legality-01"
+  ],
+  "full_snapshots_reverified": true
+}

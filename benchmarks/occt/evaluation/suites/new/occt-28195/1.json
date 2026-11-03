@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-28195-checks",
+  "version": "1",
+  "title": "复杂实体 Common 丢失公共体 · 几何检查",
+  "source_ids": [
+    "occt-single20-1511c7e90f1a"
+  ],
+  "group_ids": [
+    "occt-single20-28195"
+  ],
+  "checkpoints": [
+    {
+      "id": "28195-original",
+      "issue_id": "occt-28195",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-28195/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "validity",
+          "topology",
+          "volume_bounds",
+          "volume_membership"
+        ]
+      }
+    },
+    {
+      "id": "28195-neighborhood_rigid",
+      "issue_id": "occt-28195",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-28195/1/neighborhood_rigid.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "validity",
+          "topology",
+          "volume_bounds",
+          "volume_membership"
+        ]
+      }
+    },
+    {
+      "id": "28195-neighborhood_swap",
+      "issue_id": "occt-28195",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-28195/1/neighborhood_swap.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "validity",
+          "topology",
+          "volume_bounds",
+          "volume_membership"
+        ]
+      }
+    },
+    {
+      "id": "28195-regression_healthy",
+      "issue_id": "occt-28195",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-28195/1/regression_healthy.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "input_validity",
+          "operation_completed",
+          "validity",
+          "topology",
+          "volume_bounds",
+          "volume_membership"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/single20/solid_checks.tcl",
+    "evaluation/cases/single20/occt-28195/1/membership_geometry.tcl",
+    "evaluation/cases/single20/occt-28195/1/bug28195_solidsKO.brep"
+  ]
+}

@@ -1,0 +1,469 @@
+diff --git a/src/BOPAlgo/BOPAlgo.cdl b/src/BOPAlgo/BOPAlgo.cdl
+index 0e13d851a9..3984f1051e 100644
+--- a/src/BOPAlgo/BOPAlgo.cdl
++++ b/src/BOPAlgo/BOPAlgo.cdl
+@@ -56,6 +56,7 @@ is
+       IncompatibilityOfEdge,
+       IncompatibilityOfFace, 
+       OperationAborted,
++      GeomAbs_C0,
+       NotValid
+     end CheckStatus;
+ 
+diff --git a/src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cdl b/src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cdl
+index a82d1b4502..b8593f3e35 100644
+--- a/src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cdl
++++ b/src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cdl
+@@ -113,6 +113,13 @@ is
+     ---Purpose: Returns (modifiable) mode that means
+     --          checking of problem of merging edges.
+ 
++    ContinuityMode(me: in out)
++    returns Boolean from Standard;
++    ---C++: return &
++    ---C++: inline
++    ---Purpose: Returns (modifiable) mode that means
++    --          checking of problem of continuity of the shape.
++
+     ---
+     Perform(me: out);
+     ---Purpose: performs analysis
+@@ -151,8 +158,11 @@ is
+     TestMergeEdge(me: out)
+     is protected;
+ 
+---    TestMergeFace(me: out)
+---    is protected;
++    TestContinuity(me: out)
++    is protected;
++
++--  TestMergeFace(me: out)
++--  is protected;
+ 
+ 
+ fields
+@@ -167,7 +177,8 @@ fields
+     myRebuildFaceMode  : Boolean   from Standard;
+     myTangentMode      : Boolean   from Standard;
+     myMergeVertexMode  : Boolean   from Standard;
+-    myMergeEdgeMode    : Boolean   from Standard; 
++    myMergeEdgeMode    : Boolean   from Standard;
++    myContinuityMode   : Boolean   from Standard;
+     myEmpty1,myEmpty2  : Boolean   from Standard; 
+     myResult      : ListOfCheckResult from BOPAlgo; 
+     
+diff --git a/src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx b/src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx
+index fe1d2e27ef..ed8de009ae 100644
+--- a/src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx
++++ b/src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx
+@@ -60,6 +60,7 @@
+ #include <BOPTools_AlgoTools3D.hxx>
+ #include <BOPTools_AlgoTools.hxx>
+ #include <BOPCol_ListOfShape.hxx>
++#include <Geom_Surface.hxx>
+ 
+ // ================================================================================
+ // function: Constructor
+@@ -75,6 +76,7 @@ myRebuildFaceMode(Standard_False),
+ myTangentMode(Standard_False),
+ myMergeVertexMode(Standard_False),
+ myMergeEdgeMode(Standard_False),
++myContinuityMode(Standard_False),
+ myEmpty1(Standard_False),
+ myEmpty2(Standard_False)
+ // myMergeFaceMode(Standard_False)
+@@ -193,6 +195,11 @@ void BOPAlgo_ArgumentAnalyzer::Perform()
+       if(!(!myResult.IsEmpty() && myStopOnFirst))
+         TestMergeEdge();
+     }
++
++    if(myContinuityMode) {
++      if(!(!myResult.IsEmpty() && myStopOnFirst))
++        TestContinuity();
++    }
+   }
+   catch(Standard_Failure) {
+     BOPAlgo_CheckResult aResult;
+@@ -381,16 +388,13 @@ void BOPAlgo_ArgumentAnalyzer::TestSelfInterferences()
+         }
+         //
+         BOPAlgo_CheckResult aResult;
+-        if(ii == 0)
+-          aResult.SetShape1(myShape1);
+-        else
+-          aResult.SetShape2(myShape2);
+-
+         if(ii == 0) {
++          aResult.SetShape1(myShape1);
+           aResult.AddFaultyShape1(aS1);
+           aResult.AddFaultyShape1(aS2);
+         }
+         else {
++          aResult.SetShape2(myShape2);
+           aResult.AddFaultyShape2(aS1);
+           aResult.AddFaultyShape2(aS2);
+         }
+@@ -400,15 +404,12 @@ void BOPAlgo_ArgumentAnalyzer::TestSelfInterferences()
+     }
+     if (iErr) {
+       BOPAlgo_CheckResult aResult;
+-      if(ii == 0)
+-        aResult.SetShape1(myShape1);
+-      else
+-        aResult.SetShape2(myShape2);
+-      
+       if(ii == 0) {
++        aResult.SetShape1(myShape1);
+         aResult.AddFaultyShape1(myShape1);
+       }
+       else {
++        aResult.SetShape2(myShape2);
+         aResult.AddFaultyShape2(myShape2);
+       }
+       aResult.SetCheckStatus(BOPAlgo_OperationAborted);
+@@ -823,6 +824,64 @@ void BOPAlgo_ArgumentAnalyzer::TestMergeEdge()
+   TestMergeSubShapes(TopAbs_EDGE); 
+ }
+ 
++// ================================================================================
++// function: TestContinuity
++// purpose:
++// ================================================================================
++void BOPAlgo_ArgumentAnalyzer::TestContinuity() 
++{
++  Standard_Integer i;
++  Standard_Real f, l;
++  TopExp_Explorer aExp;
++  BOPCol_MapIteratorOfMapOfShape aIt;
++  //
++  for (i = 0; i < 2; ++i) {
++    const TopoDS_Shape& aS = !i ? myShape1 : myShape2;
++    if(aS.IsNull()) {
++      continue;
++    }
++    //
++    BOPCol_MapOfShape aMS;
++    //Edges
++    aExp.Init(aS, TopAbs_EDGE);
++    for (; aExp.More(); aExp.Next()) {
++      const TopoDS_Edge& aE = *(TopoDS_Edge*)&aExp.Current();
++      if (BRep_Tool::Degenerated(aE)) {
++        continue;
++      }
++      const Handle(Geom_Curve)& aC = BRep_Tool::Curve(aE, f, l);
++      if (aC->Continuity() == GeomAbs_C0) {
++        aMS.Add(aE);
++      }
++    }
++    //Faces
++    aExp.Init(aS, TopAbs_FACE);
++    for (; aExp.More(); aExp.Next()) {
++      const TopoDS_Face& aF = *(TopoDS_Face*)&aExp.Current();
++      const Handle(Geom_Surface)& aS = BRep_Tool::Surface(aF);
++      if (aS->Continuity() == GeomAbs_C0) {
++        aMS.Add(aF);
++      }
++    }
++    //
++    //add shapes with continuity C0 to result
++    aIt.Initialize(aMS);
++    for (; aIt.More(); aIt.Next()) {
++      const TopoDS_Shape& aFS = aIt.Value();
++      BOPAlgo_CheckResult aResult;
++      if(i == 0) {
++        aResult.SetShape1(myShape1);
++        aResult.AddFaultyShape1(aFS);
++      } else {
++        aResult.SetShape2(myShape2);
++        aResult.AddFaultyShape2(aFS);
++      }
++      aResult.SetCheckStatus(BOPAlgo_GeomAbs_C0);
++      myResult.Append(aResult);
++    }
++  }
++}
++
+ // ================================================================================
+ // function: TestMergeFace
+ // purpose:
+diff --git a/src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.lxx b/src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.lxx
+index 90d94444a3..36e3b33128 100644
+--- a/src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.lxx
++++ b/src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.lxx
+@@ -56,6 +56,11 @@ inline Standard_Boolean& BOPAlgo_ArgumentAnalyzer::MergeEdgeMode()
+   return myMergeEdgeMode;
+ }
+ 
++inline Standard_Boolean& BOPAlgo_ArgumentAnalyzer::ContinuityMode() 
++{
++  return myContinuityMode;
++}
++
+ // inline Standard_Boolean& BOPAlgo_ArgumentAnalyzer::MergeFaceMode() 
+ // {
+ //   return myMergeFaceMode;
+diff --git a/src/BOPTest/BOPTest_CheckCommands.cxx b/src/BOPTest/BOPTest_CheckCommands.cxx
+index da90f6d0e1..32ba40f7dc 100644
+--- a/src/BOPTest/BOPTest_CheckCommands.cxx
++++ b/src/BOPTest/BOPTest_CheckCommands.cxx
+@@ -264,6 +264,7 @@ Standard_Integer bopargcheck (Draw_Interpretor& di, Standard_Integer n,  const c
+     di << " E (disable test possibility to merge edges)" << "\n";
+     di << " I (disable self-interference test)" << "\n";
+     di << " P (disable shape type test)" << "\n";
++    di << " C (disable test for shape continuity)" << "\n";
+     di << " For example: \"bopargcheck s1 s2 /RI\" disables small edge detection and self-intersection detection" << "\n";
+     di << " default - all options are enabled" << "\n" << "\n";
+     di << " #<Additional Test Options>" << "\n";
+@@ -345,6 +346,9 @@ Standard_Integer bopargcheck (Draw_Interpretor& di, Standard_Integer n,  const c
+   // set default options (always tested!) for single and couple shapes
+   aChecker.ArgumentTypeMode() = Standard_True;
+   aChecker.SelfInterMode()    = Standard_True;
++  aChecker.SmallEdgeMode()    = Standard_True;
++  aChecker.RebuildFaceMode()  = Standard_True;
++  aChecker.ContinuityMode()   = Standard_True;
+ 
+   // test & set options and operation for two shapes
+   if(!aS22.IsNull()) {
+@@ -379,91 +383,45 @@ Standard_Integer bopargcheck (Draw_Interpretor& di, Standard_Integer n,  const c
+     else
+       aChecker.OperationType() = BOPAlgo_SECTION;
+ 
+-    aChecker.SmallEdgeMode()   = Standard_True;
+-    aChecker.RebuildFaceMode() = Standard_True;
+     aChecker.TangentMode()     = Standard_True;
+     aChecker.MergeVertexMode() = Standard_True;
+     aChecker.MergeEdgeMode()   = Standard_True;
+-
+-    // set options (default - all ON)
+-    if(isOP) {
+-      Standard_Integer ind = 1;
+-      while(a[indxOP][ind] != 0) {
+-        if(a[indxOP][ind] == 'R' || a[indxOP][ind] == 'r') {
+-          //aChecker.SmallEdgeMode() = Standard_True;
+-          aChecker.SmallEdgeMode() = Standard_False;
+-        }
+-        else if(a[indxOP][ind] == 'F' || a[indxOP][ind] == 'f') {
+-          //aChecker.RebuildFaceMode() = Standard_True;
+-          aChecker.RebuildFaceMode() = Standard_False;
+-        }
+-        else if(a[indxOP][ind] == 'T' || a[indxOP][ind] == 't') {
+-          //aChecker.TangentMode() = Standard_True;
+-          aChecker.TangentMode() = Standard_False;
+-        }
+-        else if(a[indxOP][ind] == 'V' || a[indxOP][ind] == 'v') {
+-          //aChecker.MergeVertexMode() = Standard_True;
+-          aChecker.MergeVertexMode() = Standard_False;
+-        }
+-        else if(a[indxOP][ind] == 'E' || a[indxOP][ind] == 'e') {
+-          //aChecker.MergeEdgeMode() = Standard_True;
+-          aChecker.MergeEdgeMode() = Standard_False;
+-        }
+-        else if(a[indxOP][ind] == 'I' || a[indxOP][ind] == 'i') {
+-          aChecker.SelfInterMode() = Standard_False;
+-        }
+-        else if(a[indxOP][ind] == 'P' || a[indxOP][ind] == 'p') {
+-          aChecker.ArgumentTypeMode() = Standard_False;
+-        }
+-        else {
+-          di << "Error: invalid test option(s)!" << "\n";
+-          di << "Type bopargcheck without arguments for more information" << "\n";
+-          return 1;
+-        }
+-        ind++;
+-      }
+-    }
+-    else {
+-      // default test mode (all - ON)
+-      aChecker.SmallEdgeMode()   = Standard_True;
+-      aChecker.RebuildFaceMode() = Standard_True;
+-      aChecker.TangentMode()     = Standard_True;
+-      aChecker.MergeVertexMode() = Standard_True;
+-      aChecker.MergeEdgeMode()   = Standard_True;
+-    }
+   }
+-  else {
+-    // check type and self-interference mode for single shape test
+-    // also check small edges and check faces
+-      aChecker.SmallEdgeMode()   = Standard_True;
+-      aChecker.RebuildFaceMode() = Standard_True;
+-
+-     if(isOP) {
+-      Standard_Integer ind = 1;
+-      while(a[indxOP][ind] != 0) {
+-        if(a[indxOP][ind] == 'R' || a[indxOP][ind] == 'r') {
+-        }
+-        else if(a[indxOP][ind] == 'F' || a[indxOP][ind] == 'f') {
+-        }
+-        else if(a[indxOP][ind] == 'T' || a[indxOP][ind] == 't') {
+-        }
+-        else if(a[indxOP][ind] == 'V' || a[indxOP][ind] == 'v') {
+-        }
+-        else if(a[indxOP][ind] == 'E' || a[indxOP][ind] == 'e') {
+-        }
+-        else if(a[indxOP][ind] == 'I' || a[indxOP][ind] == 'i') {
+-          aChecker.SelfInterMode() = Standard_False;
+-        }
+-        else if(a[indxOP][ind] == 'P' || a[indxOP][ind] == 'p') {
+-          aChecker.ArgumentTypeMode() = Standard_False;
+-        }
+-        else {
+-          di << "Error: invalid test option(s)!" << "\n";
+-          di << "Type bopargcheck without arguments for more information" << "\n";
+-          return 1;
+-        }
+-        ind++;
++  
++  // set options (default - all ON)
++  if(isOP) {
++    Standard_Integer ind = 1;
++    while(a[indxOP][ind] != 0) {
++      if(a[indxOP][ind] == 'R' || a[indxOP][ind] == 'r') {
++        aChecker.SmallEdgeMode() = Standard_False;
++      }
++      else if(a[indxOP][ind] == 'F' || a[indxOP][ind] == 'f') {
++        aChecker.RebuildFaceMode() = Standard_False;
++      }
++      else if(a[indxOP][ind] == 'T' || a[indxOP][ind] == 't') {
++        aChecker.TangentMode() = Standard_False;
+       }
++      else if(a[indxOP][ind] == 'V' || a[indxOP][ind] == 'v') {
++        aChecker.MergeVertexMode() = Standard_False;
++      }
++      else if(a[indxOP][ind] == 'E' || a[indxOP][ind] == 'e') {
++        aChecker.MergeEdgeMode() = Standard_False;
++      }
++      else if(a[indxOP][ind] == 'I' || a[indxOP][ind] == 'i') {
++        aChecker.SelfInterMode() = Standard_False;
++      }
++      else if(a[indxOP][ind] == 'P' || a[indxOP][ind] == 'p') {
++        aChecker.ArgumentTypeMode() = Standard_False;
++      }
++      else if(a[indxOP][ind] == 'C' || a[indxOP][ind] == 'c') {
++        aChecker.ContinuityMode() = Standard_False;
++      }
++      else {
++        di << "Error: invalid test option(s)!" << "\n";
++        di << "Type bopargcheck without arguments for more information" << "\n";
++        return 1;
++      }
++      ind++;
+     }
+   }
+ 
+@@ -507,6 +465,7 @@ Standard_Integer bopargcheck (Draw_Interpretor& di, Standard_Integer n,  const c
+       Standard_Integer S2_BadType = 0, S2_SelfInt = 0, S2_SmalE = 0, S2_BadF = 0, S2_BadV = 0, S2_BadE = 0;
+       Standard_Integer S2_SelfIntAll = 0, S2_SmalEAll = 0, S2_BadFAll = 0, S2_BadVAll = 0, S2_BadEAll = 0;
+       Standard_Integer S1_OpAb = 0, S2_OpAb = 0;
++      Standard_Integer S1_C0 = 0, S2_C0 = 0, S1_C0All = 0, S2_C0All = 0;
+       Standard_Boolean hasUnknown = Standard_False;
+ 
+       TCollection_AsciiString aS1SIBaseName("s1si_");
+@@ -514,11 +473,13 @@ Standard_Integer bopargcheck (Draw_Interpretor& di, Standard_Integer n,  const c
+       TCollection_AsciiString aS1BFBaseName("s1bf_");
+       TCollection_AsciiString aS1BVBaseName("s1bv_");
+       TCollection_AsciiString aS1BEBaseName("s1be_");
++      TCollection_AsciiString aS1C0BaseName("s1C0_");
+       TCollection_AsciiString aS2SIBaseName("s2si_");
+       TCollection_AsciiString aS2SEBaseName("s2se_");
+       TCollection_AsciiString aS2BFBaseName("s2bf_");
+       TCollection_AsciiString aS2BVBaseName("s2bv_");
+       TCollection_AsciiString aS2BEBaseName("s2be_");
++      TCollection_AsciiString aS2C0BaseName("s2C0_");
+ 
+       for(; anIt.More(); anIt.Next()) {
+         const BOPAlgo_CheckResult& aResult = anIt.Value();
+@@ -608,6 +569,21 @@ Standard_Integer bopargcheck (Draw_Interpretor& di, Standard_Integer n,  const c
+           // not yet implemented
+         }
+           break;
++        case BOPAlgo_GeomAbs_C0: {
++          if(!aSS1.IsNull()) {
++            S1_C0++;
++            if(isL1) {
++              MakeShapeForFullOutput(aS1C0BaseName, S1_C0, aLS1, S1_C0All, di);
++            }
++          }
++          if(!aSS2.IsNull()) {
++            S2_C0++;
++            if(isL2) {
++              MakeShapeForFullOutput(aS2C0BaseName, S2_C0, aLS2, S2_C0All, di);
++            }
++          }
++        }
++          break;
+         case BOPAlgo_OperationAborted: {
+           if(!aSS1.IsNull()) S1_OpAb++;
+           if(!aSS2.IsNull()) S2_OpAb++;
+@@ -621,9 +597,9 @@ Standard_Integer bopargcheck (Draw_Interpretor& di, Standard_Integer n,  const c
+         } // switch
+       }// faulties
+ 
+-      Standard_Integer FS1 = S1_SelfInt + S1_SmalE + S1_BadF + S1_BadV + S1_BadE + S1_OpAb;
++      Standard_Integer FS1 = S1_SelfInt + S1_SmalE + S1_BadF + S1_BadV + S1_BadE + S1_OpAb + S1_C0;
+       FS1 += (S1_BadType != 0) ? 1 : 0;
+-      Standard_Integer FS2 = S2_SelfInt + S2_SmalE + S2_BadF + S2_BadV + S2_BadE + S2_OpAb;
++      Standard_Integer FS2 = S2_SelfInt + S2_SmalE + S2_BadF + S2_BadV + S2_BadE + S2_OpAb + S2_C0;
+       FS2 += (S2_BadType != 0) ? 1 : 0;
+       
+       // output for first shape
+@@ -692,6 +668,16 @@ Standard_Integer bopargcheck (Draw_Interpretor& di, Standard_Integer n,  const c
+           di << "  Cases(" << S1_BadE << ")  Total shapes(" << S1_BadEAll << ")" << "\n";
+         else
+           di << "\n";
++        Standard_CString CString15;
++        if (S1_C0 != 0)
++          CString15="YES";
++        else
++          CString15="NO";
++        di << "Shapes with Continuity C0       : " << CString15;
++        if(S1_C0 != 0)
++          di << "  Cases(" << S1_C0 << ")  Total shapes(" << S1_C0All << ")" << "\n";
++        else
++          di << "\n";
+       }
+ 
+       // output for second shape
+@@ -762,6 +748,16 @@ Standard_Integer bopargcheck (Draw_Interpretor& di, Standard_Integer n,  const c
+           di << "  Cases(" << S2_BadE << ")  Total shapes(" << S2_BadEAll << ")" << "\n";
+         else
+           di << "\n";
++        Standard_CString CString16;
++        if (S2_C0 != 0)
++          CString16="YES";
++        else
++          CString16="NO";
++        di << "Shapes with Continuity C0       : " << CString16;
++        if(S2_C0 != 0)
++          di << "  Cases(" << S2_C0 << ")  Total shapes(" << S2_C0All << ")" << "\n";
++        else
++          di << "\n";
+ 
+         // warning
+         di << "\n";
+diff --git a/tests/bugs/modalg_5/bug24220 b/tests/bugs/modalg_5/bug24220
+new file mode 100755
+index 0000000000..93a18cd10e
+--- /dev/null
++++ b/tests/bugs/modalg_5/bug24220
+@@ -0,0 +1,21 @@
++puts "============"
++puts "OCC24220"
++puts "============"
++puts ""
++######################################################
++# bopargcheck returns valid for C0 shape but results of boolean operations are broken with such shapes
++######################################################
++
++restore [locate_data_file bug24220_A.brep] result
++
++decho off
++set info [bopargcheck result]
++decho on
++
++if { [regexp "Faulties, that can not be treated by BOP, are detected" ${info}] != 1 } {
++    puts "Error : message is not correct"
++} else {
++    puts "OK : message is correct"
++}
++
++set 3dviewer 1

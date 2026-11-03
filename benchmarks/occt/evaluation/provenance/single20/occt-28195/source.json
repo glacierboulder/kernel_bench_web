@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "issue": "occt-28195",
+  "status": "qualified",
+  "source_kind": "natural historical commit",
+  "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "git_tree": "12c23eb7bbf0b6d6c841cbb1c7aac6e2e7d14e62",
+  "materialized_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+  "reference": {
+    "source_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+    "git_tree": "b72dfb3316a1f3124107b0901d01cb5d433eacb3",
+    "source_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+    "kind": "natural later commit"
+  },
+  "qualification": {
+    "b": {
+      "label": "m28195-b-membership-02",
+      "model_called": false,
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "build_receipt_sha256": "e9e8f08e77fc823099dad504aa655935f7bae163ce14ff66c9d92af522598715",
+      "binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "results": {
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_swap": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_healthy": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_input_only": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T15:34:13.484000+00:00"
+    },
+    "f": {
+      "label": "m28195-f-membership-02",
+      "model_called": false,
+      "source_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "source_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "build_receipt_sha256": "bdedc9253129a1b351f314a64007fa10a98dd2862442c33e54250e4ed6a8b020",
+      "binary_manifest_sha256": "555e974cab4987c738f6122f4fdf91b07c81b59cd460da7cdd56609e5a3ac189",
+      "results": {
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_swap": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_healthy": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_input_only": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T15:31:22.703320+00:00"
+    }
+  },
+  "stage": "unknown",
+  "stage_note": "The earliest internal failing stage has not been localized by this authoring run.",
+  "limits": [
+    "Classification of a fixed 125-point grid by the two input solids supplies independent Boolean membership expectations. BRepClass, BRepCheck and GProp still share OCCT infrastructure.",
+    "This is finite case coverage, not certified full set equality."
+  ],
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0028195/",
+  "input_provenance": {
+    "repository": "a-betenev/opencascade-dataset",
+    "commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1",
+    "files": [
+      {
+        "name": "bug28195_solidsKO.brep",
+        "git_blob": "441e8a207986395938828202be96bf59894ef46d",
+        "sha256": "5af1049dbc7b79043dd2cba7fb7878ba102d9f515802732b41ea402f3136b147",
+        "bytes": 881688
+      }
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "issue_id": "occt-github-1543",
+  "issue_version": "1",
+  "title": "OCCT · 螺旋工具穿过端面时 Boolean Cut 未移除材料",
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "group_id": "occt-single20-github-1543",
+  "suite": {
+    "id": "occt-single20-github-1543-checks",
+    "version": "1"
+  },
+  "source_id": "occt-single20-a016080bf673",
+  "baseline_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+  "baseline_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+  "source_kind": "natural historical commit",
+  "frozen_replay": "frozen-replay-05",
+  "reference_commit": "d3c3366e548feb691481082dac90e9c5274010bb",
+  "reference_tree_sha256": "d5de5fa56ada88f607e4242890eaae6a85f9fa266586d5f49f0dc2cbbff38b2e",
+  "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT/issues/1543",
+  "verdict": "PASS",
+  "checkpoints": [
+    {
+      "role": "b",
+      "id": "github-1543-neighborhood_offset",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/b/github-1543-neighborhood_offset/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "b",
+      "id": "github-1543-neighborhood_rigid",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/b/github-1543-neighborhood_rigid/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "b",
+      "id": "github-1543-original",
+      "category": "original",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/b/github-1543-original/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "b",
+      "id": "github-1543-regression_passing_phase",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/b/github-1543-regression_passing_phase/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "f",
+      "id": "github-1543-neighborhood_offset",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/f/github-1543-neighborhood_offset/result.json",
+      "runtime_binaries_sha256": "1f9fac347e7762dda19fc26d1ee6c26d721720475e7647c82242262e08be668c"
+    },
+    {
+      "role": "f",
+      "id": "github-1543-neighborhood_rigid",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/f/github-1543-neighborhood_rigid/result.json",
+      "runtime_binaries_sha256": "1f9fac347e7762dda19fc26d1ee6c26d721720475e7647c82242262e08be668c"
+    },
+    {
+      "role": "f",
+      "id": "github-1543-original",
+      "category": "original",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/f/github-1543-original/result.json",
+      "runtime_binaries_sha256": "1f9fac347e7762dda19fc26d1ee6c26d721720475e7647c82242262e08be668c"
+    },
+    {
+      "role": "f",
+      "id": "github-1543-regression_passing_phase",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-05/occt-single20-github-1543/f/github-1543-regression_passing_phase/result.json",
+      "runtime_binaries_sha256": "1f9fac347e7762dda19fc26d1ee6c26d721720475e7647c82242262e08be668c"
+    }
+  ],
+  "snapshots": {
+    "b": "84f07061d1a3c7f0f75b7afd6936241c88ae97d2a3cd6176d78b9b96e914fdc4",
+    "f": "84f07061d1a3c7f0f75b7afd6936241c88ae97d2a3cd6176d78b9b96e914fdc4"
+  },
+  "evidence_file": "evidence.json",
+  "result_path_namespace": "tar archive member path",
+  "negative_controls": {
+    "job": "github1543-f-calibration-01",
+    "rejected": [
+      "negative_empty",
+      "negative_shifted",
+      "negative_unchanged"
+    ]
+  },
+  "full_snapshots_reverified": true
+}

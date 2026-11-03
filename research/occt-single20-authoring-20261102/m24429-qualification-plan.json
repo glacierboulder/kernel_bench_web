@@ -1,0 +1,82 @@
+{
+  "issue": 24429,
+  "cases": [
+    {
+      "id": "original",
+      "script": "occt-24429/1/original.tcl",
+      "category": "original",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty",
+        "support",
+        "coverage"
+      ]
+    },
+    {
+      "id": "neighborhood_translation",
+      "script": "occt-24429/1/neighborhood_translation.tcl",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty",
+        "support",
+        "coverage"
+      ]
+    },
+    {
+      "id": "neighborhood_swap",
+      "script": "occt-24429/1/neighborhood_swap.tcl",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty",
+        "support",
+        "coverage"
+      ]
+    },
+    {
+      "id": "regression_plane",
+      "script": "occt-24429/1/regression_plane.tcl",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty",
+        "support",
+        "coverage"
+      ]
+    },
+    {
+      "id": "negative_empty",
+      "script": "occt-24429/1/negative_empty.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty",
+        "support",
+        "coverage"
+      ]
+    },
+    {
+      "id": "negative_truncated",
+      "script": "occt-24429/1/negative_truncated.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty",
+        "support",
+        "coverage"
+      ]
+    },
+    {
+      "id": "negative_shifted",
+      "script": "occt-24429/1/negative_shifted.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty",
+        "support",
+        "coverage"
+      ]
+    }
+  ]
+}

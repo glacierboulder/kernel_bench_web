@@ -1,0 +1,14 @@
+{
+  "issue": 26910,
+  "qualification": "original screening only; no admission or final oracle claim",
+  "cases": [
+    {
+      "script": "occt-26910/1/original_probe.tcl",
+      "id": "original_probe",
+      "category": "original",
+      "expected_assertion_ids": [
+        "intersection_vertices"
+      ]
+    }
+  ]
+}

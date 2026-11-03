@@ -1,0 +1,35 @@
+{
+  "sha": "3e594885aa461fecca912e2daa80a003460faf9b",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOjNlNTk0ODg1YWE0NjFmZWNjYTkxMmUyZGFhODBhMDAzNDYwZmFmOWI=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/3e594885aa461fecca912e2daa80a003460faf9b",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/3e594885aa461fecca912e2daa80a003460faf9b",
+  "author": {
+    "name": "emv",
+    "email": "emv@opencascade.com",
+    "date": "2014-09-25T09:57:45Z"
+  },
+  "committer": {
+    "name": "bugmaster",
+    "email": "bugmaster@opencascade.com",
+    "date": "2014-09-25T11:58:17Z"
+  },
+  "tree": {
+    "sha": "dfbfbe39050ed03f4d6e61ac62026cf0f273b99e",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/dfbfbe39050ed03f4d6e61ac62026cf0f273b99e"
+  },
+  "message": "0025237: Wrong result of COMMON operation\n\nModifications in Edge/Edge intersection algorithm:\n1. Condition to create common part of type TopAbs_EDGE is changed.\n2. Correct treatment of closed edges.\n\nSmall correction to eliminate warning.\n\nTest case for issue #25237",
+  "parents": [
+    {
+      "sha": "d33222c108e49e3db564f209ded4fe25935c3731",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/d33222c108e49e3db564f209ded4fe25935c3731",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/d33222c108e49e3db564f209ded4fe25935c3731"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

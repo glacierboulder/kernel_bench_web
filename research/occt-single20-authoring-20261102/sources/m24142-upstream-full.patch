@@ -1,0 +1,78 @@
+diff --git a/src/IntAna/IntAna_QuadQuadGeo.cxx b/src/IntAna/IntAna_QuadQuadGeo.cxx
+index 5a9e4b3678..5586984019 100755
+--- a/src/IntAna/IntAna_QuadQuadGeo.cxx
++++ b/src/IntAna/IntAna_QuadQuadGeo.cxx
+@@ -1234,13 +1234,14 @@ gp_Ax2 DirToAx2(const gp_Pnt& P,const gp_Dir& D)
+     Standard_Real DistA1A2=A1A2.Distance();
+     gp_Dir DA1=Con1.Position().Direction();
+     gp_Vec O1O2(Con1.Apex(),Con2.Apex());
+-    Standard_Real O1O2_DA1=gp_Vec(DA1).Dot(O1O2);
+-    
+-    gp_Vec O1_Proj_A2(O1O2.X()-O1O2_DA1*DA1.X(),
+-		      O1O2.Y()-O1O2_DA1*DA1.Y(),
+-		      O1O2.Z()-O1O2_DA1*DA1.Z());
++    gp_Dir O1O2n(O1O2); // normalization of the vector before projection
++    Standard_Real O1O2_DA1=gp_Vec(DA1).Dot(gp_Vec(O1O2n));
++
++    gp_Vec O1_Proj_A2(O1O2n.X()-O1O2_DA1*DA1.X(),
++		      O1O2n.Y()-O1O2_DA1*DA1.Y(),
++		      O1O2n.Z()-O1O2_DA1*DA1.Z());
+     gp_Dir DB1=gp_Dir(O1_Proj_A2);
+-    
++
+     Standard_Real yO1O2=O1O2.Dot(gp_Vec(DA1));
+     Standard_Real ABSTG1 = Abs(tg1);
+     Standard_Real X2 = (DistA1A2/ABSTG1 - yO1O2)*0.5;
+diff --git a/tests/bugs/modalg_5/bug24035 b/tests/bugs/modalg_5/bug24035
+index d45dd33cee..ca1681bcc5 100644
+--- a/tests/bugs/modalg_5/bug24035
++++ b/tests/bugs/modalg_5/bug24035
+@@ -16,11 +16,11 @@ decho on
+ 
+ set status 0
+ if { [regexp "Faulty shapes in variables faulty_1 to faulty_2" $info1] != 1 } {
+-    puts "Error : There is no 2 mistakes by checkshape on face1
++    puts "Error : There is no 2 mistakes by checkshape on face1"
+     set status 1
+ }
+ if { [regexp "Faulty shapes in variables faulty_1 to faulty_2" $info2] != 1 } {
+-    puts "Error : There is no 2 mistakes by checkshape on face2
++    puts "Error : There is no 2 mistakes by checkshape on face2"
+     set stauts 1
+ }
+ 
+diff --git a/tests/bugs/moddata_3/bug24142 b/tests/bugs/moddata_3/bug24142
+new file mode 100755
+index 0000000000..8f06da607f
+--- /dev/null
++++ b/tests/bugs/moddata_3/bug24142
+@@ -0,0 +1,29 @@
++puts "================"
++puts "OCC24142"
++puts "================"
++puts ""
++#################################################################
++## Wrong section curve
++#################################################################
++
++restore [locate_data_file OCC152.brep] sh
++explode sh f
++
++mksurface s1 sh_3
++mksurface s2 sh_5
++
++trim st1 s1 0 6.28318530717959 0 74.9999999999999
++trim st2 s2 0 6.28318530717959 -74.0551172696384 125.944882730362
++
++intersect i st1 st2
++
++dlog reset
++dlog on
++xdistcs i st2 0 1 10
++set log_on [dlog get]
++
++if { [regexp "i is null curve" ${log_on}] != 1 } {
++   puts "Error : Wrong section curve"
++}
++
++set 2dviewer 1

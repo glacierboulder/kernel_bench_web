@@ -1,0 +1,161 @@
+diff --git a/src/IntPatch/IntPatch_ImpPrmIntersection.cxx b/src/IntPatch/IntPatch_ImpPrmIntersection.cxx
+index 7932aabb3d..65e277316d 100644
+--- a/src/IntPatch/IntPatch_ImpPrmIntersection.cxx
++++ b/src/IntPatch/IntPatch_ImpPrmIntersection.cxx
+@@ -2330,6 +2330,8 @@ static Standard_Boolean DecomposeResult(const Handle(IntPatch_Line)& theLine,
+   // build WLine parts (if any)
+   Standard_Boolean flNextLine = Standard_True;
+   Standard_Boolean hasBeenDecomposed = Standard_False;
++  Standard_Boolean PrePointExist = Standard_False;
++  IntSurf_PntOn2S PrePoint;
+   while(flNextLine)
+   {
+     // reset variables
+@@ -2342,6 +2344,12 @@ static Standard_Boolean DecomposeResult(const Handle(IntPatch_Line)& theLine,
+     //if((Lindex-Findex+1) <= 2 )
+     if(aLindex <= aFindex)
+       return hasBeenDecomposed;
++
++    if (PrePointExist)
++    {
++      sline->Add(PrePoint);
++      PrePointExist = Standard_False;
++    }
+     
+     // analyze other points
+     for(Standard_Integer k = aFindex; k <= aLindex; k++)
+@@ -2358,6 +2366,7 @@ static Standard_Boolean DecomposeResult(const Handle(IntPatch_Line)& theLine,
+         }
+ 
+         sline->Add(aSSLine->Value(k));
++        PrePoint = aSSLine->Value(k);
+         continue;
+       }
+ 
+@@ -2374,10 +2383,56 @@ static Standard_Boolean DecomposeResult(const Handle(IntPatch_Line)& theLine,
+       {
+         aBindex = k;
+         isDecomposited = Standard_True;
++        ////
++        if (Abs(U1) <= Precision::PConfusion() ||
++            Abs(U1 - 2*M_PI) <= Precision::PConfusion())
++        {
++          IntSurf_PntOn2S NewPoint;
++          IntSurf_PntOn2S CurPoint = aSSLine->Value(k);
++          gp_Pnt thePnt = CurPoint.Value();
++          Standard_Real theU1, theV1, theU2, theV2;
++          theU1 = (Abs(U1) <= Precision::PConfusion())? 2*M_PI : 0.;
++          theV1 = V1;
++          NewPoint.SetValue(thePnt);
++          if (!IsReversed)
++          {
++            CurPoint.ParametersOnS2(theU2, theV2);
++            NewPoint.SetValue(theU1, theV1, theU2, theV2);
++          }
++          else
++          {
++            CurPoint.ParametersOnS1(theU2, theV2);
++            NewPoint.SetValue(theU2, theV2, theU1, theV1);
++          }
++          sline->Add(NewPoint);
++        }
++        else if (Abs(AnU1) <= Precision::PConfusion() ||
++                 Abs(AnU1 - 2*M_PI) <= Precision::PConfusion())
++        {
++          //Modify <PrePoint>
++          PrePointExist = Standard_True;
++          Standard_Real theU1, theV1;
++          if (!IsReversed)
++          {
++            PrePoint.ParametersOnS1(theU1, theV1);
++            theU1 = (Abs(AnU1) <= Precision::PConfusion())? 2*M_PI : 0.;
++            PrePoint.SetValue(Standard_True, //on first
++                              theU1, theV1);
++          }
++          else
++          {
++            PrePoint.ParametersOnS2(theU1, theV1);
++            theU1 = (Abs(AnU1) <= Precision::PConfusion())? 2*M_PI : 0.;
++            PrePoint.SetValue(Standard_False, //on second
++                              theU1, theV1);
++          }
++        }
++        ////
+         break;
+       }
+ 
+       sline->Add(aSSLine->Value(k));
++      PrePoint = aSSLine->Value(k);
+       AnU1=U1;
+     }
+ 
+diff --git a/tests/bugs/modalg_4/bug825 b/tests/bugs/modalg_4/bug825
+index f9010a35b0..83a6c9c5fa 100755
+--- a/tests/bugs/modalg_4/bug825
++++ b/tests/bugs/modalg_4/bug825
+@@ -31,12 +31,12 @@ if { [ catch { set info_result [OCC825 a1 a2 a3 res1 res2 0] } ] } {
+     }
+     checkshape res1
+ 
+-    set nbFace_exp 0
+-    set nbShell_exp 0
+-    set nbSolid_exp 0
++    set nbFace_exp 2
++    set nbShell_exp 1
++    set nbSolid_exp 1
+     set nbCompSolid_exp 0
+     set nbCompound_exp 1
+-    set nbShape_exp 1
++    set nbShape_exp 15
+         
+     set nb_info [nbshapes res1]
+     regexp {FACE +: +([-0-9.+eE]+)} $nb_info full nb_face
+diff --git a/tests/bugs/modalg_5/bug25111 b/tests/bugs/modalg_5/bug25111
+new file mode 100644
+index 0000000000..b09bec1683
+--- /dev/null
++++ b/tests/bugs/modalg_5/bug25111
+@@ -0,0 +1,30 @@
++puts "============"
++puts "OCC25111"
++puts "============"
++puts ""
++#######################################################################
++# Incomplete section curve between Conical and Toroidal surfaces
++#######################################################################
++
++restore [locate_data_file bug25111_s1.draw] s1
++restore [locate_data_file bug25111_s2.draw] s2
++
++mkface f1 s1
++mkface f2 s2
++
++bop f1 f2
++bopsection result
++
++set length 53.1714
++
++set nb_v_good 3
++set nb_e_good 2
++set nb_w_good 0
++set nb_f_good 0
++set nb_sh_good 0
++set nb_sol_good 0
++set nb_compsol_good 0
++set nb_compound_good  1
++set nb_shape_good 6
++
++set 2dviewer 1
+diff --git a/tests/draft/angle/G2 b/tests/draft/angle/G2
+old mode 100644
+new mode 100755
+index 0823acbf9e..04c296101e
+--- a/tests/draft/angle/G2
++++ b/tests/draft/angle/G2
+@@ -1,5 +1,6 @@
+ #E6----------------------------------------------
+ puts "TODO ?OCC22803 ALL: Faulty shapes in variables faulty_1 to faulty_"
++puts "TODO ?OCC25111 ALL: The area of the resulting shape is"
+ 
+ ptorus pt 25 24 90
+ profile pr o 20 18 5  p 0 -1 0 1 0 0 l 10 t 0 30 \

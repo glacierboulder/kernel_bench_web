@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "issue": "occt-26310",
+  "status": "qualified",
+  "source_kind": "curator-derived inverse patch",
+  "source_commit": "ea80ac2f61af25a4bcf4516a89e0b302e10e7e82",
+  "git_tree": "897efce5a1b25da25d2b24e9c5c34f7db380106a",
+  "materialized_tree_sha256": "68c2998046770a79ef06930800143bda51405c3ed162bcc91c973c1c40101973",
+  "reference": {
+    "source_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+    "git_tree": "29ea14e7dce1ccb003a42e297192d4a0c561eb2b",
+    "source_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+    "kind": "natural later commit"
+  },
+  "qualification": {
+    "b": {
+      "label": "m26310-b-qualification-01",
+      "model_called": false,
+      "source_commit": "ea80ac2f61af25a4bcf4516a89e0b302e10e7e82",
+      "source_tree_sha256": "68c2998046770a79ef06930800143bda51405c3ed162bcc91c973c1c40101973",
+      "build_receipt_sha256": "da2cb4cd878323dc86a89bff87374eae65e44d7239059cba6dd8a7c01bd211c9",
+      "binary_manifest_sha256": "3edb7fadf22ed6e9bf8d884edcfa62ef2a2c94e11a5c2cc114021ddde96aba70",
+      "results": {
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_swap": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_separated": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T16:06:46.732215+00:00"
+    },
+    "f": {
+      "label": "m26310-f-qualification-01",
+      "model_called": false,
+      "source_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+      "source_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+      "build_receipt_sha256": "b852753001bec69e1d20ba96350b0d765016f43fd302260f9ed56a0e5d1cea17",
+      "binary_manifest_sha256": "28b9c89463781222704628b1fdf4330a4732008c9904e449ffb1397dacd79d66",
+      "results": {
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_swap": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_separated": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T16:06:51.399184+00:00"
+    }
+  },
+  "stage": "unknown",
+  "stage_note": "The earliest internal failing stage has not been localized by this authoring run.",
+  "limits": [
+    "The baseline reverses the complete issue-linked source patch on the verified 2015-08 natural tree. The qualified reference is the exact later 7.9.3 commit.",
+    "Support error is measured from world-space analytic cylinder axes and radii. Distance to a finite trimmed face was an inappropriate earlier support metric because curve endpoints can lie beyond its finite boundary.",
+    "The fixed support-distance limit remains 1e-6. The published four-curve API expectation and closed valid solid-section result are additional independent checks.",
+    "The related upstream issue includes performance symptoms. Qualification here establishes the reproduced geometric defect and declared controls, without a performance score."
+  ],
+  "origin_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+  "origin_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+  "source_patch_sha256": "8d7aad3862dbb6aa20a684e73f741af9039434653ce2381d266c115e983c37f1",
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0026310/",
+  "upstream_fix_lead": "7365fad60b92a2fa1bd3616eb8eaeceda5b567ef",
+  "input_provenance": {
+    "repository": "a-betenev/opencascade-dataset",
+    "commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1",
+    "files": [
+      {
+        "name": "OCC26310-b1.brep",
+        "git_blob": "5606230d605c43ddd2b0986525297b787fc321ac",
+        "sha256": "4170359cac6702745069e56666e3291d49bd8ed60b6123738539622301b33401",
+        "bytes": 2072
+      },
+      {
+        "name": "OCC26310-b2.brep",
+        "git_blob": "a0ad63b6f625543ffd5904a43bbfa1c35964cca9",
+        "sha256": "d9d64d7bfe9837b8fc94975f4fcc5c8970555adf3171b186d2fab7e04fbed2f7",
+        "bytes": 2005
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "issue": 25542,
+  "cases": [
+    {
+      "id": "original",
+      "script": "occt-25542/1/original.tcl",
+      "category": "original",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain"
+      ]
+    },
+    {
+      "id": "neighborhood_rigid",
+      "script": "occt-25542/1/neighborhood_rigid.tcl",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain"
+      ]
+    },
+    {
+      "id": "neighborhood_swap",
+      "script": "occt-25542/1/neighborhood_swap.tcl",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain"
+      ]
+    },
+    {
+      "id": "regression_healthy",
+      "script": "occt-25542/1/regression_healthy.tcl",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain"
+      ]
+    },
+    {
+      "id": "negative_empty",
+      "script": "occt-25542/1/negative_empty.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain"
+      ]
+    },
+    {
+      "id": "negative_missing",
+      "script": "occt-25542/1/negative_missing.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain"
+      ]
+    },
+    {
+      "id": "negative_shifted",
+      "script": "occt-25542/1/negative_shifted.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain"
+      ]
+    }
+  ]
+}

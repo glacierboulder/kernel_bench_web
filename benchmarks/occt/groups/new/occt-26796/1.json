@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-26796",
+  "version": "1",
+  "title": "OCCT · 近接触盒体的 General Fuse 分块错误",
+  "kind": "single",
+  "source_id": "occt-single20-6435b9c7fafd",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-26796",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single20-26796-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

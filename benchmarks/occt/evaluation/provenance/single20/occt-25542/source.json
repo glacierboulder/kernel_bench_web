@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "issue": "occt-25542",
+  "status": "qualified",
+  "source_kind": "natural historical commit",
+  "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "git_tree": "12c23eb7bbf0b6d6c841cbb1c7aac6e2e7d14e62",
+  "materialized_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+  "reference": {
+    "source_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+    "git_tree": "29ea14e7dce1ccb003a42e297192d4a0c561eb2b",
+    "source_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+    "kind": "natural later commit"
+  },
+  "qualification": {
+    "b": {
+      "label": "m25542-b-qualification-01",
+      "model_called": false,
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "build_receipt_sha256": "e9e8f08e77fc823099dad504aa655935f7bae163ce14ff66c9d92af522598715",
+      "binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "results": {
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_swap": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_healthy": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T15:08:27.212102+00:00"
+    },
+    "f": {
+      "label": "m25542-2025-qualification-01",
+      "model_called": false,
+      "source_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+      "source_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+      "build_receipt_sha256": "b852753001bec69e1d20ba96350b0d765016f43fd302260f9ed56a0e5d1cea17",
+      "binary_manifest_sha256": "28b9c89463781222704628b1fdf4330a4732008c9904e449ffb1397dacd79d66",
+      "results": {
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_swap": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_healthy": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T15:23:07.825351+00:00"
+    }
+  },
+  "stage": "unknown",
+  "stage_note": "The earliest internal failing stage has not been localized by this authoring run.",
+  "limits": [
+    "Published area 6951.3 uses upstream relative epsilon 1e-4. BRepCheck, GProp and bounding boxes are additional predicates.",
+    "The 2021 natural reference fails the fixed rigid neighborhood. The qualified natural reference is exact OCCT 7.9.3.",
+    "The related M29807 repair family already exists in the old catalog. Inputs and issue identity differ, so the statistical correlation must be retained."
+  ],
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0025542/",
+  "input_provenance": {
+    "repository": "a-betenev/opencascade-dataset",
+    "commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1",
+    "files": [
+      {
+        "name": "bug25542_cone.brep",
+        "git_blob": "3fb8bc870cebaad3aa5c8a685f128a0d768ddb90",
+        "sha256": "fc7f2602e2ad5fe2c035aef011c89c579d33fa362f3ff14cbc31a606e292452a",
+        "bytes": 48839
+      },
+      {
+        "name": "bug25542_cylinder.brep",
+        "git_blob": "76c7e4cefaaa989597d23d1134b501bd331b8982",
+        "sha256": "1371c9f4a84036066c2acdc0b941535d63448ddf7436f5e4930d1ce7e2fe4fec",
+        "bytes": 14320
+      }
+    ]
+  }
+}

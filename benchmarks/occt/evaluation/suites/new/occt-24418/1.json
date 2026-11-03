@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-24418-checks",
+  "version": "1",
+  "title": "M24418 几何检查",
+  "source_ids": [
+    "occt-single20-1511c7e90f1a"
+  ],
+  "group_ids": [
+    "occt-single20-24418"
+  ],
+  "checkpoints": [
+    {
+      "id": "24418-neighborhood_swap",
+      "issue_id": "occt-24418",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-24418/1/neighborhood_swap.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "nonempty_result",
+          "support_residual",
+          "branch_closed",
+          "analytic_coverage"
+        ]
+      }
+    },
+    {
+      "id": "24418-neighborhood_translation",
+      "issue_id": "occt-24418",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-24418/1/neighborhood_translation.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "nonempty_result",
+          "support_residual",
+          "branch_closed",
+          "analytic_coverage"
+        ]
+      }
+    },
+    {
+      "id": "24418-original",
+      "issue_id": "occt-24418",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-24418/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "nonempty_result",
+          "support_residual",
+          "branch_closed",
+          "analytic_coverage"
+        ]
+      }
+    },
+    {
+      "id": "24418-regression_separated",
+      "issue_id": "occt-24418",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-24418/1/regression_separated.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "nonempty_result",
+          "support_residual",
+          "branch_closed",
+          "analytic_coverage"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/single20/occt-24418/1/torus_cone.tcl"
+  ]
+}

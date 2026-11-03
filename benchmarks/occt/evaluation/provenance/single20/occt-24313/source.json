@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "issue": "occt-24313",
+  "status": "qualified",
+  "source_kind": "curator-derived inverse source patch",
+  "source_commit": "78b6b239841fdbe47b9cf51493739def58c01848",
+  "git_tree": "963abb8a3793745d7b8de3dd32277db1d8e3f835",
+  "materialized_tree_sha256": "793845f1abc97f49cbf4570663181ff195688429c8f84e3b65399d52d59eac89",
+  "origin_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "origin_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+  "upstream_fix": "94218044fe194a784e93eb6cf18c13c1319fd558",
+  "reference_patch_sha256": "27f0781d306815684d2e5c8b311298e02595f90d12f557f1f2db7453c3102c8a",
+  "derivation": "Apply inverse-source.patch in reverse to origin_commit. The resulting verified Git commit is the task baseline. Apply reference.patch to restore the complete natural reference tree.",
+  "derivation_scope": "Functional extrusion/revolution/offset dispatch block ported from the upstream repair; later unrelated code and formatting are retained.",
+  "geometry_evidence": {
+    "b": {
+      "label": "m24313-b-calibration-02",
+      "model_called": false,
+      "source_commit": "78b6b239841fdbe47b9cf51493739def58c01848",
+      "source_tree_sha256": "793845f1abc97f49cbf4570663181ff195688429c8f84e3b65399d52d59eac89",
+      "build_receipt_sha256": "079ee38c4ed790c57997273c2d2481fa032fb30e5d0dd1624d4dad7d4f4e47b2",
+      "binary_manifest_sha256": "d84a3f97d652c5969278996b70e3c2009665789f9411d8804e3e224c14b3028b",
+      "results": {
+        "negative_duplicate": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_truncated": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_frame": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_radius": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_analytic_cylinder": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T12:07:47.730295+00:00"
+    },
+    "f": {
+      "label": "m24313-f-calibration-02",
+      "model_called": false,
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "build_receipt_sha256": "e9e8f08e77fc823099dad504aa655935f7bae163ce14ff66c9d92af522598715",
+      "binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "results": {
+        "negative_duplicate": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_truncated": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_frame": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_radius": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_analytic_cylinder": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T12:07:52.750928+00:00"
+    }
+  },
+  "limits": [
+    "Point residuals use fixed diagnostic positions and do not prove arbitrary curve equivalence.",
+    "No model evaluation has been run for this new task."
+  ],
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0024313/",
+  "upstream_fix_lead": "94218044fe194a784e93eb6cf18c13c1319fd558"
+}

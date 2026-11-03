@@ -1,0 +1,16 @@
+{
+  "issue": 25102,
+  "qualification": "screening only",
+  "cases": [
+    {
+      "id": "original_probe",
+      "script": "occt-25102/1/original_probe.tcl",
+      "category": "original",
+      "expected_assertion_ids": [
+        "edge_count",
+        "validity",
+        "length"
+      ]
+    }
+  ]
+}

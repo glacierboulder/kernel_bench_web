@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "issue": "occt-24097",
+  "status": "qualified",
+  "source_kind": "natural historical commit",
+  "source_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+  "git_tree": "a0520348e5dddfcec577466f2587763ae7640d56",
+  "materialized_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+  "reference": {
+    "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "git_tree": "12c23eb7bbf0b6d6c841cbb1c7aac6e2e7d14e62",
+    "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "kind": "natural later commit"
+  },
+  "qualification": {
+    "b": {
+      "label": "m24097-b-qualification-01",
+      "model_called": false,
+      "source_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "source_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "build_receipt_sha256": "cc1788e23ded226625073e80fe5bd8ce44d1411f314dc078e051d2247c8df804",
+      "binary_manifest_sha256": "7b147181424fffb426b6b6cd62b420b0a7888646a2426ddf0237d80d8ac20026",
+      "results": {
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_swap": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_healthy": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T16:06:55.960389+00:00"
+    },
+    "f": {
+      "label": "m24097-f2016-qualification-01",
+      "model_called": false,
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "build_receipt_sha256": "e9e8f08e77fc823099dad504aa655935f7bae163ce14ff66c9d92af522598715",
+      "binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "results": {
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_rigid": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_swap": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_healthy": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_missing": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        }
+      },
+      "finished_at": "2026-11-02T16:07:00.527631+00:00"
+    }
+  },
+  "stage": "unknown",
+  "stage_note": "The earliest internal failing stage has not been localized by this authoring run.",
+  "limits": [
+    "The original screen incorrectly treated upstream length 0.125 as an exact geometric gold. It is superseded by an independent surface-equation derivation.",
+    "Independent de Boor evaluation and bicubic Y/Z inversion give length 0.12505590740085806. Bezier derivative convex-hull bounds establish a unique interior inverse throughout the input domain.",
+    "Length and nine witness distances use absolute limit 1e-6. Polyline convergence is numerical evidence and not a certified continuous global length bound."
+  ],
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0024097/",
+  "input_provenance": {
+    "repository": "a-betenev/opencascade-dataset",
+    "commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1",
+    "files": [
+      {
+        "name": "bug24097_face1.brep",
+        "git_blob": "e2aec6221f0896691be6b82cccc503433c8375e2",
+        "sha256": "1ddd65ea55317a3d5869fc7457d0469138ed7951a7485e6491d4dd853108a1dd",
+        "bytes": 12174
+      },
+      {
+        "name": "bug24097_face2.brep",
+        "git_blob": "0b934e8d5afc84ed76a992ad07d0dae1d0e5b7aa",
+        "sha256": "c2ae5726310e39f6ddbc8ed140675652092cdcea329566eabaeed72f03f027e4",
+        "bytes": 27998
+      }
+    ]
+  }
+}

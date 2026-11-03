@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-24313-checks",
+  "version": "1",
+  "title": "M24313 geometry checks",
+  "source_ids": [
+    "occt-single20-m24313-78b6b239841f"
+  ],
+  "group_ids": [
+    "occt-single20-24313"
+  ],
+  "checkpoints": [
+    {
+      "id": "24313-neighborhood_frame",
+      "issue_id": "occt-24313",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-24313/1/neighborhood_frame.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "operation_completed",
+          "branch_count",
+          "support_residual",
+          "domain_coverage"
+        ],
+        "case_timeout_seconds": 90
+      }
+    },
+    {
+      "id": "24313-neighborhood_radius",
+      "issue_id": "occt-24313",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-24313/1/neighborhood_radius.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "operation_completed",
+          "branch_count",
+          "support_residual",
+          "domain_coverage"
+        ],
+        "case_timeout_seconds": 90
+      }
+    },
+    {
+      "id": "24313-original",
+      "issue_id": "occt-24313",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-24313/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "operation_completed",
+          "branch_count",
+          "support_residual",
+          "domain_coverage"
+        ],
+        "case_timeout_seconds": 90
+      }
+    },
+    {
+      "id": "24313-regression_analytic_cylinder",
+      "issue_id": "occt-24313",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-24313/1/regression_analytic_cylinder.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "operation_completed",
+          "branch_count",
+          "support_residual",
+          "domain_coverage"
+        ],
+        "case_timeout_seconds": 90
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/single20/occt-24313/1/extrusion_intersection.tcl"
+  ]
+}

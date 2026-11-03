@@ -1,0 +1,317 @@
+diff --git a/src/IntAna/IntAna_IntConicQuad.cdl b/src/IntAna/IntAna_IntConicQuad.cdl
+index a0549195ef..393e1a218f 100755
+--- a/src/IntAna/IntAna_IntConicQuad.cdl
++++ b/src/IntAna/IntAna_IntConicQuad.cdl
+@@ -144,23 +144,31 @@ is
+ ----------------------------------------------------------------------
+ 
+     Create(L : Lin from gp; P: Pln from gp; 
+-           Tolang: Real from Standard)
++           Tolang: Real from Standard;  
++           Tol : Real from Standard = 0;
++           Len : Real from Standard = 0)
+     
+-	---Purpose: Intersection between a line and a plane.
+-	--          Tolang is used to determine if the angle between two
+-	--          vectors is null.
++        ---Purpose: Intersection between a line and a plane.
++        --          Tolang is used to determine if the angle between two
++        --          vectors is null. 
++        --          Tol is used to check the distance between line and plane 
++        --          on the distance <Len> from the origin of the line.
+     
+-    	returns IntConicQuad from IntAna;
+-	
++    returns IntConicQuad from IntAna;
++
+ 
+     Perform(me: in out;
+-            L : Lin from gp; P: Pln from gp; Tolang: Real from Standard)
+-    
+-	---Purpose: Intersects a line and a plane.
+-	--          Tolang is used to determine if the angle between two
+-	--          vectors is null.
+-    
+-    	is static;
++            L : Lin from gp; P: Pln from gp; Tolang: Real from Standard;  
++            Tol : Real from Standard = 0;
++            Len : Real from Standard = 0)
++  
++        ---Purpose: Intersects a line and a plane.
++        --          Tolang is used to determine if the angle between two
++        --          vectors is null.
++        --          Tol is used to check the distance between line and plane 
++        --          on the distance <Len> from the origin of the line.
++    
++    is static;
+ 	
+ 
+     Create(C : Circ from gp; P: Pln from gp; 
+diff --git a/src/IntAna/IntAna_IntConicQuad.cxx b/src/IntAna/IntAna_IntConicQuad.cxx
+index 4aa9b15022..4bd0094bbd 100755
+--- a/src/IntAna/IntAna_IntConicQuad.cxx
++++ b/src/IntAna/IntAna_IntConicQuad.cxx
+@@ -376,8 +376,10 @@ PERFORM(const gp_Hypr& H,const IntAna_Quadric& Quad) {
+ 
+ 
+ IntAna_IntConicQuad::IntAna_IntConicQuad (const gp_Lin& L, const gp_Pln& P,
+-					  const Standard_Real Tolang) {
+-  Perform(L,P,Tolang);
++                                          const Standard_Real Tolang,
++                                          const Standard_Real Tol,
++                                          const Standard_Real Len) {
++  Perform(L,P,Tolang,Tol,Len);
+ }
+ 
+ 
+@@ -408,7 +410,9 @@ IntAna_IntConicQuad::IntAna_IntConicQuad (const gp_Hypr& H, const gp_Pln& P,
+ 
+ 
+ void IntAna_IntConicQuad::Perform (const gp_Lin& L, const gp_Pln& P,
+-				   const Standard_Real Tolang) {
++                                   const Standard_Real Tolang,
++                                   const Standard_Real Tol,
++                                   const Standard_Real Len) {
+   
+   // Tolang represente la tolerance angulaire a partir de laquelle on considere
+   // que l angle entre 2 vecteurs est nul. On raisonnera sur le cosinus de cet
+@@ -426,9 +430,22 @@ void IntAna_IntConicQuad::Perform (const gp_Lin& L, const gp_Pln& P,
+ 
+   Direc=A*Al+B*Bl+C*Cl;
+   Dis = A*Orig.X() + B*Orig.Y() + C*Orig.Z() + D;
+-
++  //
++  parallel=Standard_False;
+   if (Abs(Direc) < Tolang) {
+-    parallel= Standard_True;
++    parallel=Standard_True;
++    if (Len!=0 && Direc!=0) {
++      //check the distance from bounding point of the line to the plane
++      gp_Pnt aP1, aP2;
++      //
++      aP1.SetCoord(Orig.X()-Dis*A, Orig.Y()-Dis*B, Orig.Z()-Dis*C);
++      aP2.SetCoord(aP1.X()+Len*Al, aP1.Y()+Len*Bl, aP1.Z()+Len*Cl);
++      if (P.Distance(aP2) > Tol) {
++        parallel=Standard_False;
++      } 
++    }
++  }
++  if (parallel) {
+     if (Abs(Dis) < Tolang) {
+       inquadric=Standard_True;
+     }
+@@ -441,9 +458,9 @@ void IntAna_IntConicQuad::Perform (const gp_Lin& L, const gp_Pln& P,
+     inquadric=Standard_False;
+     nbpts = 1;
+     paramonc [0] = - Dis/Direc;
+-    pnts[0].SetCoord(Orig.X()+paramonc[0]*Al
+-		     , Orig.Y()+paramonc[0]*Bl
+-		     , Orig.Z()+paramonc[0]*Cl);
++    pnts[0].SetCoord(Orig.X()+paramonc[0]*Al,
++                     Orig.Y()+paramonc[0]*Bl,
++                     Orig.Z()+paramonc[0]*Cl);
+   }
+   done=Standard_True;
+ }
+diff --git a/src/IntAna/IntAna_QuadQuadGeo.cdl b/src/IntAna/IntAna_QuadQuadGeo.cdl
+index 12f2e416a9..a65f5275ef 100755
+--- a/src/IntAna/IntAna_QuadQuadGeo.cdl
++++ b/src/IntAna/IntAna_QuadQuadGeo.cdl
+@@ -93,33 +93,38 @@ is
+ 
+     Create(P : Pln      from gp; 
+            C : Cylinder from gp; 
+-           Tolang,Tol: Real from Standard)
+-    
+-	---Purpose: Creates the intersection between a plane and a cylinder.
+-    	--          TolAng is the angular tolerance used to determine
+-    	--          if the axis of the cylinder is parallel to the plane.
+-    	--          Tol is the tolerance used to determine if the result
+-    	--          is a circle or an ellipse. If the maximum distance between
+-    	--          the ellipse solution and the circle centered at the ellipse
+-    	--          center is less than Tol, the result will be the circle.
++           Tolang,Tol: Real from Standard; 
++           H : Real from Standard = 0)
++    ---Purpose: Creates the intersection between a plane and a cylinder.
++    --          TolAng is the angular tolerance used to determine
++    --          if the axis of the cylinder is parallel to the plane.
++    --          Tol is the tolerance used to determine if the result
++    --          is a circle or an ellipse. If the maximum distance between
++    --          the ellipse solution and the circle centered at the ellipse
++    --          center is less than Tol, the result will be the circle. 
++    --          H is the height of the cylinder <Cyl>. It is  used to check
++    --          whether the plane and cylinder are parallel.
+ 
+-    	returns QuadQuadGeo from IntAna;
++    returns QuadQuadGeo from IntAna;
+ 	
+ 
+     Perform(me: in out; 
+             P : Pln      from gp; 
+             C : Cylinder from gp; 
+-            Tolang,Tol: Real from Standard)
++            Tolang,Tol: Real from Standard; 
++            H :Real from Standard = 0)
+     
+-	---Purpose: Intersects a plane and a cylinder.
+-    	--          TolAng is the angular tolerance used to determine
+-    	--          if the axis of the cylinder is parallel to the plane.
+-    	--          Tol is the tolerance used to determine if the result
+-    	--          is a circle or an ellipse. If the maximum distance between
+-    	--          the ellipse solution and the circle centered at the ellipse
+-    	--          center is less than Tol, the result will be the circle.
+-
+-    	is static;
++    ---Purpose: Intersects a plane and a cylinder.
++    --          TolAng is the angular tolerance used to determine
++    --          if the axis of the cylinder is parallel to the plane.
++    --          Tol is the tolerance used to determine if the result
++    --          is a circle or an ellipse. If the maximum distance between
++    --          the ellipse solution and the circle centered at the ellipse
++    --          center is less than Tol, the result will be the circle.
++    --          H is the height of the cylinder <Cyl>. It is  used to check
++    --          whether the plane and cylinder are parallel.
++
++    is static;
+ 	
+ 
+     Create(P : Pln    from gp; 
+diff --git a/src/IntAna/IntAna_QuadQuadGeo.cxx b/src/IntAna/IntAna_QuadQuadGeo.cxx
+index 942b620538..a951b78d11 100755
+--- a/src/IntAna/IntAna_QuadQuadGeo.cxx
++++ b/src/IntAna/IntAna_QuadQuadGeo.cxx
+@@ -356,7 +356,8 @@ gp_Ax2 DirToAx2(const gp_Pnt& P,const gp_Dir& D)
+   IntAna_QuadQuadGeo::IntAna_QuadQuadGeo( const gp_Pln& P
+        ,const gp_Cylinder& Cl
+        ,const Standard_Real Tolang
+-       ,const Standard_Real Tol)
++       ,const Standard_Real Tol
++       ,const Standard_Real H)
+     : done(Standard_False),
+       nbint(0),
+       typeres(IntAna_Empty),
+@@ -370,16 +371,17 @@ gp_Ax2 DirToAx2(const gp_Pnt& P,const gp_Dir& D)
+       myPChar(0,0,0)
+ {
+   InitTolerances();
+-  Perform(P,Cl,Tolang,Tol);
++  Perform(P,Cl,Tolang,Tol,H);
+ }
+ //=======================================================================
+ //function : Perform
+ //purpose  : 
+ //=======================================================================
+   void IntAna_QuadQuadGeo::Perform( const gp_Pln& P
+-				   ,const gp_Cylinder& Cl
+-				   ,const Standard_Real Tolang
+-				   ,const Standard_Real Tol) 
++                                   ,const gp_Cylinder& Cl
++                                   ,const Standard_Real Tolang
++                                   ,const Standard_Real Tol
++                                   ,const Standard_Real H) 
+ {
+   done = Standard_False;
+   Standard_Real dist,radius;
+@@ -422,7 +424,7 @@ gp_Ax2 DirToAx2(const gp_Pnt& P,const gp_Dir& D)
+     }
+ 
+   nbint = 0;
+-  IntAna_IntConicQuad inter(axec,P,tolang);
++  IntAna_IntConicQuad inter(axec,P,tolang,Tol,H);
+ 
+   if (inter.IsParallel()) {
+     // Le resultat de l intersection Plan-Cylindre est de type droite.
+diff --git a/src/IntPatch/IntPatch_ImpImpIntersection_1.gxx b/src/IntPatch/IntPatch_ImpImpIntersection_1.gxx
+index 8c27c642bc..701f9ee4d3 100755
+--- a/src/IntPatch/IntPatch_ImpImpIntersection_1.gxx
++++ b/src/IntPatch/IntPatch_ImpImpIntersection_1.gxx
+@@ -32,7 +32,8 @@ static Standard_Boolean IntPCy (const IntSurf_Quadric&,
+ 				const Standard_Real,
+ 				const Standard_Boolean,
+ 				Standard_Boolean&,
+-				IntPatch_SequenceOfLine&);
++				IntPatch_SequenceOfLine&,
++                                const Standard_Real H=0.);
+ 
+ 
+ static Standard_Boolean IntPSp (const IntSurf_Quadric&,
+diff --git a/src/IntPatch/IntPatch_ImpImpIntersection_2.gxx b/src/IntPatch/IntPatch_ImpImpIntersection_2.gxx
+index 711bf0e1b1..ecf851f5dc 100755
+--- a/src/IntPatch/IntPatch_ImpImpIntersection_2.gxx
++++ b/src/IntPatch/IntPatch_ImpImpIntersection_2.gxx
+@@ -101,7 +101,8 @@ void IntPatch_ImpImpIntersection::Perform(const Handle(Adaptor3d_HSurface)&  S1,
+       case GeomAbs_Cylinder:
+ 	{
+ 	  quad2.SetValue(S2->Cylinder());
+-	  if (!IntPCy(quad1,quad2,Tolang,TolTang,Standard_False,empt,slin)) {
++          Standard_Real H = S1->LastVParameter() - S1->FirstVParameter();
++	  if (!IntPCy(quad1,quad2,Tolang,TolTang,Standard_False,empt,slin,H)) {
+ 	    return;
+ 	  }
+ 	  if (empt) {
+@@ -157,7 +158,8 @@ void IntPatch_ImpImpIntersection::Perform(const Handle(Adaptor3d_HSurface)&  S1,
+       case GeomAbs_Plane:
+ 	{
+ 	  quad2.SetValue(S2->Plane());
+-	  if (!IntPCy(quad1,quad2,Tolang,TolTang,Standard_True,empt,slin)) {
++          Standard_Real H = S1->LastVParameter() - S1->FirstVParameter();
++	  if (!IntPCy(quad1,quad2,Tolang,TolTang,Standard_True,empt,slin,H)) {
+ 	    return;
+ 	  }
+ 	  if (empt) {
+diff --git a/src/IntPatch/IntPatch_ImpImpIntersection_3.gxx b/src/IntPatch/IntPatch_ImpImpIntersection_3.gxx
+index 850c61c3e0..bcde303857 100755
+--- a/src/IntPatch/IntPatch_ImpImpIntersection_3.gxx
++++ b/src/IntPatch/IntPatch_ImpImpIntersection_3.gxx
+@@ -92,7 +92,8 @@ Standard_Boolean IntPCy (const IntSurf_Quadric& Quad1,
+ 			 const Standard_Real TolTang,
+ 			 const Standard_Boolean Reversed,
+ 			 Standard_Boolean& Empty,
+-			 IntPatch_SequenceOfLine& slin)
++			 IntPatch_SequenceOfLine& slin,
++                         const Standard_Real H)
+ 
+ {
+   gp_Pln Pl;
+@@ -110,7 +111,7 @@ Standard_Boolean IntPCy (const IntSurf_Quadric& Quad1,
+     Pl = Quad2.Plane();
+     Cy = Quad1.Cylinder();
+   }
+-  inter.Perform(Pl,Cy,Tolang,TolTang);
++  inter.Perform(Pl,Cy,Tolang,TolTang,H);
+   if (!inter.IsDone()) {return Standard_False;}
+   typint = inter.TypeInter();
+   Standard_Integer NbSol = inter.NbSolutions();
+diff --git a/tests/bugs/modalg_5/bug23985 b/tests/bugs/modalg_5/bug23985
+new file mode 100755
+index 0000000000..9c80efd80b
+--- /dev/null
++++ b/tests/bugs/modalg_5/bug23985
+@@ -0,0 +1,27 @@
++puts "========"
++puts "OCC23985"
++puts "========"
++puts ""
++##########################################
++## There is no section between attached faces
++##########################################
++
++set BugNumber 23985
++
++restore [locate_data_file bug23985_b1.brep] b1
++restore [locate_data_file bug23985_b2.brep] b2
++
++bsection result b1 b2
++
++set expl [explode result]
++
++set length [llength $expl]
++puts "Result is $length section edge"
++
++if {$length > 0} {
++    puts "${BugNumber} OK"
++} else {
++    puts "Faulty ${BugNumber}"
++}
++
++set 2dviewer 0

@@ -1,0 +1,13 @@
+diff --git a/src/IntPatch/IntPatch_WLineTool.cxx b/src/IntPatch/IntPatch_WLineTool.cxx
+index f3200190ac..d0730fbd53 100644
+--- a/src/IntPatch/IntPatch_WLineTool.cxx
++++ b/src/IntPatch/IntPatch_WLineTool.cxx
+@@ -1643,7 +1643,7 @@ void IntPatch_WLineTool::JoinWLines(IntPatch_SequenceOfLine& theSlin,
+                                            aWLine2->Point(aNbPntsWL2 - 1);
+ 
+       if (!CheckArgumentsToJoin(theS1, theS2, aPntLWL1, aPt1.Value(),
+-                                aPntFWL1.Value(), aPt2.Value(), aMinRad))
++                                aPntLWL1.Value(), aPt2.Value(), aMinRad))
+       {
+         continue;
+       }

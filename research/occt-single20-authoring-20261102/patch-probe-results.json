@@ -1,0 +1,466 @@
+[
+  {
+    "issue": "22790",
+    "upstream_commit": "f793011ee61ea62242341e501aa9961a73877a12",
+    "patch": "m22790-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "warning: src/IntTools/IntTools_EdgeEdge.cxx has type 100644, expected 100755\nerror: patch failed: src/IntTools/IntTools_EdgeEdge.cxx:56\nerror: src/IntTools/IntTools_EdgeEdge.cxx: patch does not apply\nerror: src/IntTools/IntTools_EdgeEdge.cdl: No such file or directory\nwarning: src/IntImp/IntImp_ComputeTangence.cxx has type 100644, expected 100755\nerror: patch failed: src/IntImp/IntImp_ComputeTangence.cxx:13\nerror: src/IntImp/IntImp_ComputeTangence.cxx: patch does not apply\nwarning: src/IFSelect/IFSelect_WorkSession.cxx has type 100644, expected 100755\n"
+  },
+  {
+    "issue": "22790",
+    "upstream_commit": "f793011ee61ea62242341e501aa9961a73877a12",
+    "patch": "m22790-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "warning: src/IntTools/IntTools_EdgeEdge.cxx has type 100644, expected 100755\nerror: patch failed: src/IntTools/IntTools_EdgeEdge.cxx:56\nerror: src/IntTools/IntTools_EdgeEdge.cxx: patch does not apply\nerror: src/IntTools/IntTools_EdgeEdge.cdl: No such file or directory\nwarning: src/IntImp/IntImp_ComputeTangence.cxx has type 100644, expected 100755\nerror: patch failed: src/IntImp/IntImp_ComputeTangence.cxx:13\nerror: src/IntImp/IntImp_ComputeTangence.cxx: patch does not apply\nwarning: src/IFSelect/IFSelect_WorkSession.cxx has type 100644, expected 100755\nerror: patch failed: src/IFSelect/IFSelect_WorkSession.cxx:3582\nerror: src/IFSelect/IFSelect_WorkSession.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "23389",
+    "upstream_commit": "3d063ba65fbe2ca2a4ed5d7cb9bab1b1dd202c6f",
+    "patch": "m23389-source-only.patch",
+    "base": "2016",
+    "applies": true,
+    "stderr": "warning: src/IntPolyh/IntPolyh_Intersection.cxx has type 100644, expected 100755\n"
+  },
+  {
+    "issue": "23389",
+    "upstream_commit": "3d063ba65fbe2ca2a4ed5d7cb9bab1b1dd202c6f",
+    "patch": "m23389-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "warning: src/IntPolyh/IntPolyh_Intersection.cxx has type 100644, expected 100755\nerror: patch failed: src/IntPolyh/IntPolyh_Intersection.cxx:352\nerror: src/IntPolyh/IntPolyh_Intersection.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "23933",
+    "upstream_commit": "f14190252ba1e65bd89ad46ea7e9c304251d8a4d",
+    "patch": "m23933-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "warning: src/IntTools/IntTools_BeanFaceIntersector.cxx has type 100644, expected 100755\nerror: patch failed: src/IntTools/IntTools_BeanFaceIntersector.cxx:62\nerror: src/IntTools/IntTools_BeanFaceIntersector.cxx: patch does not apply\nerror: patch failed: src/BOPTest/BOPTest_CheckCommands.cxx:133\nerror: src/BOPTest/BOPTest_CheckCommands.cxx: patch does not apply\nerror: patch failed: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx:348\nerror: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "23933",
+    "upstream_commit": "f14190252ba1e65bd89ad46ea7e9c304251d8a4d",
+    "patch": "m23933-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "warning: src/IntTools/IntTools_BeanFaceIntersector.cxx has type 100644, expected 100755\nerror: patch failed: src/IntTools/IntTools_BeanFaceIntersector.cxx:62\nerror: src/IntTools/IntTools_BeanFaceIntersector.cxx: patch does not apply\nerror: patch failed: src/BOPTest/BOPTest_CheckCommands.cxx:133\nerror: src/BOPTest/BOPTest_CheckCommands.cxx: patch does not apply\nerror: patch failed: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx:348\nerror: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "23981",
+    "upstream_commit": "7c4e9501b4845cb293ced0c3bfe3089ae75571ea",
+    "patch": "m23981-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "warning: src/IntStart/IntStart_SearchOnBoundaries.gxx has type 100644, expected 100755\nwarning: src/IntPatch/IntPatch_RstInt.cxx has type 100644, expected 100755\nerror: patch failed: src/IntPatch/IntPatch_RstInt.cxx:51\nerror: src/IntPatch/IntPatch_RstInt.cxx: patch does not apply\nwarning: src/GeomInt/GeomInt_IntSS_1.cxx has type 100644, expected 100755\nerror: patch failed: src/GeomInt/GeomInt_IntSS_1.cxx:952\nerror: src/GeomInt/GeomInt_IntSS_1.cxx: patch does not apply\nwarning: src/Extrema/Extrema_ExtPElS.cxx has type 100644, expected 100755\nerror: patch failed: src/Extrema/Extrema_ExtPElS.cxx:22\nerror: src/Extrema/Extrema_ExtPElS.cxx: patch does not apply\nwarning: src/Adaptor3d/Adaptor3d_TopolTool.cxx has type 100644, expected 100755\nerror: patch failed: src/Adaptor3d/Adaptor3d_TopolTool.cxx:24\nerror: src/Adaptor3d/Adaptor3d_TopolTool.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "23981",
+    "upstream_commit": "7c4e9501b4845cb293ced0c3bfe3089ae75571ea",
+    "patch": "m23981-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "warning: src/IntStart/IntStart_SearchOnBoundaries.gxx has type 100644, expected 100755\nwarning: src/IntPatch/IntPatch_RstInt.cxx has type 100644, expected 100755\nerror: patch failed: src/IntPatch/IntPatch_RstInt.cxx:51\nerror: src/IntPatch/IntPatch_RstInt.cxx: patch does not apply\nwarning: src/GeomInt/GeomInt_IntSS_1.cxx has type 100644, expected 100755\nerror: patch failed: src/GeomInt/GeomInt_IntSS_1.cxx:336\nerror: src/GeomInt/GeomInt_IntSS_1.cxx: patch does not apply\nwarning: src/Extrema/Extrema_ExtPElS.cxx has type 100644, expected 100755\nerror: patch failed: src/Extrema/Extrema_ExtPElS.cxx:22\nerror: src/Extrema/Extrema_ExtPElS.cxx: patch does not apply\nwarning: src/Adaptor3d/Adaptor3d_TopolTool.cxx has type 100644, expected 100755\nerror: patch failed: src/Adaptor3d/Adaptor3d_TopolTool.cxx:24\nerror: src/Adaptor3d/Adaptor3d_TopolTool.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "23985",
+    "upstream_commit": "04cbc9d384cc163efb088e10a8c6d638c899bcc0",
+    "patch": "m23985-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "warning: src/IntPatch/IntPatch_ImpImpIntersection_3.gxx has type 100644, expected 100755\nwarning: src/IntPatch/IntPatch_ImpImpIntersection_2.gxx has type 100644, expected 100755\nerror: patch failed: src/IntPatch/IntPatch_ImpImpIntersection_2.gxx:101\nerror: src/IntPatch/IntPatch_ImpImpIntersection_2.gxx: patch does not apply\nwarning: src/IntPatch/IntPatch_ImpImpIntersection_1.gxx has type 100644, expected 100755\nwarning: src/IntAna/IntAna_QuadQuadGeo.cxx has type 100644, expected 100755\nerror: patch failed: src/IntAna/IntAna_QuadQuadGeo.cxx:356\nerror: src/IntAna/IntAna_QuadQuadGeo.cxx: patch does not apply\nerror: src/IntAna/IntAna_QuadQuadGeo.cdl: No such file or directory\nwarning: src/IntAna/IntAna_IntConicQuad.cxx has type 100644, expected 100755\nerror: src/IntAna/IntAna_IntConicQuad.cdl: No such file or directory\n"
+  },
+  {
+    "issue": "23985",
+    "upstream_commit": "04cbc9d384cc163efb088e10a8c6d638c899bcc0",
+    "patch": "m23985-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "warning: src/IntPatch/IntPatch_ImpImpIntersection_3.gxx has type 100644, expected 100755\nwarning: src/IntPatch/IntPatch_ImpImpIntersection_2.gxx has type 100644, expected 100755\nerror: patch failed: src/IntPatch/IntPatch_ImpImpIntersection_2.gxx:101\nerror: src/IntPatch/IntPatch_ImpImpIntersection_2.gxx: patch does not apply\nwarning: src/IntPatch/IntPatch_ImpImpIntersection_1.gxx has type 100644, expected 100755\nwarning: src/IntAna/IntAna_QuadQuadGeo.cxx has type 100644, expected 100755\nerror: patch failed: src/IntAna/IntAna_QuadQuadGeo.cxx:356\nerror: src/IntAna/IntAna_QuadQuadGeo.cxx: patch does not apply\nerror: src/IntAna/IntAna_QuadQuadGeo.cdl: No such file or directory\nwarning: src/IntAna/IntAna_IntConicQuad.cxx has type 100644, expected 100755\nerror: src/IntAna/IntAna_IntConicQuad.cdl: No such file or directory\n"
+  },
+  {
+    "issue": "23998",
+    "upstream_commit": "d42d186778f1b19e6e839b86ce79b992df0964cf",
+    "patch": "m23998-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: src/IntWalk/IntWalk_PWalking_4.gxx: No such file or directory\n"
+  },
+  {
+    "issue": "23998",
+    "upstream_commit": "d42d186778f1b19e6e839b86ce79b992df0964cf",
+    "patch": "m23998-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: src/IntWalk/IntWalk_PWalking_4.gxx: No such file or directory\n"
+  },
+  {
+    "issue": "24142",
+    "upstream_commit": "b045e6a40b8b155b533e6e384a62142a680ef5b2",
+    "patch": "m24142-source-only.patch",
+    "base": "2016",
+    "applies": true,
+    "stderr": "warning: src/IntAna/IntAna_QuadQuadGeo.cxx has type 100644, expected 100755\n"
+  },
+  {
+    "issue": "24142",
+    "upstream_commit": "b045e6a40b8b155b533e6e384a62142a680ef5b2",
+    "patch": "m24142-source-only.patch",
+    "base": "2021",
+    "applies": true,
+    "stderr": "warning: src/IntAna/IntAna_QuadQuadGeo.cxx has type 100644, expected 100755\n"
+  },
+  {
+    "issue": "24161",
+    "upstream_commit": "6b5b88d70726548d087d441a4d8365d60a151080",
+    "patch": "m24161-source-only.patch",
+    "base": "2016",
+    "applies": true,
+    "stderr": ""
+  },
+  {
+    "issue": "24161",
+    "upstream_commit": "6b5b88d70726548d087d441a4d8365d60a151080",
+    "patch": "m24161-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntWalk/IntWalk_PWalking.cxx:1003\nerror: src/IntWalk/IntWalk_PWalking.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "24220",
+    "upstream_commit": "0e09ee8ee5d8791aa14fa43e64de23ee2aa5bfb1",
+    "patch": "m24220-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/BOPTest/BOPTest_CheckCommands.cxx:264\nerror: src/BOPTest/BOPTest_CheckCommands.cxx: patch does not apply\nerror: patch failed: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.lxx:56\nerror: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.lxx: patch does not apply\nerror: patch failed: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx:60\nerror: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx: patch does not apply\nerror: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cdl: No such file or directory\nerror: src/BOPAlgo/BOPAlgo.cdl: No such file or directory\n"
+  },
+  {
+    "issue": "24220",
+    "upstream_commit": "0e09ee8ee5d8791aa14fa43e64de23ee2aa5bfb1",
+    "patch": "m24220-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/BOPTest/BOPTest_CheckCommands.cxx:264\nerror: src/BOPTest/BOPTest_CheckCommands.cxx: patch does not apply\nerror: patch failed: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.lxx:56\nerror: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.lxx: patch does not apply\nerror: patch failed: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx:60\nerror: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cxx: patch does not apply\nerror: src/BOPAlgo/BOPAlgo_ArgumentAnalyzer.cdl: No such file or directory\nerror: src/BOPAlgo/BOPAlgo.cdl: No such file or directory\n"
+  },
+  {
+    "issue": "24313",
+    "upstream_commit": "94218044fe194a784e93eb6cf18c13c1319fd558",
+    "patch": "m24313-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "warning: src/IntTools/IntTools_FaceFace.cxx has type 100644, expected 100755\nerror: patch failed: src/IntTools/IntTools_FaceFace.cxx:1180\nerror: src/IntTools/IntTools_FaceFace.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "24313",
+    "upstream_commit": "94218044fe194a784e93eb6cf18c13c1319fd558",
+    "patch": "m24313-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "warning: src/IntTools/IntTools_FaceFace.cxx has type 100644, expected 100755\nerror: patch failed: src/IntTools/IntTools_FaceFace.cxx:1180\nerror: src/IntTools/IntTools_FaceFace.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "24418",
+    "upstream_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+    "patch": "m24418-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntPatch/IntPatch_WLineTool.cxx:1717\nerror: src/IntPatch/IntPatch_WLineTool.cxx: patch does not apply\nerror: patch failed: src/IntPatch/IntPatch_ALineToWLine.cxx:433\nerror: src/IntPatch/IntPatch_ALineToWLine.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "24418",
+    "upstream_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+    "patch": "m24418-source-only.patch",
+    "base": "2021",
+    "applies": true,
+    "stderr": ""
+  },
+  {
+    "issue": "24696",
+    "upstream_commit": "0d19eb340ec60a8a6c0ca53d66391654ebf16911",
+    "patch": "m24696-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_EdgeEdge.cxx:48\nerror: src/IntTools/IntTools_EdgeEdge.cxx: patch does not apply\nerror: src/IntTools/IntTools_EdgeEdge.cdl: No such file or directory\n"
+  },
+  {
+    "issue": "24696",
+    "upstream_commit": "0d19eb340ec60a8a6c0ca53d66391654ebf16911",
+    "patch": "m24696-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_EdgeEdge.cxx:48\nerror: src/IntTools/IntTools_EdgeEdge.cxx: patch does not apply\nerror: src/IntTools/IntTools_EdgeEdge.cdl: No such file or directory\n"
+  },
+  {
+    "issue": "24832",
+    "upstream_commit": "0734c53d68ccd602e93925f9b1830e909e002784",
+    "patch": "m24832-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/Extrema/Extrema_ExtPS.cxx:20\nerror: src/Extrema/Extrema_ExtPS.cxx: patch does not apply\nerror: src/Extrema/Extrema_ExtPS.cdl: No such file or directory\nerror: patch failed: src/Extrema/Extrema_ExtPRevS.cxx:210\nerror: src/Extrema/Extrema_ExtPRevS.cxx: patch does not apply\nerror: src/Extrema/Extrema_ExtPRevS.cdl: No such file or directory\nerror: patch failed: src/Extrema/Extrema_ExtPExtS.cxx:33\nerror: src/Extrema/Extrema_ExtPExtS.cxx: patch does not apply\nerror: src/Extrema/Extrema_ExtPExtS.cdl: No such file or directory\n"
+  },
+  {
+    "issue": "24832",
+    "upstream_commit": "0734c53d68ccd602e93925f9b1830e909e002784",
+    "patch": "m24832-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/Extrema/Extrema_ExtPS.cxx:20\nerror: src/Extrema/Extrema_ExtPS.cxx: patch does not apply\nerror: src/Extrema/Extrema_ExtPS.cdl: No such file or directory\nerror: patch failed: src/Extrema/Extrema_ExtPRevS.cxx:203\nerror: src/Extrema/Extrema_ExtPRevS.cxx: patch does not apply\nerror: src/Extrema/Extrema_ExtPRevS.cdl: No such file or directory\nerror: patch failed: src/Extrema/Extrema_ExtPExtS.cxx:33\nerror: src/Extrema/Extrema_ExtPExtS.cxx: patch does not apply\nerror: src/Extrema/Extrema_ExtPExtS.cdl: No such file or directory\nerror: patch failed: src/Extrema/Extrema_ExtCS.cxx:264\nerror: src/Extrema/Extrema_ExtCS.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "25111",
+    "upstream_commit": "10ee997695095e4e62d0d197153665326a6939f3",
+    "patch": "m25111-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntPatch/IntPatch_ImpPrmIntersection.cxx:2330\nerror: src/IntPatch/IntPatch_ImpPrmIntersection.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "25111",
+    "upstream_commit": "10ee997695095e4e62d0d197153665326a6939f3",
+    "patch": "m25111-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntPatch/IntPatch_ImpPrmIntersection.cxx:2330\nerror: src/IntPatch/IntPatch_ImpPrmIntersection.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "25237",
+    "upstream_commit": "3e594885aa461fecca912e2daa80a003460faf9b",
+    "patch": "m25237-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_EdgeEdge.cxx:34\nerror: src/IntTools/IntTools_EdgeEdge.cxx: patch does not apply\nerror: src/IntTools/IntTools_EdgeEdge.cdl: No such file or directory\n"
+  },
+  {
+    "issue": "25237",
+    "upstream_commit": "3e594885aa461fecca912e2daa80a003460faf9b",
+    "patch": "m25237-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_EdgeEdge.cxx:34\nerror: src/IntTools/IntTools_EdgeEdge.cxx: patch does not apply\nerror: src/IntTools/IntTools_EdgeEdge.cdl: No such file or directory\n"
+  },
+  {
+    "issue": "25242",
+    "upstream_commit": "955b3e71028d2295439b0d9671e9c8b9b35301e2",
+    "patch": "m25242-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/BOPAlgo/FILES:6\nerror: src/BOPAlgo/FILES: patch does not apply\nerror: patch failed: src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx:300\nerror: src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx: patch does not apply\nerror: patch failed: src/BOPAlgo/BOPAlgo_PaveFiller_10.cxx:1\nerror: src/BOPAlgo/BOPAlgo_PaveFiller_10.cxx: patch does not apply\nerror: patch failed: src/BOPAlgo/BOPAlgo_PaveFiller.cxx:243\nerror: src/BOPAlgo/BOPAlgo_PaveFiller.cxx: patch does not apply\nerror: src/BOPAlgo/BOPAlgo_PaveFiller.cdl: No such file or directory\nerror: src/BOPAlgo/BOPAlgo_CheckerSI.cdl: No such file or directory\nerror: patch failed: src/BOPAlgo/BOPAlgo_BOP.cxx:39\nerror: src/BOPAlgo/BOPAlgo_BOP.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "25242",
+    "upstream_commit": "955b3e71028d2295439b0d9671e9c8b9b35301e2",
+    "patch": "m25242-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/BOPDS/BOPDS_Iterator.cxx:278\nerror: src/BOPDS/BOPDS_Iterator.cxx: patch does not apply\nerror: patch failed: src/BOPAlgo/FILES:6\nerror: src/BOPAlgo/FILES: patch does not apply\nerror: patch failed: src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx:300\nerror: src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx: patch does not apply\nerror: patch failed: src/BOPAlgo/BOPAlgo_PaveFiller_10.cxx:1\nerror: src/BOPAlgo/BOPAlgo_PaveFiller_10.cxx: patch does not apply\nerror: patch failed: src/BOPAlgo/BOPAlgo_PaveFiller.cxx:243\nerror: src/BOPAlgo/BOPAlgo_PaveFiller.cxx: patch does not apply\nerror: src/BOPAlgo/BOPAlgo_PaveFiller.cdl: No such file or directory\nerror: src/BOPAlgo/BOPAlgo_CheckerSI_1.cxx: already exists in working directory\nerror: patch failed: src/BOPAlgo/BOPAlgo_CheckerSI.cxx:146\nerror: src/BOPAlgo/BOPAlgo_CheckerSI.cxx: patch does not apply\nerror: src/BOPAlgo/BOPAlgo_CheckerSI.cdl: No such file or directory\nerror: patch failed: src/BOPAlgo/BOPAlgo_BOP.cxx:39\nerror: src/BOPAlgo/BOPAlgo_BOP.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "25337",
+    "upstream_commit": "524a5f7aa775cac7a9b8d47adc5700a586b1b9ce",
+    "patch": "m25337-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_EdgeEdge.cxx:326\nerror: src/IntTools/IntTools_EdgeEdge.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "25337",
+    "upstream_commit": "524a5f7aa775cac7a9b8d47adc5700a586b1b9ce",
+    "patch": "m25337-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_EdgeEdge.cxx:326\nerror: src/IntTools/IntTools_EdgeEdge.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "25531",
+    "upstream_commit": "7c32c7c41fa04f6f714524b3a3128bc1b6c93a63",
+    "patch": "m25531-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntPatch/IntPatch_WLine.cxx:1071\nerror: src/IntPatch/IntPatch_WLine.cxx: patch does not apply\nerror: patch failed: src/IntPatch/IntPatch_ImpImpIntersection_4.gxx:750\nerror: src/IntPatch/IntPatch_ImpImpIntersection_4.gxx: patch does not apply\nerror: src/ApproxInt/ApproxInt_MultiLineTool.cdl: No such file or directory\nerror: patch failed: src/ApproxInt/ApproxInt_MultiLine.gxx:613\nerror: src/ApproxInt/ApproxInt_MultiLine.gxx: patch does not apply\nerror: src/ApproxInt/ApproxInt_MultiLine.cdl: No such file or directory\nerror: patch failed: src/ApproxInt/ApproxInt_Approx.gxx:936\nerror: src/ApproxInt/ApproxInt_Approx.gxx: patch does not apply\n"
+  },
+  {
+    "issue": "25531",
+    "upstream_commit": "7c32c7c41fa04f6f714524b3a3128bc1b6c93a63",
+    "patch": "m25531-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntPatch/IntPatch_WLine.cxx:1071\nerror: src/IntPatch/IntPatch_WLine.cxx: patch does not apply\nerror: patch failed: src/IntPatch/IntPatch_ImpImpIntersection_4.gxx:750\nerror: src/IntPatch/IntPatch_ImpImpIntersection_4.gxx: patch does not apply\nerror: patch failed: src/ApproxInt/ApproxInt_MultiLineTool.lxx:115\nerror: src/ApproxInt/ApproxInt_MultiLineTool.lxx: patch does not apply\nerror: src/ApproxInt/ApproxInt_MultiLineTool.cdl: No such file or directory\nerror: patch failed: src/ApproxInt/ApproxInt_MultiLine.gxx:613\nerror: src/ApproxInt/ApproxInt_MultiLine.gxx: patch does not apply\nerror: src/ApproxInt/ApproxInt_MultiLine.cdl: No such file or directory\nerror: patch failed: src/ApproxInt/ApproxInt_Approx.gxx:936\nerror: src/ApproxInt/ApproxInt_Approx.gxx: patch does not apply\n"
+  },
+  {
+    "issue": "25818",
+    "upstream_commit": "9a5a19e98f025ef0c955b01408d2a7b23b5679ba",
+    "patch": "m25818-source-only.patch",
+    "base": "2016",
+    "applies": true,
+    "stderr": ""
+  },
+  {
+    "issue": "25818",
+    "upstream_commit": "9a5a19e98f025ef0c955b01408d2a7b23b5679ba",
+    "patch": "m25818-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_FaceFace.cxx:509\nerror: src/IntTools/IntTools_FaceFace.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "25890",
+    "upstream_commit": "9d32c463ad2e3a2abc768dcaabd01e69a7e00b27",
+    "patch": "m25890-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: src/IntImp/IntImp_Int2S.cdl: No such file or directory\n"
+  },
+  {
+    "issue": "25890",
+    "upstream_commit": "9d32c463ad2e3a2abc768dcaabd01e69a7e00b27",
+    "patch": "m25890-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntWalk/IntWalk_PWalking.cxx:710\nerror: src/IntWalk/IntWalk_PWalking.cxx: patch does not apply\nerror: patch failed: src/IntPolyh/IntPolyh_Intersection.cxx:232\nerror: src/IntPolyh/IntPolyh_Intersection.cxx: patch does not apply\nerror: src/IntImp/IntImp_Int2S.cdl: No such file or directory\n"
+  },
+  {
+    "issue": "26243",
+    "upstream_commit": "577c6f0d0ff52e9dd5d94b20ce9cf69407d86961",
+    "patch": "m26243-source-only.patch",
+    "base": "2016",
+    "applies": true,
+    "stderr": ""
+  },
+  {
+    "issue": "26243",
+    "upstream_commit": "577c6f0d0ff52e9dd5d94b20ce9cf69407d86961",
+    "patch": "m26243-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntAna/IntAna_QuadQuadGeo.cxx:2062\nerror: src/IntAna/IntAna_QuadQuadGeo.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "26310",
+    "upstream_commit": "7365fad60b92a2fa1bd3616eb8eaeceda5b567ef",
+    "patch": "m26310-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_FaceFace.cxx:1672\nerror: src/IntTools/IntTools_FaceFace.cxx: patch does not apply\nerror: patch failed: src/IntPatch/IntPatch_Intersection.cxx:36\nerror: src/IntPatch/IntPatch_Intersection.cxx: patch does not apply\nerror: patch failed: src/IntPatch/IntPatch_ImpImpIntersection_4.gxx:2510\nerror: src/IntPatch/IntPatch_ImpImpIntersection_4.gxx: patch does not apply\n"
+  },
+  {
+    "issue": "26310",
+    "upstream_commit": "7365fad60b92a2fa1bd3616eb8eaeceda5b567ef",
+    "patch": "m26310-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_FaceFace.cxx:644\nerror: src/IntTools/IntTools_FaceFace.cxx: patch does not apply\nerror: patch failed: src/IntPatch/IntPatch_Intersection.cxx:36\nerror: src/IntPatch/IntPatch_Intersection.cxx: patch does not apply\nerror: patch failed: src/IntPatch/IntPatch_ImpImpIntersection_4.gxx:14\nerror: src/IntPatch/IntPatch_ImpImpIntersection_4.gxx: patch does not apply\n"
+  },
+  {
+    "issue": "26383",
+    "upstream_commit": "260f924fe38a8950dafc89351f0b2481d7858758",
+    "patch": "m26383-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_FaceFace.cxx:285\nerror: src/IntTools/IntTools_FaceFace.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "26383",
+    "upstream_commit": "260f924fe38a8950dafc89351f0b2481d7858758",
+    "patch": "m26383-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_FaceFace.cxx:285\nerror: src/IntTools/IntTools_FaceFace.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "27269",
+    "upstream_commit": "b55bd02353519ebba14575f8056bb2b14585089e",
+    "patch": "m27269-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/GeomInt/GeomInt_IntSS_1.cxx:224\nerror: src/GeomInt/GeomInt_IntSS_1.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "27269",
+    "upstream_commit": "b55bd02353519ebba14575f8056bb2b14585089e",
+    "patch": "m27269-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/GeomInt/GeomInt_IntSS_1.cxx:224\nerror: src/GeomInt/GeomInt_IntSS_1.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "27896",
+    "upstream_commit": "f73c584ceb841cd6558e61ca694f60af7c0cec44",
+    "patch": "m27896-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntWalk/IntWalk_PWalking.hxx:177\nerror: src/IntWalk/IntWalk_PWalking.hxx: patch does not apply\nerror: patch failed: src/IntWalk/IntWalk_PWalking.cxx:2298\nerror: src/IntWalk/IntWalk_PWalking.cxx: patch does not apply\nerror: patch failed: src/IntPatch/IntPatch_WLine.cxx:479\nerror: src/IntPatch/IntPatch_WLine.cxx: patch does not apply\nerror: patch failed: src/IntPatch/IntPatch_PrmPrmIntersection.cxx:2331\nerror: src/IntPatch/IntPatch_PrmPrmIntersection.cxx: patch does not apply\nerror: patch failed: src/IntPatch/IntPatch_ImpPrmIntersection.cxx:1404\nerror: src/IntPatch/IntPatch_ImpPrmIntersection.cxx: patch does not apply\nerror: patch failed: src/Draft/Draft_Modification_1.cxx:1574\nerror: src/Draft/Draft_Modification_1.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "27896",
+    "upstream_commit": "f73c584ceb841cd6558e61ca694f60af7c0cec44",
+    "patch": "m27896-source-only.patch",
+    "base": "2021",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntWalk/IntWalk_PWalking.hxx:177\nerror: src/IntWalk/IntWalk_PWalking.hxx: patch does not apply\nerror: patch failed: src/IntWalk/IntWalk_PWalking.cxx:2298\nerror: src/IntWalk/IntWalk_PWalking.cxx: patch does not apply\nerror: patch failed: src/IntPatch/IntPatch_PrmPrmIntersection.cxx:2331\nerror: src/IntPatch/IntPatch_PrmPrmIntersection.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "28802",
+    "upstream_commit": "bdae3beb87cab7d4c34d4e31a1654a19088100a9",
+    "patch": "m28802-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_FaceFace.cxx:1313\nerror: src/IntTools/IntTools_FaceFace.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "28802",
+    "upstream_commit": "bdae3beb87cab7d4c34d4e31a1654a19088100a9",
+    "patch": "m28802-source-only.patch",
+    "base": "2021",
+    "applies": true,
+    "stderr": ""
+  },
+  {
+    "issue": "29038",
+    "upstream_commit": "28c08a7d40e6736f29fdcf6c20b05de48af198f1",
+    "patch": "m29038-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntTools/IntTools_EdgeEdge.hxx:156\nerror: src/IntTools/IntTools_EdgeEdge.hxx: patch does not apply\nerror: patch failed: src/IntTools/IntTools_EdgeEdge.cxx:505\nerror: src/IntTools/IntTools_EdgeEdge.cxx: patch does not apply\nerror: patch failed: src/BOPTools/BOPTools_AlgoTools.cxx:1888\nerror: src/BOPTools/BOPTools_AlgoTools.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "29038",
+    "upstream_commit": "28c08a7d40e6736f29fdcf6c20b05de48af198f1",
+    "patch": "m29038-source-only.patch",
+    "base": "2021",
+    "applies": true,
+    "stderr": ""
+  },
+  {
+    "issue": "30198",
+    "upstream_commit": "dce5b3eb0c3814802bade97009739d8a9b2f6a91",
+    "patch": "m30198-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntPolyh/IntPolyh_Triangle.cxx:574\nerror: src/IntPolyh/IntPolyh_Triangle.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "30198",
+    "upstream_commit": "dce5b3eb0c3814802bade97009739d8a9b2f6a91",
+    "patch": "m30198-source-only.patch",
+    "base": "2021",
+    "applies": true,
+    "stderr": ""
+  },
+  {
+    "issue": "31850",
+    "upstream_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+    "patch": "m31850-source-only.patch",
+    "base": "2016",
+    "applies": false,
+    "stderr": "error: patch failed: src/IntPatch/IntPatch_WLineTool.cxx:1643\nerror: src/IntPatch/IntPatch_WLineTool.cxx: patch does not apply\n"
+  },
+  {
+    "issue": "31850",
+    "upstream_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+    "patch": "m31850-source-only.patch",
+    "base": "2021",
+    "applies": true,
+    "stderr": ""
+  }
+]

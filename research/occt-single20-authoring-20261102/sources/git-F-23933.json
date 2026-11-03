@@ -1,0 +1,35 @@
+{
+  "sha": "f14190252ba1e65bd89ad46ea7e9c304251d8a4d",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOmYxNDE5MDI1MmJhMWU2NWJkODlhZDQ2ZWE3ZTljMzA0MjUxZDhhNGQ=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/f14190252ba1e65bd89ad46ea7e9c304251d8a4d",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/f14190252ba1e65bd89ad46ea7e9c304251d8a4d",
+  "author": {
+    "name": "emv",
+    "email": "emv@opencascade.com",
+    "date": "2013-05-23T07:55:08Z"
+  },
+  "committer": {
+    "name": "emv",
+    "email": "emv@opencascade.com",
+    "date": "2013-05-23T07:55:08Z"
+  },
+  "tree": {
+    "sha": "ca26c83ff8dbd55ac6dd34e936bb5384382541ea",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/ca26c83ff8dbd55ac6dd34e936bb5384382541ea"
+  },
+  "message": "0023933: Self intersection reported after Fuse operation.\n\nAdditional check has been added in IntTools_BeanFaceIntersector::FastComputeExactIntersection() to prevent\ncreating an Edge/Face intersection for the case when edge lies on the surface of the face, but not on the face itself.\nAdding test case for this fix",
+  "parents": [
+    {
+      "sha": "8b7c9cb46931ea0554e69098e30c14bf605b67ea",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/8b7c9cb46931ea0554e69098e30c14bf605b67ea",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/8b7c9cb46931ea0554e69098e30c14bf605b67ea"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

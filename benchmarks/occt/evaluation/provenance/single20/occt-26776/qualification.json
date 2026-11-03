@@ -1,0 +1,112 @@
+{
+  "issue_id": "occt-26776",
+  "issue_version": "1",
+  "title": "OCCT · 偏置曲面与拉伸面截交不完整",
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "group_id": "occt-single20-26776",
+  "suite": {
+    "id": "occt-single20-26776-checks",
+    "version": "1"
+  },
+  "source_id": "occt-single20-1511c7e90f1a",
+  "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+  "source_kind": "natural historical commit",
+  "frozen_replay": "frozen-replay-07",
+  "reference_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+  "reference_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+  "upstream_url": "https://occt3d.com/dev/tickets/0026776/",
+  "verdict": "PASS",
+  "checkpoints": [
+    {
+      "role": "b",
+      "id": "26776-original",
+      "category": "original",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-07/occt-single20-26776/b/26776-original/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "b",
+      "id": "26776-neighborhood_rigid",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-07/occt-single20-26776/b/26776-neighborhood_rigid/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "b",
+      "id": "26776-neighborhood_swap",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-07/occt-single20-26776/b/26776-neighborhood_swap/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "b",
+      "id": "26776-regression_healthy",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-07/occt-single20-26776/b/26776-regression_healthy/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "f",
+      "id": "26776-original",
+      "category": "original",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-07/occt-single20-26776/f/26776-original/result.json",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+    },
+    {
+      "role": "f",
+      "id": "26776-neighborhood_rigid",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-07/occt-single20-26776/f/26776-neighborhood_rigid/result.json",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+    },
+    {
+      "role": "f",
+      "id": "26776-neighborhood_swap",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-07/occt-single20-26776/f/26776-neighborhood_swap/result.json",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+    },
+    {
+      "role": "f",
+      "id": "26776-regression_healthy",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-07/occt-single20-26776/f/26776-regression_healthy/result.json",
+      "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+    }
+  ],
+  "snapshots": {
+    "b": "baaa70c8a70d26faca3189e38302d131f1ffc14c6c019edc1be5b50231e35dd0",
+    "f": "baaa70c8a70d26faca3189e38302d131f1ffc14c6c019edc1be5b50231e35dd0"
+  },
+  "evidence_file": "evidence.json",
+  "result_path_namespace": "tar archive member path",
+  "negative_controls": {
+    "job": "m26776-f-qualification-01",
+    "rejected": [
+      "negative_empty",
+      "negative_missing",
+      "negative_shifted"
+    ]
+  },
+  "full_snapshots_reverified": true
+}

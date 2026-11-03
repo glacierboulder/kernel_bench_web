@@ -1,0 +1,35 @@
+{
+  "sha": "cccf81ea2a87f3f192ec92ea880c18c275a2ccc0",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOmNjY2Y4MWVhMmE4N2YzZjE5MmVjOTJlYTg4MGMxOGMyNzVhMmNjYzA=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/cccf81ea2a87f3f192ec92ea880c18c275a2ccc0",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/cccf81ea2a87f3f192ec92ea880c18c275a2ccc0",
+  "author": {
+    "name": "abv",
+    "email": "abv@opencascade.com",
+    "date": "2013-09-16T06:03:12Z"
+  },
+  "committer": {
+    "name": "bugmaster",
+    "email": "bugmaster@opencascade.com",
+    "date": "2013-09-26T16:28:47Z"
+  },
+  "tree": {
+    "sha": "f5da496042f43246d311c11174c769dfac7051a6",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/f5da496042f43246d311c11174c769dfac7051a6"
+  },
+  "message": "0024176: Array out-of-bound error in Vrml loader (test bugs moddata_3 bug23023)\n\nCode assigning normals to nodes of triangulation corrected to use correct index of the node and avoid array out-of-bound errors.",
+  "parents": [
+    {
+      "sha": "b4109929d6fe8fb1c86778bc57b3df86b37c063b",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/b4109929d6fe8fb1c86778bc57b3df86b37c063b",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/b4109929d6fe8fb1c86778bc57b3df86b37c063b"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

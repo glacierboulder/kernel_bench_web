@@ -1,0 +1,17 @@
+{
+  "issue": 31850,
+  "qualification": "screen only, exact upstream shared PaveFiller and bbop entry",
+  "cases": [
+    {
+      "script": "occt-31850/1/original_exact_probe.tcl",
+      "id": "original_exact_probe",
+      "category": "original",
+      "expected_assertion_ids": [
+        "common_valid",
+        "common_volume",
+        "cut_valid",
+        "cut_volume"
+      ]
+    }
+  ]
+}

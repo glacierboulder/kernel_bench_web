@@ -1,0 +1,18 @@
+{
+  "issue": 26243,
+  "scope": "author qualification input-legality audit; separate from frozen scoring rules",
+  "cases": [
+    {
+      "id": "input_legality",
+      "script": "occt-26243/1/input_legality.tcl",
+      "category": "qualification",
+      "expected_assertion_ids": [
+        "valid_first",
+        "valid_second"
+      ]
+    }
+  ],
+  "support_sha256": {
+    "occt-26243/1/input_legality.tcl": "f85785821487954fbfe0c192ebdc5d27df3c28d4bda63902f32ae0f9af38b42d"
+  }
+}

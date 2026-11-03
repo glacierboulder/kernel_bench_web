@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-26243-checks",
+  "version": "1",
+  "title": "带圆角模型的 Common 运算失败 · 几何检查",
+  "source_ids": [
+    "occt-single20-5163f4671951"
+  ],
+  "group_ids": [
+    "occt-single20-26243"
+  ],
+  "checkpoints": [
+    {
+      "id": "26243-neighborhood_rigid",
+      "issue_id": "occt-26243",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-26243/1/neighborhood_rigid.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "common_valid",
+          "common_solid_count",
+          "common_area",
+          "common_volume",
+          "common_centroid_domain"
+        ]
+      }
+    },
+    {
+      "id": "26243-neighborhood_swap",
+      "issue_id": "occt-26243",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-26243/1/neighborhood_swap.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "common_valid",
+          "common_solid_count",
+          "common_area",
+          "common_volume",
+          "common_centroid_domain"
+        ]
+      }
+    },
+    {
+      "id": "26243-original",
+      "issue_id": "occt-26243",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-26243/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "common_valid",
+          "common_solid_count",
+          "common_area",
+          "common_volume",
+          "common_centroid_domain"
+        ]
+      }
+    },
+    {
+      "id": "26243-regression_boxes",
+      "issue_id": "occt-26243",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-26243/1/regression_boxes.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 90,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "common_valid",
+          "common_solid_count",
+          "common_area",
+          "common_volume",
+          "common_centroid_domain"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/single20/solid_checks.tcl",
+    "evaluation/cases/single20/occt-26243/1/filleted_common.tcl",
+    "evaluation/cases/single20/occt-26243/1/bug26243_anc101.brep"
+  ]
+}

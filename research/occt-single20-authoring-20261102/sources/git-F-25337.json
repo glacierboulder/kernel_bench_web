@@ -1,0 +1,35 @@
+{
+  "sha": "524a5f7aa775cac7a9b8d47adc5700a586b1b9ce",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOjUyNGE1ZjdhYTc3NWNhYzdhOWI4ZDQ3YWRjNTcwMGE1ODZiMWI5Y2U=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/524a5f7aa775cac7a9b8d47adc5700a586b1b9ce",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/524a5f7aa775cac7a9b8d47adc5700a586b1b9ce",
+  "author": {
+    "name": "emv",
+    "email": "emv@opencascade.com",
+    "date": "2014-10-29T06:31:18Z"
+  },
+  "committer": {
+    "name": "bugmaster",
+    "email": "bugmaster@opencascade.com",
+    "date": "2014-10-30T10:49:30Z"
+  },
+  "tree": {
+    "sha": "13c2843ce374795bc9e413f946a577afebb6105d",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/13c2843ce374795bc9e413f946a577afebb6105d"
+  },
+  "message": "0025337: Regression to version 6.7.1 : boolean operations fail on two planar circular faces lying in the same plane\n\nclass IntTools_EdgeEdge\nmethod\n  void IntTools_EdgeEdge::FindSolutions(const IntTools_Range& theR1,\n                                        const IntTools_Range& theR2,\n                                        const Bnd_Box& theBox2,\n                                        IntTools_SequenceOfRanges& theRanges1,\n                                        IntTools_SequenceOfRanges& theRanges2)\nLooking for the solutions of the intersection between edges with greater precision.\n\nTest cases for the issue.",
+  "parents": [
+    {
+      "sha": "1ccc9700f82b8c95a6b44be01ecb42eda8f24456",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/1ccc9700f82b8c95a6b44be01ecb42eda8f24456",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/1ccc9700f82b8c95a6b44be01ecb42eda8f24456"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

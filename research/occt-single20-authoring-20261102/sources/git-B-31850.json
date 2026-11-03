@@ -1,0 +1,35 @@
+{
+  "sha": "135c2bd90858f779bb4557a909e18adf8422649e",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOjEzNWMyYmQ5MDg1OGY3NzliYjQ1NTdhOTA5ZTE4YWRmODQyMjY0OWU=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/135c2bd90858f779bb4557a909e18adf8422649e",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/135c2bd90858f779bb4557a909e18adf8422649e",
+  "author": {
+    "name": "emv",
+    "email": "emv@opencascade.com",
+    "date": "2020-10-13T11:31:27Z"
+  },
+  "committer": {
+    "name": "bugmaster",
+    "email": "bugmaster@opencascade.com",
+    "date": "2020-10-14T16:23:26Z"
+  },
+  "tree": {
+    "sha": "fdcf6c62873ff60bfb8a6fee6629201c90a8b32b",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/fdcf6c62873ff60bfb8a6fee6629201c90a8b32b"
+  },
+  "message": "0031835: Modeling Algorithms - step by step Boolean common produces bad shape on given three cylinders\n\nFix inconsistency between IntAna_QuadQuadGeo(gp_Cylinder,gp_Cylinder) and AxeOperator::Coplanar().",
+  "parents": [
+    {
+      "sha": "6eeb528cd1c2f2edbbcf02e884e1cb8caf165a8f",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/6eeb528cd1c2f2edbbcf02e884e1cb8caf165a8f",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/6eeb528cd1c2f2edbbcf02e884e1cb8caf165a8f"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "sha": "246c7a7554dd24047ada720fbfce42e9c10b4657",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOjI0NmM3YTc1NTRkZDI0MDQ3YWRhNzIwZmJmY2U0MmU5YzEwYjQ2NTc=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/246c7a7554dd24047ada720fbfce42e9c10b4657",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/246c7a7554dd24047ada720fbfce42e9c10b4657",
+  "author": {
+    "name": "aml",
+    "email": "aml@opencascade.com",
+    "date": "2016-04-12T09:15:07Z"
+  },
+  "committer": {
+    "name": "bugmaster",
+    "email": "bugmaster@opencascade.com",
+    "date": "2016-04-28T11:03:59Z"
+  },
+  "tree": {
+    "sha": "cbd175c317ede987c6deae8d90c9cc90db2c43ce",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/cbd175c317ede987c6deae8d90c9cc90db2c43ce"
+  },
+  "message": "0027371: Regression: BRepExtrema works too much slower in 691 (from 670)\n\nI\nLipschitz constant tuning.\nShubert estimation for minimal value is added.\n\nII\nMath_GlobOptMin Refactoring.\n\nIII\nTest case is added.\n\nclass NCollection_CellFilter_Inspector moved into math_GlobOptMin class.",
+  "parents": [
+    {
+      "sha": "4b5857d330d381ea52951f7b64336b455187a948",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/4b5857d330d381ea52951f7b64336b455187a948",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/4b5857d330d381ea52951f7b64336b455187a948"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

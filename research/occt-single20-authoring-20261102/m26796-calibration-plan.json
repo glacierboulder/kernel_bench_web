@@ -1,0 +1,96 @@
+{
+  "issue": 26796,
+  "cases": [
+    {
+      "script": "occt-26796/1/negative_empty.tcl",
+      "id": "negative_empty",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "four_solids",
+        "solid_validity",
+        "component_volumes",
+        "solid_area",
+        "preserved_centroid"
+      ]
+    },
+    {
+      "script": "occt-26796/1/negative_missing.tcl",
+      "id": "negative_missing",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "four_solids",
+        "solid_validity",
+        "component_volumes",
+        "solid_area",
+        "preserved_centroid"
+      ]
+    },
+    {
+      "script": "occt-26796/1/negative_shifted.tcl",
+      "id": "negative_shifted",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "four_solids",
+        "solid_validity",
+        "component_volumes",
+        "solid_area",
+        "preserved_centroid"
+      ]
+    },
+    {
+      "script": "occt-26796/1/neighborhood_angle.tcl",
+      "id": "neighborhood_angle",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "four_solids",
+        "solid_validity",
+        "component_volumes",
+        "solid_area",
+        "preserved_centroid"
+      ]
+    },
+    {
+      "script": "occt-26796/1/neighborhood_translation.tcl",
+      "id": "neighborhood_translation",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "four_solids",
+        "solid_validity",
+        "component_volumes",
+        "solid_area",
+        "preserved_centroid"
+      ]
+    },
+    {
+      "script": "occt-26796/1/original.tcl",
+      "id": "original",
+      "category": "original",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "four_solids",
+        "solid_validity",
+        "component_volumes",
+        "solid_area",
+        "preserved_centroid"
+      ]
+    },
+    {
+      "script": "occt-26796/1/regression_separated.tcl",
+      "id": "regression_separated",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "four_solids",
+        "solid_validity",
+        "component_volumes",
+        "solid_area",
+        "preserved_centroid"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-25542",
+  "version": "1",
+  "title": "OCCT · 圆柱与圆锥 Common 丢失结果",
+  "kind": "single",
+  "source_id": "occt-single20-1511c7e90f1a",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-25542",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single20-25542-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

@@ -1,0 +1,35 @@
+{
+  "sha": "b55bd02353519ebba14575f8056bb2b14585089e",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOmI1NWJkMDIzNTM1MTllYmJhMTQ1NzVmODA1NmJiMmIxNDU4NTA4OWU=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/b55bd02353519ebba14575f8056bb2b14585089e",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/b55bd02353519ebba14575f8056bb2b14585089e",
+  "author": {
+    "name": "nbv",
+    "email": "nbv@opencascade.com",
+    "date": "2016-04-11T07:38:50Z"
+  },
+  "committer": {
+    "name": "bugmaster",
+    "email": "bugmaster@opencascade.com",
+    "date": "2016-04-28T11:21:40Z"
+  },
+  "tree": {
+    "sha": "4f7bb9c62242b211d7edcd98e8792a158fc8dddf",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/4f7bb9c62242b211d7edcd98e8792a158fc8dddf"
+  },
+  "message": "0027269: Intersection algorithm produces null-length curve\n\nRestriction line can correspond to a degenerated edge. In this case we shall return null-curve (instead of Null-length curve).",
+  "parents": [
+    {
+      "sha": "246c7a7554dd24047ada720fbfce42e9c10b4657",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/246c7a7554dd24047ada720fbfce42e9c10b4657",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/246c7a7554dd24047ada720fbfce42e9c10b4657"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

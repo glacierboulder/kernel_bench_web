@@ -1,0 +1,35 @@
+{
+  "sha": "955b3e71028d2295439b0d9671e9c8b9b35301e2",
+  "node_id": "MDY6Q29tbWl0MjQ3NzM3NjEzOjk1NWIzZTcxMDI4ZDIyOTU0MzliMGQ5NjcxZTljOGI5YjM1MzAxZTI=",
+  "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/955b3e71028d2295439b0d9671e9c8b9b35301e2",
+  "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/955b3e71028d2295439b0d9671e9c8b9b35301e2",
+  "author": {
+    "name": "pkv",
+    "email": "pkv@opencascade.com",
+    "date": "2014-09-25T09:30:35Z"
+  },
+  "committer": {
+    "name": "bugmaster",
+    "email": "bugmaster@opencascade.com",
+    "date": "2014-09-25T11:58:10Z"
+  },
+  "tree": {
+    "sha": "1771c2341c682752d5b09d2e08c1be1abce588aa",
+    "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/trees/1771c2341c682752d5b09d2e08c1be1abce588aa"
+  },
+  "message": "0025242: Wrong result of cut operation.\n\n1. class BOPDS_Iterator\nmethod:\nvoid BOPDS_Iterator::Intersect()\nThe ttreatment of solid/* interferences has been added.\n\n2 class BOPAlgo_PaveFiller\nprotected methods:\nvoid BOPAlgo_PaveFiller::PerformVZ()\nvoid BOPAlgo_PaveFiller::PerformEZ()\nvoid BOPAlgo_PaveFiller::PerformFZ()\nvoid BOPAlgo_PaveFiller::PerformZZ()\nhas been added.\nThe methods are to Compute\nVertex/Solid\nEdge/Solid\nFace/Solid\nSolid/Solid\ninterferences.\n\n3. class BOPAlgo_PaveFiller\nprotected method:\nvoid BOPAlgo_PaveFiller::PerformFF()\nEmpty interferences has not been added in the interferences' table\n\n4. class BOPAlgo_CheckerSI\nprotected methods:\nvoid BOPAlgo_CheckerSI::PerformVZ()\nvoid BOPAlgo_CheckerSI:PerformEZ()\nvoid BOPAlgo_CheckerSI::PerformFZ()\nvoid BOPAlgo_CheckerSI::PerformZZ()\nhas been removed.\n\n5. class BOPAlgo_BOP\nprotected method:\nvoid BOPAlgo_BOP::BuildRC()\nvoid BOPAlgo_BOP::BuildSolid()\nchanged to treat non-interferred solids and keep it in the result as they were\n\nTest case for issue #25242",
+  "parents": [
+    {
+      "sha": "418864aea16924f5c9b360a2c5aced7c3c72800f",
+      "url": "https://api.github.com/repos/Open-Cascade-SAS/OCCT/git/commits/418864aea16924f5c9b360a2c5aced7c3c72800f",
+      "html_url": "https://github.com/Open-Cascade-SAS/OCCT/commit/418864aea16924f5c9b360a2c5aced7c3c72800f"
+    }
+  ],
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

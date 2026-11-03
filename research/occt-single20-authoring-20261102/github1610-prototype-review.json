@@ -1,0 +1,13 @@
+{
+  "invalid_jobs": [
+    "github1610-b-qualification-01",
+    "github1610-f-qualification-01",
+    "github1610-b-qualification-02",
+    "github1610-f-qualification-02"
+  ],
+  "reason": "DRAW protects the built-in pi variable. The script failed before geometry execution.",
+  "correction": "Rename the local scalar to angle_pi and re-run complete B/F under label qualification-02. No acceptance threshold changed.",
+  "second_correction": "An overly broad rename also changed pitch1/pitch2 references. Restore their names, preserve all geometry predicates, and re-run qualification-03.",
+  "third_run": "qualification-03 consumed the same stale incoming helper as qualification-02. The local correction had been synced to framework but not incoming. Both are excluded.",
+  "guard": "New plans bind input/helper SHA256 values. The calibration worker verifies these against its copied case snapshot before executing geometry."
+}

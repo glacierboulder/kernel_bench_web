@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single20-33639",
+  "version": "1",
+  "title": "OCCT · 圆锥尖点接触圆环时 Cut 失效",
+  "kind": "single",
+  "source_id": "occt-single20-a016080bf673",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-33639",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single20-33639-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

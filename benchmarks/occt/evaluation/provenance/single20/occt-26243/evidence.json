@@ -1,0 +1,1213 @@
+{
+  "issue_id": "occt-26243",
+  "frozen_results": [
+    {
+      "group_id": "occt-single20-26243",
+      "role": "b",
+      "checkpoint_id": "26243-neighborhood_rigid",
+      "category": "neighborhood",
+      "source_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "source_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "reference_patch_sha256": null,
+      "reference_kind": "locked_baseline",
+      "snapshot_sha256": "31463e3baf5bf06261af0dfab634839772383cc391e44678e7c53885b271d0c8",
+      "prebuild_binary_manifest_sha256": "7b147181424fffb426b6b6cd62b420b0a7888646a2426ddf0237d80d8ac20026",
+      "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195",
+      "process_return_code": 1,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "26243-neighborhood_rigid",
+        "category": "neighborhood",
+        "passed": false,
+        "status": "geometry_fail",
+        "oracle_ran": true,
+        "return_code": 1,
+        "test_done_marker": false,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": false,
+          "status": "geometry_fail",
+          "checkpoint_id": "26243-neighborhood_rigid",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "common_valid",
+            "common_solid_count",
+            "common_area",
+            "common_volume",
+            "common_centroid_domain"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_valid",
+              "kind": "expression"
+            },
+            {
+              "status": "FAIL",
+              "id": "common_solid_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "common_area",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "common_volume",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "common_centroid_domain",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": false,
+            "test_done_marker": false,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 4,
+            "failed_assertions": 4,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_FAIL common_solid_count observed=0 expected=1 kind=numeric\nBENCH_ASSERT_FAIL common_area observed=0 expected=272911.0 limit=0.5 kind=numeric\nBENCH_ASSERT_FAIL common_volume observed=0 expected=positive limit=unused kind=numeric\nBENCH_ASSERT_FAIL common_centroid_domain centroid=0 0 0 containing_input_box=-83.750003507865316 -29.00000350786533 42.99999649213467 386.14333187098237 358.62912237042974 235.01561689125782 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "full_log_failure_detected": true,
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-26243/1/neighborhood_rigid.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+            "elapsed_seconds": 1.316
+          },
+          "return_code": 1
+        },
+        "case_sha256": "da561ebce8dbf2482f66ee1177e9ecbf2ade2b3decd2a8f6c839d464cc0896c2",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-26243",
+      "role": "b",
+      "checkpoint_id": "26243-neighborhood_swap",
+      "category": "neighborhood",
+      "source_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "source_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "reference_patch_sha256": null,
+      "reference_kind": "locked_baseline",
+      "snapshot_sha256": "31463e3baf5bf06261af0dfab634839772383cc391e44678e7c53885b271d0c8",
+      "prebuild_binary_manifest_sha256": "7b147181424fffb426b6b6cd62b420b0a7888646a2426ddf0237d80d8ac20026",
+      "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195",
+      "process_return_code": 1,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "26243-neighborhood_swap",
+        "category": "neighborhood",
+        "passed": false,
+        "status": "geometry_fail",
+        "oracle_ran": true,
+        "return_code": 1,
+        "test_done_marker": false,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": false,
+          "status": "geometry_fail",
+          "checkpoint_id": "26243-neighborhood_swap",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "common_valid",
+            "common_solid_count",
+            "common_area",
+            "common_volume",
+            "common_centroid_domain"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_valid",
+              "kind": "expression"
+            },
+            {
+              "status": "FAIL",
+              "id": "common_solid_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "common_area",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "common_volume",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "common_centroid_domain",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": false,
+            "test_done_marker": false,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 4,
+            "failed_assertions": 4,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_FAIL common_solid_count observed=0 expected=1 kind=numeric\nBENCH_ASSERT_FAIL common_area observed=0 expected=272911.0 limit=0.5 kind=numeric\nBENCH_ASSERT_FAIL common_volume observed=0 expected=positive limit=unused kind=numeric\nBENCH_ASSERT_FAIL common_centroid_domain centroid=0 0 0 containing_input_box=54.24999649213467 -57.259689870262598 -3.5078653300163699e-06 255.75000350786539 372.00000350786536 192.01561689125782 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "full_log_failure_detected": true,
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-26243/1/neighborhood_swap.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+            "elapsed_seconds": 0.615
+          },
+          "return_code": 1
+        },
+        "case_sha256": "42485eac9ed5055d497626ab00e08e3d606909ec3e0592d17fe07f15a9537510",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-26243",
+      "role": "b",
+      "checkpoint_id": "26243-original",
+      "category": "original",
+      "source_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "source_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "reference_patch_sha256": null,
+      "reference_kind": "locked_baseline",
+      "snapshot_sha256": "31463e3baf5bf06261af0dfab634839772383cc391e44678e7c53885b271d0c8",
+      "prebuild_binary_manifest_sha256": "7b147181424fffb426b6b6cd62b420b0a7888646a2426ddf0237d80d8ac20026",
+      "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195",
+      "process_return_code": 1,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "26243-original",
+        "category": "original",
+        "passed": false,
+        "status": "geometry_fail",
+        "oracle_ran": true,
+        "return_code": 1,
+        "test_done_marker": false,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": false,
+          "status": "geometry_fail",
+          "checkpoint_id": "26243-original",
+          "category": "original",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "common_valid",
+            "common_solid_count",
+            "common_area",
+            "common_volume",
+            "common_centroid_domain"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_valid",
+              "kind": "expression"
+            },
+            {
+              "status": "FAIL",
+              "id": "common_solid_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "common_area",
+              "kind": "numeric"
+            },
+            {
+              "status": "FAIL",
+              "id": "common_volume",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_centroid_domain",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": false,
+            "test_done_marker": false,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 4,
+            "failed_assertions": 3,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_FAIL common_solid_count observed=0 expected=1 kind=numeric\nBENCH_ASSERT_FAIL common_area observed=0 expected=272911.0 limit=0.5 kind=numeric\nBENCH_ASSERT_FAIL common_volume observed=0 expected=positive limit=unused kind=numeric\nBENCH_ASSERT_PASS common_centroid_domain centroid=0 0 0 containing_input_box=-3.0096898702625801 -3.5078653300163699e-06 -3.5078653300163699e-06 426.25000350786536 201.50000350786533 192.01561689125782 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "full_log_failure_detected": true,
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-26243/1/original.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+            "elapsed_seconds": 0.615
+          },
+          "return_code": 1
+        },
+        "case_sha256": "4ba928e41c4a692df80d1ecf6ca984e7e7d88f40d9155c27c78417a8ec165d5f",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-26243",
+      "role": "b",
+      "checkpoint_id": "26243-regression_boxes",
+      "category": "regression",
+      "source_commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "source_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "reference_patch_sha256": null,
+      "reference_kind": "locked_baseline",
+      "snapshot_sha256": "31463e3baf5bf06261af0dfab634839772383cc391e44678e7c53885b271d0c8",
+      "prebuild_binary_manifest_sha256": "7b147181424fffb426b6b6cd62b420b0a7888646a2426ddf0237d80d8ac20026",
+      "runtime_binaries_sha256": "f357ff6dc5524f0a1bd86176461df8fea4eec0da30f008f2de91b4dbcc979195",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "26243-regression_boxes",
+        "category": "regression",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "26243-regression_boxes",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "common_valid",
+            "common_solid_count",
+            "common_area",
+            "common_volume",
+            "common_centroid_domain"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_valid",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_solid_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_area",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_volume",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_centroid_domain",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 4,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS common_solid_count observed=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS common_area observed=399.99999999999989 expected=400.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_PASS common_volume observed=499.99999999999989 expected=500.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_PASS common_centroid_domain centroid=7.5000000000000009 5 5 containing_input_box=-9.9999999999999995e-08 -9.9999999999999995e-08 -9.9999999999999995e-08 10.000000099999999 10.000000099999999 10.000000099999999 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-26243/1/regression_boxes.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+            "elapsed_seconds": 0.064
+          },
+          "return_code": 0
+        },
+        "case_sha256": "f04adba3cfb3511b03409c3639cb1d744b058ab12f295c3a873e677d67e3f6d8",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-26243",
+      "role": "f",
+      "checkpoint_id": "26243-neighborhood_rigid",
+      "category": "neighborhood",
+      "source_commit": "2199db4a362bc0917f1d01d1ad5922b81055cab8",
+      "source_tree_sha256": "54da0037e9c3896c30050b7266744d713dc6741caa3dba72ce36b891f7cc786a",
+      "reference_patch_sha256": "abd9acd198e211bb3be1a73beb7a4858b742668bec4612f4ff93761526f72534",
+      "reference_kind": "patch_on_locked_baseline",
+      "snapshot_sha256": "31463e3baf5bf06261af0dfab634839772383cc391e44678e7c53885b271d0c8",
+      "prebuild_binary_manifest_sha256": "af00d37f04ba0a10899a3761dae9c58c8e1e86571fe23272b639786ad3b864d9",
+      "runtime_binaries_sha256": "90857d9a1891c9f9c92585951e7fe538186a3121c731478dbe7b73d740982f5e",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "26243-neighborhood_rigid",
+        "category": "neighborhood",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "26243-neighborhood_rigid",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "common_valid",
+            "common_solid_count",
+            "common_area",
+            "common_volume",
+            "common_centroid_domain"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_valid",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_solid_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_area",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_volume",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_centroid_domain",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 4,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS common_solid_count observed=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS common_area observed=272911.09624625358 expected=272911.0 limit=0.5 kind=numeric\nBENCH_ASSERT_PASS common_volume observed=4182347.3508373187 expected=positive limit=unused kind=numeric\nBENCH_ASSERT_PASS common_centroid_domain centroid=99.996435222293414 136.67745315184325 116.92402828734805 containing_input_box=-83.750003507865316 -29.00000350786533 42.99999649213467 386.14333187098237 358.62912237042974 235.01561689125782 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-26243/1/neighborhood_rigid.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+            "elapsed_seconds": 1.466
+          },
+          "return_code": 0
+        },
+        "case_sha256": "da561ebce8dbf2482f66ee1177e9ecbf2ade2b3decd2a8f6c839d464cc0896c2",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-26243",
+      "role": "f",
+      "checkpoint_id": "26243-neighborhood_swap",
+      "category": "neighborhood",
+      "source_commit": "2199db4a362bc0917f1d01d1ad5922b81055cab8",
+      "source_tree_sha256": "54da0037e9c3896c30050b7266744d713dc6741caa3dba72ce36b891f7cc786a",
+      "reference_patch_sha256": "abd9acd198e211bb3be1a73beb7a4858b742668bec4612f4ff93761526f72534",
+      "reference_kind": "patch_on_locked_baseline",
+      "snapshot_sha256": "31463e3baf5bf06261af0dfab634839772383cc391e44678e7c53885b271d0c8",
+      "prebuild_binary_manifest_sha256": "af00d37f04ba0a10899a3761dae9c58c8e1e86571fe23272b639786ad3b864d9",
+      "runtime_binaries_sha256": "90857d9a1891c9f9c92585951e7fe538186a3121c731478dbe7b73d740982f5e",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "26243-neighborhood_swap",
+        "category": "neighborhood",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "26243-neighborhood_swap",
+          "category": "neighborhood",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "common_valid",
+            "common_solid_count",
+            "common_area",
+            "common_volume",
+            "common_centroid_domain"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_valid",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_solid_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_area",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_volume",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_centroid_domain",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 4,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS common_solid_count observed=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS common_area observed=272911.09624617425 expected=272911.0 limit=0.5 kind=numeric\nBENCH_ASSERT_PASS common_volume observed=4182347.350838698 expected=positive limit=unused kind=numeric\nBENCH_ASSERT_PASS common_centroid_domain centroid=154.71574790198622 101.98266565266707 73.924028287374114 containing_input_box=54.24999649213467 -57.259689870262598 -3.5078653300163699e-06 255.75000350786539 372.00000350786536 192.01561689125782 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-26243/1/neighborhood_swap.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+            "elapsed_seconds": 0.715
+          },
+          "return_code": 0
+        },
+        "case_sha256": "42485eac9ed5055d497626ab00e08e3d606909ec3e0592d17fe07f15a9537510",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-26243",
+      "role": "f",
+      "checkpoint_id": "26243-original",
+      "category": "original",
+      "source_commit": "2199db4a362bc0917f1d01d1ad5922b81055cab8",
+      "source_tree_sha256": "54da0037e9c3896c30050b7266744d713dc6741caa3dba72ce36b891f7cc786a",
+      "reference_patch_sha256": "abd9acd198e211bb3be1a73beb7a4858b742668bec4612f4ff93761526f72534",
+      "reference_kind": "patch_on_locked_baseline",
+      "snapshot_sha256": "31463e3baf5bf06261af0dfab634839772383cc391e44678e7c53885b271d0c8",
+      "prebuild_binary_manifest_sha256": "af00d37f04ba0a10899a3761dae9c58c8e1e86571fe23272b639786ad3b864d9",
+      "runtime_binaries_sha256": "90857d9a1891c9f9c92585951e7fe538186a3121c731478dbe7b73d740982f5e",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "26243-original",
+        "category": "original",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "26243-original",
+          "category": "original",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "common_valid",
+            "common_solid_count",
+            "common_area",
+            "common_volume",
+            "common_centroid_domain"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_valid",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_solid_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_area",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_volume",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_centroid_domain",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 4,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS common_solid_count observed=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS common_area observed=272911.09624617425 expected=272911.0 limit=0.5 kind=numeric\nBENCH_ASSERT_PASS common_volume observed=4182347.3508386994 expected=positive limit=unused kind=numeric\nBENCH_ASSERT_PASS common_centroid_domain centroid=154.71574790198596 101.98266565266695 73.924028287374085 containing_input_box=-3.0096898702625801 -3.5078653300163699e-06 -3.5078653300163699e-06 426.25000350786536 201.50000350786533 192.01561689125782 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-26243/1/original.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+            "elapsed_seconds": 0.715
+          },
+          "return_code": 0
+        },
+        "case_sha256": "4ba928e41c4a692df80d1ecf6ca984e7e7d88f40d9155c27c78417a8ec165d5f",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    },
+    {
+      "group_id": "occt-single20-26243",
+      "role": "f",
+      "checkpoint_id": "26243-regression_boxes",
+      "category": "regression",
+      "source_commit": "2199db4a362bc0917f1d01d1ad5922b81055cab8",
+      "source_tree_sha256": "54da0037e9c3896c30050b7266744d713dc6741caa3dba72ce36b891f7cc786a",
+      "reference_patch_sha256": "abd9acd198e211bb3be1a73beb7a4858b742668bec4612f4ff93761526f72534",
+      "reference_kind": "patch_on_locked_baseline",
+      "snapshot_sha256": "31463e3baf5bf06261af0dfab634839772383cc391e44678e7c53885b271d0c8",
+      "prebuild_binary_manifest_sha256": "af00d37f04ba0a10899a3761dae9c58c8e1e86571fe23272b639786ad3b864d9",
+      "runtime_binaries_sha256": "90857d9a1891c9f9c92585951e7fe538186a3121c731478dbe7b73d740982f5e",
+      "process_return_code": 0,
+      "oracle": {
+        "protocol": "occt-checkpoint-v1",
+        "checkpoint_id": "26243-regression_boxes",
+        "category": "regression",
+        "passed": true,
+        "status": "geometry_pass",
+        "oracle_ran": true,
+        "return_code": 0,
+        "test_done_marker": true,
+        "timed_out": false,
+        "runner_process_return_code": 0,
+        "elapsed_seconds": null,
+        "raw_result": {
+          "passed": true,
+          "status": "geometry_pass",
+          "checkpoint_id": "26243-regression_boxes",
+          "category": "regression",
+          "expected_assertion_ids": [
+            "operation_completed",
+            "common_valid",
+            "common_solid_count",
+            "common_area",
+            "common_volume",
+            "common_centroid_domain"
+          ],
+          "observed_assertion_events": [
+            {
+              "status": "PASS",
+              "id": "operation_completed",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_valid",
+              "kind": "expression"
+            },
+            {
+              "status": "PASS",
+              "id": "common_solid_count",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_area",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_volume",
+              "kind": "numeric"
+            },
+            {
+              "status": "PASS",
+              "id": "common_centroid_domain",
+              "kind": "numeric"
+            }
+          ],
+          "missing_assertions": [],
+          "unexpected_assertions": [],
+          "duplicate_assertions": [],
+          "completion_sentinel_count": 1,
+          "summary_pair_valid": true,
+          "expected_geometry_failure_signature_seen": false,
+          "base_runner": {
+            "protocol": "draw_case_oracle_v1",
+            "oracle_scope": "public_script_only",
+            "passed": true,
+            "test_done_marker": true,
+            "tcl_standard_library": {
+              "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+              "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+            },
+            "return_code": 0,
+            "timed_out": false,
+            "assertions": 6,
+            "numeric_assertions": 4,
+            "failed_assertions": 0,
+            "tcl_error_detected": false,
+            "expected_oracle_error": false,
+            "infrastructure_tcl_error": false,
+            "occt_error_detected": false,
+            "oracle_summary_found": true,
+            "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS common_solid_count observed=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS common_area observed=399.99999999999989 expected=400.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_PASS common_volume observed=499.99999999999989 expected=500.0 limit=1e-7 kind=numeric\nBENCH_ASSERT_PASS common_centroid_domain centroid=7.5000000000000009 5 5 containing_input_box=-9.9999999999999995e-08 -9.9999999999999995e-08 -9.9999999999999995e-08 10.000000099999999 10.000000099999999 10.000000099999999 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+            "stderr_tail": "",
+            "diagnostic_lines": [],
+            "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-26243/1/regression_boxes.tcl",
+            "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+            "elapsed_seconds": 0.066
+          },
+          "return_code": 0
+        },
+        "case_sha256": "f04adba3cfb3511b03409c3639cb1d744b058ab12f295c3a873e677d67e3f6d8",
+        "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+      }
+    }
+  ],
+  "negative_controls": [
+    {
+      "case": "negative_empty",
+      "result": {
+        "passed": false,
+        "status": "geometry_fail",
+        "checkpoint_id": null,
+        "category": null,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "common_valid",
+          "common_solid_count",
+          "common_area",
+          "common_volume",
+          "common_centroid_domain"
+        ],
+        "observed_assertion_events": [
+          {
+            "status": "PASS",
+            "id": "operation_completed",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "common_valid",
+            "kind": "expression"
+          },
+          {
+            "status": "FAIL",
+            "id": "common_solid_count",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "common_area",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "common_volume",
+            "kind": "numeric"
+          },
+          {
+            "status": "PASS",
+            "id": "common_centroid_domain",
+            "kind": "numeric"
+          }
+        ],
+        "missing_assertions": [],
+        "unexpected_assertions": [],
+        "duplicate_assertions": [],
+        "completion_sentinel_count": 1,
+        "summary_pair_valid": true,
+        "expected_geometry_failure_signature_seen": false,
+        "base_runner": {
+          "protocol": "draw_case_oracle_v1",
+          "oracle_scope": "public_script_only",
+          "passed": false,
+          "test_done_marker": false,
+          "tcl_standard_library": {
+            "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+            "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+          },
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 6,
+          "numeric_assertions": 4,
+          "failed_assertions": 3,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_FAIL common_solid_count observed=0 expected=1 kind=numeric\nBENCH_ASSERT_FAIL common_area observed=0 expected=272911.0 limit=0.5 kind=numeric\nBENCH_ASSERT_FAIL common_volume observed=0 expected=positive limit=unused kind=numeric\nBENCH_ASSERT_PASS common_centroid_domain centroid=0 0 0 containing_input_box=-3.0096898702625801 -3.5078653300163699e-06 -3.5078653300163699e-06 426.25000350786536 201.50000350786533 192.01561689125782 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+          "stderr_tail": "",
+          "diagnostic_lines": [],
+          "full_log_failure_detected": true,
+          "script": "/workspace/cases/occt-26243/1/negative_empty.tcl",
+          "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+          "elapsed_seconds": 0.615
+        },
+        "case": "negative_empty.tcl",
+        "runner_process_code": 0,
+        "case_sha256": "0da6cf88e1e01123395e81f856b2069ce9ff03bba508f0ba76c2daa74215ea18",
+        "log_sha256": "6581ea92261c20aab2110baf8e4872f000cda86210d03f7686eb41f346caff37"
+      },
+      "runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": false,
+        "test_done_marker": false,
+        "tcl_standard_library": {
+          "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 6,
+        "numeric_assertions": 4,
+        "failed_assertions": 3,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_FAIL common_solid_count observed=0 expected=1 kind=numeric\nBENCH_ASSERT_FAIL common_area observed=0 expected=272911.0 limit=0.5 kind=numeric\nBENCH_ASSERT_FAIL common_volume observed=0 expected=positive limit=unused kind=numeric\nBENCH_ASSERT_PASS common_centroid_domain centroid=0 0 0 containing_input_box=-3.0096898702625801 -3.5078653300163699e-06 -3.5078653300163699e-06 426.25000350786536 201.50000350786533 192.01561689125782 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "full_log_failure_detected": true,
+        "script": "/workspace/cases/occt-26243/1/negative_empty.tcl",
+        "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+        "elapsed_seconds": 0.615
+      }
+    },
+    {
+      "case": "negative_input_only",
+      "result": {
+        "passed": false,
+        "status": "geometry_fail",
+        "checkpoint_id": null,
+        "category": null,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "common_valid",
+          "common_solid_count",
+          "common_area",
+          "common_volume",
+          "common_centroid_domain"
+        ],
+        "observed_assertion_events": [
+          {
+            "status": "PASS",
+            "id": "operation_completed",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "common_valid",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "common_solid_count",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "common_area",
+            "kind": "numeric"
+          },
+          {
+            "status": "PASS",
+            "id": "common_volume",
+            "kind": "numeric"
+          },
+          {
+            "status": "PASS",
+            "id": "common_centroid_domain",
+            "kind": "numeric"
+          }
+        ],
+        "missing_assertions": [],
+        "unexpected_assertions": [],
+        "duplicate_assertions": [],
+        "completion_sentinel_count": 1,
+        "summary_pair_valid": true,
+        "expected_geometry_failure_signature_seen": false,
+        "base_runner": {
+          "protocol": "draw_case_oracle_v1",
+          "oracle_scope": "public_script_only",
+          "passed": false,
+          "test_done_marker": false,
+          "tcl_standard_library": {
+            "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+            "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+          },
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 6,
+          "numeric_assertions": 4,
+          "failed_assertions": 1,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS common_solid_count observed=1 expected=1 kind=numeric\nBENCH_ASSERT_FAIL common_area observed=439552.83117240667 expected=272911.0 limit=0.5 kind=numeric\nBENCH_ASSERT_PASS common_volume observed=8183814.417798413 expected=positive limit=unused kind=numeric\nBENCH_ASSERT_PASS common_centroid_domain centroid=212.92969515926802 101.9577057908372 66.405658225615923 containing_input_box=-3.0096898702625801 -3.5078653300163699e-06 -3.5078653300163699e-06 426.25000350786536 201.50000350786533 192.01561689125782 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+          "stderr_tail": "",
+          "diagnostic_lines": [],
+          "full_log_failure_detected": true,
+          "script": "/workspace/cases/occt-26243/1/negative_input_only.tcl",
+          "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+          "elapsed_seconds": 0.822
+        },
+        "case": "negative_input_only.tcl",
+        "runner_process_code": 0,
+        "case_sha256": "1e115659c7cdb4bf0d2c30d50f73132ec841ce4aced57679aafdd45f4ea171ac",
+        "log_sha256": "6cc85079f8d5c3fbeb20dd9c7f3589a6b954247651cc11542b9d6649f176a119"
+      },
+      "runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": false,
+        "test_done_marker": false,
+        "tcl_standard_library": {
+          "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 6,
+        "numeric_assertions": 4,
+        "failed_assertions": 1,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS common_solid_count observed=1 expected=1 kind=numeric\nBENCH_ASSERT_FAIL common_area observed=439552.83117240667 expected=272911.0 limit=0.5 kind=numeric\nBENCH_ASSERT_PASS common_volume observed=8183814.417798413 expected=positive limit=unused kind=numeric\nBENCH_ASSERT_PASS common_centroid_domain centroid=212.92969515926802 101.9577057908372 66.405658225615923 containing_input_box=-3.0096898702625801 -3.5078653300163699e-06 -3.5078653300163699e-06 426.25000350786536 201.50000350786533 192.01561689125782 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "full_log_failure_detected": true,
+        "script": "/workspace/cases/occt-26243/1/negative_input_only.tcl",
+        "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+        "elapsed_seconds": 0.822
+      }
+    },
+    {
+      "case": "negative_shifted",
+      "result": {
+        "passed": false,
+        "status": "geometry_fail",
+        "checkpoint_id": null,
+        "category": null,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "common_valid",
+          "common_solid_count",
+          "common_area",
+          "common_volume",
+          "common_centroid_domain"
+        ],
+        "observed_assertion_events": [
+          {
+            "status": "PASS",
+            "id": "operation_completed",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "common_valid",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "common_solid_count",
+            "kind": "numeric"
+          },
+          {
+            "status": "PASS",
+            "id": "common_area",
+            "kind": "numeric"
+          },
+          {
+            "status": "PASS",
+            "id": "common_volume",
+            "kind": "numeric"
+          },
+          {
+            "status": "FAIL",
+            "id": "common_centroid_domain",
+            "kind": "numeric"
+          }
+        ],
+        "missing_assertions": [],
+        "unexpected_assertions": [],
+        "duplicate_assertions": [],
+        "completion_sentinel_count": 1,
+        "summary_pair_valid": true,
+        "expected_geometry_failure_signature_seen": false,
+        "base_runner": {
+          "protocol": "draw_case_oracle_v1",
+          "oracle_scope": "public_script_only",
+          "passed": false,
+          "test_done_marker": false,
+          "tcl_standard_library": {
+            "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+            "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+          },
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 6,
+          "numeric_assertions": 4,
+          "failed_assertions": 1,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS common_solid_count observed=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS common_area observed=272911.09624617425 expected=272911.0 limit=0.5 kind=numeric\nBENCH_ASSERT_PASS common_volume observed=4182347.3508386966 expected=positive limit=unused kind=numeric\nBENCH_ASSERT_FAIL common_centroid_domain centroid=10154.715747901986 10101.982665652667 10073.924028287374 containing_input_box=-3.0096898702625801 -3.5078653300163699e-06 -3.5078653300163699e-06 426.25000350786536 201.50000350786533 192.01561689125782 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+          "stderr_tail": "",
+          "diagnostic_lines": [],
+          "full_log_failure_detected": true,
+          "script": "/workspace/cases/occt-26243/1/negative_shifted.tcl",
+          "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+          "elapsed_seconds": 0.765
+        },
+        "case": "negative_shifted.tcl",
+        "runner_process_code": 0,
+        "case_sha256": "338e7775b84de242e7873d0c671d5c03369c8a11008c900d7c802dc7774cb1ee",
+        "log_sha256": "7e7beadaa3da096a1372b1d0412a9741ef664ae358d6343b5cc0f2f9995fce1e"
+      },
+      "runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": false,
+        "test_done_marker": false,
+        "tcl_standard_library": {
+          "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 6,
+        "numeric_assertions": 4,
+        "failed_assertions": 1,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report= kind=expression\nBENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression\nBENCH_ASSERT_PASS common_solid_count observed=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS common_area observed=272911.09624617425 expected=272911.0 limit=0.5 kind=numeric\nBENCH_ASSERT_PASS common_volume observed=4182347.3508386966 expected=positive limit=unused kind=numeric\nBENCH_ASSERT_FAIL common_centroid_domain centroid=10154.715747901986 10101.982665652667 10073.924028287374 containing_input_box=-3.0096898702625801 -3.5078653300163699e-06 -3.5078653300163699e-06 426.25000350786536 201.50000350786533 192.01561689125782 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=6 numeric_assertions=4\nTEST_DONE assertions=6 numeric_assertions=4\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "full_log_failure_detected": true,
+        "script": "/workspace/cases/occt-26243/1/negative_shifted.tcl",
+        "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE",
+        "elapsed_seconds": 0.765
+      }
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "issue": 24097,
+  "cases": [
+    {
+      "id": "original",
+      "script": "occt-24097/1/original.tcl",
+      "category": "original",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain",
+        "endpoints",
+        "independent_curve_coverage"
+      ]
+    },
+    {
+      "id": "neighborhood_rigid",
+      "script": "occt-24097/1/neighborhood_rigid.tcl",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain",
+        "endpoints",
+        "independent_curve_coverage"
+      ]
+    },
+    {
+      "id": "neighborhood_swap",
+      "script": "occt-24097/1/neighborhood_swap.tcl",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain",
+        "endpoints",
+        "independent_curve_coverage"
+      ]
+    },
+    {
+      "id": "regression_healthy",
+      "script": "occt-24097/1/regression_healthy.tcl",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain",
+        "endpoints",
+        "independent_curve_coverage"
+      ]
+    },
+    {
+      "id": "negative_empty",
+      "script": "occt-24097/1/negative_empty.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain",
+        "endpoints",
+        "independent_curve_coverage"
+      ]
+    },
+    {
+      "id": "negative_missing",
+      "script": "occt-24097/1/negative_missing.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain",
+        "endpoints",
+        "independent_curve_coverage"
+      ]
+    },
+    {
+      "id": "negative_shifted",
+      "script": "occt-24097/1/negative_shifted.tcl",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "input_validity",
+        "operation_completed",
+        "validity",
+        "component_count",
+        "measure",
+        "centroid_domain",
+        "endpoints",
+        "independent_curve_coverage"
+      ]
+    }
+  ],
+  "independent_reference": "sources/m24097-independent-reference.json",
+  "support_sha256": {
+    "occt-24097/1/neighborhood_swap.tcl": "460843e24a48c44a3c10e2ceec6e92043ae56ee3619b7bbe11a36029ae9df5a8",
+    "occt-24097/1/original_probe.tcl": "4ef4513961ee06dd2d5aed42a325f374778858180c58bb65d8278f43b718273a",
+    "occt-24097/1/bug24097_face2.brep": "c2ae5726310e39f6ddbc8ed140675652092cdcea329566eabaeed72f03f027e4",
+    "occt-24097/1/diagnostic_probe.tcl": "92dc0585c7864c6b8d2c539b9632d468fb69735dedb4b949d888b50d20b301de",
+    "occt-24097/1/regression_healthy.tcl": "f0c4745553f49b98295caf86c12c62510e1ff567b5cba044ec508aa7e079c39e",
+    "occt-24097/1/negative_missing.tcl": "2d6f0e7b5ec7d5c92498645647159dfdaf384346f3291f161c1f6128eb88bae2",
+    "occt-24097/1/negative_empty.tcl": "3604f92c552b9612d936e64fa1b3cc7ceb5a98da195bfd408cc7a4c0419c7ac7",
+    "occt-24097/1/bug24097_face1.brep": "1ddd65ea55317a3d5869fc7457d0469138ed7951a7485e6491d4dd853108a1dd",
+    "occt-24097/1/neighborhood_rigid.tcl": "681250025c6700e5aa57335675f799bc222d9016161d6d06833c470438681672",
+    "occt-24097/1/original.tcl": "e765d2056a922efa1a4c5fb3350633a72a54737318005412c1582a221427a28a",
+    "occt-24097/1/negative_shifted.tcl": "e40120bc59e93e11ae1ab749d2205a13ee69fe656312a6478d47942904368ce6",
+    "occt-24097/1/independent_geometry.tcl": "97e6b098af07844be310d5d8b934e3924d60bfcb5364061613ed9bb09f861fd5",
+    "assertions.tcl": "f456e1d2e107d2eb3673ff7c5edbf43578516958231578ea53d976a8b6adb2f0",
+    "solid_checks.tcl": "16745256c544638967e9478bf60a1bee17ca63b0be28494d103f3f6ef496346a"
+  }
+}

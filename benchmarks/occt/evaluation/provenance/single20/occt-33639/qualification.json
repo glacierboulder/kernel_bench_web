@@ -1,0 +1,112 @@
+{
+  "issue_id": "occt-33639",
+  "issue_version": "1",
+  "title": "OCCT · 圆锥尖点接触圆环时 Cut 失效",
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "group_id": "occt-single20-33639",
+  "suite": {
+    "id": "occt-single20-33639-checks",
+    "version": "1"
+  },
+  "source_id": "occt-single20-a016080bf673",
+  "baseline_commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+  "baseline_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+  "source_kind": "natural historical commit",
+  "frozen_replay": "frozen-replay-11",
+  "reference_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "reference_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+  "upstream_url": "https://occt3d.com/dev/tickets/0033639/",
+  "verdict": "PASS",
+  "checkpoints": [
+    {
+      "role": "b",
+      "id": "33639-original",
+      "category": "original",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-11/occt-single20-33639/b/33639-original/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "b",
+      "id": "33639-neighborhood_rigid",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-11/occt-single20-33639/b/33639-neighborhood_rigid/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "b",
+      "id": "33639-neighborhood_scale",
+      "category": "neighborhood",
+      "status": "geometry_fail",
+      "process_return_code": 1,
+      "result_path": "jobs/frozen-replay-11/occt-single20-33639/b/33639-neighborhood_scale/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "b",
+      "id": "33639-regression_separated",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-11/occt-single20-33639/b/33639-regression_separated/result.json",
+      "runtime_binaries_sha256": "19d72f5aed47a30fd414d71e22387e3df5c2a5d0d4203481792cf0a7a9c6e177"
+    },
+    {
+      "role": "f",
+      "id": "33639-original",
+      "category": "original",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-11/occt-single20-33639/f/33639-original/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "f",
+      "id": "33639-neighborhood_rigid",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-11/occt-single20-33639/f/33639-neighborhood_rigid/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "f",
+      "id": "33639-neighborhood_scale",
+      "category": "neighborhood",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-11/occt-single20-33639/f/33639-neighborhood_scale/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    },
+    {
+      "role": "f",
+      "id": "33639-regression_separated",
+      "category": "regression",
+      "status": "geometry_pass",
+      "process_return_code": 0,
+      "result_path": "jobs/frozen-replay-11/occt-single20-33639/f/33639-regression_separated/result.json",
+      "runtime_binaries_sha256": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+    }
+  ],
+  "snapshots": {
+    "b": "6f4033202102bd45eaf3876e838f15e99a03487c1ba58f358dd8fc4dc212d2e2",
+    "f": "6f4033202102bd45eaf3876e838f15e99a03487c1ba58f358dd8fc4dc212d2e2"
+  },
+  "evidence_file": "evidence.json",
+  "result_path_namespace": "tar archive member path",
+  "negative_controls": {
+    "job": "m33639-f2016-qualification-01",
+    "rejected": [
+      "negative_empty",
+      "negative_shifted",
+      "negative_unchanged"
+    ]
+  },
+  "full_snapshots_reverified": true
+}

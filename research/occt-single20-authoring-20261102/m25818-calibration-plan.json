@@ -1,0 +1,82 @@
+{
+  "issue": 25818,
+  "cases": [
+    {
+      "script": "occt-25818/1/negative_missing.tcl",
+      "id": "negative_missing",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-25818/1/negative_shifted.tcl",
+      "id": "negative_shifted",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-25818/1/negative_truncated.tcl",
+      "id": "negative_truncated",
+      "category": "negative",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-25818/1/neighborhood_mixed_domain.tcl",
+      "id": "neighborhood_mixed_domain",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-25818/1/neighborhood_rigid.tcl",
+      "id": "neighborhood_rigid",
+      "category": "neighborhood",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-25818/1/original.tcl",
+      "id": "original",
+      "category": "original",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    },
+    {
+      "script": "occt-25818/1/regression_bounded.tcl",
+      "id": "regression_bounded",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "branch_count",
+        "support_residual",
+        "domain_coverage"
+      ]
+    }
+  ]
+}

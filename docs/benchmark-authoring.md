@@ -315,7 +315,7 @@ reevaluate 对 patch 文件要求显式 source-id，并将结果作为独立 eva
 - b55 组：occt-27310@1、occt-27773@1、occt-27252@1，各 3 条。
 - b2613378 组：occt-21494@2、occt-27252@2、occt-27780@1，各 3 条。
 
-全 catalog 当前包含 34 issue versions、22 groups、22 suites 和 10 source identities；其中本轮十五个研究任务包含 113 个检查点。此前五组的快照计数是24 issue versions、12 groups、12 suites。现有五组每组有三个成员只是历史布局事实，不是单题配额。较新的 [neighborhood-v2-coverage record](../benchmarks/occt/evaluation/provenance/neighborhood-v2-coverage.json) 记录 73 条静态 dispatch routes、24 条新增 frozen geometry pass 和此前 49 条保持不变；该轮没有重放旧 49 条。本轮没有重跑。较早的 [NAMING_MAP](../benchmarks/occt/NAMING_MAP.md) 与 [integration-validation record](../benchmarks/occt/evaluation/provenance/integration-validation.json) 中的 49 项/19-15-15 是更早快照；不要将它们视为当前清单计数。
+全 catalog 当前包含 54 issue versions、42 groups、42 suites 和 19 source identities。现行 35 个研究任务共 193 个检查点，其中原有十五题包含 113 个检查点，新增二十道单 issue 题包含 80 个检查点。新增题目的逐项资格与冻结回放记录见 [single20 准入报告](../CADAI/tmp/kernel_bench_web_report/occt_single20_authoring_20261103.md)。此前五组的快照计数是24 issue versions、12 groups、12 suites。现有五组每组有三个成员只是历史布局事实，不是单题配额。较新的 [neighborhood-v2-coverage record](../benchmarks/occt/evaluation/provenance/neighborhood-v2-coverage.json) 记录 73 条静态 dispatch routes、24 条新增 frozen geometry pass 和此前 49 条保持不变；该轮没有重放旧 49 条。本轮没有重跑。较早的 [NAMING_MAP](../benchmarks/occt/NAMING_MAP.md) 与 [integration-validation record](../benchmarks/occt/evaluation/provenance/integration-validation.json) 中的 49 项/19-15-15 是更早快照；不要将它们视为当前清单计数。
 
 ## 现有示例与证据链接
 

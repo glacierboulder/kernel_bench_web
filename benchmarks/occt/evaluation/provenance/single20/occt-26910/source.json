@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "issue": "occt-26910",
+  "status": "qualified",
+  "source_kind": "natural historical commit",
+  "source_commit": "6435b9c7fafd294680a3be589deb61de2fdb3d3c",
+  "git_tree": "98d012867c9ec543b645de8f5e75ba56caece1f4",
+  "materialized_tree_sha256": "bfcd5874f51898884c55c0e35f4bb701a612ad91bdc6e0ab106b31d45afc692c",
+  "reference": {
+    "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "git_tree": "12c23eb7bbf0b6d6c841cbb1c7aac6e2e7d14e62",
+    "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "kind": "natural later commit"
+  },
+  "qualification": {
+    "b": {
+      "label": "m26910-b-calibration-03",
+      "model_called": false,
+      "source_commit": "6435b9c7fafd294680a3be589deb61de2fdb3d3c",
+      "source_tree_sha256": "bfcd5874f51898884c55c0e35f4bb701a612ad91bdc6e0ab106b31d45afc692c",
+      "build_receipt_sha256": "7bb5503401859f2f027df4a982d97bededaeefc4600dc8dd6e69d33b67f0c2ec",
+      "binary_manifest_sha256": "e2e52d244be96127ec7326fa837277bd82758ab1a05ba38112bce184e6bdc013",
+      "results": {
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_unchanged": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_scale": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_translation": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "original": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "regression_separated": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T14:50:07.675493+00:00"
+    },
+    "f": {
+      "label": "m26910-f-calibration-03",
+      "model_called": false,
+      "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "build_receipt_sha256": "e9e8f08e77fc823099dad504aa655935f7bae163ce14ff66c9d92af522598715",
+      "binary_manifest_sha256": "8b707a5b40784cc26d7e5f8c543e4acd3d85624276755193cf6539f1804a7fc9",
+      "results": {
+        "negative_empty": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_shifted": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "negative_unchanged": {
+          "status": "geometry_fail",
+          "passed": false
+        },
+        "neighborhood_scale": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "neighborhood_translation": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "original": {
+          "status": "geometry_pass",
+          "passed": true
+        },
+        "regression_separated": {
+          "status": "geometry_pass",
+          "passed": true
+        }
+      },
+      "finished_at": "2026-11-02T14:50:03.117300+00:00"
+    }
+  },
+  "stage": "unknown",
+  "stage_note": "The earliest internal failing stage has not been localized by this authoring run.",
+  "limits": [
+    "The original line-plane intersection has circle-radius residual about 1.09e-7. The task concerns a tolerance-supported near intersection.",
+    "Calibration prototypes 01/02 suffered DRAW explode-name collisions and are excluded. Only calibration-03 qualifies."
+  ],
+  "final_qualification": "qualification.json",
+  "issue_source": "https://occt3d.com/dev/tickets/0026910/",
+  "input_provenance": {
+    "repository": "a-betenev/opencascade-dataset",
+    "commit": "d78a7a9e6de57699261fa03641ec1b5bafac39a1",
+    "files": [
+      {
+        "name": "bug26910.brep",
+        "git_blob": "4e0dabb0e29c706a3f846e8cb0333b22dcbd8813",
+        "sha256": "c44ed9ac5aaedc8f55fca884f279af69f34dc7d416effdb535a18370fa8f496e",
+        "bytes": 3159
+      }
+    ]
+  }
+}

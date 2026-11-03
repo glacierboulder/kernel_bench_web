@@ -1,0 +1,24 @@
+diff --git a/src/IntTools/IntTools_FaceFace.cxx b/src/IntTools/IntTools_FaceFace.cxx
+index e03fa41628..5030a3e0c1 100644
+--- a/src/IntTools/IntTools_FaceFace.cxx
++++ b/src/IntTools/IntTools_FaceFace.cxx
+@@ -1313,9 +1313,6 @@ void IntTools_FaceFace::MakeCurve(const Standard_Integer Index,
+         }
+         else {
+           if (typs1 == GeomAbs_Plane || typs2 == GeomAbs_Plane) {
+-            if (aTolC <  theapp3d.TolReached2d()) {
+-              aTolC = theapp3d.TolReached2d();
+-            }
+             //
+             if (typs1 == GeomAbs_Torus || typs2 == GeomAbs_Torus) {
+               if (aTolC < 1.e-6) {
+@@ -1323,9 +1320,6 @@ void IntTools_FaceFace::MakeCurve(const Standard_Integer Index,
+               }
+             }
+           }
+-          else if (aTolC < theapp3d.TolReached3d()) {
+-            aTolC = theapp3d.TolReached3d();
+-          }
+           //
+           Standard_Integer aNbMultiCurves, nbpoles;
+           aNbMultiCurves=theapp3d.NbMultiCurves(); 
