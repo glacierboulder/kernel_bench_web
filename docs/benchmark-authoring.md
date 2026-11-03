@@ -296,7 +296,7 @@ reevaluate 对 patch 文件要求显式 source-id，并将结果作为独立 eva
 
 ## 当前五组磁盘快照
 
-下表是在 2026-10-26 按当前 catalog、group、suite 清单重新统计的清单数。五个既有新组包含 12 个不同 issue ID、15 个 issue versions 和 73 条 required test/checkpoint；分别是 19 original、39 neighborhood、15 regression。现有 73 条校准/回放清单已按各自预定标准通过（包括 original 的 B fail/F pass 等角色结果，并非所有输入都应返回同一种通过极性）；本次文档整理只重数当前清单并做 catalog 校验，没有重跑这 73 条。该通过状态来自现有题库记录和本任务用户确认，不是由本次静态检查推得，也不是未来题目的成员数配额。
+下表保留 2026-10-26 的五组历史 suite 快照；B55 当时引用旧 oracle-v2 suite，当前 group 已改用 geometry-v2 suite（两者都是 16 条检查点）。五个既有新组包含 12 个不同 issue ID、15 个 issue versions 和 73 条 required test/checkpoint；分别是 19 original、39 neighborhood、15 regression。现有 73 条校准/回放清单已按各自预定标准通过（包括 original 的 B fail/F pass 等角色结果，并非所有输入都应返回同一种通过极性）；本次文档整理只重数当前清单并做 catalog 校验，没有重跑这 73 条。该通过状态来自现有题库记录和本任务用户确认，不是由本次静态检查推得，也不是未来题目的成员数配额。
 
 | Group ID | Suite ID | 每成员 neighborhood tests | Original | Neighborhood tests | Regression | Required 总数 |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
@@ -315,7 +315,7 @@ reevaluate 对 patch 文件要求显式 source-id，并将结果作为独立 eva
 - b55 组：occt-27310@1、occt-27773@1、occt-27252@1，各 3 条。
 - b2613378 组：occt-21494@2、occt-27252@2、occt-27780@1，各 3 条。
 
-全 catalog 当前包含 54 issue versions、42 groups、42 suites 和 19 source identities。现行 35 个研究任务共 193 个检查点，其中原有十五题包含 113 个检查点，新增二十道单 issue 题包含 80 个检查点。新增题目的逐项资格与冻结回放记录见 [single20 准入报告](../CADAI/tmp/kernel_bench_web_report/occt_single20_authoring_20261103.md)。此前五组的快照计数是24 issue versions、12 groups、12 suites。现有五组每组有三个成员只是历史布局事实，不是单题配额。较新的 [neighborhood-v2-coverage record](../benchmarks/occt/evaluation/provenance/neighborhood-v2-coverage.json) 记录 73 条静态 dispatch routes、24 条新增 frozen geometry pass 和此前 49 条保持不变；该轮没有重放旧 49 条。本轮没有重跑。较早的 [NAMING_MAP](../benchmarks/occt/NAMING_MAP.md) 与 [integration-validation record](../benchmarks/occt/evaluation/provenance/integration-validation.json) 中的 49 项/19-15-15 是更早快照；不要将它们视为当前清单计数。
+2026-11-03 按合并后的 catalog 与 suite 清单重新核对：全 catalog 包含 54 issue versions、42 groups、43 suites 和 19 source identities。42 个 group 当前引用 42 个不同 suite，共 215 条 required checkpoint；其中 7 个 legacy 任务为 22 条，35 个研究任务为 193 条（原有十五题 113 条，新增二十道单 issue 题 80 条）。额外保留的旧 B55 oracle-v2 suite 未被当前 group 引用，包含 16 条检查点；新任务使用 geometry-v2 suite。因此按全部 43 个 suite 的清单行累计是 231 条 required checkpoint：75 original、108 neighborhood、48 regression。这是 suite 清单行数，包含新旧 B55 suite 的重复覆盖，不是独立 case/scenario 数，也不表示这些检查点本轮几何通过。新版 d308 的覆盖参考仍待确认，不能把旧五组历史通过记录套用到新版 suite。新增题目的逐项资格与冻结回放记录见 [single20 准入报告](../CADAI/tmp/kernel_bench_web_report/occt_single20_authoring_20261103.md)。此前五组的快照计数是24 issue versions、12 groups、12 suites。现有五组每组有三个成员只是历史布局事实，不是单题配额。较新的 [neighborhood-v2-coverage record](../benchmarks/occt/evaluation/provenance/neighborhood-v2-coverage.json) 记录 73 条静态 dispatch routes、24 条新增 frozen geometry pass 和此前 49 条保持不变；该轮没有重放旧 49 条。本轮没有重跑。较早的 [NAMING_MAP](../benchmarks/occt/NAMING_MAP.md) 与 [integration-validation record](../benchmarks/occt/evaluation/provenance/integration-validation.json) 中的 49 项/19-15-15 是更早快照；不要将它们视为当前清单计数。
 
 ## 现有示例与证据链接
 

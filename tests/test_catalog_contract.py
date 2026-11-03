@@ -18,7 +18,7 @@ BUNDLE=ROOT/"benchmarks"/"occt"
 class CatalogContractTests(unittest.TestCase):
     def test_current_catalog_maps_legacy_tasks_and_only_public_issue_material(self):
         bundle=validate_bundle(BUNDLE)
-        self.assertEqual(bundle["counts"],{"issues":54,"groups":42,"evaluation_suites":42})
+        self.assertEqual(bundle["counts"],{"issues":54,"groups":42,"evaluation_suites":43})
         self.assertEqual(len(bundle["groups"]),42)
         self.assertIn(("NG-04R-v2","1"),bundle["groups"])
         task=public_task(bundle,bundle["groups"][("occt_boolean_group_visible_544","1")])
@@ -27,6 +27,23 @@ class CatalogContractTests(unittest.TestCase):
         self.assertNotIn("hidden_issue_506",serialized)
         self.assertNotIn("evaluator_path",serialized)
         self.assertEqual(len(task["issues"]),1)
+
+    def test_current_suite_checkpoint_inventory(self):
+        bundle=validate_bundle(BUNDLE)
+        suites=bundle["suites"]
+        referenced={(group["evaluation_suite"]["id"],group["evaluation_suite"]["version"])
+                    for group in bundle["groups"].values()}
+        # The historical B55 suite remains registered; new tasks use geometry-v2.
+        self.assertEqual(set(suites)-referenced,{
+            ("occt-bf-suite-b55-27310-27773-27252-oracle-v2","1")})
+        self.assertIn(("occt-bf-suite-b55-27310-27773-27252-geometry-v2","1"),referenced)
+        checkpoints=[checkpoint for suite in suites.values() for checkpoint in suite["checkpoints"]]
+        self.assertEqual(len(checkpoints),231)
+        self.assertTrue(all(checkpoint["required"] for checkpoint in checkpoints))
+        self.assertEqual({category:sum(cp["category"]==category for cp in checkpoints)
+                          for category in ("original","neighborhood","regression")},
+                         {"original":75,"neighborhood":108,"regression":48})
+        self.assertEqual(sum(len(suites[key]["checkpoints"]) for key in referenced),215)
 
     def _copy_bundle(self):
         temporary=tempfile.TemporaryDirectory()
