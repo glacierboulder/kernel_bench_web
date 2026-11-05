@@ -1,0 +1,28 @@
+{
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "evaluation_suite": {
+    "id": "occt-single-27310-checks",
+    "version": "1"
+  },
+  "execution_mode": "joint",
+  "has_hidden_checks": true,
+  "id": "occt-single-27310",
+  "kind": "single",
+  "members": [
+    {
+      "issue_id": "occt-27310",
+      "issue_version": "1"
+    }
+  ],
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "schema_version": 1,
+  "source_id": "occt-b55bd0235351",
+  "title": "OCCT · 27310",
+  "version": "1"
+}

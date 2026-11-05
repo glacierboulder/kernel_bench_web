@@ -1,0 +1,115 @@
+{
+  "checkpoints": [
+    {
+      "case": "issues/occt-29807/1/public/harness_bug29807_i5002.tcl",
+      "category": "original",
+      "id": "original_M29807_i5002",
+      "issue_id": "occt-29807",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "public"
+    },
+    {
+      "case": "issues/occt-29807/1/public/harness_bug29807_svm01.tcl",
+      "category": "original",
+      "id": "original_M29807_svm01",
+      "issue_id": "occt-29807",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "public"
+    },
+    {
+      "case": "issues/occt-29807/1/public/harness_bug29807_svm02.tcl",
+      "category": "original",
+      "id": "original_M29807_svm02",
+      "issue_id": "occt-29807",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M29807_neighbor_i1002.tcl",
+      "category": "neighborhood",
+      "id": "M29807_neighbor_i1002",
+      "issue_id": "occt-29807",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M29807_cone_plane_ring_control.tcl",
+      "category": "regression",
+      "id": "M29807_cone_plane_ring_control",
+      "issue_id": "occt-29807",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m29807_ring_parameter_low",
+      "issue_id": "occt-29807",
+      "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m29807_ring_parameter_low.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m29807_ring_scaled_high",
+      "issue_id": "occt-29807",
+      "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m29807_ring_scaled_high.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt-single-29807"
+  ],
+  "id": "occt-single-29807-checks",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-d9d3107d8df1"
+  ],
+  "title": "OCCT · 29807 checks",
+  "version": "1",
+  "support_files": [
+    "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl"
+  ]
+}

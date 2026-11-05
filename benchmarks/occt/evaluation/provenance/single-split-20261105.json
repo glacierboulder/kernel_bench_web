@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "selection_policy": "Deduplicate by canonical issue ID; retain the first member version in the pre-split catalog order. Inherit its current suite, including the geometry-v2 d308 guard.",
+  "geometry_replayed": false,
+  "directory_moves": {
+    "groups/new/occt-30082-30202-33541/1.json": "groups/multiple/occt-30082-30202-33541/1.json",
+    "groups/new/occt-30082-31602-32850/1.json": "groups/multiple/occt-30082-31602-32850/1.json",
+    "groups/new/occt-21494-29807-31835/1.json": "groups/multiple/occt-21494-29807-31835/1.json",
+    "groups/new/occt-27310-27773-27252/1.json": "groups/multiple/occt-27310-27773-27252/1.json",
+    "groups/new/occt-21494-27252-27780/1.json": "groups/multiple/occt-21494-27252-27780/1.json",
+    "groups/new/occt-32721/1.json": "groups/single/occt-32721/1.json",
+    "groups/new/occt-32942/1.json": "groups/single/occt-32942/1.json",
+    "groups/new/occt-31404/1.json": "groups/single/occt-31404/1.json",
+    "groups/new/occt-31470/1.json": "groups/single/occt-31470/1.json",
+    "groups/new/occt-32470/1.json": "groups/single/occt-32470/1.json",
+    "groups/new/occt-32502/1.json": "groups/single/occt-32502/1.json",
+    "groups/new/occt-33244/1.json": "groups/single/occt-33244/1.json",
+    "groups/new/occt-30703/1.json": "groups/single/occt-30703/1.json",
+    "groups/new/occt-29972/1.json": "groups/single/occt-29972/1.json",
+    "groups/new/occt-33615/1.json": "groups/single/occt-33615/1.json",
+    "groups/new/occt-25818/1.json": "groups/single/occt-25818/1.json",
+    "groups/new/occt-24313/1.json": "groups/single/occt-24313/1.json",
+    "groups/new/occt-24418/1.json": "groups/single/occt-24418/1.json",
+    "groups/new/occt-26796/1.json": "groups/single/occt-26796/1.json",
+    "groups/new/occt-github-1543/1.json": "groups/single/occt-github-1543/1.json",
+    "groups/new/occt-25111/1.json": "groups/single/occt-25111/1.json",
+    "groups/new/occt-26243/1.json": "groups/single/occt-26243/1.json",
+    "groups/new/occt-26910/1.json": "groups/single/occt-26910/1.json",
+    "groups/new/occt-26776/1.json": "groups/single/occt-26776/1.json",
+    "groups/new/occt-25102/1.json": "groups/single/occt-25102/1.json",
+    "groups/new/occt-25342/1.json": "groups/single/occt-25342/1.json",
+    "groups/new/occt-28195/1.json": "groups/single/occt-28195/1.json",
+    "groups/new/occt-28216/1.json": "groups/single/occt-28216/1.json",
+    "groups/new/occt-25542/1.json": "groups/single/occt-25542/1.json",
+    "groups/new/occt-24429/1.json": "groups/single/occt-24429/1.json",
+    "groups/new/occt-28388/1.json": "groups/single/occt-28388/1.json",
+    "groups/new/occt-27227/1.json": "groups/single/occt-27227/1.json",
+    "groups/new/occt-24097/1.json": "groups/single/occt-24097/1.json",
+    "groups/new/occt-26310/1.json": "groups/single/occt-26310/1.json",
+    "groups/new/occt-33639/1.json": "groups/single/occt-33639/1.json"
+  },
+  "selections": [
+    {
+      "issue_id": "mantis-30082",
+      "issue_version": "2",
+      "task_id": "occt-single-30082",
+      "task_path": "groups/single/occt-30082/1.json",
+      "suite_id": "occt-single-30082-checks",
+      "suite_path": "evaluation/suites/single/occt-30082/1.json",
+      "source_id": "occt-ng04r-derived-fe81a63b",
+      "parent_group_id": "NG-04R-v2",
+      "parent_suite": {
+        "id": "NG-04R-checks-v2",
+        "version": "1"
+      },
+      "checkpoint_ids": [
+        "mantis-30082-original",
+        "mantis-30082-neighborhood",
+        "mantis-30082-regression",
+        "mantis-30082-neighborhood-dense-residual-v2"
+      ]
+    },
+    {
+      "issue_id": "mantis-30202",
+      "issue_version": "2",
+      "task_id": "occt-single-30202",
+      "task_path": "groups/single/occt-30202/1.json",
+      "suite_id": "occt-single-30202-checks",
+      "suite_path": "evaluation/suites/single/occt-30202/1.json",
+      "source_id": "occt-ng04r-derived-fe81a63b",
+      "parent_group_id": "NG-04R-v2",
+      "parent_suite": {
+        "id": "NG-04R-checks-v2",
+        "version": "1"
+      },
+      "checkpoint_ids": [
+        "mantis-30202-original",
+        "mantis-30202-neighborhood",
+        "mantis-30202-regression",
+        "mantis-30202-neighborhood-facepair-matrix"
+      ]
+    },
+    {
+      "issue_id": "mantis-33541",
+      "issue_version": "2",
+      "task_id": "occt-single-33541",
+      "task_path": "groups/single/occt-33541/1.json",
+      "suite_id": "occt-single-33541-checks",
+      "suite_path": "evaluation/suites/single/occt-33541/1.json",
+      "source_id": "occt-ng04r-derived-fe81a63b",
+      "parent_group_id": "NG-04R-v2",
+      "parent_suite": {
+        "id": "NG-04R-checks-v2",
+        "version": "1"
+      },
+      "checkpoint_ids": [
+        "mantis-33541-original",
+        "mantis-33541-neighborhood",
+        "mantis-33541-regression",
+        "mantis-33541-neighborhood-boolean-transform"
+      ]
+    },
+    {
+      "issue_id": "mantis-30082",
+      "omitted_group_id": "NG-05T-v1",
+      "omitted_issue_version": "4",
+      "selected_task_id": "occt-single-30082"
+    },
+    {
+      "issue_id": "mantis-31602",
+      "issue_version": "2",
+      "task_id": "occt-single-31602",
+      "task_path": "groups/single/occt-31602/1.json",
+      "suite_id": "occt-single-31602-checks",
+      "suite_path": "evaluation/suites/single/occt-31602/1.json",
+      "source_id": "occt-ng04t-v1-baseline-ef5af939",
+      "parent_group_id": "NG-05T-v1",
+      "parent_suite": {
+        "id": "NG-05T-v1-checks",
+        "version": "1"
+      },
+      "checkpoint_ids": [
+        "mantis-31602-original",
+        "mantis-31602-neighborhood",
+        "mantis-31602-regression",
+        "mantis-31602-neighborhood-seam-matrix"
+      ]
+    },
+    {
+      "issue_id": "mantis-32850",
+      "issue_version": "1",
+      "task_id": "occt-single-32850",
+      "task_path": "groups/single/occt-32850/1.json",
+      "suite_id": "occt-single-32850-checks",
+      "suite_path": "evaluation/suites/single/occt-32850/1.json",
+      "source_id": "occt-ng04t-v1-baseline-ef5af939",
+      "parent_group_id": "NG-05T-v1",
+      "parent_suite": {
+        "id": "NG-05T-v1-checks",
+        "version": "1"
+      },
+      "checkpoint_ids": [
+        "mantis-32850-original",
+        "mantis-32850-neighborhood",
+        "mantis-32850-regression",
+        "mantis-32850-neighborhood-branch-matrix"
+      ]
+    },
+    {
+      "issue_id": "occt-21494",
+      "issue_version": "1",
+      "task_id": "occt-single-21494",
+      "task_path": "groups/single/occt-21494/1.json",
+      "suite_id": "occt-single-21494-checks",
+      "suite_path": "evaluation/suites/single/occt-21494/1.json",
+      "source_id": "occt-d9d3107d8df1",
+      "parent_group_id": "occt-bf-group-d9d310-21494-29807-31835",
+      "parent_suite": {
+        "id": "occt-bf-suite-d9d310-21494-29807-31835",
+        "version": "1"
+      },
+      "checkpoint_ids": [
+        "original_M21494_2",
+        "M21494_neighbor_sphere9p5",
+        "M21494_regression_cone10_sphere9",
+        "neighborhood_v2_m21494_scale_125_sphere925",
+        "neighborhood_v2_m21494_translated_sphere925"
+      ]
+    },
+    {
+      "issue_id": "occt-29807",
+      "issue_version": "1",
+      "task_id": "occt-single-29807",
+      "task_path": "groups/single/occt-29807/1.json",
+      "suite_id": "occt-single-29807-checks",
+      "suite_path": "evaluation/suites/single/occt-29807/1.json",
+      "source_id": "occt-d9d3107d8df1",
+      "parent_group_id": "occt-bf-group-d9d310-21494-29807-31835",
+      "parent_suite": {
+        "id": "occt-bf-suite-d9d310-21494-29807-31835",
+        "version": "1"
+      },
+      "checkpoint_ids": [
+        "original_M29807_i5002",
+        "original_M29807_svm01",
+        "original_M29807_svm02",
+        "M29807_neighbor_i1002",
+        "M29807_cone_plane_ring_control",
+        "neighborhood_v2_m29807_ring_parameter_low",
+        "neighborhood_v2_m29807_ring_scaled_high"
+      ]
+    },
+    {
+      "issue_id": "occt-31835",
+      "issue_version": "1",
+      "task_id": "occt-single-31835",
+      "task_path": "groups/single/occt-31835/1.json",
+      "suite_id": "occt-single-31835-checks",
+      "suite_path": "evaluation/suites/single/occt-31835/1.json",
+      "source_id": "occt-d9d3107d8df1",
+      "parent_group_id": "occt-bf-group-d9d310-21494-29807-31835",
+      "parent_suite": {
+        "id": "occt-bf-suite-d9d310-21494-29807-31835",
+        "version": "1"
+      },
+      "checkpoint_ids": [
+        "original_M31835_1",
+        "original_M31835_2",
+        "M31835_neighbor_axis_offset5",
+        "M31835_regression_steinmetz_r80",
+        "neighborhood_v2_m31835_common_scaled_r10",
+        "neighborhood_v2_m31835_common_scaled_r20"
+      ]
+    },
+    {
+      "issue_id": "occt-27310",
+      "issue_version": "1",
+      "task_id": "occt-single-27310",
+      "task_path": "groups/single/occt-27310/1.json",
+      "suite_id": "occt-single-27310-checks",
+      "suite_path": "evaluation/suites/single/occt-27310/1.json",
+      "source_id": "occt-b55bd0235351",
+      "parent_group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "parent_suite": {
+        "id": "occt-bf-suite-b55-27310-27773-27252-geometry-v2",
+        "version": "1"
+      },
+      "checkpoint_ids": [
+        "M27310_1",
+        "M27310_2_d308",
+        "M27310_neighbor_finite_face",
+        "M27310_regression_two_loops",
+        "neighborhood_v2_m27310_rigid_translated_original_breps",
+        "neighborhood_v2_m27310_scaled_finite_brep_neighborhood"
+      ]
+    },
+    {
+      "issue_id": "occt-27773",
+      "issue_version": "1",
+      "task_id": "occt-single-27773",
+      "task_path": "groups/single/occt-27773/1.json",
+      "suite_id": "occt-single-27773-checks",
+      "suite_path": "evaluation/suites/single/occt-27773/1.json",
+      "source_id": "occt-b55bd0235351",
+      "parent_group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "parent_suite": {
+        "id": "occt-bf-suite-b55-27310-27773-27252-geometry-v2",
+        "version": "1"
+      },
+      "checkpoint_ids": [
+        "M27773",
+        "M27773_neighbor_offset_line",
+        "M27773_regression_circle_line",
+        "neighborhood_v2_m27773_offset_radius_parameter",
+        "neighborhood_v2_m27773_offset_near_tangent"
+      ]
+    },
+    {
+      "issue_id": "occt-27252",
+      "issue_version": "1",
+      "task_id": "occt-single-27252",
+      "task_path": "groups/single/occt-27252/1.json",
+      "suite_id": "occt-single-27252-checks",
+      "suite_path": "evaluation/suites/single/occt-27252/1.json",
+      "source_id": "occt-b55bd0235351",
+      "parent_group_id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "parent_suite": {
+        "id": "occt-bf-suite-b55-27310-27773-27252-geometry-v2",
+        "version": "1"
+      },
+      "checkpoint_ids": [
+        "M27252",
+        "M27252_neighbor_translated_plane",
+        "M27252_regression_cylinder_plane",
+        "neighborhood_v2_m27252_brep_plane_offset005",
+        "neighborhood_v2_m27252_brep_plane_scale150_offset010"
+      ]
+    },
+    {
+      "issue_id": "occt-21494",
+      "omitted_group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "omitted_issue_version": "2",
+      "selected_task_id": "occt-single-21494"
+    },
+    {
+      "issue_id": "occt-27252",
+      "omitted_group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "omitted_issue_version": "2",
+      "selected_task_id": "occt-single-27252"
+    },
+    {
+      "issue_id": "occt-27780",
+      "issue_version": "1",
+      "task_id": "occt-single-27780",
+      "task_path": "groups/single/occt-27780/1.json",
+      "suite_id": "occt-single-27780-checks",
+      "suite_path": "evaluation/suites/single/occt-27780/1.json",
+      "source_id": "occt-2613378e60ff",
+      "parent_group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "parent_suite": {
+        "id": "occt-bf-suite-b2613378-27780-27252-21494-v1",
+        "version": "1"
+      },
+      "checkpoint_ids": [
+        "M27780_original",
+        "M27780_neighbor_translated_face",
+        "M27780_regression_finite_plane",
+        "neighborhood_v2_m27780_brep_rigid_translation_mapping",
+        "neighborhood_v2_m27780_brep_scale_mapping"
+      ]
+    }
+  ]
+}

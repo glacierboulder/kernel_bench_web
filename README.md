@@ -18,7 +18,7 @@ python -m backend.doctor
 
 服务默认仅绑定回环地址。浏览器访问地址和服务端口由 `BENCH_HOST`、`BENCH_PORT` 或配置文件控制。远程使用时保留回环绑定，通过 SSH 隧道转发；示例见 [部署说明](docs/deployment.md)。
 
-默认题库在 `benchmarks/occt/`，当前包含 5 个新三 issue 组合和 7 个旧题组，共 12 个可独立运行的注册题目。新旧目录规则、issue/suite 路径映射及此次迁移的检查记录见题库中的 [命名映射](benchmarks/occt/NAMING_MAP.md) 和 [迁移验收记录](benchmarks/occt/evaluation/provenance/integration-validation.json)。外部兼容题库可用 `BENCHMARK_ROOT` 配置；历史别名 `BENCH_PROTO_ROOT` 仍受支持。题库通过文件维护，目前没有网页题目编辑器；复制示例和标识更新规则见 [手工维护题库](docs/benchmark-authoring.md)。公开题库校验只依赖 Python 标准库，可在 macOS 上读取清单；Linux 沙箱和编译依赖只用于实际实验。
+默认题库在 `benchmarks/occt/`，当前包含 42 道去重单 issue 题（`groups/single/`）、5 个三 issue 组合（`groups/multiple/`）及 7 个 legacy 任务，共 54 个注册任务、55 个评测 suite。42 道单题中有 12 道由原五组拆分而来，保留所选版本的 baseline 与检查点。新旧目录规则、issue/suite 路径映射及此次迁移的检查记录见题库中的 [命名映射](benchmarks/occt/NAMING_MAP.md) 和 [迁移验收记录](benchmarks/occt/evaluation/provenance/integration-validation.json)。外部兼容题库可用 `BENCHMARK_ROOT` 配置；历史别名 `BENCH_PROTO_ROOT` 仍受支持。题库通过文件维护，目前没有网页题目编辑器；复制示例和标识更新规则见 [手工维护题库](docs/benchmark-authoring.md)。公开题库校验只依赖 Python 标准库，可在 macOS 上读取清单；Linux 沙箱和编译依赖只用于实际实验。
 
 ## 配置与数据
 

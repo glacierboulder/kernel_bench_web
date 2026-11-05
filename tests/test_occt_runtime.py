@@ -38,7 +38,7 @@ class OcctVersionDetectionTests(unittest.TestCase):
             self.assertEqual(occt_version(root), (7, 0))
 
 class UnifiedOcctRuntimeTests(unittest.TestCase):
-    def test_registry_covers_fifteen_suites_and_113_checkpoints(self):
+    def test_registry_covers_original_and_split_suites(self):
         value=json.loads((ROOT/'benchmarks/occt/evaluation/runtime.json').read_text())
         catalog=json.loads((ROOT/'benchmarks/occt/catalog.json').read_text())
         active=[]
@@ -46,8 +46,8 @@ class UnifiedOcctRuntimeTests(unittest.TestCase):
             group=json.loads((ROOT/'benchmarks/occt'/ref['path']).read_text())
             key=group['evaluation_suite']['id']+'@'+group['evaluation_suite']['version']
             if key in value['suites']: active.append(value['suites'][key])
-        self.assertEqual(len(active),15)
-        self.assertEqual(sum(len(c['checkpoints']) for c in active),113)
+        self.assertEqual(len(active),27)
+        self.assertEqual(sum(len(c['checkpoints']) for c in active),172)
         for c in value['suites'].values():
             for key,r in c['checkpoints'].items():
                 self.assertEqual(key,r['checkpoint_id'])

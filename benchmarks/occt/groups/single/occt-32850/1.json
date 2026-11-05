@@ -1,0 +1,28 @@
+{
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "evaluation_suite": {
+    "id": "occt-single-32850-checks",
+    "version": "1"
+  },
+  "execution_mode": "joint",
+  "has_hidden_checks": true,
+  "id": "occt-single-32850",
+  "kind": "single",
+  "members": [
+    {
+      "issue_id": "mantis-32850",
+      "issue_version": "1"
+    }
+  ],
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "schema_version": 1,
+  "source_id": "occt-ng04t-v1-baseline-ef5af939",
+  "title": "OCCT · 32850",
+  "version": "1"
+}

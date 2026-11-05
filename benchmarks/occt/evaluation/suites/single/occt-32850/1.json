@@ -1,0 +1,61 @@
+{
+  "checkpoints": [
+    {
+      "case": "issues/occt-32850/1/public/original.tcl",
+      "category": "original",
+      "id": "mantis-32850-original",
+      "issue_id": "mantis-32850",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/mantis-32850/1/neighborhood.tcl",
+      "category": "neighborhood",
+      "id": "mantis-32850-neighborhood",
+      "issue_id": "mantis-32850",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-32850/1/regression.tcl",
+      "category": "regression",
+      "id": "mantis-32850-regression",
+      "issue_id": "mantis-32850",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-32850/1/neighborhood_branch_matrix.tcl",
+      "category": "neighborhood",
+      "id": "mantis-32850-neighborhood-branch-matrix",
+      "issue_id": "mantis-32850",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt-single-32850"
+  ],
+  "id": "occt-single-32850-checks",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-ng04t-v1-baseline-ef5af939"
+  ],
+  "title": "OCCT · 32850 checks",
+  "version": "1",
+  "support_files": [
+    "evaluation/cases/mantis-30082/5/neighbor_support.tcl"
+  ]
+}

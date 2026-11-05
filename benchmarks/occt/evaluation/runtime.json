@@ -2030,6 +2030,931 @@
         "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
         "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
       }
+    },
+    "occt-single-30082-checks@1": {
+      "schema_version": 1,
+      "suite": "occt-single-30082-checks@1",
+      "group_id": "occt-single-30082",
+      "source_id": "occt-ng04r-derived-fe81a63b",
+      "build_helper": {
+        "path": "five_group_execution/helpers/part1_run_eval.py",
+        "sha256": "1da15e35caccc73c88b97900184543f1912879b696cb5d0405a00184d2373d05"
+      },
+      "checkpoints": {
+        "mantis-30082-original": {
+          "checkpoint_id": "mantis-30082-original",
+          "case": "issues/mantis-30082/2/public/original.tcl",
+          "case_sha256": "c95ce4a22cb803f7d9e028250206149a9ec1230eb8185b7d14395b4af3dde4b4",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30082-neighborhood": {
+          "checkpoint_id": "mantis-30082-neighborhood",
+          "case": "evaluation/cases/mantis-30082/2/neighborhood.tcl",
+          "case_sha256": "6ece46afe217a0c62e423d464b4e38b9e972f1aa3033e6dd116d4448d5ce7040",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30082-regression": {
+          "checkpoint_id": "mantis-30082-regression",
+          "case": "evaluation/cases/mantis-30082/2/regression.tcl",
+          "case_sha256": "d7b16bf795d51ed9924aad0888132e0d17a636fd347adc8e7d51382028e3d7e9",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30082-neighborhood-dense-residual-v2": {
+          "checkpoint_id": "mantis-30082-neighborhood-dense-residual-v2",
+          "case": "evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v2.tcl",
+          "case_sha256": "679701cadd55955fc3190c39c7edd552b95f2ee94937cd3faa0f20655a09e3bd",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O3 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-single-30202-checks@1": {
+      "schema_version": 1,
+      "suite": "occt-single-30202-checks@1",
+      "group_id": "occt-single-30202",
+      "source_id": "occt-ng04r-derived-fe81a63b",
+      "build_helper": {
+        "path": "five_group_execution/helpers/part1_run_eval.py",
+        "sha256": "1da15e35caccc73c88b97900184543f1912879b696cb5d0405a00184d2373d05"
+      },
+      "checkpoints": {
+        "mantis-30202-original": {
+          "checkpoint_id": "mantis-30202-original",
+          "case": "issues/mantis-30202/2/public/original.tcl",
+          "case_sha256": "bab1c3ab3b7962d958715d15559806e595ed2e3b761031115cec0bf0b3d7261c",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30202-neighborhood": {
+          "checkpoint_id": "mantis-30202-neighborhood",
+          "case": "evaluation/cases/mantis-30202/2/neighborhood.tcl",
+          "case_sha256": "e4ebad7a7985c132ecc83a8c51bfecef31914d8fc45aabef86f41949a050e1f2",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30202-regression": {
+          "checkpoint_id": "mantis-30202-regression",
+          "case": "evaluation/cases/mantis-30202/2/regression.tcl",
+          "case_sha256": "8adfb321c8cd7f85732870e559c50aa06a617d8cfff8c14aadc979914e31b6e0",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-30202-neighborhood-facepair-matrix": {
+          "checkpoint_id": "mantis-30202-neighborhood-facepair-matrix",
+          "case": "evaluation/cases/mantis-30202/2/neighborhood_facepair_matrix.tcl",
+          "case_sha256": "03a8a9eb99abe711d8b6c89e5279397e73efd6fd838b04e52c01b37cd20f354e",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O3 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-single-33541-checks@1": {
+      "schema_version": 1,
+      "suite": "occt-single-33541-checks@1",
+      "group_id": "occt-single-33541",
+      "source_id": "occt-ng04r-derived-fe81a63b",
+      "build_helper": {
+        "path": "five_group_execution/helpers/part1_run_eval.py",
+        "sha256": "1da15e35caccc73c88b97900184543f1912879b696cb5d0405a00184d2373d05"
+      },
+      "checkpoints": {
+        "mantis-33541-original": {
+          "checkpoint_id": "mantis-33541-original",
+          "case": "issues/mantis-33541/2/public/original.tcl",
+          "case_sha256": "ce5e8ed08e3882abc9d770614a6e87704f499eb6cc1cf229d9a536f21f854cdd",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-33541-neighborhood": {
+          "checkpoint_id": "mantis-33541-neighborhood",
+          "case": "evaluation/cases/mantis-33541/2/neighborhood.tcl",
+          "case_sha256": "c73267e409637ac865d633d38b470de9bd6b1e5c6b1bb971e5bd13af333764a6",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-33541-regression": {
+          "checkpoint_id": "mantis-33541-regression",
+          "case": "evaluation/cases/mantis-33541/2/regression.tcl",
+          "case_sha256": "07beabc8e9c643e299074d421156e4021b0acc182abd618f5bc82dc2ec7b8120",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-33541-neighborhood-boolean-transform": {
+          "checkpoint_id": "mantis-33541-neighborhood-boolean-transform",
+          "case": "evaluation/cases/mantis-33541/2/neighborhood_boolean_transform.tcl",
+          "case_sha256": "532f2db0a41054f82fc3bbb14b3a1d26f468b47fb6b20051b3767e95a098d5e4",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O3 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-single-31602-checks@1": {
+      "schema_version": 1,
+      "suite": "occt-single-31602-checks@1",
+      "group_id": "occt-single-31602",
+      "source_id": "occt-ng04t-v1-baseline-ef5af939",
+      "build_helper": {
+        "path": "five_group_execution/helpers/part1_run_eval.py",
+        "sha256": "1da15e35caccc73c88b97900184543f1912879b696cb5d0405a00184d2373d05"
+      },
+      "checkpoints": {
+        "mantis-31602-original": {
+          "checkpoint_id": "mantis-31602-original",
+          "case": "issues/mantis-31602/2/public/original.tcl",
+          "case_sha256": "8d4531787a0e2de8abdccecd8916cc07a9b92f2c63de5506854951803550ebc8",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-31602-neighborhood": {
+          "checkpoint_id": "mantis-31602-neighborhood",
+          "case": "evaluation/cases/mantis-31602/2/neighborhood.tcl",
+          "case_sha256": "72267ff317028dcc4e3f8cc6c3ed4f19e09d3a43871e795606a2a1e17b0e73ef",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-31602-regression": {
+          "checkpoint_id": "mantis-31602-regression",
+          "case": "evaluation/cases/mantis-31602/2/regression.tcl",
+          "case_sha256": "49b6c2b0e8a3ce069249f68122f3e9448d9d7101a5ce1847e87c4f3835d924bf",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-31602-neighborhood-seam-matrix": {
+          "checkpoint_id": "mantis-31602-neighborhood-seam-matrix",
+          "case": "evaluation/cases/mantis-31602/2/neighborhood_seam_matrix.tcl",
+          "case_sha256": "6367584b51e89c129524ac7b03f4c9c6996e93c7860ed5c3ffd2f0aa49374c5c",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O3 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-single-32850-checks@1": {
+      "schema_version": 1,
+      "suite": "occt-single-32850-checks@1",
+      "group_id": "occt-single-32850",
+      "source_id": "occt-ng04t-v1-baseline-ef5af939",
+      "build_helper": {
+        "path": "five_group_execution/helpers/part1_run_eval.py",
+        "sha256": "1da15e35caccc73c88b97900184543f1912879b696cb5d0405a00184d2373d05"
+      },
+      "checkpoints": {
+        "mantis-32850-original": {
+          "checkpoint_id": "mantis-32850-original",
+          "case": "issues/mantis-32850/1/public/original.tcl",
+          "case_sha256": "c402ec004583dce920b7ab3d257f89441759658b4465c77c5a5f5e85818e9c08",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-32850-neighborhood": {
+          "checkpoint_id": "mantis-32850-neighborhood",
+          "case": "evaluation/cases/mantis-32850/1/neighborhood.tcl",
+          "case_sha256": "4b8a570ee1fd79fbf3868347370f88dd5c14896ca282513cac7e34687df0a713",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-32850-regression": {
+          "checkpoint_id": "mantis-32850-regression",
+          "case": "evaluation/cases/mantis-32850/1/regression.tcl",
+          "case_sha256": "afa33395aa692d7b1cac5c1014d8692095b0821a777f07a21684da092b4ccc6d",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "mantis-32850-neighborhood-branch-matrix": {
+          "checkpoint_id": "mantis-32850-neighborhood-branch-matrix",
+          "case": "evaluation/cases/mantis-32850/1/neighborhood_branch_matrix.tcl",
+          "case_sha256": "f5f23d901185a62d6657d92a89a69dfdcc3bb13aa058a47b81df164350abbd86",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O3 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-single-21494-checks@1": {
+      "schema_version": 1,
+      "suite": "occt-single-21494-checks@1",
+      "group_id": "occt-single-21494",
+      "source_id": "occt-d9d3107d8df1",
+      "build_helper": {
+        "path": "occt-bf-group-d9d310-21494-29807-31835/routed_run_eval.py",
+        "sha256": "8aafeeaaf8ad3c012975b74543175084d575ff125a41663cfe3d51f00591e9ba"
+      },
+      "checkpoints": {
+        "original_M21494_2": {
+          "checkpoint_id": "original_M21494_2",
+          "case": "issues/occt-21494/1/public/harness_bug21494_2.tcl",
+          "case_sha256": "13e70818e5365e10acb90b43db1b5450a6ac6ccc05b8bc4672cd3ddfae6e34d8",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "M21494_neighbor_sphere9p5": {
+          "checkpoint_id": "M21494_neighbor_sphere9p5",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M21494_neighbor_sphere9p5.tcl",
+          "case_sha256": "14dea7550fd64df29481458f1f3b7e70d04d7e8a9c3e5b60687464892b1cc352",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "M21494_regression_cone10_sphere9": {
+          "checkpoint_id": "M21494_regression_cone10_sphere9",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M21494_regression_cone10_sphere9.tcl",
+          "case_sha256": "6a8e2e791a2917f917fa7f88dca74b078341b96b5bfa364505a3930ec36bc0d2",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "neighborhood_v2_m21494_scale_125_sphere925": {
+          "checkpoint_id": "neighborhood_v2_m21494_scale_125_sphere925",
+          "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m21494_scale_125_sphere925.tcl",
+          "case_sha256": "b62bdc670ee691fb4f25476bed05cd53628f3c17e3ff6684cc2a47c6ef5838bc",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m21494_translated_sphere925": {
+          "checkpoint_id": "neighborhood_v2_m21494_translated_sphere925",
+          "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m21494_translated_sphere925.tcl",
+          "case_sha256": "587c5e28794d28cc755cf6f79d937504e41b31ed7727eca75c08a2d79e0cc9ff",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O0 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-single-29807-checks@1": {
+      "schema_version": 1,
+      "suite": "occt-single-29807-checks@1",
+      "group_id": "occt-single-29807",
+      "source_id": "occt-d9d3107d8df1",
+      "build_helper": {
+        "path": "occt-bf-group-d9d310-21494-29807-31835/routed_run_eval.py",
+        "sha256": "8aafeeaaf8ad3c012975b74543175084d575ff125a41663cfe3d51f00591e9ba"
+      },
+      "checkpoints": {
+        "original_M29807_i5002": {
+          "checkpoint_id": "original_M29807_i5002",
+          "case": "issues/occt-29807/1/public/harness_bug29807_i5002.tcl",
+          "case_sha256": "343d4f467a4168bbe5210c918873408010de998151598d4b8ef790b7abe4f3b9",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "original_M29807_svm01": {
+          "checkpoint_id": "original_M29807_svm01",
+          "case": "issues/occt-29807/1/public/harness_bug29807_svm01.tcl",
+          "case_sha256": "91069422a88d009c91bb08d05fc6c2a62704ad2de418b75ab37b689a8e3d6d79",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "original_M29807_svm02": {
+          "checkpoint_id": "original_M29807_svm02",
+          "case": "issues/occt-29807/1/public/harness_bug29807_svm02.tcl",
+          "case_sha256": "d5c7b1d58ae2706e374db110d92fd5bc91975791e7c639ba1ecde15d1d41f83c",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "M29807_neighbor_i1002": {
+          "checkpoint_id": "M29807_neighbor_i1002",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M29807_neighbor_i1002.tcl",
+          "case_sha256": "5feeefbe19ea6b3f6b2a1c8ddc5a6586349061da63ade89941e04e01e65f697d",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "M29807_cone_plane_ring_control": {
+          "checkpoint_id": "M29807_cone_plane_ring_control",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M29807_cone_plane_ring_control.tcl",
+          "case_sha256": "ec0c671c88801797c27aea946db38d6c375d934d2bac9e9329be7f79b72d7a79",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "neighborhood_v2_m29807_ring_parameter_low": {
+          "checkpoint_id": "neighborhood_v2_m29807_ring_parameter_low",
+          "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m29807_ring_parameter_low.tcl",
+          "case_sha256": "c6aeda95fb78bb8f00b6440926f9512cd1578faf8004b313f2c48c8b1c47b04b",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m29807_ring_scaled_high": {
+          "checkpoint_id": "neighborhood_v2_m29807_ring_scaled_high",
+          "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m29807_ring_scaled_high.tcl",
+          "case_sha256": "db3849b23ed10a459d9bf4f3523a8a94536e5dbce9790438f5f5dbd1c1e1e8d3",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O0 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-single-31835-checks@1": {
+      "schema_version": 1,
+      "suite": "occt-single-31835-checks@1",
+      "group_id": "occt-single-31835",
+      "source_id": "occt-d9d3107d8df1",
+      "build_helper": {
+        "path": "occt-bf-group-d9d310-21494-29807-31835/routed_run_eval.py",
+        "sha256": "8aafeeaaf8ad3c012975b74543175084d575ff125a41663cfe3d51f00591e9ba"
+      },
+      "checkpoints": {
+        "original_M31835_1": {
+          "checkpoint_id": "original_M31835_1",
+          "case": "issues/occt-31835/1/public/harness_bug31835_1.tcl",
+          "case_sha256": "c593a09ba82b7762743b7f8039fd41cff15518bcef47dfc92216c5d04bf4377f",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "original_M31835_2": {
+          "checkpoint_id": "original_M31835_2",
+          "case": "issues/occt-31835/1/public/harness_bug31835_2.tcl",
+          "case_sha256": "dccb364115a708890f459d349f5840f238a039bb3f34db1d6cfea6fa0702041f",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "M31835_neighbor_axis_offset5": {
+          "checkpoint_id": "M31835_neighbor_axis_offset5",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M31835_neighbor_axis_offset5.tcl",
+          "case_sha256": "8b68fb9eb10a4b86d310248c026e820fdcf82899b2f8d422524eb9dc13b8aaad",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "M31835_regression_steinmetz_r80": {
+          "checkpoint_id": "M31835_regression_steinmetz_r80",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-d9d310-21494-29807-31835/M31835_regression_steinmetz_r80.tcl",
+          "case_sha256": "6935600c84c3364e2806f58a9fe1ef705253d434e7ed2f0341e180bac0904283",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g1/run_draw_case.py",
+            "sha256": "ae28b446626fd7dadb8869a4f51714aa5f591fc456631e172056aebd037a3072"
+          }
+        },
+        "neighborhood_v2_m31835_common_scaled_r10": {
+          "checkpoint_id": "neighborhood_v2_m31835_common_scaled_r10",
+          "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m31835_common_scaled_r10.tcl",
+          "case_sha256": "53cb1067e4151de9dc7e130c2350305fd109c3b00333efdadf1a7e9754b5db0e",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m31835_common_scaled_r20": {
+          "checkpoint_id": "neighborhood_v2_m31835_common_scaled_r20",
+          "case": "evaluation/cases/neighborhood_v2/bf/d9d31021494-29807-31835/m31835_common_scaled_r20.tcl",
+          "case_sha256": "1e5a967874ee387dd926aeb270cbe20ffec450d3fc50016fb99eee59c0a4bcb4",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O0 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-single-27310-checks@1": {
+      "schema_version": 1,
+      "suite": "occt-single-27310-checks@1",
+      "group_id": "occt-single-27310",
+      "source_id": "occt-b55bd0235351",
+      "build_helper": {
+        "path": "occt-bf-group-b55-27310-27773-27252-oracle-v2/routed_run_eval.py",
+        "sha256": "d065b782f1fe5f843ab57f7a99d11d7c1b333536a1caaaf6abc3be14d633d25b"
+      },
+      "checkpoints": {
+        "M27310_1": {
+          "checkpoint_id": "M27310_1",
+          "case": "issues/occt-27310/1/public/harness_bug27310_1.tcl",
+          "case_sha256": "f9acda947a60a072d880fade9cdc4ea16b7283792976ca3f84ae4ad01ff4f392",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27310_2_d308": {
+          "checkpoint_id": "M27310_2_d308",
+          "case": "evaluation/cases/checkpoint_v2/m27310_d308.tcl",
+          "case_sha256": "3f5e08cc99ed785654362cec8e8139b70946049c77ef79eb3273b872bf1f4368",
+          "category": "original",
+          "engine": {
+            "kind": "assertions",
+            "path": "occt_single_v4/draw_case_v1_base.py",
+            "sha256": "ef2867528a88b65f3b0aa800bec2e0b8ce2f7434d23ff389204f7785680a0149"
+          },
+          "expected_assertion_ids": [
+            "reported_value_valid",
+            "nonempty_measurements",
+            "surface_residual",
+            "pcurve_mapping"
+          ],
+          "pending_requirements": [
+            "independent_endpoint_and_complete_intersection_coverage_reference"
+          ]
+        },
+        "M27310_neighbor_finite_face": {
+          "checkpoint_id": "M27310_neighbor_finite_face",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27310_neighbor_finite_face.tcl",
+          "case_sha256": "e025d3718d5ced85ff3d44b3a4bba126f0e49b95c1936301a235e657e765aa9a",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27310_regression_two_loops": {
+          "checkpoint_id": "M27310_regression_two_loops",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27310_regression_two_loops.tcl",
+          "case_sha256": "27085018781829f4e76d9ccb65b2859871459581614c481810f634fd046254c9",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "neighborhood_v2_m27310_rigid_translated_original_breps": {
+          "checkpoint_id": "neighborhood_v2_m27310_rigid_translated_original_breps",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27310_rigid_translated_original_breps.tcl",
+          "case_sha256": "33ed187b02876bad609d86b0abe0e7fb5a04071546e890282fc5db400908dd44",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27310_scaled_finite_brep_neighborhood": {
+          "checkpoint_id": "neighborhood_v2_m27310_scaled_finite_brep_neighborhood",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27310_scaled_finite_brep_neighborhood.tcl",
+          "case_sha256": "6b76bfd54b65049814e2cabb21360a5a8ed4573645c93d8a3d21ac4ab1dc064e",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "gcc",
+        "optimization_flags": "-O0 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-single-27773-checks@1": {
+      "schema_version": 1,
+      "suite": "occt-single-27773-checks@1",
+      "group_id": "occt-single-27773",
+      "source_id": "occt-b55bd0235351",
+      "build_helper": {
+        "path": "occt-bf-group-b55-27310-27773-27252-oracle-v2/routed_run_eval.py",
+        "sha256": "d065b782f1fe5f843ab57f7a99d11d7c1b333536a1caaaf6abc3be14d633d25b"
+      },
+      "checkpoints": {
+        "M27773": {
+          "checkpoint_id": "M27773",
+          "case": "issues/occt-27773/1/public/harness_bug27773.tcl",
+          "case_sha256": "92c210445156b9e064f379972da197a914680b4ae66cbc9f4d8a113a9ffbb287",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27773_neighbor_offset_line": {
+          "checkpoint_id": "M27773_neighbor_offset_line",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27773_neighbor_offset_line.tcl",
+          "case_sha256": "917c4c5b0ba256a24ca9ff487f12d8e64ecb85bb144372583d6b8f30ac253cde",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27773_regression_circle_line": {
+          "checkpoint_id": "M27773_regression_circle_line",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27773_regression_circle_line.tcl",
+          "case_sha256": "aa02e6f88fb03824066186c9038d9fd846b78c170664d76834718b976524f2e3",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "neighborhood_v2_m27773_offset_radius_parameter": {
+          "checkpoint_id": "neighborhood_v2_m27773_offset_radius_parameter",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27773_offset_radius_parameter.tcl",
+          "case_sha256": "1458be796ac47673ec272b1f95b50ed66cf8435b4d60a1793a14745178ad354c",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27773_offset_near_tangent": {
+          "checkpoint_id": "neighborhood_v2_m27773_offset_near_tangent",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27773_offset_near_tangent.tcl",
+          "case_sha256": "5b57126c1ae444551e9e21004c04b2c8e04003d4e647a4a34ffab5bc0f7119ec",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "gcc",
+        "optimization_flags": "-O0 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-single-27252-checks@1": {
+      "schema_version": 1,
+      "suite": "occt-single-27252-checks@1",
+      "group_id": "occt-single-27252",
+      "source_id": "occt-b55bd0235351",
+      "build_helper": {
+        "path": "occt-bf-group-b55-27310-27773-27252-oracle-v2/routed_run_eval.py",
+        "sha256": "d065b782f1fe5f843ab57f7a99d11d7c1b333536a1caaaf6abc3be14d633d25b"
+      },
+      "checkpoints": {
+        "M27252": {
+          "checkpoint_id": "M27252",
+          "case": "issues/occt-27252/1/public/harness_bug27252_1.tcl",
+          "case_sha256": "752a8382552078f2647318412730163e8f0def19a3eb7f1b83fd8f6b5c2ac450",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27252_neighbor_translated_plane": {
+          "checkpoint_id": "M27252_neighbor_translated_plane",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27252_neighbor_translated_plane.tcl",
+          "case_sha256": "14c99594426c9a949225670bc4543bb038ce10f14c74808e122b7f79f089872d",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "M27252_regression_cylinder_plane": {
+          "checkpoint_id": "M27252_regression_cylinder_plane",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27252_regression_cylinder_plane.tcl",
+          "case_sha256": "8a8c92c161210c4c4c3e5db8fde50810835f4af38d76acfceab48895009f1221",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g2/run_draw_case.py",
+            "sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1"
+          }
+        },
+        "neighborhood_v2_m27252_brep_plane_offset005": {
+          "checkpoint_id": "neighborhood_v2_m27252_brep_plane_offset005",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27252_brep_plane_offset005.tcl",
+          "case_sha256": "259974fbdb5e9919efe36b57be23167555f4f51502a8c0f36e222728ac657372",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27252_brep_plane_scale150_offset010": {
+          "checkpoint_id": "neighborhood_v2_m27252_brep_plane_scale150_offset010",
+          "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27252_brep_plane_scale150_offset010.tcl",
+          "case_sha256": "f45c905b8f1870d3de93f53f706bcb9dba2dd7243c6d93a5b7797f7ca5aba329",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "gcc",
+        "optimization_flags": "-O0 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
+    },
+    "occt-single-27780-checks@1": {
+      "schema_version": 1,
+      "suite": "occt-single-27780-checks@1",
+      "group_id": "occt-single-27780",
+      "source_id": "occt-2613378e60ff",
+      "build_helper": {
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      },
+      "checkpoints": {
+        "M27780_original": {
+          "checkpoint_id": "M27780_original",
+          "case": "issues/occt-27780/1/public/harness_bug27780.tcl",
+          "case_sha256": "fcb755741b0323aa64907f102b1c62f9cb16464e0c2e6793a424a24348f05fcf",
+          "category": "original",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g3/run_draw_case.py",
+            "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+            "role": "agent"
+          }
+        },
+        "M27780_neighbor_translated_face": {
+          "checkpoint_id": "M27780_neighbor_translated_face",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27780_neighbor_translated_face.tcl",
+          "case_sha256": "e04d148186d229b93050bb84ebb65d9290e0ee1a31a4cb57e1c7c92386e7417c",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g3/run_draw_case.py",
+            "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+            "role": "agent"
+          }
+        },
+        "M27780_regression_finite_plane": {
+          "checkpoint_id": "M27780_regression_finite_plane",
+          "case": "evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27780_regression_finite_plane.tcl",
+          "case_sha256": "480bae209e70cf47c5d474ef5f6ea27eae9e8186a7978ee54621e0440a065017",
+          "category": "regression",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/g3/run_draw_case.py",
+            "sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+            "role": "agent"
+          }
+        },
+        "neighborhood_v2_m27780_brep_rigid_translation_mapping": {
+          "checkpoint_id": "neighborhood_v2_m27780_brep_rigid_translation_mapping",
+          "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27780_brep_rigid_translation_mapping.tcl",
+          "case_sha256": "02b29ae8a681aabbacfd1969ec4c0327e51388574213b6135dadc4e9395e2a82",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        },
+        "neighborhood_v2_m27780_brep_scale_mapping": {
+          "checkpoint_id": "neighborhood_v2_m27780_brep_scale_mapping",
+          "case": "evaluation/cases/neighborhood_v2/bf/b2613378-21494-27252-27780/m27780_brep_scale_mapping.tcl",
+          "case_sha256": "2687367277ccdb862f2f4e057f23828706d5cb8fb4710cb360df0f5b968612c2",
+          "category": "neighborhood",
+          "engine": {
+            "kind": "legacy",
+            "path": "five_group_originals/part1/run_draw_case.py",
+            "sha256": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80"
+          }
+        }
+      },
+      "public_build_profile": {
+        "compiler_output_directory": "clang",
+        "optimization_flags": "-O0 -DNDEBUG"
+      },
+      "geometry_helper": {
+        "group_id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+        "origin": "g3",
+        "path": "occt-bf-group-b2613378-27780-27252-21494-v1/routed_run_eval.py",
+        "sha256": "fca679ca95d2a06adcb56f351002a3fa2c3c19d6716d0a28e89b4451bfa03b0b"
+      }
     }
   }
 }

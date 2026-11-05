@@ -16,6 +16,7 @@
 - [清单格式与目录结构](#清单格式与目录结构)
 - [版本与稳定身份](#版本与稳定身份)
 - [常用命令与运行顺序](#常用命令与运行顺序)
+- [2026-11-05 去重单题与目录调整](#2026-11-05-去重单题与目录调整)
 - [当前五组磁盘快照](#当前五组磁盘快照)
 - [现有示例与证据链接](#现有示例与证据链接)
 
@@ -180,7 +181,7 @@ Tolerance Reached、SetTolerance、dot、IsDone、checkshape、分支数和体�
 
 ## 清单格式与目录结构
 
-完整目录结构可参考 [benchmark-example](benchmark-example/)。当前共享 OCCT bundle 目录和稳定身份见 [benchmarks/occt/README](../benchmarks/occt/README.md) 及 [NAMING_MAP](../benchmarks/occt/NAMING_MAP.md)。
+完整目录结构可参考 [benchmark-example](benchmark-example/)。实际题库使用 `groups/single/`、`groups/multiple/`、`groups/legacy/` 分类；每个条目仍是 group manifest，single 恰好一个成员。当前共享 OCCT bundle 目录和稳定身份见 [benchmarks/occt/README](../benchmarks/occt/README.md) 及 [NAMING_MAP](../benchmarks/occt/NAMING_MAP.md)。
 
     my-benchmark/
       catalog.json
@@ -294,6 +295,33 @@ source cache 准备只从本机已有 Git 对象库导出锁定 commit，不联�
 
 reevaluate 对 patch 文件要求显式 source-id，并将结果作为独立 evaluation 记录；不覆盖旧 run 或分数。正式 Agent acceptance 应从 worker 的冻结任务流程执行，使用 Agent 实际提交的 patch.diff 和 report.md。详细任务入口和部署配置见 [项目 README](../README.md)。
 
+## 2026-11-05 去重单题与目录调整
+
+`groups/new/` 已调整为 `groups/single/`；五个三 issue 原组合题移至 `groups/multiple/`。现有 30 个单题保持身份，新增 12 个去重单题，因此 single 目录共 42 道不同 issue，multiple 目录保留 5 个组合题，legacy 保留 7 个任务；全 catalog 共 54 issue versions、54 tasks、55 suites、19 source identities。
+
+去重按规范 issue ID，重复的 30082、21494、27252 各只新增一个 single task。采用拆分前 catalog 首次出现的成员版本，保持该版本的 B baseline；不合并不同 baseline 的检查点。未选版本仍在 multiple 中保留。新 task ID 为 `occt-single-<number>`，suite ID 为 `occt-single-<number>-checks@1`，suite 路径为 `evaluation/suites/single/occt-<number>/1.json`。旧 suite 仍位于 `evaluation/suites/new/`，其身份、定义和历史快照保留。
+
+| Issue | 选用版本 | 来源 group | 检查点 |
+| --- | --- | --- | ---: |
+| mantis-30082 | 2 | `NG-04R-v2` | 4 |
+| mantis-30202 | 2 | `NG-04R-v2` | 4 |
+| mantis-33541 | 2 | `NG-04R-v2` | 4 |
+| mantis-31602 | 2 | `NG-05T-v1` | 4 |
+| mantis-32850 | 1 | `NG-05T-v1` | 4 |
+| occt-21494 | 1 | `occt-bf-group-d9d310-21494-29807-31835` | 5 |
+| occt-29807 | 1 | `occt-bf-group-d9d310-21494-29807-31835` | 7 |
+| occt-31835 | 1 | `occt-bf-group-d9d310-21494-29807-31835` | 6 |
+| occt-27310 | 1 | `occt-bf-group-b55-27310-27773-27252-oracle-v2` | 6 |
+| occt-27773 | 1 | `occt-bf-group-b55-27310-27773-27252-oracle-v2` | 5 |
+| occt-27252 | 1 | `occt-bf-group-b55-27310-27773-27252-oracle-v2` | 5 |
+| occt-27780 | 1 | `occt-bf-group-b2613378-27780-27252-21494-v1` | 5 |
+
+新增 single suites 继承各自来源当前 suite 中该 issue 的全部检查点、runner options、support files 和哈希固定的运行依赖，共 59 条（16 original、31 neighborhood、12 regression）。M27310 使用 geometry-v2 的 d308；覆盖参考仍待确认时保留 INCONCLUSIVE，拆分不授予新的几何通过资格。
+
+当前 54 个 task 引用 54 个不同 suite，共 274 条 required checkpoint：42 个 single tasks 为 179 条，5 个 multiple tasks 为 73 条，7 个 legacy tasks 为 22 条。全部 55 个注册 suite 共 290 条（91 original、139 neighborhood、60 regression），包括未被当前 task 引用的旧 B55 oracle-v2 的 16 条。这里累计 suite 清单行，single 与 multiple 存在复用覆盖，不能视为独立几何 case 数。
+
+[机器可读拆分来源](../benchmarks/occt/evaluation/provenance/single-split-20261105.json) 记录选择、未选版本、目录移动和检查点映射。本次执行清单、材料冻结及路由测试，没有重建 OCCT、重放几何或调用模型。路径变化会改变公开任务材料哈希；已有数据库的同 ID/version 再导入可能触发冲突，应按现有冲突保护逐项处理，不清库或覆盖历史结果。本次未修改运行数据库。
+
 ## 当前五组磁盘快照
 
 下表保留 2026-10-26 的五组历史 suite 快照；B55 当时引用旧 oracle-v2 suite，当前 group 已改用 geometry-v2 suite（两者都是 16 条检查点）。五个既有新组包含 12 个不同 issue ID、15 个 issue versions 和 73 条 required test/checkpoint；分别是 19 original、39 neighborhood、15 regression。现有 73 条校准/回放清单已按各自预定标准通过（包括 original 的 B fail/F pass 等角色结果，并非所有输入都应返回同一种通过极性）；本次文档整理只重数当前清单并做 catalog 校验，没有重跑这 73 条。该通过状态来自现有题库记录和本任务用户确认，不是由本次静态检查推得，也不是未来题目的成员数配额。
@@ -315,12 +343,12 @@ reevaluate 对 patch 文件要求显式 source-id，并将结果作为独立 eva
 - b55 组：occt-27310@1、occt-27773@1、occt-27252@1，各 3 条。
 - b2613378 组：occt-21494@2、occt-27252@2、occt-27780@1，各 3 条。
 
-2026-11-03 按合并后的 catalog 与 suite 清单重新核对：全 catalog 包含 54 issue versions、42 groups、43 suites 和 19 source identities。42 个 group 当前引用 42 个不同 suite，共 215 条 required checkpoint；其中 7 个 legacy 任务为 22 条，35 个研究任务为 193 条（原有十五题 113 条，新增二十道单 issue 题 80 条）。额外保留的旧 B55 oracle-v2 suite 未被当前 group 引用，包含 16 条检查点；新任务使用 geometry-v2 suite。因此按全部 43 个 suite 的清单行累计是 231 条 required checkpoint：75 original、108 neighborhood、48 regression。这是 suite 清单行数，包含新旧 B55 suite 的重复覆盖，不是独立 case/scenario 数，也不表示这些检查点本轮几何通过。新版 d308 的覆盖参考仍待确认，不能把旧五组历史通过记录套用到新版 suite。新增题目的逐项资格与冻结回放记录见 [single20 准入报告](../CADAI/tmp/kernel_bench_web_report/occt_single20_authoring_20261103.md)。此前五组的快照计数是24 issue versions、12 groups、12 suites。现有五组每组有三个成员只是历史布局事实，不是单题配额。较新的 [neighborhood-v2-coverage record](../benchmarks/occt/evaluation/provenance/neighborhood-v2-coverage.json) 记录 73 条静态 dispatch routes、24 条新增 frozen geometry pass 和此前 49 条保持不变；该轮没有重放旧 49 条。本轮没有重跑。较早的 [NAMING_MAP](../benchmarks/occt/NAMING_MAP.md) 与 [integration-validation record](../benchmarks/occt/evaluation/provenance/integration-validation.json) 中的 49 项/19-15-15 是更早快照；不要将它们视为当前清单计数。
+历史快照（2026-11-03，拆分前）：全 catalog 当时包含 54 issue versions、42 groups、43 suites 和 19 source identities。42 个 group 当前引用 42 个不同 suite，共 215 条 required checkpoint；其中 7 个 legacy 任务为 22 条，35 个研究任务为 193 条（原有十五题 113 条，新增二十道单 issue 题 80 条）。额外保留的旧 B55 oracle-v2 suite 未被当前 group 引用，包含 16 条检查点；新任务使用 geometry-v2 suite。因此按全部 43 个 suite 的清单行累计是 231 条 required checkpoint：75 original、108 neighborhood、48 regression。这是 suite 清单行数，包含新旧 B55 suite 的重复覆盖，不是独立 case/scenario 数，也不表示这些检查点本轮几何通过。新版 d308 的覆盖参考仍待确认，不能把旧五组历史通过记录套用到新版 suite。新增题目的逐项资格与冻结回放记录见 [single20 准入报告](../CADAI/tmp/kernel_bench_web_report/occt_single20_authoring_20261103.md)。此前五组的快照计数是24 issue versions、12 groups、12 suites。现有五组每组有三个成员只是历史布局事实，不是单题配额。较新的 [neighborhood-v2-coverage record](../benchmarks/occt/evaluation/provenance/neighborhood-v2-coverage.json) 记录 73 条静态 dispatch routes、24 条新增 frozen geometry pass 和此前 49 条保持不变；该轮没有重放旧 49 条。本轮没有重跑。[NAMING_MAP](../benchmarks/occt/NAMING_MAP.md) 已同步当前目录及清单统计；[integration-validation record](../benchmarks/occt/evaluation/provenance/integration-validation.json) 中的 49 项/19-15-15 保留为更早历史快照，不是当前清单计数。
 
 ## 现有示例与证据链接
 
 - [可复制的最小题库](benchmark-example/) 展示 issue、single/group、suite、sources.lock、toolchain 和 provenance 文件组织。
-- [共享 OCCT bundle README](../benchmarks/occt/README.md) 和 [stable identity/naming map](../benchmarks/occt/NAMING_MAP.md) 保留 group、issue、suite 路径映射。NAMING_MAP 中 checkpoint 数是较早快照，更新时请直接从当前 catalog/suite 清单重算。
+- [共享 OCCT bundle README](../benchmarks/occt/README.md) 和 [stable identity/naming map](../benchmarks/occt/NAMING_MAP.md) 保留 group、issue、suite 路径映射。NAMING_MAP 的静态计数按当前 catalog/suite 维护；历史回放记录不随目录调整重写。
 - [neighborhood-v2-coverage record](../benchmarks/occt/evaluation/provenance/neighborhood-v2-coverage.json) 包含现行 73 路由统计、24 个新增 frozen checkpoint 的几何通过结果及旧 checkpoint 是否重放的边界；它不能单独证明旧 49 项在该轮又重跑一次。
 - [integration validation record](../benchmarks/occt/evaluation/provenance/integration-validation.json) 保留较早的 catalog、freeze、dispatcher 和验证边界；它是历史证据，不追溯证明本次或之后修改的 suite。
 - NG-04R-v2 和 NG-05T-v1 的参考补丁分别保存在 [NG-04R reference patch](../benchmarks/occt/evaluation/provenance/NG-04R-v2-reference.patch) 与 [NG-05T reference patch](../benchmarks/occt/evaluation/provenance/NG-05T-v1-reference.patch)。三个 BF 组的自然 F commit、原 B/F 身份和历史几何证据入口，见 [g1 original-bundle notes](../benchmarks/occt/evaluation/provenance/source-packs/occt-five-groups/docs/original-bundles/g1/README_ZH.md)、[g2 notes](../benchmarks/occt/evaluation/provenance/source-packs/occt-five-groups/docs/original-bundles/g2/README_ZH.md)、[g3 notes](../benchmarks/occt/evaluation/provenance/source-packs/occt-five-groups/docs/original-bundles/g3/README_ZH.md) 和 [external evidence archive manifest](../benchmarks/occt/evaluation/provenance/external-evidence-archive.json)。原始 sidecar/日志的 archive hash 仍按这些记录追溯；本指导合并不改动或替代历史实验材料。

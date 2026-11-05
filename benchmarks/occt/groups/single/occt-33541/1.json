@@ -1,0 +1,28 @@
+{
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "evaluation_suite": {
+    "id": "occt-single-33541-checks",
+    "version": "1"
+  },
+  "execution_mode": "joint",
+  "has_hidden_checks": true,
+  "id": "occt-single-33541",
+  "kind": "single",
+  "members": [
+    {
+      "issue_id": "mantis-33541",
+      "issue_version": "2"
+    }
+  ],
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "schema_version": 1,
+  "source_id": "occt-ng04r-derived-fe81a63b",
+  "title": "OCCT · 33541",
+  "version": "1"
+}

@@ -1,0 +1,61 @@
+{
+  "checkpoints": [
+    {
+      "case": "issues/occt-30082/2/public/original.tcl",
+      "category": "original",
+      "id": "mantis-30082-original",
+      "issue_id": "mantis-30082",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/mantis-30082/2/neighborhood.tcl",
+      "category": "neighborhood",
+      "id": "mantis-30082-neighborhood",
+      "issue_id": "mantis-30082",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-30082/2/regression.tcl",
+      "category": "regression",
+      "id": "mantis-30082-regression",
+      "issue_id": "mantis-30082",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/mantis-30082/5/neighborhood_physical_residual_v2.tcl",
+      "category": "neighborhood",
+      "id": "mantis-30082-neighborhood-dense-residual-v2",
+      "issue_id": "mantis-30082",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt-single-30082"
+  ],
+  "id": "occt-single-30082-checks",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-ng04r-derived-fe81a63b"
+  ],
+  "title": "OCCT · 30082 checks",
+  "version": "1",
+  "support_files": [
+    "evaluation/cases/mantis-30082/5/neighbor_support.tcl"
+  ]
+}

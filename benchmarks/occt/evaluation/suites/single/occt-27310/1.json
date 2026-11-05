@@ -1,0 +1,115 @@
+{
+  "checkpoints": [
+    {
+      "case": "issues/occt-27310/1/public/harness_bug27310_1.tcl",
+      "category": "original",
+      "id": "M27310_1",
+      "issue_id": "occt-27310",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/checkpoint_v2/m27310_d308.tcl",
+      "category": "original",
+      "id": "M27310_2_d308",
+      "issue_id": "occt-27310",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160,
+        "expected_assertion_ids": [
+          "reported_value_valid",
+          "nonempty_measurements",
+          "surface_residual",
+          "pcurve_mapping"
+        ],
+        "pending_requirements": [
+          "independent_endpoint_and_complete_intersection_coverage_reference"
+        ]
+      },
+      "timeout_seconds": 180,
+      "visibility": "public"
+    },
+    {
+      "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27310_neighbor_finite_face.tcl",
+      "category": "neighborhood",
+      "id": "M27310_neighbor_finite_face",
+      "issue_id": "occt-27310",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "case": "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27310_regression_two_loops.tcl",
+      "category": "regression",
+      "id": "M27310_regression_two_loops",
+      "issue_id": "occt-27310",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m27310_rigid_translated_original_breps",
+      "issue_id": "occt-27310",
+      "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27310_rigid_translated_original_breps.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    },
+    {
+      "id": "neighborhood_v2_m27310_scaled_finite_brep_neighborhood",
+      "issue_id": "occt-27310",
+      "case": "evaluation/cases/neighborhood_v2/bf/b55-27310-27773-27252/m27310_scaled_finite_brep_neighborhood.tcl",
+      "category": "neighborhood",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 160
+      },
+      "timeout_seconds": 180,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt-single-27310"
+  ],
+  "id": "occt-single-27310-checks",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-b55bd0235351"
+  ],
+  "title": "OCCT · 27310 checks",
+  "version": "1",
+  "support_files": [
+    "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496a.brep",
+    "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/OCC496b.brep",
+    "evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/inputs/bug27221.brep",
+    "evaluation/cases/neighborhood_v2/bf/bench_assertions.tcl",
+    "issues/occt-27310/1/public/inputs/OCC496a.brep",
+    "issues/occt-27310/1/public/inputs/OCC496b.brep"
+  ]
+}
