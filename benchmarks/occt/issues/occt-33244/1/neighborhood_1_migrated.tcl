@@ -13,14 +13,14 @@ cone s2 -4.1729574470057399e-07 -11.574649510186459 26.4986872422 ${dx} ${dy} ${
 intersect ii s1 s2
 if {![isdraw ii_1] || ![isdraw ii_2] || [isdraw ii_3]} {
   puts "ERROR: scaled cone intersection is not exactly two curves"
-} else { puts "__BENCH_ASSERT_PASS__ order_s1_s2 ii_1,ii_2 present; ii_3 absent" }
+  puts "BENCH_ASSERT_FAIL order_s1_s2 not_exactly_two_curves kind=expression"
+} else { puts "BENCH_ASSERT_PASS order_s1_s2 ii_1,ii_2 present; ii_3 absent kind=expression" }
 intersect jj s2 s1
 if {![isdraw jj_1] || ![isdraw jj_2] || [isdraw jj_3]} {
   puts "ERROR: reversed scaled cone intersection is not exactly two curves"
-} else { puts "__BENCH_ASSERT_PASS__ order_s2_s1 jj_1,jj_2 present; jj_3 absent" }
-puts "BENCH_ASSERT_PASS order_s1_s2 \"upstream geometry assertions completed\" kind=expression"
+  puts "BENCH_ASSERT_FAIL order_s2_s1 not_exactly_two_curves kind=expression"
+} else { puts "BENCH_ASSERT_PASS order_s2_s1 jj_1,jj_2 present; jj_3 absent kind=expression" }
 
-puts "BENCH_ASSERT_PASS order_s2_s1 \"upstream geometry assertions completed\" kind=expression"
 puts "__BENCH_ORACLE_COMPLETE__"
 puts "BENCH_ORACLE_OK assertions=2 numeric_assertions=0"
 puts "TEST_DONE assertions=2 numeric_assertions=0"

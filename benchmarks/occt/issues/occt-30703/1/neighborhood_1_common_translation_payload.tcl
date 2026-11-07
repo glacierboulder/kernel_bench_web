@@ -40,12 +40,13 @@ set v4_count [llength $info]
 puts "M30703_INFO_COUNT=$v4_count expected=1"
 if {$v4_count == 1} { puts "__BENCH_ASSERT_PASS__ solution_count" } else { puts "__BENCH_ASSERT_FAIL__ solution_count observed=$v4_count expected=1" }
 checklength res -l 22.9782037
-if {[info exists ::res]} {
-  set v4_len_report [length res 1.0e-4]
+set v4_res_description {}
+set v4_length_error {}
+if {![catch {set v4_res_description [whatis res]}] && [regexp -nocase {^res is a .*curve} [string trim $v4_res_description]] && ![catch {set v4_len_report [length res 1.0e-4]} v4_length_error]} {
   if {[regexp {The +length +res +is +([-0-9.+eE]+)} $v4_len_report -> v4_length]} {
     set v4_expected 22.9782037
     set v4_rel [expr {abs($v4_length-$v4_expected)/$v4_expected}]
     puts "M30703_LENGTH_OBSERVED=$v4_length expected=$v4_expected relative_error=$v4_rel official_relative_limit=0.01"
     if {$v4_length > 0.0 && $v4_rel <= 0.01} { puts "__BENCH_ASSERT_PASS__ curve_length" } else { puts "__BENCH_ASSERT_FAIL__ curve_length observed=$v4_length expected=$v4_expected relative_error=$v4_rel" }
   } else { puts "M30703_LENGTH_REPORT_UNPARSED=$v4_len_report"; puts "__BENCH_ASSERT_FAIL__ curve_length no_numeric_length" }
-} else { puts "M30703_LENGTH_NOT_MEASURED=no_res_object" }
+} else { puts "__BENCH_ASSERT_FAIL__ curve_length not_measured result_type={$v4_res_description} length_error={$v4_length_error}" }

@@ -351,8 +351,11 @@
         "order_s1_s2",
         "order_s2_s1"
       ],
-      "expected_failure_lines": [],
-      "case_sha256": "48f6d59675d7cebbd0277ded1654dad3c3d9b29103aab1c69263ce72dd8e0f47"
+      "expected_failure_lines": [
+        "ERROR: scaled cone intersection is not exactly two curves",
+        "ERROR: reversed scaled cone intersection is not exactly two curves"
+      ],
+      "case_sha256": "f8b334407a9675c1e92e89e14de16a21ed96913ea88fbabfdf76bffd851149bd"
     },
     "issues/mantis-33244/1/neighborhood_2_migrated.tcl": {
       "canonical_issue": "mantis:33244",
@@ -362,8 +365,11 @@
         "order_s1_s2",
         "order_s2_s1"
       ],
-      "expected_failure_lines": [],
-      "case_sha256": "05bdd6f9cc97dafb8c8be1f5b7762f214f25425d65073290b110fde40dee7b25"
+      "expected_failure_lines": [
+        "ERROR: transformed cone intersection is not exactly two curves",
+        "ERROR: reversed transformed cone intersection is not exactly two curves"
+      ],
+      "case_sha256": "569b86ceff4b2944d33bbb5dbd3adc70463bd0c11b39744f22dcbc9a079e41f9"
     },
     "issues/mantis-33244/1/regression_health_migrated.tcl": {
       "canonical_issue": "mantis:33244",
@@ -545,5 +551,5 @@
       "case_sha256": "445a468fe1d8a37fb18c2cf4b1d3275eea6855d5c89be1d4874257027f7d4ccc"
     }
   },
-  "lock_sha256": "e34fae4b030e0853c42c65340bbc9cbdd0c4e5ac7b15249eae78d16ff7aa0efd"
+  "lock_sha256": "131008876d57dc5cdc2f8eeacd63ce97364fb2bbe90f9fdd91db710756b87896"
 }
