@@ -1,0 +1,90 @@
+[
+  {
+    "issue": 23933,
+    "title": "融合结果被错误报告自相交",
+    "kind": "candidate_only_not_registered",
+    "B_original": "geometry_fail",
+    "F_original": "geometry_pass",
+    "report": "research/occt-authoring-20261110/audit-v2/occt-23933/review.md",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23981,
+    "title": "两个曲面的交线偏离支撑曲面",
+    "kind": "candidate_only_not_registered",
+    "B_original": "geometry_fail",
+    "F_original": "geometry_pass",
+    "report": "research/occt-authoring-20261110/audit-v2/occt-23981/review.md",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23985,
+    "title": "两个面之间的截线缺失",
+    "kind": "candidate_only_not_registered",
+    "B_original": "geometry_fail",
+    "F_original": "geometry_pass",
+    "report": "research/occt-authoring-20261110/audit-v2/occt-23985/review.md",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23998,
+    "title": "截线出现多余回环",
+    "kind": "candidate_only_not_registered",
+    "B_original": "geometry_fail",
+    "F_original": "geometry_pass",
+    "report": "research/occt-authoring-20261110/audit-v2/occt-23998/review.md",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 25337,
+    "title": "共面圆形面的并集和交集错误",
+    "kind": "candidate_only_not_registered",
+    "B_original": "geometry_fail",
+    "F_original": "geometry_pass",
+    "report": "research/occt-authoring-20261110/audit-v2/occt-25337/review.md",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 24220,
+    "title": "C0 形状被布尔输入检查器错误放行",
+    "kind": "candidate_only_not_registered",
+    "B_original": "geometry_fail",
+    "F_original": "geometry_pass",
+    "report": "research/occt-authoring-20261110/audit-v2/occt-24220/review.md",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 29038,
+    "title": "异常曲线导致布尔融合长时间不结束",
+    "kind": "candidate_only_not_registered",
+    "B_original": "timeout",
+    "F_original": "geometry_pass",
+    "report": "research/occt-authoring-20261110/audit-v2/occt-29038/review.md",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 30198,
+    "title": "布尔融合三角细分导致内存激增",
+    "kind": "candidate_only_not_registered",
+    "B_original": "memory_limit",
+    "F_original": "geometry_pass",
+    "report": "research/occt-authoring-20261110/audit-v2/occt-30198/review.md",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 24313,
+    "title": "线性拉伸柱面与平面的求交",
+    "kind": "existing_evidence_only",
+    "B_original": "algorithm_exception",
+    "F_original": "pass",
+    "report": "research/occt-authoring-20261110/duplicates/occt-24313/report.md"
+  },
+  {
+    "issue": 25818,
+    "title": "无界平面求交",
+    "kind": "existing_evidence_only",
+    "B_original": "algorithm_exception",
+    "F_original": "pass",
+    "report": "research/occt-authoring-20261110/duplicates/occt-25818/report.md"
+  }
+]

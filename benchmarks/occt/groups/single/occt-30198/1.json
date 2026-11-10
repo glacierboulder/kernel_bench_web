@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-30198",
+  "version": "1",
+  "title": "待准入 · OCCT 30198 · 布尔融合三角细分导致内存激增",
+  "kind": "single",
+  "source_id": "occt75-authoring-30198-b-1af5f6930e39",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-30198",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-30198-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

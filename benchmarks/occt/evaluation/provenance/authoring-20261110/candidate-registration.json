@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "status": "candidate_only_not_registered",
+  "date": "2026-11-10",
+  "reason": "Native author calibration is not formal admission. Six OCE tasks also lack a working stock runtime build path; two resource cases lack formal platform calibration.",
+  "issues": [
+    {
+      "id": "occt-23933",
+      "version": "1",
+      "path": "issues/occt-23933/1/issue.json"
+    },
+    {
+      "id": "occt-23981",
+      "version": "1",
+      "path": "issues/occt-23981/1/issue.json"
+    },
+    {
+      "id": "occt-23985",
+      "version": "1",
+      "path": "issues/occt-23985/1/issue.json"
+    },
+    {
+      "id": "occt-23998",
+      "version": "1",
+      "path": "issues/occt-23998/1/issue.json"
+    },
+    {
+      "id": "occt-25337",
+      "version": "1",
+      "path": "issues/occt-25337/1/issue.json"
+    },
+    {
+      "id": "occt-24220",
+      "version": "1",
+      "path": "issues/occt-24220/1/issue.json"
+    },
+    {
+      "id": "occt-29038",
+      "version": "1",
+      "path": "issues/occt-29038/1/issue.json"
+    },
+    {
+      "id": "occt-30198",
+      "version": "1",
+      "path": "issues/occt-30198/1/issue.json"
+    }
+  ],
+  "groups": [
+    {
+      "id": "occt-single-23933",
+      "version": "1",
+      "path": "groups/single/occt-23933/1.json"
+    },
+    {
+      "id": "occt-single-23981",
+      "version": "1",
+      "path": "groups/single/occt-23981/1.json"
+    },
+    {
+      "id": "occt-single-23985",
+      "version": "1",
+      "path": "groups/single/occt-23985/1.json"
+    },
+    {
+      "id": "occt-single-23998",
+      "version": "1",
+      "path": "groups/single/occt-23998/1.json"
+    },
+    {
+      "id": "occt-single-25337",
+      "version": "1",
+      "path": "groups/single/occt-25337/1.json"
+    },
+    {
+      "id": "occt-single-24220",
+      "version": "1",
+      "path": "groups/single/occt-24220/1.json"
+    },
+    {
+      "id": "occt-single-29038",
+      "version": "1",
+      "path": "groups/single/occt-29038/1.json"
+    },
+    {
+      "id": "occt-single-30198",
+      "version": "1",
+      "path": "groups/single/occt-30198/1.json"
+    }
+  ],
+  "evaluation_suites": [
+    {
+      "id": "occt-single-23933-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-23933/1.json"
+    },
+    {
+      "id": "occt-single-23981-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-23981/1.json"
+    },
+    {
+      "id": "occt-single-23985-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-23985/1.json"
+    },
+    {
+      "id": "occt-single-23998-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-23998/1.json"
+    },
+    {
+      "id": "occt-single-25337-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-25337/1.json"
+    },
+    {
+      "id": "occt-single-24220-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-24220/1.json"
+    },
+    {
+      "id": "occt-single-29038-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-29038/1.json"
+    },
+    {
+      "id": "occt-single-30198-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-30198/1.json"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "oce013-authoring-b-5434272be3ee",
+      "upstream_url": "https://github.com/tpaviot/oce.git",
+      "commit": "5434272be3eecaf06f0921f8fa4f1a6df7672033",
+      "materialized_tree_sha256": "f87a2533d98b8816ac2820b9ba0e4a2eb791c1467ef422c41348c1fe3d2ad6ec",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-20261110/sources/oce013-authoring-b-5434272be3ee.json",
+      "toolchain": "occt-clang10-tcl86-v1"
+    },
+    {
+      "source_id": "oce017-authoring-25337-b-7143cbcfc6c8",
+      "upstream_url": "https://github.com/tpaviot/oce.git",
+      "commit": "7143cbcfc6c8b9497abbaa79fbcc12f6e693c2bd",
+      "materialized_tree_sha256": "1f01160d99ea2cc4f77f8b23d04e66f263178bb56ca4a54a9df56f4e6cf84f6c",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-20261110/sources/oce017-authoring-25337-b-7143cbcfc6c8.json",
+      "toolchain": "occt-clang10-tcl86-v1"
+    },
+    {
+      "source_id": "occt75-authoring-29038-b-fbd34ff9a39d",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "fbd34ff9a39da4147296480e5b9dd47270f43155",
+      "materialized_tree_sha256": "fdfc3bdf28f4dc4d9d29ef0485415b0479989e5eb754566461478ee855ae5371",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-20261110/sources/occt75-authoring-29038-b-fbd34ff9a39d.json",
+      "toolchain": "occt-clang10-tcl86-v1"
+    },
+    {
+      "source_id": "occt75-authoring-30198-b-1af5f6930e39",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "1af5f6930e3951b2ddfe701a5a609a85e73e5479",
+      "materialized_tree_sha256": "7df31d9cd2711ac3cad46320631cefb75706fedb04648c832b5aa46fcbaa3575",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-20261110/sources/occt75-authoring-30198-b-1af5f6930e39.json",
+      "toolchain": "occt-clang10-tcl86-v1"
+    }
+  ],
+  "promotion_rule": "Do not append these entries to the active catalog until the per-task admission requirements are satisfied."
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "occt-30198",
+  "version": "1",
+  "title": "布尔融合三角细分导致内存激增",
+  "source_id": "occt75-authoring-30198-b-1af5f6930e39",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/reproduce.tcl",
+    "public/inputs/bug30198_src.brep",
+    "public/inputs/bug30198_tool.brep"
+  ]
+}

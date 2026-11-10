@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "issue_id": "occt-23998",
+  "date": "2026-11-10",
+  "repository_base_commit": "7c28d6089a2389dd4788e425f773bcfadb442491",
+  "status": "candidate_only_not_registered_formal_admission_not_run",
+  "source_id": "oce013-authoring-b-5434272be3ee",
+  "inputs": [
+    {
+      "name": "bug23998_draw.brep",
+      "raw_sha256": "c6b4a14b50ccee095d16f6259bcdc1ab5feeb9de4664a889d48644f8613c07c9",
+      "material_sha256": "c6b4a14b50ccee095d16f6259bcdc1ab5feeb9de4664a889d48644f8613c07c9",
+      "adapter": "none"
+    }
+  ],
+  "reference_patch": "reference.patch",
+  "reference_patch_sha256": "1e2681deb3a6a0895ad40c6f30d837d705129b44f2a0dcc445d20fd67b186d01",
+  "upstream_url": "https://occt3d.com/dev/tickets/0023998/",
+  "calibration_record": "research/occt-authoring-20261110/audit-v2/native-replay.json",
+  "negative_control": "Geometric/diagnostic result substitution inside an author-only Tcl copy; not a C++ source patch experiment.",
+  "audit_report": "research/occt-authoring-20261110/audit-v2/全面核查报告.md",
+  "material_hashes": {
+    "statement.md": "67913b39af378e9417c1f8f1a79221cce49d0656b27d35fb546980e146509914",
+    "public/reproduce.tcl": "c9114fed340950de773a389dc4129673d2c705703bb58c909ae46a7887099c04",
+    "public/inputs/bug23998_draw.brep": "c6b4a14b50ccee095d16f6259bcdc1ab5feeb9de4664a889d48644f8613c07c9"
+  },
+  "evidence_limits": [
+    "Native binaries were measured and identified by hash, but this audit did not rebuild them from the declared derived Git commits.",
+    "Static Git patch application is distinct from a real source-cache/build/sandbox replay.",
+    "Author-only Tcl result substitutions test oracle sensitivity; they are not compiled C++ negative patches."
+  ]
+}

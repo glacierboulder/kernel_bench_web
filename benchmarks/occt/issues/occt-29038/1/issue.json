@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "occt-29038",
+  "version": "1",
+  "title": "异常曲线导致布尔融合长时间不结束",
+  "source_id": "occt75-authoring-29038-b-fbd34ff9a39d",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/reproduce.tcl",
+    "public/inputs/bug29038_bfuse_hang.brep"
+  ]
+}

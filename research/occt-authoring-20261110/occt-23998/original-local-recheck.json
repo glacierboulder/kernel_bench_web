@@ -1,0 +1,151 @@
+[
+  {
+    "role": "B",
+    "case": "original",
+    "status": "geometry_fail",
+    "checks": {
+      "shape_valid": true,
+      "one_edge": true,
+      "expected_length": false,
+      "sampled_length_agreement": true,
+      "sampled_closed": true
+    },
+    "length": 77.8736,
+    "expected_length": 67.026,
+    "sampled_polyline_length": 77.87304303609399,
+    "samples": 1001,
+    "returncode": 0
+  },
+  {
+    "role": "B",
+    "case": "neighbor_translate",
+    "status": "geometry_fail",
+    "checks": {
+      "shape_valid": true,
+      "one_edge": true,
+      "expected_length": false,
+      "sampled_length_agreement": true,
+      "sampled_closed": true
+    },
+    "length": 77.8736,
+    "expected_length": 67.026,
+    "sampled_polyline_length": 77.8730441868678,
+    "samples": 1001,
+    "returncode": 0
+  },
+  {
+    "role": "B",
+    "case": "neighbor_rotate",
+    "status": "geometry_fail",
+    "checks": {
+      "shape_valid": true,
+      "one_edge": true,
+      "expected_length": false,
+      "sampled_length_agreement": true,
+      "sampled_closed": true
+    },
+    "length": 77.8736,
+    "expected_length": 67.026,
+    "sampled_polyline_length": 77.87304456986264,
+    "samples": 1001,
+    "returncode": 0
+  },
+  {
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "checks": {
+      "shape_valid": true,
+      "one_edge": true,
+      "expected_length": true
+    },
+    "length": 31.4159,
+    "expected_length": 31.41592653589793,
+    "sampled_polyline_length": null,
+    "samples": 0,
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "checks": {
+      "shape_valid": true,
+      "one_edge": true,
+      "expected_length": true,
+      "sampled_length_agreement": true,
+      "sampled_closed": true
+    },
+    "length": 67.026,
+    "expected_length": 67.026,
+    "sampled_polyline_length": 67.02591439194558,
+    "samples": 1001,
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "neighbor_translate",
+    "status": "geometry_pass",
+    "checks": {
+      "shape_valid": true,
+      "one_edge": true,
+      "expected_length": true,
+      "sampled_length_agreement": true,
+      "sampled_closed": true
+    },
+    "length": 67.026,
+    "expected_length": 67.026,
+    "sampled_polyline_length": 67.02591439194559,
+    "samples": 1001,
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "neighbor_rotate",
+    "status": "geometry_pass",
+    "checks": {
+      "shape_valid": true,
+      "one_edge": true,
+      "expected_length": true,
+      "sampled_length_agreement": true,
+      "sampled_closed": true
+    },
+    "length": 67.026,
+    "expected_length": 67.026,
+    "sampled_polyline_length": 67.02591439194556,
+    "samples": 1001,
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "checks": {
+      "shape_valid": true,
+      "one_edge": true,
+      "expected_length": true
+    },
+    "length": 31.4159,
+    "expected_length": 31.41592653589793,
+    "sampled_polyline_length": null,
+    "samples": 0,
+    "returncode": 0
+  },
+  {
+    "role": "negative_wrong_curve",
+    "case": "original",
+    "status": "geometry_fail",
+    "checks": {
+      "shape_valid": true,
+      "one_edge": true,
+      "expected_length": true,
+      "sampled_length_agreement": false,
+      "sampled_closed": false
+    },
+    "length": 67.026,
+    "expected_length": 67.026,
+    "sampled_polyline_length": 0.9999999583333338,
+    "samples": 1001,
+    "returncode": 0
+  }
+]

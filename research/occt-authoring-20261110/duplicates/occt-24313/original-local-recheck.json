@@ -1,0 +1,345 @@
+[
+  {
+    "role": "B",
+    "case": "original",
+    "returncode": 2,
+    "elapsed_s": 0.44,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "B_original.log",
+    "status": "algorithm_exception",
+    "checks": {
+      "complete": false
+    }
+  },
+  {
+    "role": "B",
+    "case": "neighbor_shift",
+    "returncode": 2,
+    "elapsed_s": 0.224,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "B_neighbor_shift.log",
+    "status": "algorithm_exception",
+    "checks": {
+      "complete": false
+    }
+  },
+  {
+    "role": "B",
+    "case": "neighbor_radius",
+    "returncode": 2,
+    "elapsed_s": 0.224,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "B_neighbor_radius.log",
+    "status": "algorithm_exception",
+    "checks": {
+      "complete": false
+    }
+  },
+  {
+    "role": "B",
+    "case": "regression",
+    "returncode": 0,
+    "elapsed_s": 0.223,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "B_regression.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "branch_count": true,
+      "line_type": true,
+      "support_residuals": true,
+      "both_branches": true,
+      "domain_coverage": true
+    },
+    "values": {
+      "points": [
+        [
+          1.0,
+          0.0,
+          -100.0,
+          -2.0
+        ],
+        [
+          1.0,
+          0.0,
+          -100.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          -100.0,
+          2.0
+        ],
+        [
+          2.0,
+          0.0,
+          100.0,
+          -2.0
+        ],
+        [
+          2.0,
+          0.0,
+          100.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          100.0,
+          2.0
+        ]
+      ]
+    }
+  },
+  {
+    "role": "F",
+    "case": "original",
+    "returncode": 0,
+    "elapsed_s": 0.231,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "F_original.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "branch_count": true,
+      "line_type": true,
+      "support_residuals": true,
+      "both_branches": true,
+      "domain_coverage": true
+    },
+    "values": {
+      "points": [
+        [
+          1.0,
+          0.0,
+          100.0,
+          -2.0
+        ],
+        [
+          1.0,
+          0.0,
+          100.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          100.0,
+          2.0
+        ],
+        [
+          2.0,
+          -1.4210854715202004e-14,
+          -100.0,
+          -2.0
+        ],
+        [
+          2.0,
+          -1.4210854715202004e-14,
+          -100.0,
+          0.0
+        ],
+        [
+          2.0,
+          -1.4210854715202004e-14,
+          -100.0,
+          2.0
+        ]
+      ]
+    }
+  },
+  {
+    "role": "F",
+    "case": "neighbor_shift",
+    "returncode": 0,
+    "elapsed_s": 0.23,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "F_neighbor_shift.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "branch_count": true,
+      "line_type": true,
+      "support_residuals": true,
+      "both_branches": true,
+      "domain_coverage": true
+    },
+    "values": {
+      "points": [
+        [
+          1.0,
+          7.0,
+          97.0,
+          0.0
+        ],
+        [
+          1.0,
+          7.0,
+          97.0,
+          2.0
+        ],
+        [
+          1.0,
+          7.0,
+          97.0,
+          4.0
+        ],
+        [
+          2.0,
+          6.999999999999986,
+          -103.0,
+          0.0
+        ],
+        [
+          2.0,
+          6.999999999999986,
+          -103.0,
+          2.0
+        ],
+        [
+          2.0,
+          6.999999999999986,
+          -103.0,
+          4.0
+        ]
+      ]
+    }
+  },
+  {
+    "role": "F",
+    "case": "neighbor_radius",
+    "returncode": 0,
+    "elapsed_s": 0.228,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "F_neighbor_radius.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "branch_count": true,
+      "line_type": true,
+      "support_residuals": true,
+      "both_branches": true,
+      "domain_coverage": true
+    },
+    "values": {
+      "points": [
+        [
+          1.0,
+          0.0,
+          50.0,
+          -2.0
+        ],
+        [
+          1.0,
+          0.0,
+          50.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          50.0,
+          2.0
+        ],
+        [
+          2.0,
+          -7.105427357601002e-15,
+          -50.0,
+          -2.0
+        ],
+        [
+          2.0,
+          -7.105427357601002e-15,
+          -50.0,
+          0.0
+        ],
+        [
+          2.0,
+          -7.105427357601002e-15,
+          -50.0,
+          2.0
+        ]
+      ]
+    }
+  },
+  {
+    "role": "F",
+    "case": "regression",
+    "returncode": 0,
+    "elapsed_s": 0.225,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "F_regression.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "branch_count": true,
+      "line_type": true,
+      "support_residuals": true,
+      "both_branches": true,
+      "domain_coverage": true
+    },
+    "values": {
+      "points": [
+        [
+          1.0,
+          0.0,
+          -100.0,
+          -2.0
+        ],
+        [
+          1.0,
+          0.0,
+          -100.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          -100.0,
+          2.0
+        ],
+        [
+          2.0,
+          0.0,
+          100.0,
+          -2.0
+        ],
+        [
+          2.0,
+          0.0,
+          100.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          100.0,
+          2.0
+        ]
+      ]
+    }
+  },
+  {
+    "role": "negative_output_injection",
+    "case": "original",
+    "status": "assertion_fail",
+    "checks": {
+      "complete": true,
+      "branch_count": true,
+      "line_type": true,
+      "support_residuals": false,
+      "both_branches": false,
+      "domain_coverage": false
+    },
+    "clean_status": "pass"
+  }
+]

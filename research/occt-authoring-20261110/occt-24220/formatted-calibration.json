@@ -1,0 +1,222 @@
+{
+  "historical_results": [
+    {
+      "issue": 24220,
+      "role": "B",
+      "case": "neighbor_scale",
+      "status": "geometry_fail",
+      "passed": false,
+      "elapsed_seconds": 0.667,
+      "peak_private_mb": 13.81,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "continuity_diagnostic"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "FAIL",
+          "id": "continuity_diagnostic",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "415852b9eed001eb118a4827d7496aad61af91da80f834ffc27b191d5a307800",
+      "log": "logs/B-neighbor_scale.txt"
+    },
+    {
+      "issue": 24220,
+      "role": "B",
+      "case": "neighbor_shift",
+      "status": "geometry_fail",
+      "passed": false,
+      "elapsed_seconds": 0.648,
+      "peak_private_mb": 14.46,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "continuity_diagnostic"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "FAIL",
+          "id": "continuity_diagnostic",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "415852b9eed001eb118a4827d7496aad61af91da80f834ffc27b191d5a307800",
+      "log": "logs/B-neighbor_shift.txt"
+    },
+    {
+      "issue": 24220,
+      "role": "B",
+      "case": "original",
+      "status": "geometry_fail",
+      "passed": false,
+      "elapsed_seconds": 0.656,
+      "peak_private_mb": 14.43,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "continuity_diagnostic"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "FAIL",
+          "id": "continuity_diagnostic",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "415852b9eed001eb118a4827d7496aad61af91da80f834ffc27b191d5a307800",
+      "log": "logs/B-original.txt"
+    },
+    {
+      "issue": 24220,
+      "role": "B",
+      "case": "regression",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.224,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "continuity_diagnostic"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "continuity_diagnostic",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "14a16d57420af88139eeb82639618c389fdf21dcd2e591b9b97c7421ac97e9d1",
+      "log": "logs/B-regression.txt"
+    },
+    {
+      "issue": 24220,
+      "role": "F",
+      "case": "neighbor_scale",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.653,
+      "peak_private_mb": 14.6,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "continuity_diagnostic"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "continuity_diagnostic",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "a77e80671fc83fb2c9384eb129fe02747ecfd7e7d593156da1e407d3b5083a4b",
+      "log": "logs/F-neighbor_scale.txt"
+    },
+    {
+      "issue": 24220,
+      "role": "F",
+      "case": "neighbor_shift",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.647,
+      "peak_private_mb": 14.77,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "continuity_diagnostic"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "continuity_diagnostic",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "a77e80671fc83fb2c9384eb129fe02747ecfd7e7d593156da1e407d3b5083a4b",
+      "log": "logs/F-neighbor_shift.txt"
+    },
+    {
+      "issue": 24220,
+      "role": "F",
+      "case": "original",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.648,
+      "peak_private_mb": 14.42,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "continuity_diagnostic"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "continuity_diagnostic",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "a77e80671fc83fb2c9384eb129fe02747ecfd7e7d593156da1e407d3b5083a4b",
+      "log": "logs/F-original.txt"
+    },
+    {
+      "issue": 24220,
+      "role": "F",
+      "case": "regression",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.222,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "continuity_diagnostic"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "continuity_diagnostic",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "14a16d57420af88139eeb82639618c389fdf21dcd2e591b9b97c7421ac97e9d1",
+      "log": "logs/F-regression.txt"
+    },
+    {
+      "issue": 24220,
+      "role": "negative",
+      "case": "original",
+      "status": "geometry_fail",
+      "passed": false,
+      "elapsed_seconds": 0.223,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "continuity_diagnostic"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "FAIL",
+          "id": "continuity_diagnostic",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "93a90763abf3228b95106b910df74de0d10201f03f18aecc102302567e3645b1",
+      "log": "logs/negative-original.txt"
+    }
+  ],
+  "superseded_by": "research/occt-authoring-20261110/audit-v2/native-replay.json",
+  "authoritative_current_admission": false
+}

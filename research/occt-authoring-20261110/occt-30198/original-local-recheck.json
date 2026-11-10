@@ -1,0 +1,126 @@
+[
+  {
+    "role": "B",
+    "case": "original",
+    "returncode": 1,
+    "elapsed_s": 8.911,
+    "peak_private_mb": 1045.19,
+    "stop": "memory_limit",
+    "log": "B_original.log",
+    "status": "resource_fail",
+    "checks": {
+      "complete": false
+    }
+  },
+  {
+    "role": "B",
+    "case": "regression",
+    "returncode": 0,
+    "elapsed_s": 0.221,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "B_regression.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "finite_nonempty": true,
+      "valid": true,
+      "analytic_union": true
+    },
+    "values": {
+      "volume": 1500.0
+    }
+  },
+  {
+    "role": "F",
+    "case": "original",
+    "returncode": 0,
+    "elapsed_s": 17.921,
+    "peak_private_mb": 80.59,
+    "stop": null,
+    "log": "F_original.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "finite_nonempty": true,
+      "valid": true,
+      "historical_volume": true,
+      "historical_topology": true
+    },
+    "values": {
+      "volume": 62.6127
+    }
+  },
+  {
+    "role": "F",
+    "case": "neighbor_shift",
+    "returncode": 0,
+    "elapsed_s": 17.712,
+    "peak_private_mb": 86.21,
+    "stop": null,
+    "log": "F_neighbor_shift.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "finite_nonempty": true,
+      "valid": true,
+      "historical_volume": true,
+      "historical_topology": true
+    },
+    "values": {
+      "volume": 62.6127
+    }
+  },
+  {
+    "role": "F",
+    "case": "neighbor_reverse",
+    "returncode": 0,
+    "elapsed_s": 17.501,
+    "peak_private_mb": 77.66,
+    "stop": null,
+    "log": "F_neighbor_reverse.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "finite_nonempty": true,
+      "valid": true,
+      "historical_volume": true,
+      "historical_topology": true
+    },
+    "values": {
+      "volume": 62.6127
+    }
+  },
+  {
+    "role": "F",
+    "case": "regression",
+    "returncode": 0,
+    "elapsed_s": 0.227,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "F_regression.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "finite_nonempty": true,
+      "valid": true,
+      "analytic_union": true
+    },
+    "values": {
+      "volume": 1500.0
+    }
+  },
+  {
+    "role": "negative_output_injection",
+    "case": "original",
+    "status": "assertion_fail",
+    "checks": {
+      "complete": true,
+      "finite_nonempty": false,
+      "valid": true,
+      "historical_volume": false,
+      "historical_topology": true
+    },
+    "clean_status": "pass"
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "role": "B",
+    "case": "original",
+    "returncode": 1,
+    "elapsed_s": 12.528,
+    "peak_private_mb": 5.82,
+    "stop": "timeout",
+    "log": "B_original.log",
+    "status": "resource_fail",
+    "checks": {
+      "complete": false
+    }
+  },
+  {
+    "role": "B",
+    "case": "regression",
+    "returncode": 0,
+    "elapsed_s": 0.215,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "B_regression.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "finite_nonempty": true,
+      "valid": true,
+      "analytic_union": true
+    },
+    "values": {
+      "volume": 1500.0
+    }
+  },
+  {
+    "role": "F",
+    "case": "original",
+    "returncode": 0,
+    "elapsed_s": 0.433,
+    "peak_private_mb": 6.38,
+    "stop": null,
+    "log": "F_original.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "finite_nonempty": true,
+      "valid": true
+    },
+    "values": {
+      "volume": -35760.7
+    }
+  },
+  {
+    "role": "F",
+    "case": "neighbor_shift",
+    "returncode": 0,
+    "elapsed_s": 0.439,
+    "peak_private_mb": 6.73,
+    "stop": null,
+    "log": "F_neighbor_shift.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "finite_nonempty": true,
+      "valid": true
+    },
+    "values": {
+      "volume": -35760.7
+    }
+  },
+  {
+    "role": "F",
+    "case": "neighbor_reverse",
+    "returncode": 0,
+    "elapsed_s": 0.431,
+    "peak_private_mb": 6.75,
+    "stop": null,
+    "log": "F_neighbor_reverse.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "finite_nonempty": true,
+      "valid": true
+    },
+    "values": {
+      "volume": -35760.7
+    }
+  },
+  {
+    "role": "F",
+    "case": "regression",
+    "returncode": 0,
+    "elapsed_s": 0.221,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "F_regression.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "finite_nonempty": true,
+      "valid": true,
+      "analytic_union": true
+    },
+    "values": {
+      "volume": 1500.0
+    }
+  },
+  {
+    "role": "negative_output_injection",
+    "case": "original",
+    "status": "assertion_fail",
+    "checks": {
+      "complete": true,
+      "finite_nonempty": false,
+      "valid": true
+    },
+    "clean_status": "pass"
+  }
+]

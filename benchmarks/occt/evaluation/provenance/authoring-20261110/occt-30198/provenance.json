@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "issue_id": "occt-30198",
+  "date": "2026-11-10",
+  "repository_base_commit": "7c28d6089a2389dd4788e425f773bcfadb442491",
+  "status": "candidate_only_not_registered_formal_admission_not_run",
+  "source_id": "occt75-authoring-30198-b-1af5f6930e39",
+  "inputs": [
+    {
+      "name": "bug30198_src.brep",
+      "raw_sha256": "48eb925f926109cc753a540cf0305e87cc78ad77c9c0dd7e4104e334abc52d51",
+      "material_sha256": "48eb925f926109cc753a540cf0305e87cc78ad77c9c0dd7e4104e334abc52d51",
+      "adapter": "none"
+    },
+    {
+      "name": "bug30198_tool.brep",
+      "raw_sha256": "1387983d0681d05d322aa5d91eb1a961aa4278cc5fbe4c5988dabba713f581ca",
+      "material_sha256": "1387983d0681d05d322aa5d91eb1a961aa4278cc5fbe4c5988dabba713f581ca",
+      "adapter": "none"
+    }
+  ],
+  "reference_patch": "reference.patch",
+  "reference_patch_sha256": "fc6eff0d63261bf71babd1a8bd90775e82b577fc9fe6279d4a1da84b30064767",
+  "upstream_url": "https://occt3d.com/dev/tickets/0030198/",
+  "calibration_record": "research/occt-authoring-20261110/audit-v2/native-replay.json",
+  "negative_control": "Geometric/diagnostic result substitution inside an author-only Tcl copy; not a C++ source patch experiment.",
+  "audit_report": "research/occt-authoring-20261110/audit-v2/全面核查报告.md",
+  "material_hashes": {
+    "statement.md": "0c9fd981591f1dabe7338d576f57526305f26a4e12056381ae93537b04d0d070",
+    "public/reproduce.tcl": "ca2dd3ad60401d8225f7b93858aedbf51a701cf6cae7c518f796bd7de677ed8a",
+    "public/inputs/bug30198_src.brep": "48eb925f926109cc753a540cf0305e87cc78ad77c9c0dd7e4104e334abc52d51",
+    "public/inputs/bug30198_tool.brep": "1387983d0681d05d322aa5d91eb1a961aa4278cc5fbe4c5988dabba713f581ca"
+  },
+  "evidence_limits": [
+    "Native binaries were measured and identified by hash, but this audit did not rebuild them from the declared derived Git commits.",
+    "Static Git patch application is distinct from a real source-cache/build/sandbox replay.",
+    "Author-only Tcl result substitutions test oracle sensitivity; they are not compiled C++ negative patches."
+  ]
+}

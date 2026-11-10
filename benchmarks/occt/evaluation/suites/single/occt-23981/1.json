@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-23981-checks",
+  "version": "1",
+  "title": "23981 authoring geometry checks",
+  "source_ids": [
+    "oce013-authoring-b-5434272be3ee"
+  ],
+  "group_ids": [
+    "occt-single-23981"
+  ],
+  "checkpoints": [
+    {
+      "id": "23981-neighbor_rotate",
+      "issue_id": "occt-23981",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-23981/1/neighbor_rotate.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "two_curves",
+          "i_1_s1",
+          "i_1_s2",
+          "i_2_s1",
+          "i_2_s2"
+        ],
+        "case_timeout_seconds": 90,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "The current stock public builder explicitly rejects OCCT 6.6. A validated OCE 0.13 toolchain/adapter is required before admission."
+        ]
+      }
+    },
+    {
+      "id": "23981-neighbor_translate",
+      "issue_id": "occt-23981",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-23981/1/neighbor_translate.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "two_curves",
+          "i_1_s1",
+          "i_1_s2",
+          "i_2_s1",
+          "i_2_s2"
+        ],
+        "case_timeout_seconds": 90,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "The current stock public builder explicitly rejects OCCT 6.6. A validated OCE 0.13 toolchain/adapter is required before admission."
+        ]
+      }
+    },
+    {
+      "id": "23981-original",
+      "issue_id": "occt-23981",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-23981/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "two_curves",
+          "i_1_s1",
+          "i_1_s2",
+          "i_2_s1",
+          "i_2_s2"
+        ],
+        "case_timeout_seconds": 90,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "The current stock public builder explicitly rejects OCCT 6.6. A validated OCE 0.13 toolchain/adapter is required before admission."
+        ]
+      }
+    },
+    {
+      "id": "23981-regression",
+      "issue_id": "occt-23981",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-23981/1/regression.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "line_exists",
+          "i_s1",
+          "i_s2"
+        ],
+        "case_timeout_seconds": 90,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "The current stock public builder explicitly rejects OCCT 6.6. A validated OCE 0.13 toolchain/adapter is required before admission."
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/authoring-20261110/occt-23981/1/inputs/neighbor_rotate/bug23981_s1.draw",
+    "evaluation/cases/authoring-20261110/occt-23981/1/inputs/neighbor_rotate/bug23981_s2.draw",
+    "evaluation/cases/authoring-20261110/occt-23981/1/inputs/neighbor_translate/bug23981_s1.draw",
+    "evaluation/cases/authoring-20261110/occt-23981/1/inputs/neighbor_translate/bug23981_s2.draw",
+    "evaluation/cases/authoring-20261110/oracle_helpers.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "issues/occt-23981/1/public/inputs/bug23981_s1.draw",
+    "issues/occt-23981/1/public/inputs/bug23981_s2.draw"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "archive_sha256": "29e855c607f73017411a32dbaba2afe3d30c35c7db0d76f61547ef037d199f6d",
+  "archive_commit_comment": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+  "import_commit": "c3a85e90c53b71808ee656cb160a1263bfcb58b1",
+  "description": "Locally imported source export; not an upstream Git history claim.",
+  "derivation": "Official 870ae593 export + shared FreeType compatibility - repair 30198",
+  "shared_reference_commit": "9dd2d67c21767c7198a7e0b474f6c464fcd39b15",
+  "source_id": "occt75-authoring-30198-b-1af5f6930e39",
+  "commit": "1af5f6930e3951b2ddfe701a5a609a85e73e5479",
+  "materialized_tree_sha256": "7df31d9cd2711ac3cad46320631cefb75706fedb04648c832b5aa46fcbaa3575",
+  "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+  "verification_status": "verified_git",
+  "issues": [
+    30198
+  ],
+  "external_bundle": {
+    "filename": "occt75.bundle",
+    "sha256": "4734480b52b0ebc7701e38d8cfcc36a5cb3874cd037f4180f97358b1789116dc"
+  },
+  "schema_version": 1,
+  "kind": "derived_local_git_source",
+  "natural_upstream_commit": false,
+  "tree_hash_method": "agent-bench-tree-sha256-v1 applied to canonical git archive paths, bytes and executable modes",
+  "linux_source_cache_import_verified": false,
+  "linux_build_verified": false,
+  "source_archive_policy": "Git bundles remain outside the repository; use external_bundle SHA256 to verify the separately supplied source object archive."
+}

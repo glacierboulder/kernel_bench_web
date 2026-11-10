@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "issue_id": "occt-23933",
+  "date": "2026-11-10",
+  "repository_base_commit": "7c28d6089a2389dd4788e425f773bcfadb442491",
+  "status": "candidate_only_not_registered_formal_admission_not_run",
+  "source_id": "oce013-authoring-b-5434272be3ee",
+  "inputs": [
+    {
+      "name": "bug23933_a.brep",
+      "raw_sha256": "d52b29e4977f3a271e57e20aff9745d03f7474cf8b79d010cf2922dea3db201b",
+      "material_sha256": "d52b29e4977f3a271e57e20aff9745d03f7474cf8b79d010cf2922dea3db201b",
+      "adapter": "none"
+    },
+    {
+      "name": "bug23933_b.brep",
+      "raw_sha256": "f9013412116bab3935fa7327d7f7d7add5a90bf6a8da9bf236f579d0439b802a",
+      "material_sha256": "f9013412116bab3935fa7327d7f7d7add5a90bf6a8da9bf236f579d0439b802a",
+      "adapter": "none"
+    }
+  ],
+  "reference_patch": "reference.patch",
+  "reference_patch_sha256": "d1c5ff732cb38d45a36f7c59e4bcda7680e3537b1a30654abbc939164fa08570",
+  "upstream_url": "https://occt3d.com/dev/tickets/0023933/",
+  "calibration_record": "research/occt-authoring-20261110/audit-v2/native-replay.json",
+  "negative_control": "Geometric/diagnostic result substitution inside an author-only Tcl copy; not a C++ source patch experiment.",
+  "audit_report": "research/occt-authoring-20261110/audit-v2/全面核查报告.md",
+  "material_hashes": {
+    "statement.md": "5a138c86a8877b82372d15ecab4b0d20a942bc28b282761c699e17f5b55ef7ea",
+    "public/reproduce.tcl": "54a95f86c328c7f0bcee754580a5beaa37f88826fa9bb6e0e38090d6662a6ea2",
+    "public/inputs/bug23933_a.brep": "d52b29e4977f3a271e57e20aff9745d03f7474cf8b79d010cf2922dea3db201b",
+    "public/inputs/bug23933_b.brep": "f9013412116bab3935fa7327d7f7d7add5a90bf6a8da9bf236f579d0439b802a"
+  },
+  "evidence_limits": [
+    "Native binaries were measured and identified by hash, but this audit did not rebuild them from the declared derived Git commits.",
+    "Static Git patch application is distinct from a real source-cache/build/sandbox replay.",
+    "Author-only Tcl result substitutions test oracle sensitivity; they are not compiled C++ negative patches."
+  ]
+}

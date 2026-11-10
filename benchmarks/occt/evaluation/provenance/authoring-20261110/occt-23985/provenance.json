@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "issue_id": "occt-23985",
+  "date": "2026-11-10",
+  "repository_base_commit": "7c28d6089a2389dd4788e425f773bcfadb442491",
+  "status": "candidate_only_not_registered_formal_admission_not_run",
+  "source_id": "oce013-authoring-b-5434272be3ee",
+  "inputs": [
+    {
+      "name": "bug23985_b1_draw.brep",
+      "raw_sha256": "9f0a5b8ea56a7739807e68906de552a9ceda489dea0fb59f11d20bee7a5cb36c",
+      "material_sha256": "9f0a5b8ea56a7739807e68906de552a9ceda489dea0fb59f11d20bee7a5cb36c",
+      "adapter": "none"
+    },
+    {
+      "name": "bug23985_b2_draw.brep",
+      "raw_sha256": "4521abcb6a382b2b59d6a8637764acbf3d50296fe39048e45ce8ea47f2dc029c",
+      "material_sha256": "4521abcb6a382b2b59d6a8637764acbf3d50296fe39048e45ce8ea47f2dc029c",
+      "adapter": "none"
+    }
+  ],
+  "reference_patch": "reference.patch",
+  "reference_patch_sha256": "2f0c2d677a4a7b28fb5686aa3ba1237a2ad94ef380bcabc97659331ce7b80da0",
+  "upstream_url": "https://occt3d.com/dev/tickets/0023985/",
+  "calibration_record": "research/occt-authoring-20261110/audit-v2/native-replay.json",
+  "negative_control": "Geometric/diagnostic result substitution inside an author-only Tcl copy; not a C++ source patch experiment.",
+  "audit_report": "research/occt-authoring-20261110/audit-v2/全面核查报告.md",
+  "material_hashes": {
+    "statement.md": "a59da6d13a58709dce00542baf42ad839d58b2dde229f6c94bec231a746c47b4",
+    "public/reproduce.tcl": "e2007a8cef64faff799df865d0da4c6a1ce4ed80d4bc68c9f0fdd952e43634ab",
+    "public/inputs/bug23985_b1_draw.brep": "9f0a5b8ea56a7739807e68906de552a9ceda489dea0fb59f11d20bee7a5cb36c",
+    "public/inputs/bug23985_b2_draw.brep": "4521abcb6a382b2b59d6a8637764acbf3d50296fe39048e45ce8ea47f2dc029c"
+  },
+  "evidence_limits": [
+    "Native binaries were measured and identified by hash, but this audit did not rebuild them from the declared derived Git commits.",
+    "Static Git patch application is distinct from a real source-cache/build/sandbox replay.",
+    "Author-only Tcl result substitutions test oracle sensitivity; they are not compiled C++ negative patches."
+  ]
+}

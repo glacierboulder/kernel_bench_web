@@ -1,0 +1,111 @@
+[
+  {
+    "role": "B",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed_assertions": [
+      "inputs_valid",
+      "output_valid"
+    ],
+    "failed_assertions": [
+      "no_false_self_intersection"
+    ],
+    "exit_code": 0
+  },
+  {
+    "role": "B",
+    "case": "neighbor_translate",
+    "status": "geometry_fail",
+    "passed_assertions": [
+      "inputs_valid",
+      "output_valid"
+    ],
+    "failed_assertions": [
+      "no_false_self_intersection"
+    ],
+    "exit_code": 0
+  },
+  {
+    "role": "B",
+    "case": "neighbor_rotate",
+    "status": "geometry_fail",
+    "passed_assertions": [
+      "inputs_valid",
+      "output_valid"
+    ],
+    "failed_assertions": [
+      "no_false_self_intersection"
+    ],
+    "exit_code": 0
+  },
+  {
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed_assertions": [
+      "healthy_valid",
+      "real_interference_detected"
+    ],
+    "failed_assertions": [],
+    "exit_code": 0
+  },
+  {
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "passed_assertions": [
+      "inputs_valid",
+      "output_valid",
+      "no_false_self_intersection"
+    ],
+    "failed_assertions": [],
+    "exit_code": 0
+  },
+  {
+    "role": "F",
+    "case": "neighbor_translate",
+    "status": "geometry_pass",
+    "passed_assertions": [
+      "inputs_valid",
+      "output_valid",
+      "no_false_self_intersection"
+    ],
+    "failed_assertions": [],
+    "exit_code": 0
+  },
+  {
+    "role": "F",
+    "case": "neighbor_rotate",
+    "status": "geometry_pass",
+    "passed_assertions": [
+      "inputs_valid",
+      "output_valid",
+      "no_false_self_intersection"
+    ],
+    "failed_assertions": [],
+    "exit_code": 0
+  },
+  {
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed_assertions": [
+      "healthy_valid",
+      "real_interference_detected"
+    ],
+    "failed_assertions": [],
+    "exit_code": 0
+  },
+  {
+    "role": "negative_always_valid",
+    "case": "regression",
+    "status": "geometry_fail",
+    "passed_assertions": [
+      "healthy_valid"
+    ],
+    "failed_assertions": [
+      "real_interference_detected"
+    ],
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,44 @@
+DRAW is running in batch mode
+OPERATION_STARTED
+===RESULT===
+This shape seems to be valid
+Number of shapes in result
+ VERTEX    : 3
+ EDGE      : 4
+ WIRE      : 1
+ FACE      : 1
+ SHELL     : 0
+ SOLID     : 0
+ COMPSOLID : 0
+ COMPOUND  : 0
+ SHAPE     : 9
+
+
+
+Mass :         4391.22
+
+Relative error of mass computation :     4.28317e-07
+
+Center of gravity : 
+X =         87785.6
+Y =         38.7037
+Z =         2965.93
+
+Matrix of Inertia : 
+    1.98615e+07           89146    -1.80145e+06
+          89146     1.98477e+07          617729
+   -1.80145e+06          617729          374284
+
+Moments : 
+IX =      2.0033e+07
+IY =     1.98612e+07
+IZ =          189390
+
+
+BENCH_ASSERT_PASS shape_valid topology_check kind=expression
+BENCH_ASSERT_PASS nonempty surface_area=4391.22 kind=numeric
+BENCH_ASSERT_FAIL reference_topology trusted_reference_faces=3_edges=9_open_shape kind=numeric
+BENCH_ASSERT_FAIL reference_area area=4391.22 reference=8183.52 adaptive_eps=1e-5 kind=numeric
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=4 numeric_assertions=3
+TEST_DONE assertions=4 numeric_assertions=3

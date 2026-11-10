@@ -1,0 +1,191 @@
+[
+  {
+    "role": "B",
+    "case": "original",
+    "status": "geometry_fail",
+    "areas": {
+      "FUSED": 628.319,
+      "COMMON": 0.0
+    },
+    "expected": {
+      "FUSED": 582.9873553201977,
+      "COMMON": 45.33117539776097
+    },
+    "tolerance": 0.003,
+    "checks": {
+      "fuse_area": false,
+      "common_area": false,
+      "area_conservation": true,
+      "fuse_valid": true
+    },
+    "returncode": 0
+  },
+  {
+    "role": "B",
+    "case": "neighbor_translate",
+    "status": "geometry_fail",
+    "areas": {
+      "FUSED": 628.319,
+      "COMMON": 0.0
+    },
+    "expected": {
+      "FUSED": 582.9873553201977,
+      "COMMON": 45.33117539776097
+    },
+    "tolerance": 0.003,
+    "checks": {
+      "fuse_area": false,
+      "common_area": false,
+      "area_conservation": true,
+      "fuse_valid": true
+    },
+    "returncode": 0
+  },
+  {
+    "role": "B",
+    "case": "neighbor_scale",
+    "status": "geometry_pass",
+    "areas": {
+      "FUSED": 2331.95,
+      "COMMON": 181.325
+    },
+    "expected": {
+      "FUSED": 2331.949421280791,
+      "COMMON": 181.3247015910439
+    },
+    "tolerance": 0.012,
+    "checks": {
+      "fuse_area": true,
+      "common_area": true,
+      "area_conservation": true,
+      "fuse_valid": true
+    },
+    "returncode": 0
+  },
+  {
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "areas": {
+      "FUSED": 628.319,
+      "COMMON": 0.0
+    },
+    "expected": {
+      "FUSED": 628.3185307179587,
+      "COMMON": 0
+    },
+    "tolerance": 0.003,
+    "checks": {
+      "fuse_area": true,
+      "common_area": true,
+      "area_conservation": true,
+      "fuse_valid": true
+    },
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "areas": {
+      "FUSED": 582.987,
+      "COMMON": 45.3312
+    },
+    "expected": {
+      "FUSED": 582.9873553201977,
+      "COMMON": 45.33117539776097
+    },
+    "tolerance": 0.003,
+    "checks": {
+      "fuse_area": true,
+      "common_area": true,
+      "area_conservation": true,
+      "fuse_valid": true
+    },
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "neighbor_translate",
+    "status": "geometry_pass",
+    "areas": {
+      "FUSED": 582.987,
+      "COMMON": 45.3312
+    },
+    "expected": {
+      "FUSED": 582.9873553201977,
+      "COMMON": 45.33117539776097
+    },
+    "tolerance": 0.003,
+    "checks": {
+      "fuse_area": true,
+      "common_area": true,
+      "area_conservation": true,
+      "fuse_valid": true
+    },
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "neighbor_scale",
+    "status": "geometry_pass",
+    "areas": {
+      "FUSED": 2331.95,
+      "COMMON": 181.325
+    },
+    "expected": {
+      "FUSED": 2331.949421280791,
+      "COMMON": 181.3247015910439
+    },
+    "tolerance": 0.012,
+    "checks": {
+      "fuse_area": true,
+      "common_area": true,
+      "area_conservation": true,
+      "fuse_valid": true
+    },
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "areas": {
+      "FUSED": 628.319,
+      "COMMON": 0.0
+    },
+    "expected": {
+      "FUSED": 628.3185307179587,
+      "COMMON": 0
+    },
+    "tolerance": 0.003,
+    "checks": {
+      "fuse_area": true,
+      "common_area": true,
+      "area_conservation": true,
+      "fuse_valid": true
+    },
+    "returncode": 0
+  },
+  {
+    "role": "negative_empty",
+    "case": "original",
+    "status": "geometry_fail",
+    "areas": {
+      "FUSED": 582.987,
+      "COMMON": 0.0
+    },
+    "expected": {
+      "FUSED": 582.9873553201977,
+      "COMMON": 45.33117539776097
+    },
+    "tolerance": 0.003,
+    "checks": {
+      "fuse_area": true,
+      "common_area": false,
+      "area_conservation": false,
+      "fuse_valid": true
+    },
+    "returncode": 0
+  }
+]

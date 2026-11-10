@@ -1,0 +1,24 @@
+{
+  "upstream_repository": "glacierboulder/kernel_bench_web",
+  "upstream_commit": "7c28d6089a2389dd4788e425f773bcfadb442491",
+  "submission_repository": "sans2026/kernel_bench_web",
+  "submission_branch": "occt/add-eight-candidates-20261110",
+  "issues": [
+    23933,
+    23981,
+    23985,
+    23998,
+    25337,
+    24220,
+    29038,
+    30198
+  ],
+  "registration_status": "candidate_only_not_registered",
+  "formal_linux_replay": "not_run",
+  "known_build_blockers": 6,
+  "unresolved_geometry_semantics": [
+    29038
+  ],
+  "source_package_patch_sha256": "71dfdb3ea0dd3d89d3292f987f87bf06c3e026276de18ea549411f9f4b60cb76",
+  "note": "Branch publication is distinct from benchmark admission. No automatic merge or default-catalog promotion."
+}

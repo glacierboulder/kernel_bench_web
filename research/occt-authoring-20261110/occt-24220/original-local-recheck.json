@@ -1,0 +1,132 @@
+[
+  {
+    "role": "B",
+    "case": "original",
+    "returncode": 0,
+    "elapsed_s": 0.658,
+    "peak_private_mb": 14.42,
+    "stop": null,
+    "log": "B_original.log",
+    "status": "assertion_fail",
+    "checks": {
+      "complete": true,
+      "diagnostic": false
+    },
+    "values": {}
+  },
+  {
+    "role": "B",
+    "case": "neighbor_shift",
+    "returncode": 0,
+    "elapsed_s": 0.653,
+    "peak_private_mb": 14.46,
+    "stop": null,
+    "log": "B_neighbor_shift.log",
+    "status": "assertion_fail",
+    "checks": {
+      "complete": true,
+      "diagnostic": false
+    },
+    "values": {}
+  },
+  {
+    "role": "B",
+    "case": "neighbor_scale",
+    "returncode": 0,
+    "elapsed_s": 0.65,
+    "peak_private_mb": 13.65,
+    "stop": null,
+    "log": "B_neighbor_scale.log",
+    "status": "assertion_fail",
+    "checks": {
+      "complete": true,
+      "diagnostic": false
+    },
+    "values": {}
+  },
+  {
+    "role": "B",
+    "case": "regression",
+    "returncode": 0,
+    "elapsed_s": 0.228,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "B_regression.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "diagnostic": true
+    },
+    "values": {}
+  },
+  {
+    "role": "F",
+    "case": "original",
+    "returncode": 0,
+    "elapsed_s": 0.654,
+    "peak_private_mb": 14.44,
+    "stop": null,
+    "log": "F_original.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "diagnostic": true
+    },
+    "values": {}
+  },
+  {
+    "role": "F",
+    "case": "neighbor_shift",
+    "returncode": 0,
+    "elapsed_s": 0.652,
+    "peak_private_mb": 14.68,
+    "stop": null,
+    "log": "F_neighbor_shift.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "diagnostic": true
+    },
+    "values": {}
+  },
+  {
+    "role": "F",
+    "case": "neighbor_scale",
+    "returncode": 0,
+    "elapsed_s": 0.648,
+    "peak_private_mb": 27.06,
+    "stop": null,
+    "log": "F_neighbor_scale.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "diagnostic": true
+    },
+    "values": {}
+  },
+  {
+    "role": "F",
+    "case": "regression",
+    "returncode": 0,
+    "elapsed_s": 0.224,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "F_regression.log",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "diagnostic": true
+    },
+    "values": {}
+  },
+  {
+    "role": "negative_output_injection",
+    "case": "original",
+    "status": "assertion_fail",
+    "checks": {
+      "complete": true,
+      "diagnostic": false
+    },
+    "clean_status": "pass"
+  }
+]

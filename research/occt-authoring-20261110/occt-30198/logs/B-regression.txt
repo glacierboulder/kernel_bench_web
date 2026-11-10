@@ -1,0 +1,43 @@
+DRAW is running in batch mode
+OPERATION_STARTED
+===RESULT===
+This shape seems to be valid
+Number of shapes in result
+ VERTEX    : 16
+ EDGE      : 28
+ WIRE      : 14
+ FACE      : 14
+ SHELL     : 1
+ SOLID     : 1
+ COMPSOLID : 0
+ COMPOUND  : 1
+ SHAPE     : 75
+
+
+
+Mass :            1500
+
+Relative error of mass computation :               0
+
+Center of gravity : 
+X =             7.5
+Y =               5
+Z =               5
+
+Matrix of Inertia : 
+          25000     5.09317e-11     4.36557e-11
+    5.09317e-11           40625     4.36557e-11
+    4.36557e-11     4.36557e-11           40625
+
+Moments : 
+IX =           40625
+IY =           40625
+IZ =           25000
+
+
+BENCH_ASSERT_PASS shape_valid topology_check kind=expression
+BENCH_ASSERT_PASS nonempty signed_volume=1500 kind=numeric
+BENCH_ASSERT_PASS analytic_volume volume=1500 expected=1500 kind=numeric
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=3 numeric_assertions=2
+TEST_DONE assertions=3 numeric_assertions=2

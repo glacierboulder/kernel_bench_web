@@ -1,0 +1,119 @@
+[
+  {
+    "role": "B",
+    "case": "original",
+    "status": "geometry_fail",
+    "checks": {
+      "valid": true,
+      "edges": false,
+      "length": false
+    },
+    "length": 0.0,
+    "edges": 0,
+    "returncode": 0
+  },
+  {
+    "role": "B",
+    "case": "neighbor_translate",
+    "status": "geometry_fail",
+    "checks": {
+      "valid": true,
+      "edges": false,
+      "length": false
+    },
+    "length": 0.0,
+    "edges": 0,
+    "returncode": 0
+  },
+  {
+    "role": "B",
+    "case": "neighbor_swap",
+    "status": "geometry_fail",
+    "checks": {
+      "valid": true,
+      "edges": false,
+      "length": false
+    },
+    "length": 0.0,
+    "edges": 0,
+    "returncode": 0
+  },
+  {
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "checks": {
+      "valid": true,
+      "edges": true,
+      "length": true
+    },
+    "length": 31.4159,
+    "edges": 1,
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "checks": {
+      "valid": true,
+      "edges": true,
+      "length": true
+    },
+    "length": 2000.0,
+    "edges": 2,
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "neighbor_translate",
+    "status": "geometry_pass",
+    "checks": {
+      "valid": true,
+      "edges": true,
+      "length": true
+    },
+    "length": 2000.0,
+    "edges": 2,
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "neighbor_swap",
+    "status": "geometry_pass",
+    "checks": {
+      "valid": true,
+      "edges": true,
+      "length": true
+    },
+    "length": 2000.0,
+    "edges": 2,
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "checks": {
+      "valid": true,
+      "edges": true,
+      "length": true
+    },
+    "length": 31.4159,
+    "edges": 1,
+    "returncode": 0
+  },
+  {
+    "role": "negative_wrong_curve",
+    "case": "original",
+    "status": "geometry_fail",
+    "checks": {
+      "valid": true,
+      "edges": false,
+      "length": false
+    },
+    "length": 0.0,
+    "edges": 0,
+    "returncode": 0
+  }
+]

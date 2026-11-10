@@ -1,0 +1,43 @@
+=== SHAPE ===
+This shape seems to be valid
+Number of shapes in result
+ VERTEX    : 1
+ EDGE      : 1
+ WIRE      : 0
+ FACE      : 0
+ SHELL     : 0
+ SOLID     : 0
+ COMPSOLID : 0
+ COMPOUND  : 1
+ SHAPE     : 3
+
+
+
+Mass :          67.026
+
+Center of gravity : 
+X =         184.321
+Y =         17.3211
+Z =     9.53699e-11
+
+Matrix of Inertia : 
+        6433.98         413.735    -2.54838e-08
+        413.735         6099.67     4.00974e-08
+   -2.54838e-08     4.00974e-08         950.984
+
+Moments : 
+IX =         6713.05
+IY =          5820.6
+IZ =         950.984
+
+
+=== SAMPLES ===
+BENCH_ASSERT_PASS shape_valid topology_check kind=expression
+BENCH_ASSERT_PASS one_edge one_section_edge kind=numeric
+BENCH_ASSERT_PASS length length=67.026 expected=67.026 kind=numeric
+BENCH_ASSERT_FAIL sampled_length samples=1001 polyline=0.9999999583333339 kind=numeric
+BENCH_ASSERT_FAIL closed_curve closure_distance kind=numeric
+BENCH_ASSERT_PASS support_faces samples=42 worst_distance=4.4189868852292073e-06 limit=1e-5 kind=numeric
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=6 numeric_assertions=5
+TEST_DONE assertions=6 numeric_assertions=5

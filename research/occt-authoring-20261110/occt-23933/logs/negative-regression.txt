@@ -1,0 +1,6 @@
+BENCH_ASSERT_PASS healthy_valid healthy_box kind=expression
+OBSERVED_TRUE_INTERFERENCE=Shape(s) seem(s) to be valid for BOP.
+BENCH_ASSERT_FAIL real_interference_detected overlapping_solids kind=expression
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=2 numeric_assertions=0
+TEST_DONE assertions=2 numeric_assertions=0

@@ -1,0 +1,384 @@
+{
+  "historical_results": [
+    {
+      "issue": 25337,
+      "role": "B",
+      "case": "neighbor_scale",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.232,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "fuse_area",
+        "common_area",
+        "area_conservation",
+        "fuse_valid"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "fuse_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "common_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "area_conservation",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "fuse_valid",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "8f2fc955531b4e6aaf1178a9bdd191389ba76bd551da16c0b6043ac0b70b1d76",
+      "log": "logs/B-neighbor_scale.txt"
+    },
+    {
+      "issue": 25337,
+      "role": "B",
+      "case": "neighbor_translate",
+      "status": "geometry_fail",
+      "passed": false,
+      "elapsed_seconds": 0.22,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "fuse_area",
+        "common_area",
+        "area_conservation",
+        "fuse_valid"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "FAIL",
+          "id": "fuse_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "common_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "area_conservation",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "fuse_valid",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "3b23a7be83a18ea1e91c4a8903dda672ad1674ba70b02059447b3b6a672cd077",
+      "log": "logs/B-neighbor_translate.txt"
+    },
+    {
+      "issue": 25337,
+      "role": "B",
+      "case": "original",
+      "status": "geometry_fail",
+      "passed": false,
+      "elapsed_seconds": 0.225,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "fuse_area",
+        "common_area",
+        "area_conservation",
+        "fuse_valid"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "FAIL",
+          "id": "fuse_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "common_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "area_conservation",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "fuse_valid",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "8e3e325fa348ac48501a8df45510d1db2cc9ac8aca67d3aed2f246b69de0d147",
+      "log": "logs/B-original.txt"
+    },
+    {
+      "issue": 25337,
+      "role": "B",
+      "case": "regression",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.441,
+      "peak_private_mb": 6.5,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "fuse_area",
+        "common_area",
+        "area_conservation",
+        "fuse_valid"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "fuse_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "common_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "area_conservation",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "fuse_valid",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "5c15ea96d5812b4e497bc871767bcb6f4e857fb6b20b90c1c07cb38ce5f98e0f",
+      "log": "logs/B-regression.txt"
+    },
+    {
+      "issue": 25337,
+      "role": "F",
+      "case": "neighbor_scale",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.229,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "fuse_area",
+        "common_area",
+        "area_conservation",
+        "fuse_valid"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "fuse_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "common_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "area_conservation",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "fuse_valid",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "87bb326b57ecb66581df0c05af48b1a67f20dcbfa1f35577511686a5e014ea3d",
+      "log": "logs/F-neighbor_scale.txt"
+    },
+    {
+      "issue": 25337,
+      "role": "F",
+      "case": "neighbor_translate",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.23,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "fuse_area",
+        "common_area",
+        "area_conservation",
+        "fuse_valid"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "fuse_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "common_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "area_conservation",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "fuse_valid",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "6b226f31e64ff54b7ae71a633b40a5243129d53ffebd580e14f166dbcb9ffb81",
+      "log": "logs/F-neighbor_translate.txt"
+    },
+    {
+      "issue": 25337,
+      "role": "F",
+      "case": "original",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.224,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "fuse_area",
+        "common_area",
+        "area_conservation",
+        "fuse_valid"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "fuse_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "common_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "area_conservation",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "fuse_valid",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "5e5fe73de681f5fd0a29fd1ad7c96b2a40cb6e610efe6406f87a58e6f0cc47a5",
+      "log": "logs/F-original.txt"
+    },
+    {
+      "issue": 25337,
+      "role": "F",
+      "case": "regression",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.225,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "fuse_area",
+        "common_area",
+        "area_conservation",
+        "fuse_valid"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "fuse_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "common_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "area_conservation",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "fuse_valid",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "5c15ea96d5812b4e497bc871767bcb6f4e857fb6b20b90c1c07cb38ce5f98e0f",
+      "log": "logs/F-regression.txt"
+    },
+    {
+      "issue": 25337,
+      "role": "negative",
+      "case": "original",
+      "status": "geometry_fail",
+      "passed": false,
+      "elapsed_seconds": 0.229,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "fuse_area",
+        "common_area",
+        "area_conservation",
+        "fuse_valid"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "fuse_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "common_area",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "area_conservation",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "fuse_valid",
+          "kind": "expression"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "dd1fc5487b7f59c3f7f346484e424b50386758aae68c8a01cf3cee7996e7e87f",
+      "log": "logs/negative-original.txt"
+    }
+  ],
+  "superseded_by": "research/occt-authoring-20261110/audit-v2/native-replay.json",
+  "authoritative_current_admission": false
+}

@@ -1,0 +1,70 @@
+Host paths redacted from framework diagnostics.
+test_bad_budget_and_untrusted_runner_are_rejected (test_catalog_contract.CatalogContractTests.test_bad_budget_and_untrusted_runner_are_rejected) ... ok
+test_conflicting_catalog_content_cannot_reuse_an_existing_version (test_catalog_contract.CatalogContractTests.test_conflicting_catalog_content_cannot_reuse_an_existing_version) ... ok
+test_current_catalog_maps_legacy_tasks_and_only_public_issue_material (test_catalog_contract.CatalogContractTests.test_current_catalog_maps_legacy_tasks_and_only_public_issue_material) ... ok
+test_current_suite_checkpoint_inventory (test_catalog_contract.CatalogContractTests.test_current_suite_checkpoint_inventory) ... ok
+test_draw_case_is_the_only_script_setting (test_catalog_contract.CatalogContractTests.test_draw_case_is_the_only_script_setting) ... ok
+test_duplicate_group_member_is_rejected (test_catalog_contract.CatalogContractTests.test_duplicate_group_member_is_rejected) ... ok
+test_escaping_public_material_is_rejected (test_catalog_contract.CatalogContractTests.test_escaping_public_material_is_rejected) ... ok
+test_group_update_requires_a_new_id (test_catalog_contract.CatalogContractTests.test_group_update_requires_a_new_id) ... ok
+test_occt_runtime (unittest.loader._FailedTest.test_occt_runtime) ... ERROR
+test_suite_driver (unittest.loader._FailedTest.test_suite_driver) ... ERROR
+test_freeze (unittest.loader._FailedTest.test_freeze) ... ERROR
+
+======================================================================
+ERROR: test_occt_runtime (unittest.loader._FailedTest.test_occt_runtime)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_occt_runtime
+Traceback (most recent call last):
+  File "<conda>\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "<conda>\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "<repository>\tests\test_occt_runtime.py", line 11, in <module>
+    from backend.suite_driver import checkpoint_status
+  File "<repository>\backend\suite_driver.py", line 8, in <module>
+    import resource
+ModuleNotFoundError: No module named 'resource'
+
+
+======================================================================
+ERROR: test_suite_driver (unittest.loader._FailedTest.test_suite_driver)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_suite_driver
+Traceback (most recent call last):
+  File "<conda>\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "<conda>\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "<repository>\tests\test_suite_driver.py", line 5, in <module>
+    from backend.suite_driver import _execute
+  File "<repository>\backend\suite_driver.py", line 8, in <module>
+    import resource
+ModuleNotFoundError: No module named 'resource'
+
+
+======================================================================
+ERROR: test_freeze (unittest.loader._FailedTest.test_freeze)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_freeze
+Traceback (most recent call last):
+  File "<conda>\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "<conda>\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "<repository>\tests\test_freeze.py", line 12, in <module>
+    from backend.evaluator import _prepare_control
+  File "<repository>\backend\evaluator.py", line 13, in <module>
+    from .sandbox import command, limits, monitor, PYTHON
+  File "<repository>\backend\sandbox.py", line 5, in <module>
+    import resource
+ModuleNotFoundError: No module named 'resource'
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 34.260s
+
+FAILED (errors=3)

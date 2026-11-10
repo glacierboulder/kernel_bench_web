@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-30198-checks",
+  "version": "1",
+  "title": "30198 authoring geometry checks",
+  "source_ids": [
+    "occt75-authoring-30198-b-1af5f6930e39"
+  ],
+  "group_ids": [
+    "occt-single-30198"
+  ],
+  "checkpoints": [
+    {
+      "id": "30198-neighbor_reverse",
+      "issue_id": "occt-30198",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-30198/1/neighbor_reverse.tcl",
+      "timeout_seconds": 75,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "shape_valid",
+          "nonempty",
+          "topology",
+          "volume",
+          "surface_area"
+        ],
+        "case_timeout_seconds": 75,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "Official CPU, wall-time and memory limits must be calibrated in the deployed Linux resource runner."
+        ]
+      }
+    },
+    {
+      "id": "30198-neighbor_shift",
+      "issue_id": "occt-30198",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-30198/1/neighbor_shift.tcl",
+      "timeout_seconds": 75,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "shape_valid",
+          "nonempty",
+          "topology",
+          "volume",
+          "surface_area"
+        ],
+        "case_timeout_seconds": 75,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "Official CPU, wall-time and memory limits must be calibrated in the deployed Linux resource runner."
+        ]
+      }
+    },
+    {
+      "id": "30198-original",
+      "issue_id": "occt-30198",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-30198/1/original.tcl",
+      "timeout_seconds": 75,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "shape_valid",
+          "nonempty",
+          "topology",
+          "volume",
+          "surface_area"
+        ],
+        "case_timeout_seconds": 75,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "Official CPU, wall-time and memory limits must be calibrated in the deployed Linux resource runner."
+        ]
+      }
+    },
+    {
+      "id": "30198-regression",
+      "issue_id": "occt-30198",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-30198/1/regression.tcl",
+      "timeout_seconds": 75,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "shape_valid",
+          "nonempty",
+          "analytic_volume"
+        ],
+        "case_timeout_seconds": 75,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "Official CPU, wall-time and memory limits must be calibrated in the deployed Linux resource runner."
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/authoring-20261110/oracle_helpers.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "issues/occt-30198/1/public/inputs/bug30198_src.brep",
+    "issues/occt-30198/1/public/inputs/bug30198_tool.brep"
+  ]
+}

@@ -85,3 +85,8 @@ node --check frontend/studies.js
 - `docs/`：部署、题库、迁移和验收说明。
 - `runtime/dsh/`：固定 DSH npm 依赖声明和锁文件；不提交 node_modules。
 - `tests/`：Python 标准库单元和集成测试。
+
+
+## 2026-11-10 作者候选材料全面复核
+
+新增的八道作者候选位于既有 issue/group/suite 目录结构中，但**未加入默认 catalog 或默认 source lock**，不自动上架、不默认排队。候选引用集中在 `benchmarks/occt/evaluation/provenance/authoring-20261110/candidate-registration.json`（相对项目根目录）。默认题库身份和计数保持不变。候选仍需构建适配、Linux 冻结重放、几何覆盖和资源标定。详见项目根目录下 `research/occt-authoring-20261110/audit-v2/全面核查报告.md`。
