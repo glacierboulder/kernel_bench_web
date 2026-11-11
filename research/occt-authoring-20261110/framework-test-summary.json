@@ -1,0 +1,10 @@
+{
+  "catalog_contract_tests_passed": 8,
+  "linux_only_modules_blocked": [
+    "test_occt_runtime",
+    "test_suite_driver",
+    "test_freeze"
+  ],
+  "reason": "Windows Python has no resource module; Linux suite was not executed. WSL Ubuntu also failed to start because its ext4.vhdx path was missing.",
+  "full_suite_passed": false
+}

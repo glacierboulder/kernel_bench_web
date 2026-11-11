@@ -1,0 +1,8 @@
+BENCH_ASSERT_PASS inputs_valid input_topology kind=expression
+BENCH_ASSERT_PASS output_valid output_topology kind=expression
+OBSERVED_BOPARGCHECK=Faulties, that can not be treated by BOP, are detected.
+
+BENCH_ASSERT_FAIL no_false_self_intersection checker_verdict kind=expression
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=3 numeric_assertions=0
+TEST_DONE assertions=3 numeric_assertions=0

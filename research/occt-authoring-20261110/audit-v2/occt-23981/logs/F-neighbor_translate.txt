@@ -1,0 +1,8 @@
+BENCH_ASSERT_PASS two_curves branch_presence kind=numeric
+BENCH_ASSERT_PASS i_1_s1 analytic_support_samples=100 max_distance=3.397809258842699e-6 limit=1e-5 kind=numeric
+BENCH_ASSERT_PASS i_1_s2 analytic_support_samples=100 max_distance=2.521177293601795e-6 limit=1e-5 kind=numeric
+BENCH_ASSERT_PASS i_2_s1 analytic_support_samples=100 max_distance=3.397809280158981e-6 limit=1e-5 kind=numeric
+BENCH_ASSERT_PASS i_2_s2 analytic_support_samples=100 max_distance=2.5211766683241876e-6 limit=1e-5 kind=numeric
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=5 numeric_assertions=5
+TEST_DONE assertions=5 numeric_assertions=5

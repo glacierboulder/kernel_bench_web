@@ -1,0 +1,3249 @@
+[
+  {
+    "issue": 23933,
+    "role": "B",
+    "case": "neighbor_rotate",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.434,
+    "peak_private_mb": 10.35,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "inputs_valid",
+      "output_valid",
+      "no_false_self_intersection",
+      "nonempty_result"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "inputs_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "output_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "FAIL",
+        "id": "no_false_self_intersection",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty_result",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "e6270ac1a2cc0b893ed21df43a0eb4af4308a8781511a86d99dc19832d53f718",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23933/logs/B-neighbor_rotate.txt",
+    "case_script_sha256": "027689ad90cbcb69428b3af720373c59650124fa2756cd1cc6a61adab649543c",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23933/scripts/B-neighbor_rotate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23933,
+    "role": "B",
+    "case": "neighbor_translate",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.64,
+    "peak_private_mb": 9.37,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "inputs_valid",
+      "output_valid",
+      "no_false_self_intersection",
+      "nonempty_result"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "inputs_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "output_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "FAIL",
+        "id": "no_false_self_intersection",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty_result",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "e6270ac1a2cc0b893ed21df43a0eb4af4308a8781511a86d99dc19832d53f718",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23933/logs/B-neighbor_translate.txt",
+    "case_script_sha256": "db7244b6a28f7dc652be4b197b48d91021fbea710171239e44cc25dc2def9689",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23933/scripts/B-neighbor_translate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23933,
+    "role": "B",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.427,
+    "peak_private_mb": 10.22,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "inputs_valid",
+      "output_valid",
+      "no_false_self_intersection",
+      "nonempty_result"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "inputs_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "output_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "FAIL",
+        "id": "no_false_self_intersection",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty_result",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "e6270ac1a2cc0b893ed21df43a0eb4af4308a8781511a86d99dc19832d53f718",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23933/logs/B-original.txt",
+    "case_script_sha256": "4eb4f264b0bd85c2c3a4cfcebfd5d9b9cdab3f366b584a7a37ae8c291b666a16",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23933/scripts/B-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23933,
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.218,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "healthy_valid",
+      "real_interference_detected"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "healthy_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "real_interference_detected",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "49c28ec2ad41eaf4fcd0ff6416b4b2fb2b4bcafa0129ad66b22f009ae49f6fa5",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23933/logs/B-regression.txt",
+    "case_script_sha256": "850046dc1add9d44a969069b0ee603d242dd64c01bdea1dd1461087a39912015",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23933/scripts/B-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23933,
+    "role": "F",
+    "case": "neighbor_rotate",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.429,
+    "peak_private_mb": 8.88,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "inputs_valid",
+      "output_valid",
+      "no_false_self_intersection",
+      "nonempty_result"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "inputs_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "output_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "no_false_self_intersection",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty_result",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "d68be26a21d30fa1f7ec84441e23ed1e468c41c8969037e174cd46c8b8d94355",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23933/logs/F-neighbor_rotate.txt",
+    "case_script_sha256": "027689ad90cbcb69428b3af720373c59650124fa2756cd1cc6a61adab649543c",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23933/scripts/F-neighbor_rotate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23933,
+    "role": "F",
+    "case": "neighbor_translate",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.441,
+    "peak_private_mb": 10.64,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "inputs_valid",
+      "output_valid",
+      "no_false_self_intersection",
+      "nonempty_result"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "inputs_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "output_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "no_false_self_intersection",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty_result",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "d68be26a21d30fa1f7ec84441e23ed1e468c41c8969037e174cd46c8b8d94355",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23933/logs/F-neighbor_translate.txt",
+    "case_script_sha256": "db7244b6a28f7dc652be4b197b48d91021fbea710171239e44cc25dc2def9689",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23933/scripts/F-neighbor_translate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23933,
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.437,
+    "peak_private_mb": 11.68,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "inputs_valid",
+      "output_valid",
+      "no_false_self_intersection",
+      "nonempty_result"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "inputs_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "output_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "no_false_self_intersection",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty_result",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "d68be26a21d30fa1f7ec84441e23ed1e468c41c8969037e174cd46c8b8d94355",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23933/logs/F-original.txt",
+    "case_script_sha256": "4eb4f264b0bd85c2c3a4cfcebfd5d9b9cdab3f366b584a7a37ae8c291b666a16",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23933/scripts/F-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23933,
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.436,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "healthy_valid",
+      "real_interference_detected"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "healthy_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "real_interference_detected",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "49c28ec2ad41eaf4fcd0ff6416b4b2fb2b4bcafa0129ad66b22f009ae49f6fa5",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23933/logs/F-regression.txt",
+    "case_script_sha256": "850046dc1add9d44a969069b0ee603d242dd64c01bdea1dd1461087a39912015",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23933/scripts/F-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23933,
+    "role": "negative",
+    "case": "regression",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.227,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "healthy_valid",
+      "real_interference_detected"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "healthy_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "FAIL",
+        "id": "real_interference_detected",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "f9d10debaa176e67d26083cda0222f60f49fd8df4a1e1e4c79f99c9904d4ae65",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23933/logs/negative-regression.txt",
+    "case_script_sha256": "b710e369ba27a28ae3653ce05ce6b0968d80f4d18c5057a270aaa2c1eeef6477",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23933/scripts/negative-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23933,
+    "role": "empty_result",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.223,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "inputs_valid",
+      "output_valid",
+      "no_false_self_intersection",
+      "nonempty_result"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "inputs_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "output_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "FAIL",
+        "id": "no_false_self_intersection",
+        "kind": "expression"
+      },
+      {
+        "status": "FAIL",
+        "id": "nonempty_result",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "32bd6ed9e2cb68e5e93eb0066205d1372e36dbaecbc577804590b0b07ac389e7",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23933/logs/empty_result-original.txt",
+    "case_script_sha256": "7c9b6859f9addb62f257b72095af2a278ad8728c645b2a2261dbc3a911c5d5c9",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23933/scripts/empty_result-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23981,
+    "role": "B",
+    "case": "neighbor_rotate",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.225,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "two_curves",
+      "i_1_s1",
+      "i_1_s2",
+      "i_2_s1",
+      "i_2_s2"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "two_curves",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "i_1_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_1_s2",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "i_2_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_2_s2",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "5ca1ccac2a30953f3709909df49e969531740f704f5ed8417c8f2d07a2b9c49d",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23981/logs/B-neighbor_rotate.txt",
+    "case_script_sha256": "0c25e6d20a0135badc0f215da71a399e3a986d01a0d7d01ead70b7c3d260c864",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23981/scripts/B-neighbor_rotate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23981,
+    "role": "B",
+    "case": "neighbor_translate",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.227,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "two_curves",
+      "i_1_s1",
+      "i_1_s2",
+      "i_2_s1",
+      "i_2_s2"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "two_curves",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "i_1_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_1_s2",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "i_2_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_2_s2",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "49b1f3dfe0a2095c403e75ac7d5a853d27af55375e96ad76c7c68c2356d941ce",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23981/logs/B-neighbor_translate.txt",
+    "case_script_sha256": "254ced49026a148061fa888342d358709518f071d05192247fcdf63f38006c54",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23981/scripts/B-neighbor_translate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23981,
+    "role": "B",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.226,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "two_curves",
+      "i_1_s1",
+      "i_1_s2",
+      "i_2_s1",
+      "i_2_s2"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "two_curves",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "i_1_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_1_s2",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "i_2_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_2_s2",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "39a6225be1ea1006563dfdf44def08641b5b23694e717d4672422cde421d54ef",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23981/logs/B-original.txt",
+    "case_script_sha256": "dfbd03e56b24f45c675834c1b066af172c13ead7598354d7282eb9c853602a96",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23981/scripts/B-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23981,
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.225,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "line_exists",
+      "i_s1",
+      "i_s2"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "line_exists",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_s2",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "557cfc2612d926869c12737423283c11bfe683668293730d29df0248f454b57d",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23981/logs/B-regression.txt",
+    "case_script_sha256": "4cb1c36f287f331d487ff343d60aeb812082d57191b6e82900af2b5c2c883bd5",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23981/scripts/B-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23981,
+    "role": "F",
+    "case": "neighbor_rotate",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.223,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "two_curves",
+      "i_1_s1",
+      "i_1_s2",
+      "i_2_s1",
+      "i_2_s2"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "two_curves",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_1_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_1_s2",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_2_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_2_s2",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "6e933cea3948beb2b52e35590bbcf941ddbe71aae8a6e8824dfd3c7a31882094",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23981/logs/F-neighbor_rotate.txt",
+    "case_script_sha256": "0c25e6d20a0135badc0f215da71a399e3a986d01a0d7d01ead70b7c3d260c864",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23981/scripts/F-neighbor_rotate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23981,
+    "role": "F",
+    "case": "neighbor_translate",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.223,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "two_curves",
+      "i_1_s1",
+      "i_1_s2",
+      "i_2_s1",
+      "i_2_s2"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "two_curves",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_1_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_1_s2",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_2_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_2_s2",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "156510e706d15b0f83c40f7e11780b08d5a1dbe15903ad136dfa3631d1bb57be",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23981/logs/F-neighbor_translate.txt",
+    "case_script_sha256": "254ced49026a148061fa888342d358709518f071d05192247fcdf63f38006c54",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23981/scripts/F-neighbor_translate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23981,
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.229,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "two_curves",
+      "i_1_s1",
+      "i_1_s2",
+      "i_2_s1",
+      "i_2_s2"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "two_curves",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_1_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_1_s2",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_2_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_2_s2",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "182a603cc9dcbb5b2cee4c9752d6bafdc7e88302efe95a24a1e922236f9d486f",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23981/logs/F-original.txt",
+    "case_script_sha256": "dfbd03e56b24f45c675834c1b066af172c13ead7598354d7282eb9c853602a96",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23981/scripts/F-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23981,
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.229,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "line_exists",
+      "i_s1",
+      "i_s2"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "line_exists",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_s2",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "557cfc2612d926869c12737423283c11bfe683668293730d29df0248f454b57d",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23981/logs/F-regression.txt",
+    "case_script_sha256": "4cb1c36f287f331d487ff343d60aeb812082d57191b6e82900af2b5c2c883bd5",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23981/scripts/F-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23981,
+    "role": "negative",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.227,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "two_curves",
+      "i_1_s1",
+      "i_1_s2",
+      "i_2_s1",
+      "i_2_s2"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "two_curves",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "i_1_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "i_1_s2",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_2_s1",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "i_2_s2",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "3a3bf3815a1a2311f17ff4d440cd8b4328af75c0bf4fd500d62dc78ef635f2ff",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23981/logs/negative-original.txt",
+    "case_script_sha256": "dc0c327fdfb284a3158f32f7f0e86dcbe85cf07327281f2c6aecc4aa3e0b1ead",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23981/scripts/negative-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23985,
+    "role": "B",
+    "case": "neighbor_swap",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.252,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "edge_count",
+      "section_length",
+      "support_faces",
+      "distinct_branches"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "FAIL",
+        "id": "edge_count",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "section_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "support_faces",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "distinct_branches",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "9fea0a1953d3bc3f52737bbc607aa848651101ce2b0fe58df27c3eb957a6cfb1",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23985/logs/B-neighbor_swap.txt",
+    "case_script_sha256": "3495be15b7b6835ac27fbe09c46f4f73cfa33c7367b016dabae4c55ba994749e",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23985/scripts/B-neighbor_swap.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23985,
+    "role": "B",
+    "case": "neighbor_translate",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.228,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "edge_count",
+      "section_length",
+      "support_faces",
+      "distinct_branches"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "FAIL",
+        "id": "edge_count",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "section_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "support_faces",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "distinct_branches",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "9fea0a1953d3bc3f52737bbc607aa848651101ce2b0fe58df27c3eb957a6cfb1",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23985/logs/B-neighbor_translate.txt",
+    "case_script_sha256": "b014cfb55536d7ff3e6edab7af81e562f9d7dd05229c2867a32d25d5f1c6e221",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23985/scripts/B-neighbor_translate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23985,
+    "role": "B",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.224,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "edge_count",
+      "section_length",
+      "support_faces",
+      "distinct_branches"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "FAIL",
+        "id": "edge_count",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "section_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "support_faces",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "distinct_branches",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "9fea0a1953d3bc3f52737bbc607aa848651101ce2b0fe58df27c3eb957a6cfb1",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23985/logs/B-original.txt",
+    "case_script_sha256": "1d79cd2821c35a6074c35ba1014517b0114227a26ee8235310d2f0ed8fa45ce4",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23985/scripts/B-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23985,
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.226,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "edge_count",
+      "section_length",
+      "support_faces"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "edge_count",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "section_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "support_faces",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "f2c6032de8d1dd2943c566f85e282e2ddd213ed1d4565dd129ce2113f42a36aa",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23985/logs/B-regression.txt",
+    "case_script_sha256": "4afbc627144e45ff9121037a0bb8e129ae6b8a2875bbd6393e62206de1eb24dc",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23985/scripts/B-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23985,
+    "role": "F",
+    "case": "neighbor_swap",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.427,
+    "peak_private_mb": 14.05,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "edge_count",
+      "section_length",
+      "support_faces",
+      "distinct_branches"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "edge_count",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "section_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "support_faces",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "distinct_branches",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "a134d79a28728d6fdfc5582f5277e424d44a23b8ff6e5f170eb1679a065dba3e",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23985/logs/F-neighbor_swap.txt",
+    "case_script_sha256": "3495be15b7b6835ac27fbe09c46f4f73cfa33c7367b016dabae4c55ba994749e",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23985/scripts/F-neighbor_swap.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23985,
+    "role": "F",
+    "case": "neighbor_translate",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.427,
+    "peak_private_mb": 14.07,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "edge_count",
+      "section_length",
+      "support_faces",
+      "distinct_branches"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "edge_count",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "section_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "support_faces",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "distinct_branches",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "3b547f713f232be31a68070990aca653d9c1d602370a45a68e715a2272ef7ee7",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23985/logs/F-neighbor_translate.txt",
+    "case_script_sha256": "b014cfb55536d7ff3e6edab7af81e562f9d7dd05229c2867a32d25d5f1c6e221",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23985/scripts/F-neighbor_translate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23985,
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.453,
+    "peak_private_mb": 14.04,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "edge_count",
+      "section_length",
+      "support_faces",
+      "distinct_branches"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "edge_count",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "section_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "support_faces",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "distinct_branches",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "a134d79a28728d6fdfc5582f5277e424d44a23b8ff6e5f170eb1679a065dba3e",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23985/logs/F-original.txt",
+    "case_script_sha256": "1d79cd2821c35a6074c35ba1014517b0114227a26ee8235310d2f0ed8fa45ce4",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23985/scripts/F-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23985,
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.242,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "edge_count",
+      "section_length",
+      "support_faces"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "edge_count",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "section_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "support_faces",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "f2c6032de8d1dd2943c566f85e282e2ddd213ed1d4565dd129ce2113f42a36aa",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23985/logs/F-regression.txt",
+    "case_script_sha256": "4afbc627144e45ff9121037a0bb8e129ae6b8a2875bbd6393e62206de1eb24dc",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23985/scripts/F-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23985,
+    "role": "negative",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.468,
+    "peak_private_mb": 14.05,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "edge_count",
+      "section_length",
+      "support_faces",
+      "distinct_branches"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "FAIL",
+        "id": "edge_count",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "section_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "support_faces",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "distinct_branches",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "9fea0a1953d3bc3f52737bbc607aa848651101ce2b0fe58df27c3eb957a6cfb1",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23985/logs/negative-original.txt",
+    "case_script_sha256": "6628b2641c2a410a81b38b629ccef1d7bfb39dad1f727ab7dd8ef6a1a17f73e0",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23985/scripts/negative-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23985,
+    "role": "translated_result",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.457,
+    "peak_private_mb": 14.22,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "edge_count",
+      "section_length",
+      "support_faces",
+      "distinct_branches"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "edge_count",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "section_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "support_faces",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "distinct_branches",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "c3d04fd2e20ed9857b78aa796d720328c84b92801d6a8a91c247ced63d59fd62",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23985/logs/translated_result-original.txt",
+    "case_script_sha256": "8a64ea72ee38663e4f9ad75afbfb29ddd5469f20d6d8df868453d4930a025090",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23985/scripts/translated_result-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23998,
+    "role": "B",
+    "case": "neighbor_rotate",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.482,
+    "peak_private_mb": 8.49,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "one_edge",
+      "length",
+      "sampled_length",
+      "closed_curve",
+      "support_faces"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "one_edge",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "sampled_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "closed_curve",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "support_faces",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "79beba984b9aaaf633b7a803c6eaffcf020e52a035b42de494322fdaace47f53",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23998/logs/B-neighbor_rotate.txt",
+    "case_script_sha256": "10f4a319c6ff6f7d7408997a5c440ba29afe0c0bde1a06e1370574840c70d0c8",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23998/scripts/B-neighbor_rotate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23998,
+    "role": "B",
+    "case": "neighbor_translate",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.461,
+    "peak_private_mb": 8.99,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "one_edge",
+      "length",
+      "sampled_length",
+      "closed_curve",
+      "support_faces"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "one_edge",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "sampled_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "closed_curve",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "support_faces",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "8c2095a139b4a852681f2d84404e22c04f88a04ed297ba2e21f26e625cd1403e",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23998/logs/B-neighbor_translate.txt",
+    "case_script_sha256": "fd6ff8d938a2617703c38aeac40761836a2c9b50b1b07904abb2d062c6c900a0",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23998/scripts/B-neighbor_translate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23998,
+    "role": "B",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.455,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "one_edge",
+      "length",
+      "sampled_length",
+      "closed_curve",
+      "support_faces"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "one_edge",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "sampled_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "closed_curve",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "support_faces",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "b03a2b2d3b806574a338786f7060a1f9b233926049dad842f1134a95c5ada22b",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23998/logs/B-original.txt",
+    "case_script_sha256": "adc1469e1f3d8e0b52c0e11314aa0def45a9e6068673332dfcb0255262a33027",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23998/scripts/B-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23998,
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.234,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "one_edge",
+      "length",
+      "support_faces"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "one_edge",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "support_faces",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "e7b42c817f915ad2a04ee926483a230ed9e51f40f1f4d3df1138cf742f587356",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23998/logs/B-regression.txt",
+    "case_script_sha256": "5135c55d139c28da40d8bb94110ef552d19d0dad91540d1bc67c9f075184c42b",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23998/scripts/B-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23998,
+    "role": "F",
+    "case": "neighbor_rotate",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.461,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "one_edge",
+      "length",
+      "sampled_length",
+      "closed_curve",
+      "support_faces"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "one_edge",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "sampled_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "closed_curve",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "support_faces",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "f463218aef216e65b493c87ebf9df18aa7544584868ec6d3a60953f6cadb25a7",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23998/logs/F-neighbor_rotate.txt",
+    "case_script_sha256": "10f4a319c6ff6f7d7408997a5c440ba29afe0c0bde1a06e1370574840c70d0c8",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23998/scripts/F-neighbor_rotate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23998,
+    "role": "F",
+    "case": "neighbor_translate",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.46,
+    "peak_private_mb": 9.27,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "one_edge",
+      "length",
+      "sampled_length",
+      "closed_curve",
+      "support_faces"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "one_edge",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "sampled_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "closed_curve",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "support_faces",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "04d291b833e45ac86f9fbbf412596e00ad4df8d96294e4ab589b32ab497067d3",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23998/logs/F-neighbor_translate.txt",
+    "case_script_sha256": "fd6ff8d938a2617703c38aeac40761836a2c9b50b1b07904abb2d062c6c900a0",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23998/scripts/F-neighbor_translate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23998,
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.465,
+    "peak_private_mb": 2.59,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "one_edge",
+      "length",
+      "sampled_length",
+      "closed_curve",
+      "support_faces"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "one_edge",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "sampled_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "closed_curve",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "support_faces",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "554276047740d26c6c1cdc1ac3203cae69f078287432bba0e3f091f849371abe",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23998/logs/F-original.txt",
+    "case_script_sha256": "adc1469e1f3d8e0b52c0e11314aa0def45a9e6068673332dfcb0255262a33027",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23998/scripts/F-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23998,
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.236,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "one_edge",
+      "length",
+      "support_faces"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "one_edge",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "support_faces",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "e7b42c817f915ad2a04ee926483a230ed9e51f40f1f4d3df1138cf742f587356",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23998/logs/F-regression.txt",
+    "case_script_sha256": "5135c55d139c28da40d8bb94110ef552d19d0dad91540d1bc67c9f075184c42b",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23998/scripts/F-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23998,
+    "role": "negative",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.465,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "one_edge",
+      "length",
+      "sampled_length",
+      "closed_curve",
+      "support_faces"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "one_edge",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "length",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "sampled_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "closed_curve",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "support_faces",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "a8fc0d87923e15ac8b4886c56dcdc48b735b45ac99e84177e5429a3e16cd101b",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23998/logs/negative-original.txt",
+    "case_script_sha256": "a2eb3c83d673d42e61cca6cd6ebacb26bf0fdf2841e470cb487d6389d78e7478",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23998/scripts/negative-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 23998,
+    "role": "translated_result",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.452,
+    "peak_private_mb": 9.77,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "one_edge",
+      "length",
+      "sampled_length",
+      "closed_curve",
+      "support_faces"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "one_edge",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "sampled_length",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "closed_curve",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "support_faces",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "ff403b8cf73c89766ee76a9bee16cc893dc92cfbe7e7c75b7ede7c447e0433b2",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-23998/logs/translated_result-original.txt",
+    "case_script_sha256": "2e9d21c1b2b4b97f3b05da2300ede1bc5ff635ef504c8ef532f79cc53b99e3e7",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-23998/scripts/translated_result-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 25337,
+    "role": "B",
+    "case": "neighbor_scale",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.257,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "fuse_area",
+      "common_area",
+      "area_conservation",
+      "fuse_valid"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "fuse_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "common_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "area_conservation",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "fuse_valid",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "8f2fc955531b4e6aaf1178a9bdd191389ba76bd551da16c0b6043ac0b70b1d76",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-25337/logs/B-neighbor_scale.txt",
+    "case_script_sha256": "31e9f90451bbf04b214c54a478aece310b790a4a0dbc9603435a5dc5943f2db6",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-25337/scripts/B-neighbor_scale.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 25337,
+    "role": "B",
+    "case": "neighbor_translate",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.227,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "fuse_area",
+      "common_area",
+      "area_conservation",
+      "fuse_valid"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "FAIL",
+        "id": "fuse_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "common_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "area_conservation",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "fuse_valid",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "3b23a7be83a18ea1e91c4a8903dda672ad1674ba70b02059447b3b6a672cd077",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-25337/logs/B-neighbor_translate.txt",
+    "case_script_sha256": "714429928075a6dceb4e0f3e941870e5f87638c8e6fec0d73d617d99f379ae8c",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-25337/scripts/B-neighbor_translate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 25337,
+    "role": "B",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.233,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "fuse_area",
+      "common_area",
+      "area_conservation",
+      "fuse_valid"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "FAIL",
+        "id": "fuse_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "common_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "area_conservation",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "fuse_valid",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "8e3e325fa348ac48501a8df45510d1db2cc9ac8aca67d3aed2f246b69de0d147",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-25337/logs/B-original.txt",
+    "case_script_sha256": "95fcad5d0c3b9dab792d6cfb1d89bdb867a4265c019465da5cf8cc2a97eb9643",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-25337/scripts/B-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 25337,
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.237,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "fuse_area",
+      "common_area",
+      "area_conservation",
+      "fuse_valid"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "fuse_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "common_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "area_conservation",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "fuse_valid",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "5c15ea96d5812b4e497bc871767bcb6f4e857fb6b20b90c1c07cb38ce5f98e0f",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-25337/logs/B-regression.txt",
+    "case_script_sha256": "fbd1bf9c2c24401e480e56c033552c7ab7022b42edbfe12e015558697270e4ce",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-25337/scripts/B-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 25337,
+    "role": "F",
+    "case": "neighbor_scale",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.24,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "fuse_area",
+      "common_area",
+      "area_conservation",
+      "fuse_valid"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "fuse_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "common_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "area_conservation",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "fuse_valid",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "87bb326b57ecb66581df0c05af48b1a67f20dcbfa1f35577511686a5e014ea3d",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-25337/logs/F-neighbor_scale.txt",
+    "case_script_sha256": "31e9f90451bbf04b214c54a478aece310b790a4a0dbc9603435a5dc5943f2db6",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-25337/scripts/F-neighbor_scale.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 25337,
+    "role": "F",
+    "case": "neighbor_translate",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.233,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "fuse_area",
+      "common_area",
+      "area_conservation",
+      "fuse_valid"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "fuse_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "common_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "area_conservation",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "fuse_valid",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "6b226f31e64ff54b7ae71a633b40a5243129d53ffebd580e14f166dbcb9ffb81",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-25337/logs/F-neighbor_translate.txt",
+    "case_script_sha256": "714429928075a6dceb4e0f3e941870e5f87638c8e6fec0d73d617d99f379ae8c",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-25337/scripts/F-neighbor_translate.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 25337,
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.241,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "fuse_area",
+      "common_area",
+      "area_conservation",
+      "fuse_valid"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "fuse_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "common_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "area_conservation",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "fuse_valid",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "5e5fe73de681f5fd0a29fd1ad7c96b2a40cb6e610efe6406f87a58e6f0cc47a5",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-25337/logs/F-original.txt",
+    "case_script_sha256": "95fcad5d0c3b9dab792d6cfb1d89bdb867a4265c019465da5cf8cc2a97eb9643",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-25337/scripts/F-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 25337,
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.241,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "fuse_area",
+      "common_area",
+      "area_conservation",
+      "fuse_valid"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "fuse_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "common_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "area_conservation",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "fuse_valid",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "5c15ea96d5812b4e497bc871767bcb6f4e857fb6b20b90c1c07cb38ce5f98e0f",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-25337/logs/F-regression.txt",
+    "case_script_sha256": "fbd1bf9c2c24401e480e56c033552c7ab7022b42edbfe12e015558697270e4ce",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-25337/scripts/F-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 25337,
+    "role": "negative",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.236,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "fuse_area",
+      "common_area",
+      "area_conservation",
+      "fuse_valid"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "fuse_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "common_area",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "area_conservation",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "fuse_valid",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "dd1fc5487b7f59c3f7f346484e424b50386758aae68c8a01cf3cee7996e7e87f",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-25337/logs/negative-original.txt",
+    "case_script_sha256": "2edb308089a6c04846f23a0d475e6b99c9fed77da09ea3d90b323f47edf68a00",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-25337/scripts/negative-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 24220,
+    "role": "B",
+    "case": "neighbor_scale",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.703,
+    "peak_private_mb": 13.67,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "continuity_diagnostic"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "FAIL",
+        "id": "continuity_diagnostic",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "415852b9eed001eb118a4827d7496aad61af91da80f834ffc27b191d5a307800",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-24220/logs/B-neighbor_scale.txt",
+    "case_script_sha256": "0f62d05e41385c338bdfb357f8e7ee5156ae45c647e088546029871201365912",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-24220/scripts/B-neighbor_scale.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 24220,
+    "role": "B",
+    "case": "neighbor_shift",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.684,
+    "peak_private_mb": 14.46,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "continuity_diagnostic"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "FAIL",
+        "id": "continuity_diagnostic",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "415852b9eed001eb118a4827d7496aad61af91da80f834ffc27b191d5a307800",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-24220/logs/B-neighbor_shift.txt",
+    "case_script_sha256": "527c773c227806f5f187eedbc9fc58876900072b9df19972993122bb3ce62999",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-24220/scripts/B-neighbor_shift.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 24220,
+    "role": "B",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.685,
+    "peak_private_mb": 27.02,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "continuity_diagnostic"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "FAIL",
+        "id": "continuity_diagnostic",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "415852b9eed001eb118a4827d7496aad61af91da80f834ffc27b191d5a307800",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-24220/logs/B-original.txt",
+    "case_script_sha256": "6a58f61cb75c1c62167787a9fa33a3a5c2a314e3ac82e0cb90587c387a772019",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-24220/scripts/B-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 24220,
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.249,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "continuity_diagnostic"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "continuity_diagnostic",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "14a16d57420af88139eeb82639618c389fdf21dcd2e591b9b97c7421ac97e9d1",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-24220/logs/B-regression.txt",
+    "case_script_sha256": "586aaa8b9fe21236065a9240e27b1de9cbb0bd25e51385bbf900523fd00bd2fe",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-24220/scripts/B-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 24220,
+    "role": "F",
+    "case": "neighbor_scale",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.682,
+    "peak_private_mb": 9.39,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "continuity_diagnostic"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "continuity_diagnostic",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "a77e80671fc83fb2c9384eb129fe02747ecfd7e7d593156da1e407d3b5083a4b",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-24220/logs/F-neighbor_scale.txt",
+    "case_script_sha256": "0f62d05e41385c338bdfb357f8e7ee5156ae45c647e088546029871201365912",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-24220/scripts/F-neighbor_scale.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 24220,
+    "role": "F",
+    "case": "neighbor_shift",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.681,
+    "peak_private_mb": 14.79,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "continuity_diagnostic"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "continuity_diagnostic",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "a77e80671fc83fb2c9384eb129fe02747ecfd7e7d593156da1e407d3b5083a4b",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-24220/logs/F-neighbor_shift.txt",
+    "case_script_sha256": "527c773c227806f5f187eedbc9fc58876900072b9df19972993122bb3ce62999",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-24220/scripts/F-neighbor_shift.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 24220,
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.678,
+    "peak_private_mb": 14.47,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "continuity_diagnostic"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "continuity_diagnostic",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "a77e80671fc83fb2c9384eb129fe02747ecfd7e7d593156da1e407d3b5083a4b",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-24220/logs/F-original.txt",
+    "case_script_sha256": "6a58f61cb75c1c62167787a9fa33a3a5c2a314e3ac82e0cb90587c387a772019",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-24220/scripts/F-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 24220,
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.24,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "continuity_diagnostic"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "continuity_diagnostic",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "14a16d57420af88139eeb82639618c389fdf21dcd2e591b9b97c7421ac97e9d1",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-24220/logs/F-regression.txt",
+    "case_script_sha256": "586aaa8b9fe21236065a9240e27b1de9cbb0bd25e51385bbf900523fd00bd2fe",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-24220/scripts/F-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 24220,
+    "role": "negative",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.238,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "continuity_diagnostic"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "FAIL",
+        "id": "continuity_diagnostic",
+        "kind": "expression"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "93a90763abf3228b95106b910df74de0d10201f03f18aecc102302567e3645b1",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-24220/logs/negative-original.txt",
+    "case_script_sha256": "6b0e935b0962327587e3fb9683135a570d2cd69101c39f351cba9c6650cd9d1b",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-24220/scripts/negative-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 29038,
+    "role": "B",
+    "case": "original",
+    "status": "timeout",
+    "passed": false,
+    "elapsed_seconds": 12.431,
+    "peak_private_mb": 6.05,
+    "stop": "timeout",
+    "return_code": 1,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "reference_topology",
+      "reference_area"
+    ],
+    "observed_assertion_events": [],
+    "summary_pair_valid": false,
+    "log_sha256": "e8201c5f4db81d96dc18f5594cbac1c044dfa28caeeab622db78f421d26db132",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-29038/logs/B-original.txt",
+    "case_script_sha256": "5db9f1507e851c50932ce8cbf0334baa0e3fad5c7984410b3181af012a2a2252",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-29038/scripts/B-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 29038,
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.236,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "analytic_volume"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "analytic_volume",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "dba938ff9b1222076d03380407b4674fe91677657df4f7c00b3cff8513288cfa",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-29038/logs/B-regression.txt",
+    "case_script_sha256": "24e236e8bd54d4f084df80ee99f42e7f2072840093f33d0337b7bf9caa89f7c2",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-29038/scripts/B-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 29038,
+    "role": "F",
+    "case": "neighbor_reverse",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.458,
+    "peak_private_mb": 6.95,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "reference_topology",
+      "reference_area"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "reference_topology",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "reference_area",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "893e5efe88afdd0d027d4710f9ea9a93bc4083130d9f7ea5dfc99f8a096ba106",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-29038/logs/F-neighbor_reverse.txt",
+    "case_script_sha256": "98a980e70f3b5fd88f31fbf766b8dfd8dd5ea207bcdcad7a59191a092d03607d",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-29038/scripts/F-neighbor_reverse.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 29038,
+    "role": "F",
+    "case": "neighbor_shift",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.463,
+    "peak_private_mb": 6.84,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "reference_topology",
+      "reference_area"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "reference_topology",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "reference_area",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "1ad97f46e5c37cfa3d71407e3301f70583776b5e4aea3afae585269c8874fb12",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-29038/logs/F-neighbor_shift.txt",
+    "case_script_sha256": "76176fe5d950cc985c5eba7eac04f511d11ec0ae047c4d5446fd1d640b9f5969",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-29038/scripts/F-neighbor_shift.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 29038,
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.462,
+    "peak_private_mb": 6.95,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "reference_topology",
+      "reference_area"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "reference_topology",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "reference_area",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "893e5efe88afdd0d027d4710f9ea9a93bc4083130d9f7ea5dfc99f8a096ba106",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-29038/logs/F-original.txt",
+    "case_script_sha256": "5db9f1507e851c50932ce8cbf0334baa0e3fad5c7984410b3181af012a2a2252",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-29038/scripts/F-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 29038,
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.232,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "analytic_volume"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "analytic_volume",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "dba938ff9b1222076d03380407b4674fe91677657df4f7c00b3cff8513288cfa",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-29038/logs/F-regression.txt",
+    "case_script_sha256": "24e236e8bd54d4f084df80ee99f42e7f2072840093f33d0337b7bf9caa89f7c2",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-29038/scripts/F-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 29038,
+    "role": "negative",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.453,
+    "peak_private_mb": 6.75,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "reference_topology",
+      "reference_area"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "FAIL",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "reference_topology",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "reference_area",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "fb7b1ac71f0cda75a6da1b94570f1702706d0f80b5b14d64f4777d681387f530",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-29038/logs/negative-original.txt",
+    "case_script_sha256": "406a3c32b5f6e45deb8ce61f5a5b9377fb4d79e8b5a5255fae572f9f9ae43584",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-29038/scripts/negative-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 29038,
+    "role": "return_operand",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 0.445,
+    "peak_private_mb": 6.75,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "reference_topology",
+      "reference_area"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "reference_topology",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "reference_area",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "7f8d0884676fce9118b287fd72826c27b7f84396c87f733d73970639b0a0150b",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-29038/logs/return_operand-original.txt",
+    "case_script_sha256": "12f63f656dbd7e1f6be99effcd9a14296b87bf18a27e72dfa9e03c228ce812f0",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-29038/scripts/return_operand-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 30198,
+    "role": "B",
+    "case": "original",
+    "status": "memory_limit",
+    "passed": false,
+    "elapsed_seconds": 9.116,
+    "peak_private_mb": 1059.86,
+    "stop": "memory_limit",
+    "return_code": 1,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "topology",
+      "volume",
+      "surface_area"
+    ],
+    "observed_assertion_events": [],
+    "summary_pair_valid": false,
+    "log_sha256": "e8201c5f4db81d96dc18f5594cbac1c044dfa28caeeab622db78f421d26db132",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-30198/logs/B-original.txt",
+    "case_script_sha256": "c88c6c379e6dc0f863c5c1a74a15ec2f141f96bef8d4a6dc7e85b67f3d032c76",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-30198/scripts/B-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 30198,
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.231,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "analytic_volume"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "analytic_volume",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "dba938ff9b1222076d03380407b4674fe91677657df4f7c00b3cff8513288cfa",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-30198/logs/B-regression.txt",
+    "case_script_sha256": "48d8706bc6f7ccce71c443aec994cbf36367b3b48261de98349711dbe79378ec",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-30198/scripts/B-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 30198,
+    "role": "F",
+    "case": "neighbor_reverse",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 27.521,
+    "peak_private_mb": 77.97,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "topology",
+      "volume",
+      "surface_area"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "topology",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "volume",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "surface_area",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "b76a65af0dc77d0e2375462903671c9bd9f7c798549baf4ec0b5a8e5f9d6c344",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-30198/logs/F-neighbor_reverse.txt",
+    "case_script_sha256": "4d2bb2650926a5fb91e61949aad8a6f385cf7d218a1e42f75253a3d2ad440ffb",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-30198/scripts/F-neighbor_reverse.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 30198,
+    "role": "F",
+    "case": "neighbor_shift",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 27.944,
+    "peak_private_mb": 90.49,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "topology",
+      "volume",
+      "surface_area"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "topology",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "volume",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "surface_area",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "4f02fac5052841b19be9bab747aef22f7f7f91eaf73de1c5e0779cee113dde36",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-30198/logs/F-neighbor_shift.txt",
+    "case_script_sha256": "674155b63299259e2f00e6c0d0d9bdc33fb161391a6d65d31263a5370352fd71",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-30198/scripts/F-neighbor_shift.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 30198,
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 27.598,
+    "peak_private_mb": 76.14,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "topology",
+      "volume",
+      "surface_area"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "topology",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "volume",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "surface_area",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "3663435af058139f20f7c935c83fc28d5ef72cd9dfee2953723f5b9f9948e965",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-30198/logs/F-original.txt",
+    "case_script_sha256": "c88c6c379e6dc0f863c5c1a74a15ec2f141f96bef8d4a6dc7e85b67f3d032c76",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-30198/scripts/F-original.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 30198,
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "passed": true,
+    "elapsed_seconds": 0.238,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "analytic_volume"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "PASS",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "PASS",
+        "id": "analytic_volume",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "dba938ff9b1222076d03380407b4674fe91677657df4f7c00b3cff8513288cfa",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-30198/logs/F-regression.txt",
+    "case_script_sha256": "48d8706bc6f7ccce71c443aec994cbf36367b3b48261de98349711dbe79378ec",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-30198/scripts/F-regression.tcl",
+    "formal_admission": "not_run"
+  },
+  {
+    "issue": 30198,
+    "role": "negative",
+    "case": "original",
+    "status": "geometry_fail",
+    "passed": false,
+    "elapsed_seconds": 21.498,
+    "peak_private_mb": 79.24,
+    "stop": null,
+    "return_code": 0,
+    "expected_assertion_ids": [
+      "shape_valid",
+      "nonempty",
+      "topology",
+      "volume",
+      "surface_area"
+    ],
+    "observed_assertion_events": [
+      {
+        "status": "PASS",
+        "id": "shape_valid",
+        "kind": "expression"
+      },
+      {
+        "status": "FAIL",
+        "id": "nonempty",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "topology",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "volume",
+        "kind": "numeric"
+      },
+      {
+        "status": "FAIL",
+        "id": "surface_area",
+        "kind": "numeric"
+      }
+    ],
+    "summary_pair_valid": true,
+    "log_sha256": "61e6eec059838f594853279d08e722aaeb0cd4a71fb89c52d2bb8fd1ea8010dd",
+    "log": "research/occt-authoring-20261110/audit-v2/occt-30198/logs/negative-original.txt",
+    "case_script_sha256": "25c7eed62fa0de54736a59fe8be0cd1d67bb91c80e4890731591029b558404e6",
+    "output_parser_sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610",
+    "script": "research/occt-authoring-20261110/audit-v2/occt-30198/scripts/negative-original.tcl",
+    "formal_admission": "not_run"
+  }
+]

@@ -1,0 +1,73 @@
+=== FUSED ===
+This shape seems to be valid
+
+
+Mass :         2331.95
+
+Center of gravity : 
+X =             -85
+Y =      1.7465e-15
+Z =               0
+
+Matrix of Inertia : 
+         244770    -1.13459e-10               0
+   -1.13459e-10          815759               0
+              0               0     1.06053e+06
+
+Moments : 
+IX =     1.06053e+06
+IY =          815759
+IZ =          244770
+
+
+Number of shapes in fused
+ VERTEX    : 4
+ EDGE      : 6
+ WIRE      : 3
+ FACE      : 3
+ SHELL     : 1
+ SOLID     : 0
+ COMPSOLID : 0
+ COMPOUND  : 1
+ SHAPE     : 18
+
+=== COMMON ===
+This shape seems to be valid
+
+
+Mass :         181.325
+
+Center of gravity : 
+X =             -85
+Y =    -1.01714e-14
+Z =               0
+
+Matrix of Inertia : 
+        6557.31     5.11591e-12               0
+    5.11591e-12         1054.72               0
+              0               0         7612.03
+
+Moments : 
+IX =         7612.03
+IY =         6557.31
+IZ =         1054.72
+
+
+Number of shapes in common
+ VERTEX    : 3
+ EDGE      : 3
+ WIRE      : 1
+ FACE      : 1
+ SHELL     : 1
+ SOLID     : 0
+ COMPSOLID : 0
+ COMPOUND  : 1
+ SHAPE     : 10
+
+BENCH_ASSERT_PASS fuse_area observed=2331.95 expected=2331.949421280791 kind=numeric
+BENCH_ASSERT_PASS common_area observed=181.325 expected=181.3247015910439 kind=numeric
+BENCH_ASSERT_PASS area_conservation area_sum kind=numeric
+BENCH_ASSERT_PASS fuse_valid topology_check kind=expression
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=4 numeric_assertions=3
+TEST_DONE assertions=4 numeric_assertions=3

@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-23998-checks",
+  "version": "1",
+  "title": "23998 authoring geometry checks",
+  "source_ids": [
+    "oce013-authoring-b-5434272be3ee"
+  ],
+  "group_ids": [
+    "occt-single-23998"
+  ],
+  "checkpoints": [
+    {
+      "id": "23998-neighbor_rotate",
+      "issue_id": "occt-23998",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-23998/1/neighbor_rotate.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "shape_valid",
+          "one_edge",
+          "length",
+          "sampled_length",
+          "closed_curve",
+          "support_faces"
+        ],
+        "case_timeout_seconds": 90,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "The current stock public builder explicitly rejects OCCT 6.6. A validated OCE 0.13 toolchain/adapter is required before admission.",
+          "Sampled point-to-both-trimmed-face distances are checked locally; continuous intersection coverage and independent completeness remain unqualified."
+        ]
+      }
+    },
+    {
+      "id": "23998-neighbor_translate",
+      "issue_id": "occt-23998",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-23998/1/neighbor_translate.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "shape_valid",
+          "one_edge",
+          "length",
+          "sampled_length",
+          "closed_curve",
+          "support_faces"
+        ],
+        "case_timeout_seconds": 90,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "The current stock public builder explicitly rejects OCCT 6.6. A validated OCE 0.13 toolchain/adapter is required before admission.",
+          "Sampled point-to-both-trimmed-face distances are checked locally; continuous intersection coverage and independent completeness remain unqualified."
+        ]
+      }
+    },
+    {
+      "id": "23998-original",
+      "issue_id": "occt-23998",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-23998/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "shape_valid",
+          "one_edge",
+          "length",
+          "sampled_length",
+          "closed_curve",
+          "support_faces"
+        ],
+        "case_timeout_seconds": 90,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "The current stock public builder explicitly rejects OCCT 6.6. A validated OCE 0.13 toolchain/adapter is required before admission.",
+          "Sampled point-to-both-trimmed-face distances are checked locally; continuous intersection coverage and independent completeness remain unqualified."
+        ]
+      }
+    },
+    {
+      "id": "23998-regression",
+      "issue_id": "occt-23998",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-23998/1/regression.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "shape_valid",
+          "one_edge",
+          "length",
+          "support_faces"
+        ],
+        "case_timeout_seconds": 90,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "The current stock public builder explicitly rejects OCCT 6.6. A validated OCE 0.13 toolchain/adapter is required before admission.",
+          "Sampled point-to-both-trimmed-face distances are checked locally; continuous intersection coverage and independent completeness remain unqualified."
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/authoring-20261110/oracle_helpers.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "issues/occt-23998/1/public/inputs/bug23998_draw.brep"
+  ]
+}

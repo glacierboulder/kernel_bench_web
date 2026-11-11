@@ -1,0 +1,37 @@
+{
+  "archive_sha256": "832acaad781df7098c3abb8dee0ba26f7cedd9788776be2839838c4a7cdfa2b9",
+  "archive_commit_comment": "7a8128711e768f5b72fd9c4e68ad1893aa0db61f",
+  "import_commit": "a1762cc8734e9cd1af01859bebb8906ed9133f79",
+  "description": "Locally imported source export; not an upstream Git history claim.",
+  "derivation": "OCE 0.17 + documented compiler compatibility - 25337 repair",
+  "changed_files": [
+    "src/BOPAlgo/BOPAlgo_Builder_3.cxx",
+    "src/BOPDS/BOPDS_DS.cxx",
+    "src/BOPDS/BOPDS_PaveBlock.cxx",
+    "src/Font/Font_BRepFont.cxx",
+    "src/GeomFill/GeomFill_Frenet.cxx",
+    "src/IntTools/IntTools_EdgeEdge.cxx",
+    "src/IntTools/IntTools_FaceFace.cxx",
+    "src/NCollection/NCollection_WinHeapAllocator.cxx",
+    "src/TopOpeBRepTool/TopOpeBRepTool_TOOL.cxx"
+  ],
+  "source_id": "oce017-authoring-25337-b-7143cbcfc6c8",
+  "commit": "7143cbcfc6c8b9497abbaa79fbcc12f6e693c2bd",
+  "materialized_tree_sha256": "1f01160d99ea2cc4f77f8b23d04e66f263178bb56ca4a54a9df56f4e6cf84f6c",
+  "upstream_url": "https://github.com/tpaviot/oce.git",
+  "verification_status": "verified_git",
+  "issues": [
+    25337
+  ],
+  "external_bundle": {
+    "filename": "oce017.bundle",
+    "sha256": "e68e66b0be65e8c83554a345b806efb54518ca6f3ee846613d4bb1435078f906"
+  },
+  "schema_version": 1,
+  "kind": "derived_local_git_source",
+  "natural_upstream_commit": false,
+  "tree_hash_method": "agent-bench-tree-sha256-v1 applied to canonical git archive paths, bytes and executable modes",
+  "linux_source_cache_import_verified": false,
+  "linux_build_verified": false,
+  "source_archive_policy": "Git bundles remain outside the repository; use external_bundle SHA256 to verify the separately supplied source object archive."
+}

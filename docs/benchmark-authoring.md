@@ -358,3 +358,8 @@ reevaluate 对 patch 文件要求显式 source-id，并将结果作为独立 eva
 旧五组和 v4 十题已统一到框架维护的适配器。后续新题只增加题面、检查点、输入及依赖；使用 `runner_options.expected_assertion_ids` 声明严格断言契约，不再复制评测适配器。见 [共用 OCCT 运行基础设施与新题格式](unified-occt-runtime.md)。
 
 B55组的d308原始检查点已增加独立新版；旧历史容差区间只作诊断，完整覆盖参考未取得资格前记为INCONCLUSIVE。旧suite和历史成绩保留，详见 [Issue #1修订说明](issues/issue-1-d308.md)。
+
+
+## 2026-11-10 作者候选材料全面复核
+
+新增的八道作者候选位于既有 issue/group/suite 目录结构中，但**未加入默认 catalog 或默认 source lock**，不自动上架、不默认排队。候选引用集中在 `benchmarks/occt/evaluation/provenance/authoring-20261110/candidate-registration.json`（相对项目根目录）。默认题库身份和计数保持不变。候选仍需构建适配、Linux 冻结重放、几何覆盖和资源标定。详见项目根目录下 `research/occt-authoring-20261110/audit-v2/全面核查报告.md`。

@@ -1,0 +1,234 @@
+[
+  {
+    "role": "B",
+    "case": "original",
+    "returncode": 2,
+    "elapsed_s": 0.222,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "logs/B_original.txt",
+    "status": "algorithm_exception",
+    "checks": {
+      "complete": false
+    }
+  },
+  {
+    "role": "B",
+    "case": "neighbor_shift",
+    "returncode": 2,
+    "elapsed_s": 0.221,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "logs/B_neighbor_shift.txt",
+    "status": "algorithm_exception",
+    "checks": {
+      "complete": false
+    }
+  },
+  {
+    "role": "B",
+    "case": "neighbor_rotate",
+    "returncode": 2,
+    "elapsed_s": 0.226,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "logs/B_neighbor_rotate.txt",
+    "status": "algorithm_exception",
+    "checks": {
+      "complete": false
+    }
+  },
+  {
+    "role": "B",
+    "case": "regression",
+    "returncode": 0,
+    "elapsed_s": 0.222,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "logs/B_regression.txt",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "one_curve": true,
+      "line_type": true,
+      "plane_residuals": true,
+      "distinct_samples": true
+    },
+    "values": {
+      "points": [
+        [
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0,
+          0.0
+        ]
+      ]
+    }
+  },
+  {
+    "role": "F",
+    "case": "original",
+    "returncode": 0,
+    "elapsed_s": 0.227,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "logs/F_original.txt",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "one_curve": true,
+      "line_type": true,
+      "plane_residuals": true,
+      "distinct_samples": true
+    },
+    "values": {
+      "points": [
+        [
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0,
+          0.0
+        ]
+      ]
+    }
+  },
+  {
+    "role": "F",
+    "case": "neighbor_shift",
+    "returncode": 0,
+    "elapsed_s": 0.228,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "logs/F_neighbor_shift.txt",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "one_curve": true,
+      "line_type": true,
+      "plane_residuals": true,
+      "distinct_samples": true
+    },
+    "values": {
+      "points": [
+        [
+          3.0,
+          -2.0,
+          5.0
+        ],
+        [
+          3.0,
+          0.0,
+          5.0
+        ],
+        [
+          3.0,
+          2.0,
+          5.0
+        ]
+      ]
+    }
+  },
+  {
+    "role": "F",
+    "case": "neighbor_rotate",
+    "returncode": 0,
+    "elapsed_s": 0.227,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "logs/F_neighbor_rotate.txt",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "one_curve": true,
+      "line_type": true,
+      "plane_residuals": true,
+      "distinct_samples": true
+    },
+    "values": {
+      "points": [
+        [
+          2.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -2.0,
+          0.0,
+          0.0
+        ]
+      ]
+    }
+  },
+  {
+    "role": "F",
+    "case": "regression",
+    "returncode": 0,
+    "elapsed_s": 0.228,
+    "peak_private_mb": 0.0,
+    "stop": null,
+    "log": "logs/F_regression.txt",
+    "status": "pass",
+    "checks": {
+      "complete": true,
+      "one_curve": true,
+      "line_type": true,
+      "plane_residuals": true,
+      "distinct_samples": true
+    },
+    "values": {
+      "points": [
+        [
+          0.0,
+          -2.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0,
+          0.0
+        ]
+      ]
+    }
+  },
+  {
+    "role": "negative_output_injection",
+    "case": "original",
+    "status": "assertion_fail",
+    "checks": {
+      "complete": true,
+      "one_curve": true,
+      "line_type": true,
+      "plane_residuals": false,
+      "distinct_samples": false
+    },
+    "clean_status": "pass"
+  }
+]

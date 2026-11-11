@@ -1,0 +1,40 @@
+This shape seems to be valid
+Number of shapes in result
+ VERTEX    : 4
+ EDGE      : 2
+ WIRE      : 0
+ FACE      : 0
+ SHELL     : 0
+ SOLID     : 0
+ COMPSOLID : 0
+ COMPOUND  : 1
+ SHAPE     : 7
+
+
+
+Mass :            2000
+
+Center of gravity : 
+X =         10494.6
+Y =           10103
+Z =            9967
+
+Matrix of Inertia : 
+    1.98343e+07    -5.35656e+07     1.86265e-08
+   -5.35656e+07     1.47508e+08     5.58794e-09
+    1.86265e-08     5.58794e-09     1.66667e+08
+
+Moments : 
+IX =     1.67005e+08
+IY =     1.66667e+08
+IZ =          338000
+
+
+BENCH_ASSERT_PASS shape_valid topology_check kind=expression
+BENCH_ASSERT_PASS edge_count expected_edges=2 kind=numeric
+BENCH_ASSERT_PASS section_length length=2000 expected=2000 kind=numeric
+BENCH_ASSERT_FAIL support_faces samples=84 worst_distance=17319.271037748782 limit=1e-5 kind=numeric
+BENCH_ASSERT_PASS distinct_branches two_spatially_distinct_branches kind=numeric
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=5 numeric_assertions=4
+TEST_DONE assertions=5 numeric_assertions=4

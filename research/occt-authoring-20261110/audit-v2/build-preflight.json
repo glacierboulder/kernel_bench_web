@@ -1,0 +1,70 @@
+[
+  {
+    "source_id": "oce013-authoring-b-5434272be3ee",
+    "issues": [
+      23933,
+      23981,
+      23985,
+      23998,
+      24220
+    ],
+    "detected_version": [
+      6,
+      6
+    ],
+    "source_family": "OCE",
+    "reason": "stock_builder_rejects_6_6_before_configure",
+    "error": "unsupported OCCT version 6.6; expected 6.8, 6.9, 7.x, or 8.x",
+    "actual_configure_or_build_run": false,
+    "mock_configure_called": false,
+    "can_be_promoted": false
+  },
+  {
+    "source_id": "oce017-authoring-25337-b-7143cbcfc6c8",
+    "issues": [
+      25337
+    ],
+    "detected_version": [
+      6,
+      8
+    ],
+    "source_family": "OCE",
+    "reason": "OCE_DRAW_defaults_OFF_but_stock_command_has_no_OCE_DRAW_ON",
+    "error": null,
+    "actual_configure_or_build_run": false,
+    "mock_configure_called": true,
+    "can_be_promoted": false
+  },
+  {
+    "source_id": "occt75-authoring-29038-b-fbd34ff9a39d",
+    "issues": [
+      29038
+    ],
+    "detected_version": [
+      7,
+      5
+    ],
+    "source_family": "OCCT",
+    "reason": "version_dispatch_recognized_only_actual_build_not_run",
+    "error": null,
+    "actual_configure_or_build_run": false,
+    "mock_configure_called": true,
+    "can_be_promoted": false
+  },
+  {
+    "source_id": "occt75-authoring-30198-b-1af5f6930e39",
+    "issues": [
+      30198
+    ],
+    "detected_version": [
+      7,
+      5
+    ],
+    "source_family": "OCCT",
+    "reason": "version_dispatch_recognized_only_actual_build_not_run",
+    "error": null,
+    "actual_configure_or_build_run": false,
+    "mock_configure_called": true,
+    "can_be_promoted": false
+  }
+]

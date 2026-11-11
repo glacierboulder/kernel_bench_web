@@ -1,0 +1,298 @@
+[
+  {
+    "role": "B",
+    "case": "original",
+    "status": "geometry_fail",
+    "measurements": [
+      {
+        "pair": "i_1/s1",
+        "samples": 100,
+        "maximum": 88.3884,
+        "tolerance": 1e-05,
+        "passed": false
+      },
+      {
+        "pair": "i_1/s2",
+        "samples": 100,
+        "maximum": 1.43644e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_2/s1",
+        "samples": 100,
+        "maximum": 88.3884,
+        "tolerance": 1e-05,
+        "passed": false
+      },
+      {
+        "pair": "i_2/s2",
+        "samples": 100,
+        "maximum": 1.43644e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      }
+    ],
+    "returncode": 0
+  },
+  {
+    "role": "B",
+    "case": "neighbor_translate",
+    "status": "geometry_fail",
+    "measurements": [
+      {
+        "pair": "i_1/s1",
+        "samples": 100,
+        "maximum": 88.3884,
+        "tolerance": 1e-05,
+        "passed": false
+      },
+      {
+        "pair": "i_1/s2",
+        "samples": 100,
+        "maximum": 1.43644e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_2/s1",
+        "samples": 100,
+        "maximum": 88.3884,
+        "tolerance": 1e-05,
+        "passed": false
+      },
+      {
+        "pair": "i_2/s2",
+        "samples": 100,
+        "maximum": 1.43644e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      }
+    ],
+    "returncode": 0
+  },
+  {
+    "role": "B",
+    "case": "neighbor_rotate",
+    "status": "geometry_fail",
+    "measurements": [
+      {
+        "pair": "i_1/s1",
+        "samples": 100,
+        "maximum": 88.3884,
+        "tolerance": 1e-05,
+        "passed": false
+      },
+      {
+        "pair": "i_1/s2",
+        "samples": 100,
+        "maximum": 1.43644e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_2/s1",
+        "samples": 100,
+        "maximum": 88.3884,
+        "tolerance": 1e-05,
+        "passed": false
+      },
+      {
+        "pair": "i_2/s2",
+        "samples": 100,
+        "maximum": 1.43644e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      }
+    ],
+    "returncode": 0
+  },
+  {
+    "role": "B",
+    "case": "regression",
+    "status": "geometry_pass",
+    "measurements": [
+      {
+        "pair": "i/s1",
+        "samples": 100,
+        "maximum": 0.0,
+        "tolerance": 1e-07,
+        "passed": true
+      },
+      {
+        "pair": "i/s2",
+        "samples": 100,
+        "maximum": 0.0,
+        "tolerance": 1e-07,
+        "passed": true
+      }
+    ],
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "original",
+    "status": "geometry_pass",
+    "measurements": [
+      {
+        "pair": "i_1/s1",
+        "samples": 100,
+        "maximum": 3.39781e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_1/s2",
+        "samples": 100,
+        "maximum": 2.52118e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_2/s1",
+        "samples": 100,
+        "maximum": 3.39781e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_2/s2",
+        "samples": 100,
+        "maximum": 2.52118e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      }
+    ],
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "neighbor_translate",
+    "status": "geometry_pass",
+    "measurements": [
+      {
+        "pair": "i_1/s1",
+        "samples": 100,
+        "maximum": 3.39781e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_1/s2",
+        "samples": 100,
+        "maximum": 2.52118e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_2/s1",
+        "samples": 100,
+        "maximum": 3.39781e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_2/s2",
+        "samples": 100,
+        "maximum": 2.52118e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      }
+    ],
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "neighbor_rotate",
+    "status": "geometry_pass",
+    "measurements": [
+      {
+        "pair": "i_1/s1",
+        "samples": 100,
+        "maximum": 3.39781e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_1/s2",
+        "samples": 100,
+        "maximum": 2.52118e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_2/s1",
+        "samples": 100,
+        "maximum": 3.39781e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_2/s2",
+        "samples": 100,
+        "maximum": 2.52118e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      }
+    ],
+    "returncode": 0
+  },
+  {
+    "role": "F",
+    "case": "regression",
+    "status": "geometry_pass",
+    "measurements": [
+      {
+        "pair": "i/s1",
+        "samples": 100,
+        "maximum": 0.0,
+        "tolerance": 1e-07,
+        "passed": true
+      },
+      {
+        "pair": "i/s2",
+        "samples": 100,
+        "maximum": 0.0,
+        "tolerance": 1e-07,
+        "passed": true
+      }
+    ],
+    "returncode": 0
+  },
+  {
+    "role": "negative_bad_curve",
+    "case": "original",
+    "status": "geometry_fail",
+    "measurements": [
+      {
+        "pair": "i_1/s1",
+        "samples": 100,
+        "maximum": 613.133,
+        "tolerance": 1e-05,
+        "passed": false
+      },
+      {
+        "pair": "i_1/s2",
+        "samples": 100,
+        "maximum": 657.546,
+        "tolerance": 1e-05,
+        "passed": false
+      },
+      {
+        "pair": "i_2/s1",
+        "samples": 100,
+        "maximum": 3.39781e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      },
+      {
+        "pair": "i_2/s2",
+        "samples": 100,
+        "maximum": 2.52118e-06,
+        "tolerance": 1e-05,
+        "passed": true
+      }
+    ],
+    "returncode": 0
+  }
+]

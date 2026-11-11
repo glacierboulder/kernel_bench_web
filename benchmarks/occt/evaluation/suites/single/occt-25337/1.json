@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-25337-checks",
+  "version": "1",
+  "title": "25337 authoring geometry checks",
+  "source_ids": [
+    "oce017-authoring-25337-b-7143cbcfc6c8"
+  ],
+  "group_ids": [
+    "occt-single-25337"
+  ],
+  "checkpoints": [
+    {
+      "id": "25337-neighbor_scale",
+      "issue_id": "occt-25337",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-25337/1/neighbor_scale.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "fuse_area",
+          "common_area",
+          "area_conservation",
+          "fuse_valid"
+        ],
+        "case_timeout_seconds": 90,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "The stock public builder does not enable OCE_DRAW, which defaults OFF in this OCE source. Actual DRAW build/output validation is required."
+        ]
+      }
+    },
+    {
+      "id": "25337-neighbor_translate",
+      "issue_id": "occt-25337",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-25337/1/neighbor_translate.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "fuse_area",
+          "common_area",
+          "area_conservation",
+          "fuse_valid"
+        ],
+        "case_timeout_seconds": 90,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "The stock public builder does not enable OCE_DRAW, which defaults OFF in this OCE source. Actual DRAW build/output validation is required."
+        ]
+      }
+    },
+    {
+      "id": "25337-original",
+      "issue_id": "occt-25337",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-25337/1/original.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "fuse_area",
+          "common_area",
+          "area_conservation",
+          "fuse_valid"
+        ],
+        "case_timeout_seconds": 90,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "The stock public builder does not enable OCE_DRAW, which defaults OFF in this OCE source. Actual DRAW build/output validation is required."
+        ]
+      }
+    },
+    {
+      "id": "25337-regression",
+      "issue_id": "occt-25337",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-25337/1/regression.tcl",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "fuse_area",
+          "common_area",
+          "area_conservation",
+          "fuse_valid"
+        ],
+        "case_timeout_seconds": 90,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "The stock public builder does not enable OCE_DRAW, which defaults OFF in this OCE source. Actual DRAW build/output validation is required."
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/authoring-20261110/oracle_helpers.tcl",
+    "evaluation/cases/single20/assertions.tcl"
+  ]
+}

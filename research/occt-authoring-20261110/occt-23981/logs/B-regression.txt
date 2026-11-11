@@ -1,0 +1,6 @@
+BENCH_ASSERT_PASS line_exists branch_presence kind=numeric
+BENCH_ASSERT_PASS i_s1 analytic_support_samples=100 max_distance=0.0 limit=1e-7 kind=numeric
+BENCH_ASSERT_PASS i_s2 analytic_support_samples=100 max_distance=0.0 limit=1e-7 kind=numeric
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=3 numeric_assertions=3
+TEST_DONE assertions=3 numeric_assertions=3

@@ -1,0 +1,61 @@
+DRAW is running in batch mode
+=== OCCT 30198 public reproduction ===
+OPERATION_STARTED
+===RESULT===
+This shape seems to be valid
+Number of shapes in result
+ VERTEX    : 231
+ EDGE      : 374
+ WIRE      : 163
+ FACE      : 151
+ SHELL     : 1
+ SOLID     : 1
+ COMPSOLID : 0
+ COMPOUND  : 1
+ SHAPE     : 922
+
+
+
+Mass :         62.6127
+
+Relative error of mass computation :      2.9956e-06
+
+Center of gravity : 
+X =          10.371
+Y =     1.98811e-08
+Z =     -0.00674341
+
+Matrix of Inertia : 
+        108.554    -3.89555e-06         1.73255
+   -3.89555e-06         839.415        0.035497
+        1.73255        0.035497         928.786
+
+Moments : 
+IX =          928.79
+IY =         839.415
+IZ =         108.551
+
+
+
+
+Mass :         216.217
+
+Relative error of mass computation :     2.98573e-06
+
+Center of gravity : 
+X =         11.2392
+Y =     9.01572e-08
+Z =       0.0676101
+
+Matrix of Inertia : 
+        1217.25     -8.1464e-05        -39.4601
+    -8.1464e-05         3531.74          2.3872
+       -39.4601          2.3872         4621.14
+
+Moments : 
+IX =          4621.6
+IY =         3531.74
+IZ =         1216.79
+
+
+PUBLIC_REPRO_COMPLETE

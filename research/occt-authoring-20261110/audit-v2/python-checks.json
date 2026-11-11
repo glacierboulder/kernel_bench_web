@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "name": "unit-tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*candidate_contract.py",
+        "-v"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "catalog-tests",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_catalog_contract.py",
+        "-v"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "active-catalog",
+      "command": [
+        "python",
+        "-m",
+        "backend.catalog",
+        "--root",
+        "benchmarks/occt",
+        "--json"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "candidate-contract",
+      "command": [
+        "python",
+        "scripts/experiments/validate_authoring_20261110.py"
+      ],
+      "returncode": 0
+    }
+  ],
+  "note": "PYTHONUTF8=1 used on Windows. An earlier run without this setting failed on GBK decoding; no source test was weakened. Only these tests were run; Linux runtime/sandbox modules remain untested."
+}

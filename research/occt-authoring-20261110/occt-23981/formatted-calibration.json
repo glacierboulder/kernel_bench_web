@@ -1,0 +1,414 @@
+{
+  "historical_results": [
+    {
+      "issue": 23981,
+      "role": "B",
+      "case": "neighbor_rotate",
+      "status": "geometry_fail",
+      "passed": false,
+      "elapsed_seconds": 0.248,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "two_curves",
+        "i_1_s1",
+        "i_1_s2",
+        "i_2_s1",
+        "i_2_s2"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "two_curves",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "i_1_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_1_s2",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "i_2_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_2_s2",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "5ca1ccac2a30953f3709909df49e969531740f704f5ed8417c8f2d07a2b9c49d",
+      "log": "logs/B-neighbor_rotate.txt"
+    },
+    {
+      "issue": 23981,
+      "role": "B",
+      "case": "neighbor_translate",
+      "status": "geometry_fail",
+      "passed": false,
+      "elapsed_seconds": 0.44,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "two_curves",
+        "i_1_s1",
+        "i_1_s2",
+        "i_2_s1",
+        "i_2_s2"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "two_curves",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "i_1_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_1_s2",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "i_2_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_2_s2",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "49b1f3dfe0a2095c403e75ac7d5a853d27af55375e96ad76c7c68c2356d941ce",
+      "log": "logs/B-neighbor_translate.txt"
+    },
+    {
+      "issue": 23981,
+      "role": "B",
+      "case": "original",
+      "status": "geometry_fail",
+      "passed": false,
+      "elapsed_seconds": 0.227,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "two_curves",
+        "i_1_s1",
+        "i_1_s2",
+        "i_2_s1",
+        "i_2_s2"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "two_curves",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "i_1_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_1_s2",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "i_2_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_2_s2",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "39a6225be1ea1006563dfdf44def08641b5b23694e717d4672422cde421d54ef",
+      "log": "logs/B-original.txt"
+    },
+    {
+      "issue": 23981,
+      "role": "B",
+      "case": "regression",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.226,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "line_exists",
+        "i_s1",
+        "i_s2"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "line_exists",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_s2",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "557cfc2612d926869c12737423283c11bfe683668293730d29df0248f454b57d",
+      "log": "logs/B-regression.txt"
+    },
+    {
+      "issue": 23981,
+      "role": "F",
+      "case": "neighbor_rotate",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.224,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "two_curves",
+        "i_1_s1",
+        "i_1_s2",
+        "i_2_s1",
+        "i_2_s2"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "two_curves",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_1_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_1_s2",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_2_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_2_s2",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "6e933cea3948beb2b52e35590bbcf941ddbe71aae8a6e8824dfd3c7a31882094",
+      "log": "logs/F-neighbor_rotate.txt"
+    },
+    {
+      "issue": 23981,
+      "role": "F",
+      "case": "neighbor_translate",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.225,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "two_curves",
+        "i_1_s1",
+        "i_1_s2",
+        "i_2_s1",
+        "i_2_s2"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "two_curves",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_1_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_1_s2",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_2_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_2_s2",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "156510e706d15b0f83c40f7e11780b08d5a1dbe15903ad136dfa3631d1bb57be",
+      "log": "logs/F-neighbor_translate.txt"
+    },
+    {
+      "issue": 23981,
+      "role": "F",
+      "case": "original",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.229,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "two_curves",
+        "i_1_s1",
+        "i_1_s2",
+        "i_2_s1",
+        "i_2_s2"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "two_curves",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_1_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_1_s2",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_2_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_2_s2",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "182a603cc9dcbb5b2cee4c9752d6bafdc7e88302efe95a24a1e922236f9d486f",
+      "log": "logs/F-original.txt"
+    },
+    {
+      "issue": 23981,
+      "role": "F",
+      "case": "regression",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.224,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "line_exists",
+        "i_s1",
+        "i_s2"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "line_exists",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_s2",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "557cfc2612d926869c12737423283c11bfe683668293730d29df0248f454b57d",
+      "log": "logs/F-regression.txt"
+    },
+    {
+      "issue": 23981,
+      "role": "negative",
+      "case": "original",
+      "status": "geometry_fail",
+      "passed": false,
+      "elapsed_seconds": 0.222,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "two_curves",
+        "i_1_s1",
+        "i_1_s2",
+        "i_2_s1",
+        "i_2_s2"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "two_curves",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "i_1_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "i_1_s2",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_2_s1",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "i_2_s2",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "3a3bf3815a1a2311f17ff4d440cd8b4328af75c0bf4fd500d62dc78ef635f2ff",
+      "log": "logs/negative-original.txt"
+    }
+  ],
+  "superseded_by": "research/occt-authoring-20261110/audit-v2/native-replay.json",
+  "authoritative_current_admission": false
+}

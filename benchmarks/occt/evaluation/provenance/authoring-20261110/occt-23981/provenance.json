@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "issue_id": "occt-23981",
+  "date": "2026-11-10",
+  "repository_base_commit": "7c28d6089a2389dd4788e425f773bcfadb442491",
+  "status": "candidate_only_not_registered_formal_admission_not_run",
+  "source_id": "oce013-authoring-b-5434272be3ee",
+  "inputs": [
+    {
+      "name": "bug23981_s1.draw",
+      "raw_sha256": "d19ac6d1ef42ee2a933aa743f52cc0fd1556b73633c13cc7550fe24b5ad25381",
+      "material_sha256": "d19ac6d1ef42ee2a933aa743f52cc0fd1556b73633c13cc7550fe24b5ad25381",
+      "adapter": "none"
+    },
+    {
+      "name": "bug23981_s2.draw",
+      "raw_sha256": "6674bdf77b70b596ee9292e6a58ff0e24d0dd60cf45939a9e059739145f7859e",
+      "material_sha256": "6674bdf77b70b596ee9292e6a58ff0e24d0dd60cf45939a9e059739145f7859e",
+      "adapter": "none"
+    }
+  ],
+  "reference_patch": "reference.patch",
+  "reference_patch_sha256": "cf893830b1edd9bf162fa1549301ac5af45825fde5defb248f7ce8cf05c9bf07",
+  "upstream_url": "https://occt3d.com/dev/tickets/0023981/",
+  "calibration_record": "research/occt-authoring-20261110/audit-v2/native-replay.json",
+  "negative_control": "Geometric/diagnostic result substitution inside an author-only Tcl copy; not a C++ source patch experiment.",
+  "oracle_note": "Analytic distance to the frozen trimmed cylindrical supports, independently derived from input cylinder frames. Original xdistcs output was C stdout and could not be captured by Tcl on the old Windows runtime. Same 100 samples and 1e-5/1e-7 thresholds retained.",
+  "audit_report": "research/occt-authoring-20261110/audit-v2/全面核查报告.md",
+  "material_hashes": {
+    "statement.md": "aee08b9a1f782490dd2d6d8384ee04c917934b30d7b3d6f5cc1e9ecedfada7c2",
+    "public/reproduce.tcl": "8028d29d3968d6004cabb62b5d6f1c4a79727ca54dfcc1ef4eb16529162fe1a1",
+    "public/inputs/bug23981_s1.draw": "d19ac6d1ef42ee2a933aa743f52cc0fd1556b73633c13cc7550fe24b5ad25381",
+    "public/inputs/bug23981_s2.draw": "6674bdf77b70b596ee9292e6a58ff0e24d0dd60cf45939a9e059739145f7859e"
+  },
+  "evidence_limits": [
+    "Native binaries were measured and identified by hash, but this audit did not rebuild them from the declared derived Git commits.",
+    "Static Git patch application is distinct from a real source-cache/build/sandbox replay.",
+    "Author-only Tcl result substitutions test oracle sensitivity; they are not compiled C++ negative patches."
+  ]
+}

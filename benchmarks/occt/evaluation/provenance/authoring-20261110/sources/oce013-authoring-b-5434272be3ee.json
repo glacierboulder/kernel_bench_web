@@ -1,0 +1,30 @@
+{
+  "archive_sha256": "410106e70d3b8a79c329a55496566b4d8092f4a92d54a3519a38b2e721ae5666",
+  "archive_commit_comment": "b1f7aeb11b393815c081258c6bba2b04d08fbc1b",
+  "import_commit": "be2d7d2901ecee5accf180bbb194e62949ddc884",
+  "description": "Locally imported source export; not an upstream Git history claim.",
+  "derivation": "OCE 0.13 source archive plus MSVC va_start compatibility; same algorithmic B for five tasks.",
+  "source_id": "oce013-authoring-b-5434272be3ee",
+  "commit": "5434272be3eecaf06f0921f8fa4f1a6df7672033",
+  "materialized_tree_sha256": "f87a2533d98b8816ac2820b9ba0e4a2eb791c1467ef422c41348c1fe3d2ad6ec",
+  "upstream_url": "https://github.com/tpaviot/oce.git",
+  "verification_status": "verified_git",
+  "issues": [
+    23933,
+    23981,
+    23985,
+    23998,
+    24220
+  ],
+  "external_bundle": {
+    "filename": "oce013.bundle",
+    "sha256": "62e4e489295d71926cd5a6659be491256c307f0999341544cc926ee370e63132"
+  },
+  "schema_version": 1,
+  "kind": "derived_local_git_source",
+  "natural_upstream_commit": false,
+  "tree_hash_method": "agent-bench-tree-sha256-v1 applied to canonical git archive paths, bytes and executable modes",
+  "linux_source_cache_import_verified": false,
+  "linux_build_verified": false,
+  "source_archive_policy": "Git bundles remain outside the repository; use external_bundle SHA256 to verify the separately supplied source object archive."
+}

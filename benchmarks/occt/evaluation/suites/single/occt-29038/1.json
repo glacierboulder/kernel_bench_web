@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-29038-checks",
+  "version": "1",
+  "title": "29038 authoring geometry checks",
+  "source_ids": [
+    "occt75-authoring-29038-b-fbd34ff9a39d"
+  ],
+  "group_ids": [
+    "occt-single-29038"
+  ],
+  "checkpoints": [
+    {
+      "id": "29038-neighbor_reverse",
+      "issue_id": "occt-29038",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-29038/1/neighbor_reverse.tcl",
+      "timeout_seconds": 12,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "shape_valid",
+          "nonempty",
+          "reference_topology",
+          "reference_area"
+        ],
+        "case_timeout_seconds": 12,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "Official CPU, wall-time and memory limits must be calibrated in the deployed Linux resource runner.",
+          "Open-face union semantics remain unresolved: adaptive input area sum differs from fuse area while computed common area is zero. Reference topology/area alone cannot grant PASS."
+        ]
+      }
+    },
+    {
+      "id": "29038-neighbor_shift",
+      "issue_id": "occt-29038",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-29038/1/neighbor_shift.tcl",
+      "timeout_seconds": 12,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "shape_valid",
+          "nonempty",
+          "reference_topology",
+          "reference_area"
+        ],
+        "case_timeout_seconds": 12,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "Official CPU, wall-time and memory limits must be calibrated in the deployed Linux resource runner.",
+          "Open-face union semantics remain unresolved: adaptive input area sum differs from fuse area while computed common area is zero. Reference topology/area alone cannot grant PASS."
+        ]
+      }
+    },
+    {
+      "id": "29038-original",
+      "issue_id": "occt-29038",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-29038/1/original.tcl",
+      "timeout_seconds": 12,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "shape_valid",
+          "nonempty",
+          "reference_topology",
+          "reference_area"
+        ],
+        "case_timeout_seconds": 12,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "Official CPU, wall-time and memory limits must be calibrated in the deployed Linux resource runner.",
+          "Open-face union semantics remain unresolved: adaptive input area sum differs from fuse area while computed common area is zero. Reference topology/area alone cannot grant PASS."
+        ]
+      }
+    },
+    {
+      "id": "29038-regression",
+      "issue_id": "occt-29038",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-20261110/occt-29038/1/regression.tcl",
+      "timeout_seconds": 12,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "shape_valid",
+          "nonempty",
+          "analytic_volume"
+        ],
+        "case_timeout_seconds": 12,
+        "pending_requirements": [
+          "Formal Linux source-cache import, exact-source build, output-layout verification and frozen B/F sandbox replay have not been run.",
+          "Official CPU, wall-time and memory limits must be calibrated in the deployed Linux resource runner.",
+          "Open-face union semantics remain unresolved: adaptive input area sum differs from fuse area while computed common area is zero. Reference topology/area alone cannot grant PASS."
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/authoring-20261110/oracle_helpers.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "issues/occt-29038/1/public/inputs/bug29038_bfuse_hang.brep"
+  ]
+}

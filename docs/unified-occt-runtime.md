@@ -101,3 +101,8 @@ python scripts/experiments/validate_occt_bundle_routes.py
 历史解析器使用各自原有的版本自举流程，避免给它们强行加载另一版本Tcl的标准脚本。新标准题使用同一个共用DRAW运行器，不需要按题目补初始化代码。
 
 `runner_options.pending_requirements` 可列出尚未完成资格校准的必需规则。框架允许已确认的几何违例返回失败，但在这些条件未解除前不授予通过；详情见 [d308检查点修订](issues/issue-1-d308.md)。
+
+
+## 2026-11-10 作者候选材料全面复核
+
+新增的八道作者候选位于既有 issue/group/suite 目录结构中，但**未加入默认 catalog 或默认 source lock**，不自动上架、不默认排队。候选引用集中在 `benchmarks/occt/evaluation/provenance/authoring-20261110/candidate-registration.json`（相对项目根目录）。默认题库身份和计数保持不变。候选仍需构建适配、Linux 冻结重放、几何覆盖和资源标定。详见项目根目录下 `research/occt-authoring-20261110/audit-v2/全面核查报告.md`。

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-24220",
+  "version": "1",
+  "title": "待准入 · OCCT 24220 · C0 形状被布尔输入检查器错误放行",
+  "kind": "single",
+  "source_id": "oce013-authoring-b-5434272be3ee",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-24220",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-24220-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

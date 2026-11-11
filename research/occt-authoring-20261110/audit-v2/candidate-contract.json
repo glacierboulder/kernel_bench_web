@@ -1,0 +1,93 @@
+{
+  "ok": true,
+  "tasks": 8,
+  "routes": 32,
+  "builds_run": 0,
+  "model_calls": 0,
+  "linux_sandbox_runs": 0,
+  "registration_performed": false,
+  "active_catalog_counts": {
+    "issues": 54,
+    "groups": 54,
+    "evaluation_suites": 55
+  },
+  "candidate_review_counts": {
+    "issues": 62,
+    "groups": 62,
+    "evaluation_suites": 63
+  },
+  "results": [
+    {
+      "issue": 23933,
+      "frozen_routes": 4,
+      "support_files": 4,
+      "tampered_case_rejected": true,
+      "pending_blocks_formal_pass": true,
+      "public_inputs_present_in_private_bundle": true,
+      "public_material_flattening_checked": true
+    },
+    {
+      "issue": 23981,
+      "frozen_routes": 4,
+      "support_files": 8,
+      "tampered_case_rejected": true,
+      "pending_blocks_formal_pass": true,
+      "public_inputs_present_in_private_bundle": true,
+      "public_material_flattening_checked": true
+    },
+    {
+      "issue": 23985,
+      "frozen_routes": 4,
+      "support_files": 4,
+      "tampered_case_rejected": true,
+      "pending_blocks_formal_pass": true,
+      "public_inputs_present_in_private_bundle": true,
+      "public_material_flattening_checked": true
+    },
+    {
+      "issue": 23998,
+      "frozen_routes": 4,
+      "support_files": 3,
+      "tampered_case_rejected": true,
+      "pending_blocks_formal_pass": true,
+      "public_inputs_present_in_private_bundle": true,
+      "public_material_flattening_checked": true
+    },
+    {
+      "issue": 25337,
+      "frozen_routes": 4,
+      "support_files": 2,
+      "tampered_case_rejected": true,
+      "pending_blocks_formal_pass": true,
+      "public_inputs_present_in_private_bundle": true,
+      "public_material_flattening_checked": true
+    },
+    {
+      "issue": 24220,
+      "frozen_routes": 4,
+      "support_files": 3,
+      "tampered_case_rejected": true,
+      "pending_blocks_formal_pass": true,
+      "public_inputs_present_in_private_bundle": true,
+      "public_material_flattening_checked": true
+    },
+    {
+      "issue": 29038,
+      "frozen_routes": 4,
+      "support_files": 3,
+      "tampered_case_rejected": true,
+      "pending_blocks_formal_pass": true,
+      "public_inputs_present_in_private_bundle": true,
+      "public_material_flattening_checked": true
+    },
+    {
+      "issue": 30198,
+      "frozen_routes": 4,
+      "support_files": 4,
+      "tampered_case_rejected": true,
+      "pending_blocks_formal_pass": true,
+      "public_inputs_present_in_private_bundle": true,
+      "public_material_flattening_checked": true
+    }
+  ]
+}

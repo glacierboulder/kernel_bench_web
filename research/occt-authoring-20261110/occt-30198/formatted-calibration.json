@@ -1,0 +1,267 @@
+{
+  "historical_results": [
+    {
+      "issue": 30198,
+      "role": "B",
+      "case": "original",
+      "status": "memory_limit",
+      "passed": false,
+      "elapsed_seconds": 8.954,
+      "peak_private_mb": 1032.65,
+      "stop": "memory_limit",
+      "return_code": 1,
+      "expected_assertion_ids": [
+        "shape_valid",
+        "nonempty",
+        "topology",
+        "volume"
+      ],
+      "observed_assertion_events": [],
+      "summary_pair_valid": false,
+      "log_sha256": "e8201c5f4db81d96dc18f5594cbac1c044dfa28caeeab622db78f421d26db132",
+      "log": "logs/B-original.txt"
+    },
+    {
+      "issue": 30198,
+      "role": "B",
+      "case": "regression",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.217,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "shape_valid",
+        "nonempty",
+        "analytic_volume"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "shape_valid",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "nonempty",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "analytic_volume",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "dba938ff9b1222076d03380407b4674fe91677657df4f7c00b3cff8513288cfa",
+      "log": "logs/B-regression.txt"
+    },
+    {
+      "issue": 30198,
+      "role": "F",
+      "case": "neighbor_reverse",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 17.878,
+      "peak_private_mb": 79.29,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "shape_valid",
+        "nonempty",
+        "topology",
+        "volume"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "shape_valid",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "nonempty",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "topology",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "volume",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "40c8acb76f066c71325b2c0733e51cc84c173d5f6ba608dceb57680fe10f0a70",
+      "log": "logs/F-neighbor_reverse.txt"
+    },
+    {
+      "issue": 30198,
+      "role": "F",
+      "case": "neighbor_shift",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 21.828,
+      "peak_private_mb": 93.75,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "shape_valid",
+        "nonempty",
+        "topology",
+        "volume"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "shape_valid",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "nonempty",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "topology",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "volume",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "c1e7dd1df52575451478dbf53677a9f85c2c4ce03b961d236b1b5848698ea006",
+      "log": "logs/F-neighbor_shift.txt"
+    },
+    {
+      "issue": 30198,
+      "role": "F",
+      "case": "original",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 27.6,
+      "peak_private_mb": 80.16,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "shape_valid",
+        "nonempty",
+        "topology",
+        "volume"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "shape_valid",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "nonempty",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "topology",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "volume",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "6910463e955db1a2387eb2fd101583b12016d4c61975d891c46d38dfdba033c6",
+      "log": "logs/F-original.txt"
+    },
+    {
+      "issue": 30198,
+      "role": "F",
+      "case": "regression",
+      "status": "geometry_pass",
+      "passed": true,
+      "elapsed_seconds": 0.246,
+      "peak_private_mb": 0.0,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "shape_valid",
+        "nonempty",
+        "analytic_volume"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "shape_valid",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "nonempty",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "analytic_volume",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "dba938ff9b1222076d03380407b4674fe91677657df4f7c00b3cff8513288cfa",
+      "log": "logs/F-regression.txt"
+    },
+    {
+      "issue": 30198,
+      "role": "negative",
+      "case": "original",
+      "status": "geometry_fail",
+      "passed": false,
+      "elapsed_seconds": 22.443,
+      "peak_private_mb": 73.2,
+      "stop": null,
+      "return_code": 0,
+      "expected_assertion_ids": [
+        "shape_valid",
+        "nonempty",
+        "topology",
+        "volume"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "shape_valid",
+          "kind": "expression"
+        },
+        {
+          "status": "FAIL",
+          "id": "nonempty",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "topology",
+          "kind": "numeric"
+        },
+        {
+          "status": "FAIL",
+          "id": "volume",
+          "kind": "numeric"
+        }
+      ],
+      "summary_pair_valid": true,
+      "log_sha256": "51962690987a58bec105f0cc24beaf592e9b52ae2f69188c01eec3306ff922b9",
+      "log": "logs/negative-original.txt"
+    }
+  ],
+  "superseded_by": "research/occt-authoring-20261110/audit-v2/native-replay.json",
+  "authoritative_current_admission": false
+}

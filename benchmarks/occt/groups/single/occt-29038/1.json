@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-29038",
+  "version": "1",
+  "title": "待准入 · OCCT 29038 · 异常曲线导致布尔融合长时间不结束",
+  "kind": "single",
+  "source_id": "occt75-authoring-29038-b-fbd34ff9a39d",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-29038",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-29038-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

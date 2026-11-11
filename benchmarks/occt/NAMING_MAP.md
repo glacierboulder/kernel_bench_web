@@ -95,3 +95,8 @@ See [integration validation record](evaluation/provenance/integration-validation
 当前 54 个 task 引用 54 个不同 suite，共 274 条 required checkpoint：42 个 single tasks 为 179 条，5 个 multiple tasks 为 73 条，7 个 legacy tasks 为 22 条。全部 55 个注册 suite 共 290 条（91 original、139 neighborhood、60 regression），包括未被当前 task 引用的旧 B55 oracle-v2 的 16 条。这里累计 suite 清单行，single 与 multiple 存在复用覆盖，不能视为独立几何 case 数。
 
 [机器可读拆分来源](evaluation/provenance/single-split-20261105.json) 记录选择、未选版本、目录移动和检查点映射。本次执行清单、材料冻结及路由测试，没有重建 OCCT、重放几何或调用模型。路径变化会改变公开任务材料哈希；已有数据库的同 ID/version 再导入可能触发冲突，应按现有冲突保护逐项处理，不清库或覆盖历史结果。本次未修改运行数据库。
+
+
+## 2026-11-10 作者候选材料全面复核
+
+新增的八道作者候选位于既有 issue/group/suite 目录结构中，但**未加入默认 catalog 或默认 source lock**，不自动上架、不默认排队。候选引用集中在 `benchmarks/occt/evaluation/provenance/authoring-20261110/candidate-registration.json`（相对项目根目录）。默认题库身份和计数保持不变。候选仍需构建适配、Linux 冻结重放、几何覆盖和资源标定。详见项目根目录下 `research/occt-authoring-20261110/audit-v2/全面核查报告.md`。
