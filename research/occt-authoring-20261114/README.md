@@ -11,4 +11,4 @@ Import the named OCCT Git bundles separately from the benchmark repository when 
 
 The shared occt75-reference-source.bundle contains 9dd2d67c21767c7198a7e0b474f6c464fcd39b15 for the Boolean cases that cite that derived reference.
 
-Large source bundles are provided separately in the local complete handoff. Their exact names and SHA-256 hashes are recorded in SOURCE-BUNDLES.md. The small incremental #1701 bundle remains in Git. Full source handoff is needed for the derived commits named in the catalog or evidence.
+All five OCCT source bundles are provided here. See [source bundle instructions](SOURCE-BUNDLES.md) to restore the four split files.
