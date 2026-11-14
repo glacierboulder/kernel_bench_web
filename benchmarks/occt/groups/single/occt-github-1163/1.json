@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-github-1163",
+  "version": "1",
+  "title": "OCCT GitHub 1163 圆角端部空边崩溃",
+  "kind": "single",
+  "source_id": "occt801-1163-b-6ba582362af7",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-github-1163",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-github-1163-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

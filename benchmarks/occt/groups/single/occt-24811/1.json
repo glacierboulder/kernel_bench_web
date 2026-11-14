@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-24811",
+  "version": "1",
+  "title": "OCCT 24811 求交不足导致曲线未正确分段",
+  "kind": "single",
+  "execution_mode": "joint",
+  "source_id": "oce013-authoring-b-5434272be3ee",
+  "members": [
+    {
+      "issue_id": "occt-24811",
+      "issue_version": "1"
+    }
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-24811-checks",
+    "version": "1"
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "has_hidden_checks": true,
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  }
+}

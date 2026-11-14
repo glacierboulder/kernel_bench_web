@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-github-1371-checks",
+  "version": "1",
+  "title": "闭合 B 样条圆角正确性与正常模型检查",
+  "source_ids": [
+    "occt801-1371-b-b8f597c67781"
+  ],
+  "group_ids": [
+    "occt-single-github-1371"
+  ],
+  "checkpoints": [
+    {
+      "id": "1371-radius-0.35",
+      "issue_id": "occt-github-1371",
+      "category": "original",
+      "visibility": "public",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1371/1/check.cpp",
+      "timeout_seconds": 120,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 100,
+        "inputs": [
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1371/1/0.35.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKBool",
+          "TKShHealing",
+          "TKTopAlgo",
+          "TKGeomAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKG2d",
+          "TKGeomBase"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "1371-radius-0.2",
+      "issue_id": "occt-github-1371",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1371/1/check.cpp",
+      "timeout_seconds": 120,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 100,
+        "inputs": [
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1371/1/0.2.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKBool",
+          "TKShHealing",
+          "TKTopAlgo",
+          "TKGeomAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKG2d",
+          "TKGeomBase"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "1371-radius-0.1",
+      "issue_id": "occt-github-1371",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1371/1/check.cpp",
+      "timeout_seconds": 120,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 100,
+        "inputs": [
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1371/1/0.1.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKBool",
+          "TKShHealing",
+          "TKTopAlgo",
+          "TKGeomAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKG2d",
+          "TKGeomBase"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-25385-checks",
+  "version": "1",
+  "title": "OCCT 25385 截交时输入壳的容差异常增长",
+  "group_ids": [
+    "occt-single-25385"
+  ],
+  "source_ids": [
+    "oce013-authoring-b-5434272be3ee"
+  ],
+  "checkpoints": [
+    {
+      "id": "original",
+      "issue_id": "occt-25385",
+      "category": "original",
+      "visibility": "hidden",
+      "case": "evaluation/cases/authoring-20261114/occt-25385/original.tcl",
+      "oracle": "draw_test_done_v1",
+      "runner": "draw_case_v1",
+      "required": true,
+      "timeout_seconds": 70,
+      "runner_options": {
+        "case_timeout_seconds": 55
+      }
+    },
+    {
+      "id": "regression",
+      "issue_id": "occt-25385",
+      "category": "regression",
+      "visibility": "hidden",
+      "case": "evaluation/cases/authoring-20261114/occt-25385/regression.tcl",
+      "oracle": "draw_test_done_v1",
+      "runner": "draw_case_v1",
+      "required": true,
+      "timeout_seconds": 70,
+      "runner_options": {
+        "case_timeout_seconds": 55
+      }
+    },
+    {
+      "id": "rotate",
+      "issue_id": "occt-25385",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "case": "evaluation/cases/authoring-20261114/occt-25385/rotate.tcl",
+      "oracle": "draw_test_done_v1",
+      "runner": "draw_case_v1",
+      "required": true,
+      "timeout_seconds": 70,
+      "runner_options": {
+        "case_timeout_seconds": 55
+      }
+    },
+    {
+      "id": "shift",
+      "issue_id": "occt-25385",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "case": "evaluation/cases/authoring-20261114/occt-25385/shift.tcl",
+      "oracle": "draw_test_done_v1",
+      "runner": "draw_case_v1",
+      "required": true,
+      "timeout_seconds": 70,
+      "runner_options": {
+        "case_timeout_seconds": 55
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/authoring-20261114/occt-25385/bug25385_shell2.brep"
+  ]
+}

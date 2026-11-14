@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-29028",
+  "version": "1",
+  "title": "OCCT 29028 平面与环面的截交结果错误",
+  "kind": "single",
+  "execution_mode": "joint",
+  "source_id": "oce013-authoring-b-5434272be3ee",
+  "members": [
+    {
+      "issue_id": "occt-29028",
+      "issue_version": "1"
+    }
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-29028-checks",
+    "version": "1"
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "has_hidden_checks": true,
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  }
+}

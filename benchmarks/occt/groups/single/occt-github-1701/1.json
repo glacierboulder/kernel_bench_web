@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-github-1701",
+  "version": "1",
+  "title": "等半径圆角产生异常顶点容差",
+  "kind": "single",
+  "source_id": "occt801-1701-b-b8f597c67781",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-github-1701",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-github-1701-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

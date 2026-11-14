@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-29028-checks",
+  "version": "1",
+  "title": "OCCT 29028 平面与环面的截交结果错误",
+  "group_ids": [
+    "occt-single-29028"
+  ],
+  "source_ids": [
+    "oce013-authoring-b-5434272be3ee"
+  ],
+  "checkpoints": [
+    {
+      "id": "original",
+      "issue_id": "occt-29028",
+      "category": "original",
+      "visibility": "hidden",
+      "case": "evaluation/cases/authoring-20261114/occt-29028/original.tcl",
+      "oracle": "draw_test_done_v1",
+      "runner": "draw_case_v1",
+      "required": true,
+      "timeout_seconds": 70,
+      "runner_options": {
+        "case_timeout_seconds": 55
+      }
+    },
+    {
+      "id": "regression",
+      "issue_id": "occt-29028",
+      "category": "regression",
+      "visibility": "hidden",
+      "case": "evaluation/cases/authoring-20261114/occt-29028/regression.tcl",
+      "oracle": "draw_test_done_v1",
+      "runner": "draw_case_v1",
+      "required": true,
+      "timeout_seconds": 70,
+      "runner_options": {
+        "case_timeout_seconds": 55
+      }
+    },
+    {
+      "id": "rotate",
+      "issue_id": "occt-29028",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "case": "evaluation/cases/authoring-20261114/occt-29028/rotate.tcl",
+      "oracle": "draw_test_done_v1",
+      "runner": "draw_case_v1",
+      "required": true,
+      "timeout_seconds": 70,
+      "runner_options": {
+        "case_timeout_seconds": 55
+      }
+    },
+    {
+      "id": "shift",
+      "issue_id": "occt-29028",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "case": "evaluation/cases/authoring-20261114/occt-29028/shift.tcl",
+      "oracle": "draw_test_done_v1",
+      "runner": "draw_case_v1",
+      "required": true,
+      "timeout_seconds": 70,
+      "runner_options": {
+        "case_timeout_seconds": 55
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/authoring-20261114/occt-29028/bug27079_s3.draw",
+    "evaluation/cases/authoring-20261114/occt-29028/bug27079_s4.draw"
+  ]
+}
