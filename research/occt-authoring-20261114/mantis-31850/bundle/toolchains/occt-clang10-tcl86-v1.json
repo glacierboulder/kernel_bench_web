@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "occt-clang10-tcl86-v1",
+  "title": "OCCT bounded DRAW evaluator · Clang 10 / Tcl 8.6",
+  "platforms": ["linux-x86_64"],
+  "executables": {
+    "cmake": "cmake",
+    "c_compiler": "clang-10",
+    "cxx_compiler": "clang++-10"
+  },
+  "compiler_output_directory": "clang",
+  "tools_directory": "occt-clang10-v1",
+  "compiler_jobs_max": 2,
+  "tcl_version": "8.6",
+  "tcl_paths": "deployment configuration or BENCH_TCL_* environment variables"
+}

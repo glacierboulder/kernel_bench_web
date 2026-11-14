@@ -1,0 +1,50 @@
+{
+  "default-options": {
+    "passed": false,
+    "result": {
+      "script": "/tmp/tmppqt04gj2/bundle/evaluation/cases/occt-31850-default/default-options.tcl",
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.568,
+      "test_done_marker": false,
+      "stdout_tail": "DRAW is running in batch mode\nWRONG_MEASURE r1 2988.71 expected 37939.8\n",
+      "stderr_tail": ""
+    }
+  },
+  "shift": {
+    "passed": true,
+    "result": {
+      "script": "/tmp/tmppqt04gj2/bundle/evaluation/cases/occt-31850-default/shift.tcl",
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.618,
+      "test_done_marker": true,
+      "stdout_tail": "DRAW is running in batch mode\nTEST_DONE\n",
+      "stderr_tail": ""
+    }
+  },
+  "rotate": {
+    "passed": false,
+    "result": {
+      "script": "/tmp/tmppqt04gj2/bundle/evaluation/cases/occt-31850-default/rotate.tcl",
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.618,
+      "test_done_marker": false,
+      "stdout_tail": "DRAW is running in batch mode\nWRONG_MEASURE r1 2988.71 expected 37939.8\n",
+      "stderr_tail": ""
+    }
+  },
+  "regression": {
+    "passed": true,
+    "result": {
+      "script": "/tmp/tmppqt04gj2/bundle/evaluation/cases/occt-31850-default/regression.tcl",
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.066,
+      "test_done_marker": true,
+      "stdout_tail": "DRAW is running in batch mode\nTEST_DONE\n",
+      "stderr_tail": ""
+    }
+  }
+}

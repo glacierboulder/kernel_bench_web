@@ -1,0 +1,8 @@
+{
+  "upstream_issue": "https://github.com/Open-Cascade-SAS/OCCT/issues/1371",
+  "B_official_commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "B_materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "F_derived_commit": "b7c4c6fffc7f13832b68461ae480c1801151a566",
+  "bundle_sha256": "c67174b3d7bf042df5425f52761d021a107f6c97197a375f665e88af866b0d2c",
+  "note": "F 为本地编写的有效性检查保护，只防止无效结果被报告为成功，并不修复底层几何；可能带来额外计算成本。"
+}

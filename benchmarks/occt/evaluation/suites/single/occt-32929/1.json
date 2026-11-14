@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-32929-checks",
+  "version": "1",
+  "title": "32929 fillet end-intersection checks",
+  "source_ids": [
+    "occt75-32929-b-f2724d41b326"
+  ],
+  "group_ids": [
+    "occt-single-32929"
+  ],
+  "checkpoints": [
+    {
+      "id": "32929-original",
+      "issue_id": "occt-32929",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-32929/1/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "input_valid",
+          "valid_result",
+          "face_count",
+          "solid_count",
+          "surface_area"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "32929-translate",
+      "issue_id": "occt-32929",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-32929/1/translate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "input_valid",
+          "valid_result",
+          "face_count",
+          "solid_count",
+          "surface_area"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "32929-rotate",
+      "issue_id": "occt-32929",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-32929/1/rotate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "input_valid",
+          "valid_result",
+          "face_count",
+          "solid_count",
+          "surface_area"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "32929-regression",
+      "issue_id": "occt-32929",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-32929/1/regression.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "normal_valid",
+          "normal_area"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "issues/occt-32929/1/public/inputs/bug32929.brep"
+  ]
+}

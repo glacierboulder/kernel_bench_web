@@ -1,0 +1,2989 @@
+适用于 .NET Framework MSBuild 版本 17.13.9+e0f243f1e
+
+  1>Checking Build System
+  Building Custom Rule C:/occt-cad-6acadf32/learning/submit-24161/src/adm/cmake/TKernel/CMakeLists.txt
+  Precompiled.cpp
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/adm/cmake/TKernel/Precompiled.cpp”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/adm/cmake/TKernel/Precompiled.cpp”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/adm/cmake/TKernel/Precompiled.cpp”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  FSD_BinaryFile.cxx
+  FSD_CmpFile.cxx
+  FSD_File.cxx
+  MMgt_StackManager.cxx
+  MMgt_TShared.cxx
+  Plugin_DataMapIteratorOfMapOfFunctions_0.cxx
+  Plugin_DataMapNodeOfMapOfFunctions_0.cxx
+  Plugin_Failure_0.cxx
+  Plugin_MapOfFunctions_0.cxx
+  Plugin.cxx
+  Quantity_Array1OfCoefficient_0.cxx
+  Quantity_Array1OfColor_0.cxx
+  Quantity_Array2OfColor_0.cxx
+  Quantity_ColorDefinitionError_0.cxx
+  Quantity_DateDefinitionError_0.cxx
+  Quantity_HArray1OfColor_0.cxx
+  Quantity_PeriodDefinitionError_0.cxx
+  Quantity_Color.cxx
+  Quantity_Convert.cxx
+  Quantity_Date.cxx
+  正在生成代码...
+  正在编译...
+  Quantity_Period.cxx
+  Resource_DataMapIteratorOfDataMapOfAsciiStringAsciiString_0.cxx
+  Resource_DataMapIteratorOfDataMapOfAsciiStringExtendedString_0.cxx
+  Resource_DataMapNodeOfDataMapOfAsciiStringAsciiString_0.cxx
+  Resource_DataMapNodeOfDataMapOfAsciiStringExtendedString_0.cxx
+  Resource_DataMapOfAsciiStringAsciiString_0.cxx
+  Resource_DataMapOfAsciiStringExtendedString_0.cxx
+  Resource_NoSuchResource_0.cxx
+  Resource_QuickSortOfArray1_0.cxx
+  Resource_LexicalCompare.cxx
+  Resource_Manager.cxx
+  Resource_Unicode.cxx
+  SortTools_HeapSortOfInteger_0.cxx
+  SortTools_HeapSortOfReal_0.cxx
+  SortTools_QuickSortOfInteger_0.cxx
+  SortTools_QuickSortOfReal_0.cxx
+  SortTools_ShellSortOfInteger_0.cxx
+  SortTools_ShellSortOfReal_0.cxx
+  SortTools_StraightInsertionSortOfInteger_0.cxx
+  SortTools_StraightInsertionSortOfReal_0.cxx
+  正在生成代码...
+  正在编译...
+  Standard_AbortiveTransaction_0.cxx
+  Standard_ConstructionError_0.cxx
+  Standard_DimensionError_0.cxx
+  Standard_DimensionMismatch_0.cxx
+  Standard_DivideByZero_0.cxx
+  Standard_DomainError_0.cxx
+  Standard_ImmutableObject_0.cxx
+  Standard_LicenseError_0.cxx
+  Standard_LicenseNotFound_0.cxx
+  Standard_MultiplyDefined_0.cxx
+  Standard_NegativeValue_0.cxx
+  Standard_NoMoreObject_0.cxx
+  Standard_NoSuchObject_0.cxx
+  Standard_NotImplemented_0.cxx
+  Standard_NullObject_0.cxx
+  Standard_NullValue_0.cxx
+  Standard_NumericError_0.cxx
+  Standard_OutOfMemory_0.cxx
+  Standard_OutOfRange_0.cxx
+  Standard_Overflow_0.cxx
+  正在生成代码...
+  正在编译...
+  Standard_ProgramError_0.cxx
+  Standard_RangeError_0.cxx
+  Standard_TooManyUsers_0.cxx
+  Standard_TypeMismatch_0.cxx
+  Standard_Underflow_0.cxx
+  Handle_Standard_Persistent.cxx
+  Handle_Standard_Transient.cxx
+  Standard.cxx
+  Standard_Address.cxx
+  Standard_AncestorIterator.cxx
+  Standard_Boolean.cxx
+  Standard_CLocaleSentry.cxx
+  Standard_CString.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_CString.cxx(172,51): warning C4838: 从“unsigned int”转换到“Standard_Integer”需要收缩转换 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/Standard/Standard_CString.cxx”)
+  
+  Standard_Character.cxx
+  Standard_ErrorHandler.cxx
+  Standard_ErrorHandlerCallback.cxx
+  Standard_ExtCharacter.cxx
+  Standard_ExtString.cxx
+  Standard_Failure.cxx
+  Standard_GUID.cxx
+  正在生成代码...
+  正在编译...
+  Standard_HashCode.cxx
+  Standard_IStream.cxx
+  Standard_Integer.cxx
+  Standard_MMgrOpt.cxx
+  Standard_MMgrRaw.cxx
+  Standard_MMgrRoot.cxx
+  Standard_MMgrTBBalloc.cxx
+  Standard_Mutex.cxx
+  Standard_Persistent.cxx
+  Standard_Real.cxx
+  Standard_SStream.cxx
+  Standard_ShallowDump.cxx
+  Standard_ShortReal.cxx
+  Standard_Storable.cxx
+  Standard_Time.cxx
+  Standard_Transient.cxx
+  Standard_Type.cxx
+  Standard_UUID.cxx
+  Standard_math.cxx
+  StdFail_InfiniteSolutions_0.cxx
+  正在生成代码...
+  正在编译...
+  StdFail_NotDone_0.cxx
+  StdFail_UndefinedDerivative_0.cxx
+  StdFail_UndefinedValue_0.cxx
+  StdFail_Undefined_0.cxx
+  Storage_ArrayOfCallBack_0.cxx
+  Storage_ArrayOfSchema_0.cxx
+  Storage_DataMapIteratorOfMapOfCallBack_0.cxx
+  Storage_DataMapIteratorOfMapOfPers_0.cxx
+  Storage_DataMapNodeOfMapOfCallBack_0.cxx
+  Storage_DataMapNodeOfMapOfPers_0.cxx
+  Storage_HArrayOfCallBack_0.cxx
+  Storage_HArrayOfSchema_0.cxx
+  Storage_HPArray_0.cxx
+  Storage_HSeqOfCallBack_0.cxx
+  Storage_HSeqOfPersistent_0.cxx
+  Storage_HSeqOfRoot_0.cxx
+  Storage_IndexedDataMapNodeOfPType_0.cxx
+  Storage_MapOfCallBack_0.cxx
+  Storage_MapOfPers_0.cxx
+  Storage_MapPSDHasher_0.cxx
+  正在生成代码...
+  正在编译...
+  Storage_PArray_0.cxx
+  Storage_PType_0.cxx
+  Storage_SeqOfCallBack_0.cxx
+  Storage_SeqOfPersistent_0.cxx
+  Storage_SeqOfRoot_0.cxx
+  Storage_SequenceNodeOfSeqOfCallBack_0.cxx
+  Storage_SequenceNodeOfSeqOfPersistent_0.cxx
+  Storage_SequenceNodeOfSeqOfRoot_0.cxx
+  Storage_StreamExtCharParityError_0.cxx
+  Storage_StreamFormatError_0.cxx
+  Storage_StreamModeError_0.cxx
+  Storage_StreamReadError_0.cxx
+  Storage_StreamTypeMismatchError_0.cxx
+  Storage_StreamUnknownTypeError_0.cxx
+  Storage_StreamWriteError_0.cxx
+  Storage.cxx
+  Storage_BaseDriver.cxx
+  Storage_CallBack.cxx
+  Storage_Container.cxx
+  Storage_Data.cxx
+  正在生成代码...
+  正在编译...
+  Storage_DefaultCallBack.cxx
+  Storage_HeaderData.cxx
+  Storage_InternalData.cxx
+  Storage_Root.cxx
+  Storage_RootData.cxx
+  Storage_Schema.cxx
+  Storage_TypeData.cxx
+  Storage_TypedCallBack.cxx
+  Storage_stCONSTclCOM.cxx
+  TColStd_Array1OfAsciiString_0.cxx
+  TColStd_Array1OfBoolean_0.cxx
+  TColStd_Array1OfByte_0.cxx
+  TColStd_Array1OfCharacter_0.cxx
+  TColStd_Array1OfExtendedString_0.cxx
+  TColStd_Array1OfInteger_0.cxx
+  TColStd_Array1OfListOfInteger_0.cxx
+  TColStd_Array1OfReal_0.cxx
+  TColStd_Array1OfTransient_0.cxx
+  TColStd_Array2OfBoolean_0.cxx
+  TColStd_Array2OfCharacter_0.cxx
+  正在生成代码...
+  正在编译...
+  TColStd_Array2OfInteger_0.cxx
+  TColStd_Array2OfReal_0.cxx
+  TColStd_Array2OfTransient_0.cxx
+  TColStd_DataMapIteratorOfDataMapOfAsciiStringInteger_0.cxx
+  TColStd_DataMapIteratorOfDataMapOfIntegerInteger_0.cxx
+  TColStd_DataMapIteratorOfDataMapOfIntegerListOfInteger_0.cxx
+  TColStd_DataMapIteratorOfDataMapOfIntegerReal_0.cxx
+  TColStd_DataMapIteratorOfDataMapOfIntegerTransient_0.cxx
+  TColStd_DataMapIteratorOfDataMapOfStringInteger_0.cxx
+  TColStd_DataMapIteratorOfDataMapOfTransientTransient_0.cxx
+  TColStd_DataMapNodeOfDataMapOfAsciiStringInteger_0.cxx
+  TColStd_DataMapNodeOfDataMapOfIntegerInteger_0.cxx
+  TColStd_DataMapNodeOfDataMapOfIntegerListOfInteger_0.cxx
+  TColStd_DataMapNodeOfDataMapOfIntegerReal_0.cxx
+  TColStd_DataMapNodeOfDataMapOfIntegerTransient_0.cxx
+  TColStd_DataMapNodeOfDataMapOfStringInteger_0.cxx
+  TColStd_DataMapNodeOfDataMapOfTransientTransient_0.cxx
+  TColStd_DataMapOfAsciiStringInteger_0.cxx
+  TColStd_DataMapOfIntegerInteger_0.cxx
+  TColStd_DataMapOfIntegerListOfInteger_0.cxx
+  正在生成代码...
+  正在编译...
+  TColStd_DataMapOfIntegerReal_0.cxx
+  TColStd_DataMapOfIntegerTransient_0.cxx
+  TColStd_DataMapOfStringInteger_0.cxx
+  TColStd_DataMapOfTransientTransient_0.cxx
+  TColStd_HArray1OfAsciiString_0.cxx
+  TColStd_HArray1OfBoolean_0.cxx
+  TColStd_HArray1OfByte_0.cxx
+  TColStd_HArray1OfCharacter_0.cxx
+  TColStd_HArray1OfExtendedString_0.cxx
+  TColStd_HArray1OfInteger_0.cxx
+  TColStd_HArray1OfListOfInteger_0.cxx
+  TColStd_HArray1OfReal_0.cxx
+  TColStd_HArray1OfTransient_0.cxx
+  TColStd_HArray2OfBoolean_0.cxx
+  TColStd_HArray2OfCharacter_0.cxx
+  TColStd_HArray2OfInteger_0.cxx
+  TColStd_HArray2OfReal_0.cxx
+  TColStd_HArray2OfTransient_0.cxx
+  TColStd_HSequenceOfAsciiString_0.cxx
+  TColStd_HSequenceOfExtendedString_0.cxx
+  正在生成代码...
+  正在编译...
+  TColStd_HSequenceOfHAsciiString_0.cxx
+  TColStd_HSequenceOfHExtendedString_0.cxx
+  TColStd_HSequenceOfInteger_0.cxx
+  TColStd_HSequenceOfReal_0.cxx
+  TColStd_HSequenceOfTransient_0.cxx
+  TColStd_HSetOfInteger_0.cxx
+  TColStd_HSetOfReal_0.cxx
+  TColStd_HSetOfTransient_0.cxx
+  TColStd_IndexedDataMapNodeOfIndexedDataMapOfTransientTransient_0.cxx
+  TColStd_IndexedDataMapOfTransientTransient_0.cxx
+  TColStd_IndexedMapNodeOfIndexedMapOfInteger_0.cxx
+  TColStd_IndexedMapNodeOfIndexedMapOfReal_0.cxx
+  TColStd_IndexedMapNodeOfIndexedMapOfTransient_0.cxx
+  TColStd_IndexedMapOfInteger_0.cxx
+  TColStd_IndexedMapOfReal_0.cxx
+  TColStd_IndexedMapOfTransient_0.cxx
+  TColStd_ListIteratorOfListOfAsciiString_0.cxx
+  TColStd_ListIteratorOfListOfInteger_0.cxx
+  TColStd_ListIteratorOfListOfReal_0.cxx
+  TColStd_ListIteratorOfListOfTransient_0.cxx
+  正在生成代码...
+  正在编译...
+  TColStd_ListIteratorOfSetListOfSetOfInteger_0.cxx
+  TColStd_ListIteratorOfSetListOfSetOfReal_0.cxx
+  TColStd_ListIteratorOfSetListOfSetOfTransient_0.cxx
+  TColStd_ListNodeOfListOfAsciiString_0.cxx
+  TColStd_ListNodeOfListOfInteger_0.cxx
+  TColStd_ListNodeOfListOfReal_0.cxx
+  TColStd_ListNodeOfListOfTransient_0.cxx
+  TColStd_ListNodeOfSetListOfSetOfInteger_0.cxx
+  TColStd_ListNodeOfSetListOfSetOfReal_0.cxx
+  TColStd_ListNodeOfSetListOfSetOfTransient_0.cxx
+  TColStd_ListOfAsciiString_0.cxx
+  TColStd_ListOfInteger_0.cxx
+  TColStd_ListOfReal_0.cxx
+  TColStd_ListOfTransient_0.cxx
+  TColStd_MapIntegerHasher_0.cxx
+  TColStd_MapIteratorOfMapOfAsciiString_0.cxx
+  TColStd_MapIteratorOfMapOfInteger_0.cxx
+  TColStd_MapIteratorOfMapOfReal_0.cxx
+  TColStd_MapIteratorOfMapOfTransient_0.cxx
+  TColStd_MapOfAsciiString_0.cxx
+  正在生成代码...
+  正在编译...
+  TColStd_MapOfInteger_0.cxx
+  TColStd_MapOfReal_0.cxx
+  TColStd_MapOfTransient_0.cxx
+  TColStd_MapRealHasher_0.cxx
+  TColStd_MapTransientHasher_0.cxx
+  TColStd_QueueNodeOfQueueOfInteger_0.cxx
+  TColStd_QueueNodeOfQueueOfReal_0.cxx
+  TColStd_QueueNodeOfQueueOfTransient_0.cxx
+  TColStd_QueueOfInteger_0.cxx
+  TColStd_QueueOfReal_0.cxx
+  TColStd_QueueOfTransient_0.cxx
+  TColStd_SequenceNodeOfSequenceOfAddress_0.cxx
+  TColStd_SequenceNodeOfSequenceOfAsciiString_0.cxx
+  TColStd_SequenceNodeOfSequenceOfBoolean_0.cxx
+  TColStd_SequenceNodeOfSequenceOfExtendedString_0.cxx
+  TColStd_SequenceNodeOfSequenceOfHAsciiString_0.cxx
+  TColStd_SequenceNodeOfSequenceOfHExtendedString_0.cxx
+  TColStd_SequenceNodeOfSequenceOfInteger_0.cxx
+  TColStd_SequenceNodeOfSequenceOfReal_0.cxx
+  TColStd_SequenceNodeOfSequenceOfTransient_0.cxx
+  正在生成代码...
+  正在编译...
+  TColStd_SequenceOfAddress_0.cxx
+  TColStd_SequenceOfAsciiString_0.cxx
+  TColStd_SequenceOfBoolean_0.cxx
+  TColStd_SequenceOfExtendedString_0.cxx
+  TColStd_SequenceOfHAsciiString_0.cxx
+  TColStd_SequenceOfHExtendedString_0.cxx
+  TColStd_SequenceOfInteger_0.cxx
+  TColStd_SequenceOfReal_0.cxx
+  TColStd_SequenceOfTransient_0.cxx
+  TColStd_SetIteratorOfSetOfInteger_0.cxx
+  TColStd_SetIteratorOfSetOfReal_0.cxx
+  TColStd_SetIteratorOfSetOfTransient_0.cxx
+  TColStd_SetListOfSetOfInteger_0.cxx
+  TColStd_SetListOfSetOfReal_0.cxx
+  TColStd_SetListOfSetOfTransient_0.cxx
+  TColStd_SetOfInteger_0.cxx
+  TColStd_SetOfReal_0.cxx
+  TColStd_SetOfTransient_0.cxx
+  TColStd_StackIteratorOfStackOfInteger_0.cxx
+  TColStd_StackIteratorOfStackOfReal_0.cxx
+  正在生成代码...
+  正在编译...
+  TColStd_StackIteratorOfStackOfTransient_0.cxx
+  TColStd_StackNodeOfStackOfInteger_0.cxx
+  TColStd_StackNodeOfStackOfReal_0.cxx
+  TColStd_StackNodeOfStackOfTransient_0.cxx
+  TColStd_StackOfInteger_0.cxx
+  TColStd_StackOfReal_0.cxx
+  TColStd_StackOfTransient_0.cxx
+  TColStd_StdMapNodeOfMapOfAsciiString_0.cxx
+  TColStd_StdMapNodeOfMapOfInteger_0.cxx
+  TColStd_StdMapNodeOfMapOfReal_0.cxx
+  TColStd_StdMapNodeOfMapOfTransient_0.cxx
+  TColStd_HPackedMapOfInteger.cxx
+  TColStd_MapIteratorOfPackedMapOfInteger.cxx
+  TColStd_PackedMapOfInteger.cxx
+  TCollection_PrivCompareOfInteger_0.cxx
+  TCollection_PrivCompareOfReal_0.cxx
+  TCollection.cxx
+  TCollection_AVLBaseNode.cxx
+  TCollection_Array1Descriptor.cxx
+  TCollection_Array2Descriptor.cxx
+  正在生成代码...
+  正在编译...
+  TCollection_AsciiString.cxx
+  TCollection_BaseSequence.cxx
+  TCollection_BasicMap.cxx
+  TCollection_BasicMapIterator.cxx
+  TCollection_CompareOfInteger.cxx
+  TCollection_CompareOfReal.cxx
+  TCollection_ExtendedString.cxx
+  TCollection_HAsciiString.cxx
+  TCollection_HExtendedString.cxx
+  TCollection_MapNode.cxx
+  TCollection_SeqNode.cxx
+  TShort_Array1OfShortReal_0.cxx
+  TShort_Array2OfShortReal_0.cxx
+  TShort_HArray1OfShortReal_0.cxx
+  TShort_HArray2OfShortReal_0.cxx
+  TShort_HSequenceOfShortReal_0.cxx
+  TShort_SequenceNodeOfSequenceOfShortReal_0.cxx
+  TShort_SequenceOfShortReal_0.cxx
+  Units_NoSuchType_0.cxx
+  Units_NoSuchUnit_0.cxx
+  正在生成代码...
+  正在编译...
+  Units_QtsSequence_0.cxx
+  Units_QuantitiesSequence_0.cxx
+  Units_SequenceNodeOfQtsSequence_0.cxx
+  Units_SequenceNodeOfTksSequence_0.cxx
+  Units_SequenceNodeOfUtsSequence_0.cxx
+  Units_TksSequence_0.cxx
+  Units_TokensSequence_0.cxx
+  Units_UnitsSequence_0.cxx
+  Units_UtsSequence_0.cxx
+  Units.cxx
+  Units_Dimensions.cxx
+  Units_Explorer.cxx
+  Units_Lexicon.cxx
+  Units_MathSentence.cxx
+  Units_Measurement.cxx
+  Units_Quantity.cxx
+  Units_Sentence.cxx
+  Units_ShiftedToken.cxx
+  Units_ShiftedUnit.cxx
+  Units_Token.cxx
+  正在生成代码...
+  正在编译...
+  Units_Unit.cxx
+  Units_UnitSentence.cxx
+  Units_UnitsDictionary.cxx
+  Units_UnitsLexicon.cxx
+  Units_UnitsSystem.cxx
+  UnitsAPI.cxx
+  Dico_DictionaryOfInteger_0.cxx
+  Dico_DictionaryOfTransient_0.cxx
+  Dico_IteratorOfDictionaryOfInteger_0.cxx
+  Dico_IteratorOfDictionaryOfTransient_0.cxx
+  Dico_StackItemOfDictionaryOfInteger_0.cxx
+  Dico_StackItemOfDictionaryOfTransient_0.cxx
+  NCollection_BaseAllocator.cxx
+  NCollection_BaseList.cxx
+  NCollection_BaseMap.cxx
+  NCollection_BaseSequence.cxx
+  NCollection_BaseVector.cxx
+  NCollection_Handle.cxx
+  NCollection_HeapAllocator.cxx
+  NCollection_IncAllocator.cxx
+  正在生成代码...
+  正在编译...
+  NCollection_SparseArrayBase.cxx
+  Message_ListIteratorOfListOfMsg_0.cxx
+  Message_ListNodeOfListOfMsg_0.cxx
+  Message_ListOfMsg_0.cxx
+  Message_SequenceNodeOfSequenceOfPrinters_0.cxx
+  Message_SequenceNodeOfSequenceOfProgressScale_0.cxx
+  Message_SequenceOfPrinters_0.cxx
+  Message_SequenceOfProgressScale_0.cxx
+  Message.cxx
+  Message_Algorithm.cxx
+  Message_Messenger.cxx
+  Message_Msg.cxx
+  Message_MsgFile.cxx
+  Message_Printer.cxx
+  Message_ProgressIndicator.cxx
+  Message_ProgressScale.cxx
+  Message_ProgressSentry.cxx
+  正在生成代码...
+  OSD_Exception_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_ACCESS_VIOLATION_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_ACCESS_VIOLATION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_ACCESS_VIOLATION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_ACCESS_VIOLATION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_ARRAY_BOUNDS_EXCEEDED_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_ARRAY_BOUNDS_EXCEEDED_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_ARRAY_BOUNDS_EXCEEDED_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_ARRAY_BOUNDS_EXCEEDED_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_CTRL_BREAK_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_CTRL_BREAK_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_CTRL_BREAK_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_CTRL_BREAK_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_FLT_DENORMAL_OPERAND_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_DENORMAL_OPERAND_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_DENORMAL_OPERAND_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_DENORMAL_OPERAND_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_FLT_DIVIDE_BY_ZERO_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_DIVIDE_BY_ZERO_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_DIVIDE_BY_ZERO_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_DIVIDE_BY_ZERO_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_FLT_INEXACT_RESULT_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_INEXACT_RESULT_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_INEXACT_RESULT_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_INEXACT_RESULT_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_FLT_INVALID_OPERATION_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_INVALID_OPERATION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_INVALID_OPERATION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_INVALID_OPERATION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_FLT_OVERFLOW_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_OVERFLOW_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_OVERFLOW_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_OVERFLOW_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_FLT_STACK_CHECK_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_STACK_CHECK_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_STACK_CHECK_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_STACK_CHECK_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_FLT_UNDERFLOW_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_UNDERFLOW_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_UNDERFLOW_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_FLT_UNDERFLOW_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_ILLEGAL_INSTRUCTION_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_ILLEGAL_INSTRUCTION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_ILLEGAL_INSTRUCTION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_ILLEGAL_INSTRUCTION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_INT_DIVIDE_BY_ZERO_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_INT_DIVIDE_BY_ZERO_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_INT_DIVIDE_BY_ZERO_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_INT_DIVIDE_BY_ZERO_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_INT_OVERFLOW_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_INT_OVERFLOW_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_INT_OVERFLOW_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_INT_OVERFLOW_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_INVALID_DISPOSITION_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_INVALID_DISPOSITION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_INVALID_DISPOSITION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_INVALID_DISPOSITION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_IN_PAGE_ERROR_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_IN_PAGE_ERROR_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_IN_PAGE_ERROR_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_IN_PAGE_ERROR_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_NONCONTINUABLE_EXCEPTION_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_NONCONTINUABLE_EXCEPTION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_NONCONTINUABLE_EXCEPTION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_NONCONTINUABLE_EXCEPTION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_PRIV_INSTRUCTION_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_PRIV_INSTRUCTION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_PRIV_INSTRUCTION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_PRIV_INSTRUCTION_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_STACK_OVERFLOW_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_STACK_OVERFLOW_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_STACK_OVERFLOW_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_STACK_OVERFLOW_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Exception_STATUS_NO_MEMORY_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_STATUS_NO_MEMORY_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_STATUS_NO_MEMORY_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Exception_STATUS_NO_MEMORY_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  正在生成代码...
+  正在编译...
+  OSD_OSDError_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_OSDError_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_OSDError_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_OSDError_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_SIGBUS_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGBUS_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGBUS_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGBUS_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_SIGHUP_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGHUP_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGHUP_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGHUP_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_SIGILL_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGILL_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGILL_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGILL_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_SIGINT_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGINT_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGINT_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGINT_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_SIGKILL_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGKILL_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGKILL_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGKILL_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_SIGQUIT_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGQUIT_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGQUIT_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGQUIT_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_SIGSEGV_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGSEGV_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGSEGV_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGSEGV_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_SIGSYS_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGSYS_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGSYS_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_SIGSYS_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Signal_0.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Signal_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Signal_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/drv/OSD/OSD_Signal_0.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Chronometer.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Chronometer.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Chronometer.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Chronometer.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Directory.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Directory.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Directory.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Directory.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_DirectoryIterator.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_DirectoryIterator.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_DirectoryIterator.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_DirectoryIterator.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Disk.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Disk.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Disk.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Disk.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Environment.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Environment.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Environment.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Environment.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_EnvironmentIterator.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_EnvironmentIterator.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_EnvironmentIterator.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_EnvironmentIterator.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Error.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Error.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Error.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Error.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_File.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_File.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_File.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_File.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_File.cxx(1144,16): warning C4312: “类型强制转换”: 从“DWORD”转换到更大的“Standard_CString” [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_File.cxx(1206,16): warning C4312: “类型强制转换”: 从“DWORD”转换到更大的“Standard_CString” [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_File.cxx(2216,34): warning C4311: “类型强制转换”: 从“Standard_PCharacter”到“DWORD”的指针截断 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_File.cxx(2216,34): warning C4302: “类型强制转换”: 从“Standard_PCharacter”到“DWORD”截断 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_File.cxx(2229,34): warning C4311: “类型强制转换”: 从“Standard_PCharacter”到“DWORD”的指针截断 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_File.cxx(2229,34): warning C4302: “类型强制转换”: 从“Standard_PCharacter”到“DWORD”截断 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_File.cxx(2250,34): warning C4311: “类型强制转换”: 从“Standard_PCharacter”到“DWORD”的指针截断 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_File.cxx(2250,34): warning C4302: “类型强制转换”: 从“Standard_PCharacter”到“DWORD”截断 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  OSD_FileIterator.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_FileIterator.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_FileIterator.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_FileIterator.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  正在生成代码...
+  正在编译...
+  OSD_FileNode.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_FileNode.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_FileNode.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_FileNode.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_FileNode.cxx(887,21): warning C4244: “return”: 从“intptr_t”转换到“Standard_Integer”，可能丢失数据 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_FileNode.cxx(920,21): warning C4244: “return”: 从“intptr_t”转换到“Standard_Integer”，可能丢失数据 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  OSD_Function.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Function.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Function.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Function.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Host.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Host.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Host.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Host.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_Host.cxx(263,10): warning C4996: 'GetVersionExA': 被声明为已否决 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  OSD_MAllocHook.cxx
+  OSD_MailBox.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_MailBox.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_MailBox.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_MailBox.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_MemInfo.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_MemInfo.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_MemInfo.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_MemInfo.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Path.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Path.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Path.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Path.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_PerfMeter.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_PerfMeter.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_PerfMeter.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_PerfMeter.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Printer.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Printer.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Printer.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Printer.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Process.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Process.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Process.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Process.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_Process.cxx(330,21): warning C4244: “return”: 从“intptr_t”转换到“Standard_Integer”，可能丢失数据 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  OSD_Protection.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Protection.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Protection.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Protection.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_Semaphore.cxx
+  OSD_SharedLibrary.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_SharedLibrary.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_SharedLibrary.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_SharedLibrary.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_SharedMemory.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_SharedMemory.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_SharedMemory.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_SharedMemory.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_SharedMemory.cxx(212,25): warning C4312: “类型强制转换”: 从“unsigned int”转换到更大的“HANDLE” [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  OSD_Thread.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_Thread.cxx(148,20): warning C4244: “return”: 从“intptr_t”转换到“DWORD”，可能丢失数据 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_Thread.cxx(254,14): warning C4312: “类型强制转换”: 从“DWORD”转换到更大的“Standard_Address” [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\OSD\OSD_Thread.cxx(284,16): warning C4312: “类型强制转换”: 从“DWORD”转换到更大的“Standard_Address” [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  OSD_Timer.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Timer.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Timer.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_Timer.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_WNT.cxx
+  OSD_signal.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_signal.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_signal.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_signal.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  OSD_signal_WNT.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_signal_WNT.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_signal_WNT.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/OSD/OSD_signal_WNT.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  Standard_OStream.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/Standard/Standard_OStream.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/Standard/Standard_OStream.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/Standard/Standard_OStream.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  正在生成代码...
+  正在编译...
+  Message_PrinterOStream.cxx
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(28,31): warning C4273: “acosh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/Message/Message_PrinterOStream.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      参见“acosh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(29,31): warning C4273: “asinh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/Message/Message_PrinterOStream.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      参见“asinh”的前一个定义
+  
+C:\occt-cad-6acadf32\learning\submit-24161\src\src\Standard\Standard_math.hxx(30,31): warning C4273: “atanh”: dll 链接不一致 [C:\occt-cad-6acadf32\learning\submit-24161\build\adm\cmake\TKernel\TKernel.vcxproj]
+  (编译源文件“../../../../src/src/Message/Message_PrinterOStream.cxx”)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      参见“atanh”的前一个定义
+  
+  正在生成代码...
+  OSD_Cmailbox.c
+  OSD_Csemaphore.c
+  OSD_Csharedmemory.c
+  OSD_Getkey.c
+  Resource_ConvertUnicode.c
+  Standard_osd_ffi.c
+  Standard_symlink.c
+  正在生成代码...
+    正在创建库 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKernel.lib 和对象 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKernel.exp
+  TKernel.vcxproj -> C:\occt-cad-6acadf32\learning\submit-24161\build\bin\Release\TKernel.dll
+  Building Custom Rule C:/occt-cad-6acadf32/learning/submit-24161/src/adm/cmake/TKMath/CMakeLists.txt
+  Precompiled.cpp
+  math_Array1OfValueAndWeight_0.cxx
+  math_DoubleTabOfReal_0.cxx
+  math_NotSquare_0.cxx
+  math_QuickSortOfValueAndWeight_0.cxx
+  math_SingleTabOfInteger_0.cxx
+  math_SingleTabOfReal_0.cxx
+  math_SingularMatrix_0.cxx
+  math.cxx
+  math_BFGS.cxx
+  math_BissecNewton.cxx
+  math_BracketMinimum.cxx
+  math_BracketedRoot.cxx
+  math_BrentMinimum.cxx
+  math_CompareOfValueAndWeight.cxx
+  math_ComputeGaussPointsAndWeights.cxx
+  math_ComputeKronrodPointsAndWeights.cxx
+  math_Crout.cxx
+  math_DirectPolynomialRoots.cxx
+  math_EigenValuesSearcher.cxx
+  math_FRPR.cxx
+  正在生成代码...
+  正在编译...
+  math_Function.cxx
+  math_FunctionAllRoots.cxx
+  math_FunctionRoot.cxx
+  math_FunctionRoots.cxx
+  math_FunctionSample.cxx
+  math_FunctionSet.cxx
+  math_FunctionSetRoot.cxx
+  math_FunctionSetWithDerivatives.cxx
+  math_FunctionWithDerivative.cxx
+  math_Gauss.cxx
+  math_GaussLeastSquare.cxx
+  math_GaussMultipleIntegration.cxx
+  math_GaussSetIntegration.cxx
+  math_GaussSingleIntegration.cxx
+  math_Householder.cxx
+  math_IntegerRandom.cxx
+  math_IntegerVector.cxx
+  math_Jacobi.cxx
+  math_Kronrod.cxx
+  math_KronrodSingleIntegration.cxx
+  正在生成代码...
+  正在编译...
+  math_Matrix.cxx
+  math_Memory.cxx
+  math_MultipleVarFunction.cxx
+  math_MultipleVarFunctionWithGradient.cxx
+  math_MultipleVarFunctionWithHessian.cxx
+  math_NewtonFunctionRoot.cxx
+  math_NewtonFunctionSetRoot.cxx
+  math_NewtonMinimum.cxx
+  math_Powell.cxx
+  math_RealRandom.cxx
+  math_Recipes.cxx
+  math_SVD.cxx
+  math_TrigonometricFunctionRoots.cxx
+  math_Uzawa.cxx
+  math_ValueAndWeight.cxx
+  math_Vector.cxx
+  ElCLib.cxx
+  ElSLib.cxx
+  BSplCLib.cxx
+  BSplCLib_1.cxx
+  正在生成代码...
+  正在编译...
+  BSplCLib_2.cxx
+  BSplCLib_3.cxx
+  BSplCLib_BzSyntaxes.cxx
+  BSplSLib.cxx
+  BSplSLib_BzSyntaxes.cxx
+  PLib.cxx
+  PLib_Base.cxx
+  PLib_DoubleJacobiPolynomial.cxx
+  PLib_HermitJacobi.cxx
+  PLib_JacobiPolynomial.cxx
+  Precision.cxx
+  Poly_Array1OfTriangle_0.cxx
+  Poly_HArray1OfTriangle_0.cxx
+  Poly.cxx
+  Poly_CoherentLink.cxx
+  Poly_CoherentNode.cxx
+  Poly_CoherentTriPtr.cxx
+  Poly_CoherentTriangle.cxx
+  Poly_CoherentTriangulation.cxx
+  Poly_Connect.cxx
+  正在生成代码...
+  正在编译...
+  Poly_MakeLoops.cxx
+  Poly_Polygon2D.cxx
+  Poly_Polygon3D.cxx
+  Poly_PolygonOnTriangulation.cxx
+  Poly_Triangle.cxx
+  Poly_Triangulation.cxx
+  CSLib.cxx
+  CSLib_Class2d.cxx
+  CSLib_NormalPolyDef.cxx
+  Convert_SequenceNodeOfSequenceOfArray1OfPoles_0.cxx
+  Convert_SequenceOfArray1OfPoles_0.cxx
+  Convert_CircleToBSplineCurve.cxx
+  Convert_CompBezierCurves2dToBSplineCurve2d.cxx
+  Convert_CompBezierCurvesToBSplineCurve.cxx
+  Convert_CompPolynomialToPoles.cxx
+  Convert_ConeToBSplineSurface.cxx
+  Convert_ConicToBSplineCurve.cxx
+  Convert_CylinderToBSplineSurface.cxx
+  Convert_ElementarySurfaceToBSplineSurface.cxx
+  Convert_EllipseToBSplineCurve.cxx
+  正在生成代码...
+  正在编译...
+  Convert_GridPolynomialToPoles.cxx
+  Convert_HyperbolaToBSplineCurve.cxx
+  Convert_ParabolaToBSplineCurve.cxx
+  Convert_PolynomialCosAndSin.cxx
+  Convert_SphereToBSplineSurface.cxx
+  Convert_TorusToBSplineSurface.cxx
+  Bnd_Array1OfBox2d_0.cxx
+  Bnd_Array1OfBox_0.cxx
+  Bnd_Array1OfSphere_0.cxx
+  Bnd_B2d_0.cxx
+  Bnd_B2f_0.cxx
+  Bnd_B3d_0.cxx
+  Bnd_B3f_0.cxx
+  Bnd_HArray1OfBox2d_0.cxx
+  Bnd_HArray1OfBox_0.cxx
+  Bnd_HArray1OfSphere_0.cxx
+  Bnd_SeqOfBox_0.cxx
+  Bnd_SequenceNodeOfSeqOfBox_0.cxx
+  Bnd_BoundSortBox.cxx
+  Bnd_BoundSortBox2d.cxx
+  正在生成代码...
+  正在编译...
+  Bnd_Box.cxx
+  Bnd_Box2d.cxx
+  Bnd_Sphere.cxx
+  gp_VectorWithNullMagnitude_0.cxx
+  gp.cxx
+  gp_Ax1.cxx
+  gp_Ax2.cxx
+  gp_Ax22d.cxx
+  gp_Ax2d.cxx
+  gp_Ax3.cxx
+  gp_Circ.cxx
+  gp_Circ2d.cxx
+  gp_Cone.cxx
+  gp_Cylinder.cxx
+  gp_Dir.cxx
+  gp_Dir2d.cxx
+  gp_Elips.cxx
+  gp_Elips2d.cxx
+  gp_GTrsf.cxx
+  gp_GTrsf2d.cxx
+  正在生成代码...
+  正在编译...
+  gp_Hypr.cxx
+  gp_Hypr2d.cxx
+  gp_Lin.cxx
+  gp_Lin2d.cxx
+  gp_Mat.cxx
+  gp_Mat2d.cxx
+  gp_Parab.cxx
+  gp_Parab2d.cxx
+  gp_Pln.cxx
+  gp_Pnt.cxx
+  gp_Pnt2d.cxx
+  gp_Quaternion.cxx
+  gp_Sphere.cxx
+  gp_Torus.cxx
+  gp_Trsf.cxx
+  gp_Trsf2d.cxx
+  gp_Vec.cxx
+  gp_Vec2d.cxx
+  gp_XY.cxx
+  gp_XYZ.cxx
+  正在生成代码...
+  正在编译...
+  TColgp_Array1OfCirc2d_0.cxx
+  TColgp_Array1OfDir2d_0.cxx
+  TColgp_Array1OfDir_0.cxx
+  TColgp_Array1OfLin2d_0.cxx
+  TColgp_Array1OfPnt2d_0.cxx
+  TColgp_Array1OfPnt_0.cxx
+  TColgp_Array1OfVec2d_0.cxx
+  TColgp_Array1OfVec_0.cxx
+  TColgp_Array1OfXYZ_0.cxx
+  TColgp_Array1OfXY_0.cxx
+  TColgp_Array2OfCirc2d_0.cxx
+  TColgp_Array2OfDir2d_0.cxx
+  TColgp_Array2OfDir_0.cxx
+  TColgp_Array2OfLin2d_0.cxx
+  TColgp_Array2OfPnt2d_0.cxx
+  TColgp_Array2OfPnt_0.cxx
+  TColgp_Array2OfVec2d_0.cxx
+  TColgp_Array2OfVec_0.cxx
+  TColgp_Array2OfXYZ_0.cxx
+  TColgp_Array2OfXY_0.cxx
+  正在生成代码...
+  正在编译...
+  TColgp_DataMapIteratorOfDataMapOfIntegerCirc2d_0.cxx
+  TColgp_DataMapNodeOfDataMapOfIntegerCirc2d_0.cxx
+  TColgp_DataMapOfIntegerCirc2d_0.cxx
+  TColgp_HArray1OfCirc2d_0.cxx
+  TColgp_HArray1OfDir2d_0.cxx
+  TColgp_HArray1OfDir_0.cxx
+  TColgp_HArray1OfLin2d_0.cxx
+  TColgp_HArray1OfPnt2d_0.cxx
+  TColgp_HArray1OfPnt_0.cxx
+  TColgp_HArray1OfVec2d_0.cxx
+  TColgp_HArray1OfVec_0.cxx
+  TColgp_HArray1OfXYZ_0.cxx
+  TColgp_HArray1OfXY_0.cxx
+  TColgp_HArray2OfCirc2d_0.cxx
+  TColgp_HArray2OfDir2d_0.cxx
+  TColgp_HArray2OfDir_0.cxx
+  TColgp_HArray2OfLin2d_0.cxx
+  TColgp_HArray2OfPnt2d_0.cxx
+  TColgp_HArray2OfPnt_0.cxx
+  TColgp_HArray2OfVec2d_0.cxx
+  正在生成代码...
+  正在编译...
+  TColgp_HArray2OfVec_0.cxx
+  TColgp_HArray2OfXYZ_0.cxx
+  TColgp_HArray2OfXY_0.cxx
+  TColgp_HSequenceOfDir2d_0.cxx
+  TColgp_HSequenceOfDir_0.cxx
+  TColgp_HSequenceOfPnt2d_0.cxx
+  TColgp_HSequenceOfPnt_0.cxx
+  TColgp_HSequenceOfVec2d_0.cxx
+  TColgp_HSequenceOfVec_0.cxx
+  TColgp_HSequenceOfXYZ_0.cxx
+  TColgp_HSequenceOfXY_0.cxx
+  TColgp_SequenceNodeOfSequenceOfArray1OfPnt2d_0.cxx
+  TColgp_SequenceNodeOfSequenceOfDir2d_0.cxx
+  TColgp_SequenceNodeOfSequenceOfDir_0.cxx
+  TColgp_SequenceNodeOfSequenceOfPnt2d_0.cxx
+  TColgp_SequenceNodeOfSequenceOfPnt_0.cxx
+  TColgp_SequenceNodeOfSequenceOfVec2d_0.cxx
+  TColgp_SequenceNodeOfSequenceOfVec_0.cxx
+  TColgp_SequenceNodeOfSequenceOfXYZ_0.cxx
+  TColgp_SequenceNodeOfSequenceOfXY_0.cxx
+  正在生成代码...
+  正在编译...
+  TColgp_SequenceOfArray1OfPnt2d_0.cxx
+  TColgp_SequenceOfDir2d_0.cxx
+  TColgp_SequenceOfDir_0.cxx
+  TColgp_SequenceOfPnt2d_0.cxx
+  TColgp_SequenceOfPnt_0.cxx
+  TColgp_SequenceOfVec2d_0.cxx
+  TColgp_SequenceOfVec_0.cxx
+  TColgp_SequenceOfXYZ_0.cxx
+  TColgp_SequenceOfXY_0.cxx
+  TopLoc_IndexedMapNodeOfIndexedMapOfLocation_0.cxx
+  TopLoc_IndexedMapOfLocation_0.cxx
+  TopLoc_MapIteratorOfMapOfLocation_0.cxx
+  TopLoc_MapLocationHasher_0.cxx
+  TopLoc_MapOfLocation_0.cxx
+  TopLoc_SListNodeOfSListOfItemLocation_0.cxx
+  TopLoc_SListOfItemLocation_0.cxx
+  TopLoc_StdMapNodeOfMapOfLocation_0.cxx
+  TopLoc_Datum3D.cxx
+  TopLoc_ItemLocation.cxx
+  TopLoc_Location.cxx
+  正在生成代码...
+    正在创建库 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKMath.lib 和对象 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKMath.exp
+  TKMath.vcxproj -> C:\occt-cad-6acadf32\learning\submit-24161\build\bin\Release\TKMath.dll
+  Building Custom Rule C:/occt-cad-6acadf32/learning/submit-24161/src/adm/cmake/TKG2d/CMakeLists.txt
+  Precompiled.cpp
+  Geom2d_UndefinedDerivative_0.cxx
+  Geom2d_UndefinedValue_0.cxx
+  Geom2d_AxisPlacement.cxx
+  Geom2d_BSplineCurve.cxx
+  Geom2d_BSplineCurve_1.cxx
+  Geom2d_BezierCurve.cxx
+  Geom2d_BoundedCurve.cxx
+  Geom2d_CartesianPoint.cxx
+  Geom2d_Circle.cxx
+  Geom2d_Conic.cxx
+  Geom2d_Curve.cxx
+  Geom2d_Direction.cxx
+  Geom2d_Ellipse.cxx
+  Geom2d_Geometry.cxx
+  Geom2d_Hyperbola.cxx
+  Geom2d_Line.cxx
+  Geom2d_OffsetCurve.cxx
+  Geom2d_Parabola.cxx
+  Geom2d_Point.cxx
+  Geom2d_Transformation.cxx
+  正在生成代码...
+  正在编译...
+  Geom2d_TrimmedCurve.cxx
+  Geom2d_Vector.cxx
+  Geom2d_VectorWithMagnitude.cxx
+  LProp_BadContinuity_0.cxx
+  LProp_NotDefined_0.cxx
+  LProp_SequenceNodeOfSequenceOfCIType_0.cxx
+  LProp_SequenceOfCIType_0.cxx
+  LProp_AnalyticCurInf.cxx
+  LProp_CurAndInf.cxx
+  TColGeom2d_Array1OfBSplineCurve_0.cxx
+  TColGeom2d_Array1OfBezierCurve_0.cxx
+  TColGeom2d_Array1OfBoundedCurve_0.cxx
+  TColGeom2d_Array1OfCurve_0.cxx
+  TColGeom2d_Array1OfGeometry_0.cxx
+  TColGeom2d_HArray1OfBSplineCurve_0.cxx
+  TColGeom2d_HArray1OfBezierCurve_0.cxx
+  TColGeom2d_HArray1OfBoundedCurve_0.cxx
+  TColGeom2d_HArray1OfCurve_0.cxx
+  TColGeom2d_HArray1OfGeometry_0.cxx
+  TColGeom2d_HSequenceOfBoundedCurve_0.cxx
+  正在生成代码...
+  正在编译...
+  TColGeom2d_HSequenceOfCurve_0.cxx
+  TColGeom2d_HSequenceOfGeometry_0.cxx
+  TColGeom2d_SequenceNodeOfSequenceOfBoundedCurve_0.cxx
+  TColGeom2d_SequenceNodeOfSequenceOfCurve_0.cxx
+  TColGeom2d_SequenceNodeOfSequenceOfGeometry_0.cxx
+  TColGeom2d_SequenceOfBoundedCurve_0.cxx
+  TColGeom2d_SequenceOfCurve_0.cxx
+  TColGeom2d_SequenceOfGeometry_0.cxx
+  Adaptor2d_HLine2d_0.cxx
+  Adaptor2d_Curve2d.cxx
+  Adaptor2d_HCurve2d.cxx
+  Adaptor2d_Line2d.cxx
+  Geom2dLProp_CLProps2d_0.cxx
+  Geom2dLProp_FCurExtOfNumericCurInf2d_0.cxx
+  Geom2dLProp_FCurNulOfNumericCurInf2d_0.cxx
+  Geom2dLProp_NumericCurInf2d_0.cxx
+  Geom2dLProp_CurAndInf2d.cxx
+  Geom2dLProp_Curve2dTool.cxx
+  Geom2dAdaptor_GHCurve_0.cxx
+  Geom2dAdaptor.cxx
+  正在生成代码...
+  正在编译...
+  Geom2dAdaptor_Curve.cxx
+  Geom2dAdaptor_HCurve.cxx
+  GProp_UndefinedAxis_0.cxx
+  GProp.cxx
+  GProp_CelGProps.cxx
+  GProp_GProps.cxx
+  GProp_PEquation.cxx
+  GProp_PGProps.cxx
+  GProp_PrincipalProps.cxx
+  GProp_SelGProps.cxx
+  GProp_VelGProps.cxx
+  正在生成代码...
+    正在创建库 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKG2d.lib 和对象 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKG2d.exp
+  TKG2d.vcxproj -> C:\occt-cad-6acadf32\learning\submit-24161\build\bin\Release\TKG2d.dll
+  Building Custom Rule C:/occt-cad-6acadf32/learning/submit-24161/src/adm/cmake/TKG3d/CMakeLists.txt
+  Precompiled.cpp
+  Geom_HSequenceOfBSplineSurface_0.cxx
+  Geom_HSequenceOfSurface_0.cxx
+  Geom_SequenceNodeOfSequenceOfBSplineSurface_0.cxx
+  Geom_SequenceNodeOfSequenceOfSurface_0.cxx
+  Geom_SequenceOfBSplineSurface_0.cxx
+  Geom_SequenceOfSurface_0.cxx
+  Geom_UndefinedDerivative_0.cxx
+  Geom_UndefinedValue_0.cxx
+  Geom_Axis1Placement.cxx
+  Geom_Axis2Placement.cxx
+  Geom_AxisPlacement.cxx
+  Geom_BSplineCurve.cxx
+  Geom_BSplineCurve_1.cxx
+  Geom_BSplineSurface.cxx
+  Geom_BSplineSurface_1.cxx
+  Geom_BezierCurve.cxx
+  Geom_BezierSurface.cxx
+  Geom_BoundedCurve.cxx
+  Geom_BoundedSurface.cxx
+  Geom_CartesianPoint.cxx
+  正在生成代码...
+  正在编译...
+  Geom_Circle.cxx
+  Geom_Conic.cxx
+  Geom_ConicalSurface.cxx
+  Geom_Curve.cxx
+  Geom_CylindricalSurface.cxx
+  Geom_Direction.cxx
+  Geom_ElementarySurface.cxx
+  Geom_Ellipse.cxx
+  Geom_Geometry.cxx
+  Geom_Hyperbola.cxx
+  Geom_Line.cxx
+  Geom_OffsetCurve.cxx
+  Geom_OffsetSurface.cxx
+  Geom_OsculatingSurface.cxx
+  Geom_Parabola.cxx
+  Geom_Plane.cxx
+  Geom_Point.cxx
+  Geom_RectangularTrimmedSurface.cxx
+  Geom_SphericalSurface.cxx
+  Geom_Surface.cxx
+  正在生成代码...
+  正在编译...
+  Geom_SurfaceOfLinearExtrusion.cxx
+  Geom_SurfaceOfRevolution.cxx
+  Geom_SweptSurface.cxx
+  Geom_ToroidalSurface.cxx
+  Geom_Transformation.cxx
+  Geom_TrimmedCurve.cxx
+  Geom_Vector.cxx
+  Geom_VectorWithMagnitude.cxx
+  TColGeom_Array1OfBSplineCurve_0.cxx
+  TColGeom_Array1OfBezierCurve_0.cxx
+  TColGeom_Array1OfBoundedCurve_0.cxx
+  TColGeom_Array1OfBoundedSurface_0.cxx
+  TColGeom_Array1OfCurve_0.cxx
+  TColGeom_Array1OfSurface_0.cxx
+  TColGeom_Array2OfBSplineSurface_0.cxx
+  TColGeom_Array2OfBezierSurface_0.cxx
+  TColGeom_Array2OfBoundedSurface_0.cxx
+  TColGeom_Array2OfSurface_0.cxx
+  TColGeom_HArray1OfBSplineCurve_0.cxx
+  TColGeom_HArray1OfBezierCurve_0.cxx
+  正在生成代码...
+  正在编译...
+  TColGeom_HArray1OfBoundedCurve_0.cxx
+  TColGeom_HArray1OfBoundedSurface_0.cxx
+  TColGeom_HArray1OfCurve_0.cxx
+  TColGeom_HArray1OfSurface_0.cxx
+  TColGeom_HArray2OfBSplineSurface_0.cxx
+  TColGeom_HArray2OfBezierSurface_0.cxx
+  TColGeom_HArray2OfBoundedSurface_0.cxx
+  TColGeom_HArray2OfSurface_0.cxx
+  TColGeom_HSequenceOfBoundedCurve_0.cxx
+  TColGeom_HSequenceOfBoundedSurface_0.cxx
+  TColGeom_HSequenceOfCurve_0.cxx
+  TColGeom_HSequenceOfSurface_0.cxx
+  TColGeom_SequenceNodeOfSequenceOfBoundedCurve_0.cxx
+  TColGeom_SequenceNodeOfSequenceOfBoundedSurface_0.cxx
+  TColGeom_SequenceNodeOfSequenceOfCurve_0.cxx
+  TColGeom_SequenceNodeOfSequenceOfSurface_0.cxx
+  TColGeom_SequenceOfBoundedCurve_0.cxx
+  TColGeom_SequenceOfBoundedSurface_0.cxx
+  TColGeom_SequenceOfCurve_0.cxx
+  TColGeom_SequenceOfSurface_0.cxx
+  正在生成代码...
+  正在编译...
+  GeomAdaptor_GHCurve_0.cxx
+  GeomAdaptor_GHSurface_0.cxx
+  GeomAdaptor.cxx
+  GeomAdaptor_Curve.cxx
+  GeomAdaptor_HCurve.cxx
+  GeomAdaptor_HSurface.cxx
+  GeomAdaptor_Surface.cxx
+  AdvApprox_ApproxAFunction.cxx
+  AdvApprox_Cutting.cxx
+  AdvApprox_DichoCutting.cxx
+  AdvApprox_PrefAndRec.cxx
+  AdvApprox_PrefCutting.cxx
+  AdvApprox_SimpleApprox.cxx
+  GeomLProp_CLProps_0.cxx
+  GeomLProp_SLProps_0.cxx
+  GeomLProp.cxx
+  GeomLProp_CurveTool.cxx
+  GeomLProp_SurfaceTool.cxx
+  Adaptor3d_HCurveOnSurface_0.cxx
+  Adaptor3d_HIsoCurve_0.cxx
+  正在生成代码...
+  正在编译...
+  Adaptor3d_HOffsetCurve_0.cxx
+  Adaptor3d_HSurfaceOfLinearExtrusion_0.cxx
+  Adaptor3d_HSurfaceOfRevolution_0.cxx
+  Adaptor3d_Curve.cxx
+  Adaptor3d_CurveOnSurface.cxx
+  Adaptor3d_HCurve.cxx
+  Adaptor3d_HSurface.cxx
+  Adaptor3d_HSurfaceTool.cxx
+  Adaptor3d_HVertex.cxx
+  Adaptor3d_InterFunc.cxx
+  Adaptor3d_IsoCurve.cxx
+  Adaptor3d_OffsetCurve.cxx
+  Adaptor3d_Surface.cxx
+  Adaptor3d_SurfaceOfLinearExtrusion.cxx
+  Adaptor3d_SurfaceOfRevolution.cxx
+  Adaptor3d_TopolTool.cxx
+  LProp3d_CLProps_0.cxx
+  LProp3d_SLProps_0.cxx
+  LProp3d_CurveTool.cxx
+  LProp3d_SurfaceTool.cxx
+  正在生成代码...
+  正在编译...
+  TopAbs.cxx
+  正在生成代码...
+    正在创建库 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKG3d.lib 和对象 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKG3d.exp
+  TKG3d.vcxproj -> C:\occt-cad-6acadf32\learning\submit-24161\build\bin\Release\TKG3d.dll
+  Building Custom Rule C:/occt-cad-6acadf32/learning/submit-24161/src/adm/cmake/TKGeomBase/CMakeLists.txt
+  Precompiled.cpp
+  ProjLib_HCompProjectedCurve_0.cxx
+  ProjLib_HProjectedCurve_0.cxx
+  ProjLib_HSequenceOfHSequenceOfPnt_0.cxx
+  ProjLib_SequenceNodeOfSequenceOfHSequenceOfPnt_0.cxx
+  ProjLib_SequenceOfHSequenceOfPnt_0.cxx
+  ProjLib.cxx
+  ProjLib_CompProjectedCurve.cxx
+  ProjLib_ComputeApprox.cxx
+  ProjLib_ComputeApproxOnPolarSurface.cxx
+  ProjLib_Cone.cxx
+  ProjLib_Cylinder.cxx
+  ProjLib_Plane.cxx
+  ProjLib_PrjFunc.cxx
+  ProjLib_PrjResolve.cxx
+  ProjLib_ProjectOnPlane.cxx
+  ProjLib_ProjectOnSurface.cxx
+  ProjLib_ProjectedCurve.cxx
+  ProjLib_Projector.cxx
+  ProjLib_Sphere.cxx
+  ProjLib_Torus.cxx
+  正在生成代码...
+  正在编译...
+  GeomProjLib.cxx
+  GCPnts_AbscissaPoint.cxx
+  GCPnts_QuasiUniformAbscissa.cxx
+  GCPnts_QuasiUniformDeflection.cxx
+  GCPnts_TangentialDeflection.cxx
+  GCPnts_UniformAbscissa.cxx
+  GCPnts_UniformDeflection.cxx
+  CPnts_AbscissaPoint.cxx
+  CPnts_MyGaussFunction.cxx
+  CPnts_MyRootFunction.cxx
+  CPnts_UniformDeflection.cxx
+  Approx_Array1OfAdHSurface_0.cxx
+  Approx_Array1OfGTrsf2d_0.cxx
+  Approx_FitAndDivide2d_0.cxx
+  Approx_FitAndDivide_0.cxx
+  Approx_HArray1OfAdHSurface_0.cxx
+  Approx_HArray1OfGTrsf2d_0.cxx
+  Approx_MyLeastSquareOfFitAndDivide2d_0.cxx
+  Approx_MyLeastSquareOfFitAndDivide_0.cxx
+  Approx_SequenceNodeOfSequenceOfHArray1OfReal_0.cxx
+  正在生成代码...
+  正在编译...
+  Approx_SequenceOfHArray1OfReal_0.cxx
+  Approx_Curve2d.cxx
+  Approx_Curve3d.cxx
+  Approx_CurveOnSurface.cxx
+  Approx_CurvilinearParameter.cxx
+  Approx_CurvlinFunc.cxx
+  Approx_MCurvesToBSpCurve.cxx
+  Approx_SameParameter.cxx
+  Approx_SweepApproximation.cxx
+  Approx_SweepFunction.cxx
+  AppParCurves_Array1OfConstraintCouple_0.cxx
+  AppParCurves_Array1OfMultiBSpCurve_0.cxx
+  AppParCurves_Array1OfMultiCurve_0.cxx
+  AppParCurves_Array1OfMultiPoint_0.cxx
+  AppParCurves_HArray1OfConstraintCouple_0.cxx
+  AppParCurves_HArray1OfMultiBSpCurve_0.cxx
+  AppParCurves_HArray1OfMultiCurve_0.cxx
+  AppParCurves_HArray1OfMultiPoint_0.cxx
+  AppParCurves_SequenceNodeOfSequenceOfMultiBSpCurve_0.cxx
+  AppParCurves_SequenceNodeOfSequenceOfMultiCurve_0.cxx
+  正在生成代码...
+  正在编译...
+  AppParCurves_SequenceOfMultiBSpCurve_0.cxx
+  AppParCurves_SequenceOfMultiCurve_0.cxx
+  AppParCurves.cxx
+  AppParCurves_ConstraintCouple.cxx
+  AppParCurves_MultiBSpCurve.cxx
+  AppParCurves_MultiCurve.cxx
+  AppParCurves_MultiPoint.cxx
+  AppParCurves_SmoothCriterion.cxx
+  FEmTool_AssemblyTable_0.cxx
+  FEmTool_HAssemblyTable_0.cxx
+  FEmTool_ListIteratorOfListOfVectors_0.cxx
+  FEmTool_ListNodeOfListOfVectors_0.cxx
+  FEmTool_ListOfVectors_0.cxx
+  FEmTool_SeqOfLinConstr_0.cxx
+  FEmTool_SequenceNodeOfSeqOfLinConstr_0.cxx
+  FEmTool_Assembly.cxx
+  FEmTool_Curve.cxx
+  FEmTool_ElementaryCriterion.cxx
+  FEmTool_ElementsOfRefMatrix.cxx
+  FEmTool_LinearFlexion.cxx
+  正在生成代码...
+  正在编译...
+  FEmTool_LinearJerk.cxx
+  FEmTool_LinearTension.cxx
+  FEmTool_ProfileMatrix.cxx
+  FEmTool_SparseMatrix.cxx
+  AppCont_FitFunction2d_0.cxx
+  AppCont_FitFunction_0.cxx
+  AppCont_ContMatrices.cxx
+  AppCont_ContMatrices_1.cxx
+  AppCont_ContMatrices_2.cxx
+  AppCont_ContMatrices_3.cxx
+  AppCont_ContMatrices_4.cxx
+  AppCont_Function.cxx
+  AppCont_Function2d.cxx
+  AppCont_FunctionTool.cxx
+  AppCont_FunctionTool2d.cxx
+  Extrema_Array1OfPOnCurv2d_0.cxx
+  Extrema_Array1OfPOnCurv_0.cxx
+  Extrema_Array1OfPOnSurf_0.cxx
+  Extrema_Array2OfPOnCurv2d_0.cxx
+  Extrema_Array2OfPOnCurv_0.cxx
+  正在生成代码...
+  正在编译...
+  Extrema_Array2OfPOnSurfParams_0.cxx
+  Extrema_Array2OfPOnSurf_0.cxx
+  Extrema_CCFOfECC2dOfExtCC2d_0.cxx
+  Extrema_CCFOfECCOfExtCC_0.cxx
+  Extrema_CCFOfELCC2dOfLocateExtCC2d_0.cxx
+  Extrema_CCFOfELCCOfLocateExtCC_0.cxx
+  Extrema_CCLocFOfLocECC2dOfLocateExtCC2d_0.cxx
+  Extrema_CCLocFOfLocECCOfLocateExtCC_0.cxx
+  Extrema_CCache2dOfExtCC2d_0.cxx
+  Extrema_CCacheOfExtCC_0.cxx
+  Extrema_ECC2dOfExtCC2d_0.cxx
+  Extrema_ECCOfExtCC_0.cxx
+  Extrema_ELCC2dOfLocateExtCC2d_0.cxx
+  Extrema_ELCCOfLocateExtCC_0.cxx
+  Extrema_ELPCOfLocateExtPC2d_0.cxx
+  Extrema_ELPCOfLocateExtPC_0.cxx
+  Extrema_EPCOfELPCOfLocateExtPC2d_0.cxx
+  Extrema_EPCOfELPCOfLocateExtPC_0.cxx
+  Extrema_EPCOfExtPC2d_0.cxx
+  Extrema_EPCOfExtPC_0.cxx
+  正在生成代码...
+  正在编译...
+  Extrema_ExtCC2d_0.cxx
+  Extrema_ExtCC_0.cxx
+  Extrema_ExtPC2d_0.cxx
+  Extrema_ExtPC_0.cxx
+  Extrema_HArray1OfPOnCurv2d_0.cxx
+  Extrema_HArray1OfPOnCurv_0.cxx
+  Extrema_HArray1OfPOnSurf_0.cxx
+  Extrema_HArray2OfPOnCurv2d_0.cxx
+  Extrema_HArray2OfPOnCurv_0.cxx
+  Extrema_HArray2OfPOnSurfParams_0.cxx
+  Extrema_HArray2OfPOnSurf_0.cxx
+  Extrema_LCCache2dOfLocateExtCC2d_0.cxx
+  Extrema_LCCacheOfLocateExtCC_0.cxx
+  Extrema_LocECC2dOfLocateExtCC2d_0.cxx
+  Extrema_LocECCOfLocateExtCC_0.cxx
+  Extrema_LocEPCOfLocateExtPC2d_0.cxx
+  Extrema_LocEPCOfLocateExtPC_0.cxx
+  Extrema_LocateExtCC2d_0.cxx
+  Extrema_LocateExtCC_0.cxx
+  Extrema_LocateExtPC2d_0.cxx
+  正在生成代码...
+  正在编译...
+  Extrema_LocateExtPC_0.cxx
+  Extrema_PCFOfEPCOfELPCOfLocateExtPC2d_0.cxx
+  Extrema_PCFOfEPCOfELPCOfLocateExtPC_0.cxx
+  Extrema_PCFOfEPCOfExtPC2d_0.cxx
+  Extrema_PCFOfEPCOfExtPC_0.cxx
+  Extrema_PCLocFOfLocEPCOfLocateExtPC2d_0.cxx
+  Extrema_PCLocFOfLocEPCOfLocateExtPC_0.cxx
+  Extrema_POnCurv2d_0.cxx
+  Extrema_POnCurv_0.cxx
+  Extrema_SeqPCOfPCFOfEPCOfELPCOfLocateExtPC2d_0.cxx
+  Extrema_SeqPCOfPCFOfEPCOfELPCOfLocateExtPC_0.cxx
+  Extrema_SeqPCOfPCFOfEPCOfExtPC2d_0.cxx
+  Extrema_SeqPCOfPCFOfEPCOfExtPC_0.cxx
+  Extrema_SeqPCOfPCLocFOfLocEPCOfLocateExtPC2d_0.cxx
+  Extrema_SeqPCOfPCLocFOfLocEPCOfLocateExtPC_0.cxx
+  Extrema_SeqPOnCOfCCFOfECC2dOfExtCC2d_0.cxx
+  Extrema_SeqPOnCOfCCFOfECCOfExtCC_0.cxx
+  Extrema_SeqPOnCOfCCFOfELCC2dOfLocateExtCC2d_0.cxx
+  Extrema_SeqPOnCOfCCFOfELCCOfLocateExtCC_0.cxx
+  Extrema_SeqPOnCOfCCLocFOfLocECC2dOfLocateExtCC2d_0.cxx
+  正在生成代码...
+  正在编译...
+  Extrema_SeqPOnCOfCCLocFOfLocECCOfLocateExtCC_0.cxx
+  Extrema_SequenceNodeOfSeqPCOfPCFOfEPCOfELPCOfLocateExtPC2d_0.cxx
+  Extrema_SequenceNodeOfSeqPCOfPCFOfEPCOfELPCOfLocateExtPC_0.cxx
+  Extrema_SequenceNodeOfSeqPCOfPCFOfEPCOfExtPC2d_0.cxx
+  Extrema_SequenceNodeOfSeqPCOfPCFOfEPCOfExtPC_0.cxx
+  Extrema_SequenceNodeOfSeqPCOfPCLocFOfLocEPCOfLocateExtPC2d_0.cxx
+  Extrema_SequenceNodeOfSeqPCOfPCLocFOfLocEPCOfLocateExtPC_0.cxx
+  Extrema_SequenceNodeOfSeqPOnCOfCCFOfECC2dOfExtCC2d_0.cxx
+  Extrema_SequenceNodeOfSeqPOnCOfCCFOfECCOfExtCC_0.cxx
+  Extrema_SequenceNodeOfSeqPOnCOfCCFOfELCC2dOfLocateExtCC2d_0.cxx
+  Extrema_SequenceNodeOfSeqPOnCOfCCFOfELCCOfLocateExtCC_0.cxx
+  Extrema_SequenceNodeOfSeqPOnCOfCCLocFOfLocECC2dOfLocateExtCC2d_0.cxx
+  Extrema_SequenceNodeOfSeqPOnCOfCCLocFOfLocECCOfLocateExtCC_0.cxx
+  Extrema_SequenceNodeOfSequenceOfPOnCurv2d_0.cxx
+  Extrema_SequenceNodeOfSequenceOfPOnCurv_0.cxx
+  Extrema_SequenceNodeOfSequenceOfPOnSurf_0.cxx
+  Extrema_SequenceOfPOnCurv2d_0.cxx
+  Extrema_SequenceOfPOnCurv_0.cxx
+  Extrema_SequenceOfPOnSurf_0.cxx
+  Extrema_Curve2dTool.cxx
+  正在生成代码...
+  正在编译...
+  Extrema_CurveTool.cxx
+  Extrema_ExtCS.cxx
+  Extrema_ExtElC.cxx
+  Extrema_ExtElC2d.cxx
+  Extrema_ExtElCS.cxx
+  Extrema_ExtElSS.cxx
+  Extrema_ExtPElC.cxx
+  Extrema_ExtPElC2d.cxx
+  Extrema_ExtPElS.cxx
+  Extrema_ExtPExtS.cxx
+  Extrema_ExtPRevS.cxx
+  Extrema_ExtPS.cxx
+  Extrema_ExtSS.cxx
+  Extrema_FuncExtCS.cxx
+  Extrema_FuncExtPS.cxx
+  Extrema_FuncExtSS.cxx
+  Extrema_GenExtCS.cxx
+  Extrema_GenExtPS.cxx
+  Extrema_GenExtSS.cxx
+  Extrema_GenLocateExtCS.cxx
+  正在生成代码...
+  正在编译...
+  Extrema_GenLocateExtPS.cxx
+  Extrema_GenLocateExtSS.cxx
+  Extrema_POnSurf.cxx
+  Extrema_POnSurfParams.cxx
+  IntAna_ListIteratorOfListOfCurve_0.cxx
+  IntAna_ListNodeOfListOfCurve_0.cxx
+  IntAna_ListOfCurve_0.cxx
+  IntAna_Curve.cxx
+  IntAna_Int3Pln.cxx
+  IntAna_IntConicQuad.cxx
+  IntAna_IntLinTorus.cxx
+  IntAna_IntQuadQuad.cxx
+  IntAna_QuadQuadGeo.cxx
+  IntAna_Quadric.cxx
+  IntAna2d_AnaIntersection.cxx
+  IntAna2d_AnaIntersection_1.cxx
+  IntAna2d_AnaIntersection_2.cxx
+  IntAna2d_AnaIntersection_3.cxx
+  IntAna2d_AnaIntersection_4.cxx
+  IntAna2d_AnaIntersection_5.cxx
+  正在生成代码...
+  正在编译...
+  IntAna2d_AnaIntersection_6.cxx
+  IntAna2d_AnaIntersection_7.cxx
+  IntAna2d_AnaIntersection_8.cxx
+  IntAna2d_Conic.cxx
+  IntAna2d_IntPoint.cxx
+  IntAna2d_Outils.cxx
+  GeomConvert.cxx
+  GeomConvert_1.cxx
+  GeomConvert_ApproxCurve.cxx
+  GeomConvert_ApproxSurface.cxx
+  GeomConvert_BSplineCurveKnotSplitting.cxx
+  GeomConvert_BSplineCurveToBezierCurve.cxx
+  GeomConvert_BSplineSurfaceKnotSplitting.cxx
+  GeomConvert_BSplineSurfaceToBezierSurface.cxx
+  GeomConvert_CompBezierSurfacesToBSplineSurface.cxx
+  GeomConvert_CompCurveToBSplineCurve.cxx
+  AdvApp2Var_SequenceNodeOfSequenceOfNode_0.cxx
+  AdvApp2Var_SequenceNodeOfSequenceOfPatch_0.cxx
+  AdvApp2Var_SequenceNodeOfSequenceOfStrip_0.cxx
+  AdvApp2Var_SequenceNodeOfStrip_0.cxx
+  正在生成代码...
+  正在编译...
+  AdvApp2Var_SequenceOfNode_0.cxx
+  AdvApp2Var_SequenceOfPatch_0.cxx
+  AdvApp2Var_SequenceOfStrip_0.cxx
+  AdvApp2Var_Strip_0.cxx
+  AdvApp2Var_ApproxAFunc2Var.cxx
+  AdvApp2Var_ApproxF2var.cxx
+  AdvApp2Var_Context.cxx
+  AdvApp2Var_Criterion.cxx
+  AdvApp2Var_Data_0.cxx
+  AdvApp2Var_Data_1.cxx
+  AdvApp2Var_Data_2.cxx
+  AdvApp2Var_Data_3.cxx
+  AdvApp2Var_Data_4.cxx
+  AdvApp2Var_Data_5.cxx
+  AdvApp2Var_Data_6.cxx
+  AdvApp2Var_Data_7.cxx
+  AdvApp2Var_Framework.cxx
+  AdvApp2Var_Iso.cxx
+  AdvApp2Var_MathBase.cxx
+  AdvApp2Var_MathBase_mathinit.cxx
+  正在生成代码...
+  正在编译...
+  AdvApp2Var_Network.cxx
+  AdvApp2Var_Node.cxx
+  AdvApp2Var_Patch.cxx
+  AdvApp2Var_SysBase.cxx
+  AdvApp2Var_SysBase_baseinit.cxx
+  GeomLib_Array1OfMat_0.cxx
+  GeomLib.cxx
+  GeomLib_Check2dBSplineCurve.cxx
+  GeomLib_CheckBSplineCurve.cxx
+  GeomLib_DenominatorMultiplier.cxx
+  GeomLib_Interpolate.cxx
+  GeomLib_IsPlanarSurface.cxx
+  GeomLib_LogSample.cxx
+  GeomLib_MakeCurvefromApprox.cxx
+  GeomLib_PolyFunc.cxx
+  GeomLib_Tool.cxx
+  Geom2dConvert.cxx
+  Geom2dConvert_ApproxCurve.cxx
+  Geom2dConvert_BSplineCurveKnotSplitting.cxx
+  Geom2dConvert_BSplineCurveToBezierCurve.cxx
+  正在生成代码...
+  正在编译...
+  Geom2dConvert_CompCurveToBSplineCurve.cxx
+  Hermit.cxx
+  BndLib.cxx
+  BndLib_Add2dCurve.cxx
+  BndLib_Add3dCurve.cxx
+  BndLib_AddSurface.cxx
+  BndLib_Compute2d.cxx
+  BndLib_Compute3d.cxx
+  AppDef_Array1OfMultiPointConstraint_0.cxx
+  AppDef_BSpGradient_BFGSOfMyBSplGradientOfBSplineCompute_0.cxx
+  AppDef_BSpParFunctionOfMyBSplGradientOfBSplineCompute_0.cxx
+  AppDef_BSpParLeastSquareOfMyBSplGradientOfBSplineCompute_0.cxx
+  AppDef_BSplineCompute_0.cxx
+  AppDef_Compute_0.cxx
+  AppDef_Gradient_BFGSOfMyGradientOfCompute_0.cxx
+  AppDef_Gradient_BFGSOfMyGradientbisOfBSplineCompute_0.cxx
+  AppDef_Gradient_BFGSOfTheGradient_0.cxx
+  AppDef_HArray1OfMultiPointConstraint_0.cxx
+  AppDef_MyBSplGradientOfBSplineCompute_0.cxx
+  AppDef_MyCriterionOfTheVariational_0.cxx
+  正在生成代码...
+  正在编译...
+  AppDef_MyGradientOfCompute_0.cxx
+  AppDef_MyGradientbisOfBSplineCompute_0.cxx
+  AppDef_ParFunctionOfMyGradientOfCompute_0.cxx
+  AppDef_ParFunctionOfMyGradientbisOfBSplineCompute_0.cxx
+  AppDef_ParFunctionOfTheGradient_0.cxx
+  AppDef_ParLeastSquareOfMyGradientOfCompute_0.cxx
+  AppDef_ParLeastSquareOfMyGradientbisOfBSplineCompute_0.cxx
+  AppDef_ParLeastSquareOfTheGradient_0.cxx
+  AppDef_ResConstraintOfMyGradientOfCompute_0.cxx
+  AppDef_ResConstraintOfMyGradientbisOfBSplineCompute_0.cxx
+  AppDef_ResConstraintOfTheGradient_0.cxx
+  AppDef_TheFunction_0.cxx
+  AppDef_TheGradient_0.cxx
+  AppDef_TheLeastSquares_0.cxx
+  AppDef_TheResol_0.cxx
+  AppDef_TheVariational_0.cxx
+  AppDef_MultiLine.cxx
+  AppDef_MultiPointConstraint.cxx
+  AppDef_MyLineTool.cxx
+  GeomTools.cxx
+  正在生成代码...
+  正在编译...
+  GeomTools_Curve2dSet.cxx
+  GeomTools_CurveSet.cxx
+  GeomTools_SurfaceSet.cxx
+  GeomTools_UndefinedTypeHandler.cxx
+  GC_MakeArcOfCircle.cxx
+  GC_MakeArcOfEllipse.cxx
+  GC_MakeArcOfHyperbola.cxx
+  GC_MakeArcOfParabola.cxx
+  GC_MakeCircle.cxx
+  GC_MakeConicalSurface.cxx
+  GC_MakeCylindricalSurface.cxx
+  GC_MakeEllipse.cxx
+  GC_MakeHyperbola.cxx
+  GC_MakeLine.cxx
+  GC_MakeMirror.cxx
+  GC_MakePlane.cxx
+  GC_MakeRotation.cxx
+  GC_MakeScale.cxx
+  GC_MakeSegment.cxx
+  GC_MakeTranslation.cxx
+  正在生成代码...
+  正在编译...
+  GC_MakeTrimmedCone.cxx
+  GC_MakeTrimmedCylinder.cxx
+  GC_Root.cxx
+  GCE2d_MakeArcOfCircle.cxx
+  GCE2d_MakeArcOfEllipse.cxx
+  GCE2d_MakeArcOfHyperbola.cxx
+  GCE2d_MakeArcOfParabola.cxx
+  GCE2d_MakeCircle.cxx
+  GCE2d_MakeEllipse.cxx
+  GCE2d_MakeHyperbola.cxx
+  GCE2d_MakeLine.cxx
+  GCE2d_MakeMirror.cxx
+  GCE2d_MakeParabola.cxx
+  GCE2d_MakeRotation.cxx
+  GCE2d_MakeScale.cxx
+  GCE2d_MakeSegment.cxx
+  GCE2d_MakeTranslation.cxx
+  GCE2d_Root.cxx
+  gce_MakeCirc.cxx
+  gce_MakeCirc2d.cxx
+  正在生成代码...
+  正在编译...
+  gce_MakeCone.cxx
+  gce_MakeCylinder.cxx
+  gce_MakeDir.cxx
+  gce_MakeDir2d.cxx
+  gce_MakeElips.cxx
+  gce_MakeElips2d.cxx
+  gce_MakeHypr.cxx
+  gce_MakeHypr2d.cxx
+  gce_MakeLin.cxx
+  gce_MakeLin2d.cxx
+  gce_MakeMirror.cxx
+  gce_MakeMirror2d.cxx
+  gce_MakeParab.cxx
+  gce_MakeParab2d.cxx
+  gce_MakePln.cxx
+  gce_MakeRotation.cxx
+  gce_MakeRotation2d.cxx
+  gce_MakeScale.cxx
+  gce_MakeScale2d.cxx
+  gce_MakeTranslation.cxx
+  正在生成代码...
+  正在编译...
+  gce_MakeTranslation2d.cxx
+  gce_Root.cxx
+  正在生成代码...
+    正在创建库 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKGeomBase.lib 和对象 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKGeomBase.exp
+  TKGeomBase.vcxproj -> C:\occt-cad-6acadf32\learning\submit-24161\build\bin\Release\TKGeomBase.dll
+  Building Custom Rule C:/occt-cad-6acadf32/learning/submit-24161/src/adm/cmake/TKBRep/CMakeLists.txt
+  Precompiled.cpp
+  TopoDS_FrozenShape_0.cxx
+  TopoDS_ListIteratorOfListOfShape_0.cxx
+  TopoDS_ListNodeOfListOfShape_0.cxx
+  TopoDS_ListOfShape_0.cxx
+  TopoDS_UnCompatibleShapes_0.cxx
+  TopoDS.cxx
+  TopoDS_Builder.cxx
+  TopoDS_CompSolid.cxx
+  TopoDS_Compound.cxx
+  TopoDS_Edge.cxx
+  TopoDS_Face.cxx
+  TopoDS_HShape.cxx
+  TopoDS_Iterator.cxx
+  TopoDS_Shape.cxx
+  TopoDS_Shell.cxx
+  TopoDS_Solid.cxx
+  TopoDS_TCompSolid.cxx
+  TopoDS_TCompound.cxx
+  TopoDS_TEdge.cxx
+  TopoDS_TFace.cxx
+  正在生成代码...
+  正在编译...
+  TopoDS_TShape.cxx
+  TopoDS_TShell.cxx
+  TopoDS_TSolid.cxx
+  TopoDS_TVertex.cxx
+  TopoDS_TWire.cxx
+  TopoDS_Vertex.cxx
+  TopoDS_Wire.cxx
+  TopExp_StackIteratorOfStackOfIterator_0.cxx
+  TopExp_StackNodeOfStackOfIterator_0.cxx
+  TopExp_StackOfIterator_0.cxx
+  TopExp.cxx
+  TopExp_Explorer.cxx
+  TopTools_Array1OfListOfShape_0.cxx
+  TopTools_Array1OfShape_0.cxx
+  TopTools_Array2OfShape_0.cxx
+  TopTools_DataMapIteratorOfDataMapOfIntegerListOfShape_0.cxx
+  TopTools_DataMapIteratorOfDataMapOfIntegerShape_0.cxx
+  TopTools_DataMapIteratorOfDataMapOfOrientedShapeInteger_0.cxx
+  TopTools_DataMapIteratorOfDataMapOfOrientedShapeShape_0.cxx
+  TopTools_DataMapIteratorOfDataMapOfShapeInteger_0.cxx
+  正在生成代码...
+  正在编译...
+  TopTools_DataMapIteratorOfDataMapOfShapeListOfInteger_0.cxx
+  TopTools_DataMapIteratorOfDataMapOfShapeListOfShape_0.cxx
+  TopTools_DataMapIteratorOfDataMapOfShapeReal_0.cxx
+  TopTools_DataMapIteratorOfDataMapOfShapeSequenceOfShape_0.cxx
+  TopTools_DataMapIteratorOfDataMapOfShapeShape_0.cxx
+  TopTools_DataMapNodeOfDataMapOfIntegerListOfShape_0.cxx
+  TopTools_DataMapNodeOfDataMapOfIntegerShape_0.cxx
+  TopTools_DataMapNodeOfDataMapOfOrientedShapeInteger_0.cxx
+  TopTools_DataMapNodeOfDataMapOfOrientedShapeShape_0.cxx
+  TopTools_DataMapNodeOfDataMapOfShapeInteger_0.cxx
+  TopTools_DataMapNodeOfDataMapOfShapeListOfInteger_0.cxx
+  TopTools_DataMapNodeOfDataMapOfShapeListOfShape_0.cxx
+  TopTools_DataMapNodeOfDataMapOfShapeReal_0.cxx
+  TopTools_DataMapNodeOfDataMapOfShapeSequenceOfShape_0.cxx
+  TopTools_DataMapNodeOfDataMapOfShapeShape_0.cxx
+  TopTools_DataMapOfIntegerListOfShape_0.cxx
+  TopTools_DataMapOfIntegerShape_0.cxx
+  TopTools_DataMapOfOrientedShapeInteger_0.cxx
+  TopTools_DataMapOfOrientedShapeShape_0.cxx
+  TopTools_DataMapOfShapeInteger_0.cxx
+  正在生成代码...
+  正在编译...
+  TopTools_DataMapOfShapeListOfInteger_0.cxx
+  TopTools_DataMapOfShapeListOfShape_0.cxx
+  TopTools_DataMapOfShapeReal_0.cxx
+  TopTools_DataMapOfShapeSequenceOfShape_0.cxx
+  TopTools_DataMapOfShapeShape_0.cxx
+  TopTools_HArray1OfListOfShape_0.cxx
+  TopTools_HArray1OfShape_0.cxx
+  TopTools_HArray2OfShape_0.cxx
+  TopTools_HSequenceOfShape_0.cxx
+  TopTools_IndexedDataMapNodeOfIndexedDataMapOfShapeAddress_0.cxx
+  TopTools_IndexedDataMapNodeOfIndexedDataMapOfShapeListOfShape_0.cxx
+  TopTools_IndexedDataMapNodeOfIndexedDataMapOfShapeShape_0.cxx
+  TopTools_IndexedDataMapOfShapeAddress_0.cxx
+  TopTools_IndexedDataMapOfShapeListOfShape_0.cxx
+  TopTools_IndexedDataMapOfShapeShape_0.cxx
+  TopTools_IndexedMapNodeOfIndexedMapOfOrientedShape_0.cxx
+  TopTools_IndexedMapNodeOfIndexedMapOfShape_0.cxx
+  TopTools_IndexedMapOfOrientedShape_0.cxx
+  TopTools_IndexedMapOfShape_0.cxx
+  TopTools_ListIteratorOfListOfShape_0.cxx
+  正在生成代码...
+  正在编译...
+  TopTools_ListNodeOfListOfShape_0.cxx
+  TopTools_ListOfShape_0.cxx
+  TopTools_MapIteratorOfMapOfOrientedShape_0.cxx
+  TopTools_MapIteratorOfMapOfShape_0.cxx
+  TopTools_MapOfOrientedShape_0.cxx
+  TopTools_MapOfShape_0.cxx
+  TopTools_SequenceNodeOfSequenceOfShape_0.cxx
+  TopTools_SequenceOfShape_0.cxx
+  TopTools_StdMapNodeOfMapOfOrientedShape_0.cxx
+  TopTools_StdMapNodeOfMapOfShape_0.cxx
+  TopTools.cxx
+  TopTools_LocationSet.cxx
+  TopTools_MutexForShapeProvider.cxx
+  TopTools_OrientedShapeMapHasher.cxx
+  TopTools_ShapeMapHasher.cxx
+  TopTools_ShapeSet.cxx
+  BRep_ListIteratorOfListOfCurveRepresentation_0.cxx
+  BRep_ListIteratorOfListOfPointRepresentation_0.cxx
+  BRep_ListNodeOfListOfCurveRepresentation_0.cxx
+  BRep_ListNodeOfListOfPointRepresentation_0.cxx
+  正在生成代码...
+  正在编译...
+  BRep_ListOfCurveRepresentation_0.cxx
+  BRep_ListOfPointRepresentation_0.cxx
+  BRep_Builder.cxx
+  BRep_Curve3D.cxx
+  BRep_CurveOn2Surfaces.cxx
+  BRep_CurveOnClosedSurface.cxx
+  BRep_CurveOnSurface.cxx
+  BRep_CurveRepresentation.cxx
+  BRep_GCurve.cxx
+  BRep_PointOnCurve.cxx
+  BRep_PointOnCurveOnSurface.cxx
+  BRep_PointOnSurface.cxx
+  BRep_PointRepresentation.cxx
+  BRep_PointsOnSurface.cxx
+  BRep_Polygon3D.cxx
+  BRep_PolygonOnClosedSurface.cxx
+  BRep_PolygonOnClosedTriangulation.cxx
+  BRep_PolygonOnSurface.cxx
+  BRep_PolygonOnTriangulation.cxx
+  BRep_TEdge.cxx
+  正在生成代码...
+  正在编译...
+  BRep_TFace.cxx
+  BRep_TVertex.cxx
+  BRep_Tool.cxx
+  BRepLProp_CLProps_0.cxx
+  BRepLProp_SLProps_0.cxx
+  BRepLProp.cxx
+  BRepLProp_CurveTool.cxx
+  BRepLProp_SurfaceTool.cxx
+  BRepAdaptor_Array1OfCurve_0.cxx
+  BRepAdaptor_HArray1OfCurve_0.cxx
+  BRepAdaptor_HCompCurve_0.cxx
+  BRepAdaptor_HCurve2d_0.cxx
+  BRepAdaptor_HCurve_0.cxx
+  BRepAdaptor_HSurface_0.cxx
+  BRepAdaptor_CompCurve.cxx
+  BRepAdaptor_Curve.cxx
+  BRepAdaptor_Curve2d.cxx
+  BRepAdaptor_Surface.cxx
+  BRepTools_DataMapIteratorOfMapOfVertexPnt2d_0.cxx
+  BRepTools_DataMapNodeOfMapOfVertexPnt2d_0.cxx
+  正在生成代码...
+  正在编译...
+  BRepTools_MapOfVertexPnt2d_0.cxx
+  BRepTools.cxx
+  BRepTools_GTrsfModification.cxx
+  BRepTools_Modification.cxx
+  BRepTools_Modifier.cxx
+  BRepTools_NurbsConvertModification.cxx
+  BRepTools_Quilt.cxx
+  BRepTools_ReShape.cxx
+  BRepTools_ShapeSet.cxx
+  BRepTools_Substitution.cxx
+  BRepTools_TrsfModification.cxx
+  BRepTools_WireExplorer.cxx
+  正在生成代码...
+    正在创建库 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKBRep.lib 和对象 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKBRep.exp
+  TKBRep.vcxproj -> C:\occt-cad-6acadf32\learning\submit-24161\build\bin\Release\TKBRep.dll
+  Building Custom Rule C:/occt-cad-6acadf32/learning/submit-24161/src/adm/cmake/TKGeomAlgo/CMakeLists.txt
+  Precompiled.cpp
+  Hatch_SequenceNodeOfSequenceOfLine_0.cxx
+  Hatch_SequenceNodeOfSequenceOfParameter_0.cxx
+  Hatch_SequenceOfLine_0.cxx
+  Hatch_SequenceOfParameter_0.cxx
+  Hatch_Hatcher.cxx
+  Hatch_Line.cxx
+  Hatch_Parameter.cxx
+  GeomInt_BSpGradient_BFGSOfMyBSplGradientOfTheComputeLineOfWLApprox_0.cxx
+  GeomInt_BSpParFunctionOfMyBSplGradientOfTheComputeLineOfWLApprox_0.cxx
+  GeomInt_BSpParLeastSquareOfMyBSplGradientOfTheComputeLineOfWLApprox_0.cxx
+  GeomInt_Gradient_BFGSOfMyGradientOfTheComputeLineBezierOfWLApprox_0.cxx
+  GeomInt_Gradient_BFGSOfMyGradientbisOfTheComputeLineOfWLApprox_0.cxx
+  GeomInt_MyBSplGradientOfTheComputeLineOfWLApprox_0.cxx
+  GeomInt_MyGradientOfTheComputeLineBezierOfWLApprox_0.cxx
+  GeomInt_MyGradientbisOfTheComputeLineOfWLApprox_0.cxx
+  GeomInt_ParFunctionOfMyGradientOfTheComputeLineBezierOfWLApprox_0.cxx
+  GeomInt_ParFunctionOfMyGradientbisOfTheComputeLineOfWLApprox_0.cxx
+  GeomInt_ParLeastSquareOfMyGradientOfTheComputeLineBezierOfWLApprox_0.cxx
+  GeomInt_ParLeastSquareOfMyGradientbisOfTheComputeLineOfWLApprox_0.cxx
+  GeomInt_ResConstraintOfMyGradientOfTheComputeLineBezierOfWLApprox_0.cxx
+  正在生成代码...
+  正在编译...
+  GeomInt_ResConstraintOfMyGradientbisOfTheComputeLineOfWLApprox_0.cxx
+  GeomInt_SequenceNodeOfSequenceOfParameterAndOrientation_0.cxx
+  GeomInt_SequenceOfParameterAndOrientation_0.cxx
+  GeomInt_TheComputeLineBezierOfWLApprox_0.cxx
+  GeomInt_TheComputeLineOfWLApprox_0.cxx
+  GeomInt_TheFunctionOfTheInt2SOfThePrmPrmSvSurfacesOfWLApprox_0.cxx
+  GeomInt_TheImpPrmSvSurfacesOfWLApprox_0.cxx
+  GeomInt_TheInt2SOfThePrmPrmSvSurfacesOfWLApprox_0.cxx
+  GeomInt_TheMultiLineOfWLApprox_0.cxx
+  GeomInt_TheMultiLineToolOfWLApprox_0.cxx
+  GeomInt_ThePrmPrmSvSurfacesOfWLApprox_0.cxx
+  GeomInt_TheZerImpFuncOfTheImpPrmSvSurfacesOfWLApprox_0.cxx
+  GeomInt_WLApprox_0.cxx
+  GeomInt_IntSS.cxx
+  GeomInt_IntSS_1.cxx
+  GeomInt_LineConstructor.cxx
+  GeomInt_LineTool.cxx
+  GeomInt_ParameterAndOrientation.cxx
+  IntStart_SITopolTool.cxx
+  IntImp_ComputeTangence.cxx
+  正在生成代码...
+  正在编译...
+  IntCurveSurface_HInter_0.cxx
+  IntCurveSurface_SequenceNodeOfSequenceOfPnt_0.cxx
+  IntCurveSurface_SequenceNodeOfSequenceOfSeg_0.cxx
+  IntCurveSurface_SequenceOfPnt_0.cxx
+  IntCurveSurface_SequenceOfSeg_0.cxx
+  IntCurveSurface_TheCSFunctionOfHInter_0.cxx
+  IntCurveSurface_TheExactHInter_0.cxx
+  IntCurveSurface_TheHCurveTool_0.cxx
+  IntCurveSurface_TheInterferenceOfHInter_0.cxx
+  IntCurveSurface_ThePolygonOfHInter_0.cxx
+  IntCurveSurface_ThePolygonToolOfHInter_0.cxx
+  IntCurveSurface_ThePolyhedronOfHInter_0.cxx
+  IntCurveSurface_ThePolyhedronToolOfHInter_0.cxx
+  IntCurveSurface_TheQuadCurvExactHInter_0.cxx
+  IntCurveSurface_TheQuadCurvFuncOfTheQuadCurvExactHInter_0.cxx
+  IntCurveSurface_Intersection.cxx
+  IntCurveSurface_IntersectionPoint.cxx
+  IntCurveSurface_IntersectionSegment.cxx
+  IntSurf_ListIteratorOfListOfPntOn2S_0.cxx
+  IntSurf_ListNodeOfListOfPntOn2S_0.cxx
+  正在生成代码...
+  正在编译...
+  IntSurf_ListOfPntOn2S_0.cxx
+  IntSurf_SequenceNodeOfSequenceOfCouple_0.cxx
+  IntSurf_SequenceNodeOfSequenceOfInteriorPoint_0.cxx
+  IntSurf_SequenceNodeOfSequenceOfPathPoint_0.cxx
+  IntSurf_SequenceNodeOfSequenceOfPntOn2S_0.cxx
+  IntSurf_SequenceOfCouple_0.cxx
+  IntSurf_SequenceOfInteriorPoint_0.cxx
+  IntSurf_SequenceOfPathPoint_0.cxx
+  IntSurf_SequenceOfPntOn2S_0.cxx
+  IntSurf.cxx
+  IntSurf_Couple.cxx
+  IntSurf_InteriorPoint.cxx
+  IntSurf_InteriorPointTool.cxx
+  IntSurf_LineOn2S.cxx
+  IntSurf_PathPoint.cxx
+  IntSurf_PathPointTool.cxx
+  IntSurf_PntOn2S.cxx
+  IntSurf_Quadric.cxx
+  IntSurf_QuadricTool.cxx
+  IntSurf_Transition.cxx
+  正在生成代码...
+  正在编译...
+  IntPatch_CSFunction_0.cxx
+  IntPatch_CurvIntSurf_0.cxx
+  IntPatch_SequenceNodeOfSequenceOfIWLineOfTheIWalking_0.cxx
+  IntPatch_SequenceNodeOfSequenceOfLine_0.cxx
+  IntPatch_SequenceNodeOfSequenceOfPathPointOfTheSOnBounds_0.cxx
+  IntPatch_SequenceNodeOfSequenceOfPoint_0.cxx
+  IntPatch_SequenceNodeOfSequenceOfSegmentOfTheSOnBounds_0.cxx
+  IntPatch_SequenceOfIWLineOfTheIWalking_0.cxx
+  IntPatch_SequenceOfLine_0.cxx
+  IntPatch_SequenceOfPathPointOfTheSOnBounds_0.cxx
+  IntPatch_SequenceOfPoint_0.cxx
+  IntPatch_SequenceOfSegmentOfTheSOnBounds_0.cxx
+  IntPatch_TheFunctionOfTheInt2SOfThePWalkingInter_0.cxx
+  IntPatch_TheIWLineOfTheIWalking_0.cxx
+  IntPatch_TheIWalking_0.cxx
+  IntPatch_TheInt2SOfThePWalkingInter_0.cxx
+  IntPatch_TheInterfPolyhedron_0.cxx
+  IntPatch_ThePWalkingInter_0.cxx
+  IntPatch_ThePathPointOfTheSOnBounds_0.cxx
+  IntPatch_TheSOnBounds_0.cxx
+  正在生成代码...
+  正在编译...
+  IntPatch_TheSearchInside_0.cxx
+  IntPatch_TheSegmentOfTheSOnBounds_0.cxx
+  IntPatch_TheSurfFunction_0.cxx
+  IntPatch_ALine.cxx
+  IntPatch_ALineToWLine.cxx
+  IntPatch_ArcFunction.cxx
+  IntPatch_GLine.cxx
+  IntPatch_HCurve2dTool.cxx
+  IntPatch_HInterTool.cxx
+  IntPatch_ImpImpIntersection.cxx
+  IntPatch_ImpPrmIntersection.cxx
+  IntPatch_Intersection.cxx
+  IntPatch_Line.cxx
+  IntPatch_LineConstructor.cxx
+  IntPatch_Point.cxx
+  IntPatch_PolyArc.cxx
+  IntPatch_PolyLine.cxx
+  IntPatch_Polygo.cxx
+  IntPatch_Polyhedron.cxx
+  IntPatch_PolyhedronTool.cxx
+  正在生成代码...
+  正在编译...
+  IntPatch_PrmPrmIntersection.cxx
+  IntPatch_PrmPrmIntersection_T3Bits.cxx
+  IntPatch_RLine.cxx
+  IntPatch_RstInt.cxx
+  IntPatch_WLine.cxx
+  Geom2dInt_ExactIntersectionPointOfTheIntPCurvePCurveOfGInter_0.cxx
+  Geom2dInt_GInter_0.cxx
+  Geom2dInt_Geom2dCurveTool_0.cxx
+  Geom2dInt_IntConicCurveOfGInter_0.cxx
+  Geom2dInt_MyImpParToolOfTheIntersectorOfTheIntConicCurveOfGInter_0.cxx
+  Geom2dInt_PCLocFOfTheLocateExtPCOfTheProjPCurOfGInter_0.cxx
+  Geom2dInt_SeqPCOfPCLocFOfTheLocateExtPCOfTheProjPCurOfGInter_0.cxx
+  Geom2dInt_SequenceNodeOfSeqPCOfPCLocFOfTheLocateExtPCOfTheProjPCurOfGInter_0.cxx
+  Geom2dInt_TheCurveLocatorOfTheProjPCurOfGInter_0.cxx
+  Geom2dInt_TheDistBetweenPCurvesOfTheIntPCurvePCurveOfGInter_0.cxx
+  Geom2dInt_TheIntConicCurveOfGInter_0.cxx
+  Geom2dInt_TheIntPCurvePCurveOfGInter_0.cxx
+  Geom2dInt_TheIntersectorOfTheIntConicCurveOfGInter_0.cxx
+  Geom2dInt_TheLocateExtPCOfTheProjPCurOfGInter_0.cxx
+  Geom2dInt_ThePolygon2dOfTheIntPCurvePCurveOfGInter_0.cxx
+  正在生成代码...
+  正在编译...
+  Geom2dInt_TheProjPCurOfGInter_0.cxx
+  IntImpParGen.cxx
+  IntImpParGen_ImpTool.cxx
+  IntImpParGen_Tool.cxx
+  IntRes2d_SequenceNodeOfSequenceOfIntersectionPoint_0.cxx
+  IntRes2d_SequenceNodeOfSequenceOfIntersectionSegment_0.cxx
+  IntRes2d_SequenceOfIntersectionPoint_0.cxx
+  IntRes2d_SequenceOfIntersectionSegment_0.cxx
+  IntRes2d_Domain.cxx
+  IntRes2d_Intersection.cxx
+  IntRes2d_IntersectionPoint.cxx
+  IntRes2d_IntersectionSegment.cxx
+  IntRes2d_Transition.cxx
+  IntCurve_IntImpConicParConic_0.cxx
+  IntCurve_MyImpParToolOfIntImpConicParConic_0.cxx
+  IntCurve_IConicTool.cxx
+  IntCurve_IntConicConic.cxx
+  IntCurve_IntConicConic_1.cxx
+  IntCurve_IntConicConic_Tool.cxx
+  IntCurve_PConic.cxx
+  正在生成代码...
+  正在编译...
+  IntCurve_PConicTool.cxx
+  IntCurve_ProjectOnPConicTool.cxx
+  TopTrans_Array2OfOrientation_0.cxx
+  TopTrans_CurveTransition.cxx
+  TopTrans_SurfaceTransition.cxx
+  Intf_Array1OfLin_0.cxx
+  Intf_SeqOfSectionLine_0.cxx
+  Intf_SeqOfSectionPoint_0.cxx
+  Intf_SeqOfTangentZone_0.cxx
+  Intf_SequenceNodeOfSeqOfSectionLine_0.cxx
+  Intf_SequenceNodeOfSeqOfSectionPoint_0.cxx
+  Intf_SequenceNodeOfSeqOfTangentZone_0.cxx
+  Intf.cxx
+  Intf_Interference.cxx
+  Intf_InterferencePolygon2d.cxx
+  Intf_Polygon2d.cxx
+  Intf_SectionLine.cxx
+  Intf_SectionPoint.cxx
+  Intf_TangentZone.cxx
+  Intf_Tool.cxx
+  正在生成代码...
+  正在编译...
+  ApproxInt_SvSurfaces.cxx
+  GccAna_NoSolution_0.cxx
+  GccAna_Circ2d2TanOn.cxx
+  GccAna_Circ2d2TanOn_1.cxx
+  GccAna_Circ2d2TanOn_10.cxx
+  GccAna_Circ2d2TanOn_11.cxx
+  GccAna_Circ2d2TanOn_2.cxx
+  GccAna_Circ2d2TanOn_3.cxx
+  GccAna_Circ2d2TanOn_4.cxx
+  GccAna_Circ2d2TanOn_5.cxx
+  GccAna_Circ2d2TanOn_6.cxx
+  GccAna_Circ2d2TanOn_7.cxx
+  GccAna_Circ2d2TanOn_8.cxx
+  GccAna_Circ2d2TanOn_9.cxx
+  GccAna_Circ2d2TanRad.cxx
+  GccAna_Circ2d2TanRad_1.cxx
+  GccAna_Circ2d2TanRad_2.cxx
+  GccAna_Circ2d2TanRad_3.cxx
+  GccAna_Circ2d2TanRad_4.cxx
+  GccAna_Circ2d2TanRad_5.cxx
+  正在生成代码...
+  正在编译...
+  GccAna_Circ2d3Tan.cxx
+  GccAna_Circ2d3Tan_1.cxx
+  GccAna_Circ2d3Tan_2.cxx
+  GccAna_Circ2d3Tan_3.cxx
+  GccAna_Circ2d3Tan_4.cxx
+  GccAna_Circ2d3Tan_5.cxx
+  GccAna_Circ2d3Tan_6.cxx
+  GccAna_Circ2d3Tan_7.cxx
+  GccAna_Circ2d3Tan_8.cxx
+  GccAna_Circ2d3Tan_9.cxx
+  GccAna_Circ2dBisec.cxx
+  GccAna_Circ2dTanCen.cxx
+  GccAna_Circ2dTanOnRad.cxx
+  GccAna_Circ2dTanOnRad_1.cxx
+  GccAna_Circ2dTanOnRad_2.cxx
+  GccAna_Circ2dTanOnRad_3.cxx
+  GccAna_Circ2dTanOnRad_4.cxx
+  GccAna_Circ2dTanOnRad_5.cxx
+  GccAna_CircLin2dBisec.cxx
+  GccAna_CircPnt2dBisec.cxx
+  正在生成代码...
+  正在编译...
+  GccAna_Lin2d2Tan.cxx
+  GccAna_Lin2dBisec.cxx
+  GccAna_Lin2dTanObl.cxx
+  GccAna_Lin2dTanPar.cxx
+  GccAna_Lin2dTanPer.cxx
+  GccAna_LinPnt2dBisec.cxx
+  GccAna_Pnt2dBisec.cxx
+  GccEnt_Array1OfPosition_0.cxx
+  GccEnt_BadQualifier_0.cxx
+  GccEnt.cxx
+  GccEnt_QualifiedCirc.cxx
+  GccEnt_QualifiedLin.cxx
+  GccInt_BCirc.cxx
+  GccInt_BElips.cxx
+  GccInt_BHyper.cxx
+  GccInt_BLine.cxx
+  GccInt_BParab.cxx
+  GccInt_BPoint.cxx
+  GccInt_Bisec.cxx
+  GccIter_IsParallel_0.cxx
+  正在生成代码...
+  正在编译...
+  HatchGen_Domains_0.cxx
+  HatchGen_PointsOnElement_0.cxx
+  HatchGen_PointsOnHatching_0.cxx
+  HatchGen_SequenceNodeOfDomains_0.cxx
+  HatchGen_SequenceNodeOfPointsOnElement_0.cxx
+  HatchGen_SequenceNodeOfPointsOnHatching_0.cxx
+  HatchGen_Domain.cxx
+  HatchGen_IntersectionPoint.cxx
+  HatchGen_PointOnElement.cxx
+  HatchGen_PointOnHatching.cxx
+  Geom2dHatch_ClassifierOfHatcher_0.cxx
+  Geom2dHatch_DataMapIteratorOfHatchingsOfHatcher_0.cxx
+  Geom2dHatch_DataMapIteratorOfMapOfElementsOfElementsOfHatcher_0.cxx
+  Geom2dHatch_DataMapNodeOfHatchingsOfHatcher_0.cxx
+  Geom2dHatch_DataMapNodeOfMapOfElementsOfElementsOfHatcher_0.cxx
+  Geom2dHatch_ElementOfHatcher_0.cxx
+  Geom2dHatch_ElementsOfHatcher_0.cxx
+  Geom2dHatch_FClass2dOfClassifierOfHatcher_0.cxx
+  Geom2dHatch_Hatcher_0.cxx
+  Geom2dHatch_HatchingOfHatcher_0.cxx
+  正在生成代码...
+  正在编译...
+  Geom2dHatch_HatchingsOfHatcher_0.cxx
+  Geom2dHatch_MapOfElementsOfElementsOfHatcher_0.cxx
+  Geom2dHatch_Intersector.cxx
+  Law_Laws_0.cxx
+  Law_ListIteratorOfLaws_0.cxx
+  Law_ListNodeOfLaws_0.cxx
+  Law.cxx
+  Law_BSpFunc.cxx
+  Law_BSpline.cxx
+  Law_BSplineKnotSplitting.cxx
+  Law_Composite.cxx
+  Law_Constant.cxx
+  Law_Function.cxx
+  Law_Interpol.cxx
+  Law_Interpolate.cxx
+  Law_Linear.cxx
+  Law_S.cxx
+  AppBlend_Approx.cxx
+  AppBlend_Debug.cxx
+  Plate_Array1OfPinpointConstraint_0.cxx
+  正在生成代码...
+  正在编译...
+  Plate_HArray1OfPinpointConstraint_0.cxx
+  Plate_SequenceNodeOfSequenceOfLinearScalarConstraint_0.cxx
+  Plate_SequenceNodeOfSequenceOfLinearXYZConstraint_0.cxx
+  Plate_SequenceNodeOfSequenceOfPinpointConstraint_0.cxx
+  Plate_SequenceOfLinearScalarConstraint_0.cxx
+  Plate_SequenceOfLinearXYZConstraint_0.cxx
+  Plate_SequenceOfPinpointConstraint_0.cxx
+  Plate_D1.cxx
+  Plate_D2.cxx
+  Plate_D3.cxx
+  Plate_FreeGtoCConstraint.cxx
+  Plate_GlobalTranslationConstraint.cxx
+  Plate_GtoCConstraint.cxx
+  Plate_LineConstraint.cxx
+  Plate_LinearScalarConstraint.cxx
+  Plate_LinearXYZConstraint.cxx
+  Plate_PinpointConstraint.cxx
+  Plate_PlaneConstraint.cxx
+  Plate_Plate.cxx
+  Plate_SampledCurveConstraint.cxx
+  正在生成代码...
+  正在编译...
+  GeomPlate_Array1OfHCurveOnSurface_0.cxx
+  GeomPlate_Array1OfSequenceOfReal_0.cxx
+  GeomPlate_HArray1OfHCurveOnSurface_0.cxx
+  GeomPlate_HArray1OfSequenceOfReal_0.cxx
+  GeomPlate_HSequenceOfCurveConstraint_0.cxx
+  GeomPlate_HSequenceOfPointConstraint_0.cxx
+  GeomPlate_SequenceNodeOfSequenceOfAij_0.cxx
+  GeomPlate_SequenceNodeOfSequenceOfCurveConstraint_0.cxx
+  GeomPlate_SequenceNodeOfSequenceOfPointConstraint_0.cxx
+  GeomPlate_SequenceOfAij_0.cxx
+  GeomPlate_SequenceOfCurveConstraint_0.cxx
+  GeomPlate_SequenceOfPointConstraint_0.cxx
+  GeomPlate_Aij.cxx
+  GeomPlate_BuildAveragePlane.cxx
+  GeomPlate_BuildPlateSurface.cxx
+  GeomPlate_CurveConstraint.cxx
+  GeomPlate_MakeApprox.cxx
+  GeomPlate_PlateG0Criterion.cxx
+  GeomPlate_PlateG1Criterion.cxx
+  GeomPlate_PointConstraint.cxx
+  正在生成代码...
+  正在编译...
+  GeomPlate_Surface.cxx
+  LocalAnalysis.cxx
+  LocalAnalysis_CurveContinuity.cxx
+  LocalAnalysis_SurfaceContinuity.cxx
+  GeomAPI.cxx
+  GeomAPI_ExtremaCurveCurve.cxx
+  GeomAPI_ExtremaCurveSurface.cxx
+  GeomAPI_ExtremaSurfaceSurface.cxx
+  GeomAPI_IntCS.cxx
+  GeomAPI_IntSS.cxx
+  GeomAPI_Interpolate.cxx
+  GeomAPI_PointsToBSpline.cxx
+  GeomAPI_PointsToBSplineSurface.cxx
+  GeomAPI_ProjectPointOnCurve.cxx
+  GeomAPI_ProjectPointOnSurf.cxx
+  GeomFill_AppSurf_0.cxx
+  GeomFill_AppSweep_0.cxx
+  GeomFill_Array1OfLocationLaw_0.cxx
+  GeomFill_Array1OfSectionLaw_0.cxx
+  GeomFill_HArray1OfLocationLaw_0.cxx
+  正在生成代码...
+  正在编译...
+  GeomFill_HArray1OfSectionLaw_0.cxx
+  GeomFill_HSequenceOfAx2_0.cxx
+  GeomFill_SequenceNodeOfSequenceOfAx2_0.cxx
+  GeomFill_SequenceNodeOfSequenceOfTrsf_0.cxx
+  GeomFill_SequenceOfAx2_0.cxx
+  GeomFill_SequenceOfTrsf_0.cxx
+  GeomFill.cxx
+  GeomFill_BSplineCurves.cxx
+  GeomFill_BezierCurves.cxx
+  GeomFill_BoundWithSurf.cxx
+  GeomFill_Boundary.cxx
+  GeomFill_CircularBlendFunc.cxx
+  GeomFill_ConstantBiNormal.cxx
+  GeomFill_ConstrainedFilling.cxx
+  GeomFill_Coons.cxx
+  GeomFill_CoonsAlgPatch.cxx
+  GeomFill_CornerState.cxx
+  GeomFill_CorrectedFrenet.cxx
+  GeomFill_CurveAndTrihedron.cxx
+  GeomFill_Curved.cxx
+  正在生成代码...
+  正在编译...
+  GeomFill_Darboux.cxx
+  GeomFill_DegeneratedBound.cxx
+  GeomFill_DiscreteTrihedron.cxx
+  GeomFill_DraftTrihedron.cxx
+  GeomFill_EvolvedSection.cxx
+  GeomFill_Filling.cxx
+  GeomFill_Fixed.cxx
+  GeomFill_Frenet.cxx
+  GeomFill_FunctionDraft.cxx
+  GeomFill_FunctionGuide.cxx
+  GeomFill_Generator.cxx
+  GeomFill_GuideTrihedronAC.cxx
+  GeomFill_GuideTrihedronPlan.cxx
+  GeomFill_Line.cxx
+  GeomFill_LocFunction.cxx
+  GeomFill_LocationDraft.cxx
+  GeomFill_LocationGuide.cxx
+  GeomFill_LocationLaw.cxx
+  GeomFill_NSections.cxx
+  GeomFill_Pipe.cxx
+  正在生成代码...
+  正在编译...
+  GeomFill_PlanFunc.cxx
+  GeomFill_PolynomialConvertor.cxx
+  GeomFill_Profiler.cxx
+  GeomFill_QuasiAngularConvertor.cxx
+  GeomFill_SectionGenerator.cxx
+  GeomFill_SectionLaw.cxx
+  GeomFill_SectionPlacement.cxx
+  GeomFill_SimpleBound.cxx
+  GeomFill_SnglrFunc.cxx
+  GeomFill_Stretch.cxx
+  GeomFill_Sweep.cxx
+  GeomFill_SweepFunction.cxx
+  GeomFill_SweepSectionGenerator.cxx
+  GeomFill_Tensor.cxx
+  GeomFill_TgtField.cxx
+  GeomFill_TgtOnCoons.cxx
+  GeomFill_TrihedronLaw.cxx
+  GeomFill_TrihedronWithGuide.cxx
+  GeomFill_UniformSection.cxx
+  Geom2dAPI_ExtremaCurveCurve.cxx
+  正在生成代码...
+  正在编译...
+  Geom2dAPI_InterCurveCurve.cxx
+  Geom2dAPI_Interpolate.cxx
+  Geom2dAPI_PointsToBSpline.cxx
+  Geom2dAPI_ProjectPointOnCurve.cxx
+  Geom2dGcc_FuncTCirCuOfMyL2d2Tan_0.cxx
+  Geom2dGcc_FuncTCuCuCuOfMyC2d3Tan_0.cxx
+  Geom2dGcc_FuncTCuCuOfMyL2d2Tan_0.cxx
+  Geom2dGcc_FuncTCuCuOnCuOfMyC2d2TanOn_0.cxx
+  Geom2dGcc_FuncTCuPtOfMyL2d2Tan_0.cxx
+  Geom2dGcc_FuncTOblOfMyL2dTanObl_0.cxx
+  Geom2dGcc_MyC2d2TanOn_0.cxx
+  Geom2dGcc_MyC2d3Tan_0.cxx
+  Geom2dGcc_MyCirc2d2TanOn_0.cxx
+  Geom2dGcc_MyCirc2d2TanRad_0.cxx
+  Geom2dGcc_MyCirc2dTanCen_0.cxx
+  Geom2dGcc_MyCirc2dTanOnRad_0.cxx
+  Geom2dGcc_MyCurveTool_0.cxx
+  Geom2dGcc_MyL2d2Tan_0.cxx
+  Geom2dGcc_MyL2dTanObl_0.cxx
+  Geom2dGcc_MyQCurve_0.cxx
+  正在生成代码...
+  正在编译...
+  Geom2dGcc.cxx
+  Geom2dGcc_Circ2d2TanOn.cxx
+  Geom2dGcc_Circ2d2TanRad.cxx
+  Geom2dGcc_Circ2d3Tan.cxx
+  Geom2dGcc_Circ2dTanCen.cxx
+  Geom2dGcc_Circ2dTanOnRad.cxx
+  Geom2dGcc_CurveTool.cxx
+  Geom2dGcc_Lin2d2Tan.cxx
+  Geom2dGcc_Lin2dTanObl.cxx
+  Geom2dGcc_QualifiedCurve.cxx
+  FairCurve_Batten.cxx
+  FairCurve_BattenLaw.cxx
+  FairCurve_DistributionOfEnergy.cxx
+  FairCurve_DistributionOfJerk.cxx
+  FairCurve_DistributionOfSagging.cxx
+  FairCurve_DistributionOfTension.cxx
+  FairCurve_Energy.cxx
+  FairCurve_EnergyOfBatten.cxx
+  FairCurve_EnergyOfMVC.cxx
+  FairCurve_MinimalVariation.cxx
+  正在生成代码...
+  正在编译...
+  FairCurve_Newton.cxx
+  NLPlate_SequenceNodeOfSequenceOfHGPPConstraint_0.cxx
+  NLPlate_SequenceOfHGPPConstraint_0.cxx
+  NLPlate_StackIteratorOfStackOfPlate_0.cxx
+  NLPlate_StackNodeOfStackOfPlate_0.cxx
+  NLPlate_StackOfPlate_0.cxx
+  NLPlate_HGPPConstraint.cxx
+  NLPlate_HPG0Constraint.cxx
+  NLPlate_HPG0G1Constraint.cxx
+  NLPlate_HPG0G2Constraint.cxx
+  NLPlate_HPG0G3Constraint.cxx
+  NLPlate_HPG1Constraint.cxx
+  NLPlate_HPG2Constraint.cxx
+  NLPlate_HPG3Constraint.cxx
+  NLPlate_NLPlate.cxx
+  IntPolyh_SeqOfStartPoints_0.cxx
+  IntPolyh_SequenceNodeOfSeqOfStartPoints_0.cxx
+  IntPolyh_Couple.cxx
+  IntPolyh_Edge.cxx
+  IntPolyh_Intersection.cxx
+  正在生成代码...
+  正在编译...
+  IntPolyh_Intersection_1.cxx
+  IntPolyh_MaillageAffinage.cxx
+  IntPolyh_Point.cxx
+  IntPolyh_SectionLine.cxx
+  IntPolyh_StartPoint.cxx
+  IntPolyh_Triangle.cxx
+  TopClass.cxx
+  TopClass_Intersection3d.cxx
+  TopClass_SolidExplorer.cxx
+  正在生成代码...
+    正在创建库 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKGeomAlgo.lib 和对象 C:/occt-cad-6acadf32/learning/submit-24161/build/bin/Release/TKGeomAlgo.exp
+  TKGeomAlgo.vcxproj -> C:\occt-cad-6acadf32\learning\submit-24161\build\bin\Release\TKGeomAlgo.dll

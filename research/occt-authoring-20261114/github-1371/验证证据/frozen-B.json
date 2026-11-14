@@ -1,0 +1,59 @@
+[
+  {
+    "id": "1371-radius-0.35",
+    "status": "failed",
+    "detail": {
+      "passed": false,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 1.934,
+        "output_tail": "",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": 1,
+        "elapsed_seconds": 1.068,
+        "output_tail": "circle rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nclosed B-spline rim: IsDone=true faultyContours=0 BRepCheck=INVALID selfInterference=FAULTY\n  invalid face #1: BRepCheck_UnorientableShape \n  faults: selfIntersect=3 tooSmallEdge=8 other=1\nperiodic B-spline rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nfour-edge rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\n",
+        "timed_out": false
+      }
+    }
+  },
+  {
+    "id": "1371-radius-0.2",
+    "status": "failed",
+    "detail": {
+      "passed": false,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 1.979,
+        "output_tail": "",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": 1,
+        "elapsed_seconds": 0.973,
+        "output_tail": "circle rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nclosed B-spline rim: IsDone=true faultyContours=0 BRepCheck=INVALID selfInterference=FAULTY\n  invalid face #1: BRepCheck_UnorientableShape \n  faults: selfIntersect=3 tooSmallEdge=8 other=1\nperiodic B-spline rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nfour-edge rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\n",
+        "timed_out": false
+      }
+    }
+  },
+  {
+    "id": "1371-radius-0.1",
+    "status": "failed",
+    "detail": {
+      "passed": false,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 1.91,
+        "output_tail": "",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": 1,
+        "elapsed_seconds": 0.869,
+        "output_tail": "circle rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nclosed B-spline rim: IsDone=true faultyContours=0 BRepCheck=INVALID selfInterference=FAULTY\n  invalid face #1: BRepCheck_UnorientableShape \n  faults: selfIntersect=3 tooSmallEdge=8 other=1\nperiodic B-spline rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nfour-edge rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\n",
+        "timed_out": false
+      }
+    }
+  }
+]

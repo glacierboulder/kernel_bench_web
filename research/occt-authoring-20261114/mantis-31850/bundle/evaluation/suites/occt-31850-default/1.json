@@ -1,0 +1,73 @@
+{
+  "checkpoints": [
+    {
+      "issue_id": "occt-31850-default",
+      "category": "original",
+      "runner_options": {
+        "case_timeout_seconds": 45
+      },
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "id": "default-options",
+      "visibility": "hidden",
+      "case": "evaluation/cases/occt-31850-default/default-options.tcl",
+      "runner": "draw_case_v1",
+      "timeout_seconds": 60
+    },
+    {
+      "issue_id": "occt-31850-default",
+      "category": "neighborhood",
+      "runner_options": {
+        "case_timeout_seconds": 45
+      },
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "id": "shift",
+      "visibility": "hidden",
+      "case": "evaluation/cases/occt-31850-default/shift.tcl",
+      "runner": "draw_case_v1",
+      "timeout_seconds": 60
+    },
+    {
+      "issue_id": "occt-31850-default",
+      "category": "neighborhood",
+      "runner_options": {
+        "case_timeout_seconds": 45
+      },
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "id": "rotate",
+      "visibility": "hidden",
+      "case": "evaluation/cases/occt-31850-default/rotate.tcl",
+      "runner": "draw_case_v1",
+      "timeout_seconds": 60
+    },
+    {
+      "issue_id": "occt-31850-default",
+      "category": "regression",
+      "runner_options": {
+        "case_timeout_seconds": 45
+      },
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "id": "regression",
+      "visibility": "hidden",
+      "case": "evaluation/cases/occt-31850-default/regression.tcl",
+      "runner": "draw_case_v1",
+      "timeout_seconds": 60
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt-31850-default/inputs/bug31850.brep"
+  ],
+  "id": "occt-31850-default-checks",
+  "schema_version": 1,
+  "version": "1",
+  "source_ids": [
+    "oce013-authoring-b-5434272be3ee"
+  ],
+  "group_ids": [
+    "occt-31850-default-single"
+  ],
+  "title": "31850 几何检查"
+}

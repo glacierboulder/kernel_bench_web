@@ -1,0 +1,23 @@
+{
+  "algorithm": "agent-bench-tree-sha256-v1",
+  "exclusions": [
+    ".git",
+    "__pycache__",
+    "CMakeFiles",
+    "build path components",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "occt801-1702-b-b8f597c67781",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
+    }
+  ]
+}

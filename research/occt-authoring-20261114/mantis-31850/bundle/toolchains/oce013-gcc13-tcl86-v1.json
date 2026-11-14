@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "oce013-gcc13-tcl86-v1",
+  "title": "OCE 0.13 DRAW · GCC 13 / Tcl 8.6",
+  "platforms": [
+    "linux-x86_64"
+  ],
+  "executables": {
+    "cmake": "cmake",
+    "c_compiler": "gcc",
+    "cxx_compiler": "g++"
+  },
+  "compiler_output_directory": "gcc",
+  "tools_directory": "oce013-gcc13-tcl86-v1",
+  "compiler_jobs_max": 2,
+  "tcl_version": "8.6",
+  "tcl_paths": "deployment configuration or BENCH_TCL_* environment variables"
+}

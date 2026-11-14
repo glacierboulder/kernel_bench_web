@@ -1,0 +1,10 @@
+{
+  "upstream_issue": "https://github.com/Open-Cascade-SAS/OCCT/issues/1163",
+  "official_fix": "https://github.com/Open-Cascade-SAS/OCCT/commit/57e05629a483c796453392864ab63eeffc956d7b",
+  "F_official_commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "B_derived_commit": "6ba582362af730d90854235c2fd6b472618b6c0d",
+  "B_materialized_tree_sha256": "a52d6c9ec516040a98a4d3c53f41b24eabd0f59e976964c1058aa235162c73ea",
+  "bundle_sha256": "c612f0d5b4f1109018232c674885ce1341cf3ae80253089f50ab5f41f1a0c316",
+  "input_sha256": "50155294a82f24ddaf47de0f80a604f39c43c13626138220b415e9734d247e13",
+  "note": "B 为 OCCT 8.0.1 只反向恢复 issue 1163 相关空指针检查的派生提交；并非官方历史提交。原 issue 倒角案例，本题使用同一输入同一边验证圆角路径。"
+}

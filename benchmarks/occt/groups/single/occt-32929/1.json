@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-32929",
+  "version": "1",
+  "title": "本机校准候选 · OCCT 32929 · 圆角端部求交删除曲面数据后使用旧下标",
+  "kind": "single",
+  "source_id": "occt75-32929-b-f2724d41b326",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-32929",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-32929-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

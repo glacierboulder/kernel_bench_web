@@ -1,0 +1,27 @@
+diff --git a/src/ModelingAlgorithms/TKFillet/BRepFilletAPI/BRepFilletAPI_MakeFillet.cxx b/src/ModelingAlgorithms/TKFillet/BRepFilletAPI/BRepFilletAPI_MakeFillet.cxx
+index f192eb5f..77728490 100644
+--- a/src/ModelingAlgorithms/TKFillet/BRepFilletAPI/BRepFilletAPI_MakeFillet.cxx
++++ b/src/ModelingAlgorithms/TKFillet/BRepFilletAPI/BRepFilletAPI_MakeFillet.cxx
+@@ -1,3 +1,4 @@
++#include <BRepCheck_Analyzer.hxx>
+ // Created on: 1994-06-17
+ // Created by: Modeling
+ // Copyright (c) 1994-1999 Matra Datavision
+@@ -373,8 +374,16 @@ void BRepFilletAPI_MakeFillet::Build(const Message_ProgressRange& /*theRange*/)
+   myBuilder.Compute();
+   if (myBuilder.IsDone())
+   {
++    const TopoDS_Shape& aResult = myBuilder.Shape();
++    // Reject a corrupt result before reporting success.  This does not repair
++    // the underlying geometry, but avoids publishing an invalid shape as done.
++    if (aResult.IsNull() || !BRepCheck_Analyzer(aResult).IsValid())
++    {
++      NotDone();
++      return;
++    }
+     Done();
+-    myShape = myBuilder.Shape();
++    myShape = aResult;
+ 
+     // creation of the Map.
+     TopExp_Explorer ex;

@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-github-1702-checks",
+  "version": "1",
+  "title": "双边圆角报告成功但产生无效线框",
+  "source_ids": [
+    "occt801-1702-b-b8f597c67781"
+  ],
+  "group_ids": [
+    "occt-single-github-1702"
+  ],
+  "checkpoints": [
+    {
+      "id": "1702-original",
+      "issue_id": "occt-github-1702",
+      "category": "original",
+      "visibility": "public",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1702/1/check.cpp",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "issues/occt-github-1702/1/public/inputs/bar_plate_r1.6.brep",
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1702/1/original.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "1702-line",
+      "issue_id": "occt-github-1702",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1702/1/check.cpp",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "issues/occt-github-1702/1/public/inputs/bar_plate_r1.6.brep",
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1702/1/line.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "1702-arc",
+      "issue_id": "occt-github-1702",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1702/1/check.cpp",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "issues/occt-github-1702/1/public/inputs/bar_plate_r1.6.brep",
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1702/1/arc.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "1702-near",
+      "issue_id": "occt-github-1702",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1702/1/check.cpp",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "issues/occt-github-1702/1/public/inputs/bar_plate_r1.5.brep",
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1702/1/near.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "evaluation_suites": [
+    {
+      "path": "evaluation/suites/occt-31850-default/1.json",
+      "id": "occt-31850-default-checks",
+      "version": "1"
+    }
+  ],
+  "title": "31850",
+  "schema_version": 1,
+  "groups": [
+    {
+      "path": "groups/occt-31850-default/1.json",
+      "id": "occt-31850-default-single",
+      "version": "1"
+    }
+  ],
+  "id": "occt-31850-authoring",
+  "issues": [
+    {
+      "path": "issues/occt-31850-default/1/issue.json",
+      "id": "occt-31850-default",
+      "version": "1"
+    }
+  ]
+}

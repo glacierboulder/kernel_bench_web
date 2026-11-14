@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1163",
+  "version": "1",
+  "title": "圆角端部构造中空边导致进程崩溃",
+  "source_id": "occt801-1163-b-6ba582362af7",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/reproduce.cpp",
+    "public/inputs/chamfer007.brep"
+  ]
+}

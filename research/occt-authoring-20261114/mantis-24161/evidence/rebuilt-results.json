@@ -1,0 +1,60 @@
+{
+  "B_commit": "5434272be3eecaf06f0921f8fa4f1a6df7672033",
+  "patch_sha256": "c3f92beb237405681b5b98e7de99d706a0aff0c779305e5657ef120a98fd41e0",
+  "dlls": {
+    "B": "c71c0cbe55a17d0e63f9999915e8d0e47c46bf4d4befd0e13354379ccfc6a11f",
+    "F": "146eba42339f2f5c5239dc2d2565f837b5356e4c08678078ceca8661468d5e52"
+  },
+  "all_expected": true,
+  "results": [
+    {
+      "role": "B",
+      "case": "original",
+      "status": "timeout",
+      "expected": "timeout"
+    },
+    {
+      "role": "B",
+      "case": "shift",
+      "status": "timeout",
+      "expected": "timeout"
+    },
+    {
+      "role": "B",
+      "case": "rotate",
+      "status": "timeout",
+      "expected": "timeout"
+    },
+    {
+      "role": "B",
+      "case": "regression",
+      "status": "pass",
+      "expected": "pass"
+    },
+    {
+      "role": "F",
+      "case": "original",
+      "status": "pass",
+      "expected": "pass"
+    },
+    {
+      "role": "F",
+      "case": "shift",
+      "status": "pass",
+      "expected": "pass"
+    },
+    {
+      "role": "F",
+      "case": "rotate",
+      "status": "pass",
+      "expected": "pass"
+    },
+    {
+      "role": "F",
+      "case": "regression",
+      "status": "pass",
+      "expected": "pass"
+    }
+  ],
+  "scope": "Windows DRAW using rebuilt TKGeomAlgo and shared existing runtime dependencies"
+}
