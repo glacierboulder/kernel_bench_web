@@ -1,0 +1,46 @@
+--- a/src/ModelingAlgorithms/TKFillet/BRepFilletAPI/BRepFilletAPI_MakeFillet.cxx
++++ b/src/ModelingAlgorithms/TKFillet/BRepFilletAPI/BRepFilletAPI_MakeFillet.cxx
+@@ -1,3 +1,4 @@
++#include <TopExp.hxx>
+ // Created on: 1994-06-17
+ // Created by: Modeling
+ // Copyright (c) 1994-1999 Matra Datavision
+@@ -15,6 +16,8 @@
+ // commercial license or contractual agreement.
+ 
+ #include <BRepFilletAPI_MakeFillet.hxx>
++#include <BRep_Tool.hxx>
++#include <TopoDS.hxx>
+ #include <ChFiDS_ErrorStatus.hxx>
+ #include <ChFiDS_Spine.hxx>
+ #include <Geom_Surface.hxx>
+@@ -373,8 +376,28 @@
+   myBuilder.Compute();
+   if (myBuilder.IsDone())
+   {
++    // Fail safely when generated vertex tolerances are comparable to
++    // the distance between distinct endpoints.
++    const TopoDS_Shape& aResult = myBuilder.Shape();
++    for (TopExp_Explorer anEdge(aResult, TopAbs_EDGE); anEdge.More(); anEdge.Next())
++    {
++      const TopoDS_Edge anE = TopoDS::Edge(anEdge.Current());
++      if (BRep_Tool::Degenerated(anE))
++        continue;
++      const TopoDS_Vertex aFirst = TopExp::FirstVertex(anE);
++      const TopoDS_Vertex aLast  = TopExp::LastVertex(anE);
++      if (aFirst.IsNull() || aLast.IsNull() || aFirst.IsSame(aLast))
++        continue;
++      const double aSpan = BRep_Tool::Pnt(aFirst).Distance(BRep_Tool::Pnt(aLast));
++      const double aTolerance = BRep_Tool::Tolerance(aFirst) + BRep_Tool::Tolerance(aLast);
++      if (aSpan > Precision::Confusion() && aTolerance >= aSpan)
++      {
++        NotDone();
++        return;
++      }
++    }
+     Done();
+-    myShape = myBuilder.Shape();
++    myShape = aResult;
+ 
+     // creation of the Map.
+     TopExp_Explorer ex;

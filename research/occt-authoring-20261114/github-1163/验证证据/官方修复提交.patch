@@ -1,0 +1,282 @@
+From 57e05629a483c796453392864ab63eeffc956d7b Mon Sep 17 00:00:00 2001
+From: dpasukhi <dpasukhi@opencascade.com>
+Date: Fri, 3 Apr 2026 21:25:53 +0100
+Subject: [PATCH 1/2] Modeling - Fix segfault in
+ ChFi3d_Builder::IntersectMoreCorner (#1163)
+
+Add null guards for two crash sites in IntersectMoreCorner where
+topology map lookups can fail on shapes from prior boolean/chamfer
+operations due to stale TShape pointers:
+
+- Move Arcprol null check before cherche_face call (was after it,
+  causing misleading exception on null edge argument).
+- Add Arcprolbis null check before use in BRep_Tool::Parameter,
+  which dereferences null TShape pointer causing segfault.
+
+Both exceptions are caught by ChFi3d_Builder::Compute() and result
+in graceful IsDone() == false instead of crash.
+
+Add regression GTests for chamfer after boolean fusion and
+sequential chamfer operations.
+---
+ .../TKFillet/ChFi3d/ChFi3d_Builder_C1.cxx     |  22 ++-
+ .../GTests/BRepFilletAPI_MakeChamfer_Test.cxx | 149 ++++++++++++++++++
+ 2 files changed, 166 insertions(+), 5 deletions(-)
+
+diff --git a/src/ModelingAlgorithms/TKFillet/ChFi3d/ChFi3d_Builder_C1.cxx b/src/ModelingAlgorithms/TKFillet/ChFi3d/ChFi3d_Builder_C1.cxx
+index b57f825bff1..260288135e9 100644
+--- a/src/ModelingAlgorithms/TKFillet/ChFi3d/ChFi3d_Builder_C1.cxx
++++ b/src/ModelingAlgorithms/TKFillet/ChFi3d/ChFi3d_Builder_C1.cxx
+@@ -2890,12 +2890,14 @@ void ChFi3d_Builder::PerformIntersectionAtEnd(const int Index)
+     }
+     TopOpeBRepDS_Curve tcurv3d(Cc, tolreached);
+     indcurve[nb - 1] = DStr.AddCurve(tcurv3d);
+-    Interfp1         = ChFi3d_FilPointInDS(TopAbs_FORWARD,
++
++    Interfp1 = ChFi3d_FilPointInDS(TopAbs_FORWARD,
+                                    indcurve[nb - 1],
+                                    indpoint1,
+                                    Cc->FirstParameter(),
+                                    Isvtx1);
+-    Interfp2         = ChFi3d_FilPointInDS(TopAbs_REVERSED,
++
++    Interfp2 = ChFi3d_FilPointInDS(TopAbs_REVERSED,
+                                    indcurve[nb - 1],
+                                    indpoint2,
+                                    Cc->LastParameter(),
+@@ -4401,6 +4403,10 @@ void ChFi3d_Builder::IntersectMoreCorner(const int Index)
+       }
+     }
+ 
++    // Guard: Arcprol may be null if the loop above found no matching edge.
++    if (Arcprol.IsNull())
++      throw StdFail_NotDone("IntersectMoreCorner: edge to be extended is not found");
++
+     // Fopbis is the face containing the trace of fillet CP.Arc() which of does not contain Vtx.
+     // Normally Fobis is either the same as Fop (cylinder), or Fobis is G1 with Fop.
+     Fopbis.Orientation(TopAbs_FORWARD);
+@@ -4408,9 +4414,6 @@ void ChFi3d_Builder::IntersectMoreCorner(const int Index)
+     // Fop calls the 4th face non-used for the vertex
+     cherche_face(myVFMap(Vtx), Arcprol, Fad, Fv, Fv, Fopbis);
+     Fop.Orientation(TopAbs_FORWARD);
+-
+-    if (Arcprol.IsNull())
+-      throw StdFail_NotDone("OneCorner : edge to be extended is not found");
+     for (ex.Init(Fopbis, TopAbs_EDGE); ex.More(); ex.Next())
+     {
+       if (Arcprol.IsSame(ex.Current()))
+@@ -4770,6 +4773,15 @@ void ChFi3d_Builder::IntersectMoreCorner(const int Index)
+     }
+     // end of modif
+ 
++    // Guard: Arcprolbis may be null if myVEMap(Vtx) contained only
++    // Arcprol, Arcspine, and Arcpiv (e.g. when topology maps carry stale
++    // data from shared TShape pointers after prior operations).
++    if (Arcprolbis.IsNull())
++    {
++      throw Standard_ConstructionError(
++        "IntersectMoreCorner: continuation edge (Arcprolbis) is not found");
++    }
++
+     // Now the missing curves are constructed.
+     for (ex.Init(Arcprolbis.Oriented(TopAbs_FORWARD), TopAbs_VERTEX); ex.More(); ex.Next())
+     {
+diff --git a/src/ModelingAlgorithms/TKFillet/GTests/BRepFilletAPI_MakeChamfer_Test.cxx b/src/ModelingAlgorithms/TKFillet/GTests/BRepFilletAPI_MakeChamfer_Test.cxx
+index 99689c7aeff..fe6a8a7a9e6 100644
+--- a/src/ModelingAlgorithms/TKFillet/GTests/BRepFilletAPI_MakeChamfer_Test.cxx
++++ b/src/ModelingAlgorithms/TKFillet/GTests/BRepFilletAPI_MakeChamfer_Test.cxx
+@@ -11,11 +11,18 @@
+ // Alternatively, this file may be used under the terms of Open CASCADE
+ // commercial license or contractual agreement.
+ 
++#include <BRepAlgoAPI_Fuse.hxx>
+ #include <BRepCheck_Analyzer.hxx>
+ #include <BRepFilletAPI_MakeChamfer.hxx>
+ #include <BRepPrimAPI_MakeBox.hxx>
++#include <BRepPrimAPI_MakeCylinder.hxx>
++#include <gp_Ax2.hxx>
+ #include <NCollection_IndexedDataMap.hxx>
++#include <NCollection_IndexedMap.hxx>
+ #include <NCollection_List.hxx>
++#include <Standard_ConstructionError.hxx>
++#include <Standard_Failure.hxx>
++#include <StdFail_NotDone.hxx>
+ #include <TopAbs_ShapeEnum.hxx>
+ #include <TopExp.hxx>
+ #include <TopExp_Explorer.hxx>
+@@ -92,3 +99,145 @@ TEST(BRepFilletAPI_MakeChamferTest, ChamferMoreFaces)
+   }
+   EXPECT_GT(aFaceCount, 6);
+ }
++
++// Regression test for issue #1163: chamfer after boolean fusion must not crash
++// due to null shapes in IntersectMoreCorner when topology maps carry stale data.
++// Edges at vertices shared by 3+ faces are selected to exercise the complex
++// corner-processing paths (IntersectMoreCorner / PerformOneCorner).
++TEST(BRepFilletAPI_MakeChamferTest, ChamferAfterBooleanFusion)
++{
++  BRepPrimAPI_MakeBox aBoxMaker(10.0, 10.0, 10.0);
++  const TopoDS_Shape& aBox = aBoxMaker.Shape();
++  ASSERT_TRUE(aBoxMaker.IsDone());
++
++  gp_Ax2                   anAxis(gp_Pnt(5.0, 0.0, 5.0), gp_Dir(0.0, 1.0, 0.0));
++  BRepPrimAPI_MakeCylinder aCylMaker(anAxis, 3.0, 10.0);
++  const TopoDS_Shape&      aCyl = aCylMaker.Shape();
++  ASSERT_TRUE(aCylMaker.IsDone());
++
++  BRepAlgoAPI_Fuse aFuse(aBox, aCyl);
++  ASSERT_TRUE(aFuse.IsDone());
++  const TopoDS_Shape& aFused = aFuse.Shape();
++
++  // Build vertex-to-face count map to identify complex vertices (3+ faces).
++  NCollection_IndexedDataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher>
++    aVtxFaceMap;
++  TopExp::MapShapesAndAncestors(aFused, TopAbs_VERTEX, TopAbs_FACE, aVtxFaceMap);
++
++  NCollection_IndexedDataMap<TopoDS_Shape, NCollection_List<TopoDS_Shape>, TopTools_ShapeMapHasher>
++    anEdgeFaceMap;
++  TopExp::MapShapesAndAncestors(aFused, TopAbs_EDGE, TopAbs_FACE, anEdgeFaceMap);
++
++  // Select edges at vertices with 3+ adjacent faces (complex topology).
++  // The box-cylinder fusion geometry above is deterministic and always produces
++  // such edges at the intersection seam, so the assertion below is reliable.
++  BRepFilletAPI_MakeChamfer aChamfer(aFused);
++  int                       anEdgeCount = 0;
++  for (TopExp_Explorer anEdgeExp(aFused, TopAbs_EDGE); anEdgeExp.More() && anEdgeCount < 4;
++       anEdgeExp.Next())
++  {
++    const TopoDS_Edge& anEdge = TopoDS::Edge(anEdgeExp.Current());
++    if (!anEdgeFaceMap.Contains(anEdge) || anEdgeFaceMap.FindFromKey(anEdge).IsEmpty())
++      continue;
++
++    // Check if any vertex of this edge has 3+ faces.
++    bool hasComplexVertex = false;
++    for (TopExp_Explorer aVtxExp(anEdge, TopAbs_VERTEX); aVtxExp.More(); aVtxExp.Next())
++    {
++      if (aVtxFaceMap.Contains(aVtxExp.Current())
++          && aVtxFaceMap.FindFromKey(aVtxExp.Current()).Size() >= 3)
++      {
++        hasComplexVertex = true;
++        break;
++      }
++    }
++    if (!hasComplexVertex)
++      continue;
++
++    const TopoDS_Face& aFace = TopoDS::Face(anEdgeFaceMap.FindFromKey(anEdge).First());
++    aChamfer.Add(0.5, 0.5, anEdge, aFace);
++    anEdgeCount++;
++  }
++  ASSERT_GT(anEdgeCount, 0);
++
++  // Must not crash; may succeed or fail gracefully with IsDone() == false.
++  try
++  {
++    aChamfer.Build();
++    if (aChamfer.IsDone())
++    {
++      BRepCheck_Analyzer anAnalyzer(aChamfer.Shape());
++      EXPECT_TRUE(anAnalyzer.IsValid());
++    }
++  }
++  catch (const Standard_Failure&)
++  {
++    // Exception instead of crash is acceptable.
++  }
++}
++
++// Regression test for issue #1163: sequential chamfers on the same shape
++// must not crash due to stale TShape pointers in internal topology maps.
++// Each iteration selects a different edge (by index) and verifies the shape
++// topology changes, ensuring that successive operations actually modify the
++// topology maps that trigger the bug.
++TEST(BRepFilletAPI_MakeChamferTest, SequentialChamferNoCrash)
++{
++  BRepPrimAPI_MakeBox aBoxMaker(20.0, 20.0, 20.0);
++  const TopoDS_Shape& aBox = aBoxMaker.Shape();
++  ASSERT_TRUE(aBoxMaker.IsDone());
++
++  TopoDS_Shape aShape        = aBox;
++  int          aPrevEdges    = 0;
++  int          aSuccessCount = 0;
++
++  for (int i = 0; i < 3; ++i)
++  {
++    // Count edges and pick a different one each iteration.
++    NCollection_IndexedMap<TopoDS_Shape, TopTools_ShapeMapHasher> anEdgeMap;
++    TopExp::MapShapes(aShape, TopAbs_EDGE, anEdgeMap);
++    if (anEdgeMap.IsEmpty())
++      break;
++
++    // Verify topology actually changed after each successful chamfer.
++    if (i > 0 && aPrevEdges > 0)
++    {
++      EXPECT_NE(anEdgeMap.Extent(), aPrevEdges);
++    }
++    aPrevEdges = anEdgeMap.Extent();
++
++    // Select edge at different position each iteration to avoid re-chamfering the same edge.
++    int                anIdx  = (i * 3 + 1) % anEdgeMap.Extent() + 1;
++    const TopoDS_Edge& anEdge = TopoDS::Edge(anEdgeMap(anIdx));
++
++    BRepFilletAPI_MakeChamfer aChamfer(aShape);
++    aChamfer.Add(1.0, anEdge);
++
++    try
++    {
++      aChamfer.Build();
++      if (aChamfer.IsDone())
++      {
++        aShape = aChamfer.Shape();
++        aSuccessCount++;
++      }
++      else
++      {
++        break;
++      }
++    }
++    catch (const Standard_ConstructionError&)
++    {
++      // Null-guard from Fix 4 (Arcprolbis) — acceptable graceful failure.
++      break;
++    }
++    catch (const StdFail_NotDone&)
++    {
++      // Null-guard from Fix 3 (Arcprol) or existing Fv check — acceptable.
++      break;
++    }
++  }
++  // Verify at least one chamfer iteration succeeded, ensuring the test
++  // meaningfully exercises topology changes rather than trivially passing.
++  EXPECT_GE(aSuccessCount, 1);
++}
+
+From 3129d3e9deecb975d284f488a47423286ad03dd0 Mon Sep 17 00:00:00 2001
+From: dpasukhi <dpasukhi@opencascade.com>
+Date: Fri, 3 Apr 2026 21:35:54 +0100
+Subject: [PATCH 2/2] Modeling - Improve comments for null-guard handling in
+ BRepFilletAPI_MakeChamfer_Test
+
+---
+ .../TKFillet/GTests/BRepFilletAPI_MakeChamfer_Test.cxx        | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/ModelingAlgorithms/TKFillet/GTests/BRepFilletAPI_MakeChamfer_Test.cxx b/src/ModelingAlgorithms/TKFillet/GTests/BRepFilletAPI_MakeChamfer_Test.cxx
+index fe6a8a7a9e6..80235b90089 100644
+--- a/src/ModelingAlgorithms/TKFillet/GTests/BRepFilletAPI_MakeChamfer_Test.cxx
++++ b/src/ModelingAlgorithms/TKFillet/GTests/BRepFilletAPI_MakeChamfer_Test.cxx
+@@ -228,12 +228,12 @@ TEST(BRepFilletAPI_MakeChamferTest, SequentialChamferNoCrash)
+     }
+     catch (const Standard_ConstructionError&)
+     {
+-      // Null-guard from Fix 4 (Arcprolbis) — acceptable graceful failure.
++      // Null-guard from Fix 4 (Arcprolbis) - acceptable graceful failure.
+       break;
+     }
+     catch (const StdFail_NotDone&)
+     {
+-      // Null-guard from Fix 3 (Arcprol) or existing Fv check — acceptable.
++      // Null-guard from Fix 3 (Arcprol) or existing Fv check - acceptable.
+       break;
+     }
+   }

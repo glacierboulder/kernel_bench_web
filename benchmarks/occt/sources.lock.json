@@ -180,6 +180,78 @@
       "verification_status": "verified_git",
       "provenance": "evaluation/provenance/single20/occt-26310/source.json",
       "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt801-1738-b-b8f597c67781",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-github-1738/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
+    },
+    {
+      "source_id": "occt-1177-b-cbca11e97518",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "cbca11e97518a66de27bdc5100ceacf9e77e2e87",
+      "materialized_tree_sha256": "5577b347bd0d241e249520b08bf1332e15826d158651ad1fbafc425a77f48351",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-github-1177/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
+    },
+    {
+      "source_id": "occt75-32929-b-f2724d41b326",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "f2724d41b3261b1e5814c1cb6eadb44ee1603a8a",
+      "materialized_tree_sha256": "45a0c196609235f85b36c2508935b8ceb201876f30ba8606283bad75e3770bf8",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-32929/source.json",
+      "toolchain": "occt75-gcc13-o0-tcl86-32929"
+    },
+    {
+      "commit": "5434272be3eecaf06f0921f8fa4f1a6df7672033",
+      "materialized_tree_sha256": "f87a2533d98b8816ac2820b9ba0e4a2eb791c1467ef422c41348c1fe3d2ad6ec",
+      "provenance": "evaluation/provenance/oce-31850.json",
+      "source_id": "oce013-authoring-b-5434272be3ee",
+      "toolchain": "oce013-gcc13-tcl86-v1",
+      "upstream_url": "https://github.com/tpaviot/oce.git",
+      "verification_status": "verified_git"
+    },
+    {
+      "source_id": "occt801-1163-b-6ba582362af7",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "6ba582362af730d90854235c2fd6b472618b6c0d",
+      "materialized_tree_sha256": "a52d6c9ec516040a98a4d3c53f41b24eabd0f59e976964c1058aa235162c73ea",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-github-1163/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
+    },
+    {
+      "source_id": "occt801-1371-b-b8f597c67781",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-github-1371/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
+    },
+    {
+      "source_id": "occt801-1701-b-b8f597c67781",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-github-1701/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
+    },
+    {
+      "source_id": "occt801-1702-b-b8f597c67781",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-github-1702/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
     }
   ]
 }

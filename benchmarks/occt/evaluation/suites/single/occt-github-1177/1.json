@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-github-1177-checks",
+  "version": "1",
+  "title": "相对边的两个圆角恰好相接",
+  "source_ids": [
+    "occt-1177-b-cbca11e97518"
+  ],
+  "group_ids": [
+    "occt-single-github-1177"
+  ],
+  "checkpoints": [
+    {
+      "id": "1177-original",
+      "issue_id": "occt-github-1177",
+      "category": "original",
+      "visibility": "public",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1177/1/check.cpp",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1177/1/original.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "1177-asymmetric",
+      "issue_id": "occt-github-1177",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1177/1/check.cpp",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1177/1/asymmetric.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "1177-reversed-radii",
+      "issue_id": "occt-github-1177",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1177/1/check.cpp",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1177/1/reversed-radii.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "1177-gap",
+      "issue_id": "occt-github-1177",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1177/1/check.cpp",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1177/1/gap.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}

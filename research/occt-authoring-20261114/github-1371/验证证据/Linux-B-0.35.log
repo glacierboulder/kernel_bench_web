@@ -1,0 +1,7 @@
+circle rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean
+closed B-spline rim: IsDone=true faultyContours=0 BRepCheck=INVALID selfInterference=FAULTY
+  invalid face #1: BRepCheck_UnorientableShape 
+  faults: selfIntersect=3 tooSmallEdge=8 other=1
+periodic B-spline rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean
+four-edge rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean
+exit=1

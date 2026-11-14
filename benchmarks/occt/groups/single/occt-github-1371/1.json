@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-github-1371",
+  "version": "1",
+  "title": "OCCT GitHub 1371 自交圆角误报成功",
+  "kind": "single",
+  "source_id": "occt801-1371-b-b8f597c67781",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-github-1371",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-github-1371-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

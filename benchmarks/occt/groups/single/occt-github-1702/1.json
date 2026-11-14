@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-github-1702",
+  "version": "1",
+  "title": "双边圆角报告成功但产生无效线框",
+  "kind": "single",
+  "source_id": "occt801-1702-b-b8f597c67781",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-github-1702",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-github-1702-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

@@ -1,0 +1,97 @@
+[
+  {
+    "id": "1163-original",
+    "status": "failed",
+    "detail": {
+      "passed": false,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 2.42,
+        "output_tail": "/tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp: In function ‘int main(int, char**)’:\n/tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp:52:64: warning: ‘const char* Standard_Failure::GetMessageString() const’ is deprecated: Use what() instead [-Wdeprecated-declarations]\n   52 |     std::cerr << \"OCCT exception: \" << failure.GetMessageString() << \"\\n\";\n      |                                        ~~~~~~~~~~~~~~~~~~~~~~~~^~\nIn file included from /root/occt1163-build/include/opencascade/Standard_Failure.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_DomainError.hxx:22,\n                 from /root/occt1163-build/include/opencascade/Standard_DomainError.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_RangeError.hxx:21,\n                 from /root/occt1163-build/include/opencascade/Standard_RangeError.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_OutOfRange.hxx:21,\n                 from /root/occt1163-build/include/opencascade/Standard_OutOfRange.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_Mat.hxx:19,\n                 from /root/occt1163-build/include/opencascade/gp_Mat.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_XYZ.hxx:19,\n                 from /root/occt1163-build/include/opencascade/gp_XYZ.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_Pnt.hxx:21,\n                 from /root/occt1163-build/include/opencascade/gp_Pnt.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/Bnd/Bnd_Box.hxx:24,\n                 from /root/occt1163-build/include/opencascade/Bnd_Box.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/Poly/Poly_Triangulation.hxx:20,\n                 from /root/occt1163-build/include/opencascade/Poly_Triangulation.hxx:15,\n                 from /root/occt1163/src/ModelingData/TKBRep/BRep/BRep_Builder.hxx:21,\n                 from /root/occt1163-build/include/opencascade/BRep_Builder.hxx:15,\n                 from /tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp:1:\n/root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_Failure.hxx:60:15: note: declared here\n   60 |   const char* GetMessageString() const noexcept { return what(); }\n      |               ^~~~~~~~~~~~~~~~\n",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": -11,
+        "elapsed_seconds": 0.116,
+        "output_tail": "INPUT_OK mode=original edge=7\n",
+        "timed_out": false
+      }
+    }
+  },
+  {
+    "id": "1163-translate",
+    "status": "failed",
+    "detail": {
+      "passed": false,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 1.966,
+        "output_tail": "/tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp: In function ‘int main(int, char**)’:\n/tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp:52:64: warning: ‘const char* Standard_Failure::GetMessageString() const’ is deprecated: Use what() instead [-Wdeprecated-declarations]\n   52 |     std::cerr << \"OCCT exception: \" << failure.GetMessageString() << \"\\n\";\n      |                                        ~~~~~~~~~~~~~~~~~~~~~~~~^~\nIn file included from /root/occt1163-build/include/opencascade/Standard_Failure.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_DomainError.hxx:22,\n                 from /root/occt1163-build/include/opencascade/Standard_DomainError.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_RangeError.hxx:21,\n                 from /root/occt1163-build/include/opencascade/Standard_RangeError.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_OutOfRange.hxx:21,\n                 from /root/occt1163-build/include/opencascade/Standard_OutOfRange.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_Mat.hxx:19,\n                 from /root/occt1163-build/include/opencascade/gp_Mat.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_XYZ.hxx:19,\n                 from /root/occt1163-build/include/opencascade/gp_XYZ.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_Pnt.hxx:21,\n                 from /root/occt1163-build/include/opencascade/gp_Pnt.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/Bnd/Bnd_Box.hxx:24,\n                 from /root/occt1163-build/include/opencascade/Bnd_Box.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/Poly/Poly_Triangulation.hxx:20,\n                 from /root/occt1163-build/include/opencascade/Poly_Triangulation.hxx:15,\n                 from /root/occt1163/src/ModelingData/TKBRep/BRep/BRep_Builder.hxx:21,\n                 from /root/occt1163-build/include/opencascade/BRep_Builder.hxx:15,\n                 from /tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp:1:\n/root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_Failure.hxx:60:15: note: declared here\n   60 |   const char* GetMessageString() const noexcept { return what(); }\n      |               ^~~~~~~~~~~~~~~~\n",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": -11,
+        "elapsed_seconds": 0.121,
+        "output_tail": "INPUT_OK mode=translate edge=7\n",
+        "timed_out": false
+      }
+    }
+  },
+  {
+    "id": "1163-rotate",
+    "status": "failed",
+    "detail": {
+      "passed": false,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 1.92,
+        "output_tail": "/tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp: In function ‘int main(int, char**)’:\n/tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp:52:64: warning: ‘const char* Standard_Failure::GetMessageString() const’ is deprecated: Use what() instead [-Wdeprecated-declarations]\n   52 |     std::cerr << \"OCCT exception: \" << failure.GetMessageString() << \"\\n\";\n      |                                        ~~~~~~~~~~~~~~~~~~~~~~~~^~\nIn file included from /root/occt1163-build/include/opencascade/Standard_Failure.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_DomainError.hxx:22,\n                 from /root/occt1163-build/include/opencascade/Standard_DomainError.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_RangeError.hxx:21,\n                 from /root/occt1163-build/include/opencascade/Standard_RangeError.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_OutOfRange.hxx:21,\n                 from /root/occt1163-build/include/opencascade/Standard_OutOfRange.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_Mat.hxx:19,\n                 from /root/occt1163-build/include/opencascade/gp_Mat.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_XYZ.hxx:19,\n                 from /root/occt1163-build/include/opencascade/gp_XYZ.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_Pnt.hxx:21,\n                 from /root/occt1163-build/include/opencascade/gp_Pnt.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/Bnd/Bnd_Box.hxx:24,\n                 from /root/occt1163-build/include/opencascade/Bnd_Box.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/Poly/Poly_Triangulation.hxx:20,\n                 from /root/occt1163-build/include/opencascade/Poly_Triangulation.hxx:15,\n                 from /root/occt1163/src/ModelingData/TKBRep/BRep/BRep_Builder.hxx:21,\n                 from /root/occt1163-build/include/opencascade/BRep_Builder.hxx:15,\n                 from /tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp:1:\n/root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_Failure.hxx:60:15: note: declared here\n   60 |   const char* GetMessageString() const noexcept { return what(); }\n      |               ^~~~~~~~~~~~~~~~\n",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": -11,
+        "elapsed_seconds": 0.12,
+        "output_tail": "INPUT_OK mode=rotate edge=7\n",
+        "timed_out": false
+      }
+    }
+  },
+  {
+    "id": "1163-copy",
+    "status": "passed",
+    "detail": {
+      "passed": true,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 1.792,
+        "output_tail": "/tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp: In function ‘int main(int, char**)’:\n/tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp:52:64: warning: ‘const char* Standard_Failure::GetMessageString() const’ is deprecated: Use what() instead [-Wdeprecated-declarations]\n   52 |     std::cerr << \"OCCT exception: \" << failure.GetMessageString() << \"\\n\";\n      |                                        ~~~~~~~~~~~~~~~~~~~~~~~~^~\nIn file included from /root/occt1163-build/include/opencascade/Standard_Failure.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_DomainError.hxx:22,\n                 from /root/occt1163-build/include/opencascade/Standard_DomainError.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_RangeError.hxx:21,\n                 from /root/occt1163-build/include/opencascade/Standard_RangeError.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_OutOfRange.hxx:21,\n                 from /root/occt1163-build/include/opencascade/Standard_OutOfRange.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_Mat.hxx:19,\n                 from /root/occt1163-build/include/opencascade/gp_Mat.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_XYZ.hxx:19,\n                 from /root/occt1163-build/include/opencascade/gp_XYZ.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_Pnt.hxx:21,\n                 from /root/occt1163-build/include/opencascade/gp_Pnt.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/Bnd/Bnd_Box.hxx:24,\n                 from /root/occt1163-build/include/opencascade/Bnd_Box.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/Poly/Poly_Triangulation.hxx:20,\n                 from /root/occt1163-build/include/opencascade/Poly_Triangulation.hxx:15,\n                 from /root/occt1163/src/ModelingData/TKBRep/BRep/BRep_Builder.hxx:21,\n                 from /root/occt1163-build/include/opencascade/BRep_Builder.hxx:15,\n                 from /tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp:1:\n/root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_Failure.hxx:60:15: note: declared here\n   60 |   const char* GetMessageString() const noexcept { return what(); }\n      |               ^~~~~~~~~~~~~~~~\n",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": 0,
+        "elapsed_seconds": 0.102,
+        "output_tail": "INPUT_OK mode=copy edge=7\nVALID_RESULT faces=47 TEST_DONE\n",
+        "timed_out": false
+      }
+    }
+  },
+  {
+    "id": "1163-box",
+    "status": "passed",
+    "detail": {
+      "passed": true,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 1.816,
+        "output_tail": "/tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp: In function ‘int main(int, char**)’:\n/tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp:52:64: warning: ‘const char* Standard_Failure::GetMessageString() const’ is deprecated: Use what() instead [-Wdeprecated-declarations]\n   52 |     std::cerr << \"OCCT exception: \" << failure.GetMessageString() << \"\\n\";\n      |                                        ~~~~~~~~~~~~~~~~~~~~~~~~^~\nIn file included from /root/occt1163-build/include/opencascade/Standard_Failure.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_DomainError.hxx:22,\n                 from /root/occt1163-build/include/opencascade/Standard_DomainError.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_RangeError.hxx:21,\n                 from /root/occt1163-build/include/opencascade/Standard_RangeError.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_OutOfRange.hxx:21,\n                 from /root/occt1163-build/include/opencascade/Standard_OutOfRange.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_Mat.hxx:19,\n                 from /root/occt1163-build/include/opencascade/gp_Mat.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_XYZ.hxx:19,\n                 from /root/occt1163-build/include/opencascade/gp_XYZ.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/gp/gp_Pnt.hxx:21,\n                 from /root/occt1163-build/include/opencascade/gp_Pnt.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/Bnd/Bnd_Box.hxx:24,\n                 from /root/occt1163-build/include/opencascade/Bnd_Box.hxx:15,\n                 from /root/occt1163/src/FoundationClasses/TKMath/Poly/Poly_Triangulation.hxx:20,\n                 from /root/occt1163-build/include/opencascade/Poly_Triangulation.hxx:15,\n                 from /root/occt1163/src/ModelingData/TKBRep/BRep/BRep_Builder.hxx:21,\n                 from /root/occt1163-build/include/opencascade/BRep_Builder.hxx:15,\n                 from /tmp/frozen-cases/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp:1:\n/root/occt1163/src/FoundationClasses/TKernel/Standard/Standard_Failure.hxx:60:15: note: declared here\n   60 |   const char* GetMessageString() const noexcept { return what(); }\n      |               ^~~~~~~~~~~~~~~~\n",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": 0,
+        "elapsed_seconds": 0.044,
+        "output_tail": "INPUT_OK mode=box edge=1\nVALID_RESULT faces=7 TEST_DONE\n",
+        "timed_out": false
+      }
+    }
+  }
+]

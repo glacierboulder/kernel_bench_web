@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-github-1177",
+  "version": "1",
+  "title": "相对边的两个圆角恰好相接",
+  "kind": "single",
+  "source_id": "occt-1177-b-cbca11e97518",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-github-1177",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-github-1177-checks",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

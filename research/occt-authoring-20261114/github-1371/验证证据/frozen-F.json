@@ -1,0 +1,59 @@
+[
+  {
+    "id": "1371-radius-0.35",
+    "status": "passed",
+    "detail": {
+      "passed": true,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 2.021,
+        "output_tail": "",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": 0,
+        "elapsed_seconds": 0.867,
+        "output_tail": "circle rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nclosed B-spline rim: Build not done\nperiodic B-spline rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nfour-edge rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nTEST_DONE\n",
+        "timed_out": false
+      }
+    }
+  },
+  {
+    "id": "1371-radius-0.2",
+    "status": "passed",
+    "detail": {
+      "passed": true,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 1.901,
+        "output_tail": "",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": 0,
+        "elapsed_seconds": 0.793,
+        "output_tail": "circle rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nclosed B-spline rim: Build not done\nperiodic B-spline rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nfour-edge rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nTEST_DONE\n",
+        "timed_out": false
+      }
+    }
+  },
+  {
+    "id": "1371-radius-0.1",
+    "status": "passed",
+    "detail": {
+      "passed": true,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 1.99,
+        "output_tail": "",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": 0,
+        "elapsed_seconds": 0.718,
+        "output_tail": "circle rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nclosed B-spline rim: Build not done\nperiodic B-spline rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nfour-edge rim: IsDone=true faultyContours=0 BRepCheck=valid selfInterference=clean\nTEST_DONE\n",
+        "timed_out": false
+      }
+    }
+  }
+]

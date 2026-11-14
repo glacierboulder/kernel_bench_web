@@ -20,7 +20,7 @@ ALLOWED_VISIBILITY = {"public", "hidden"}
 TRUSTED_RUNNERS = {"draw_case_v1", "cpp_case_v1"}
 TRUSTED_ORACLES = {"draw_test_done_v1", "stdout_contains_v1"}
 TRUSTED_CPP_LIBRARIES = {
-    "TKBO", "TKPrim", "TKTopAlgo", "TKBRep", "TKGeomBase", "TKG3d", "TKG2d",
+    "TKFillet", "TKBool", "TKBO", "TKPrim", "TKTopAlgo", "TKBRep", "TKGeomBase", "TKG3d", "TKG2d",
     "TKMath", "TKernel", "TKGeomAlgo", "TKShHealing", "TKOffset",
 }
 TRUSTED_TASK_KINDS = {"single", "group", "active", "visible3", "visible4", "visible5", "visible5all"}

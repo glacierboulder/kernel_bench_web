@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-25242",
+  "version": "1",
+  "title": "OCCT 25242 对分离实体的并集做减法后错误保留被减实体",
+  "kind": "single",
+  "execution_mode": "joint",
+  "source_id": "oce013-authoring-b-5434272be3ee",
+  "members": [
+    {
+      "issue_id": "occt-25242",
+      "issue_version": "1"
+    }
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-25242-checks",
+    "version": "1"
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "has_hidden_checks": true,
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  }
+}

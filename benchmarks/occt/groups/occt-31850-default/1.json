@@ -1,0 +1,28 @@
+{
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "execution_mode": "joint",
+  "evaluation_suite": {
+    "version": "1",
+    "id": "occt-31850-default-checks"
+  },
+  "source_id": "oce013-authoring-b-5434272be3ee",
+  "schema_version": 1,
+  "id": "occt-31850-default-single",
+  "has_hidden_checks": true,
+  "members": [
+    {
+      "issue_id": "occt-31850-default",
+      "issue_version": "1"
+    }
+  ],
+  "version": "1",
+  "kind": "single",
+  "budget": {
+    "wall_seconds": 7200,
+    "scope": "group"
+  },
+  "title": "OCCT · 31850 默认参数"
+}

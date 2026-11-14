@@ -1,0 +1,33 @@
+--- compat/BOPTools_AlgoTools.original.cxx	2026-11-13 12:39:46.761183449 +0800
++++ src/BOPTools/BOPTools_AlgoTools.cxx	2026-11-13 12:39:46.764059355 +0800
+@@ -76,7 +76,7 @@
+                              const gp_Dir& theD2,
+                              const gp_Dir& theDRef);
+ static 
+-  inline Standard_Real fsqrt(Standard_Real val);
++  inline Standard_Real oce_local_fsqrt(Standard_Real val);
+ 
+ static
+   Standard_Boolean FindFacePairs (const TopoDS_Edge& theE,
+@@ -1425,7 +1425,7 @@
+       aPi=BRep_Tool::Pnt(aVi);
+       aTi=BRep_Tool::Tolerance(aVi);
+       aDi=aP.SquareDistance(aPi);
+-      aDi=fsqrt(aDi);
++      aDi=oce_local_fsqrt(aDi);
+       aDi=aDi+aTi;
+       if (aDi > aDmax) {
+         aDmax=aDi;
+@@ -1590,10 +1590,10 @@
+   return aBeta;
+ }
+ //=======================================================================
+-//function : fsqrt
++//function : oce_local_fsqrt
+ //purpose  : 
+ //=======================================================================
+-Standard_Real fsqrt(Standard_Real val)  
++Standard_Real oce_local_fsqrt(Standard_Real val)  
+ {
+   union {
+     int tmp;

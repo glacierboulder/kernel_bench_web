@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-github-1701-checks",
+  "version": "1",
+  "title": "等半径圆角产生异常顶点容差",
+  "source_ids": [
+    "occt801-1701-b-b8f597c67781"
+  ],
+  "group_ids": [
+    "occt-single-github-1701"
+  ],
+  "checkpoints": [
+    {
+      "id": "1701-original",
+      "issue_id": "occt-github-1701",
+      "category": "original",
+      "visibility": "public",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1701/1/check.cpp",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "issues/occt-github-1701/1/public/inputs/prefillet.brep",
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1701/1/original.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "1701-smaller",
+      "issue_id": "occt-github-1701",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1701/1/check.cpp",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "issues/occt-github-1701/1/public/inputs/prefillet.brep",
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1701/1/smaller.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "1701-larger",
+      "issue_id": "occt-github-1701",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/authoring-fillet-20261112/occt-github-1701/1/check.cpp",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "issues/occt-github-1701/1/public/inputs/prefillet.brep",
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1701/1/larger.txt"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}

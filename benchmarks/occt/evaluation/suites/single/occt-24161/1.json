@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-24161-checks",
+  "version": "1",
+  "title": "OCCT 24161 镜像实体融合时长时间无法返回",
+  "group_ids": [
+    "occt-single-24161"
+  ],
+  "source_ids": [
+    "oce013-authoring-b-5434272be3ee"
+  ],
+  "checkpoints": [
+    {
+      "id": "original",
+      "issue_id": "occt-24161",
+      "category": "original",
+      "visibility": "hidden",
+      "case": "evaluation/cases/authoring-20261114/occt-24161/original.tcl",
+      "oracle": "draw_test_done_v1",
+      "runner": "draw_case_v1",
+      "required": true,
+      "timeout_seconds": 70,
+      "runner_options": {
+        "case_timeout_seconds": 55
+      }
+    },
+    {
+      "id": "regression",
+      "issue_id": "occt-24161",
+      "category": "regression",
+      "visibility": "hidden",
+      "case": "evaluation/cases/authoring-20261114/occt-24161/regression.tcl",
+      "oracle": "draw_test_done_v1",
+      "runner": "draw_case_v1",
+      "required": true,
+      "timeout_seconds": 70,
+      "runner_options": {
+        "case_timeout_seconds": 55
+      }
+    },
+    {
+      "id": "rotate",
+      "issue_id": "occt-24161",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "case": "evaluation/cases/authoring-20261114/occt-24161/rotate.tcl",
+      "oracle": "draw_test_done_v1",
+      "runner": "draw_case_v1",
+      "required": true,
+      "timeout_seconds": 70,
+      "runner_options": {
+        "case_timeout_seconds": 55
+      }
+    },
+    {
+      "id": "shift",
+      "issue_id": "occt-24161",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "case": "evaluation/cases/authoring-20261114/occt-24161/shift.tcl",
+      "oracle": "draw_test_done_v1",
+      "runner": "draw_case_v1",
+      "required": true,
+      "timeout_seconds": 70,
+      "runner_options": {
+        "case_timeout_seconds": 55
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/authoring-20261114/occt-24161/bug24161_MirrorSolids.brep"
+  ]
+}

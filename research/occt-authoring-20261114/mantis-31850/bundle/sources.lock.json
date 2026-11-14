@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "algorithm": "agent-bench-tree-sha256-v1",
+  "exclusions": [
+    ".git",
+    "__pycache__",
+    "CMakeFiles",
+    "build path components",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "sources": [
+    {
+      "commit": "5434272be3eecaf06f0921f8fa4f1a6df7672033",
+      "materialized_tree_sha256": "f87a2533d98b8816ac2820b9ba0e4a2eb791c1467ef422c41348c1fe3d2ad6ec",
+      "provenance": "evaluation/provenance/oce-31850.json",
+      "source_id": "oce013-authoring-b-5434272be3ee",
+      "toolchain": "oce013-gcc13-tcl86-v1",
+      "upstream_url": "https://github.com/tpaviot/oce.git",
+      "verification_status": "verified_git"
+    }
+  ]
+}
+

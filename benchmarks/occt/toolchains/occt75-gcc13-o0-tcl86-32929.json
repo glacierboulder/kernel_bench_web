@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "occt75-gcc13-o0-tcl86-32929",
+  "title": "OCCT 7.5 GCC 13 / Tcl 8.6 / O0",
+  "platforms": [
+    "linux-x86_64"
+  ],
+  "executables": {
+    "cmake": "cmake",
+    "c_compiler": "gcc",
+    "cxx_compiler": "g++"
+  },
+  "compiler_output_directory": "gcc",
+  "tools_directory": "occt-v4-clang10-o0",
+  "compiler_jobs_max": 2,
+  "tcl_version": "8.6",
+  "tcl_paths": "Use deployment BENCH_TCL_* environment variables",
+  "optimization_flags": "-O0 -DNDEBUG",
+  "evaluator_directory": "evaluation/cases/occt-single-v4-runtime-o0"
+}

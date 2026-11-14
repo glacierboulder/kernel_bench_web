@@ -1,0 +1,84 @@
+DRAW is running in batch mode
+TODO OCC25983 ALL: Error :  is WRONG because number of
+TODO OCC25983 ALL: Error : The area of result shape is
+TODO OCC25983 ALL: Error : The volume of result shape is
+========
+OCC25983
+========
+
+INPUT
+
+
+Mass :         27.6693
+
+Center of gravity : 
+X =         4.43968
+Y =          6.8365
+Z =         9.94838
+
+Matrix of Inertia : 
+        1158.88         297.416         667.888
+        297.416         1423.71        -433.732
+        667.888        -433.732         752.319
+
+Moments : 
+IX =         1662.51
+IY =         1616.86
+IZ =         55.5441
+
+
+OVERLAP
+
+
+Mass :          1.3011
+
+Center of gravity : 
+X =    -1.01396e-05
+Y =         9.74157
+Z =         15.7079
+
+Matrix of Inertia : 
+       0.306019     2.91741e-06    -4.96371e-06
+    2.91741e-06        0.507748    -1.23963e-05
+   -4.96371e-06    -1.23963e-05        0.297073
+
+Moments : 
+IX =        0.507748
+IY =        0.306019
+IZ =        0.297073
+
+
+RESULT
+This shape seems to be valid
+Number of shapes in result
+ VERTEX    : 18
+ EDGE      : 40
+ WIRE      : 24
+ FACE      : 24
+ SHELL     : 1
+ SOLID     : 1
+ COMPSOLID : 0
+ COMPOUND  : 1
+ SHAPE     : 109
+
+
+
+Mass :         54.0383
+
+Center of gravity : 
+X =     1.78151e-06
+Y =         6.76659
+Z =         9.80976
+
+Matrix of Inertia : 
+        2262.03    -0.000260813    -0.000481406
+   -0.000260813          3893.5        -845.177
+   -0.000481406        -845.177         2583.87
+
+Moments : 
+IX =         4307.85
+IY =         2262.03
+IZ =         2169.52
+
+
+CASE_PASS

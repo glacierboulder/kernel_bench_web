@@ -1,0 +1,1874 @@
+CMake Warning:
+  Ignoring extra path from command line:
+
+   ".5"
+
+
+CMake Warning (dev) at CMakeLists.txt:20 (project):
+  cmake_minimum_required() should be called prior to this top-level project()
+  call.  Please see the cmake-commands(7) manual for usage documentation of
+  both commands.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Selecting Windows SDK version 10.0.22621.0 to target Windows 10.0.22631.
+-- The C compiler identification is MSVC 19.43.34808.0
+-- The CXX compiler identification is MSVC 19.43.34808.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Deprecation Warning at CMakeLists.txt:37 (cmake_minimum_required):
+-- Build 64bit
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_INSTALL_PDB_FILES'.
+Call Stack (most recent call first):
+  CMakeLists.txt:76 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_USE_BUNDLE'.
+Call Stack (most recent call first):
+  CMakeLists.txt:80 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_USE_BUNDLE_SOURCE'.
+Call Stack (most recent call first):
+  CMakeLists.txt:81 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_USE_PCH'.
+Call Stack (most recent call first):
+  CMakeLists.txt:96 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_BUILD_SHARED_LIB'.
+Call Stack (most recent call first):
+  CMakeLists.txt:103 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_MODEL'.
+Call Stack (most recent call first):
+  CMakeLists.txt:110 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_OCAF'.
+Call Stack (most recent call first):
+  CMakeLists.txt:111 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_DATAEXCHANGE'.
+Call Stack (most recent call first):
+  CMakeLists.txt:112 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_VISUALISATION'.
+Call Stack (most recent call first):
+  CMakeLists.txt:114 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_DISABLE_TKSERVICE_FONT'.
+Call Stack (most recent call first):
+  CMakeLists.txt:117 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_EXTRA_WARNINGS'.
+Call Stack (most recent call first):
+  CMakeLists.txt:119 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_TESTING'.
+Call Stack (most recent call first):
+  CMakeLists.txt:122 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_ADD_HEADERS'.
+Call Stack (most recent call first):
+  CMakeLists.txt:125 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_DISABLE_BSPLINE_MESHER'.
+Call Stack (most recent call first):
+  CMakeLists.txt:127 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:44 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_ENABLE_DEB_FLAG'.
+Call Stack (most recent call first):
+  CMakeLists.txt:155 (option_with_default)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at CMakeLists.txt:209 (option):
+  Policy CMP0077 is not set: option() honors normal variables.  Run "cmake
+  --help-policy CMP0077" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+  For compatibility with older versions of CMake, option is clearing the
+  normal variable 'OCE_USE_MSVC_EXPRESS'.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Found Threads: TRUE  
+-- Found Freetype: C:/occt-cad-6acadf32/build/vcpkg_installed/x64-windows/lib/freetype.lib (found version "2.13.3") 
+-- Found OpenGL: opengl32   
+-- OPENGL LIBS: opengl32;glu32
+-- FREETYPE LIBS: C:/occt-cad-6acadf32/build/vcpkg_installed/x64-windows/lib/freetype.lib
+-- FREETYPE INCLUDES: C:/occt-cad-6acadf32/build/vcpkg_installed/x64-windows/include
+-- THREAD LIB: 
+-- Found Tclsh: D:/msy/mingw64/bin/tclsh.exe (found version "8.6") 
+-- Found TCL: C:/occt-cad-6acadf32/build/vcpkg_installed/x64-windows/lib/tcl86t.lib  
+-- Found TCLTK: C:/occt-cad-6acadf32/build/vcpkg_installed/x64-windows/lib/tcl86t.lib  
+-- Found TK: C:/occt-cad-6acadf32/build/vcpkg_installed/x64-windows/lib/tk86t.lib  
+-- TCL LIB: C:/occt-cad-6acadf32/build/vcpkg_installed/x64-windows/lib/tcl86t.lib
+-- TK LIB: C:/occt-cad-6acadf32/build/vcpkg_installed/x64-windows/lib/tk86t.lib
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of int
+-- Check size of int - done
+-- Check size of size_t
+-- Check size of size_t - done
+-- Windows system detected
+-- Found MSVC compiler: 1 1943
+-- output_path: C:/occt-cad-6acadf32/learning/submit-24161/build/bin/
+-- Processing ToolKit: TKernel (FSD;MMgt;OSD;Plugin;Quantity;Resource;SortTools;Standard;StdFail;Storage;TColStd;TCollection;TShort;Units;UnitsAPI;IncludeLibrary;Dico;NCollection;Message)
+-- Processing ToolKit: TKMath (math;ElCLib;ElSLib;BSplCLib;BSplSLib;PLib;Precision;GeomAbs;Poly;CSLib;Convert;Bnd;gp;TColgp;TopLoc)
+-- Processing ToolKit: TKAdvTools (Dynamic;Materials;Expr;ExprIntrp;GraphDS;GraphTools)
+-- Processing ToolKit: TKG2d (Geom2d;LProp;TColGeom2d;Adaptor2d;Geom2dLProp;Geom2dAdaptor;GProp)
+-- Processing ToolKit: TKG3d (Geom;TColGeom;GeomAdaptor;AdvApprox;GeomLProp;Adaptor3d;LProp3d;TopAbs)
+-- Processing ToolKit: TKGeomBase (ProjLib;GeomProjLib;GCPnts;CPnts;Approx;AppParCurves;FEmTool;AppCont;Extrema;IntAna;IntAna2d;GeomConvert;AdvApp2Var;GeomLib;Geom2dConvert;Hermit;BndLib;AppDef;GeomTools;GC;GCE2d;gce)
+-- Processing ToolKit: TKBRep (TopoDS;TopExp;TopTools;BRep;BRepLProp;BRepAdaptor;BRepTools)
+-- Processing ToolKit: TKGeomAlgo (Hatch;GeomInt;IntStart;IntWalk;IntImp;IntCurveSurface;IntSurf;IntPatch;Geom2dInt;IntImpParGen;IntRes2d;IntCurve;TopTrans;Intf;ApproxInt;GccAna;GccEnt;GccInt;GccIter;GccGeo;HatchGen;Geom2dHatch;Law;AppBlend;Plate;GeomPlate;LocalAnalysis;GeomAPI;GeomFill;Geom2dAPI;Geom2dGcc;FairCurve;NLPlate;IntPolyh;TopClass)
+-- Processing ToolKit: TKTopAlgo (IntCurvesFace;MAT;MAT2d;Bisector;BRepMAT2d;BRepCheck;BRepBndLib;BRepExtrema;BRepClass;BRepClass3d;BRepLib;BRepGProp;BRepIntCurveSurface;BRepTopAdaptor;BRepBuilderAPI;BRepApprox)
+-- Processing ToolKit: TKPrim (BRepPrim;Primitives;BRepSweep;Sweep;BRepPrimAPI)
+-- Processing ToolKit: TKBO (IntTools;BRepAlgoAPI;BOPCol;BOPInt;BOPDS;BOPAlgo;BOPTools)
+-- Processing ToolKit: TKHLR (HLRTopoBRep;HLRBRep;HLRAlgo;Intrv;TopBas;TopCnx;Contap)
+-- Processing ToolKit: TKMesh (BRepMesh;IntPoly)
+-- Processing ToolKit: TKShHealing (ShapeBuild;ShapeExtend;ShapeConstruct;ShapeCustom;ShapeAnalysis;ShapeFix;ShapeUpgrade;ShapeAlgo;ShapeProcess;ShapeProcessAPI)
+-- Processing ToolKit: TKXMesh (XBRepMesh)
+-- Processing ToolKit: TKBool (TopOpeBRep;TopOpeBRepDS;TopOpeBRepBuild;TopOpeBRepTool;BRepAlgo;BRepFill;BRepProj)
+-- Processing ToolKit: TKFillet (ChFiDS;ChFi2d;ChFi3d;ChFiKPart;Blend;BRepBlend;BlendFunc;BRepFilletAPI;FilletSurf)
+-- Processing ToolKit: TKFeat (LocOpe;BRepFeat)
+-- Processing ToolKit: TKOffset (BRepOffsetAPI;Draft;BRepOffset;BiTgte)
+-- Processing ToolKit: TKService (Aspect;SelectBasics;AlienImage;Image;InterfaceGraphic;TColQuantity;Font;WNT)
+-- Processing ToolKit: TKV3d (V3d;Graphic3d;Visual3d;Select3D;Prs3d;StdPrs;SelectMgr;PrsMgr;AIS;DsgPrs;StdSelect)
+-- Processing ToolKit: TKOpenGl (OpenGl)
+-- Processing ToolKit: TKMeshVS (MeshVS)
+-- Processing ToolKit: TKNIS (NIS)
+-- Processing ToolKit: TKVoxel (Voxel)
+-- Processing ToolKit: TKCDF (CDM;PCDM;CDF;UTL;LDOM)
+-- Processing ToolKit: PTKernel (DBC;PCollection;PColStd;PMMgt;PShort;PStandard;PTColStd;ObjMgt)
+-- Processing ToolKit: TKLCAF (TDF;TDataStd;TFunction;TDocStd;AppStdL)
+-- Processing ToolKit: FWOSPlugin (FWOSDriver)
+-- Processing ToolKit: TKPShape (PBRep;PTopoDS;PGeom;PGeom2d;PPoly;PColgp;PTopLoc;PColPGeom;PColPGeom2d;MgtBRep;MgtGeom;MgtGeom2d;MgtPoly;MgtTopLoc;MgtTopoDS)
+-- Processing ToolKit: TKBinL (BinMDF;BinMDataStd;BinMFunction;BinMDocStd;BinObjMgt;BinLDrivers)
+-- Processing ToolKit: TKXmlL (XmlLDrivers;XmlMDF;XmlMDataStd;XmlMDocStd;XmlMFunction;XmlObjMgt)
+-- Processing ToolKit: TKPLCAF (PDF;PDataStd;PFunction;PDocStd;MDF;MDataStd;MFunction;MDocStd)
+-- Processing ToolKit: TKTObj (TObj)
+-- Processing ToolKit: TKShapeSchema (ShapeSchema;PCDMShape)
+-- Processing ToolKit: TKStdLSchema (StdLSchema;StdLDrivers)
+-- Processing ToolKit: TKCAF (TDataXtd;TNaming;TPrsStd;AppStd)
+-- Processing ToolKit: TKBin (BinDrivers;BinMDataXtd;BinMPrsStd;BinMNaming;BinTools)
+-- Processing ToolKit: TKXml (XmlDrivers;XmlMDataXtd;XmlMNaming;XmlMPrsStd)
+-- Processing ToolKit: TKPCAF (PDataXtd;PNaming;PPrsStd;MDataXtd;MPrsStd;MNaming)
+-- Processing ToolKit: TKBinTObj (BinTObjDrivers)
+-- Processing ToolKit: TKXmlTObj (XmlTObjDrivers)
+-- Processing ToolKit: TKStdSchema (StdSchema;StdDrivers)
+-- Processing ToolKit: TKSTL (StlMesh;StlAPI;StlTransfer;RWStl)
+-- Processing ToolKit: TKXSBase (Interface;Transfer;IFGraph;IFSelect;TransferBRep;XSControl;StepData;StepFile;HeaderSection;RWHeaderSection;APIHeaderSection;StepSelect;UnitsMethods;XSAlgo;LibCtl;MoniTool)
+-- Processing ToolKit: TKSTEPBase (StepBasic;RWStepBasic;StepRepr;RWStepRepr;StepGeom;RWStepGeom;StepShape;RWStepShape)
+-- Processing ToolKit: TKIGES (IGESData;IGESFile;IGESBasic;IGESGraph;IGESGeom;IGESDimen;IGESDraw;IGESSolid;IGESDefs;IGESAppli;IGESConvGeom;IGESSelect;IGESToBRep;GeomToIGES;Geom2dToIGES;BRepToIGES;BRepToIGESBRep;IGESControl)
+-- Processing ToolKit: TKSTEPAttr (StepVisual;RWStepVisual;StepDimTol;RWStepDimTol)
+-- Processing ToolKit: TKSTEP209 (StepElement;StepFEA;RWStepElement;RWStepFEA)
+-- Processing ToolKit: TKSTEP (StepAP214;RWStepAP214;StepAP203;RWStepAP203;STEPConstruct;STEPEdit;GeomToStep;StepToGeom;StepToTopoDS;TopoDSToStep;STEPControl;STEPSelections;StepAP209)
+-- Processing ToolKit: TKVRML (VrmlConverter;VrmlAPI;Vrml;VrmlData)
+-- Processing ToolKit: TKXCAF (XCAFApp;XCAFDoc;XCAFPrs)
+-- Processing ToolKit: TKXCAFSchema (MXCAFDoc;PXCAFDoc;XCAFDrivers;XCAFSchema)
+-- Processing ToolKit: TKXmlXCAF (XmlXCAFDrivers;XmlMXCAFDoc)
+-- Processing ToolKit: TKBinXCAF (BinXCAFDrivers;BinMXCAFDoc)
+-- Processing ToolKit: TKXDEIGES (IGESCAFControl)
+-- Processing ToolKit: TKXDESTEP (STEPCAFControl)
+-- Processing ToolKit: TKDraw (Draw;DBRep;DrawTrSurf)
+-- Processing ToolKit: TKTopTest (TestTopOpeDraw;TestTopOpeTools;TestTopOpe;BRepTest;GeometryTest;HLRTest;MeshTest;GeomliteTest;DrawFairCurve;BOPTest)
+-- Processing ToolKit: TKViewerTest (ViewerTest)
+-- Processing ToolKit: TKXSDRAW (SWDRAW;XSDRAW;XSDRAWIGES;XSDRAWSTEP;XSDRAWSTLVRML)
+-- Processing ToolKit: TKDCAF (DDF;DDocStd;DNaming;DDataStd;DPrsStd;DrawDim)
+-- Processing ToolKit: TKXDEDRAW (XDEDRAW)
+-- Processing ToolKit: TKTObjDRAW (TObjDRAW)
+-- Processing application: DRAWEXE (DRAWEXE)
+-- Configuring done (28.4s)
+CMake Warning (dev) in adm/cmake/TKernel/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKernel/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKernel/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKernel/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKMath/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKMath/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKMath/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKMath/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKAdvTools/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKAdvTools/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKAdvTools/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKAdvTools/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKG2d/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKG2d/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKG2d/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKG2d/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKG3d/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKG3d/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKG3d/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKG3d/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKGeomBase/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKGeomBase/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKGeomBase/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKGeomBase/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBRep/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBRep/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBRep/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBRep/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKGeomAlgo/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKGeomAlgo/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKGeomAlgo/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKGeomAlgo/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTopAlgo/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTopAlgo/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTopAlgo/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTopAlgo/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPrim/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPrim/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPrim/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPrim/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBO/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBO/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBO/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBO/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKHLR/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKHLR/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKHLR/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKHLR/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKMesh/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKMesh/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKMesh/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKMesh/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKShHealing/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKShHealing/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKShHealing/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKShHealing/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXMesh/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXMesh/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXMesh/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXMesh/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBool/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBool/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBool/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBool/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKFillet/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKFillet/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKFillet/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKFillet/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKFeat/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKFeat/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKFeat/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKFeat/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKOffset/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKOffset/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKOffset/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKOffset/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKService/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKService/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKService/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKService/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKV3d/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKV3d/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKV3d/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKV3d/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKOpenGl/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKOpenGl/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKOpenGl/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKOpenGl/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKMeshVS/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKMeshVS/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKMeshVS/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKMeshVS/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKNIS/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKNIS/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKNIS/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKNIS/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKVoxel/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKVoxel/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKVoxel/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKVoxel/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKCDF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKCDF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKCDF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKCDF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/PTKernel/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/PTKernel/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/PTKernel/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/PTKernel/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKLCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKLCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKLCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKLCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/FWOSPlugin/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/FWOSPlugin/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/FWOSPlugin/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/FWOSPlugin/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPShape/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPShape/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPShape/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPShape/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBinL/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBinL/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBinL/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBinL/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXmlL/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXmlL/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXmlL/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXmlL/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPLCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPLCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPLCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPLCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTObj/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTObj/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTObj/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTObj/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKShapeSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKShapeSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKShapeSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKShapeSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKStdLSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKStdLSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKStdLSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKStdLSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBin/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBin/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBin/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBin/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXml/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXml/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXml/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXml/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKPCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBinTObj/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBinTObj/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBinTObj/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBinTObj/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXmlTObj/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXmlTObj/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXmlTObj/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXmlTObj/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKStdSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKStdSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKStdSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKStdSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTL/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTL/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTL/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTL/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXSBase/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXSBase/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXSBase/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXSBase/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEPBase/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEPBase/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEPBase/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEPBase/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKIGES/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKIGES/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKIGES/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKIGES/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEPAttr/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEPAttr/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEPAttr/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEPAttr/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEP209/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEP209/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEP209/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEP209/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEP/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEP/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEP/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKSTEP/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKVRML/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKVRML/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKVRML/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKVRML/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXCAFSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXCAFSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXCAFSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXCAFSchema/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXmlXCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXmlXCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXmlXCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXmlXCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBinXCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBinXCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBinXCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKBinXCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXDEIGES/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXDEIGES/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXDEIGES/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXDEIGES/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXDESTEP/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXDESTEP/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXDESTEP/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXDESTEP/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKDraw/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKDraw/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKDraw/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKDraw/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTopTest/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTopTest/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTopTest/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTopTest/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKViewerTest/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKViewerTest/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKViewerTest/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKViewerTest/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXSDRAW/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXSDRAW/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXSDRAW/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXSDRAW/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKDCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKDCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKDCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKDCAF/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXDEDRAW/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXDEDRAW/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXDEDRAW/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKXDEDRAW/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTObjDRAW/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTObjDRAW/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTObjDRAW/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/TKTObjDRAW/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/DRAWEXE/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/DRAWEXE/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/DRAWEXE/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in adm/cmake/DRAWEXE/CMakeLists.txt:
+  Policy CMP0043 is not set: Ignore COMPILE_DEFINITIONS_<Config> properties.
+  Run "cmake --help-policy CMP0043" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Generating done (14.1s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_POLICY_VERSION_MINIMUM
+
+
+-- Build files have been written to: C:/occt-cad-6acadf32/learning/submit-24161/build

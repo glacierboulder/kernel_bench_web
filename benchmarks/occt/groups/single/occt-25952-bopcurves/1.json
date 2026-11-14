@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-single-25952-bopcurves",
+  "version": "1",
+  "title": "OCCT 25952 曲面求交返回多余交线",
+  "kind": "single",
+  "execution_mode": "joint",
+  "source_id": "oce013-authoring-b-5434272be3ee",
+  "members": [
+    {
+      "issue_id": "occt-25952-bopcurves",
+      "issue_version": "1"
+    }
+  ],
+  "evaluation_suite": {
+    "id": "occt-single-25952-bopcurves-checks",
+    "version": "1"
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "has_hidden_checks": true,
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  }
+}
