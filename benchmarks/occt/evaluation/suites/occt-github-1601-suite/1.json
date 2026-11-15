@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1601-suite",
+  "version": "1",
+  "title": "Inertia and mass above an offset reference plane",
+  "source_ids": [
+    "occt801-b8f597c67781-plane-properties"
+  ],
+  "group_ids": [
+    "occt-github-1601-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "original-0",
+      "issue_id": "occt-github-1601",
+      "category": "original",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1601/original-0.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "neighborhood-1",
+      "issue_id": "occt-github-1601",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1601/neighborhood-1.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "neighborhood-2",
+      "issue_id": "occt-github-1601",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1601/neighborhood-2.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "regression-3",
+      "issue_id": "occt-github-1601",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1601/regression-3.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    }
+  ]
+}

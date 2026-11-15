@@ -1,0 +1,51 @@
+diff --git a/src/ModelingAlgorithms/TKTopAlgo/BRepGProp/BRepGProp_Vinert.cxx b/src/ModelingAlgorithms/TKTopAlgo/BRepGProp/BRepGProp_Vinert.cxx
+--- a/src/ModelingAlgorithms/TKTopAlgo/BRepGProp/BRepGProp_Vinert.cxx
++++ b/src/ModelingAlgorithms/TKTopAlgo/BRepGProp/BRepGProp_Vinert.cxx
+@@ -277,7 +277,7 @@
+ {
+   double aCoeff[4];
+   thePlane.Coefficients(aCoeff[0], aCoeff[1], aCoeff[2], aCoeff[3]);
+-  aCoeff[3] = aCoeff[3] - aCoeff[0] * loc.X() - aCoeff[1] * loc.Y() - aCoeff[2] * loc.Z();
++  aCoeff[3] = -aCoeff[3] - aCoeff[0] * loc.X() - aCoeff[1] * loc.Y() - aCoeff[2] * loc.Z();
+ 
+   BRepGProp_Gauss aGauss(BRepGProp_Gauss::Vinert);
+ 
+@@ -294,7 +294,7 @@
+ 
+   thePlane.Coefficients(aCoeff[0], aCoeff[1], aCoeff[2], aCoeff[3]);
+ 
+-  aCoeff[3] = aCoeff[3] - aCoeff[0] * loc.X() - aCoeff[1] * loc.Y() - aCoeff[2] * loc.Z();
++  aCoeff[3] = -aCoeff[3] - aCoeff[0] * loc.X() - aCoeff[1] * loc.Y() - aCoeff[2] * loc.Z();
+ 
+   myEpsilon = 1.0;
+   aGauss.Compute(theSurface, loc, aCoeff, false, dim, g, inertia);
+@@ -311,7 +311,7 @@
+ 
+   thePlane.Coefficients(aCoeff[0], aCoeff[1], aCoeff[2], aCoeff[3]);
+ 
+-  aCoeff[3] = aCoeff[3] - aCoeff[0] * loc.X() - aCoeff[1] * loc.Y() - aCoeff[2] * loc.Z();
++  aCoeff[3] = -aCoeff[3] - aCoeff[0] * loc.X() - aCoeff[1] * loc.Y() - aCoeff[2] * loc.Z();
+ 
+   myEpsilon = 1.0;
+   aGauss.Compute(theSurface, theDomain, loc, aCoeff, false, dim, g, inertia);
+diff --git a/src/ModelingAlgorithms/TKTopAlgo/BRepGProp/BRepGProp_VinertGK.cxx b/src/ModelingAlgorithms/TKTopAlgo/BRepGProp/BRepGProp_VinertGK.cxx
+--- a/src/ModelingAlgorithms/TKTopAlgo/BRepGProp/BRepGProp_VinertGK.cxx
++++ b/src/ModelingAlgorithms/TKTopAlgo/BRepGProp/BRepGProp_VinertGK.cxx
+@@ -216,7 +216,7 @@
+ 
+   loc.Coord(aXLoc, aYLoc, aZLoc);
+   thePlane.Coefficients(aCoeff[0], aCoeff[1], aCoeff[2], aCoeff[3]);
+-  aCoeff[3] = aCoeff[3] - aCoeff[0] * aXLoc - aCoeff[1] * aYLoc - aCoeff[2] * aZLoc;
++  aCoeff[3] = -aCoeff[3] - aCoeff[0] * aXLoc - aCoeff[1] * aYLoc - aCoeff[2] * aZLoc;
+ 
+   return PrivatePerform(theSurface, nullptr, false, aCoeff, theTolerance, theCGFlag, theIFlag);
+ }
+@@ -241,7 +241,7 @@
+ 
+   loc.Coord(aXLoc, aYLoc, aZLoc);
+   thePlane.Coefficients(aCoeff[0], aCoeff[1], aCoeff[2], aCoeff[3]);
+-  aCoeff[3] = aCoeff[3] - aCoeff[0] * aXLoc - aCoeff[1] * aYLoc - aCoeff[2] * aZLoc;
++  aCoeff[3] = -aCoeff[3] - aCoeff[0] * aXLoc - aCoeff[1] * aYLoc - aCoeff[2] * aZLoc;
+ 
+   return PrivatePerform(theSurface, &theDomain, false, aCoeff, theTolerance, theCGFlag, theIFlag);
+ }

@@ -1,5 +1,8 @@
 {
   "evaluation_suites": [
+    {"id": "occt-github-1601-suite", "version": "1", "path": "evaluation/suites/occt-github-1601-suite/1.json"},
+    {"id": "occt-github-1587-suite", "version": "1", "path": "evaluation/suites/occt-github-1587-suite/1.json"},
+    {"id": "occt-github-1550-suite", "version": "1", "path": "evaluation/suites/occt-github-1550-suite/1.json"},
     {
       "id": "occt-single-544",
       "path": "evaluation/suites/legacy/occt-single-544/1.json",
@@ -357,6 +360,9 @@
     }
   ],
   "groups": [
+    {"id": "occt-github-1601-single", "version": "1", "path": "groups/occt-github-1601-single/1.json"},
+    {"id": "occt-github-1587-single", "version": "1", "path": "groups/occt-github-1587-single/1.json"},
+    {"id": "occt-github-1550-single", "version": "1", "path": "groups/occt-github-1550-single/1.json"},
     {
       "id": "occt_boolean_single_544",
       "path": "groups/legacy/occt-single-544/1.json",
@@ -710,6 +716,9 @@
   ],
   "id": "occt",
   "issues": [
+    {"id": "occt-github-1601", "version": "1", "path": "issues/occt-github-1601/1/issue.json"},
+    {"id": "occt-github-1587", "version": "1", "path": "issues/occt-github-1587/1/issue.json"},
+    {"id": "occt-github-1550", "version": "1", "path": "issues/occt-github-1550/1/issue.json"},
     {
       "id": "occt-544",
       "path": "issues/occt-544/1/issue.json",
