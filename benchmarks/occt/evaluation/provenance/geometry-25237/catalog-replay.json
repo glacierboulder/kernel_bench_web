@@ -1,0 +1,146 @@
+[
+  {
+    "side": "B",
+    "check": "original",
+    "expected_pass": false,
+    "passed": false,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 2.207,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 1,
+      "elapsed_seconds": 0.044,
+      "output_tail": "0 swap=0 edges=1 length=0.100002 pass=1\n0 swap=1 edges=1 length=0.104822 pass=0\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "B",
+    "check": "translation",
+    "expected_pass": false,
+    "passed": false,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 1.711,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 1,
+      "elapsed_seconds": 0.031,
+      "output_tail": "1 swap=0 edges=1 length=0.100002 pass=1\n1 swap=1 edges=1 length=0.104822 pass=0\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "B",
+    "check": "rotation",
+    "expected_pass": false,
+    "passed": false,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 1.859,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 1,
+      "elapsed_seconds": 0.036,
+      "output_tail": "2 swap=0 edges=1 length=0.100002 pass=1\n2 swap=1 edges=1 length=0.104822 pass=0\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "B",
+    "check": "disjoint",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 1.813,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.038,
+      "output_tail": "3 swap=0 edges=0 length=0 pass=1\n3 swap=1 edges=0 length=0 pass=1\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "F",
+    "check": "original",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 1.728,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.088,
+      "output_tail": "0 swap=0 edges=1 length=0.100002 pass=1\n0 swap=1 edges=1 length=0.100002 pass=1\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "F",
+    "check": "translation",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 1.798,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.085,
+      "output_tail": "1 swap=0 edges=1 length=0.100002 pass=1\n1 swap=1 edges=1 length=0.100002 pass=1\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "F",
+    "check": "rotation",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 1.78,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.082,
+      "output_tail": "2 swap=0 edges=1 length=0.100002 pass=1\n2 swap=1 edges=1 length=0.100002 pass=1\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "F",
+    "check": "disjoint",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 1.724,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.08,
+      "output_tail": "3 swap=0 edges=0 length=0 pass=1\n3 swap=1 edges=0 length=0 pass=1\n",
+      "timed_out": false
+    }
+  }
+]

@@ -1,0 +1,28 @@
+diff --git a/src/ModelingAlgorithms/TKBO/BOPAlgo/BOPAlgo_PaveFiller_7.cxx b/src/ModelingAlgorithms/TKBO/BOPAlgo/BOPAlgo_PaveFiller_7.cxx
+index 822b7679..dc32d73b 100644
+--- a/src/ModelingAlgorithms/TKBO/BOPAlgo/BOPAlgo_PaveFiller_7.cxx
++++ b/src/ModelingAlgorithms/TKBO/BOPAlgo/BOPAlgo_PaveFiller_7.cxx
+@@ -470,6 +470,23 @@ void BOPAlgo_PaveFiller::MakeSplitEdges(const Message_ProgressRange& theRange)
+       // Split the edge
+       if (bCB)
+       {
++        // Prefer the more precise source curve for edge-only common blocks.
++        if (aCB->Faces().IsEmpty())
++        {
++          auto aBest = aCB->PaveBlock1();
++          double aTolerance = BRep_Tool::Tolerance(TopoDS::Edge(myDS->Shape(aBest->OriginalEdge())));
++          for (const auto& aCandidate : aCB->PaveBlocks())
++          {
++            const double aCandidateTolerance =
++              BRep_Tool::Tolerance(TopoDS::Edge(myDS->Shape(aCandidate->OriginalEdge())));
++            if (aCandidateTolerance < aTolerance)
++            {
++              aBest = aCandidate;
++              aTolerance = aCandidateTolerance;
++            }
++          }
++          aCB->SetRealPaveBlock(aBest);
++        }
+         aPB = aCB->PaveBlock1();
+         nE  = aPB->OriginalEdge();
+         aPB->Indices(nV1, nV2);

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "occt1116-offset2d-gcc",
+  "title": "OCCT 8.0.1 GCC",
+  "platforms": [
+    "linux-x86_64"
+  ],
+  "executables": {
+    "cmake": "cmake",
+    "c_compiler": "gcc",
+    "cxx_compiler": "g++"
+  },
+  "compiler_output_directory": "gcc",
+  "tools_directory": "occt1116-offset2d-gcc",
+  "compiler_jobs_max": 2,
+  "tcl_version": "8.6",
+  "tcl_paths": "deployment configuration or BENCH_TCL_* environment variables",
+  "evaluator_directory": "evaluation/cases/occt1116-offset2d-gcc"
+}

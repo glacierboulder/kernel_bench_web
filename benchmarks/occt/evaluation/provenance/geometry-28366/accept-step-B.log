@@ -1,0 +1,32 @@
+DRAW is running in batch mode
+============
+OCC28366
+============
+
+Pload : Cannot load plugin GLTF: Could not open: TKXSDRAWGLTF.dll; reason: 找不到指定的模块。
+
+
+Pload : Loaded 9 plugin(s), skipped 1 plugin(s)
+Reduced model for translation without additional info will be used 
+ 
+                        Information                         
+ ===========================================================
+ 
+ Number of input shapes      : 8
+ Number of actual shapes     : 8
+ Number of Bounds            : 28
+ Number of Sections          : 28
+ Number of Edges             : 14
+ Number of Vertices          : 28
+ Number of Nodes             : 8
+ Number of Free Edges        : 0
+ Number of Contiguous Edges  : 14
+ Number of Multiple Edges    : 0
+ Number of Degenerated Edges : 4
+ ===========================================================
+ 
+angle=0 area=7.03549e+07 relative_delta=0.0 valid=1 clean=0 nonempty=1 pass=0
+angle=37 area=7.95825e+07 relative_delta=0.1311578866575036 valid=1 clean=0 nonempty=1 pass=0
+angle=90 area=7.03549e+07 relative_delta=0.0 valid=1 clean=0 nonempty=1 pass=0
+VERDICT geometry_fail
+exit=1

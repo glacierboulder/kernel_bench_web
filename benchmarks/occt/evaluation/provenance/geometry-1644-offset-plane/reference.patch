@@ -1,0 +1,35 @@
+diff --git a/src/ModelingData/TKG3d/Geom/Geom_OffsetSurface.cxx b/src/ModelingData/TKG3d/Geom/Geom_OffsetSurface.cxx
+index d9fd29ccdb3..265a234ba90 100644
+--- a/src/ModelingData/TKG3d/Geom/Geom_OffsetSurface.cxx
++++ b/src/ModelingData/TKG3d/Geom/Geom_OffsetSurface.cxx
+@@ -31,8 +31,6 @@
+ #include <Geom_Geometry.hxx>
+ #include <Geom_OffsetCurve.hxx>
+ #include <Geom_OffsetSurface.hxx>
+-#include "Geom_OffsetSurfaceUtils.pxx"
+-#include "Geom_OsculatingSurface.pxx"
+ #include <Geom_Plane.hxx>
+ #include <Geom_RectangularTrimmedSurface.hxx>
+ #include <Geom_SphericalSurface.hxx>
+@@ -62,6 +60,9 @@
+ #include <Standard_Integer.hxx>
+ #include <NCollection_HArray1.hxx>
+ 
++#include "Geom_OffsetSurfaceUtils.pxx"
++#include "Geom_OsculatingSurface.pxx"
++
+ IMPLEMENT_STANDARD_RTTIEXT(Geom_OffsetSurface, Geom_Surface)
+ 
+ static const double MyAngularToleranceForG1 = Precision::Angular();
+@@ -900,9 +901,9 @@ occ::handle<Geom_Surface> Geom_OffsetSurface::Surface() const
+   if (TheType == STANDARD_TYPE(Geom_Plane))
+   {
+     occ::handle<Geom_Plane> P = occ::down_cast<Geom_Plane>(Base);
+-    // Plane normal is already available as Position().Direction().
++    // The UV normal changes sign when one in-plane axis is reversed.
+     gp_Vec T(P->Position().Direction());
+-    T *= offsetValue;
++    T *= P->Position().Direct() ? offsetValue : -offsetValue;
+     Result = occ::down_cast<Geom_Plane>(P->Translated(T));
+   }
+   else if (TheType == STANDARD_TYPE(Geom_CylindricalSurface))

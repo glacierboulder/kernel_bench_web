@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "occt-23612-single",
+  "version": "1",
+  "title": "Build a partial torus with reversed endpoint heights",
+  "kind": "single",
+  "source_id": "occt23612-derived-e79fa864aeb8-torus",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-23612",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 1800
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-23612-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}
+

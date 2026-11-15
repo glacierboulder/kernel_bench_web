@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1644-offset3d-single",
+  "version": "1",
+  "title": "Preserve second derivative in the third-order 3D offset evaluation",
+  "kind": "single",
+  "source_id": "occt801-b8f597c67781-offset3d",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-github-1644-offset3d",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 1800
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-github-1644-offset3d-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

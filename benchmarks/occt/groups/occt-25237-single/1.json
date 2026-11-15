@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-25237-single",
+  "version": "1",
+  "title": "Common edge must be invariant when operands are swapped",
+  "kind": "single",
+  "source_id": "occt801-b8f597c67781",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-25237",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 1800
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-25237-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}
