@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1601-single",
+  "version": "1",
+  "title": "Inertia and mass above an offset reference plane",
+  "kind": "single",
+  "source_id": "occt801-b8f597c67781-plane-properties",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-github-1601",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 1800
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-github-1601-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1587-single",
+  "version": "1",
+  "title": "Centroidal inertia from adaptive plane integration",
+  "kind": "single",
+  "source_id": "occt801-b8f597c67781-plane-properties",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-github-1587",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 1800
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-github-1587-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}
