@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1644-offset-plane-single",
+  "version": "1",
+  "title": "Offset plane along its directed UV normal",
+  "kind": "single",
+  "source_id": "occt801-b8f597c67781-offset-plane",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-github-1644-offset-plane",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 1800
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-github-1644-offset-plane-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

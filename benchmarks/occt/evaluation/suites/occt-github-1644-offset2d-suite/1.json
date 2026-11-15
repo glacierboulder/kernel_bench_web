@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1644-offset2d-suite",
+  "version": "1",
+  "title": "Preserve trim parameters of periodic 2D offset curves",
+  "source_ids": [
+    "occt801-b8f597c67781-offset2d"
+  ],
+  "group_ids": [
+    "occt-github-1644-offset2d-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "original-0",
+      "issue_id": "occt-github-1644-offset2d",
+      "category": "original",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1644-offset2d/original-0.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "neighborhood-1",
+      "issue_id": "occt-github-1644-offset2d",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1644-offset2d/neighborhood-1.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "neighborhood-2",
+      "issue_id": "occt-github-1644-offset2d",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1644-offset2d/neighborhood-2.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "regression-3",
+      "issue_id": "occt-github-1644-offset2d",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1644-offset2d/regression-3.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    }
+  ]
+}

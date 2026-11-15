@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1644-offset2d-single",
+  "version": "1",
+  "title": "Preserve trim parameters of periodic 2D offset curves",
+  "kind": "single",
+  "source_id": "occt801-b8f597c67781-offset2d",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-github-1644-offset2d",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 1800
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-github-1644-offset2d-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

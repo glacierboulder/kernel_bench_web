@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "id": "occt-23612-suite",
+  "version": "1",
+  "title": "Build a partial torus with reversed endpoint heights",
+  "source_ids": [
+    "occt23612-derived-e79fa864aeb8-torus"
+  ],
+  "group_ids": [
+    "occt-23612-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "original-0",
+      "issue_id": "occt-23612",
+      "category": "original",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-23612/original-0.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "neighborhood-1",
+      "issue_id": "occt-23612",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-23612/neighborhood-1.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "neighborhood-2",
+      "issue_id": "occt-23612",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-23612/neighborhood-2.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "regression-3",
+      "issue_id": "occt-23612",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-23612/regression-3.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    }
+  ]
+}

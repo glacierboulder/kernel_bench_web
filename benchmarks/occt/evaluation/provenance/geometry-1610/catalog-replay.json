@@ -1,0 +1,182 @@
+[
+  {
+    "side": "B",
+    "check": "original",
+    "expected_pass": false,
+    "passed": false,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 7.337,
+      "output_tail": "/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/original.cpp: In function \u2018TopoDS_Shape {anonymous}::helixTube(const gp_Pnt&, double, int)\u2019:\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/original.cpp:67:17: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   67 |   sweep.SetMode(Standard_True);\n      |                 ^~~~~~~~~~~~~\nIn file included from /root/accept-1114-1610/build-B/include/opencascade/Standard_TypeDef.hxx:15,\n                 from /root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_Integer.hxx:19,\n                 from /root/accept-1114-1610/build-B/include/opencascade/Standard_Integer.hxx:15,\n                 from /root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard.hxx:21,\n                 from /root/accept-1114-1610/build-B/include/opencascade/Standard.hxx:15,\n                 from /root/accept-1114-1610/B/src/ModelingAlgorithms/TKBO/BRepAlgoAPI/BRepAlgoAPI_Fuse.hxx:20,\n                 from /root/accept-1114-1610/build-B/include/opencascade/BRepAlgoAPI_Fuse.hxx:15,\n                 from /mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/original.cpp:13:\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/original.cpp:69:48: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                ^~~~~~~~~~~~~\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/original.cpp:69:64: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/original.cpp:69:80: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 1,
+      "elapsed_seconds": 0.831,
+      "output_tail": "solids=2 overlapRemoved=0.000105 expected=14.398121\nscenario=0 valid=1 expectedSolids=1 expectedOverlap=14.398121 verdict=geometry_fail\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "B",
+    "check": "swapped",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 20.102,
+      "output_tail": "/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/swapped.cpp: In function \u2018TopoDS_Shape {anonymous}::helixTube(const gp_Pnt&, double, int)\u2019:\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/swapped.cpp:67:17: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   67 |   sweep.SetMode(Standard_True);\n      |                 ^~~~~~~~~~~~~\nIn file included from /root/accept-1114-1610/build-B/include/opencascade/Standard_TypeDef.hxx:15,\n                 from /root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_Integer.hxx:19,\n                 from /root/accept-1114-1610/build-B/include/opencascade/Standard_Integer.hxx:15,\n                 from /root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard.hxx:21,\n                 from /root/accept-1114-1610/build-B/include/opencascade/Standard.hxx:15,\n                 from /root/accept-1114-1610/B/src/ModelingAlgorithms/TKBO/BRepAlgoAPI/BRepAlgoAPI_Fuse.hxx:20,\n                 from /root/accept-1114-1610/build-B/include/opencascade/BRepAlgoAPI_Fuse.hxx:15,\n                 from /mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/swapped.cpp:13:\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/swapped.cpp:69:48: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                ^~~~~~~~~~~~~\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/swapped.cpp:69:64: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/swapped.cpp:69:80: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.734,
+      "output_tail": "solids=1 overlapRemoved=14.398235 expected=14.398121\nscenario=1 valid=1 expectedSolids=1 expectedOverlap=14.398121 verdict=pass\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "B",
+    "check": "translated",
+    "expected_pass": false,
+    "passed": false,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 12.003,
+      "output_tail": "/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/translated.cpp: In function \u2018TopoDS_Shape {anonymous}::helixTube(const gp_Pnt&, double, int)\u2019:\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/translated.cpp:67:17: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   67 |   sweep.SetMode(Standard_True);\n      |                 ^~~~~~~~~~~~~\nIn file included from /root/accept-1114-1610/build-B/include/opencascade/Standard_TypeDef.hxx:15,\n                 from /root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_Integer.hxx:19,\n                 from /root/accept-1114-1610/build-B/include/opencascade/Standard_Integer.hxx:15,\n                 from /root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard.hxx:21,\n                 from /root/accept-1114-1610/build-B/include/opencascade/Standard.hxx:15,\n                 from /root/accept-1114-1610/B/src/ModelingAlgorithms/TKBO/BRepAlgoAPI/BRepAlgoAPI_Fuse.hxx:20,\n                 from /root/accept-1114-1610/build-B/include/opencascade/BRepAlgoAPI_Fuse.hxx:15,\n                 from /mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/translated.cpp:13:\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/translated.cpp:69:48: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                ^~~~~~~~~~~~~\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/translated.cpp:69:64: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/translated.cpp:69:80: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 1,
+      "elapsed_seconds": 0.897,
+      "output_tail": "solids=2 overlapRemoved=0.000097 expected=14.398121\nscenario=2 valid=1 expectedSolids=1 expectedOverlap=14.398121 verdict=geometry_fail\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "B",
+    "check": "separate",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 12.868,
+      "output_tail": "/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/separate.cpp: In function \u2018TopoDS_Shape {anonymous}::helixTube(const gp_Pnt&, double, int)\u2019:\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/separate.cpp:67:17: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   67 |   sweep.SetMode(Standard_True);\n      |                 ^~~~~~~~~~~~~\nIn file included from /root/accept-1114-1610/build-B/include/opencascade/Standard_TypeDef.hxx:15,\n                 from /root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_Integer.hxx:19,\n                 from /root/accept-1114-1610/build-B/include/opencascade/Standard_Integer.hxx:15,\n                 from /root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard.hxx:21,\n                 from /root/accept-1114-1610/build-B/include/opencascade/Standard.hxx:15,\n                 from /root/accept-1114-1610/B/src/ModelingAlgorithms/TKBO/BRepAlgoAPI/BRepAlgoAPI_Fuse.hxx:20,\n                 from /root/accept-1114-1610/build-B/include/opencascade/BRepAlgoAPI_Fuse.hxx:15,\n                 from /mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/separate.cpp:13:\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/separate.cpp:69:48: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                ^~~~~~~~~~~~~\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/separate.cpp:69:64: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/separate.cpp:69:80: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/B/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 2.76,
+      "output_tail": "solids=2 overlapRemoved=0.003545 expected=14.398121\nscenario=3 valid=1 expectedSolids=2 expectedOverlap=0.000000 verdict=pass\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "B",
+    "check": "thick_solid",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 10.481,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 7.894,
+      "output_tail": "done=1\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "F",
+    "check": "original",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 15.417,
+      "output_tail": "/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/original.cpp: In function \u2018TopoDS_Shape {anonymous}::helixTube(const gp_Pnt&, double, int)\u2019:\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/original.cpp:67:17: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   67 |   sweep.SetMode(Standard_True);\n      |                 ^~~~~~~~~~~~~\nIn file included from /root/accept-1114-1610/build-F/include/opencascade/Standard_TypeDef.hxx:15,\n                 from /root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_Integer.hxx:19,\n                 from /root/accept-1114-1610/build-F/include/opencascade/Standard_Integer.hxx:15,\n                 from /root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard.hxx:21,\n                 from /root/accept-1114-1610/build-F/include/opencascade/Standard.hxx:15,\n                 from /root/accept-1114-1610/F/src/ModelingAlgorithms/TKBO/BRepAlgoAPI/BRepAlgoAPI_Fuse.hxx:20,\n                 from /root/accept-1114-1610/build-F/include/opencascade/BRepAlgoAPI_Fuse.hxx:15,\n                 from /mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/original.cpp:13:\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/original.cpp:69:48: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                ^~~~~~~~~~~~~\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/original.cpp:69:64: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/original.cpp:69:80: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 1.732,
+      "output_tail": "solids=1 overlapRemoved=14.398312 expected=14.398121\nscenario=0 valid=1 expectedSolids=1 expectedOverlap=14.398121 verdict=pass\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "F",
+    "check": "swapped",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 17.58,
+      "output_tail": "/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/swapped.cpp: In function \u2018TopoDS_Shape {anonymous}::helixTube(const gp_Pnt&, double, int)\u2019:\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/swapped.cpp:67:17: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   67 |   sweep.SetMode(Standard_True);\n      |                 ^~~~~~~~~~~~~\nIn file included from /root/accept-1114-1610/build-F/include/opencascade/Standard_TypeDef.hxx:15,\n                 from /root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_Integer.hxx:19,\n                 from /root/accept-1114-1610/build-F/include/opencascade/Standard_Integer.hxx:15,\n                 from /root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard.hxx:21,\n                 from /root/accept-1114-1610/build-F/include/opencascade/Standard.hxx:15,\n                 from /root/accept-1114-1610/F/src/ModelingAlgorithms/TKBO/BRepAlgoAPI/BRepAlgoAPI_Fuse.hxx:20,\n                 from /root/accept-1114-1610/build-F/include/opencascade/BRepAlgoAPI_Fuse.hxx:15,\n                 from /mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/swapped.cpp:13:\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/swapped.cpp:69:48: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                ^~~~~~~~~~~~~\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/swapped.cpp:69:64: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/swapped.cpp:69:80: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 1.296,
+      "output_tail": "solids=1 overlapRemoved=14.398235 expected=14.398121\nscenario=1 valid=1 expectedSolids=1 expectedOverlap=14.398121 verdict=pass\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "F",
+    "check": "translated",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 8.314,
+      "output_tail": "/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/translated.cpp: In function \u2018TopoDS_Shape {anonymous}::helixTube(const gp_Pnt&, double, int)\u2019:\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/translated.cpp:67:17: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   67 |   sweep.SetMode(Standard_True);\n      |                 ^~~~~~~~~~~~~\nIn file included from /root/accept-1114-1610/build-F/include/opencascade/Standard_TypeDef.hxx:15,\n                 from /root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_Integer.hxx:19,\n                 from /root/accept-1114-1610/build-F/include/opencascade/Standard_Integer.hxx:15,\n                 from /root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard.hxx:21,\n                 from /root/accept-1114-1610/build-F/include/opencascade/Standard.hxx:15,\n                 from /root/accept-1114-1610/F/src/ModelingAlgorithms/TKBO/BRepAlgoAPI/BRepAlgoAPI_Fuse.hxx:20,\n                 from /root/accept-1114-1610/build-F/include/opencascade/BRepAlgoAPI_Fuse.hxx:15,\n                 from /mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/translated.cpp:13:\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/translated.cpp:69:48: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                ^~~~~~~~~~~~~\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/translated.cpp:69:64: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/translated.cpp:69:80: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 2.397,
+      "output_tail": "solids=1 overlapRemoved=14.398275 expected=14.398121\nscenario=2 valid=1 expectedSolids=1 expectedOverlap=14.398121 verdict=pass\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "F",
+    "check": "separate",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 15.061,
+      "output_tail": "/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/separate.cpp: In function \u2018TopoDS_Shape {anonymous}::helixTube(const gp_Pnt&, double, int)\u2019:\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/separate.cpp:67:17: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   67 |   sweep.SetMode(Standard_True);\n      |                 ^~~~~~~~~~~~~\nIn file included from /root/accept-1114-1610/build-F/include/opencascade/Standard_TypeDef.hxx:15,\n                 from /root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_Integer.hxx:19,\n                 from /root/accept-1114-1610/build-F/include/opencascade/Standard_Integer.hxx:15,\n                 from /root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard.hxx:21,\n                 from /root/accept-1114-1610/build-F/include/opencascade/Standard.hxx:15,\n                 from /root/accept-1114-1610/F/src/ModelingAlgorithms/TKBO/BRepAlgoAPI/BRepAlgoAPI_Fuse.hxx:20,\n                 from /root/accept-1114-1610/build-F/include/opencascade/BRepAlgoAPI_Fuse.hxx:15,\n                 from /mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/separate.cpp:13:\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/separate.cpp:69:48: warning: \u2018Standard_True\u2019 is deprecated: Standard_True is deprecated, use true directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                ^~~~~~~~~~~~~\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:64:23: note: declared here\n   64 | inline constexpr bool Standard_True = true;\n      |                       ^~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/separate.cpp:69:64: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n/mnt/c/Users/hp/Desktop/CAD\u6c47\u62a5/\u738b\u503c/11.14/\u8ffd\u52a020\u9898/\u9a8c\u6536/1610/benchmark/evaluation/cases/occt-github-1610/separate.cpp:69:80: warning: \u2018Standard_False\u2019 is deprecated: Standard_False is deprecated, use false directly [-Wdeprecated-declarations]\n   69 |   sweep.Add(profile, TopExp::FirstVertex(edge, Standard_True), Standard_False, Standard_False);\n      |                                                                                ^~~~~~~~~~~~~~\n/root/accept-1114-1610/F/src/FoundationClasses/TKernel/Standard/Standard_TypeDef.hxx:60:23: note: declared here\n   60 | inline constexpr bool Standard_False = false;\n      |                       ^~~~~~~~~~~~~~\n",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.074,
+      "output_tail": "solids=2 overlapRemoved=0.003545 expected=14.398121\nscenario=3 valid=1 expectedSolids=2 expectedOverlap=0.000000 verdict=pass\n",
+      "timed_out": false
+    }
+  },
+  {
+    "side": "F",
+    "check": "thick_solid",
+    "expected_pass": true,
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 14.018,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 4.39,
+      "output_tail": "done=1\n",
+      "timed_out": false
+    }
+  }
+]

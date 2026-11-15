@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1634-singularity-suite",
+  "version": "1",
+  "title": "Keep a converged parameter hint on a collapsed surface boundary",
+  "source_ids": [
+    "occt801-b8f597c67781-singularity"
+  ],
+  "group_ids": [
+    "occt-github-1634-singularity-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "original-0",
+      "issue_id": "occt-github-1634-singularity",
+      "category": "original",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1634-singularity/original-0.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKShHealing"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "neighborhood-1",
+      "issue_id": "occt-github-1634-singularity",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1634-singularity/neighborhood-1.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKShHealing"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "neighborhood-2",
+      "issue_id": "occt-github-1634-singularity",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1634-singularity/neighborhood-2.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKShHealing"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "regression-3",
+      "issue_id": "occt-github-1634-singularity",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1634-singularity/regression-3.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKShHealing"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    }
+  ]
+}

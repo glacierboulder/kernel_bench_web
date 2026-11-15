@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-28366-single",
+  "version": "1",
+  "title": "Plane and fuselage Boolean common",
+  "kind": "single",
+  "source_id": "occt801-b8f597c67781",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-28366",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 1800
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-28366-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

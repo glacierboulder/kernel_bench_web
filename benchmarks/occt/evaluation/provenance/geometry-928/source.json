@@ -1,0 +1,18 @@
+{
+  "derived_commit": "e79fa864aeb87e65d0f7550b4c8ad64725b0c1b8",
+  "modern_base": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "historical_base": "b3052a400207f0f555e979426ea110556118d5c9",
+  "historical_fix": "ba26818b18f726acb7c0baf3428339d761e1aa52",
+  "paths": [
+    "src/ModelingAlgorithms/TKPrim/BRepPrim/BRepPrim_OneAxis.cxx",
+    "src/ModelingAlgorithms/TKPrim/BRepPrim/BRepPrim_OneAxis.hxx",
+    "src/ModelingAlgorithms/TKPrim/BRepPrimAPI/BRepPrimAPI_MakeTorus.hxx"
+  ],
+  "method": "Replace three modern files with exact historical parent blobs. Apply exact fixed versions of those files as reference.",
+  "commit": "e79fa864aeb87e65d0f7550b4c8ad64725b0c1b8",
+  "materialized_tree_sha256": "2bf3e2955ab757ef37300b7b755c45d0788756b610b9738d80d16493b058f10f",
+  "offline_source_id": "occt23612-derived-e79fa864aeb8",
+  "offline_toolchain_id": "occt1610-gcc",
+  "baseline_derivation_patch": "evaluation/provenance/geometry-928/baseline.patch",
+  "baseline_git_commit_object": "evaluation/provenance/geometry-928/baseline-commit.txt"
+}
