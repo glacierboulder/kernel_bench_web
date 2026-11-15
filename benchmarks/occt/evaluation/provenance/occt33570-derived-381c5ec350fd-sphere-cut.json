@@ -1,0 +1,15 @@
+{
+  "commit": "381c5ec350fde3b9808475d8070bf00eda0260c9",
+  "materialized_tree_sha256": "b6e8390a470b05b460277341f325df52d723ede889d72494a0c53a99921a8904",
+  "offline_bundle_source_id": "occt33570-derived-381c5ec350fd",
+  "offline_bundle_toolchain": "occt1610-gcc",
+  "original_upstream": "https://github.com/Open-Cascade-SAS/OCCT.git",
+  "derived_commit": "381c5ec350fde3b9808475d8070bf00eda0260c9",
+  "parent": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "upstream_fix": "415806ae16ea705d6699ea4b8c6c7f3698019e29",
+  "method": "Revert the upstream projection condition in its current source context. Reference patch restores the parent tree.",
+  "derivation": "evaluation/provenance/geometry-33570/recreate-locked-baseline.sh",
+  "reference_sha256": "894ae595135ea73edbb57bb9ca35276b172765b1a446cdc8798e80d277323f32",
+  "derive_reference_patch": "evaluation/provenance/geometry-33570/reference.patch",
+  "offline_snapshot_sha256_note": "The passing result is for the standalone bundle. The submission namespaces its source and toolchain IDs to avoid collisions in the shared catalog."
+}

@@ -1,0 +1,154 @@
+{
+  "id": "a54f5bb1fe108f64",
+  "created_at": "2026-11-15T03:42:25.719926+00:00",
+  "run_id": null,
+  "experiment_id": null,
+  "kind": "reevaluation",
+  "result": {
+    "protocol": "manifest-suite-v1",
+    "suite": {
+      "id": "occt-github-1601-suite",
+      "version": "1"
+    },
+    "tests": [],
+    "checkpoints": [
+      {
+        "id": "hidden-summary",
+        "issue_id": null,
+        "name": "隐藏检查（详情不公开）",
+        "visibility": "hidden",
+        "category_summary": {
+          "declared": 4,
+          "passed": 4,
+          "failed": 0,
+          "timeout": 0,
+          "error": 0,
+          "not_run": 0,
+          "skipped": 0,
+          "inconclusive": 0
+        }
+      }
+    ],
+    "limitations": [
+      "Checks are only those declared in this frozen suite; this is not the full upstream test suite."
+    ],
+    "report": {
+      "provided": false
+    },
+    "patch_bytes": 2485,
+    "build": {
+      "configure": {
+        "return_code": 0
+      },
+      "build": {
+        "return_code": 0
+      }
+    },
+    "elapsed_seconds": 1000.609,
+    "passed": true,
+    "evaluation_suites": [
+      {
+        "id": "occt-github-1601-suite",
+        "version": "1"
+      }
+    ],
+    "category_summary": {
+      "original": {
+        "declared": 1,
+        "executed": 1,
+        "passed": 1,
+        "failed": 0,
+        "timeout": 0,
+        "error": 0,
+        "not_run": 0,
+        "skipped": 0,
+        "inconclusive": 0,
+        "state": "configured"
+      },
+      "neighborhood": {
+        "declared": 2,
+        "executed": 2,
+        "passed": 2,
+        "failed": 0,
+        "timeout": 0,
+        "error": 0,
+        "not_run": 0,
+        "skipped": 0,
+        "inconclusive": 0,
+        "state": "configured"
+      },
+      "regression": {
+        "declared": 1,
+        "executed": 1,
+        "passed": 1,
+        "failed": 0,
+        "timeout": 0,
+        "error": 0,
+        "not_run": 0,
+        "skipped": 0,
+        "inconclusive": 0,
+        "state": "configured"
+      }
+    },
+    "technical_passed": true,
+    "hidden_check_summary": {
+      "declared": 4,
+      "passed": 4,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    }
+  },
+  "returncode": 0,
+  "stages": [
+    {
+      "name": "submission",
+      "status": "failed"
+    },
+    {
+      "name": "patch_application",
+      "status": "passed"
+    },
+    {
+      "name": "configure",
+      "status": "passed"
+    },
+    {
+      "name": "build",
+      "status": "passed"
+    },
+    {
+      "name": "original-0",
+      "status": "passed"
+    },
+    {
+      "name": "neighborhood-1",
+      "status": "passed"
+    },
+    {
+      "name": "neighborhood-2",
+      "status": "passed"
+    },
+    {
+      "name": "regression-3",
+      "status": "passed"
+    }
+  ],
+  "patch_sha256": "bd4c20d091d1049eeb285d3515e9b9de85034cc3f8764665ab8e876afe61c2b3",
+  "evaluator_sha256": "4dbc8ed3827cf44d767b2f72868d5df0ca9a9c3aecb549d094c12e0acbc98743",
+  "reevaluation": {
+    "source_id": "occt801-b8f597c67781",
+    "source_commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+    "source_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+    "suite_id": "occt-github-1601-suite",
+    "suite_version": "1",
+    "patch_sha256": "bd4c20d091d1049eeb285d3515e9b9de85034cc3f8764665ab8e876afe61c2b3",
+    "report_provided": false,
+    "snapshot_sha256": "2d684e225e786c4603b9d94bb78a4440fe55eec68697722e7af7fb726fdca729",
+    "model_called": false,
+    "baseline_verification": "explicit_source_id_for_patch"
+  }
+}

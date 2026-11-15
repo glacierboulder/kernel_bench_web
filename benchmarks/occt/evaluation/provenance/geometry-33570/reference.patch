@@ -1,0 +1,12 @@
+diff --git a/src/ModelingData/TKGeomBase/ProjLib/ProjLib_ComputeApprox.cxx b/src/ModelingData/TKGeomBase/ProjLib/ProjLib_ComputeApprox.cxx
+--- a/src/ModelingData/TKGeomBase/ProjLib/ProjLib_ComputeApprox.cxx
++++ b/src/ModelingData/TKGeomBase/ProjLib/ProjLib_ComputeApprox.cxx
+@@ -794,7 +794,7 @@
+           // if P1.Z() equals +/- R we are at the vertex: not significant.
+           gp_Pnt pp = P1.Transformed(Trsf);
+ 
+-          if (std::abs(std::abs(pp.Z()) - R) < Tol)
++          if (std::abs(pp.X() * pp.X() + pp.Y() * pp.Y() + pp.Z() * pp.Z() - R * R) < Tol)
+           {
+             gp_Pnt Center = Circle.Location();
+             double U, V;

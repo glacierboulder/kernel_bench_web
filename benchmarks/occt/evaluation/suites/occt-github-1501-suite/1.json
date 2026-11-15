@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1501-suite",
+  "version": "1",
+  "title": "Continuity of fillets on periodic spines",
+  "source_ids": [
+    "occt801-b8f597c67781-periodic-fillet"
+  ],
+  "group_ids": [
+    "occt-github-1501-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "original-0",
+      "issue_id": "occt-github-1501",
+      "category": "original",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1501/original-0.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim",
+          "TKBO",
+          "TKShHealing",
+          "TKOffset",
+          "TKFillet",
+          "TKBool"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "neighborhood-1",
+      "issue_id": "occt-github-1501",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1501/neighborhood-1.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim",
+          "TKBO",
+          "TKShHealing",
+          "TKOffset",
+          "TKFillet",
+          "TKBool"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "neighborhood-2",
+      "issue_id": "occt-github-1501",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1501/neighborhood-2.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim",
+          "TKBO",
+          "TKShHealing",
+          "TKOffset",
+          "TKFillet",
+          "TKBool"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "regression-3",
+      "issue_id": "occt-github-1501",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1501/regression-3.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim",
+          "TKBO",
+          "TKShHealing",
+          "TKOffset",
+          "TKFillet",
+          "TKBool"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "regression-4",
+      "issue_id": "occt-github-1501",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1501/regression-4.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim",
+          "TKBO",
+          "TKShHealing",
+          "TKOffset",
+          "TKFillet",
+          "TKBool"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    },
+    {
+      "id": "regression-5",
+      "issue_id": "occt-github-1501",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/occt-github-1501/regression-5.cpp",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim",
+          "TKBO",
+          "TKShHealing",
+          "TKOffset",
+          "TKFillet",
+          "TKBool"
+        ],
+        "stdout_contains": [
+          "verdict=pass"
+        ]
+      }
+    }
+  ]
+}
