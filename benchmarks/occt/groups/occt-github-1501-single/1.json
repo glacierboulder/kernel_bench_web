@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1501-single",
+  "version": "1",
+  "title": "Continuity of fillets on periodic spines",
+  "kind": "single",
+  "source_id": "occt801-b8f597c67781-periodic-fillet",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-github-1501",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 1800
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-github-1501-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}
+
