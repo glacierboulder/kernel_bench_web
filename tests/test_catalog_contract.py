@@ -18,8 +18,8 @@ BUNDLE=ROOT/"benchmarks"/"occt"
 class CatalogContractTests(unittest.TestCase):
     def test_current_catalog_maps_legacy_tasks_and_only_public_issue_material(self):
         bundle=validate_bundle(BUNDLE)
-        self.assertEqual(bundle["counts"],{"issues":70,"groups":70,"evaluation_suites":71})
-        self.assertEqual(len(bundle["groups"]),70)
+        self.assertEqual(bundle["counts"],{"issues":83,"groups":83,"evaluation_suites":85})
+        self.assertEqual(len(bundle["groups"]),83)
         self.assertIn(("NG-04R-v2","1"),bundle["groups"])
         task=public_task(bundle,bundle["groups"][("occt_boolean_group_visible_544","1")])
         self.assertEqual(task["evaluation_suite"],{"id":"occt-group-544","version":"1"})
@@ -33,17 +33,33 @@ class CatalogContractTests(unittest.TestCase):
         suites=bundle["suites"]
         referenced={(group["evaluation_suite"]["id"],group["evaluation_suite"]["version"])
                     for group in bundle["groups"].values()}
-        # The historical B55 suite remains registered; new tasks use geometry-v2.
+        # Historical B55 and opt-in M28195 rotation suites are selectable by version.
         self.assertEqual(set(suites)-referenced,{
-            ("occt-bf-suite-b55-27310-27773-27252-oracle-v2","1")})
+            ("occt-bf-suite-b55-27310-27773-27252-oracle-v2","1"),
+            ("occt-single20-28195-checks","2")})
         self.assertIn(("occt-bf-suite-b55-27310-27773-27252-geometry-v2","1"),referenced)
         checkpoints=[checkpoint for suite in suites.values() for checkpoint in suite["checkpoints"]]
-        self.assertEqual(len(checkpoints),353)
+        self.assertEqual(len(checkpoints),414)
         self.assertTrue(all(checkpoint["required"] for checkpoint in checkpoints))
         self.assertEqual({category:sum(cp["category"]==category for cp in checkpoints)
                           for category in ("original","neighborhood","regression")},
-                         {"original":107,"neighborhood":167,"regression":79})
-        self.assertEqual(sum(len(suites[key]["checkpoints"]) for key in referenced),337)
+                         {"original":121,"neighborhood":196,"regression":97})
+        self.assertEqual(sum(len(suites[key]["checkpoints"]) for key in referenced),392)
+
+    def test_m28195_rotation_suite_is_opt_in_and_extends_v1(self):
+        bundle = validate_bundle(BUNDLE)
+        group = bundle["groups"][("occt-single20-28195", "1")]
+        suite_id = "occt-single20-28195-checks"
+        self.assertEqual(group["evaluation_suite"], {"id": suite_id, "version": "1"})
+        old = bundle["suites"][(suite_id, "1")]
+        new = bundle["suites"][(suite_id, "2")]
+        self.assertEqual(new["checkpoints"][:4], old["checkpoints"])
+        self.assertTrue(set(old["support_files"]).issubset(new["support_files"]))
+        self.assertEqual([(c["id"], c["category"], c["visibility"], c["required"])
+                          for c in new["checkpoints"][4:]], [
+            ("28195-neighborhood_axis31", "neighborhood", "public", True),
+            ("28195-regression_z90", "regression", "public", True),
+        ])
 
     def _copy_bundle(self):
         temporary=tempfile.TemporaryDirectory()
