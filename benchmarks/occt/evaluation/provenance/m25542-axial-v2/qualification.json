@@ -1,0 +1,1102 @@
+{
+  "suite": "occt-single20-25542-checks",
+  "version": "2",
+  "base": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "reference": "a016080bf6738d6aeae020badee4e888ad1540a5",
+  "model": "gpt-6.2-sol/high",
+  "hard_cap_seconds": 600,
+  "model_runs_added": 0,
+  "endpoints": "Final snapshots only",
+  "api": "independent API contract unmeasured",
+  "frozen_snapshot": "8bdd9ae77efc2c2e641bf246012b5dbf84869fc05ec2691bdfc99e3c426d9a12",
+  "suite_sha256": "8a6484d0cf00e32c7685a713fd7b6d674dede1bf35d311cfc139b1648fd5620e",
+  "unchanged_v1_sha256": "bb2052568c3ab20e645e5d9e73a92058f7d55505bab0cd5566e74a5c8baf97f0",
+  "evidence_sha256": "566a34ec3f66b99be899dfeb3d8bca57d7146bdecb60590cebd4ca974b9fd726",
+  "reference_M28195_sha256": "14f9c6ce47475b2db89a23462ebf92717c23fa8d5b67ea575f082acf3fdf4538",
+  "baseline_failures": [
+    "25542-original",
+    "25542-neighborhood_swap",
+    "25542-neighborhood_down"
+  ],
+  "baseline_healthy": [
+    "25542-neighborhood_rigid",
+    "25542-regression_healthy",
+    "25542-regression_up"
+  ],
+  "selected": {
+    "down-16.25": {
+      "role": "neighborhood",
+      "reference": "F",
+      "baseline_status": "FAIL"
+    },
+    "up-2.03125": {
+      "role": "regression",
+      "reference": "F",
+      "baseline_status": "PASS"
+    }
+  },
+  "analytic_targets": {
+    "down-16.25": {
+      "height": -16.25,
+      "rotation": "axis31",
+      "fine": {
+        "volume": 17165.983284852045,
+        "area": 5359.514796909677,
+        "polar_volume": 17165.983284852013,
+        "strip_area": 5359.514796909676
+      },
+      "coarse": {
+        "volume": 17165.983284855043,
+        "area": 5359.5147969097925,
+        "polar_volume": 17165.983284847276,
+        "strip_area": 5359.514796909801
+      },
+      "inside": 42,
+      "outside": 154,
+      "assets_sha256": {
+        "down-16.25-first.pts": "fa3467d37791507925412242f17314326647c5d1c058249eef53ac5368d30b9b",
+        "down-16.25-second.pts": "9c37cd66721b4818f7dda72b79eb86ec07b09a468b27557bf246fe461264b3eb",
+        "down-16.25-result.pts": "d18de38485f0131e391fc6fe1276abf0c403aad353d20607b2dd92ef44b5cb8d",
+        "down-16.25.pose": "a946418c71a420b24d76e2e87101c68e756b013c4dff3985735630540a769f8e"
+      }
+    },
+    "up-2.03125": {
+      "height": 2.03125,
+      "rotation": "z90",
+      "fine": {
+        "volume": 25406.64034908997,
+        "area": 6949.892574243546,
+        "polar_volume": 25406.640349089932,
+        "strip_area": 6949.892574243546
+      },
+      "coarse": {
+        "volume": 25406.640349094203,
+        "area": 6949.892574243692,
+        "polar_volume": 25406.640349083304,
+        "strip_area": 6949.892574243695
+      },
+      "inside": 50,
+      "outside": 150,
+      "assets_sha256": {
+        "up-2.03125-first.pts": "92e0214f16be6f38c416b2b75fe0ee47eedb4e8c8a15c6c826252fa77678f0ad",
+        "up-2.03125-second.pts": "24f4101917cc255a9833cd1097be70eb4c4d3c5187aec402b6f8514d98233c14",
+        "up-2.03125-result.pts": "d17ba68ae4117160a0559646cad808ac1bfe8b6c42cb2ec5c7e1169252a31514",
+        "up-2.03125.pose": "793a347c6d567ad3ca2d37a7e247fc21c2cf3c07eb09894986f40ed59aa8ae18"
+      }
+    }
+  },
+  "rigid_screen": {
+    "axis31": {
+      "B": {
+        "status": "FAIL",
+        "error": {
+          "volume": -25406.743761960006,
+          "area": -6951.379351337346
+        }
+      },
+      "F": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04096993805433158,
+          "area": 0.00935456122533651
+        }
+      },
+      "fix2018": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04095192637396394,
+          "area": 0.009350449941848638
+        }
+      },
+      "occt77": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04095192635577405,
+          "area": 0.00935044993457268
+        }
+      },
+      "8.0.1": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04096993805433158,
+          "area": 0.00935456122533651
+        }
+      }
+    },
+    "z90": {
+      "B": {
+        "status": "FAIL",
+        "error": {
+          "volume": -0.3520377496861329,
+          "area": -0.08207906655297847
+        }
+      },
+      "F": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04096993822531658,
+          "area": 0.009354561224427016
+        }
+      },
+      "fix2018": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.040951926523121074,
+          "area": 0.009350449928206217
+        }
+      },
+      "occt77": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04095192653403501,
+          "area": 0.009350449935482175
+        }
+      },
+      "8.0.1": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04096993822531658,
+          "area": 0.009354561224427016
+        }
+      }
+    },
+    "x90": {
+      "B": {
+        "status": "FAIL",
+        "error": {
+          "volume": -25406.743761960006,
+          "area": -6951.379351337346
+        }
+      },
+      "F": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04096993786515668,
+          "area": 0.009354561189866217
+        }
+      },
+      "fix2018": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04095192617387511,
+          "area": 0.009350449904559355
+        }
+      },
+      "occt77": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04095192617387511,
+          "area": 0.009350449900921376
+        }
+      },
+      "8.0.1": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04096993786515668,
+          "area": 0.009354561189866217
+        }
+      }
+    },
+    "y90": {
+      "B": {
+        "status": "FAIL",
+        "error": {
+          "volume": -25406.743761960006,
+          "area": -6951.379351337346
+        }
+      },
+      "F": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04096993786515668,
+          "area": 0.009354561191685207
+        }
+      },
+      "fix2018": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04095192617387511,
+          "area": 0.009350449904559355
+        }
+      },
+      "occt77": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04095192616296117,
+          "area": 0.00935044990183087
+        }
+      },
+      "8.0.1": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04096993786515668,
+          "area": 0.009354561191685207
+        }
+      }
+    },
+    "z45": {
+      "B": {
+        "status": "FAIL",
+        "error": {
+          "volume": -0.35203946174442535,
+          "area": -0.08207946702714253
+        }
+      },
+      "F": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04096993790517445,
+          "area": 0.009354561193504196
+        }
+      },
+      "fix2018": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04095192622480681,
+          "area": 0.009350449908197334
+        }
+      },
+      "occt77": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04095192622480681,
+          "area": 0.009350449904559355
+        }
+      },
+      "8.0.1": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04096993790517445,
+          "area": 0.009354561193504196
+        }
+      }
+    },
+    "axis67": {
+      "B": {
+        "status": "FAIL",
+        "error": {
+          "volume": -0.35203946224646643,
+          "area": -0.08207946715629078
+        }
+      },
+      "F": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.0409699332958553,
+          "area": 0.009354560137580847
+        }
+      },
+      "fix2018": {
+        "status": "FAIL",
+        "error": {
+          "volume": -5.40672420516421,
+          "area": -1.2930205592147104
+        }
+      },
+      "occt77": {
+        "status": "FAIL",
+        "error": {
+          "volume": -20.9399513404569,
+          "area": -5.387008319821689
+        }
+      },
+      "8.0.1": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.0409699332958553,
+          "area": 0.009354560137580847
+        }
+      }
+    }
+  },
+  "axial_screen": {
+    "down-2.03125": {
+      "B": {
+        "status": "FAIL",
+        "error": {
+          "volume": -24260.223141757815,
+          "area": -6741.749773402322
+        }
+      },
+      "F": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.04033066674674046,
+          "area": 0.00935456557181169
+        }
+      }
+    },
+    "up-2.03125": {
+      "B": {
+        "status": "PASS",
+        "error": {
+          "volume": -1.331500243395567e-07,
+          "area": 1.484295353293419e-07
+        }
+      },
+      "F": {
+        "status": "PASS",
+        "error": {
+          "volume": -1.60889612743631e-07,
+          "area": 5.7660145103000104e-08
+        }
+      }
+    },
+    "down-16.25": {
+      "B": {
+        "status": "FAIL",
+        "error": {
+          "volume": 264.09286074976626,
+          "area": 55.9488991639646
+        }
+      },
+      "F": {
+        "status": "PASS",
+        "error": {
+          "volume": 0.008509504794346867,
+          "area": 0.002219758891442325
+        }
+      }
+    },
+    "up-16.25": {
+      "B": {
+        "status": "PASS",
+        "error": {
+          "volume": -1.265179889742285e-07,
+          "area": 3.264267434133217e-08
+        }
+      },
+      "F": {
+        "status": "PASS",
+        "error": {
+          "volume": -9.524956112727523e-08,
+          "area": 3.2160642149392515e-08
+        }
+      }
+    },
+    "down-65": {
+      "B": {
+        "status": "FAIL",
+        "error": {
+          "volume": -15.142012785005136,
+          "area": -7.151149553190862
+        }
+      },
+      "F": {
+        "status": "PASS",
+        "error": {
+          "volume": 0.01887931584587932,
+          "area": 0.008615747532076057
+        }
+      }
+    },
+    "up-65": {
+      "B": {
+        "status": "PASS",
+        "error": {
+          "volume": -2.9055809136480093e-07,
+          "area": -2.671285983524285e-07
+        }
+      },
+      "F": {
+        "status": "PASS",
+        "error": {
+          "volume": -1.3879980542697012e-07,
+          "area": -1.3694898370886222e-07
+        }
+      }
+    },
+    "down-97.5": {
+      "B": {
+        "status": "FAIL",
+        "error": {
+          "volume": -1.5270719684673395,
+          "area": -1.4128311894326657
+        }
+      },
+      "F": {
+        "status": "FAIL",
+        "error": {
+          "volume": 0.003255853252937868,
+          "area": 0.0029705185152124614
+        }
+      }
+    },
+    "up-97.5": {
+      "B": {
+        "status": "PASS",
+        "error": {
+          "volume": -7.500602805521339e-08,
+          "area": 1.1059000826207921e-08
+        }
+      },
+      "F": {
+        "status": "PASS",
+        "error": {
+          "volume": 4.716275725513697e-08,
+          "area": 7.355401976383291e-08
+        }
+      }
+    }
+  },
+  "roles": {
+    "B": {
+      "checks": {
+        "25542-original": {
+          "status": "FAIL",
+          "evidence": "registered/B/25542-original.json",
+          "sha256": "d1f0967b398f7101159c72a64d35375d1c12581ee2a778bdbd59f5490acc01b4",
+          "failed_assertions": [
+            "component_count",
+            "measure",
+            "centroid_domain"
+          ]
+        },
+        "25542-neighborhood_rigid": {
+          "status": "PASS",
+          "evidence": "registered/B/25542-neighborhood_rigid.json",
+          "sha256": "897a921582a189ffbd3a0ce63a5a8b71c473dfd3b8f52ae071a6b64b96543b30",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_swap": {
+          "status": "FAIL",
+          "evidence": "registered/B/25542-neighborhood_swap.json",
+          "sha256": "da815a04faa1b67dbd69fcec4d48f24ae05861e643db8731e4f0065c0b539afa",
+          "failed_assertions": [
+            "component_count",
+            "measure",
+            "centroid_domain"
+          ]
+        },
+        "25542-regression_healthy": {
+          "status": "PASS",
+          "evidence": "registered/B/25542-regression_healthy.json",
+          "sha256": "f7d19917262908f53d4485fd2895a01007c19e51c9e2d2063d96123011301c8f",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_down": {
+          "status": "FAIL",
+          "evidence": "registered/B/25542-neighborhood_down.json",
+          "sha256": "08861f041e975274955492ce9eb16e5362f7610c7ed9a66b8f2e9e5989afa079",
+          "failed_assertions": [
+            "draw_area",
+            "volume",
+            "area"
+          ],
+          "independent": {
+            "label": "B",
+            "pose": "down-16.25",
+            "repeat": 1,
+            "status": "FAIL",
+            "failed_draw": [
+              "measure"
+            ],
+            "geometry": {
+              "status": "FAIL",
+              "checks": {
+                "volume": "FAIL",
+                "area": "FAIL",
+                "topology": "PASS",
+                "points": "INCONCLUSIVE"
+              },
+              "error": {
+                "volume": 264.09286074976626,
+                "area": 55.9488991639646
+              },
+              "drift": {
+                "volume": 6.570226105395705e-07,
+                "area": 0.0
+              },
+              "solids": 1,
+              "witnesses": [
+                196,
+                0,
+                68
+              ]
+            },
+            "sha256": "48b496ef791ca58d08fa9dffc2e75b31ada87dbe3807c956c384f9c5fb8ecce4"
+          }
+        },
+        "25542-regression_up": {
+          "status": "PASS",
+          "evidence": "registered/B/25542-regression_up.json",
+          "sha256": "96603be85dda226bc0c459dab6707860e0e7c8c16f2a854571f0296c4aa3674e",
+          "failed_assertions": [],
+          "independent": {
+            "label": "B",
+            "pose": "up-2.03125",
+            "repeat": 1,
+            "status": "PASS",
+            "failed_draw": [],
+            "geometry": {
+              "status": "PASS",
+              "checks": {
+                "volume": "PASS",
+                "area": "PASS",
+                "topology": "PASS",
+                "points": "PASS"
+              },
+              "error": {
+                "volume": -1.331500243395567e-07,
+                "area": 1.484295353293419e-07
+              },
+              "drift": {
+                "volume": 1.5093974070623517e-07,
+                "area": 1.8189894035458565e-12
+              },
+              "solids": 1,
+              "witnesses": [
+                200,
+                0,
+                0
+              ]
+            },
+            "sha256": "8cdd73fd4ac4cdcdbb55faec5a2fc89362ca46712e0547d284e4f4dc43ed4e67"
+          }
+        }
+      },
+      "passed": 3
+    },
+    "F": {
+      "checks": {
+        "25542-original": {
+          "status": "PASS",
+          "evidence": "registered/F/25542-original.json",
+          "sha256": "ef12feb46867f79d8295f4783542ae9213faf306558cef473b756c3c720a671f",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_rigid": {
+          "status": "PASS",
+          "evidence": "registered/F/25542-neighborhood_rigid.json",
+          "sha256": "3517104e21847848c24affa4817444519699fb8ae3cd707242e1f0fd3ae55c75",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_swap": {
+          "status": "PASS",
+          "evidence": "registered/F/25542-neighborhood_swap.json",
+          "sha256": "88117371be17141a95d0a8bcf7b1d0dbce08d5ab849e9258b21345fa6ed8bd94",
+          "failed_assertions": []
+        },
+        "25542-regression_healthy": {
+          "status": "PASS",
+          "evidence": "registered/F/25542-regression_healthy.json",
+          "sha256": "a0177443492b99768f37286a86e584f94d6ef5c2430a49e4aa89502e06dfe29c",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_down": {
+          "status": "PASS",
+          "evidence": "registered/F/25542-neighborhood_down.json",
+          "sha256": "02c03062fb748ff9694c3ef18fe0b50a0766aa56ed1532dc8f2c47d27fcb1ace",
+          "failed_assertions": [],
+          "independent": {
+            "label": "F",
+            "pose": "down-16.25",
+            "repeat": 1,
+            "status": "PASS",
+            "failed_draw": [],
+            "geometry": {
+              "status": "PASS",
+              "checks": {
+                "volume": "PASS",
+                "area": "PASS",
+                "topology": "PASS",
+                "points": "PASS"
+              },
+              "error": {
+                "volume": 0.008509504794346867,
+                "area": 0.002219758891442325
+              },
+              "drift": {
+                "volume": 1.1994052329100668e-07,
+                "area": 0.0
+              },
+              "solids": 1,
+              "witnesses": [
+                196,
+                0,
+                0
+              ]
+            },
+            "sha256": "913e6749f0c93be1c0ef8ebb8c2b6367136a4c75a859d5d8bc32767efda3f0f9"
+          }
+        },
+        "25542-regression_up": {
+          "status": "PASS",
+          "evidence": "registered/F/25542-regression_up.json",
+          "sha256": "de67266856a07853c6378516d1c56e3e827b4134b7234a56f1948e316ee158ce",
+          "failed_assertions": [],
+          "independent": {
+            "label": "F",
+            "pose": "up-2.03125",
+            "repeat": 1,
+            "status": "PASS",
+            "failed_draw": [],
+            "geometry": {
+              "status": "PASS",
+              "checks": {
+                "volume": "PASS",
+                "area": "PASS",
+                "topology": "PASS",
+                "points": "PASS"
+              },
+              "error": {
+                "volume": -1.60889612743631e-07,
+                "area": 5.7660145103000104e-08
+              },
+              "drift": {
+                "volume": 1.5091791283339262e-07,
+                "area": 0.0
+              },
+              "solids": 1,
+              "witnesses": [
+                200,
+                0,
+                0
+              ]
+            },
+            "sha256": "74ee7312a72f2db0ff388424ca8566b12b8e16d5e712dc0dabec2527bfb6ba2f"
+          }
+        }
+      },
+      "passed": 6
+    },
+    "round1": {
+      "patch_sha256": "37cda583a59f02723321d5e403baed8377b3b6e13ab8eeb1a71024fea051c0ad",
+      "build_exit": 0,
+      "checks": {
+        "25542-original": {
+          "status": "PASS",
+          "evidence": "registered/round1/25542-original.json",
+          "sha256": "802d5c123a57c6482484fb22245fa5832007b9995b9d3e83e2bb6c35bc141857",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_rigid": {
+          "status": "PASS",
+          "evidence": "registered/round1/25542-neighborhood_rigid.json",
+          "sha256": "16f2d26a74bb5857a2c0628549f9805adf429c6cf5b84bdfb74f0d99308c629a",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_swap": {
+          "status": "PASS",
+          "evidence": "registered/round1/25542-neighborhood_swap.json",
+          "sha256": "5cc3fea5578d29a194d117dc6ba0ce1175d9e048b8a64612e377772404ba7bc0",
+          "failed_assertions": []
+        },
+        "25542-regression_healthy": {
+          "status": "PASS",
+          "evidence": "registered/round1/25542-regression_healthy.json",
+          "sha256": "f7e821c97c111a9aa942cc8feb5cfcc6a17b65e8d1bf30e81f586e3720396fd8",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_down": {
+          "status": "FAIL",
+          "evidence": "registered/round1/25542-neighborhood_down.json",
+          "sha256": "f23e3fc99df1ba2f10307b58f582544153dfa629af4f5d1f6748eb34d70ca0d8",
+          "failed_assertions": [
+            "volume",
+            "area"
+          ],
+          "independent": {
+            "label": "round1",
+            "pose": "down-16.25",
+            "repeat": 1,
+            "status": "FAIL",
+            "failed_draw": [],
+            "geometry": {
+              "status": "FAIL",
+              "checks": {
+                "volume": "FAIL",
+                "area": "FAIL",
+                "topology": "PASS",
+                "points": "PASS"
+              },
+              "error": {
+                "volume": 0.8082933120858797,
+                "area": 0.2130339757204638
+              },
+              "drift": {
+                "volume": 1.1994052329100668e-07,
+                "area": 0.0
+              },
+              "solids": 1,
+              "witnesses": [
+                196,
+                0,
+                0
+              ]
+            },
+            "sha256": "8d0fdc11822ed7c8d785a0b0fd4c5ecc6dcb573cddefd9a0ebebe4894c7e0ad7"
+          }
+        },
+        "25542-regression_up": {
+          "status": "PASS",
+          "evidence": "registered/round1/25542-regression_up.json",
+          "sha256": "a8d1cfe422ce26895084e4718a91a2322520ba4de74938e9c367ff9a4b97653b",
+          "failed_assertions": [],
+          "independent": {
+            "label": "round1",
+            "pose": "up-2.03125",
+            "repeat": 1,
+            "status": "PASS",
+            "failed_draw": [],
+            "geometry": {
+              "status": "PASS",
+              "checks": {
+                "volume": "PASS",
+                "area": "PASS",
+                "topology": "PASS",
+                "points": "PASS"
+              },
+              "error": {
+                "volume": -1.3313911040313542e-07,
+                "area": 1.484422682551667e-07
+              },
+              "drift": {
+                "volume": 1.509288267698139e-07,
+                "area": 0.0
+              },
+              "solids": 1,
+              "witnesses": [
+                200,
+                0,
+                0
+              ]
+            },
+            "sha256": "d55113ff4a9462e79870a9147865538f9d317bb3cb8071fd76c4588729e12c3f"
+          }
+        }
+      },
+      "passed": 5,
+      "restored": [
+        "25542-original",
+        "25542-neighborhood_swap"
+      ],
+      "regressions": [],
+      "status": "PARTIAL"
+    },
+    "round2": {
+      "patch_sha256": "1bee983215a049cbafbaf148f19746a4a9e55533039d5d22a5aa9bd098f7422b",
+      "build_exit": 0,
+      "checks": {
+        "25542-original": {
+          "status": "PASS",
+          "evidence": "registered/round2/25542-original.json",
+          "sha256": "206d688243ff726ed42c8bd77dbb525d9d3d975c2dd8da89a35608bc9f1e74de",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_rigid": {
+          "status": "PASS",
+          "evidence": "registered/round2/25542-neighborhood_rigid.json",
+          "sha256": "635028de57ada8ceac2f11df9b1550a45325b4f564c3efaa3188387b0f6927fa",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_swap": {
+          "status": "PASS",
+          "evidence": "registered/round2/25542-neighborhood_swap.json",
+          "sha256": "16284f23c6eb2ff16bf97de7450d2369893f6b5291cfca4fb489abe2a321e073",
+          "failed_assertions": []
+        },
+        "25542-regression_healthy": {
+          "status": "PASS",
+          "evidence": "registered/round2/25542-regression_healthy.json",
+          "sha256": "f7d19917262908f53d4485fd2895a01007c19e51c9e2d2063d96123011301c8f",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_down": {
+          "status": "FAIL",
+          "evidence": "registered/round2/25542-neighborhood_down.json",
+          "sha256": "4f5a195fe81e19535724a7371199d4348e338a30630ca4fd5f9073e9ca9847a1",
+          "failed_assertions": [
+            "volume",
+            "area"
+          ],
+          "independent": {
+            "label": "round2",
+            "pose": "down-16.25",
+            "repeat": 1,
+            "status": "FAIL",
+            "failed_draw": [],
+            "geometry": {
+              "status": "FAIL",
+              "checks": {
+                "volume": "FAIL",
+                "area": "FAIL",
+                "topology": "PASS",
+                "points": "PASS"
+              },
+              "error": {
+                "volume": 0.8082933117548237,
+                "area": 0.2130339756322428
+              },
+              "drift": {
+                "volume": 1.1994052329100668e-07,
+                "area": 0.0
+              },
+              "solids": 1,
+              "witnesses": [
+                196,
+                0,
+                0
+              ]
+            },
+            "sha256": "e5faf21c37febb343485800e25f1eccf48b9454538de8fccc10209682776a8ee"
+          }
+        },
+        "25542-regression_up": {
+          "status": "PASS",
+          "evidence": "registered/round2/25542-regression_up.json",
+          "sha256": "a8d1cfe422ce26895084e4718a91a2322520ba4de74938e9c367ff9a4b97653b",
+          "failed_assertions": [],
+          "independent": {
+            "label": "round2",
+            "pose": "up-2.03125",
+            "repeat": 1,
+            "status": "PASS",
+            "failed_draw": [],
+            "geometry": {
+              "status": "PASS",
+              "checks": {
+                "volume": "PASS",
+                "area": "PASS",
+                "topology": "PASS",
+                "points": "PASS"
+              },
+              "error": {
+                "volume": -1.3313911040313542e-07,
+                "area": 1.484422682551667e-07
+              },
+              "drift": {
+                "volume": 1.509288267698139e-07,
+                "area": 0.0
+              },
+              "solids": 1,
+              "witnesses": [
+                200,
+                0,
+                0
+              ]
+            },
+            "sha256": "d55113ff4a9462e79870a9147865538f9d317bb3cb8071fd76c4588729e12c3f"
+          }
+        }
+      },
+      "passed": 5,
+      "restored": [
+        "25542-original",
+        "25542-neighborhood_swap"
+      ],
+      "regressions": [],
+      "status": "PARTIAL"
+    },
+    "round3": {
+      "patch_sha256": "686d95055e1048e8fae25fe0eaf9d127e670157016322ec645e6b622f7004aa9",
+      "build_exit": 0,
+      "checks": {
+        "25542-original": {
+          "status": "PASS",
+          "evidence": "registered/round3/25542-original.json",
+          "sha256": "d505362f1a0613917dc37d3c93ffc1de2e559dd22cfd7fe6d860f67e6df61f18",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_rigid": {
+          "status": "PASS",
+          "evidence": "registered/round3/25542-neighborhood_rigid.json",
+          "sha256": "9d6126d5025d3af3fa7a1454af7b96254ca06a2e443ffa0d93d2f0b004621c85",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_swap": {
+          "status": "PASS",
+          "evidence": "registered/round3/25542-neighborhood_swap.json",
+          "sha256": "7fca5a836b0c27bdaab6f7e7ad4d4fc100652cee1ff32cf1bcdc027e6c0fd1ed",
+          "failed_assertions": []
+        },
+        "25542-regression_healthy": {
+          "status": "PASS",
+          "evidence": "registered/round3/25542-regression_healthy.json",
+          "sha256": "f7d19917262908f53d4485fd2895a01007c19e51c9e2d2063d96123011301c8f",
+          "failed_assertions": []
+        },
+        "25542-neighborhood_down": {
+          "status": "PASS",
+          "evidence": "registered/round3/25542-neighborhood_down.json",
+          "sha256": "741b49c389d30b47b1c2d1f020193b376e786fc62a35cc7e42e2d409c131ddee",
+          "failed_assertions": [],
+          "independent": {
+            "label": "round3",
+            "pose": "down-16.25",
+            "repeat": 1,
+            "status": "PASS",
+            "failed_draw": [],
+            "geometry": {
+              "status": "PASS",
+              "checks": {
+                "volume": "PASS",
+                "area": "PASS",
+                "topology": "PASS",
+                "points": "PASS"
+              },
+              "error": {
+                "volume": -7.160775567172095e-06,
+                "area": -1.938838067871984e-06
+              },
+              "drift": {
+                "volume": 1.1994052329100668e-07,
+                "area": 0.0
+              },
+              "solids": 1,
+              "witnesses": [
+                196,
+                0,
+                0
+              ]
+            },
+            "sha256": "0a09dd4cd3992da0a4d7ad5dbb06aee599c3c51545e41a1889fe3103d1ed49ca"
+          }
+        },
+        "25542-regression_up": {
+          "status": "PASS",
+          "evidence": "registered/round3/25542-regression_up.json",
+          "sha256": "964162a65dc9c0966eb0c99ac560bbfc5c3a747e9d029ffeecdbf8905a94bb94",
+          "failed_assertions": [],
+          "independent": {
+            "label": "round3",
+            "pose": "up-2.03125",
+            "repeat": 1,
+            "status": "PASS",
+            "failed_draw": [],
+            "geometry": {
+              "status": "PASS",
+              "checks": {
+                "volume": "PASS",
+                "area": "PASS",
+                "topology": "PASS",
+                "points": "PASS"
+              },
+              "error": {
+                "volume": 7.538255886174738e-08,
+                "area": -2.275373844895512e-08
+              },
+              "drift": {
+                "volume": 1.50932464748621e-07,
+                "area": 1.8189894035458565e-12
+              },
+              "solids": 1,
+              "witnesses": [
+                200,
+                0,
+                0
+              ]
+            },
+            "sha256": "dedf89351cfa7d929d66f79e16e40f8f35d103914b0f614a0434100774bee414"
+          }
+        }
+      },
+      "passed": 6,
+      "restored": [
+        "25542-original",
+        "25542-neighborhood_swap",
+        "25542-neighborhood_down"
+      ],
+      "regressions": [],
+      "status": "PASS*"
+    }
+  },
+  "controls": {
+    "down-16.25": {
+      "gold": {
+        "status": "PASS",
+        "failed": [],
+        "sha256": "5ace16cb185b7f62e9f8d58aa8b4bacb6c47cfea3a726f636af6c17671a2f7ef",
+        "shape": "3617a9b8dc30dd35cefecd34390904bfaef86920d0922d3c1903a745c5278c04"
+      },
+      "empty": {
+        "status": "FAIL",
+        "failed": [
+          "topology",
+          "draw_area",
+          "centroid_domain",
+          "volume",
+          "area",
+          "result_membership"
+        ],
+        "sha256": "3bcf9462dd95a52bac1b94ede2a8fcd516677b5f89f91011918790a717add1a8",
+        "shape": "e61057b61727aad63eea5002014f57358d20d61b3c429eddfb10b44c66ca5d46"
+      },
+      "cone": {
+        "status": "FAIL",
+        "failed": [
+          "draw_area",
+          "volume",
+          "area",
+          "result_membership"
+        ],
+        "sha256": "880140713fca1937bc24e5fac1d6fafad12c98a0ceee789deef89823fd54d580",
+        "shape": "30a48ecdc6ed47d638f9db8e2648c5a7eeda39126ae55320555c3168d36a42cc"
+      },
+      "shifted": {
+        "status": "FAIL",
+        "failed": [
+          "centroid_domain",
+          "result_membership"
+        ],
+        "sha256": "1c53f03a315085a14c205dfb148f48b3150f424fab6a1a8eafda214a760263d8",
+        "shape": "85b551f25abd02db1c5148a5b20c4d3be03de2e2515aaa9237f841b766d78c58"
+      }
+    },
+    "up-2.03125": {
+      "gold": {
+        "status": "PASS",
+        "failed": [],
+        "sha256": "d728a167c56267c5e1346f92fd150b0245eb16554508ca539779257d3b5344d1",
+        "shape": "74ee7312a72f2db0ff388424ca8566b12b8e16d5e712dc0dabec2527bfb6ba2f"
+      },
+      "empty": {
+        "status": "FAIL",
+        "failed": [
+          "topology",
+          "draw_area",
+          "centroid_domain",
+          "volume",
+          "area",
+          "result_membership"
+        ],
+        "sha256": "ca04de0b05561efca44e23bc7f15fc7a32933012a61c15e6bb211d79a26f09be",
+        "shape": "e61057b61727aad63eea5002014f57358d20d61b3c429eddfb10b44c66ca5d46"
+      },
+      "cone": {
+        "status": "FAIL",
+        "failed": [
+          "draw_area",
+          "volume",
+          "area",
+          "result_membership"
+        ],
+        "sha256": "24b092e7df1221b923bdd78ccfde5925ef9e42e20d2e12d379da07db045509ce",
+        "shape": "0462685b187eb6896c2fa9a6f262583d905095026c753da077072cbb6a736dac"
+      },
+      "shifted": {
+        "status": "FAIL",
+        "failed": [
+          "centroid_domain",
+          "result_membership"
+        ],
+        "sha256": "c05f0e02a07f4900dd84e53534939f1e30bae2d991a93c9532d6651d0e9716c6",
+        "shape": "b1720d60f149292137585e5e74177473532397b57cc42708815e5997f6d556d0"
+      }
+    }
+  },
+  "paired": {
+    "round1": {
+      "M25542_L2": "PARTIAL",
+      "M28195_L3": "PASS*"
+    },
+    "round2": {
+      "M25542_L2": "PARTIAL",
+      "M28195_L3": "REG_FAIL"
+    },
+    "round3": {
+      "M25542_L2": "PASS*",
+      "M28195_L3": "PASS*"
+    }
+  }
+}
