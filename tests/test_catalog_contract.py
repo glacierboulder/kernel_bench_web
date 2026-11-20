@@ -18,7 +18,7 @@ BUNDLE=ROOT/"benchmarks"/"occt"
 class CatalogContractTests(unittest.TestCase):
     def test_current_catalog_maps_legacy_tasks_and_only_public_issue_material(self):
         bundle=validate_bundle(BUNDLE)
-        self.assertEqual(bundle["counts"],{"issues":83,"groups":83,"evaluation_suites":86})
+        self.assertEqual(bundle["counts"],{"issues":83,"groups":83,"evaluation_suites":88})
         self.assertEqual(len(bundle["groups"]),83)
         self.assertIn(("NG-04R-v2","1"),bundle["groups"])
         task=public_task(bundle,bundle["groups"][("occt_boolean_group_visible_544","1")])
@@ -33,29 +33,34 @@ class CatalogContractTests(unittest.TestCase):
         suites=bundle["suites"]
         referenced={(group["evaluation_suite"]["id"],group["evaluation_suite"]["version"])
                     for group in bundle["groups"].values()}
-        # Historical B55 and the opt-in M28195/M25542 suites are selectable by version.
+        # Historical B55 and the opt-in Common extensions are selectable by version.
         self.assertEqual(set(suites)-referenced,{
             ("occt-bf-suite-b55-27310-27773-27252-oracle-v2","1"),
             ("occt-single20-28195-checks","2"),
-            ("occt-single20-25542-checks","2")})
+            ("occt-single20-25542-checks","2"),
+            ("occt-25237-suite","2"), ("occt-28366-suite","2")})
         self.assertIn(("occt-bf-suite-b55-27310-27773-27252-geometry-v2","1"),referenced)
         checkpoints=[checkpoint for suite in suites.values() for checkpoint in suite["checkpoints"]]
-        self.assertEqual(len(checkpoints),420)
+        self.assertEqual(len(checkpoints),432)
         self.assertTrue(all(checkpoint["required"] for checkpoint in checkpoints))
         self.assertEqual({category:sum(cp["category"]==category for cp in checkpoints)
                           for category in ("original","neighborhood","regression")},
-                         {"original":122,"neighborhood":199,"regression":99})
+                         {"original":124,"neighborhood":205,"regression":103})
         self.assertEqual(sum(len(suites[key]["checkpoints"]) for key in referenced),392)
 
     def test_extended_common_suites_are_opt_in_and_preserve_v1(self):
         bundle = validate_bundle(BUNDLE)
         for issue, neighborhood, regression in (
-            ("28195", "neighborhood_axis31", "regression_z90"),
-            ("25542", "neighborhood_down", "regression_up"),
+            ("28195", "28195-neighborhood_axis31", "28195-regression_z90"),
+            ("25542", "25542-neighborhood_down", "25542-regression_up"),
+            ("25237", "tilted_edges", "overlapping_subarcs"),
+            ("28366", "placed_section", "offset_section"),
         ):
             with self.subTest(issue=issue):
-                group = bundle["groups"][(f"occt-single20-{issue}", "1")]
-                suite_id = f"occt-single20-{issue}-checks"
+                suite_id = (f"occt-single20-{issue}-checks" if issue in ("25542","28195")
+                            else f"occt-{issue}-suite")
+                group_id, = bundle["suites"][(suite_id, "1")]["group_ids"]
+                group = bundle["groups"][(group_id, "1")]
                 self.assertEqual(group["evaluation_suite"], {"id": suite_id, "version": "1"})
                 old = bundle["suites"][(suite_id, "1")]
                 new = bundle["suites"][(suite_id, "2")]
@@ -63,8 +68,8 @@ class CatalogContractTests(unittest.TestCase):
                 self.assertTrue(set(old["support_files"]).issubset(new["support_files"]))
                 self.assertEqual([(c["id"], c["category"], c["visibility"], c["required"])
                                   for c in new["checkpoints"][4:]], [
-                    (f"{issue}-{neighborhood}", "neighborhood", "public", True),
-                    (f"{issue}-{regression}", "regression", "public", True),
+                    (neighborhood, "neighborhood", "public", True),
+                    (regression, "regression", "public", True),
                 ])
 
     def _copy_bundle(self):

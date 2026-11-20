@@ -1,0 +1,165 @@
+{
+  "archive_sha256": "bc9cde83a85555a42a7e8da1781529dcf55edb3d7d3a18b229615875cac905d7",
+  "source": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "model": "gpt-6.2-sol",
+  "effort": "high",
+  "hard_cap_seconds": 600,
+  "checkpoint": "final",
+  "new_model_runs": 0,
+  "api_coverage": "not measured",
+  "suite_version": "2",
+  "issues": {
+    "25237": {
+      "B": {
+        "checks": {
+          "original": false,
+          "translation": false,
+          "rotation": false,
+          "disjoint": true,
+          "tilted_edges": false,
+          "overlapping_subarcs": true
+        },
+        "passed": 2,
+        "total": 6
+      },
+      "F": {
+        "checks": {
+          "original": true,
+          "translation": true,
+          "rotation": true,
+          "disjoint": true,
+          "tilted_edges": true,
+          "overlapping_subarcs": true
+        },
+        "passed": 6,
+        "total": 6
+      },
+      "trial1": {
+        "patch_sha256": "80044f88b392f09f9dd1768bdc425ec4abfea944a71c36984b9c6eeeabca4fb3",
+        "apply": "PASS",
+        "build": "PASS",
+        "checks": {
+          "original": true,
+          "translation": true,
+          "rotation": true,
+          "disjoint": true,
+          "tilted_edges": true,
+          "overlapping_subarcs": true
+        },
+        "passed": 6,
+        "total": 6,
+        "recovery": [
+          4,
+          4
+        ],
+        "broken": [
+          0,
+          2
+        ],
+        "api": null,
+        "verdict": "PASS*"
+      },
+      "trial2": {
+        "patch_sha256": "ef2dd33ed3d1fb9bd8d6ca90b95e3cff178df2512b57f06ffb470ceb3b258773",
+        "apply": "PASS",
+        "build": "PASS",
+        "checks": {
+          "original": true,
+          "translation": true,
+          "rotation": true,
+          "disjoint": true,
+          "tilted_edges": true,
+          "overlapping_subarcs": true
+        },
+        "passed": 6,
+        "total": 6,
+        "recovery": [
+          4,
+          4
+        ],
+        "broken": [
+          0,
+          2
+        ],
+        "api": null,
+        "verdict": "PASS*"
+      }
+    },
+    "28366": {
+      "B": {
+        "checks": {
+          "original": false,
+          "rotate37": false,
+          "rotate90": false,
+          "box": true,
+          "placed_section": false,
+          "offset_section": true
+        },
+        "passed": 2,
+        "total": 6
+      },
+      "F": {
+        "checks": {
+          "original": true,
+          "rotate37": true,
+          "rotate90": true,
+          "box": true,
+          "placed_section": true,
+          "offset_section": true
+        },
+        "passed": 6,
+        "total": 6
+      },
+      "trial1": {
+        "patch_sha256": "85cf53c5df4b31b2ea21d0af7e119b42f4e2b4a5ef7be0fec7d75e3c0a7bf896",
+        "apply": "PASS",
+        "build": "PASS",
+        "checks": {
+          "original": true,
+          "rotate37": true,
+          "rotate90": true,
+          "box": true,
+          "placed_section": true,
+          "offset_section": true
+        },
+        "passed": 6,
+        "total": 6,
+        "recovery": [
+          4,
+          4
+        ],
+        "broken": [
+          0,
+          2
+        ],
+        "api": null,
+        "verdict": "PASS*"
+      },
+      "trial2": {
+        "patch_sha256": "184949c01f3e116078a0749a3afcfa034359c21e383aa92a1edfeab2b96509b0",
+        "apply": "PASS",
+        "build": "PASS",
+        "checks": {
+          "original": true,
+          "rotate37": true,
+          "rotate90": true,
+          "box": true,
+          "placed_section": true,
+          "offset_section": true
+        },
+        "passed": 6,
+        "total": 6,
+        "recovery": [
+          4,
+          4
+        ],
+        "broken": [
+          0,
+          2
+        ],
+        "api": null,
+        "verdict": "PASS*"
+      }
+    }
+  }
+}
