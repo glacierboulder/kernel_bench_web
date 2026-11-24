@@ -1,0 +1,36 @@
+{
+  "snapshot_sha256": "1d39cdd60c1be70ebf803fa9c2bff14b7c848d0583ce0adf75cada50da54b9a7",
+  "public_materials": {
+    "bug32578_edges.brep": "7e2bec093221e566a3a7cd912d9fcd7a412f8f0f0a39b0a0cda4a5fa6813587e",
+    "bug32578_face.brep": "f963577d1ebc3c75c57f0f7b9211c3f84b644a1ea3a6f969f7a2f42e9616c6d0",
+    "cmake-occt32578": "3d5a4da7bc7d9a8bb5547b2efeba011659456a0fdc439eb0f2c4cfd23fc361d7",
+    "issue.json": "54dad1b80828eae2650a228b64489000fd20a68c98df68d0ba615dcd8d6356fe",
+    "reproduce.tcl": "76456e270e10c56d879fc913ab835480343a0d3f607b5b6fe69bbad30fb4b025",
+    "statement.md": "760d6f499c2149a31bf6edf5ca9d9b3077add1d400072624b1d5547c47cb6edb"
+  },
+  "sides": {
+    "B": {
+      "returncode": 0,
+      "correct_split": false,
+      "counts": {},
+      "faces": null,
+      "area": null,
+      "result_missing": true,
+      "native_tkbo_sha256": "801b19f45ec8d25bb180cf7fc8e942651718f2785b4d41825ded711f9aa8e43f"
+    },
+    "F": {
+      "returncode": 0,
+      "correct_split": true,
+      "counts": {
+        "VERTEX": 646,
+        "EDGE": 1234,
+        "WIRE": 589,
+        "FACE": 589
+      },
+      "faces": 589,
+      "area": 351.033,
+      "result_missing": false,
+      "native_tkbo_sha256": "e040fd44ed9dd216744557fe2d779b672cf283fe0febba44cd6559b72799ac8d"
+    }
+  }
+}

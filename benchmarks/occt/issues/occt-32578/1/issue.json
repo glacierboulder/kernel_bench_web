@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "occt-32578",
+  "version": "1",
+  "title": "用一组边切分曲面时遗漏分区或生成自交结果",
+  "source_id": "occt76-32578-b-3e9cb8064479",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/reproduce.tcl",
+    "public/bug32578_edges.brep",
+    "public/bug32578_face.brep",
+    "public/cmake-occt32578"
+  ]
+}

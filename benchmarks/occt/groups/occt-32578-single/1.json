@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-32578-single",
+  "version": "1",
+  "title": "用一组边切分曲面时遗漏分区或生成自交结果",
+  "kind": "single",
+  "source_id": "occt76-32578-b-3e9cb8064479",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-32578",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-32578-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}
