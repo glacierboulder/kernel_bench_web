@@ -1,0 +1,20 @@
+{
+  "issue": 27469,
+  "commit": "380748c340357a6758ac40b2d2a0344bf6484270",
+  "command": [
+    "DRAWEXE",
+    "-b",
+    "-f",
+    "reproduce.tcl"
+  ],
+  "working_directory": "visible/issue_27469",
+  "snapshot_sha256": "6ef5625f78337e13c35b4def31846c847df7a9bedc7ffb452e9349537bb3693f",
+  "files": {
+    "issue.json": "8da7b02a134ed911d246c55d56f774a29cb227872bc23486629c7a9678306503",
+    "reproduce.tcl": "63bb54b478d0bc2782a098e2ca425055cba23f166af25d017103565b25d1aef7",
+    "statement.md": "a48de1fb0bbf64652078773b5b084efb18a8372693410bbf0e5f234942ef0a39"
+  },
+  "stdout": "DRAW is running in batch mode\nNumber of shapes in result\n VERTEX    : 0\n EDGE      : 0\n WIRE      : 0\n FACE      : 0\n SHELL     : 0\n SOLID     : 0\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 1\n\n\n\nMass :               0\n\nCenter of gravity : \nX =               0\nY =               0\nZ =               0\n\nMatrix of Inertia : \n              0               0               0\n              0               0               0\n              0               0               0\n\nMoments : \nIX =               0\nIY =               0\nIZ =               0\n\n\n",
+  "stderr": "",
+  "returncode": 0
+}
