@@ -1,0 +1,20 @@
+{
+  "issue": 31655,
+  "commit": "529444be92b1e446aa4006b9e245b7afdcb3a3f8",
+  "command": [
+    "DRAWEXE",
+    "-b",
+    "-f",
+    "reproduce.tcl"
+  ],
+  "working_directory": "visible/issue_31655",
+  "snapshot_sha256": "a973c317837be9e1eb5f8cb9567903bbfb15e2e2d540d444984f88a3c64eaf1d",
+  "files": {
+    "issue.json": "464e5ad8579906c13276fb4d48c72ace73e1e28f2fcaa61b5748aece0b7dc85f",
+    "reproduce.tcl": "847388fd9064402715aa30719640e6a9fd7b2bd0f4b7334ae49ebcb11a37de9b",
+    "statement.md": "e1181928bdc58c2a980ff949d32f29b743db4d24bafa253dd6230a6ddb361fed"
+  },
+  "stdout": "DRAW is running in batch mode\nE/F: 3 interference(s) found\n (0, 3, 13)\n (0, 3, 14)\n (0, 3)\n\n-0.70710678118654613 0 5.5511151231257827e-17\n0.70710678118654613 0 5.5511151231257827e-17\n",
+  "stderr": "",
+  "returncode": 0
+}
