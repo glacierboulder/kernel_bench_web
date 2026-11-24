@@ -1,0 +1,16 @@
+DRAW is running in batch mode
+mode=original vertices=4 edges=3 length=1.78841 valid=1 self_check={Warning: Some of the arguments are self-interfering shapes
+V/V: x3 x5 
+}
+original verdict=fail
+mode=translated vertices=4 edges=3 length=1.78841 valid=1 self_check={Warning: Some of the arguments are self-interfering shapes
+V/V: x3 x5 
+}
+translated verdict=fail
+mode=alternate vertices=4 edges=3 length=1.78841 valid=1 self_check={Warning: Some of the arguments are self-interfering shapes
+V/V: x3 x5 
+}
+alternate verdict=fail
+mode=control vertices=5 edges=4 length=4 valid=1 self_check={ This shape seems to be OK.
+}
+control verdict=pass
