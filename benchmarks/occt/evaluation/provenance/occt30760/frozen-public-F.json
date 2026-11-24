@@ -1,0 +1,21 @@
+{
+  "issue": 30760,
+  "commit": "78005ffefef5267b11d93a37457d698f60371bd0",
+  "command": [
+    "DRAWEXE",
+    "-b",
+    "-f",
+    "reproduce.tcl"
+  ],
+  "working_directory": "visible/issue_30760",
+  "snapshot_sha256": "ab3515ad20b9c3c3fcece94cde4062ffb1f5b897c0ee73a5dae0685d505f92fa",
+  "files": {
+    "bug30760_shapes.brep": "a86678116d67959210a208f853d0abcf12b9e2c68b2c1e79e93b23041c2b38cb",
+    "issue.json": "dae25173898f3d0475b23ba891bebc9b03652d12df99580af5e2484fc1608273",
+    "reproduce.tcl": "1b63bf05f0e87f32858215c3f593533d7e1495d9686f5455fc68a7ac574e30f1",
+    "statement.md": "27131e84b1f407ed52281723474506fb55bcb72d69108801ba31486c28241267"
+  },
+  "stdout": "DRAW is running in batch mode\nThis shape seems to be valid\nNumber of shapes in overlap\n VERTEX    : 24\n EDGE      : 36\n WIRE      : 14\n FACE      : 14\n SHELL     : 1\n SOLID     : 1\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 91\n\n\n\nMass :     0.000106046\n\nCenter of gravity : \nX =            0.24\nY =            0.25\nZ =       0.0540373\n\nMatrix of Inertia : \n    6.29355e-07    -8.47033e-22      4.9638e-13\n   -8.47033e-22     1.19237e-07     2.11758e-22\n     4.9638e-13     2.11758e-22     5.38397e-07\n\nMoments : \nIX =     6.29355e-07\nIY =     5.38397e-07\nIZ =     1.19237e-07\n\n\n",
+  "stderr": "",
+  "returncode": 0
+}

@@ -1,0 +1,15 @@
+DRAW is running in batch mode
+original forward: solids=0 faces=0 volume=0 valid=1
+original reverse: solids=1 faces=14 volume=0.000106046 valid=1
+original verdict=fail
+translated forward: solids=0 faces=0 volume=0 valid=1
+translated reverse: solids=1 faces=14 volume=0.000106046 valid=1
+translated verdict=fail
+alternate forward: solids=0 faces=0 volume=0 valid=1
+alternate reverse: solids=1 faces=14 volume=0.000106046 valid=1
+alternate verdict=fail
+control forward: solids=0 faces=0 volume=0 valid=1
+control forward: union_solids=2 union_volume=0.00512877 input_sum=0.0051287600000000004
+control reverse: solids=0 faces=0 volume=0 valid=1
+control reverse: union_solids=2 union_volume=0.00512877 input_sum=0.0051287600000000004
+control verdict=pass
