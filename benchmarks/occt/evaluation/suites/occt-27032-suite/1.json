@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "occt-27032-suite",
+  "version": "1",
+  "title": "边界边与截线重合时，Section 漏掉一段交边",
+  "source_ids": [
+    "occt70-27032-b-7d835040071b"
+  ],
+  "group_ids": [
+    "occt-27032-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "27032-original",
+      "issue_id": "occt-27032",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt27032/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "27032-translated",
+      "issue_id": "occt-27032",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt27032/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "27032-alternate",
+      "issue_id": "occt-27032",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt27032/alternate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "27032-control",
+      "issue_id": "occt-27032",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt27032/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt27032/body.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt27032/assets/OCC27032_sh.brep"
+  ]
+}
