@@ -1,0 +1,22 @@
+{
+  "issue": 32701,
+  "commit": "9eee5ab7e413dccc6db1124327e8841e85854381",
+  "command": [
+    "DRAWEXE",
+    "-b",
+    "-f",
+    "reproduce.tcl"
+  ],
+  "working_directory": "visible/issue_32701",
+  "snapshot_sha256": "b8e3f2baecc7b2f3b31d79f8b16814f138db118200fff602154da3446bad64ff",
+  "files": {
+    "bug32701s.brep": "53e818ac6c861b50ae888583da003488fc646b0473ac8ad64dad13f6afdb7c90",
+    "bug32701t.brep": "3195e22be56286b6ec324b5cca01257b02159ac489659c5e83330a6972227df5",
+    "issue.json": "6fcff8df8784432ea6b70597f2524b523890ddc92d2b212deafb75494468ad5d",
+    "reproduce.tcl": "319d03fa7279b29030fa7500ada02fc02f070155fd06f6dd1faa72e0c66b7b50",
+    "statement.md": "54b6fd508fe1d2e60383b4ea7492eb67ae5caf0b507fded752ed8aacfc534774"
+  },
+  "stdout": "DRAW is running in batch mode\nThis shape seems to be valid\nNumber of shapes in section\n VERTEX    : 2\n EDGE      : 1\n WIRE      : 0\n FACE      : 0\n SHELL     : 0\n SOLID     : 0\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 4\n\n\n\nMass :         113.155\n\nCenter of gravity : \nX =         55.9123\nY =     -0.00302914\nZ =         6.56154\n\nMatrix of Inertia : \n        4504.57         17.9462        -21725.4\n        17.9462          119907         4.50728\n       -21725.4         4.50728          115403\n\nMoments : \nIX =          119907\nIY =          119507\nIZ =         400.359\n\n\nTolerance MAX=2.3829586355125815e-05 AVG=2.3829586021792485e-05 MIN=2.3829585355125816e-05\nFACE    : MAX=0 AVG=0 MIN=0\nEDGE    : MAX=2.3829585355125816e-05 AVG=2.3829585355125816e-05 MIN=2.3829585355125816e-05\nVERTEX  : MAX=2.3829586355125815e-05 AVG=2.3829586355125815e-05 MIN=2.3829586355125815e-05\n\n\n\nMass :         113.155\n\nCenter of gravity : \nX =         55.9123\nY =     -0.00302914\nZ =         6.56154\n\nMatrix of Inertia : \n        4504.57         17.9462        -21725.4\n        17.9462          119907         4.50728\n       -21725.4         4.50728          115403\n\nMoments : \nIX =          119907\nIY =          119507\nIZ =         400.359\n\n\n",
+  "stderr": "",
+  "returncode": 0
+}

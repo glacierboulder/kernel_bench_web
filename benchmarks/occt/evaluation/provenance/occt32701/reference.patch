@@ -1,0 +1,1188 @@
+diff --git a/src/Approx/Approx_SameParameter.cxx b/src/Approx/Approx_SameParameter.cxx
+index 5e9c451d85..3a13047f2c 100644
+--- a/src/Approx/Approx_SameParameter.cxx
++++ b/src/Approx/Approx_SameParameter.cxx
+@@ -166,8 +166,17 @@ static Standard_Real ComputeTolReached(const Handle(Adaptor3d_Curve)& c3d,
+   {
+     Standard_Real t = IntToReal(i) / IntToReal(nbp);
+     Standard_Real u = first * (1.0 - t) + last * t;
+-    gp_Pnt Pc3d = c3d->Value(u);
+-    gp_Pnt Pcons = cons.Value(u);
++    gp_Pnt Pc3d, Pcons;
++    try
++    {
++      Pc3d = c3d->Value(u);
++      Pcons = cons.Value(u);
++    }
++    catch (Standard_Failure const&)
++    {
++      d2 = Precision::Infinite();
++      break;
++    }
+     if (Precision::IsInfinite(Pcons.X()) ||
+         Precision::IsInfinite(Pcons.Y()) ||
+         Precision::IsInfinite(Pcons.Z()))
+diff --git a/src/ApproxInt/ApproxInt_Approx.gxx b/src/ApproxInt/ApproxInt_Approx.gxx
+index 7be8911cf0..b115781ca5 100644
+--- a/src/ApproxInt/ApproxInt_Approx.gxx
++++ b/src/ApproxInt/ApproxInt_Approx.gxx
+@@ -91,7 +91,7 @@ static void ComputeTrsf2d(const Handle(TheWLine)& theline,
+ //function : Parameters
+ //purpose  :
+ //=======================================================================
+-static void Parameters(const ApproxInt_TheMultiLine& Line,
++void ApproxInt_Approx::Parameters(const ApproxInt_TheMultiLine& Line,
+                        const Standard_Integer firstP,
+                        const Standard_Integer lastP,
+                        const Approx_ParametrizationType Par,
+diff --git a/src/ApproxInt/ApproxInt_KnotTools.cxx b/src/ApproxInt/ApproxInt_KnotTools.cxx
+index 2396d2a44f..d7acaf76d5 100644
+--- a/src/ApproxInt/ApproxInt_KnotTools.cxx
++++ b/src/ApproxInt/ApproxInt_KnotTools.cxx
+@@ -22,6 +22,8 @@
+ #include <Precision.hxx>
+ #include <NCollection_Vector.hxx>
+ #include <TColgp_Array1OfPnt.hxx>
++#include <GeomInt_WLApprox.hxx>
++#include <GeomInt_TheMultiLineOfWLApprox.hxx>
+ 
+ // (Sqrt(5.0) - 1.0) / 4.0
+ //static const Standard_Real aSinCoeff = 0.30901699437494742410229341718282;
+@@ -85,30 +87,35 @@ static Standard_Real EvalCurv(const Standard_Real dim,
+ }
+ 
+ //=======================================================================
+-//function : ComputeKnotInds
++//function : BuildCurvature
+ //purpose  : 
+ //=======================================================================
+-void ApproxInt_KnotTools::ComputeKnotInds(const NCollection_LocalArray<Standard_Real>& theCoords,
+-                                          const Standard_Integer theDim, 
+-                                          const math_Vector& thePars,
+-                                          NCollection_Sequence<Standard_Integer>& theInds)
++
++void ApproxInt_KnotTools::BuildCurvature(
++  const NCollection_LocalArray<Standard_Real>& theCoords,
++  const Standard_Integer theDim,
++  const math_Vector& thePars,
++  TColStd_Array1OfReal& theCurv,
++  Standard_Real& theMaxCurv)
+ {
+-  //I: Create discrete curvature.
+-  NCollection_Sequence<Standard_Integer> aFeatureInds;
+-  TColStd_Array1OfReal aCurv(thePars.Lower(), thePars.Upper());
+   // Arrays are allocated for max theDim = 7: 1 3d curve + 2 2d curves.
+   Standard_Real Val[21], Par[3], Res[21];
+   Standard_Integer i, j, m, ic;
+-  Standard_Real aMaxCurv = 0.;
+   Standard_Integer dim = theDim;
+   //
+-  i = aCurv.Lower();
+-  for(j = 0; j < 3; ++j)
++  theMaxCurv = 0.;
++  if (theCurv.Length() < 3)
+   {
+-    Standard_Integer k = i+j;
+-    ic = (k - aCurv.Lower()) * dim;
++    theCurv.Init(0.);
++    return;
++  }
++  i = theCurv.Lower();
++  for (j = 0; j < 3; ++j)
++  {
++    Standard_Integer k = i + j;
++    ic = (k - theCurv.Lower()) * dim;
+     Standard_Integer l = dim*j;
+-    for(m = 0; m < dim; ++m)
++    for (m = 0; m < dim; ++m)
+     {
+       Val[l + m] = theCoords[ic + m];
+     }
+@@ -116,21 +123,21 @@ void ApproxInt_KnotTools::ComputeKnotInds(const NCollection_LocalArray<Standard_
+   }
+   PLib::EvalLagrange(Par[0], 2, 2, dim, *Val, *Par, *Res);
+   //
+-  aCurv(i) = EvalCurv(dim, &Res[dim], &Res[2*dim]);
++  theCurv(i) = EvalCurv(dim, &Res[dim], &Res[2 * dim]);
+   //
+-  if(aCurv(i) > aMaxCurv)
++  if (theCurv(i) > theMaxCurv)
+   {
+-    aMaxCurv = aCurv(i);
++    theMaxCurv = theCurv(i);
+   }
+   //
+-  for(i = aCurv.Lower()+1; i < aCurv.Upper(); ++i)
++  for (i = theCurv.Lower() + 1; i < theCurv.Upper(); ++i)
+   {
+-    for(j = 0; j < 3; ++j)
++    for (j = 0; j < 3; ++j)
+     {
+-      Standard_Integer k = i+j-1;
+-      ic = (k - aCurv.Lower()) * dim;
++      Standard_Integer k = i + j - 1;
++      ic = (k - theCurv.Lower()) * dim;
+       Standard_Integer l = dim*j;
+-      for(m = 0; m < dim; ++m)
++      for (m = 0; m < dim; ++m)
+       {
+         Val[l + m] = theCoords[ic + m];
+       }
+@@ -138,20 +145,20 @@ void ApproxInt_KnotTools::ComputeKnotInds(const NCollection_LocalArray<Standard_
+     }
+     PLib::EvalLagrange(Par[1], 2, 2, dim, *Val, *Par, *Res);
+     //
+-    aCurv(i) = EvalCurv(dim, &Res[dim], &Res[2*dim]);
+-    if(aCurv(i) > aMaxCurv)
++    theCurv(i) = EvalCurv(dim, &Res[dim], &Res[2 * dim]);
++    if (theCurv(i) > theMaxCurv)
+     {
+-      aMaxCurv = aCurv(i);
++      theMaxCurv = theCurv(i);
+     }
+   }
+   //
+-  i = aCurv.Upper();
+-  for(j = 0; j < 3; ++j)
++  i = theCurv.Upper();
++  for (j = 0; j < 3; ++j)
+   {
+-    Standard_Integer k = i+j-2;
+-    ic = (k - aCurv.Lower()) * dim;
++    Standard_Integer k = i + j - 2;
++    ic = (k - theCurv.Lower()) * dim;
+     Standard_Integer l = dim*j;
+-    for(m = 0; m < dim; ++m)
++    for (m = 0; m < dim; ++m)
+     {
+       Val[l + m] = theCoords[ic + m];
+     }
+@@ -159,12 +166,30 @@ void ApproxInt_KnotTools::ComputeKnotInds(const NCollection_LocalArray<Standard_
+   }
+   PLib::EvalLagrange(Par[2], 2, 2, dim, *Val, *Par, *Res);
+   //
+-  aCurv(i) = EvalCurv(dim, &Res[dim], &Res[2*dim]);
+-  if(aCurv(i) > aMaxCurv)
++  theCurv(i) = EvalCurv(dim, &Res[dim], &Res[2 * dim]);
++  if (theCurv(i) > theMaxCurv)
+   {
+-    aMaxCurv = aCurv(i);
++    theMaxCurv = theCurv(i);
+   }
+ 
++}
++
++//=======================================================================
++//function : ComputeKnotInds
++//purpose  : 
++//=======================================================================
++void ApproxInt_KnotTools::ComputeKnotInds(const NCollection_LocalArray<Standard_Real>& theCoords,
++                                          const Standard_Integer theDim, 
++                                          const math_Vector& thePars,
++                                          NCollection_Sequence<Standard_Integer>& theInds)
++{
++  //I: Create discrete curvature.
++  NCollection_Sequence<Standard_Integer> aFeatureInds;
++  TColStd_Array1OfReal aCurv(thePars.Lower(), thePars.Upper());
++  Standard_Real aMaxCurv = 0.;
++  BuildCurvature(theCoords, theDim, thePars, aCurv, aMaxCurv);
++  //  
++  Standard_Integer i, j, dim = theDim;
+ #ifdef APPROXINT_KNOTTOOLS_DEBUG
+   std::cout << "Discrete curvature array is" << std::endl;
+   for(i = aCurv.Lower(); i <= aCurv.Upper(); ++i)
+@@ -623,3 +648,172 @@ void ApproxInt_KnotTools::BuildKnots(const TColgp_Array1OfPnt& thePntsXYZ,
+ #endif
+ 
+ }
++//=======================================================================
++//function : MaxParamRatio
++//purpose  :
++//=======================================================================
++static Standard_Real MaxParamRatio(const math_Vector& thePars)
++{
++  Standard_Integer i;
++  Standard_Real aMaxRatio = 0.;
++  //
++  for (i = thePars.Lower() + 1; i < thePars.Upper(); ++i)
++  {
++    Standard_Real aRat = (thePars(i + 1) - thePars(i)) / (thePars(i) - thePars(i - 1));
++    if (aRat < 1.)
++      aRat = 1. / aRat;
++
++    aMaxRatio = Max(aMaxRatio, aRat);
++  }
++  return aMaxRatio;
++}
++//=======================================================================
++//function : DefineParType
++//purpose  :
++//=======================================================================
++Approx_ParametrizationType ApproxInt_KnotTools::DefineParType(
++  const Handle(IntPatch_WLine)& theWL,
++  const Standard_Integer theFpar, const Standard_Integer theLpar,
++  const Standard_Boolean theApproxXYZ,
++  const Standard_Boolean theApproxU1V1,
++  const Standard_Boolean theApproxU2V2
++)
++{
++  if (theLpar - theFpar == 1)
++    return Approx_IsoParametric;
++
++  const Standard_Integer  nbp3d = theApproxXYZ ? 1 : 0,
++    nbp2d = (theApproxU1V1 ? 1 : 0) + (theApproxU2V2 ? 1 : 0);
++
++  GeomInt_TheMultiLineOfWLApprox aTestLine(theWL, nbp3d, nbp2d, theApproxU1V1, theApproxU2V2,
++    0., 0., 0., 0., 0., 0., 0., theApproxU1V1, theFpar, theLpar);
++
++  TColgp_Array1OfPnt aTabPnt3d(1, Max(1, nbp3d));
++  TColgp_Array1OfPnt2d aTabPnt2d(1, Max(1, nbp2d));
++  TColgp_Array1OfPnt aPntXYZ(theFpar, theLpar);
++  TColgp_Array1OfPnt2d aPntU1V1(theFpar, theLpar);
++  TColgp_Array1OfPnt2d aPntU2V2(theFpar, theLpar);
++
++  Standard_Integer i, j;
++
++  for (i = theFpar; i <= theLpar; ++i)
++  {
++    if (nbp3d != 0 && nbp2d != 0) aTestLine.Value(i, aTabPnt3d, aTabPnt2d);
++    else if (nbp2d != 0)          aTestLine.Value(i, aTabPnt2d);
++    else if (nbp3d != 0)          aTestLine.Value(i, aTabPnt3d);
++    //
++    if (nbp3d > 0)
++    {
++      aPntXYZ(i) = aTabPnt3d(1);
++    }
++    if (nbp2d > 1)
++    {
++      aPntU1V1(i) = aTabPnt2d(1);
++      aPntU2V2(i) = aTabPnt2d(2);
++    }
++    else if (nbp2d > 0)
++    {
++      if (theApproxU1V1)
++      {
++        aPntU1V1(i) = aTabPnt2d(1);
++      }
++      else
++      {
++        aPntU2V2(i) = aTabPnt2d(1);
++      }
++    }
++  }
++
++  Standard_Integer aDim = 0;
++
++  if (theApproxXYZ)
++    aDim += 3;
++  if (theApproxU1V1)
++    aDim += 2;
++  if (theApproxU2V2)
++    aDim += 2;
++
++  Standard_Integer aLength = theLpar - theFpar + 1;
++  NCollection_LocalArray<Standard_Real> aCoords(aLength * aDim);
++  for (i = theFpar; i <= theLpar; ++i)
++  {
++    j = (i - theFpar) * aDim;
++    if (theApproxXYZ)
++    {
++      aCoords[j] = aPntXYZ.Value(i).X();
++      ++j;
++      aCoords[j] = aPntXYZ.Value(i).Y();
++      ++j;
++      aCoords[j] = aPntXYZ.Value(i).Z();
++      ++j;
++    }
++    if (theApproxU1V1)
++    {
++      aCoords[j] = aPntU1V1.Value(i).X();
++      ++j;
++      aCoords[j] = aPntU1V1.Value(i).Y();
++      ++j;
++    }
++    if (theApproxU2V2)
++    {
++      aCoords[j] = aPntU2V2.Value(i).X();
++      ++j;
++      aCoords[j] = aPntU2V2.Value(i).Y();
++      ++j;
++    }
++  }
++
++  //Analysis of curvature
++  const Standard_Real aCritRat = 500.;
++  const Standard_Real aCritParRat = 100.;
++  math_Vector aPars(theFpar, theLpar);
++  Approx_ParametrizationType aParType = Approx_ChordLength;
++  GeomInt_WLApprox::Parameters(aTestLine, theFpar, theLpar, aParType, aPars);
++  TColStd_Array1OfReal aCurv(aPars.Lower(), aPars.Upper());
++  Standard_Real aMaxCurv = 0.;
++  BuildCurvature(aCoords, aDim, aPars, aCurv, aMaxCurv);
++
++  if (aMaxCurv < Precision::PConfusion() 
++      || Precision::IsPositiveInfinite(aMaxCurv))
++  {
++    //Linear case
++    return aParType;
++  }
++
++  Standard_Real aMidCurv = 0.;
++  Standard_Real eps = Epsilon(1.);
++  j = 0;
++  for (i = aCurv.Lower(); i <= aCurv.Upper(); ++i)
++  {
++    if (aMaxCurv - aCurv(i) < eps)
++    {
++      continue;
++    }
++    ++j;
++    aMidCurv += aCurv(i);
++  }
++
++  if (j > 1)
++  {
++    aMidCurv /= j;
++  }
++
++  if (aMidCurv <= eps)
++    return aParType;
++
++  Standard_Real aRat = aMaxCurv / aMidCurv;
++  
++  if (aRat > aCritRat)
++  {
++    if(aRat > 5.*aCritRat)
++      aParType = Approx_Centripetal;
++    else
++    {
++      Standard_Real aParRat = MaxParamRatio(aPars);
++      if (aParRat > aCritParRat)
++        aParType = Approx_Centripetal;
++    }
++  }
++
++  return aParType;
++}
+diff --git a/src/ApproxInt/ApproxInt_KnotTools.hxx b/src/ApproxInt/ApproxInt_KnotTools.hxx
+index 06ede31915..b54e81e219 100644
+--- a/src/ApproxInt/ApproxInt_KnotTools.hxx
++++ b/src/ApproxInt/ApproxInt_KnotTools.hxx
+@@ -35,12 +35,15 @@
+ #include <TColgp_Array1OfPnt.hxx>
+ #include <TColStd_Array1OfReal.hxx>
+ #include <NCollection_LocalArray.hxx>
++#include <Approx_ParametrizationType.hxx>
+ 
+ class math_Vector;
+ template <class A> class NCollection_Sequence;
+ template <class A> class NCollection_List;
+ template <class A> class NCollection_Vector;
+ 
++class IntPatch_WLine;
++
+ // Corresponds for debug information output.
+ // Debug information is also printed when OCCT_DEBUG defined.
+ //#define APPROXINT_KNOTTOOLS_DEBUG
+@@ -81,6 +84,22 @@ public:
+                                          const Standard_Integer theMinNbPnts,
+                                          NCollection_Vector<Standard_Integer>& theKnots);
+ 
++  //! Builds discrete curvature
++  Standard_EXPORT static void BuildCurvature(
++    const NCollection_LocalArray<Standard_Real>& theCoords,
++    const Standard_Integer theDim,
++    const math_Vector& thePars,
++    TColStd_Array1OfReal& theCurv,
++    Standard_Real& theMaxCurv);
++
++  //! Defines preferable parametrization type for theWL 
++  Standard_EXPORT static Approx_ParametrizationType DefineParType(const Handle(IntPatch_WLine)& theWL,
++    const Standard_Integer theFpar, const Standard_Integer theLpar,
++    const Standard_Boolean theApproxXYZ,
++    const Standard_Boolean theApproxU1V1,
++    const Standard_Boolean theApproxU2V2);
++
++
+ private:
+ 
+   //! Compute indices of knots:
+diff --git a/src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx b/src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx
+index 4dff51109f..a1c7d2b0e5 100644
+--- a/src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx
++++ b/src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx
+@@ -278,6 +278,35 @@ void BOPAlgo_PaveFiller::PerformFF(const Message_ProgressRange& theRange)
+   // Post-processing options
+   Standard_Boolean bSplitCurve = Standard_False;
+   //
++  // Collect all pairs of Edge/Edge interferences to check if
++  // some faces have to be moved to obtain more precise intersection
++  NCollection_DataMap<BOPDS_Pair, TColStd_ListOfInteger, BOPDS_PairMapHasher> aEEMap;
++  const BOPDS_VectorOfInterfEE& aVEEs = myDS->InterfEE();
++  for (Standard_Integer iEE = 0; iEE < aVEEs.Size(); ++iEE)
++  {
++    const BOPDS_Interf& aEE = aVEEs(iEE);
++    if (!aEE.HasIndexNew())
++    {
++      continue;
++    }
++    Standard_Integer nE1, nE2;
++    aEE.Indices(nE1, nE2);
++
++    const Standard_Integer nVN = aEE.IndexNew();
++
++    BOPDS_Pair aPair(nE1, nE2);
++    TColStd_ListOfInteger* pPoints = aEEMap.ChangeSeek(aPair);
++    if (pPoints)
++    {
++      pPoints->Append(nVN);
++    }
++    else
++    {
++      pPoints = aEEMap.Bound(BOPDS_Pair(nE1, nE2), TColStd_ListOfInteger());
++      pPoints->Append(nVN);
++    }
++  }
++
+   // Prepare the pairs of faces for intersection
+   BOPAlgo_VectorOfFaceFace aVFaceFace;
+   myIterator->Initialize(TopAbs_FACE, TopAbs_FACE);
+@@ -306,15 +335,87 @@ void BOPAlgo_PaveFiller::PerformFF(const Message_ProgressRange& theRange)
+           continue;
+         }
+       }
++
++      // Check if there is an intersection between edges of the faces. 
++      // If there is an intersection, check if there is a shift between the edges
++      // (intersection point is on some distance from the edges), and move one of 
++      // the faces to the point of exact edges intersection. This should allow 
++      // obtaining more precise intersection curves between the faces 
++      // (at least the curves should reach the boundary). 
++      // Note, that currently this check considers only closed edges (seam edges).
++      TopoDS_Face aFShifted1 = aF1, aFShifted2 = aF2;
++      // Keep shift value to use it as the tolerance for intersection curves
++      Standard_Real aShiftValue = 0.;
++
++      if (aBAS1.GetType() != GeomAbs_Plane ||
++        aBAS2.GetType() != GeomAbs_Plane) {
++
++        Standard_Boolean isFound = Standard_False;
++        for (TopExp_Explorer aExp1(aF1, TopAbs_EDGE); !isFound && aExp1.More(); aExp1.Next())
++        {
++          const TopoDS_Edge& aE1 = TopoDS::Edge(aExp1.Current());
++          const Standard_Integer nE1 = myDS->Index(aE1);
++
++          for (TopExp_Explorer aExp2(aF2, TopAbs_EDGE); !isFound && aExp2.More(); aExp2.Next())
++          {
++            const TopoDS_Edge& aE2 = TopoDS::Edge(aExp2.Current());
++            const Standard_Integer nE2 = myDS->Index(aE2);
++
++            Standard_Boolean bIsClosed1 = BRep_Tool::IsClosed(aE1, aF1);
++            Standard_Boolean bIsClosed2 = BRep_Tool::IsClosed(aE2, aF2);
++            if (!bIsClosed1 && !bIsClosed2)
++            {
++              continue;
++            }
++
++            const TColStd_ListOfInteger* pPoints = aEEMap.Seek(BOPDS_Pair(nE1, nE2));
++            if (!pPoints)
++            {
++              continue;
++            }
++
++            for (TColStd_ListOfInteger::Iterator itEEP(*pPoints); itEEP.More(); itEEP.Next())
++            {
++              const Standard_Integer& nVN = itEEP.Value();
++              const TopoDS_Vertex& aVN = TopoDS::Vertex(myDS->Shape(nVN));
++              const gp_Pnt& aPnt = BRep_Tool::Pnt(aVN);
++
++              // Compute points exactly on the edges 
++              GeomAPI_ProjectPointOnCurve& aProjPC1 = myContext->ProjPC(aE1);
++              GeomAPI_ProjectPointOnCurve& aProjPC2 = myContext->ProjPC(aE2);
++              aProjPC1.Perform(aPnt);
++              aProjPC2.Perform(aPnt);
++              if (!aProjPC1.NbPoints() && !aProjPC2.NbPoints())
++              {
++                continue;
++              }
++              gp_Pnt aP1 = aProjPC1.NbPoints() > 0 ? aProjPC1.NearestPoint() : aPnt;
++              gp_Pnt aP2 = aProjPC2.NbPoints() > 0 ? aProjPC2.NearestPoint() : aPnt;
++
++              Standard_Real aShiftDist = aP1.Distance(aP2);
++              if (aShiftDist > BRep_Tool::Tolerance(aVN))
++              {
++                // Move one of the faces to the point of exact intersection of edges
++                gp_Trsf aTrsf;
++                aTrsf.SetTranslation(bIsClosed1 ? gp_Vec(aP1, aP2) : gp_Vec(aP2, aP1));
++                TopLoc_Location aLoc(aTrsf);
++                (bIsClosed1 ? &aFShifted1 : &aFShifted2)->Move(aLoc);
++                aShiftValue = aShiftDist;
++                isFound = Standard_True;
++              }
++            }
++          }
++        }
++      }
+       //
+       BOPAlgo_FaceFace& aFaceFace=aVFaceFace.Appended();
+       //
+       aFaceFace.SetRunParallel (myRunParallel);
+       aFaceFace.SetIndices(nF1, nF2);
+-      aFaceFace.SetFaces(aF1, aF2);
++      aFaceFace.SetFaces(aFShifted1, aFShifted2);
+       aFaceFace.SetBoxes (myDS->ShapeInfo (nF1).Box(), myDS->ShapeInfo (nF2).Box());
+-      // compute minimal tolerance for the curves
+-      Standard_Real aTolFF = ToleranceFF(aBAS1, aBAS2);
++      // Note: in case of faces with closed edges it should not be less than value of the shift
++      Standard_Real aTolFF = Max(aShiftValue, ToleranceFF(aBAS1, aBAS2));
+       aFaceFace.SetTolFF(aTolFF);
+       //
+       IntSurf_ListOfPntOn2S aListOfPnts;
+diff --git a/src/BRepApprox/BRepApprox_Approx.hxx b/src/BRepApprox/BRepApprox_Approx.hxx
+index 87c91f00a9..f657cea66e 100644
+--- a/src/BRepApprox/BRepApprox_Approx.hxx
++++ b/src/BRepApprox/BRepApprox_Approx.hxx
+@@ -105,6 +105,11 @@ public:
+   
+   Standard_EXPORT const AppParCurves_MultiBSpCurve& Value (const Standard_Integer Index) const;
+ 
++  Standard_EXPORT static void Parameters(const BRepApprox_TheMultiLineOfApprox& Line,
++    const Standard_Integer firstP,
++    const Standard_Integer lastP,
++    const Approx_ParametrizationType Par,
++    math_Vector& TheParameters);
+ 
+ 
+ 
+diff --git a/src/GeomInt/GeomInt_IntSS.cxx b/src/GeomInt/GeomInt_IntSS.cxx
+index d78024a950..1417ab4cf5 100644
+--- a/src/GeomInt/GeomInt_IntSS.cxx
++++ b/src/GeomInt/GeomInt_IntSS.cxx
+@@ -18,6 +18,7 @@
+ 
+ #include <Adaptor3d_TopolTool.hxx>
+ #include <GeomAdaptor_Surface.hxx>
++#include <Extrema_ExtPS.hxx>
+ 
+ //=======================================================================
+ //function : Perform
+@@ -82,7 +83,7 @@ void GeomInt_IntSS::Perform(const Handle(Geom_Surface)& S1,
+ 
+   Standard_Real TolArc = Tol;
+   Standard_Real TolTang = Tol;
+-  Standard_Real UVMaxStep = 0.001;
++  Standard_Real UVMaxStep = IntPatch_Intersection::DefineUVMaxStep(myHS1, dom1, myHS2, dom2);
+   Standard_Real Deflection = 0.1;
+ 
+   myIntersector.SetTolerances(TolArc,TolTang,UVMaxStep,Deflection);
+@@ -184,3 +185,4 @@ void GeomInt_IntSS::Perform(const Handle(Geom_Surface)& S1,
+   StdFail_NotDone_Raise_if(!myIntersector.IsDone(),"GeomInt_IntSS::LineOnS2");
+   return slineS2(Index);
+ }
++
+diff --git a/src/GeomInt/GeomInt_IntSS.hxx b/src/GeomInt/GeomInt_IntSS.hxx
+index 42201856fc..068cc69d4c 100644
+--- a/src/GeomInt/GeomInt_IntSS.hxx
++++ b/src/GeomInt/GeomInt_IntSS.hxx
+@@ -106,7 +106,6 @@ public:
+ 
+   Standard_EXPORT static Handle(Geom2d_BSplineCurve) MakeBSpline2d(const Handle(IntPatch_WLine)& theWLine, const Standard_Integer ideb, const Standard_Integer ifin, const Standard_Boolean onFirst);
+ 
+-
+ protected:
+ 
+   
+diff --git a/src/GeomInt/GeomInt_IntSS_1.cxx b/src/GeomInt/GeomInt_IntSS_1.cxx
+index 9ad1877196..d75c6cdc81 100644
+--- a/src/GeomInt/GeomInt_IntSS_1.cxx
++++ b/src/GeomInt/GeomInt_IntSS_1.cxx
+@@ -48,6 +48,7 @@
+ #include <IntRes2d_IntersectionSegment.hxx>
+ #include <IntSurf_Quadric.hxx>
+ #include <Precision.hxx>
++#include <ApproxInt_KnotTools.hxx>
+ 
+ //=======================================================================
+ //function : AdjustUPeriodic
+@@ -623,12 +624,31 @@ void GeomInt_IntSS::MakeCurve(const Standard_Integer Index,
+           ifprm = (Standard_Integer)fprm;
+           ilprm = (Standard_Integer)lprm;
+         }
+-        //-- lbr : 
+-        //-- Si une des surfaces est un plan , on approxime en 2d
+-        //-- sur cette surface et on remonte les points 2d en 3d.
++
++        Standard_Boolean anApprox = myApprox;
++        Standard_Boolean anApprox1 = myApprox1;
++        Standard_Boolean anApprox2 = myApprox2;
+         GeomAbs_SurfaceType typs1, typs2;
+         typs1 = myHS1->GetType();
+         typs2 = myHS2->GetType();
++
++        if (typs1 == GeomAbs_Plane) {
++          anApprox = Standard_False;
++          anApprox1 = Standard_True;
++        }
++        else if (typs2 == GeomAbs_Plane) {
++          anApprox = Standard_False;
++          anApprox2 = Standard_True;
++        }
++
++        Approx_ParametrizationType aParType = ApproxInt_KnotTools::DefineParType(WL, ifprm, ilprm,
++          anApprox, anApprox1, anApprox2);
++
++        theapp3d.SetParameters(myTolApprox, tol2d, 4, 8, 0, 30, myHS1 != myHS2, aParType);
++
++        //-- lbr : 
++        //-- Si une des surfaces est un plan , on approxime en 2d
++        //-- sur cette surface et on remonte les points 2d en 3d.
+         //
+         if(typs1 == GeomAbs_Plane) { 
+           theapp3d.Perform(myHS1, myHS2, WL, Standard_False,
+@@ -646,12 +666,7 @@ void GeomInt_IntSS::MakeCurve(const Standard_Integer Index,
+             if ((typs1==GeomAbs_BezierSurface || typs1==GeomAbs_BSplineSurface) &&
+               (typs2==GeomAbs_BezierSurface || typs2==GeomAbs_BSplineSurface)) {
+ 
+-                theapp3d.SetParameters(myTolApprox, tol2d, 4, 8, 0, 30, Standard_True);
+-                //Standard_Boolean bUseSurfaces;
+-                //bUseSurfaces=NotUseSurfacesForApprox(myFace1, myFace2, WL, ifprm,  ilprm);
+-                //if (bUseSurfaces) {
+-                //theapp3d.SetParameters(myTolApprox, tol2d, 4, 8, 0, Standard_False);
+-                //}
++               theapp3d.SetParameters(myTolApprox, tol2d, 4, 8, 0, 30, Standard_True, aParType);
+             }
+           }
+           //
+diff --git a/src/GeomInt/GeomInt_WLApprox.hxx b/src/GeomInt/GeomInt_WLApprox.hxx
+index 436c3a28b7..910fddebfe 100644
+--- a/src/GeomInt/GeomInt_WLApprox.hxx
++++ b/src/GeomInt/GeomInt_WLApprox.hxx
+@@ -96,7 +96,11 @@ public:
+   
+   Standard_EXPORT const AppParCurves_MultiBSpCurve& Value (const Standard_Integer Index) const;
+ 
+-
++  Standard_EXPORT static void Parameters(const GeomInt_TheMultiLineOfWLApprox& Line,
++    const Standard_Integer firstP,
++    const Standard_Integer lastP,
++    const Approx_ParametrizationType Par,
++    math_Vector& TheParameters);
+ 
+ 
+ protected:
+diff --git a/src/IntPatch/IntPatch_Intersection.cxx b/src/IntPatch/IntPatch_Intersection.cxx
+index 1ef65fe6a4..8ed58b152e 100644
+--- a/src/IntPatch/IntPatch_Intersection.cxx
++++ b/src/IntPatch/IntPatch_Intersection.cxx
+@@ -35,6 +35,7 @@
+ #include <Geom2dAdaptor_Curve.hxx>
+ #include <ProjLib.hxx>
+ 
++
+ //======================================================================
+ // function: SequenceOfLine
+ //======================================================================
+@@ -125,7 +126,7 @@ void IntPatch_Intersection::SetTolerances(const Standard_Real TolArc,
+   if(myTolArc>0.5) myTolArc=0.5;
+   if(myTolTang>0.5) myTolTang=0.5;  
+   if(myFleche<1.0e-3) myFleche=1e-3;
+-  if(myUVMaxStep<1.0e-3) myUVMaxStep=1e-3;
++  //if(myUVMaxStep<1.0e-3) myUVMaxStep=1e-3;
+   if(myFleche>10) myFleche=10;
+   if(myUVMaxStep>0.5) myUVMaxStep=0.5;
+ }
+@@ -1023,7 +1024,6 @@ void IntPatch_Intersection::Perform(const Handle(Adaptor3d_Surface)&  theS1,
+     myFleche = 0.01;
+   if(myUVMaxStep <= Precision::PConfusion())
+     myUVMaxStep = 0.01;
+-    
+   done = Standard_False;
+   spnt.Clear();
+   slin.Clear();
+@@ -1254,15 +1254,16 @@ void IntPatch_Intersection::ParamParamPerfom(const Handle(Adaptor3d_Surface)&  t
+                                              const GeomAbs_SurfaceType typs2)
+ {
+   IntPatch_PrmPrmIntersection interpp;
++  //
+   if(!theD1->DomainIsInfinite() && !theD2->DomainIsInfinite())
+   {
+     Standard_Boolean ClearFlag = Standard_True;
+     if(!ListOfPnts.IsEmpty())
+     {
+-      interpp.Perform(theS1,theD1,theS2,theD2,TolTang,TolArc,myFleche,myUVMaxStep, ListOfPnts);
++      interpp.Perform(theS1,theD1,theS2,theD2,TolTang,TolArc,myFleche, myUVMaxStep, ListOfPnts);
+       ClearFlag = Standard_False;
+     }
+-    interpp.Perform(theS1,theD1,theS2,theD2,TolTang,TolArc,myFleche,myUVMaxStep,ClearFlag);
++    interpp.Perform(theS1,theD1,theS2,theD2,TolTang,TolArc,myFleche, myUVMaxStep,ClearFlag);
+   }
+   else if((theD1->DomainIsInfinite()) ^ (theD2->DomainIsInfinite()))
+   {
+@@ -1275,7 +1276,7 @@ void IntPatch_Intersection::ParamParamPerfom(const Handle(Adaptor3d_Surface)&  t
+       const Standard_Real AP = Max(MU, MV);
+       Handle(Adaptor3d_Surface) SS;
+       FUN_TrimInfSurf(pMinXYZ, pMaxXYZ, theS1, AP, SS);
+-      interpp.Perform(SS,theD1,theS2,theD2,TolTang,TolArc,myFleche,myUVMaxStep);
++      interpp.Perform(SS,theD1,theS2,theD2,TolTang,TolArc,myFleche, myUVMaxStep);
+     }
+     else
+     {
+@@ -1285,7 +1286,7 @@ void IntPatch_Intersection::ParamParamPerfom(const Handle(Adaptor3d_Surface)&  t
+       const Standard_Real AP = Max(MU, MV);
+       Handle(Adaptor3d_Surface) SS;
+       FUN_TrimInfSurf(pMinXYZ, pMaxXYZ, theS2, AP, SS);
+-      interpp.Perform(theS1, theD1, SS, theD2,TolTang, TolArc,myFleche,myUVMaxStep);
++      interpp.Perform(theS1, theD1, SS, theD2,TolTang, TolArc,myFleche, myUVMaxStep);
+     }
+   }//(theD1->DomainIsInfinite()) ^ (theD2->DomainIsInfinite())
+   else
+@@ -1324,7 +1325,7 @@ void IntPatch_Intersection::ParamParamPerfom(const Handle(Adaptor3d_Surface)&  t
+       Handle(Adaptor3d_Surface) nS1 = theS1;
+       Handle(Adaptor3d_Surface) nS2 = theS2;
+       FUN_TrimBothSurf(theS1,typs1,theS2,typs2,1.e+8,nS1,nS2);
+-      interpp.Perform(nS1,theD1,nS2,theD2,TolTang,TolArc,myFleche,myUVMaxStep);
++      interpp.Perform(nS1,theD1,nS2,theD2,TolTang,TolArc,myFleche, myUVMaxStep);
+     }// 'NON - COLLINEAR LINES'
+   }// both domains are infinite
+ 
+@@ -1791,3 +1792,134 @@ void IntPatch_Intersection::Dump(const Standard_Integer /*Mode*/,
+ 
+ #endif 
+ }
++
++//=======================================================================
++//function : CheckSingularPoints
++//purpose  : 
++//=======================================================================
++Standard_Boolean IntPatch_Intersection::CheckSingularPoints(
++  const Handle(Adaptor3d_Surface)&  theS1,
++  const Handle(Adaptor3d_TopolTool)& theD1,
++  const Handle(Adaptor3d_Surface)&  theS2,
++  Standard_Real& theDist)
++{
++  theDist = Precision::Infinite();
++  Standard_Boolean isSingular = Standard_False;
++  if (theS1 == theS2)
++  {
++    return isSingular;
++  }
++  //
++  const Standard_Integer aNbBndPnts = 5;
++  const Standard_Real aTol = Precision::Confusion();
++  Standard_Integer i;
++  theD1->Init();
++  Standard_Boolean isU = Standard_True;
++  for (; theD1->More(); theD1->Next())
++  {
++    Handle(Adaptor2d_Curve2d) aBnd = theD1->Value();
++    Standard_Real pinf = aBnd->FirstParameter(), psup = aBnd->LastParameter();
++    if (Precision::IsNegativeInfinite(pinf) || Precision::IsPositiveInfinite(psup))
++    {
++      continue;
++    }
++    Standard_Real t, dt = (psup - pinf) / (aNbBndPnts - 1);
++    gp_Pnt2d aP1;
++    gp_Vec2d aDir;
++    aBnd->D1((pinf + psup) / 2., aP1, aDir);
++    if (Abs(aDir.X()) > Abs(aDir.Y()))
++      isU = Standard_True;
++    else
++      isU = Standard_False;
++    gp_Pnt aPP1;
++    gp_Vec aDU, aDV;
++    Standard_Real aD1NormMax = 0.;
++    gp_XYZ aPmid(0., 0., 0.);
++    Standard_Integer aNb = 0;
++    for (t = pinf; t <= psup; t += dt)
++    {
++      aP1 = aBnd->Value(t);
++      theS1->D1(aP1.X(), aP1.Y(), aPP1, aDU, aDV);
++      if (isU)
++        aD1NormMax = Max(aD1NormMax, aDU.Magnitude());
++      else
++        aD1NormMax = Max(aD1NormMax, aDV.Magnitude());
++
++      aPmid += aPP1.XYZ();
++      aNb++;
++
++      if (aD1NormMax > aTol)
++        break;
++    }
++
++    if (aD1NormMax <= aTol)
++    {
++      //Singular point aPP1;
++      aPmid /= aNb;
++      aPP1.SetXYZ(aPmid);
++      Standard_Real aTolU = Precision::PConfusion(), aTolV = Precision::PConfusion();
++      Extrema_ExtPS aProj(aPP1, *theS2.get(), aTolU, aTolV, Extrema_ExtFlag_MIN);
++
++      if (aProj.IsDone())
++      {
++        Standard_Integer aNbExt = aProj.NbExt();
++        for (i = 1; i <= aNbExt; ++i)
++        {
++          theDist = Min(theDist, aProj.SquareDistance(i));
++        }
++      }
++
++    }
++  }
++  if (!Precision::IsInfinite(theDist))
++  {
++    theDist = Sqrt(theDist);
++    isSingular = Standard_True;
++  }
++
++  return isSingular;
++
++}
++//=======================================================================
++//function : DefineUVMaxStep
++//purpose  : 
++//=======================================================================
++Standard_Real IntPatch_Intersection::DefineUVMaxStep(
++  const Handle(Adaptor3d_Surface)&  theS1,
++  const Handle(Adaptor3d_TopolTool)& theD1,
++  const Handle(Adaptor3d_Surface)&  theS2,
++  const Handle(Adaptor3d_TopolTool)& theD2)
++{
++  Standard_Real anUVMaxStep = 0.001;
++  Standard_Real aDistToSing1 = Precision::Infinite();
++  Standard_Real aDistToSing2 = Precision::Infinite();
++  const Standard_Real aTolMin = Precision::Confusion(), aTolMax = 1.e-5;
++  if (theS1 != theS2)
++  {
++    Standard_Boolean isSing1 = CheckSingularPoints(theS1, theD1, theS2, aDistToSing1);
++    if (isSing1)
++    {
++      if (aDistToSing1 > aTolMin && aDistToSing1 < aTolMax)
++      {
++        anUVMaxStep = 0.0001;
++      }
++      else
++      {
++        isSing1 = Standard_False;
++      }
++    }
++    if (!isSing1)
++    {
++      Standard_Boolean isSing2 = CheckSingularPoints(theS2, theD2, theS1, aDistToSing2);
++      if (isSing2)
++      {
++        if (aDistToSing2 > aTolMin && aDistToSing2 < aTolMax)
++        {
++          anUVMaxStep = 0.0001;
++        }
++      }
++    }
++  }
++  return anUVMaxStep;
++}
++
+diff --git a/src/IntPatch/IntPatch_Intersection.hxx b/src/IntPatch/IntPatch_Intersection.hxx
+index b73cbdaae2..42661743c7 100644
+--- a/src/IntPatch/IntPatch_Intersection.hxx
++++ b/src/IntPatch/IntPatch_Intersection.hxx
+@@ -133,7 +133,21 @@ public:
+   //! Mode for more accurate dumps.
+   Standard_EXPORT void Dump (const Standard_Integer Mode, const Handle(Adaptor3d_Surface)& S1, const Handle(Adaptor3d_TopolTool)& D1, const Handle(Adaptor3d_Surface)& S2, const Handle(Adaptor3d_TopolTool)& D2) const;
+ 
+-
++  //! Checks if surface theS1 has degenerated boundary (dS/du or dS/dv = 0) and
++  //! calculates minimal distance between corresponding singular points and surface theS2
++  //! If singular point exists the method returns "true" and stores minimal distance in theDist.
++  Standard_EXPORT static Standard_Boolean CheckSingularPoints(
++    const Handle(Adaptor3d_Surface)&  theS1,
++    const Handle(Adaptor3d_TopolTool)& theD1,
++    const Handle(Adaptor3d_Surface)&  theS2,
++    Standard_Real& theDist);
++
++  //! Calculates recommended value for myUVMaxStep depending on surfaces and their domains
++  Standard_EXPORT static Standard_Real DefineUVMaxStep(
++    const Handle(Adaptor3d_Surface)&  theS1,
++    const Handle(Adaptor3d_TopolTool)& theD1,
++    const Handle(Adaptor3d_Surface)&  theS2,
++    const Handle(Adaptor3d_TopolTool)& theD2);
+ 
+ 
+ protected:
+diff --git a/src/IntPatch/IntPatch_PrmPrmIntersection.cxx b/src/IntPatch/IntPatch_PrmPrmIntersection.cxx
+index 3b328c07e6..a96f662f7c 100644
+--- a/src/IntPatch/IntPatch_PrmPrmIntersection.cxx
++++ b/src/IntPatch/IntPatch_PrmPrmIntersection.cxx
+@@ -2386,6 +2386,9 @@ void IntPatch_PrmPrmIntersection::Perform (const Handle(Adaptor3d_Surface)& Surf
+                     //Try to extend the intersection line to the boundary,
+                     //if it is possibly
+                     PW.PutToBoundary(Surf1, Surf2);
++                    //
++                    if (PW.NbPoints() < 3)
++                      continue;
+ 
+                     const Standard_Integer aMinNbPoints = 40;
+                     if(PW.NbPoints() < aMinNbPoints)
+diff --git a/src/IntPatch/IntPatch_RstInt.cxx b/src/IntPatch/IntPatch_RstInt.cxx
+index c40fd552f3..6c16d7162f 100644
+--- a/src/IntPatch/IntPatch_RstInt.cxx
++++ b/src/IntPatch/IntPatch_RstInt.cxx
+@@ -649,8 +649,11 @@ void IntPatch_RstInt::PutVertexOnLine (const Handle(IntPatch_Line)& L,
+             IntCS.ParameterOnSurface(U2,V2);
+             gp_Pnt anOldPnt, aNewPnt;
+             OtherSurf->D0(U,V, anOldPnt);
+-            OtherSurf->D0(U2,V2, aNewPnt);
+-            if (anOldPnt.SquareDistance(aNewPnt) < Precision::SquareConfusion())
++            OtherSurf->D0(U2,V2, aNewPnt);          
++            //if (anOldPnt.SquareDistance(aNewPnt) < Precision::SquareConfusion())
++            Standard_Real aTolConf = Max(Precision::Confusion(), edgeTol);
++
++            if (anOldPnt.SquareDistance(aNewPnt) < aTolConf * aTolConf)
+             {
+               U2 = U;
+               V2 = V;
+diff --git a/src/IntTools/IntTools_FaceFace.cxx b/src/IntTools/IntTools_FaceFace.cxx
+index b2e680f7a6..181d9d47a5 100644
+--- a/src/IntTools/IntTools_FaceFace.cxx
++++ b/src/IntTools/IntTools_FaceFace.cxx
+@@ -55,6 +55,7 @@
+ #include <TopoDS.hxx>
+ #include <TopoDS_Edge.hxx>
+ #include <gp_Elips.hxx>
++#include <ApproxInt_KnotTools.hxx>
+ 
+ static 
+   void Parameters(const Handle(GeomAdaptor_Surface)&,
+@@ -502,7 +503,7 @@ void IntTools_FaceFace::Perform (const TopoDS_Face& aF1,
+   Tolerances(myHS1, myHS2, TolTang);
+ 
+   {
+-    const Standard_Real UVMaxStep = 0.001;
++    const Standard_Real UVMaxStep = IntPatch_Intersection::DefineUVMaxStep(myHS1, dom1, myHS2, dom2);
+     const Standard_Real Deflection = 0.1;
+     myIntersector.SetTolerances(TolArc, TolTang, UVMaxStep, Deflection); 
+   }
+@@ -1164,22 +1165,6 @@ void IntTools_FaceFace::MakeCurve(const Standard_Integer Index,
+         tol2d = myTolApprox;
+       }
+         
+-      if(myHS1 == myHS2) { 
+-        theapp3d.SetParameters(myTolApprox, tol2d, 4, 8, 0, 30, Standard_False, aParType);
+-        rejectSurface = Standard_True;
+-      }
+-      else { 
+-        if(reApprox && !rejectSurface)
+-          theapp3d.SetParameters(myTolApprox, tol2d, 4, 8, 0, 30, Standard_False, aParType);
+-        else {
+-          Standard_Integer iDegMax, iDegMin, iNbIter;
+-          //
+-          ApproxParameters(myHS1, myHS2, iDegMin, iDegMax, iNbIter);
+-          theapp3d.SetParameters(myTolApprox, tol2d, iDegMin, iDegMax,
+-                                                  iNbIter, 30, Standard_True, aParType);
+-        }
+-      }
+-      //
+       Standard_Real aReachedTol = Precision::Confusion();
+       bIsDecomposited = IntTools_WLineTool::
+         DecompositionOfWLine(WL,
+@@ -1227,6 +1212,35 @@ void IntTools_FaceFace::MakeCurve(const Standard_Integer Index,
+             ilprm = (Standard_Integer)lprm;
+           }
+         }
++
++        Standard_Boolean anApprox = myApprox;
++        if (typs1 == GeomAbs_Plane) {
++          anApprox = Standard_False;
++          anApprox1 = Standard_True;
++        }
++        else if (typs2 == GeomAbs_Plane) {
++          anApprox = Standard_False;
++          anApprox2 = Standard_True;
++        }
++
++        aParType = ApproxInt_KnotTools::DefineParType(WL, ifprm, ilprm, 
++                                                   anApprox, anApprox1, anApprox2);
++        if (myHS1 == myHS2) {
++          theapp3d.SetParameters(myTolApprox, tol2d, 4, 8, 0, 30, Standard_False, aParType);
++          rejectSurface = Standard_True;
++        }
++        else {
++          if (reApprox && !rejectSurface)
++            theapp3d.SetParameters(myTolApprox, tol2d, 4, 8, 0, 30, Standard_False, aParType);
++          else {
++            Standard_Integer iDegMax, iDegMin, iNbIter;
++            //
++            ApproxParameters(myHS1, myHS2, iDegMin, iDegMax, iNbIter);
++            theapp3d.SetParameters(myTolApprox, tol2d, iDegMin, iDegMax,
++              iNbIter, 30, Standard_True, aParType);
++          }
++        }
++
+         //-- lbr : 
+         //-- Si une des surfaces est un plan , on approxime en 2d
+         //-- sur cette surface et on remonte les points 2d en 3d.
+@@ -1892,6 +1906,7 @@ Handle(Geom_Curve) MakeBSpline  (const Handle(IntPatch_WLine)& WL,
+     enlarge=Standard_True;
+   }
+   //
++
+   if(!isuperiodic && enlarge) {
+ 
+     if(!Precision::IsInfinite(theumin) &&
+@@ -1907,6 +1922,7 @@ Handle(Geom_Curve) MakeBSpline  (const Handle(IntPatch_WLine)& WL,
+     else
+       theumax = usup;
+   }
++
+   //
+   if(!isvperiodic && enlarge) {
+     if(!Precision::IsInfinite(thevmin) &&
+@@ -1924,6 +1940,7 @@ Handle(Geom_Curve) MakeBSpline  (const Handle(IntPatch_WLine)& WL,
+       thevmax = vsup;
+     }
+   }
++
+   //
+   if(isuperiodic || isvperiodic) {
+     Standard_Boolean correct = Standard_False;
+diff --git a/src/IntWalk/IntWalk_PWalking.cxx b/src/IntWalk/IntWalk_PWalking.cxx
+index e9f1efade3..464e42f876 100644
+--- a/src/IntWalk/IntWalk_PWalking.cxx
++++ b/src/IntWalk/IntWalk_PWalking.cxx
+@@ -2316,10 +2316,65 @@ Standard_Boolean IntWalk_PWalking::HandleSingleSingularPoint(const Handle(Adapto
+       if (anInt.IsEmpty())
+         continue;
+ 
+-      anInt.Point().Parameters(thePnt(1), thePnt(2), thePnt(3), thePnt(4));
+-
++      Standard_Real aPars[4];
++      anInt.Point().Parameters(aPars[0], aPars[1], aPars[2], aPars[3]);
++      Handle(Adaptor3d_Surface) aSurfs[2] = { theASurf1, theASurf2 };
++      //Local resolutions
++      Standard_Real aTol2 = the3DTol * the3DTol;
++      gp_Pnt aP;
++      gp_Vec aDU, aDV;
++      gp_Pnt aPInt;
++      Standard_Integer k;
++      for (k = 0; k < 2; ++k)
++      {
++        Standard_Integer iu, iv;
++        iu = 2*k;
++        iv = iu + 1;
++        aSurfs[k]->D1(aPars[iu], aPars[iv], aPInt, aDU, aDV);
++        Standard_Real aMod = aDU.Magnitude();
++        if (aMod > Precision::Confusion())
++        {
++          Standard_Real aTolU = the3DTol / aMod;
++          if (Abs(aLowBorder[iu] - aPars[iu]) < aTolU)
++          {
++            aP = aSurfs[k]->Value(aLowBorder[iu], aPars[iv]);
++            if (aPInt.SquareDistance(aP) < aTol2)
++              aPars[iu] = aLowBorder[iu];
++          }
++          else if (Abs(aUppBorder[iu] - aPars[iu]) < aTolU)
++          {
++            aP = aSurfs[k]->Value(aUppBorder[iu], aPars[iv]);
++            if (aPInt.SquareDistance(aP) < aTol2)
++              aPars[iu] = aUppBorder[iu];
++          }
++        }
++        aMod = aDV.Magnitude();
++        if (aMod > Precision::Confusion())
++        {
++          Standard_Real aTolV = the3DTol / aMod;
++          if (Abs(aLowBorder[iv] - aPars[iv]) < aTolV)
++          {
++            aP = aSurfs[k]->Value(aPars[iu], aLowBorder[iv]);
++            if (aPInt.SquareDistance(aP) < aTol2)
++              aPars[iv] = aLowBorder[iv];
++          }
++          else if (Abs(aUppBorder[iv] - aPars[iv]) < aTolV)
++          {
++            aP = aSurfs[k]->Value(aPars[iu], aUppBorder[iv]);
++            if (aPInt.SquareDistance(aP) < aTol2)
++              aPars[iv] = aUppBorder[iv];
++          }
++        }
++      }
++      //
++      //
++      Standard_Integer j;
++      for (j = 1; j <= 4; ++j)
++      {
++        thePnt(j) = aPars[j - 1];
++      }
+       Standard_Boolean isInDomain = Standard_True;
+-      for (Standard_Integer j = 1; isInDomain && (j <= 4); ++j)
++      for (j = 1; isInDomain && (j <= 4); ++j)
+       {
+         if ((thePnt(j) - aLowBorder[j - 1] + Precision::PConfusion())*
+             (thePnt(j) - aUppBorder[j - 1] - Precision::PConfusion()) > 0.0)
+@@ -2461,13 +2516,13 @@ Standard_Boolean IntWalk_PWalking::
+         {
+           break;
+         }
+-        else if (aPInd == 1)
+-        {
+-          // After insertion, we will obtain
+-          // two coincident points in the line.
+-          // Therefore, insertion is forbidden.
+-          return isOK;
+-        }
++        //else if (aPInd == 1)
++        //{
++        //  // After insertion, we will obtain
++        //  // two coincident points in the line.
++        //  // Therefore, insertion is forbidden.
++        //  return isOK;
++        //}
+       }
+ 
+       for (++aPInd; aPInd <= aNbPnts; aPInd++)
+@@ -2493,6 +2548,12 @@ Standard_Boolean IntWalk_PWalking::
+       RemoveAPoint(1);
+     }
+ 
++    aP1.SetXYZ(line->Value(1).Value().XYZ());
++    if (aP1.SquareDistance(aPInt) <= Precision::SquareConfusion())
++    {
++      RemoveAPoint(1);
++    }
++
+     line->InsertBefore(1, anIP);
+     isOK = Standard_True;
+   }
+@@ -2511,13 +2572,13 @@ Standard_Boolean IntWalk_PWalking::
+         {
+           break;
+         }
+-        else if (aPInd == aNbPnts)
+-        {
+-          // After insertion, we will obtain
+-          // two coincident points in the line.
+-          // Therefore, insertion is forbidden.
+-          return isOK;
+-        }
++        //else if (aPInd == aNbPnts)
++        //{
++        //  // After insertion, we will obtain
++        //  // two coincident points in the line.
++        //  // Therefore, insertion is forbidden.
++        //  return isOK;
++        //}
+       }
+ 
+       for (--aPInd; aPInd > 0; aPInd--)
+@@ -2543,7 +2604,14 @@ Standard_Boolean IntWalk_PWalking::
+       RemoveAPoint(aNbPnts);
+     }
+ 
++    Standard_Integer aNbPnts = line->NbPoints();
++    aP1.SetXYZ(line->Value(aNbPnts).Value().XYZ());
++    if (aP1.SquareDistance(aPInt) <= Precision::SquareConfusion())
++    {
++      RemoveAPoint(aNbPnts);
++    }
+     line->Add(anIP);
++    
+     isOK = Standard_True;
+   }
+ 
