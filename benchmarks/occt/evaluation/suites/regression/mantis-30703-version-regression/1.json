@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "mantis-30703-version-regression",
+  "version": "1",
+  "title": "mantis-30703 version regression (cylinder-m30703)",
+  "source_ids": [
+    "occt-v4-b41ccce129d0"
+  ],
+  "group_ids": [
+    "occt-boolean-intersection-v4-mantis-30703"
+  ],
+  "checkpoints": [
+    {
+      "id": "cylinder-m30703",
+      "issue_id": "mantis-30703",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/version-regressions/1/circles.cxx",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel",
+          "TKGeomAlgo"
+        ],
+        "inputs": [
+          "evaluation/cases/version-regressions/1/cylinder-m30703/fixture.txt",
+          "evaluation/cases/version-regressions/1/cylinder-m30703/healthy.brep",
+          "evaluation/cases/version-regressions/1/cylinder-m30703/negative.brep",
+          "evaluation/cases/version-regressions/1/cylinder-m30703/gap.brep"
+        ],
+        "stdout_contains": [
+          "native pass",
+          "healthy pass",
+          "negative displaced",
+          "gap incomplete",
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}

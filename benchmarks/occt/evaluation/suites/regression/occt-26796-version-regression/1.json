@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "occt-26796-version-regression",
+  "version": "1",
+  "title": "occt-26796 version regression",
+  "source_ids": [
+    "occt-single20-6435b9c7fafd"
+  ],
+  "group_ids": [
+    "occt-single20-26796"
+  ],
+  "checkpoints": [
+    {
+      "id": "split-cells",
+      "issue_id": "occt-26796",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/version-regressions/1/split-cells.cxx",
+      "timeout_seconds": 120,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel",
+          "dl"
+        ],
+        "inputs": [
+          "evaluation/cases/version-regressions/1/split-cells/healthy-1.brep",
+          "evaluation/cases/version-regressions/1/split-cells/healthy-2.brep",
+          "evaluation/cases/version-regressions/1/split-cells/missing.brep",
+          "evaluation/cases/version-regressions/1/split-cells/shift-all.brep",
+          "evaluation/cases/version-regressions/1/split-cells/shift-one.brep",
+          "evaluation/cases/version-regressions/1/split-cells/balanced.brep"
+        ],
+        "stdout_contains": [
+          "CONTROL native missing=0 misplaced=0",
+          "CONTROL healthy-1 missing=0 misplaced=0",
+          "CONTROL healthy-2 missing=0 misplaced=0",
+          "CONTROL missing missing=1 misplaced=0",
+          "CONTROL shift-all missing=0 misplaced=4",
+          "CONTROL shift-one missing=0 misplaced=1",
+          "CONTROL balanced missing=0 misplaced=2",
+          "TEST_DONE"
+        ],
+        "legacy_clang_layout": true
+      }
+    }
+  ]
+}

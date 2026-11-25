@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "occt-30082-version-regression",
+  "version": "1",
+  "title": "cylinder-branches",
+  "source_ids": [
+    "occt-ng04r-derived-fe81a63b"
+  ],
+  "group_ids": [
+    "occt-single-30082"
+  ],
+  "checkpoints": [
+    {
+      "id": "cylinder-branches",
+      "issue_id": "mantis-30082",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/version-regressions/1/cylinder-branches/check.tcl",
+      "timeout_seconds": 120,
+      "required": true
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/version-regressions/1/cylinder-branches/coverage.py",
+    "evaluation/cases/version-regressions/1/cylinder-branches/duplicate-regular-1.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/duplicate-regular-2.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/duplicate-regular-3.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/duplicate-regular-4.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/false-far-far-1.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-1-regular-1.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-1-regular-2.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-1-regular-3.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-1-regular-4.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-2-regular-1.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-2-regular-2.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-2-regular-3.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-2-regular-4.draw"
+  ]
+}

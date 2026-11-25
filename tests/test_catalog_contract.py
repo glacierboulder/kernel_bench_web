@@ -18,7 +18,7 @@ BUNDLE=ROOT/"benchmarks"/"occt"
 class CatalogContractTests(unittest.TestCase):
     def test_current_catalog_maps_legacy_tasks_and_only_public_issue_material(self):
         bundle=validate_bundle(BUNDLE)
-        self.assertEqual(bundle["counts"],{"issues":83,"groups":83,"evaluation_suites":88})
+        self.assertEqual(bundle["counts"],{"issues":83,"groups":83,"evaluation_suites":114})
         self.assertEqual(len(bundle["groups"]),83)
         self.assertIn(("NG-04R-v2","1"),bundle["groups"])
         task=public_task(bundle,bundle["groups"][("occt_boolean_group_visible_544","1")])
@@ -33,19 +33,45 @@ class CatalogContractTests(unittest.TestCase):
         suites=bundle["suites"]
         referenced={(group["evaluation_suite"]["id"],group["evaluation_suite"]["version"])
                     for group in bundle["groups"].values()}
-        # Historical B55 and the opt-in Common extensions are selectable by version.
+        # Historical B55 and the opt-in extensions are selectable by version.
         self.assertEqual(set(suites)-referenced,{
             ("occt-bf-suite-b55-27310-27773-27252-oracle-v2","1"),
+            ("occt-boolean-regression-1511c7e9","1"),
+            ("occt-544-samedomain-regression","1"),
+            ("occt-26243-version-regression","1"),
+            ("mantis-32942-version-regression","1"),
+            ("mantis-31470-version-regression","1"),
+            ("occt-33570-version-regression","1"),
+            ("occt-github-1371-version-regression","1"),
+            ("mantis-29972-version-regression","1"),
+            ("mantis-30703-version-regression","1"),
+            ("occt-27227-version-regression","1"),
+            ("occt-31835-version-regression","1"),
+            ("occt-23612-version-regression","1"),
+            ("occt-24313-version-regression","1"),
+            ("occt-25818-version-regression","1"),
+            ("occt-26796-version-regression","1"),
+            ("occt-27780-version-regression","1"),
+            ("occt-github-1163-version-regression","1"),
+            ("occt-30082-version-regression","1"),
+            ("occt-30082-ng05t-version-regression","1"),
+            ("occt-github-1702-version-regression","1"),
+            ("occt-github-1701-version-regression","1"),
+            ("occt-32929-version-regression","1"),
+            ("occt-github-1177-version-regression","1"),
+            ("occt-github-1501-version-regression","1"),
+            ("occt-github-1550-tangents-version-regression","1"),
+            ("occt-github-1738-edge8-version-regression","1"),
             ("occt-single20-28195-checks","2"),
             ("occt-single20-25542-checks","2"),
             ("occt-25237-suite","2"), ("occt-28366-suite","2")})
         self.assertIn(("occt-bf-suite-b55-27310-27773-27252-geometry-v2","1"),referenced)
         checkpoints=[checkpoint for suite in suites.values() for checkpoint in suite["checkpoints"]]
-        self.assertEqual(len(checkpoints),432)
+        self.assertEqual(len(checkpoints),458)
         self.assertTrue(all(checkpoint["required"] for checkpoint in checkpoints))
         self.assertEqual({category:sum(cp["category"]==category for cp in checkpoints)
                           for category in ("original","neighborhood","regression")},
-                         {"original":124,"neighborhood":205,"regression":103})
+                         {"original":124,"neighborhood":205,"regression":129})
         self.assertEqual(sum(len(suites[key]["checkpoints"]) for key in referenced),392)
 
     def test_extended_common_suites_are_opt_in_and_preserve_v1(self):
@@ -71,6 +97,17 @@ class CatalogContractTests(unittest.TestCase):
                     (neighborhood, "neighborhood", "public", True),
                     (regression, "regression", "public", True),
                 ])
+
+    def test_boolean_regression_reuses_the_single_qualified_z90_checkpoint(self):
+        bundle = validate_bundle(BUNDLE)
+        suite = bundle["suites"][("occt-boolean-regression-1511c7e9", "1")]
+        original = bundle["suites"][("occt-single20-28195-checks", "2")]
+        checkpoint, = suite["checkpoints"]
+        self.assertEqual(checkpoint, next(c for c in original["checkpoints"] if c["id"] == "28195-regression_z90"))
+        self.assertEqual(suite["source_ids"], ["occt-single20-1511c7e90f1a"])
+        self.assertEqual(suite["group_ids"], ["occt-single20-28195"])
+        self.assertEqual({Path(p).name for p in suite["support_files"]},
+                         {"bug28195_solidsKO.brep", "rotated_common.tcl", "z90.points", "assertions.tcl", "solid_checks.tcl"})
 
     def _copy_bundle(self):
         temporary=tempfile.TemporaryDirectory()

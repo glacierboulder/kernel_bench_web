@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1371-version-regression",
+  "version": "1",
+  "title": "occt-github-1371 version regression (rim)",
+  "source_ids": [
+    "occt801-1371-b-b8f597c67781"
+  ],
+  "group_ids": [
+    "occt-single-github-1371"
+  ],
+  "checkpoints": [
+    {
+      "id": "rim",
+      "issue_id": "occt-github-1371",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/version-regressions/1/rim.cxx",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel",
+          "TKFillet"
+        ],
+        "inputs": [
+          "evaluation/cases/version-regressions/1/rim/healthy.brep",
+          "evaluation/cases/version-regressions/1/rim/negative.brep",
+          "evaluation/cases/version-regressions/1/rim/untouched.brep"
+        ],
+        "stdout_contains": [
+          "native pass",
+          "healthy pass",
+          "wrong-rim wrong_rim",
+          "untouched uncut",
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}

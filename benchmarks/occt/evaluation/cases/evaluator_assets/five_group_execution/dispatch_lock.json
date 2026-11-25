@@ -324,6 +324,18 @@
       "origin": "neighborhood_v2",
       "suite": "occt-bf-suite-d9d310-21494-29807-31835@1"
     },
+    "evaluation/cases/version-regressions/1/cylinder-branches/check-ng05t.tcl": {
+      "checkpoint_id": "cylinder-branches",
+      "group_id": "NG-05T-v1",
+      "origin": "part1",
+      "suite": "occt-30082-ng05t-version-regression@1"
+    },
+    "evaluation/cases/version-regressions/1/cylinder-branches/check.tcl": {
+      "checkpoint_id": "cylinder-branches",
+      "group_id": "occt-single-30082",
+      "origin": "part1",
+      "suite": "occt-30082-version-regression@1"
+    },
     "issues/mantis-30082/2/public/original.tcl": {
       "checkpoint_id": "mantis-30082-original",
       "group_id": "NG-04R-v2",
@@ -518,6 +530,18 @@
     },
     "NG-05T-v1-checks@1": {
       "group_id": "NG-05T-v1",
+      "origin": "part1"
+    },
+    "occt-27780-version-regression@1": {
+      "group_id": "occt-single-27780",
+      "origin": "g3"
+    },
+    "occt-30082-ng05t-version-regression@1": {
+      "group_id": "NG-05T-v1",
+      "origin": "part1"
+    },
+    "occt-30082-version-regression@1": {
+      "group_id": "occt-single-30082",
       "origin": "part1"
     },
     "occt-bf-suite-b2613378-27780-27252-21494-v1@1": {

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "occt-github-1738-edge8-version-regression",
+  "version": "1",
+  "title": "GH-1738 edge 8 live fillet position",
+  "source_ids": ["occt801-1738-b-b8f597c67781"],
+  "group_ids": ["occt-single-github-1738"],
+  "checkpoints": [
+    {
+      "id": "fillet-edge8",
+      "issue_id": "occt-github-1738",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "case": "evaluation/cases/version-regressions/1/fillet-1738-edge8.cxx",
+      "oracle": "stdout_contains_v1",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "libraries": ["TKFillet", "TKPrim", "TKTopAlgo", "TKBRep", "TKGeomAlgo", "TKGeomBase", "TKG3d", "TKG2d", "TKMath", "TKernel"],
+        "inputs": [
+          "issues/occt-github-1738/1/public/inputs/model.brep",
+          "evaluation/cases/version-regressions/1/fillet-1738-edge8/healthy.brep",
+          "evaluation/cases/version-regressions/1/fillet-1738-edge8/wrong-edge.brep"
+        ],
+        "stdout_contains": ["LIVE_BREP edge=8 bytes=", "VERDICT live PASS", "VERDICT frozen PASS", "VERDICT wrong-edge FAIL", "TEST_DONE"]
+      }
+    }
+  ]
+}

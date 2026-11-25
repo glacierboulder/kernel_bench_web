@@ -90,8 +90,12 @@ def _execute(checkpoint: dict, *, case_root: Path, build: Path, source: Path,
     libraries=options.get("libraries",[])
     inputs=[_resolve(case_root,item) for item in options.get("inputs",[])]
     compiler=os.environ.get("BENCH_CXX","clang++-10")
-    library_dir=build/"lin64"/os.environ.get("BENCH_TOOLCHAIN_NAME","clang")/"lib"
+    legacy_layout=options.get("legacy_clang_layout",False)
+    flavor="clang" if legacy_layout else os.environ.get("BENCH_TOOLCHAIN_NAME","clang")
+    library_dir=build/"lin64"/flavor/"lib"
     include_dir=build/"include"/"opencascade"
+    if legacy_layout and not include_dir.is_dir():
+        include_dir=build/"inc"
     executable=work/(str(checkpoint["id"])+".exe")
     compile_argv=[compiler,"-std=c++17","-I",str(include_dir),"-L",str(library_dir),
                   f"-Wl,-rpath,{library_dir}",str(case),*("-l"+name for name in libraries),
@@ -99,8 +103,14 @@ def _execute(checkpoint: dict, *, case_root: Path, build: Path, source: Path,
     compiled=_run(compile_argv,cwd=work,timeout=120,cpu=110,memory_gib=4)
     if compiled["return_code"]!=0:
         return {"passed":False,"phase":"compile","result":compiled}
+    runtime_env=None
+    if legacy_layout:
+        runtime_env=os.environ.copy()
+        runtime_env["LD_LIBRARY_PATH"]=os.pathsep.join(part for part in (
+            str(library_dir), runtime_env.get("BENCH_EXTRA_LIBRARY_PATH"), runtime_env.get("LD_LIBRARY_PATH")
+        ) if part)
     tested=_run([str(executable),*(str(item) for item in inputs)],cwd=case.parent,
-                timeout=timeout,cpu=max(2,timeout-3),memory_gib=2)
+                timeout=timeout,cpu=max(2,timeout-3),memory_gib=2,env=runtime_env)
     markers=options.get("stdout_contains",["TEST_DONE"])
     passed=(tested["return_code"]==0 and not tested["timed_out"]
             and all(marker in tested["output_tail"] for marker in markers))

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "occt-31835-version-regression",
+  "version": "1",
+  "title": "occt-31835 version regression (orthogonal-cylinders)",
+  "source_ids": [
+    "occt-d9d3107d8df1"
+  ],
+  "group_ids": [
+    "occt-single-31835"
+  ],
+  "checkpoints": [
+    {
+      "id": "orthogonal-cylinders",
+      "issue_id": "occt-31835",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/version-regressions/1/orthogonal-cylinders.cxx",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel",
+          "TKGeomAlgo",
+          "dl"
+        ],
+        "inputs": [
+          "evaluation/cases/version-regressions/1/orthogonal-cylinders/healthy.brep",
+          "evaluation/cases/version-regressions/1/orthogonal-cylinders/negative.brep"
+        ],
+        "stdout_contains": [
+          "ELIGIBLE generated-r80-orthogonal",
+          "healthy pass",
+          "negative missing_third",
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}

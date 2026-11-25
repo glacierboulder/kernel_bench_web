@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "mantis-32942-version-regression",
+  "version": "1",
+  "title": "mantis-32942 version regression (half-sphere)",
+  "source_ids": [
+    "occt-v4-b84f42008b74"
+  ],
+  "group_ids": [
+    "occt-boolean-intersection-v4-mantis-32942"
+  ],
+  "checkpoints": [
+    {
+      "id": "half-sphere",
+      "issue_id": "mantis-32942",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/version-regressions/1/material.cxx",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel",
+          "TKGeomAlgo"
+        ],
+        "inputs": [
+          "evaluation/cases/version-regressions/1/half-sphere/fixture.txt",
+          "evaluation/cases/version-regressions/1/half-sphere/healthy.brep",
+          "evaluation/cases/version-regressions/1/half-sphere/negative.brep"
+        ],
+        "stdout_contains": [
+          "native pass",
+          "healthy pass",
+          "negative wrong_location",
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}

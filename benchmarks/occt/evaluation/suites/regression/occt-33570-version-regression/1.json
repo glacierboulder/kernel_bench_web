@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "occt-33570-version-regression",
+  "version": "1",
+  "title": "occt-33570 version regression (disjoint-cut)",
+  "source_ids": [
+    "occt33570-derived-381c5ec350fd-sphere-cut"
+  ],
+  "group_ids": [
+    "occt-33570-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "disjoint-cut",
+      "issue_id": "occt-33570",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/version-regressions/1/material.cxx",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel",
+          "TKGeomAlgo"
+        ],
+        "inputs": [
+          "evaluation/cases/version-regressions/1/disjoint-cut/fixture.txt",
+          "evaluation/cases/version-regressions/1/disjoint-cut/healthy.brep",
+          "evaluation/cases/version-regressions/1/disjoint-cut/negative.brep"
+        ],
+        "stdout_contains": [
+          "native pass",
+          "healthy pass",
+          "negative wrong_location",
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}
