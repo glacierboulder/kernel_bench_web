@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "id": "occt-24905-suite",
+  "version": "1",
+  "title": "斜置圆柱切割圆管时丢失部分交线",
+  "source_ids": [
+    "occt73-24905-b-5ada54fb790c"
+  ],
+  "group_ids": [
+    "occt-24905-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "24905-original",
+      "issue_id": "occt-24905",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt24905/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "24905-translated",
+      "issue_id": "occt-24905",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt24905/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "24905-alternate",
+      "issue_id": "occt-24905",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt24905/alternate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "24905-control",
+      "issue_id": "occt-24905",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt24905/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt24905/body.tcl",
+    "evaluation/cases/single20/assertions.tcl"
+  ]
+}
