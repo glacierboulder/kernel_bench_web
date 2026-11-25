@@ -1,0 +1,63 @@
+{
+  "kind": "reevaluation",
+  "protocol": "manifest-suite-v1",
+  "returncode": 0,
+  "passed": true,
+  "technical_passed": true,
+  "model_called": false,
+  "source_id": "occt73-30092-b-798a95ed9b10",
+  "source_commit": "798a95ed9b104d612e87433dc5dd7527f5a62ead",
+  "source_tree_sha256": "d403be51e1ee998a859529670411f50720f0e3c2ee265b6b40fdbc2efa89fd53",
+  "patch_sha256": "57017386149be6d273f92e9d3f5d6ac2ee34b8fecb04d4435915c2af5acf84ec",
+  "suite": {
+    "id": "occt-30092-suite",
+    "version": "1"
+  },
+  "snapshot_sha256": "1dbea9b1aec00f960063e9ff7afc392187310c4c816486791e2ce4fa86e2d4ca",
+  "evaluator_sha256": "4dbc8ed3827cf44d767b2f72868d5df0ca9a9c3aecb549d094c12e0acbc98743",
+  "checkpoints": [
+    {
+      "id": "30092-original",
+      "category": "original",
+      "status": "passed"
+    },
+    {
+      "id": "30092-translated",
+      "category": "neighborhood",
+      "status": "passed"
+    },
+    {
+      "id": "30092-alternate",
+      "category": "neighborhood",
+      "status": "passed"
+    },
+    {
+      "id": "30092-control",
+      "category": "regression",
+      "status": "passed"
+    }
+  ],
+  "category_summary": {
+    "original": {
+      "declared": 1,
+      "executed": 1,
+      "passed": 1
+    },
+    "neighborhood": {
+      "declared": 2,
+      "executed": 2,
+      "passed": 2
+    },
+    "regression": {
+      "declared": 1,
+      "executed": 1,
+      "passed": 1
+    }
+  },
+  "stages": {
+    "patch_application": "passed",
+    "configure": "passed",
+    "build": "passed"
+  },
+  "report_provided": false
+}

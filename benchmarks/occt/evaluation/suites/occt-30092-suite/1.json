@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "occt-30092-suite",
+  "version": "1",
+  "title": "布尔截线在同域顶点附近失效并产生错误长度",
+  "source_ids": [
+    "occt73-30092-b-798a95ed9b10"
+  ],
+  "group_ids": [
+    "occt-30092-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "30092-original",
+      "issue_id": "occt-30092",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt30092/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "30092-translated",
+      "issue_id": "occt-30092",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt30092/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "30092-alternate",
+      "issue_id": "occt-30092",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt30092/alternate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "30092-control",
+      "issue_id": "occt-30092",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt30092/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt30092/body.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt30092/assets/bug26795_c.brep"
+  ]
+}
