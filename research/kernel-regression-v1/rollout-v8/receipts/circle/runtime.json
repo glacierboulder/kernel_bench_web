@@ -1,0 +1,42 @@
+{
+  "source_id": "occt-v4-e6afb5398317",
+  "toolchain": "occt-v4-clang10-o0-tcl86",
+  "config": {
+    "BUILD_ADDITIONAL_TOOLKITS": "TKTopTest;DRAWEXE",
+    "BUILD_MODULE_ApplicationFramework": "OFF",
+    "BUILD_MODULE_DataExchange": "OFF",
+    "BUILD_MODULE_Draw": "OFF",
+    "BUILD_MODULE_FoundationClasses": "OFF",
+    "BUILD_MODULE_ModelingAlgorithms": "OFF",
+    "BUILD_MODULE_ModelingData": "OFF",
+    "BUILD_MODULE_Visualization": "OFF",
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_CXX_COMPILER": "/usr/bin/clang++-10",
+    "CMAKE_CXX_FLAGS_RELEASE": "-O0 -DNDEBUG"
+  },
+  "libraries": {
+    "libTKBO.so": "eab4167fb1016b1877857341eedd0e0246c3f2054bb272bed4d54ba670ca4544",
+    "libTKBRep.so": "49e0ea3b6f0ae781a9a6c72ec84fdd90eff8a7891d24bef8e3905929309303f5",
+    "libTKBool.so": "37d9210fc3de14ad375bcc53f49569008e8b1a99c6e2b50295ef3cc800fb6a9a",
+    "libTKDraw.so": "ead395c7f80b487c6c223f27ad0c8252d45ef5a860ee5fa8cfe2a8e77ae2b829",
+    "libTKFeat.so": "830b73ad3779d1cdcf76bddc1cb5fa7581b1b4f5a2b011f715d054a6e5dd9b25",
+    "libTKFillet.so": "e6ab438c5a7c7d77367f93b27dd5cfce304f63a41a34bbe7aa4fd1170fe553fb",
+    "libTKG2d.so": "50506dfbddd85cf79a1c643cba16ce7fdcb6dbb90d31b9421ea6aa74e3a73682",
+    "libTKG3d.so": "3c756a05cfa9a1a4153fb8ffad7ffd8826370686117c41c43c98f7b007afb2b8",
+    "libTKGeomAlgo.so": "64d2c96fda8ffe601f4b6d16f6d31a22f4d75411a52f968cf97d3a440a554db1",
+    "libTKGeomBase.so": "e916819dd4d1be9652a0a4c07a5d48c37c805aca64bb3ce43179e09865dd7dcf",
+    "libTKHLR.so": "c8918ebba3759eb5b7f94b474828c745b084b0e5bb5d0079d8cf2705a2502e13",
+    "libTKMath.so": "5901ba955c808951bcd4bca1f5cf6b239cb7d53ac8bc7b9af3b478496c8c6d36",
+    "libTKMesh.so": "3f49d493cc8ea8346da532b28257ffae8b566103bb16e2140418832eb553cadd",
+    "libTKOffset.so": "0e45ca5dc420c7a3af8d200a5e4fc7b123a47edd9fddc68c8f819c4c4f760ec5",
+    "libTKPrim.so": "a0a4f7d864687215d8c8ea048616ec5fc6fac9c646b2e7af74430bb51ce25a31",
+    "libTKService.so": "2b4b969f7b0f67223f8adaf7501e1fa8e997f32d908f75bc46613956883b0f09",
+    "libTKShHealing.so": "81bb9642d822673e2d41a31d0b8882a002f201ab15ca2364390da8813b35d6be",
+    "libTKTopAlgo.so": "25958e6809c4e61efa02af69e3752c21d7961fb18b53b5d723cc6ec49cf989f0",
+    "libTKTopTest.so": "34c11a6774e87612d98e7d48886d44fcf8d1e3181bf40596e86d53a665a9f81e",
+    "libTKV3d.so": "cab8c619413cc77b26812e8d111e6650d987b58d60c3ef813593c997dbcf6f97",
+    "libTKernel.so": "4b6f28440af888c41d316c2e1e4dcc469e1ecb332818796e7e0f7c3d55bbbdf4"
+  },
+  "cache_sha256": "5984b4a6771c42fb1a975a695e94601f2590831e1a822afcc54eb13a43653738",
+  "compiler": "clang version 10.0.0-4ubuntu1 "
+}

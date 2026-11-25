@@ -1,0 +1,18 @@
+{
+  "suite": "occt-github-1550-tangents-version-regression@1",
+  "checkpoint": "coons-d1u-d1v",
+  "status": "passed",
+  "passed": true,
+  "compile": {
+    "return_code": 0,
+    "elapsed_seconds": 0.505,
+    "output_tail": "",
+    "timed_out": false
+  },
+  "result": {
+    "return_code": 0,
+    "elapsed_seconds": 0.003,
+    "output_tail": "CONTROL rectangle native good_u=25 good_v=25 max_u=3.5108334685767012e-16 max_v=2.2204460492503131e-16 verdict=PASS\nCONTROL rectangle swap good_u=0 good_v=0 max_u=1.4142135623730951 max_v=1.4142135623730951 verdict=FAIL\nCONTROL rectangle reverse-u good_u=0 good_v=25 max_u=2 max_v=2.2204460492503131e-16 verdict=FAIL\nCONTROL rectangle reverse-v good_u=25 good_v=0 max_u=3.5108334685767012e-16 max_v=2 verdict=FAIL\nCONTROL bilinear native good_u=25 good_v=25 max_u=6.8554084551406081e-13 max_v=6.8554084551406081e-13 verdict=PASS\nCONTROL bilinear swap good_u=0 good_v=0 max_u=14.696938456699069 max_v=14.696938456699337 verdict=FAIL\nCONTROL bilinear reverse-u good_u=0 good_v=25 max_u=20.396078054371511 max_v=6.8554084551406081e-13 verdict=FAIL\nCONTROL bilinear reverse-v good_u=25 good_v=0 max_u=6.8554084551406081e-13 max_v=20.396078054371511 verdict=FAIL\nTEST_DONE\n",
+    "timed_out": false
+  }
+}

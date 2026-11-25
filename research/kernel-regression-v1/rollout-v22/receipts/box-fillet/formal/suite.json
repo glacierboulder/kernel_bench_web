@@ -1,0 +1,54 @@
+{
+  "checkpoints": [
+    {
+      "case": "evaluation/cases/version-regressions/1/box-fillet.cxx",
+      "category": "regression",
+      "id": "box-fillet",
+      "issue_id": "occt-github-1163",
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "inputs": [
+          "issues/occt-github-1163/1/public/inputs/chamfer007.brep",
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/box.txt",
+          "evaluation/cases/version-regressions/1/box-fillet/healthy-1-result.brep",
+          "evaluation/cases/version-regressions/1/box-fillet/healthy-2-result.brep",
+          "evaluation/cases/version-regressions/1/box-fillet/opposite-result.brep"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel",
+          "dl"
+        ],
+        "stdout_contains": [
+          "CONTROL native target=1 opposite=0 witnesses=26 wrong_target=0 wrong_opposite=6",
+          "CONTROL healthy-1 target=1 opposite=0 witnesses=26 wrong_target=0 wrong_opposite=6",
+          "CONTROL healthy-2 target=1 opposite=0 witnesses=26 wrong_target=0 wrong_opposite=6",
+          "CONTROL opposite target=0 opposite=1 witnesses=26 wrong_target=6 wrong_opposite=0",
+          "TEST_DONE"
+        ]
+      },
+      "timeout_seconds": 120,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt-single-github-1163"
+  ],
+  "id": "occt-github-1163-version-regression",
+  "schema_version": 1,
+  "source_ids": [
+    "occt801-1163-b-6ba582362af7"
+  ],
+  "title": "box-fillet",
+  "version": "1"
+}

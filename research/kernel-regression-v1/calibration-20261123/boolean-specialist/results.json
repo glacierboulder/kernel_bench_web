@@ -1,0 +1,211 @@
+{
+  "method": "paired historical receipt replay; no new kernel or model run",
+  "baseline_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+  "baseline_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+  "toolchain": "occt-v4-clang10-o0-tcl86",
+  "registration": {
+    "suite": "occt-boolean-regression-1511c7e9@1",
+    "original_suite": "occt-single20-28195-checks@2",
+    "source_id": "occt-single20-1511c7e90f1a",
+    "installed_contract_sha256": "3c856e622a3d0c1c0d64ba1e6f5b2bafe2703645f516cb6770f1e3ac18fffb85",
+    "original_contract_sha256": "eec1d41c9a19f8f3a7c1ca2e649538579e9ee2b24ceb3efbd604850c81a5e4c3",
+    "checkpoint_route": {
+      "checkpoint_id": "28195-regression_z90",
+      "case": "evaluation/cases/single20/occt-28195/2/regression_z90.tcl",
+      "category": "regression",
+      "case_sha256": "3261e7d896cd54563b87b1385fa252cfdfc58eb0954badb4737fd99c22a90f1f",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "input_1_qualified",
+        "input_2_qualified",
+        "validity",
+        "topology",
+        "volume",
+        "operand_membership",
+        "grid_membership",
+        "exclusion_membership"
+      ],
+      "expected_failure_lines": [],
+      "pending_requirements": [],
+      "engine": {
+        "kind": "assertions",
+        "path": "unified_runtime/draw_base.py",
+        "sha256": "b49d9c601d5ce7e214d80343c0c05f3fa4d0644ab816447d624e0bfc29a30610"
+      }
+    },
+    "adapter_sha256": "d2a16988a53f9ec5ba840b5f89d2eead6a1d0d7f936f94cf141f3c0ae60638b7",
+    "input_files_sha256": {
+      "evaluation/cases/single20/occt-28195/2/regression_z90.tcl": "3261e7d896cd54563b87b1385fa252cfdfc58eb0954badb4737fd99c22a90f1f",
+      "evaluation/cases/single20/assertions.tcl": "f456e1d2e107d2eb3673ff7c5edbf43578516958231578ea53d976a8b6adb2f0",
+      "evaluation/cases/single20/solid_checks.tcl": "16745256c544638967e9478bf60a1bee17ca63b0be28494d103f3f6ef496346a",
+      "evaluation/cases/single20/occt-28195/1/bug28195_solidsKO.brep": "5af1049dbc7b79043dd2cba7fb7878ba102d9f515802732b41ea402f3136b147",
+      "evaluation/cases/single20/occt-28195/2/rotated_common.tcl": "47a926c87f424738a52d0331d354b701212803a30ad1e864fa7bb36d46a894a8",
+      "evaluation/cases/single20/occt-28195/2/z90.points": "63e21afe31c07059397b97e1c09d5146184fe3ea29ee0126cf3304a4394bb0dd"
+    },
+    "original_snapshot_sha256": "e7e76d6299a228e67680fa76d9d4d73e3d0a816865e704e1a781fb5912e41780",
+    "original_archive": "benchmarks/occt/evaluation/provenance/m28195-rotations-v2/qualified-evidence.tar.gz",
+    "original_archive_sha256": "7820049b9cbcc793636858a16ec4cd242d9200b0e2acbe342efe7b3f607f9f9b",
+    "qualification": "benchmarks/occt/evaluation/provenance/m28195-rotations-v2/qualification.json",
+    "qualification_sha256": "14f9c6ce47475b2db89a23462ebf92717c23fa8d5b67ea575f082acf3fdf4538"
+  },
+  "rows": [
+    {
+      "arm": "round2",
+      "patch_sha256": "17a164cfbf40ec8712748c1ecf58c78fb2e81b0bbe4faf1ac8a9c4d5fc069a78",
+      "portable": {
+        "required": 6,
+        "preserved": 6,
+        "status": "PASS",
+        "checks": {
+          "box-common": {
+            "baseline": "PASS",
+            "patch": "PASS",
+            "transition": "PRESERVED",
+            "report_status": "PRESERVED"
+          },
+          "disjoint": {
+            "baseline": "PASS",
+            "patch": "PASS",
+            "transition": "PRESERVED",
+            "report_status": "PRESERVED"
+          },
+          "cut-fuse": {
+            "baseline": "PASS",
+            "patch": "PASS",
+            "transition": "PRESERVED",
+            "report_status": "PRESERVED"
+          },
+          "plane-sphere": {
+            "baseline": "PASS",
+            "patch": "PASS",
+            "transition": "PRESERVED",
+            "report_status": "PRESERVED"
+          },
+          "hole-classification": {
+            "baseline": "PASS",
+            "patch": "PASS",
+            "transition": "PRESERVED",
+            "report_status": "PRESERVED"
+          },
+          "brep-roundtrip": {
+            "baseline": "PASS",
+            "patch": "PASS",
+            "transition": "PRESERVED",
+            "report_status": "PRESERVED"
+          }
+        },
+        "not_run": 0,
+        "inconclusive": 0,
+        "raw_receipts": {
+          "portable-replay/raw/28195-B.json": "9c754592c0dee68cd2ae351cf9b42dda07cd52f3f1b9fb001eba626b25336d2b",
+          "portable-replay/raw/28195-round2.json": "04d4eb5314c52bf8c9a295993ab313ff22ebc6cf2c7f0e1017c0bc8072765031"
+        }
+      },
+      "boolean_specialist": {
+        "status": "NEW_REGRESSION",
+        "new_regressions": 1,
+        "checkpoint": "28195-regression_z90",
+        "required": 1,
+        "baseline": {
+          "log": "evidence/28195/B/28195-regression_z90.json",
+          "sha256": "e06dd267ab6e845b27c43a0fc7187bdaa45cc8043b9d4e8c0af90543b6aeedae",
+          "archive_member": "final-results/B/28195-regression_z90.json",
+          "status": "PASS",
+          "failed_assertions": [],
+          "assertions_observed": 9
+        },
+        "patched": {
+          "log": "evidence/28195/round2/28195-regression_z90.json",
+          "sha256": "54b9debbc62ffbff78c8be84acd285058a66d14c4a9e8f81d180da7f6529a3b1",
+          "archive_member": "final-results/round2/28195-regression_z90.json",
+          "status": "FAIL",
+          "failed_assertions": [
+            "topology",
+            "volume",
+            "grid_membership"
+          ],
+          "assertions_observed": 9
+        },
+        "not_run": 0,
+        "inconclusive": 0
+      }
+    },
+    {
+      "arm": "round3",
+      "patch_sha256": "e5ef337574050a6c8a99b25be69065fdd2815f59146bf951deade7bf1ac92c89",
+      "portable": {
+        "required": 6,
+        "preserved": 6,
+        "status": "PASS",
+        "checks": {
+          "box-common": {
+            "baseline": "PASS",
+            "patch": "PASS",
+            "transition": "PRESERVED",
+            "report_status": "PRESERVED"
+          },
+          "disjoint": {
+            "baseline": "PASS",
+            "patch": "PASS",
+            "transition": "PRESERVED",
+            "report_status": "PRESERVED"
+          },
+          "cut-fuse": {
+            "baseline": "PASS",
+            "patch": "PASS",
+            "transition": "PRESERVED",
+            "report_status": "PRESERVED"
+          },
+          "plane-sphere": {
+            "baseline": "PASS",
+            "patch": "PASS",
+            "transition": "PRESERVED",
+            "report_status": "PRESERVED"
+          },
+          "hole-classification": {
+            "baseline": "PASS",
+            "patch": "PASS",
+            "transition": "PRESERVED",
+            "report_status": "PRESERVED"
+          },
+          "brep-roundtrip": {
+            "baseline": "PASS",
+            "patch": "PASS",
+            "transition": "PRESERVED",
+            "report_status": "PRESERVED"
+          }
+        },
+        "not_run": 0,
+        "inconclusive": 0,
+        "raw_receipts": {
+          "portable-replay/raw/28195-B.json": "9c754592c0dee68cd2ae351cf9b42dda07cd52f3f1b9fb001eba626b25336d2b",
+          "portable-replay/raw/28195-round3.json": "1f24c908efcef734041ec075d80ccc030a7477d465889f31d3cca833f91390c2"
+        }
+      },
+      "boolean_specialist": {
+        "status": "PRESERVED",
+        "new_regressions": 0,
+        "checkpoint": "28195-regression_z90",
+        "required": 1,
+        "baseline": {
+          "log": "evidence/28195/B/28195-regression_z90.json",
+          "sha256": "e06dd267ab6e845b27c43a0fc7187bdaa45cc8043b9d4e8c0af90543b6aeedae",
+          "archive_member": "final-results/B/28195-regression_z90.json",
+          "status": "PASS",
+          "failed_assertions": [],
+          "assertions_observed": 9
+        },
+        "patched": {
+          "log": "evidence/28195/round3/28195-regression_z90.json",
+          "sha256": "ddb0d5e5ffacb45f7dd934f2c43667c6b0bde0c4b6eb991fa67ae6db1bd46e8c",
+          "archive_member": "final-results/round3/28195-regression_z90.json",
+          "status": "PASS",
+          "failed_assertions": [],
+          "assertions_observed": 9
+        },
+        "not_run": 0,
+        "inconclusive": 0
+      }
+    }
+  ]
+}

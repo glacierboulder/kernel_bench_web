@@ -1,0 +1,50 @@
+FACE 1 0 0 0 0 0 1 1 0 -0 -0 1 0 -20 20 -20 20
+VALID first 1
+LINE first 1 -20 0 0 -0 1 0 -20 20
+END first 0 0 0 -20 -20 0
+END first 1 0 0 -20 20 0
+LINE first 2 0 -20 0 1 0 -0 -20 20
+END first 0 0 0 -20 -20 0
+END first 1 0 0 20 -20 0
+LINE first 3 20 0 0 -0 1 0 -20 20
+END first 0 0 0 20 -20 0
+END first 1 0 0 20 20 0
+LINE first 4 0 20 0 1 0 -0 -20 20
+END first 0 0 0 -20 20 0
+END first 1 0 0 20 20 0
+COUNT first 4
+FACE 2 0 0 0 1 0 0 0 0 1 0 -1 0 -20 20 -20 20
+VALID second 1
+LINE second 1 0 0 -20 0 -1 0 -20 20
+END second 0 0 0 0 20 -20
+END second 1 0 0 0 -20 -20
+LINE second 2 0 20 0 0 0 1 -20 20
+END second 0 0 0 0 20 -20
+END second 1 0 0 0 20 20
+LINE second 3 0 0 20 0 -1 0 -20 20
+END second 0 0 0 0 20 20
+END second 1 0 0 0 -20 20
+LINE second 4 0 -20 0 0 0 1 -20 20
+END second 0 0 0 0 -20 -20
+END second 1 0 0 0 -20 20
+COUNT second 4
+VALID native-support 1
+LINE native-support 1 0 0 0 0 1 0 -24 24
+END native-support 0 0 0 0 -24 0
+END native-support 1 0 0 0 24 0
+COUNT native-support 1
+VALID support 1
+LINE support 1 0 0 0 0 1 0 -24 24
+END support 0 0 0 0 -24 0
+END support 1 0 0 0 24 0
+COUNT support 1
+VALID native-section 1
+LINE native-section 1 0 0 0 0 1 0 -20 20
+END native-section 0 0 0 0 -20 0
+END native-section 1 0 0 0 20 0
+COUNT native-section 1
+VALID section 1
+LINE section 1 0 -17 0 0 1 0 0 40
+END section 0 0 0 0 -17 0
+END section 1 0 0 0 23 0
+COUNT section 1

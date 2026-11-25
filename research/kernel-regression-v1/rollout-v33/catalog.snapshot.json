@@ -1,0 +1,1143 @@
+{
+  "evaluation_suites": [
+    {"id":"occt-github-1550-tangents-version-regression","version":"1","path":"evaluation/suites/regression/occt-github-1550-tangents-version-regression/1.json"},
+    {"id":"occt-github-1738-edge8-version-regression","version":"1","path":"evaluation/suites/regression/occt-github-1738-edge8-version-regression/1.json"},
+    {"id":"occt-30082-ng05t-version-regression","version":"1","path":"evaluation/suites/regression/occt-30082-ng05t-version-regression/1.json"},
+    {"id":"occt-github-1501-version-regression","version":"1","path":"evaluation/suites/regression/occt-github-1501-version-regression/1.json"},
+    {"id":"occt-github-1177-version-regression","version":"1","path":"evaluation/suites/regression/occt-github-1177-version-regression/1.json"},
+    {"id":"occt-32929-version-regression","version":"1","path":"evaluation/suites/regression/occt-32929-version-regression/1.json"},
+    {"id":"occt-github-1701-version-regression","version":"1","path":"evaluation/suites/regression/occt-github-1701-version-regression/1.json"},
+    {"id":"occt-github-1702-version-regression","version":"1","path":"evaluation/suites/regression/occt-github-1702-version-regression/1.json"},
+    {"id":"occt-github-1163-version-regression","version":"1","path":"evaluation/suites/regression/occt-github-1163-version-regression/1.json"},
+    {"id":"occt-30082-version-regression","version":"1","path":"evaluation/suites/regression/occt-30082-version-regression/1.json"},
+    {"id":"occt-26796-version-regression","version":"1","path":"evaluation/suites/regression/occt-26796-version-regression/1.json"},
+    {"id":"occt-27780-version-regression","version":"1","path":"evaluation/suites/regression/occt-27780-version-regression/1.json"},
+    {"id":"occt-25818-version-regression","version":"1","path":"evaluation/suites/regression/occt-25818-version-regression/1.json"},
+    {"id":"occt-24313-version-regression","version":"1","path":"evaluation/suites/regression/occt-24313-version-regression/1.json"},
+    {"id":"occt-26243-version-regression","version":"1","path":"evaluation/suites/regression/occt-26243-version-regression/1.json"},
+    {"id":"mantis-32942-version-regression","version":"1","path":"evaluation/suites/regression/mantis-32942-version-regression/1.json"},
+    {"id":"mantis-31470-version-regression","version":"1","path":"evaluation/suites/regression/mantis-31470-version-regression/1.json"},
+    {"id":"occt-33570-version-regression","version":"1","path":"evaluation/suites/regression/occt-33570-version-regression/1.json"},
+    {"id":"occt-github-1371-version-regression","version":"1","path":"evaluation/suites/regression/occt-github-1371-version-regression/1.json"},
+    {"id":"mantis-29972-version-regression","version":"1","path":"evaluation/suites/regression/mantis-29972-version-regression/1.json"},
+    {"id":"mantis-30703-version-regression","version":"1","path":"evaluation/suites/regression/mantis-30703-version-regression/1.json"},
+    {"id":"occt-27227-version-regression","version":"1","path":"evaluation/suites/regression/occt-27227-version-regression/1.json"},
+    {"id":"occt-31835-version-regression","version":"1","path":"evaluation/suites/regression/occt-31835-version-regression/1.json"},
+    {"id":"occt-23612-version-regression","version":"1","path":"evaluation/suites/regression/occt-23612-version-regression/1.json"},
+    {"id":"occt-544-samedomain-regression","version":"1","path":"evaluation/suites/regression/occt-544-samedomain-regression/1.json"},
+    {"id":"occt-boolean-regression-1511c7e9","version":"1","path":"evaluation/suites/regression/occt-boolean-regression-1511c7e9/1.json"},
+    {"id":"occt-28366-suite","version":"1","path":"evaluation/suites/occt-28366-suite/1.json"},
+    {"id":"occt-28366-suite","version":"2","path":"evaluation/suites/occt-28366-suite/2.json"},
+    {"id":"occt-25237-suite","version":"1","path":"evaluation/suites/occt-25237-suite/1.json"},
+    {"id":"occt-25237-suite","version":"2","path":"evaluation/suites/occt-25237-suite/2.json"},
+    {"id":"occt-github-1610-suite","version":"1","path":"evaluation/suites/occt-github-1610-suite/1.json"},
+    {"id": "occt-github-1634-singularity-suite", "version": "1", "path": "evaluation/suites/occt-github-1634-singularity-suite/1.json"},
+    {"id": "occt-github-1644-offset-plane-suite", "version": "1", "path": "evaluation/suites/occt-github-1644-offset-plane-suite/1.json"},
+    {"id": "occt-23612-suite", "version": "1", "path": "evaluation/suites/occt-23612-suite/1.json"},
+    {"id": "occt-github-1644-offset3d-suite", "version": "1", "path": "evaluation/suites/occt-github-1644-offset3d-suite/1.json"},
+    {"id": "occt-github-1644-offset2d-suite", "version": "1", "path": "evaluation/suites/occt-github-1644-offset2d-suite/1.json"},
+    {"id": "occt-github-1501-suite", "version": "1", "path": "evaluation/suites/occt-github-1501-suite/1.json"},
+    {"id": "occt-33570-suite", "version": "1", "path": "evaluation/suites/occt-33570-suite/1.json"},
+    {"id": "occt-github-1601-suite", "version": "1", "path": "evaluation/suites/occt-github-1601-suite/1.json"},
+    {"id": "occt-github-1587-suite", "version": "1", "path": "evaluation/suites/occt-github-1587-suite/1.json"},
+    {"id": "occt-github-1550-suite", "version": "1", "path": "evaluation/suites/occt-github-1550-suite/1.json"},
+    {
+      "id": "occt-single-544",
+      "path": "evaluation/suites/legacy/occt-single-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-group-544",
+      "path": "evaluation/suites/legacy/occt-group-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-active-544",
+      "path": "evaluation/suites/legacy/occt-active-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-visible3",
+      "path": "evaluation/suites/legacy/occt-group-544-506-847/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-visible4",
+      "path": "evaluation/suites/legacy/occt-group-690-693-172/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-visible5",
+      "path": "evaluation/suites/legacy/occt-group-370-872-1452/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-visible5all",
+      "path": "evaluation/suites/legacy/occt-group-690-693-172-370-1452/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-04R-checks-v2",
+      "path": "evaluation/suites/new/occt-30082-30202-33541/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-05T-v1-checks",
+      "path": "evaluation/suites/new/occt-30082-31602-32850/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-suite-d9d310-21494-29807-31835",
+      "path": "evaluation/suites/new/occt-21494-29807-31835/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-suite-b55-27310-27773-27252-oracle-v2",
+      "path": "evaluation/suites/new/occt-27310-27773-27252/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-suite-b2613378-27780-27252-21494-v1",
+      "path": "evaluation/suites/new/occt-21494-27252-27780/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-32721",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-32721/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-32942",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-32942/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-31404",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-31404/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-31470",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-31470/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-32470",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-32470/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-32502",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-32502/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-33244",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-33244/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-30703",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-30703/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-29972",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-29972/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-33615",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-33615/1.json"
+    },
+    {
+      "id": "occt-bf-suite-b55-27310-27773-27252-geometry-v2",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-27310-27773-27252/2.json"
+    },
+    {
+      "id": "occt-single20-25818-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-25818/1.json"
+    },
+    {
+      "id": "occt-single20-24313-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-24313/1.json"
+    },
+    {
+      "id": "occt-single20-24418-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-24418/1.json"
+    },
+    {
+      "id": "occt-single20-26796-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-26796/1.json"
+    },
+    {
+      "id": "occt-single20-github-1543-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-github-1543/1.json"
+    },
+    {
+      "id": "occt-single20-25111-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-25111/1.json"
+    },
+    {
+      "id": "occt-single20-26243-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-26243/1.json"
+    },
+    {
+      "id": "occt-single20-26910-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-26910/1.json"
+    },
+    {
+      "id": "occt-single20-26776-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-26776/1.json"
+    },
+    {
+      "id": "occt-single20-25102-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-25102/1.json"
+    },
+    {
+      "id": "occt-single20-25342-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-25342/1.json"
+    },
+    {
+      "id": "occt-single20-28195-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-28195/1.json"
+    },
+    {
+      "id": "occt-single20-28195-checks",
+      "version": "2",
+      "path": "evaluation/suites/new/occt-28195/2.json"
+    },
+    {
+      "id": "occt-single20-28216-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-28216/1.json"
+    },
+    {
+      "id": "occt-single20-25542-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-25542/1.json"
+    },
+    {
+      "id": "occt-single20-25542-checks",
+      "version": "2",
+      "path": "evaluation/suites/new/occt-25542/2.json"
+    },
+    {
+      "id": "occt-single20-24429-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-24429/1.json"
+    },
+    {
+      "id": "occt-single20-28388-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-28388/1.json"
+    },
+    {
+      "id": "occt-single20-27227-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-27227/1.json"
+    },
+    {
+      "id": "occt-single20-24097-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-24097/1.json"
+    },
+    {
+      "id": "occt-single20-26310-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-26310/1.json"
+    },
+    {
+      "id": "occt-single20-33639-checks",
+      "version": "1",
+      "path": "evaluation/suites/new/occt-33639/1.json"
+    },
+    {
+      "id": "occt-single-30082-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-30082/1.json"
+    },
+    {
+      "id": "occt-single-30202-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-30202/1.json"
+    },
+    {
+      "id": "occt-single-33541-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-33541/1.json"
+    },
+    {
+      "id": "occt-single-31602-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-31602/1.json"
+    },
+    {
+      "id": "occt-single-32850-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-32850/1.json"
+    },
+    {
+      "id": "occt-single-21494-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-21494/1.json"
+    },
+    {
+      "id": "occt-single-29807-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-29807/1.json"
+    },
+    {
+      "id": "occt-single-31835-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-31835/1.json"
+    },
+    {
+      "id": "occt-single-27310-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-27310/1.json"
+    },
+    {
+      "id": "occt-single-27773-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-27773/1.json"
+    },
+    {
+      "id": "occt-single-27252-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-27252/1.json"
+    },
+    {
+      "id": "occt-single-27780-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-27780/1.json"
+    },
+    {
+      "id": "occt-single-github-1738-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-github-1738/1.json"
+    },
+    {
+      "id": "occt-single-github-1177-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-github-1177/1.json"
+    },
+    {
+      "id": "occt-single-32929-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-32929/1.json"
+    },
+    {
+      "path": "evaluation/suites/occt-31850-default/1.json",
+      "id": "occt-31850-default-checks",
+      "version": "1"
+    },
+    {
+      "id": "occt-single-github-1163-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-github-1163/1.json"
+    },
+    {
+      "id": "occt-single-github-1371-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-github-1371/1.json"
+    },
+    {
+      "id": "occt-single-github-1701-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-github-1701/1.json"
+    },
+    {
+      "id": "occt-single-github-1702-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-github-1702/1.json"
+    },
+    {
+      "id": "occt-single-24161-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-24161/1.json"
+    },
+    {
+      "id": "occt-single-24811-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-24811/1.json"
+    },
+    {
+      "id": "occt-single-25242-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-25242/1.json"
+    },
+    {
+      "id": "occt-single-25385-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-25385/1.json"
+    },
+    {
+      "id": "occt-single-25781-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-25781/1.json"
+    },
+    {
+      "id": "occt-single-25890-section-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-25890-section/1.json"
+    },
+    {
+      "id": "occt-single-25952-bopcurves-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-25952-bopcurves/1.json"
+    },
+    {
+      "id": "occt-single-29028-checks",
+      "version": "1",
+      "path": "evaluation/suites/single/occt-29028/1.json"
+    }
+  ],
+  "groups": [
+    {"id":"occt-28366-single","version":"1","path":"groups/occt-28366-single/1.json"},
+    {"id":"occt-25237-single","version":"1","path":"groups/occt-25237-single/1.json"},
+    {"id":"occt-github-1610-single","version":"1","path":"groups/occt-github-1610-single/1.json"},
+    {"id": "occt-github-1634-singularity-single", "version": "1", "path": "groups/occt-github-1634-singularity-single/1.json"},
+    {"id": "occt-github-1644-offset-plane-single", "version": "1", "path": "groups/occt-github-1644-offset-plane-single/1.json"},
+    {"id": "occt-23612-single", "version": "1", "path": "groups/occt-23612-single/1.json"},
+    {"id": "occt-github-1644-offset3d-single", "version": "1", "path": "groups/occt-github-1644-offset3d-single/1.json"},
+    {"id": "occt-github-1644-offset2d-single", "version": "1", "path": "groups/occt-github-1644-offset2d-single/1.json"},
+    {"id": "occt-github-1501-single", "version": "1", "path": "groups/occt-github-1501-single/1.json"},
+    {"id": "occt-33570-single", "version": "1", "path": "groups/occt-33570-single/1.json"},
+    {"id": "occt-github-1601-single", "version": "1", "path": "groups/occt-github-1601-single/1.json"},
+    {"id": "occt-github-1587-single", "version": "1", "path": "groups/occt-github-1587-single/1.json"},
+    {"id": "occt-github-1550-single", "version": "1", "path": "groups/occt-github-1550-single/1.json"},
+    {
+      "id": "occt_boolean_single_544",
+      "path": "groups/legacy/occt-single-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_544",
+      "path": "groups/legacy/occt-group-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_active_visible_544",
+      "path": "groups/legacy/occt-active-544/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_544_506_847",
+      "path": "groups/legacy/occt-group-544-506-847/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_690_693_172",
+      "path": "groups/legacy/occt-group-690-693-172/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_370_872_1452",
+      "path": "groups/legacy/occt-group-370-872-1452/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt_boolean_group_visible_690_693_172_370_1452",
+      "path": "groups/legacy/occt-group-690-693-172-370-1452/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-04R-v2",
+      "path": "groups/multiple/occt-30082-30202-33541/1.json",
+      "version": "1"
+    },
+    {
+      "id": "NG-05T-v1",
+      "path": "groups/multiple/occt-30082-31602-32850/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-group-d9d310-21494-29807-31835",
+      "path": "groups/multiple/occt-21494-29807-31835/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-group-b55-27310-27773-27252-oracle-v2",
+      "path": "groups/multiple/occt-27310-27773-27252/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-bf-group-b2613378-27780-27252-21494-v1",
+      "path": "groups/multiple/occt-21494-27252-27780/1.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-32721",
+      "version": "1",
+      "path": "groups/single/occt-32721/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-32942",
+      "version": "1",
+      "path": "groups/single/occt-32942/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-31404",
+      "version": "1",
+      "path": "groups/single/occt-31404/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-31470",
+      "version": "1",
+      "path": "groups/single/occt-31470/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-32470",
+      "version": "1",
+      "path": "groups/single/occt-32470/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-32502",
+      "version": "1",
+      "path": "groups/single/occt-32502/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-33244",
+      "version": "1",
+      "path": "groups/single/occt-33244/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-30703",
+      "version": "1",
+      "path": "groups/single/occt-30703/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-29972",
+      "version": "1",
+      "path": "groups/single/occt-29972/1.json"
+    },
+    {
+      "id": "occt-boolean-intersection-v4-mantis-33615",
+      "version": "1",
+      "path": "groups/single/occt-33615/1.json"
+    },
+    {
+      "id": "occt-single20-25818",
+      "version": "1",
+      "path": "groups/single/occt-25818/1.json"
+    },
+    {
+      "id": "occt-single20-24313",
+      "version": "1",
+      "path": "groups/single/occt-24313/1.json"
+    },
+    {
+      "id": "occt-single20-24418",
+      "version": "1",
+      "path": "groups/single/occt-24418/1.json"
+    },
+    {
+      "id": "occt-single20-26796",
+      "version": "1",
+      "path": "groups/single/occt-26796/1.json"
+    },
+    {
+      "id": "occt-single20-github-1543",
+      "version": "1",
+      "path": "groups/single/occt-github-1543/1.json"
+    },
+    {
+      "id": "occt-single20-25111",
+      "version": "1",
+      "path": "groups/single/occt-25111/1.json"
+    },
+    {
+      "id": "occt-single20-26243",
+      "version": "1",
+      "path": "groups/single/occt-26243/1.json"
+    },
+    {
+      "id": "occt-single20-26910",
+      "version": "1",
+      "path": "groups/single/occt-26910/1.json"
+    },
+    {
+      "id": "occt-single20-26776",
+      "version": "1",
+      "path": "groups/single/occt-26776/1.json"
+    },
+    {
+      "id": "occt-single20-25102",
+      "version": "1",
+      "path": "groups/single/occt-25102/1.json"
+    },
+    {
+      "id": "occt-single20-25342",
+      "version": "1",
+      "path": "groups/single/occt-25342/1.json"
+    },
+    {
+      "id": "occt-single20-28195",
+      "version": "1",
+      "path": "groups/single/occt-28195/1.json"
+    },
+    {
+      "id": "occt-single20-28216",
+      "version": "1",
+      "path": "groups/single/occt-28216/1.json"
+    },
+    {
+      "id": "occt-single20-25542",
+      "version": "1",
+      "path": "groups/single/occt-25542/1.json"
+    },
+    {
+      "id": "occt-single20-24429",
+      "version": "1",
+      "path": "groups/single/occt-24429/1.json"
+    },
+    {
+      "id": "occt-single20-28388",
+      "version": "1",
+      "path": "groups/single/occt-28388/1.json"
+    },
+    {
+      "id": "occt-single20-27227",
+      "version": "1",
+      "path": "groups/single/occt-27227/1.json"
+    },
+    {
+      "id": "occt-single20-24097",
+      "version": "1",
+      "path": "groups/single/occt-24097/1.json"
+    },
+    {
+      "id": "occt-single20-26310",
+      "version": "1",
+      "path": "groups/single/occt-26310/1.json"
+    },
+    {
+      "id": "occt-single20-33639",
+      "version": "1",
+      "path": "groups/single/occt-33639/1.json"
+    },
+    {
+      "id": "occt-single-30082",
+      "version": "1",
+      "path": "groups/single/occt-30082/1.json"
+    },
+    {
+      "id": "occt-single-30202",
+      "version": "1",
+      "path": "groups/single/occt-30202/1.json"
+    },
+    {
+      "id": "occt-single-33541",
+      "version": "1",
+      "path": "groups/single/occt-33541/1.json"
+    },
+    {
+      "id": "occt-single-31602",
+      "version": "1",
+      "path": "groups/single/occt-31602/1.json"
+    },
+    {
+      "id": "occt-single-32850",
+      "version": "1",
+      "path": "groups/single/occt-32850/1.json"
+    },
+    {
+      "id": "occt-single-21494",
+      "version": "1",
+      "path": "groups/single/occt-21494/1.json"
+    },
+    {
+      "id": "occt-single-29807",
+      "version": "1",
+      "path": "groups/single/occt-29807/1.json"
+    },
+    {
+      "id": "occt-single-31835",
+      "version": "1",
+      "path": "groups/single/occt-31835/1.json"
+    },
+    {
+      "id": "occt-single-27310",
+      "version": "1",
+      "path": "groups/single/occt-27310/1.json"
+    },
+    {
+      "id": "occt-single-27773",
+      "version": "1",
+      "path": "groups/single/occt-27773/1.json"
+    },
+    {
+      "id": "occt-single-27252",
+      "version": "1",
+      "path": "groups/single/occt-27252/1.json"
+    },
+    {
+      "id": "occt-single-27780",
+      "version": "1",
+      "path": "groups/single/occt-27780/1.json"
+    },
+    {
+      "id": "occt-single-github-1738",
+      "version": "1",
+      "path": "groups/single/occt-github-1738/1.json"
+    },
+    {
+      "id": "occt-single-github-1177",
+      "version": "1",
+      "path": "groups/single/occt-github-1177/1.json"
+    },
+    {
+      "id": "occt-single-32929",
+      "version": "1",
+      "path": "groups/single/occt-32929/1.json"
+    },
+    {
+      "path": "groups/occt-31850-default/1.json",
+      "id": "occt-31850-default-single",
+      "version": "1"
+    },
+    {
+      "id": "occt-single-github-1163",
+      "version": "1",
+      "path": "groups/single/occt-github-1163/1.json"
+    },
+    {
+      "id": "occt-single-github-1371",
+      "version": "1",
+      "path": "groups/single/occt-github-1371/1.json"
+    },
+    {
+      "id": "occt-single-github-1701",
+      "version": "1",
+      "path": "groups/single/occt-github-1701/1.json"
+    },
+    {
+      "id": "occt-single-github-1702",
+      "version": "1",
+      "path": "groups/single/occt-github-1702/1.json"
+    },
+    {
+      "id": "occt-single-24161",
+      "version": "1",
+      "path": "groups/single/occt-24161/1.json"
+    },
+    {
+      "id": "occt-single-24811",
+      "version": "1",
+      "path": "groups/single/occt-24811/1.json"
+    },
+    {
+      "id": "occt-single-25242",
+      "version": "1",
+      "path": "groups/single/occt-25242/1.json"
+    },
+    {
+      "id": "occt-single-25385",
+      "version": "1",
+      "path": "groups/single/occt-25385/1.json"
+    },
+    {
+      "id": "occt-single-25781",
+      "version": "1",
+      "path": "groups/single/occt-25781/1.json"
+    },
+    {
+      "id": "occt-single-25890-section",
+      "version": "1",
+      "path": "groups/single/occt-25890-section/1.json"
+    },
+    {
+      "id": "occt-single-25952-bopcurves",
+      "version": "1",
+      "path": "groups/single/occt-25952-bopcurves/1.json"
+    },
+    {
+      "id": "occt-single-29028",
+      "version": "1",
+      "path": "groups/single/occt-29028/1.json"
+    }
+  ],
+  "id": "occt",
+  "issues": [
+    {"id":"occt-28366","version":"1","path":"issues/occt-28366/1/issue.json"},
+    {"id":"occt-25237","version":"1","path":"issues/occt-25237/1/issue.json"},
+    {"id":"occt-github-1610","version":"1","path":"issues/occt-github-1610/1/issue.json"},
+    {"id": "occt-github-1634-singularity", "version": "1", "path": "issues/occt-github-1634-singularity/1/issue.json"},
+    {"id": "occt-github-1644-offset-plane", "version": "1", "path": "issues/occt-github-1644-offset-plane/1/issue.json"},
+    {"id": "occt-23612", "version": "1", "path": "issues/occt-23612/1/issue.json"},
+    {"id": "occt-github-1644-offset3d", "version": "1", "path": "issues/occt-github-1644-offset3d/1/issue.json"},
+    {"id": "occt-github-1644-offset2d", "version": "1", "path": "issues/occt-github-1644-offset2d/1/issue.json"},
+    {"id": "occt-github-1501", "version": "1", "path": "issues/occt-github-1501/1/issue.json"},
+    {"id": "occt-33570", "version": "1", "path": "issues/occt-33570/1/issue.json"},
+    {"id": "occt-github-1601", "version": "1", "path": "issues/occt-github-1601/1/issue.json"},
+    {"id": "occt-github-1587", "version": "1", "path": "issues/occt-github-1587/1/issue.json"},
+    {"id": "occt-github-1550", "version": "1", "path": "issues/occt-github-1550/1/issue.json"},
+    {
+      "id": "occt-544",
+      "path": "issues/occt-544/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-506",
+      "path": "issues/occt-506/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-847",
+      "path": "issues/occt-847/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-690",
+      "path": "issues/occt-690/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-693",
+      "path": "issues/occt-693/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-172",
+      "path": "issues/occt-172/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-370",
+      "path": "issues/occt-370/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-872",
+      "path": "issues/occt-872/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-1452",
+      "path": "issues/occt-1452/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "mantis-30082",
+      "path": "issues/occt-30082/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "mantis-30202",
+      "path": "issues/occt-30202/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "mantis-33541",
+      "path": "issues/occt-33541/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "mantis-30082",
+      "path": "issues/occt-30082/4/issue.json",
+      "version": "4"
+    },
+    {
+      "id": "mantis-32850",
+      "path": "issues/occt-32850/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "mantis-31602",
+      "path": "issues/occt-31602/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "occt-21494",
+      "path": "issues/occt-21494/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-29807",
+      "path": "issues/occt-29807/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-31835",
+      "path": "issues/occt-31835/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-27310",
+      "path": "issues/occt-27310/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-27773",
+      "path": "issues/occt-27773/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-27252",
+      "path": "issues/occt-27252/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "occt-21494",
+      "path": "issues/occt-21494/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "occt-27252",
+      "path": "issues/occt-27252/2/issue.json",
+      "version": "2"
+    },
+    {
+      "id": "occt-27780",
+      "path": "issues/occt-27780/1/issue.json",
+      "version": "1"
+    },
+    {
+      "id": "mantis-32721",
+      "version": "1",
+      "path": "issues/occt-32721/1/issue.json"
+    },
+    {
+      "id": "mantis-32942",
+      "version": "1",
+      "path": "issues/occt-32942/1/issue.json"
+    },
+    {
+      "id": "mantis-31404",
+      "version": "1",
+      "path": "issues/occt-31404/1/issue.json"
+    },
+    {
+      "id": "mantis-31470",
+      "version": "1",
+      "path": "issues/occt-31470/1/issue.json"
+    },
+    {
+      "id": "mantis-32470",
+      "version": "1",
+      "path": "issues/occt-32470/1/issue.json"
+    },
+    {
+      "id": "mantis-32502",
+      "version": "1",
+      "path": "issues/occt-32502/1/issue.json"
+    },
+    {
+      "id": "mantis-33244",
+      "version": "1",
+      "path": "issues/occt-33244/1/issue.json"
+    },
+    {
+      "id": "mantis-30703",
+      "version": "1",
+      "path": "issues/occt-30703/1/issue.json"
+    },
+    {
+      "id": "mantis-29972",
+      "version": "1",
+      "path": "issues/occt-29972/1/issue.json"
+    },
+    {
+      "id": "mantis-33615",
+      "version": "1",
+      "path": "issues/occt-33615/1/issue.json"
+    },
+    {
+      "id": "occt-25818",
+      "version": "1",
+      "path": "issues/occt-25818/1/issue.json"
+    },
+    {
+      "id": "occt-24313",
+      "version": "1",
+      "path": "issues/occt-24313/1/issue.json"
+    },
+    {
+      "id": "occt-24418",
+      "version": "1",
+      "path": "issues/occt-24418/1/issue.json"
+    },
+    {
+      "id": "occt-26796",
+      "version": "1",
+      "path": "issues/occt-26796/1/issue.json"
+    },
+    {
+      "id": "occt-github-1543",
+      "version": "1",
+      "path": "issues/occt-github-1543/1/issue.json"
+    },
+    {
+      "id": "occt-25111",
+      "version": "1",
+      "path": "issues/occt-25111/1/issue.json"
+    },
+    {
+      "id": "occt-26243",
+      "version": "1",
+      "path": "issues/occt-26243/1/issue.json"
+    },
+    {
+      "id": "occt-26910",
+      "version": "1",
+      "path": "issues/occt-26910/1/issue.json"
+    },
+    {
+      "id": "occt-26776",
+      "version": "1",
+      "path": "issues/occt-26776/1/issue.json"
+    },
+    {
+      "id": "occt-25102",
+      "version": "1",
+      "path": "issues/occt-25102/1/issue.json"
+    },
+    {
+      "id": "occt-25342",
+      "version": "1",
+      "path": "issues/occt-25342/1/issue.json"
+    },
+    {
+      "id": "occt-28195",
+      "version": "1",
+      "path": "issues/occt-28195/1/issue.json"
+    },
+    {
+      "id": "occt-28216",
+      "version": "1",
+      "path": "issues/occt-28216/1/issue.json"
+    },
+    {
+      "id": "occt-25542",
+      "version": "1",
+      "path": "issues/occt-25542/1/issue.json"
+    },
+    {
+      "id": "occt-24429",
+      "version": "1",
+      "path": "issues/occt-24429/1/issue.json"
+    },
+    {
+      "id": "occt-28388",
+      "version": "1",
+      "path": "issues/occt-28388/1/issue.json"
+    },
+    {
+      "id": "occt-27227",
+      "version": "1",
+      "path": "issues/occt-27227/1/issue.json"
+    },
+    {
+      "id": "occt-24097",
+      "version": "1",
+      "path": "issues/occt-24097/1/issue.json"
+    },
+    {
+      "id": "occt-26310",
+      "version": "1",
+      "path": "issues/occt-26310/1/issue.json"
+    },
+    {
+      "id": "occt-33639",
+      "version": "1",
+      "path": "issues/occt-33639/1/issue.json"
+    },
+    {
+      "id": "occt-github-1738",
+      "version": "1",
+      "path": "issues/occt-github-1738/1/issue.json"
+    },
+    {
+      "id": "occt-github-1177",
+      "version": "1",
+      "path": "issues/occt-github-1177/1/issue.json"
+    },
+    {
+      "id": "occt-32929",
+      "version": "1",
+      "path": "issues/occt-32929/1/issue.json"
+    },
+    {
+      "path": "issues/occt-31850-default/1/issue.json",
+      "id": "occt-31850-default",
+      "version": "1"
+    },
+    {
+      "id": "occt-github-1163",
+      "version": "1",
+      "path": "issues/occt-github-1163/1/issue.json"
+    },
+    {
+      "id": "occt-github-1371",
+      "version": "1",
+      "path": "issues/occt-github-1371/1/issue.json"
+    },
+    {
+      "id": "occt-github-1701",
+      "version": "1",
+      "path": "issues/occt-github-1701/1/issue.json"
+    },
+    {
+      "id": "occt-github-1702",
+      "version": "1",
+      "path": "issues/occt-github-1702/1/issue.json"
+    },
+    {
+      "id": "occt-24161",
+      "version": "1",
+      "path": "issues/occt-24161/1/issue.json"
+    },
+    {
+      "id": "occt-24811",
+      "version": "1",
+      "path": "issues/occt-24811/1/issue.json"
+    },
+    {
+      "id": "occt-25242",
+      "version": "1",
+      "path": "issues/occt-25242/1/issue.json"
+    },
+    {
+      "id": "occt-25385",
+      "version": "1",
+      "path": "issues/occt-25385/1/issue.json"
+    },
+    {
+      "id": "occt-25781",
+      "version": "1",
+      "path": "issues/occt-25781/1/issue.json"
+    },
+    {
+      "id": "occt-25890-section",
+      "version": "1",
+      "path": "issues/occt-25890-section/1/issue.json"
+    },
+    {
+      "id": "occt-25952-bopcurves",
+      "version": "1",
+      "path": "issues/occt-25952-bopcurves/1/issue.json"
+    },
+    {
+      "id": "occt-29028",
+      "version": "1",
+      "path": "issues/occt-29028/1/issue.json"
+    }
+  ],
+  "schema_version": 1,
+  "title": "Open CASCADE issue benchmark · 新题与旧题"
+}

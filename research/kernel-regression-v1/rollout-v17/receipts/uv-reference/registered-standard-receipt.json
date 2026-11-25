@@ -1,0 +1,25 @@
+{
+  "case": "8d4531787a0e2de8abdccecd8916cc07a9b92f2c63de5506854951803550ebc8",
+  "runner": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+  "exit": 0,
+  "result": {
+    "protocol": "draw_case_oracle_v1",
+    "passed": true,
+    "test_done_marker": true,
+    "return_code": 0,
+    "timed_out": false,
+    "assertions": 5,
+    "numeric_assertions": 4,
+    "failed_assertions": 0,
+    "tcl_error_detected": false,
+    "expected_oracle_error": false,
+    "infrastructure_tcl_error": false,
+    "occt_error_detected": false,
+    "oracle_summary_found": true,
+    "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=numeric label={intersection tolerance bound} detail={actual=2.4373982820940216e-06 lower=0 upper=2.5e-6}\nBENCH_ASSERT_PASS kind=expression label={one intersection branch} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={3D intersection length} detail={actual=1340.6982492296991 expected=1340.6982492258749 tolerance=0.02 absolute_error=3.82419784727972e-9}\nBENCH_ASSERT_PASS kind=numeric label={first pcurve length} detail={actual=407.78567591122862 expected=407.78567590999006 tolerance=0.02 absolute_error=1.2385612535581458e-9}\nBENCH_ASSERT_PASS kind=numeric label={second pcurve length} detail={actual=897.86588948477038 expected=897.8658894846285 tolerance=0.02 absolute_error=1.418811734765768e-10}\nBENCH_ORACLE_OK assertions=5 numeric_assertions=4\nTEST_DONE assertions=5 numeric_assertions=4\n",
+    "stderr_tail": "",
+    "script": "/tmp/working-cases/original-standard.tcl",
+    "draw_executable": "/workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+    "elapsed_seconds": 0.064
+  }
+}

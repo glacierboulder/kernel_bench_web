@@ -1,0 +1,101 @@
+0000000000007010 V DW.ref.__gxx_personality_v0
+0000000000006c98 d _DYNAMIC
+0000000000006ee8 d _GLOBAL_OFFSET_TABLE_
+0000000000005000 R _IO_stdin_used
+                 w _ITM_deregisterTMCloneTable
+                 w _ITM_registerTMCloneTable
+                 U _Unwind_Resume@GCC_3.0
+0000000000004450 T registered_main()
+0000000000003da0 t DiagonalOnSquare()
+0000000000002742 t DiagonalOnSquare() [clone .cold]
+0000000000007274 b failures
+0000000000004870 W opencascade::handle<GeomAdaptor_Curve>::EndScope()
+0000000000004910 W opencascade::handle<GeomFill_Boundary>::EndScope()
+0000000000004820 W opencascade::handle<Geom_TrimmedCurve>::EndScope()
+00000000000048c0 W opencascade::handle<GeomFill_SimpleBound>::EndScope()
+0000000000002aa0 t (anonymous namespace)::PrintPoint(gp_Pnt const&)
+0000000000002e00 t (anonymous namespace)::Export(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::array<gp_Pnt, 4ul> const&, bool)
+0000000000002659 t (anonymous namespace)::Export(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::array<gp_Pnt, 4ul> const&, bool) [clone .cold]
+0000000000002be0 t (anonymous namespace)::Bound(gp_Pnt const&, gp_Pnt const&)
+00000000000023a0 t (anonymous namespace)::Bound(gp_Pnt const&, gp_Pnt const&) [clone .cold]
+                 U GC_MakeSegment::GC_MakeSegment(gp_Pnt const&, gp_Pnt const&)
+                 U Adaptor3d_Curve::~Adaptor3d_Curve()
+                 U Standard_Failure::Standard_Failure(char const*)
+                 U Standard_Failure::~Standard_Failure()
+                 U GeomAdaptor_Curve::load(opencascade::handle<Geom_Curve> const&, double, double)
+0000000000004500 W Standard_NullObject::~Standard_NullObject()
+00000000000044e0 W Standard_NullObject::~Standard_NullObject()
+00000000000044e0 W Standard_NullObject::~Standard_NullObject()
+                 U GeomFill_SimpleBound::GeomFill_SimpleBound(opencascade::handle<Adaptor3d_Curve> const&, double, double)
+0000000000004520 W Standard_DomainError::~Standard_DomainError()
+00000000000044c0 W Standard_DomainError::~Standard_DomainError()
+00000000000044c0 W Standard_DomainError::~Standard_DomainError()
+                 U GeomFill_CoonsAlgPatch::GeomFill_CoonsAlgPatch(opencascade::handle<GeomFill_Boundary> const&, opencascade::handle<GeomFill_Boundary> const&, opencascade::handle<GeomFill_Boundary> const&, opencascade::handle<GeomFill_Boundary> const&)
+0000000000004600 W GeomFill_CoonsAlgPatch::~GeomFill_CoonsAlgPatch()
+0000000000004540 W GeomFill_CoonsAlgPatch::~GeomFill_CoonsAlgPatch()
+0000000000004540 W GeomFill_CoonsAlgPatch::~GeomFill_CoonsAlgPatch()
+                 U Standard::Free(void*)
+                 U Standard::Allocate(unsigned long)
+                 U GC_MakeSegment::Value() const
+                 U Standard_Failure::what() const
+0000000000004490 W Standard_Transient::Delete() const
+00000000000044b0 W Standard_NullObject::ExceptionType() const
+00000000000044a0 W Standard_DomainError::ExceptionType() const
+                 U GeomFill_CoonsAlgPatch::Value(double, double) const
+                 U std::ostream::put(char)@GLIBCXX_3.4
+                 U std::ostream& std::ostream::_M_insert<double>(double)@GLIBCXX_3.4.9
+                 U std::ostream::operator<<(int)@GLIBCXX_3.4
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()@GLIBCXX_3.4.21
+                 U std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long)@GLIBCXX_3.4.21
+00000000000046d0 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+00000000000046d0 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+                 U std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@GLIBCXX_3.4.9
+                 U std::__throw_logic_error(char const*)@GLIBCXX_3.4
+                 U std::ios_base_library_init()@GLIBCXX_3.4.32
+0000000000007160 B std::cerr@GLIBCXX_3.4
+0000000000007040 B std::cout@GLIBCXX_3.4
+00000000000047c0 W bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
+                 U typeinfo for Standard_Failure
+0000000000006c20 V typeinfo for Standard_NullObject
+0000000000006c08 V typeinfo for Standard_DomainError
+0000000000005130 V typeinfo name for Standard_NullObject
+0000000000005110 V typeinfo name for Standard_DomainError
+0000000000006af0 V vtable for GeomAdaptor_Curve
+0000000000006c68 V vtable for Standard_NullObject
+0000000000006c38 V vtable for Standard_DomainError
+0000000000006ac0 V vtable for GeomFill_CoonsAlgPatch
+                 U vtable for __cxxabiv1::__si_class_type_info@CXXABI_1.3
+00000000000057bc r __FRAME_END__
+00000000000051f0 r __GNU_EH_FRAME_HDR
+0000000000007018 D __TMC_END__
+000000000000038c r __abi_tag
+0000000000007040 B __bss_start
+                 U __cxa_allocate_exception@CXXABI_1.3
+                 w __cxa_finalize@GLIBC_2.2.5
+                 U __cxa_free_exception@CXXABI_1.3
+                 U __cxa_throw@CXXABI_1.3
+0000000000007000 D __data_start
+0000000000002a50 t __do_global_dtors_aux
+0000000000006ab8 d __do_global_dtors_aux_fini_array_entry
+0000000000007008 D __dso_handle
+0000000000006ab0 d __frame_dummy_init_array_entry
+                 w __gmon_start__
+                 U __gxx_personality_v0@CXXABI_1.3
+                 U __libc_start_main@GLIBC_2.34
+                 U __stack_chk_fail@GLIBC_2.4
+0000000000007018 D _edata
+0000000000007278 B _end
+000000000000495c T _fini
+0000000000002000 T _init
+00000000000029b0 T _start
+0000000000007270 b completed.0
+0000000000007000 W data_start
+00000000000029e0 t deregister_tm_clones
+0000000000002a90 t frame_dummy
+0000000000002790 T main
+0000000000002708 t main.cold
+                 U memcmp@GLIBC_2.2.5
+                 U memcpy@GLIBC_2.14
+                 U puts@GLIBC_2.2.5
+0000000000002a10 t register_tm_clones
+                 U strlen@GLIBC_2.2.5

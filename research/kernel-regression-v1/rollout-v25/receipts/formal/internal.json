@@ -1,0 +1,326 @@
+{
+  "protocol": "manifest-suite-v1",
+  "suite": {
+    "id": "occt-32929-version-regression",
+    "version": "1"
+  },
+  "tests": [
+    {
+      "test": "box-fillet-32929",
+      "id": "box-fillet-32929",
+      "status": "passed",
+      "passed": true,
+      "result": {
+        "passed": true,
+        "result": {
+          "protocol": "occt-checkpoint-v1",
+          "checkpoint_id": "box-fillet-32929",
+          "category": "regression",
+          "passed": true,
+          "status": "geometry_pass",
+          "oracle_ran": true,
+          "return_code": 0,
+          "test_done_marker": true,
+          "timed_out": false,
+          "runner_process_return_code": 0,
+          "pending_requirements": [],
+          "elapsed_seconds": null,
+          "raw_result": {
+            "passed": true,
+            "status": "geometry_pass",
+            "checkpoint_id": "box-fillet-32929",
+            "category": "regression",
+            "expected_assertion_ids": [
+              "exact_input_edges",
+              "native",
+              "healthy-1",
+              "healthy-2",
+              "opposite_rejected"
+            ],
+            "observed_assertion_events": [
+              {
+                "status": "PASS",
+                "id": "exact_input_edges",
+                "kind": "expression"
+              },
+              {
+                "status": "PASS",
+                "id": "native",
+                "kind": "expression"
+              },
+              {
+                "status": "PASS",
+                "id": "healthy-1",
+                "kind": "expression"
+              },
+              {
+                "status": "PASS",
+                "id": "healthy-2",
+                "kind": "expression"
+              },
+              {
+                "status": "PASS",
+                "id": "opposite_rejected",
+                "kind": "expression"
+              }
+            ],
+            "missing_assertions": [],
+            "unexpected_assertions": [],
+            "duplicate_assertions": [],
+            "completion_sentinel_count": 1,
+            "summary_pair_valid": true,
+            "expected_geometry_failure_signature_seen": false,
+            "base_runner": {
+              "protocol": "draw_case_oracle_v1",
+              "oracle_scope": "public_script_only",
+              "passed": true,
+              "test_done_marker": true,
+              "tcl_standard_library": {
+                "init_script": "/var/tmp/cad-regression-rollout21.gVVAUAlR/relocated-python/lib/tcl8.6/init.tcl",
+                "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+              },
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 5,
+              "numeric_assertions": 0,
+              "failed_assertions": 0,
+              "tcl_error_detected": false,
+              "expected_oracle_error": false,
+              "infrastructure_tcl_error": false,
+              "occt_error_detected": false,
+              "oracle_summary_found": true,
+              "stdout_tail": "DRAW is running in batch mode\nIn file included from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/NCollection_StlIterator.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/NCollection/NCollection_IndexedDataMap.hxx:23,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/NCollection_IndexedDataMap.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/Standard/Standard_Dump.hxx:17,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/Standard_Dump.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/NCollection/NCollection_Vec2.hxx:20,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/NCollection_Vec2.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/NCollection/NCollection_Vec3.hxx:20,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/NCollection_Vec3.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/NCollection/NCollection_Vec4.hxx:18,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/NCollection_Vec4.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/NCollection/NCollection_Mat4.hxx:19,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/NCollection_Mat4.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/gp/gp_Trsf.hxx:21,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/gp_Trsf.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/BRepAdaptor/BRepAdaptor_Curve.hxx:24,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/BRepAdaptor_Curve.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/build/evaluator/bundle/evaluation/cases/version-regressions/1/m32929-box/location.cxx:1:\n/tmp/manifest-suite-04u4l6vy/source/src/NCollection/NCollection_StlIterator.hxx:30:15: warning: ‘template<class _Category, class _Tp, class _Distance, class _Pointer, class _Reference> struct std::iterator’ is deprecated [-Wdeprecated-declarations]\n   30 |   public std::iterator<Category, ItemType, ptrdiff_t,\n      |               ^~~~~~~~\nIn file included from /usr/include/c++/13/bits/stl_algobase.h:65,\n                 from /usr/include/c++/13/bits/specfun.h:43,\n                 from /usr/include/c++/13/cmath:3699,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/Standard/Standard_Real.hxx:18,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/Standard_Real.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/Standard/Standard_PrimitiveTypes.hxx:25,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/Standard_PrimitiveTypes.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/Standard/Standard_Transient.hxx:20,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/Standard_Transient.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/Standard/Standard.hxx:91,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/Standard.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/BRepAdaptor/BRepAdaptor_Curve.hxx:20:\n/usr/include/c++/13/bits/stl_iterator_base_types.h:127:34: note: declared here\n  127 |     struct _GLIBCXX17_DEPRECATED iterator\n      |                                  ^~~~~~~~\nINPUT target=1 opposite=7\nAXIS native 0.99999999999999978 0.99999999999999978\nMATERIAL native 0.10000000000000001 0.10000000000000001 2 0\nMATERIAL native 0.5 0.5 2 1\nMATERIAL native 0.10000000000000001 9.9000000000000004 2 1\nMATERIAL native 0.5 9.5 2 1\nMATERIAL native 9.9000000000000004 0.10000000000000001 2 1\nMATERIAL native 9.5 0.5 2 1\nMATERIAL native 9.9000000000000004 9.9000000000000004 2 1\nMATERIAL native 9.5 9.5 2 1\nMATERIAL native 0.10000000000000001 0.10000000000000001 5 0\nMATERIAL native 0.5 0.5 5 1\nMATERIAL native 0.10000000000000001 9.9000000000000004 5 1\nMATERIAL native 0.5 9.5 5 1\nMATERIAL native 9.9000000000000004 0.10000000000000001 5 1\nMATERIAL native 9.5 0.5 5 1\nMATERIAL native 9.9000000000000004 9.9000000000000004 5 1\nMATERIAL native 9.5 9.5 5 1\nMATERIAL native 0.10000000000000001 0.10000000000000001 8 0\nMATERIAL native 0.5 0.5 8 1\nMATERIAL native 0.10000000000000001 9.9000000000000004 8 1\nMATERIAL native 0.5 9.5 8 1\nMATERIAL native 9.9000000000000004 0.10000000000000001 8 1\nMATERIAL native 9.5 0.5 8 1\nMATERIAL native 9.9000000000000004 9.9000000000000004 8 1\nMATERIAL native 9.5 9.5 8 1\nMATERIAL native 5 5 5 1\nMATERIAL native -2 5 5 0\nCONTROL native target=1 opposite=0 witnesses=26 wrong_target=0 wrong_opposite=6 area=595.27875959474375 volume=997.85398163397429\nAXIS healthy-1 0.99999999999999978 0.99999999999999978\nMATERIAL healthy-1 0.10000000000000001 0.10000000000000001 2 0\nMATERIAL healthy-1 0.5 0.5 2 1\nMATERIAL healthy-1 0.10000000000000001 9.9000000000000004 2 1\nMATERIAL healthy-1 0.5 9.5 2 1\nMATERIAL healthy-1 9.9000000000000004 0.10000000000000001 2 1\nMATERIAL healthy-1 9.5 0.5 2 1\nMATERIAL healthy-1 9.9000000000000004 9.9000000000000004 2 1\nMATERIAL healthy-1 9.5 9.5 2 1\nMATERIAL healthy-1 0.10000000000000001 0.10000000000000001 5 0\nMATERIAL healthy-1 0.5 0.5 5 1\nMATERIAL healthy-1 0.10000000000000001 9.9000000000000004 5 1\nMATERIAL healthy-1 0.5 9.5 5 1\nMATERIAL healthy-1 9.9000000000000004 0.10000000000000001 5 1\nMATERIAL healthy-1 9.5 0.5 5 1\nMATERIAL healthy-1 9.9000000000000004 9.9000000000000004 5 1\nMATERIAL healthy-1 9.5 9.5 5 1\nMATERIAL healthy-1 0.10000000000000001 0.10000000000000001 8 0\nMATERIAL healthy-1 0.5 0.5 8 1\nMATERIAL healthy-1 0.10000000000000001 9.9000000000000004 8 1\nMATERIAL healthy-1 0.5 9.5 8 1\nMATERIAL healthy-1 9.9000000000000004 0.10000000000000001 8 1\nMATERIAL healthy-1 9.5 0.5 8 1\nMATERIAL healthy-1 9.9000000000000004 9.9000000000000004 8 1\nMATERIAL healthy-1 9.5 9.5 8 1\nMATERIAL healthy-1 5 5 5 1\nMATERIAL healthy-1 -2 5 5 0\nCONTROL healthy-1 target=1 opposite=0 witnesses=26 wrong_target=0 wrong_opposite=6 area=595.27875959474375 volume=997.85398163397429\nAXIS healthy-2 0.99999999999999978 0.99999999999999978\nMATERIAL healthy-2 0.10000000000000001 0.10000000000000001 2 0\nMATERIAL healthy-2 0.5 0.5 2 1\nMATERIAL healthy-2 0.10000000000000001 9.9000000000000004 2 1\nMATERIAL healthy-2 0.5 9.5 2 1\nMATERIAL healthy-2 9.9000000000000004 0.10000000000000001 2 1\nMATERIAL healthy-2 9.5 0.5 2 1\nMATERIAL healthy-2 9.9000000000000004 9.9000000000000004 2 1\nMATERIAL healthy-2 9.5 9.5 2 1\nMATERIAL healthy-2 0.10000000000000001 0.10000000000000001 5 0\nMATERIAL healthy-2 0.5 0.5 5 1\nMATERIAL healthy-2 0.10000000000000001 9.9000000000000004 5 1\nMATERIAL healthy-2 0.5 9.5 5 1\nMATERIAL healthy-2 9.9000000000000004 0.10000000000000001 5 1\nMATERIAL healthy-2 9.5 0.5 5 1\nMATERIAL healthy-2 9.9000000000000004 9.9000000000000004 5 1\nMATERIAL healthy-2 9.5 9.5 5 1\nMATERIAL healthy-2 0.10000000000000001 0.10000000000000001 8 0\nMATERIAL healthy-2 0.5 0.5 8 1\nMATERIAL healthy-2 0.10000000000000001 9.9000000000000004 8 1\nMATERIAL healthy-2 0.5 9.5 8 1\nMATERIAL healthy-2 9.9000000000000004 0.10000000000000001 8 1\nMATERIAL healthy-2 9.5 0.5 8 1\nMATERIAL healthy-2 9.9000000000000004 9.9000000000000004 8 1\nMATERIAL healthy-2 9.5 9.5 8 1\nMATERIAL healthy-2 5 5 5 1\nMATERIAL healthy-2 -2 5 5 0\nCONTROL healthy-2 target=1 opposite=0 witnesses=26 wrong_target=0 wrong_opposite=6 area=595.27875959474375 volume=997.85398163397429\nAXIS opposite 9 9\nMATERIAL opposite 0.10000000000000001 0.10000000000000001 2 1\nMATERIAL opposite 0.5 0.5 2 1\nMATERIAL opposite 0.10000000000000001 9.9000000000000004 2 1\nMATERIAL opposite 0.5 9.5 2 1\nMATERIAL opposite 9.9000000000000004 0.10000000000000001 2 1\nMATERIAL opposite 9.5 0.5 2 1\nMATERIAL opposite 9.9000000000000004 9.9000000000000004 2 0\nMATERIAL opposite 9.5 9.5 2 1\nMATERIAL opposite 0.10000000000000001 0.10000000000000001 5 1\nMATERIAL opposite 0.5 0.5 5 1\nMATERIAL opposite 0.10000000000000001 9.9000000000000004 5 1\nMATERIAL opposite 0.5 9.5 5 1\nMATERIAL opposite 9.9000000000000004 0.10000000000000001 5 1\nMATERIAL opposite 9.5 0.5 5 1\nMATERIAL opposite 9.9000000000000004 9.9000000000000004 5 0\nMATERIAL opposite 9.5 9.5 5 1\nMATERIAL opposite 0.10000000000000001 0.10000000000000001 8 1\nMATERIAL opposite 0.5 0.5 8 1\nMATERIAL opposite 0.10000000000000001 9.9000000000000004 8 1\nMATERIAL opposite 0.5 9.5 8 1\nMATERIAL opposite 9.9000000000000004 0.10000000000000001 8 1\nMATERIAL opposite 9.5 0.5 8 1\nMATERIAL opposite 9.9000000000000004 9.9000000000000004 8 0\nMATERIAL opposite 9.5 9.5 8 1\nMATERIAL opposite 5 5 5 1\nMATERIAL opposite -2 5 5 0\nCONTROL opposite target=0 opposite=1 witnesses=26 wrong_target=6 wrong_opposite=0 area=595.27875959474375 volume=997.85398163397417\nBENCH_ASSERT_PASS exact_input_edges endpoints kind=expression\nBENCH_ASSERT_PASS native geometry kind=expression\nBENCH_ASSERT_PASS healthy-1 geometry kind=expression\nBENCH_ASSERT_PASS healthy-2 geometry kind=expression\nBENCH_ASSERT_PASS opposite_rejected geometry kind=expression\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=5 numeric_assertions=0\nTEST_DONE assertions=5 numeric_assertions=0\n",
+              "stderr_tail": "",
+              "diagnostic_lines": [],
+              "script": "/tmp/manifest-suite-04u4l6vy/build/evaluator/bundle/evaluation/cases/version-regressions/1/m32929-box/check.tcl",
+              "draw_executable": "/tmp/manifest-suite-04u4l6vy/build/lin64/gcc/bin/DRAWEXE-7.5.0",
+              "elapsed_seconds": 0.465
+            },
+            "return_code": 0
+          },
+          "case_sha256": "0036040a57700fe763ae3ff014c74dcf16a030abe7c17ee5a1faa2292937929c",
+          "adapter_sha256": "d2a16988a53f9ec5ba840b5f89d2eead6a1d0d7f936f94cf141f3c0ae60638b7"
+        }
+      },
+      "category": "regression",
+      "visibility": "hidden",
+      "issue_id": "occt-32929",
+      "elapsed_seconds": null
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "box-fillet-32929",
+      "issue_id": "occt-32929",
+      "case": "evaluation/cases/version-regressions/1/m32929-box/check.tcl",
+      "category": "regression",
+      "visibility": "hidden",
+      "required": true,
+      "status": "passed",
+      "elapsed_seconds": null,
+      "evidence": {
+        "passed": true,
+        "result": {
+          "protocol": "occt-checkpoint-v1",
+          "checkpoint_id": "box-fillet-32929",
+          "category": "regression",
+          "passed": true,
+          "status": "geometry_pass",
+          "oracle_ran": true,
+          "return_code": 0,
+          "test_done_marker": true,
+          "timed_out": false,
+          "runner_process_return_code": 0,
+          "pending_requirements": [],
+          "elapsed_seconds": null,
+          "raw_result": {
+            "passed": true,
+            "status": "geometry_pass",
+            "checkpoint_id": "box-fillet-32929",
+            "category": "regression",
+            "expected_assertion_ids": [
+              "exact_input_edges",
+              "native",
+              "healthy-1",
+              "healthy-2",
+              "opposite_rejected"
+            ],
+            "observed_assertion_events": [
+              {
+                "status": "PASS",
+                "id": "exact_input_edges",
+                "kind": "expression"
+              },
+              {
+                "status": "PASS",
+                "id": "native",
+                "kind": "expression"
+              },
+              {
+                "status": "PASS",
+                "id": "healthy-1",
+                "kind": "expression"
+              },
+              {
+                "status": "PASS",
+                "id": "healthy-2",
+                "kind": "expression"
+              },
+              {
+                "status": "PASS",
+                "id": "opposite_rejected",
+                "kind": "expression"
+              }
+            ],
+            "missing_assertions": [],
+            "unexpected_assertions": [],
+            "duplicate_assertions": [],
+            "completion_sentinel_count": 1,
+            "summary_pair_valid": true,
+            "expected_geometry_failure_signature_seen": false,
+            "base_runner": {
+              "protocol": "draw_case_oracle_v1",
+              "oracle_scope": "public_script_only",
+              "passed": true,
+              "test_done_marker": true,
+              "tcl_standard_library": {
+                "init_script": "/var/tmp/cad-regression-rollout21.gVVAUAlR/relocated-python/lib/tcl8.6/init.tcl",
+                "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+              },
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 5,
+              "numeric_assertions": 0,
+              "failed_assertions": 0,
+              "tcl_error_detected": false,
+              "expected_oracle_error": false,
+              "infrastructure_tcl_error": false,
+              "occt_error_detected": false,
+              "oracle_summary_found": true,
+              "stdout_tail": "DRAW is running in batch mode\nIn file included from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/NCollection_StlIterator.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/NCollection/NCollection_IndexedDataMap.hxx:23,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/NCollection_IndexedDataMap.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/Standard/Standard_Dump.hxx:17,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/Standard_Dump.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/NCollection/NCollection_Vec2.hxx:20,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/NCollection_Vec2.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/NCollection/NCollection_Vec3.hxx:20,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/NCollection_Vec3.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/NCollection/NCollection_Vec4.hxx:18,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/NCollection_Vec4.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/NCollection/NCollection_Mat4.hxx:19,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/NCollection_Mat4.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/gp/gp_Trsf.hxx:21,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/gp_Trsf.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/BRepAdaptor/BRepAdaptor_Curve.hxx:24,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/BRepAdaptor_Curve.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/build/evaluator/bundle/evaluation/cases/version-regressions/1/m32929-box/location.cxx:1:\n/tmp/manifest-suite-04u4l6vy/source/src/NCollection/NCollection_StlIterator.hxx:30:15: warning: ‘template<class _Category, class _Tp, class _Distance, class _Pointer, class _Reference> struct std::iterator’ is deprecated [-Wdeprecated-declarations]\n   30 |   public std::iterator<Category, ItemType, ptrdiff_t,\n      |               ^~~~~~~~\nIn file included from /usr/include/c++/13/bits/stl_algobase.h:65,\n                 from /usr/include/c++/13/bits/specfun.h:43,\n                 from /usr/include/c++/13/cmath:3699,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/Standard/Standard_Real.hxx:18,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/Standard_Real.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/Standard/Standard_PrimitiveTypes.hxx:25,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/Standard_PrimitiveTypes.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/Standard/Standard_Transient.hxx:20,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/Standard_Transient.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/Standard/Standard.hxx:91,\n                 from /tmp/manifest-suite-04u4l6vy/build/include/opencascade/Standard.hxx:1,\n                 from /tmp/manifest-suite-04u4l6vy/source/src/BRepAdaptor/BRepAdaptor_Curve.hxx:20:\n/usr/include/c++/13/bits/stl_iterator_base_types.h:127:34: note: declared here\n  127 |     struct _GLIBCXX17_DEPRECATED iterator\n      |                                  ^~~~~~~~\nINPUT target=1 opposite=7\nAXIS native 0.99999999999999978 0.99999999999999978\nMATERIAL native 0.10000000000000001 0.10000000000000001 2 0\nMATERIAL native 0.5 0.5 2 1\nMATERIAL native 0.10000000000000001 9.9000000000000004 2 1\nMATERIAL native 0.5 9.5 2 1\nMATERIAL native 9.9000000000000004 0.10000000000000001 2 1\nMATERIAL native 9.5 0.5 2 1\nMATERIAL native 9.9000000000000004 9.9000000000000004 2 1\nMATERIAL native 9.5 9.5 2 1\nMATERIAL native 0.10000000000000001 0.10000000000000001 5 0\nMATERIAL native 0.5 0.5 5 1\nMATERIAL native 0.10000000000000001 9.9000000000000004 5 1\nMATERIAL native 0.5 9.5 5 1\nMATERIAL native 9.9000000000000004 0.10000000000000001 5 1\nMATERIAL native 9.5 0.5 5 1\nMATERIAL native 9.9000000000000004 9.9000000000000004 5 1\nMATERIAL native 9.5 9.5 5 1\nMATERIAL native 0.10000000000000001 0.10000000000000001 8 0\nMATERIAL native 0.5 0.5 8 1\nMATERIAL native 0.10000000000000001 9.9000000000000004 8 1\nMATERIAL native 0.5 9.5 8 1\nMATERIAL native 9.9000000000000004 0.10000000000000001 8 1\nMATERIAL native 9.5 0.5 8 1\nMATERIAL native 9.9000000000000004 9.9000000000000004 8 1\nMATERIAL native 9.5 9.5 8 1\nMATERIAL native 5 5 5 1\nMATERIAL native -2 5 5 0\nCONTROL native target=1 opposite=0 witnesses=26 wrong_target=0 wrong_opposite=6 area=595.27875959474375 volume=997.85398163397429\nAXIS healthy-1 0.99999999999999978 0.99999999999999978\nMATERIAL healthy-1 0.10000000000000001 0.10000000000000001 2 0\nMATERIAL healthy-1 0.5 0.5 2 1\nMATERIAL healthy-1 0.10000000000000001 9.9000000000000004 2 1\nMATERIAL healthy-1 0.5 9.5 2 1\nMATERIAL healthy-1 9.9000000000000004 0.10000000000000001 2 1\nMATERIAL healthy-1 9.5 0.5 2 1\nMATERIAL healthy-1 9.9000000000000004 9.9000000000000004 2 1\nMATERIAL healthy-1 9.5 9.5 2 1\nMATERIAL healthy-1 0.10000000000000001 0.10000000000000001 5 0\nMATERIAL healthy-1 0.5 0.5 5 1\nMATERIAL healthy-1 0.10000000000000001 9.9000000000000004 5 1\nMATERIAL healthy-1 0.5 9.5 5 1\nMATERIAL healthy-1 9.9000000000000004 0.10000000000000001 5 1\nMATERIAL healthy-1 9.5 0.5 5 1\nMATERIAL healthy-1 9.9000000000000004 9.9000000000000004 5 1\nMATERIAL healthy-1 9.5 9.5 5 1\nMATERIAL healthy-1 0.10000000000000001 0.10000000000000001 8 0\nMATERIAL healthy-1 0.5 0.5 8 1\nMATERIAL healthy-1 0.10000000000000001 9.9000000000000004 8 1\nMATERIAL healthy-1 0.5 9.5 8 1\nMATERIAL healthy-1 9.9000000000000004 0.10000000000000001 8 1\nMATERIAL healthy-1 9.5 0.5 8 1\nMATERIAL healthy-1 9.9000000000000004 9.9000000000000004 8 1\nMATERIAL healthy-1 9.5 9.5 8 1\nMATERIAL healthy-1 5 5 5 1\nMATERIAL healthy-1 -2 5 5 0\nCONTROL healthy-1 target=1 opposite=0 witnesses=26 wrong_target=0 wrong_opposite=6 area=595.27875959474375 volume=997.85398163397429\nAXIS healthy-2 0.99999999999999978 0.99999999999999978\nMATERIAL healthy-2 0.10000000000000001 0.10000000000000001 2 0\nMATERIAL healthy-2 0.5 0.5 2 1\nMATERIAL healthy-2 0.10000000000000001 9.9000000000000004 2 1\nMATERIAL healthy-2 0.5 9.5 2 1\nMATERIAL healthy-2 9.9000000000000004 0.10000000000000001 2 1\nMATERIAL healthy-2 9.5 0.5 2 1\nMATERIAL healthy-2 9.9000000000000004 9.9000000000000004 2 1\nMATERIAL healthy-2 9.5 9.5 2 1\nMATERIAL healthy-2 0.10000000000000001 0.10000000000000001 5 0\nMATERIAL healthy-2 0.5 0.5 5 1\nMATERIAL healthy-2 0.10000000000000001 9.9000000000000004 5 1\nMATERIAL healthy-2 0.5 9.5 5 1\nMATERIAL healthy-2 9.9000000000000004 0.10000000000000001 5 1\nMATERIAL healthy-2 9.5 0.5 5 1\nMATERIAL healthy-2 9.9000000000000004 9.9000000000000004 5 1\nMATERIAL healthy-2 9.5 9.5 5 1\nMATERIAL healthy-2 0.10000000000000001 0.10000000000000001 8 0\nMATERIAL healthy-2 0.5 0.5 8 1\nMATERIAL healthy-2 0.10000000000000001 9.9000000000000004 8 1\nMATERIAL healthy-2 0.5 9.5 8 1\nMATERIAL healthy-2 9.9000000000000004 0.10000000000000001 8 1\nMATERIAL healthy-2 9.5 0.5 8 1\nMATERIAL healthy-2 9.9000000000000004 9.9000000000000004 8 1\nMATERIAL healthy-2 9.5 9.5 8 1\nMATERIAL healthy-2 5 5 5 1\nMATERIAL healthy-2 -2 5 5 0\nCONTROL healthy-2 target=1 opposite=0 witnesses=26 wrong_target=0 wrong_opposite=6 area=595.27875959474375 volume=997.85398163397429\nAXIS opposite 9 9\nMATERIAL opposite 0.10000000000000001 0.10000000000000001 2 1\nMATERIAL opposite 0.5 0.5 2 1\nMATERIAL opposite 0.10000000000000001 9.9000000000000004 2 1\nMATERIAL opposite 0.5 9.5 2 1\nMATERIAL opposite 9.9000000000000004 0.10000000000000001 2 1\nMATERIAL opposite 9.5 0.5 2 1\nMATERIAL opposite 9.9000000000000004 9.9000000000000004 2 0\nMATERIAL opposite 9.5 9.5 2 1\nMATERIAL opposite 0.10000000000000001 0.10000000000000001 5 1\nMATERIAL opposite 0.5 0.5 5 1\nMATERIAL opposite 0.10000000000000001 9.9000000000000004 5 1\nMATERIAL opposite 0.5 9.5 5 1\nMATERIAL opposite 9.9000000000000004 0.10000000000000001 5 1\nMATERIAL opposite 9.5 0.5 5 1\nMATERIAL opposite 9.9000000000000004 9.9000000000000004 5 0\nMATERIAL opposite 9.5 9.5 5 1\nMATERIAL opposite 0.10000000000000001 0.10000000000000001 8 1\nMATERIAL opposite 0.5 0.5 8 1\nMATERIAL opposite 0.10000000000000001 9.9000000000000004 8 1\nMATERIAL opposite 0.5 9.5 8 1\nMATERIAL opposite 9.9000000000000004 0.10000000000000001 8 1\nMATERIAL opposite 9.5 0.5 8 1\nMATERIAL opposite 9.9000000000000004 9.9000000000000004 8 0\nMATERIAL opposite 9.5 9.5 8 1\nMATERIAL opposite 5 5 5 1\nMATERIAL opposite -2 5 5 0\nCONTROL opposite target=0 opposite=1 witnesses=26 wrong_target=6 wrong_opposite=0 area=595.27875959474375 volume=997.85398163397417\nBENCH_ASSERT_PASS exact_input_edges endpoints kind=expression\nBENCH_ASSERT_PASS native geometry kind=expression\nBENCH_ASSERT_PASS healthy-1 geometry kind=expression\nBENCH_ASSERT_PASS healthy-2 geometry kind=expression\nBENCH_ASSERT_PASS opposite_rejected geometry kind=expression\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=5 numeric_assertions=0\nTEST_DONE assertions=5 numeric_assertions=0\n",
+              "stderr_tail": "",
+              "diagnostic_lines": [],
+              "script": "/tmp/manifest-suite-04u4l6vy/build/evaluator/bundle/evaluation/cases/version-regressions/1/m32929-box/check.tcl",
+              "draw_executable": "/tmp/manifest-suite-04u4l6vy/build/lin64/gcc/bin/DRAWEXE-7.5.0",
+              "elapsed_seconds": 0.465
+            },
+            "return_code": 0
+          },
+          "case_sha256": "0036040a57700fe763ae3ff014c74dcf16a030abe7c17ee5a1faa2292937929c",
+          "adapter_sha256": "d2a16988a53f9ec5ba840b5f89d2eead6a1d0d7f936f94cf141f3c0ae60638b7"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Checks are only those declared in this frozen suite; this is not the full upstream test suite."
+  ],
+  "report": {
+    "provided": false
+  },
+  "patch_bytes": 210,
+  "build": {
+    "occt_version": "7.5",
+    "toolkit_cache_variable": "BUILD_ADDITIONAL_TOOLKITS",
+    "configure": {
+      "command": [
+        "cmake",
+        "-S",
+        "/tmp/manifest-suite-04u4l6vy/source",
+        "-B",
+        "/tmp/manifest-suite-04u4l6vy/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_FLAGS_RELEASE=-O0 -DNDEBUG",
+        "-DCMAKE_CXX_FLAGS_RELEASE=-O0 -DNDEBUG",
+        "-DCMAKE_C_COMPILER=gcc",
+        "-DCMAKE_CXX_COMPILER=g++",
+        "-DCMAKE_CXX_FLAGS=-I/tmp/manifest-suite-04u4l6vy/build/compat-include",
+        "-DBUILD_LIBRARY_TYPE=Shared",
+        "-DBUILD_ADDITIONAL_TOOLKITS=TKTopTest;DRAWEXE",
+        "-DBUILD_MODULE_ApplicationFramework=OFF",
+        "-DBUILD_MODULE_DataExchange=OFF",
+        "-DBUILD_MODULE_Draw=OFF",
+        "-DBUILD_MODULE_FoundationClasses=OFF",
+        "-DBUILD_MODULE_ModelingAlgorithms=OFF",
+        "-DBUILD_MODULE_ModelingData=OFF",
+        "-DBUILD_MODULE_Visualization=OFF",
+        "-DUSE_FREETYPE=OFF",
+        "-DUSE_TK=OFF",
+        "-D3RDPARTY_TCL_INCLUDE_DIR=/usr/include/tcl8.6",
+        "-D3RDPARTY_TCL_LIBRARY=/usr/lib/x86_64-linux-gnu/libtcl8.6.so",
+        "-D3RDPARTY_TCL_LIBRARY_DIR=/usr/lib/x86_64-linux-gnu"
+      ],
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.306,
+      "output_tail": "CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):\n  Compatibility with CMake < 3.5 will be removed from a future version of\n  CMake.\n\n  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n  CMake that the project does not need compatibility with older versions.\n\n\n-- The C compiler identification is GNU 13.3.0\n-- The CXX compiler identification is GNU 13.3.0\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /usr/bin/gcc - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/g++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Info. Detecting doxygen\n-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) (Required is at least version \"1.8.4\")\n-- Info: TCL is used by OCCT\n-- Found Tclsh: /bin/tclsh8.6 (found version \"8.6\") \n-- Info: TK is used by OCCT\n-- Info: Freetype is used by OCCT\n-- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version \"2.13.2\") \n-- Info: The directories of 3rdparty headers: \n\t/usr/include/tcl8.6\n\t/usr/include/freetype2\n-- Info: The directories of 3rdparty libraries: \n\t/usr/lib/x86_64-linux-gnu\n-- \nInfo: (13:06:11) Start collecting all OCCT header files into /tmp/manifest-suite-04u4l6vy/build/inc ...\n-- Info: (13:06:11) Compare FILES with files in package directories...\n-- Info: (13:06:12) Create header-links in inc folder...\n-- Info: (13:06:12) Checking headers in inc folder...\n-- Info: (13:06:12) End the collecting\n-- Info: (13:06:12) OCCT toolkits processed\n-- Info: (13:06:12) OCCT configuration files prepared\n-- Configuring done (1.1s)\n-- Generating done (0.1s)\nCMake Warning:\n  Manually-specified variables were not used by the project:\n\n    USE_TK\n\n\n-- Build files have been written to: /tmp/manifest-suite-04u4l6vy/build\n"
+    },
+    "build": {
+      "command": [
+        "cmake",
+        "--build",
+        "/tmp/manifest-suite-04u4l6vy/build",
+        "--target",
+        "DRAWEXE",
+        "TKTopTest",
+        "--parallel",
+        "2"
+      ],
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 499.627,
+      "output_tail": "fset.dir/__/BRepOffsetAPI/BRepOffsetAPI_MiddlePath.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_NormalProjection.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffsetAPI/BRepOffsetAPI_ThruSections.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/Draft/Draft.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/Draft/Draft_EdgeInfo.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/Draft/Draft_FaceInfo.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/Draft/Draft_Modification.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/Draft/Draft_Modification_1.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/Draft/Draft_VertexInfo.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_Analyse.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_Inter2d.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_Inter3d.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_Interval.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_MakeLoops.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_MakeOffset.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_MakeOffset_1.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_MakeSimpleOffset.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_Offset.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_SimpleOffset.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BRepOffset/BRepOffset_Tool.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BiTgte/BiTgte_Blend.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BiTgte/BiTgte_CurveOnEdge.cxx.o\n[ 96%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BiTgte/BiTgte_CurveOnVertex.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BiTgte/BiTgte_HCurveOnEdge_0.cxx.o\n[ 97%] Building CXX object src/TKOffset/CMakeFiles/TKOffset.dir/__/BiTgte/BiTgte_HCurveOnVertex_0.cxx.o\n[ 97%] Linking CXX shared library ../../lin64/gcc/lib/libTKOffset.so\n[ 97%] Built target TKOffset\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_BasicCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_ChamferCommands.cxx.o\n/tmp/manifest-suite-04u4l6vy/source/src/BRepTest/BRepTest_BasicCommands.cxx: In function ‘Standard_Integer findplane(Draw_Interpretor&, Standard_Integer, const char**)’:\n/tmp/manifest-suite-04u4l6vy/source/src/BRepTest/BRepTest_BasicCommands.cxx:931:34: warning: possibly dangling reference to a temporary [-Wdangling-reference]\n  931 |     const Handle(Geom_Geometry)& aSurf = a_plane_finder.Plane(); // to avoid ambiguity\n      |                                  ^~~~~\n/tmp/manifest-suite-04u4l6vy/source/src/BRepTest/BRepTest_BasicCommands.cxx:931:63: note: the temporary was destroyed at the end of the full expression ‘BRepBuilderAPI_FindPlane::Plane() const().opencascade::handle<Geom_Plane>::operator opencascade::handle<Geom_Geometry>&<Geom_Geometry>()’\n  931 |     const Handle(Geom_Geometry)& aSurf = a_plane_finder.Plane(); // to avoid ambiguity\n      |                                                               ^\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_CheckCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_CurveCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_DraftAngleCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_DrawableHistory.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_ExtremaCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_FeatureCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_Fillet2DCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_FilletCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_FillingCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_GPropCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_HistoryCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_MatCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_Objects.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_OtherCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_PrimitiveCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_ProjectionCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_SurfaceCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_SweepCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BRepTest/BRepTest_TopologyCommands.cxx.o\n[ 97%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_APICommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_ConstraintCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_ContinuityCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_CurveCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_CurveTanCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_DrawableQualifiedCurve2d.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_FairCurveCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_PolyCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_SurfaceCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeometryTest/GeometryTest_TestProjCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/HLRTest/HLRTest.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/HLRTest/HLRTest_DrawableEdgeTool.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/HLRTest/HLRTest_DrawablePolyEdgeTool.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/HLRTest/HLRTest_OutLiner.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/HLRTest/HLRTest_Projector.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/HLRTest/HLRTest_ShapeData.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/MeshTest/MeshTest.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/MeshTest/MeshTest_CheckTopology.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/MeshTest/MeshTest_PluginCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/MeshTest/MeshTest_Debug.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeomliteTest/GeomliteTest.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeomliteTest/GeomliteTest_API2dCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeomliteTest/GeomliteTest_ApproxCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeomliteTest/GeomliteTest_CurveCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeomliteTest/GeomliteTest_ModificationCommands.cxx.o\n[ 98%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/GeomliteTest/GeomliteTest_SurfaceCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/DrawFairCurve/DrawFairCurve_Batten.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/DrawFairCurve/DrawFairCurve_MinimalVariation.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_APICommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_BOPCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_CheckCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_DrawableShape.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_LowCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_MkConnectedCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_ObjCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_Objects.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_OptionCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_PartitionCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_PeriodicityCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_TolerCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_DebugCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_CellsCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_RemoveFeaturesCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/BOPTest/BOPTest_UtilityCommands.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeAnalysis.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeCustom.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeExtend.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeFix.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeProcess.cxx.o\n[ 99%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeProcessAPI.cxx.o\n[100%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeTool.cxx.o\n[100%] Building CXX object src/TKTopTest/CMakeFiles/TKTopTest.dir/__/SWDRAW/SWDRAW_ShapeUpgrade.cxx.o\n[100%] Linking CXX shared library ../../lin64/gcc/lib/libTKTopTest.so\n[100%] Built target TKTopTest\n"
+    },
+    "build_compatibility": [
+      "build-only xlocale.h forwarding to locale.h"
+    ],
+    "build_tree_aliases": []
+  },
+  "elapsed_seconds": 502.496,
+  "passed": true,
+  "evaluation_suites": [
+    {
+      "id": "occt-32929-version-regression",
+      "version": "1"
+    }
+  ],
+  "category_summary": {
+    "original": {
+      "declared": 0,
+      "executed": 0,
+      "passed": 0,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "state": "未配置"
+    },
+    "neighborhood": {
+      "declared": 0,
+      "executed": 0,
+      "passed": 0,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "state": "未配置"
+    },
+    "regression": {
+      "declared": 1,
+      "executed": 1,
+      "passed": 1,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "state": "configured"
+    }
+  },
+  "technical_passed": true
+}

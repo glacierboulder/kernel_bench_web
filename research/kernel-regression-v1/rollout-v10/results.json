@@ -1,0 +1,3095 @@
+{
+  "lines": {
+    "source": {
+      "source_id": "occt-single20-m24313-78b6b239841f",
+      "commit": "78b6b239841fdbe47b9cf51493739def58c01848",
+      "materialized_tree_sha256": "793845f1abc97f49cbf4570663181ff195688429c8f84e3b65399d52d59eac89",
+      "toolchain": "occt-v4-clang10-o0-tcl86",
+      "toolchain_config": {
+        "path": "toolchains/occt-v4-clang10-o0-tcl86.json",
+        "sha256": "6c1675f2f34f07dd5945a9782f3835878e74bfc97838eb6ccc22a6f9a0d855e3"
+      },
+      "build_entry": {
+        "path": "tools/occt-v4-clang10-o0/build.sh",
+        "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/identity.json",
+      "sha256": "7906ea4913356e32b57df78d8467dad4cf8eb71553aabec7b010f12125c3d2f1"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/runtime.json",
+      "sha256": "eab372aa0c957917f60f79c5d86b68203aa171d975c22c03f41d3cf922d43eeb"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/core-1.json",
+          "sha256": "21fccc2badc3e5ac7fab5a21b74bf2eee31b7ff58f80adc29c1dd5252512f2c0"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/core-2.json",
+          "sha256": "89bd2b10c85a7683d7be09a928a8bb63380f6d373cdcf864c9d56fd21c707330"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "independent_status": "CALIBRATED",
+    "registered_baseline": {
+      "status": "geometry_pass",
+      "passed": true,
+      "assertions": {
+        "operation_completed": "PASS",
+        "branch_count": "PASS",
+        "support_residual": "PASS",
+        "domain_coverage": "PASS"
+      },
+      "log": {
+        "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/registered.log",
+        "sha256": "4601a594289acda87a68bf317b9b7d926e95e213447e380080686e27deaf83e7"
+      }
+    },
+    "controls": {
+      "healthy-1": {
+        "registered": {
+          "status": "geometry_pass",
+          "passed": true,
+          "assertions": {
+            "operation_completed": "PASS",
+            "branch_count": "PASS",
+            "support_residual": "PASS",
+            "domain_coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-1.log",
+            "sha256": "4601a594289acda87a68bf317b9b7d926e95e213447e380080686e27deaf83e7"
+          }
+        },
+        "independent": "PASS",
+        "geometry": {
+          "native": {
+            "branches": {
+              "-100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      -100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        1.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              },
+              "100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        2.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        2.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              }
+            },
+            "distinct_loci": 2,
+            "full": true,
+            "input_domains": [
+              [
+                1.0,
+                0.0,
+                6.283185307179586,
+                -2e+100,
+                2e+100
+              ],
+              [
+                2.0,
+                -2e+100,
+                2e+100,
+                -2e+100,
+                2e+100
+              ]
+            ],
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-1-read-native.log",
+              "sha256": "8577078ede86f9af16f7a5061d0a2e0524007ffce746cf5175982c4c814c442c"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-1-native.brep",
+              "sha256": "407edd8114a875b8f6a9248e0bc21deafe79aca655e1aa62646d7b02efe97bf2"
+            }
+          },
+          "submitted": {
+            "branches": {
+              "-100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      -100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        1.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              },
+              "100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        2.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        2.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              }
+            },
+            "distinct_loci": 2,
+            "full": true,
+            "input_domains": [
+              [
+                1.0,
+                0.0,
+                6.283185307179586,
+                -2e+100,
+                2e+100
+              ],
+              [
+                2.0,
+                -2e+100,
+                2e+100,
+                -2e+100,
+                2e+100
+              ]
+            ],
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-1-read-submitted.log",
+              "sha256": "8577078ede86f9af16f7a5061d0a2e0524007ffce746cf5175982c4c814c442c"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-1-submitted.brep",
+              "sha256": "407edd8114a875b8f6a9248e0bc21deafe79aca655e1aa62646d7b02efe97bf2"
+            }
+          }
+        },
+        "input_faces": [
+          {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-1-cylinder.brep",
+            "sha256": "71efec6c67c099bb8da0b7e11165c975121f3dbe4902985d20a0c6854f140a6b"
+          },
+          {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-1-plane.brep",
+            "sha256": "7c852c74bc9639ac4acd074e9175af02c448a5c9d7b12943c6a1a90add3e6707"
+          }
+        ],
+        "injection_verified": null
+      },
+      "healthy-2": {
+        "registered": {
+          "status": "geometry_pass",
+          "passed": true,
+          "assertions": {
+            "operation_completed": "PASS",
+            "branch_count": "PASS",
+            "support_residual": "PASS",
+            "domain_coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-2.log",
+            "sha256": "4601a594289acda87a68bf317b9b7d926e95e213447e380080686e27deaf83e7"
+          }
+        },
+        "independent": "PASS",
+        "geometry": {
+          "native": {
+            "branches": {
+              "-100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      -100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        1.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              },
+              "100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        2.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        2.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              }
+            },
+            "distinct_loci": 2,
+            "full": true,
+            "input_domains": [
+              [
+                1.0,
+                0.0,
+                6.283185307179586,
+                -2e+100,
+                2e+100
+              ],
+              [
+                2.0,
+                -2e+100,
+                2e+100,
+                -2e+100,
+                2e+100
+              ]
+            ],
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-2-read-native.log",
+              "sha256": "8577078ede86f9af16f7a5061d0a2e0524007ffce746cf5175982c4c814c442c"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-2-native.brep",
+              "sha256": "407edd8114a875b8f6a9248e0bc21deafe79aca655e1aa62646d7b02efe97bf2"
+            }
+          },
+          "submitted": {
+            "branches": {
+              "-100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      -100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        1.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              },
+              "100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        2.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        2.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              }
+            },
+            "distinct_loci": 2,
+            "full": true,
+            "input_domains": [
+              [
+                1.0,
+                0.0,
+                6.283185307179586,
+                -2e+100,
+                2e+100
+              ],
+              [
+                2.0,
+                -2e+100,
+                2e+100,
+                -2e+100,
+                2e+100
+              ]
+            ],
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-2-read-submitted.log",
+              "sha256": "8577078ede86f9af16f7a5061d0a2e0524007ffce746cf5175982c4c814c442c"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-2-submitted.brep",
+              "sha256": "407edd8114a875b8f6a9248e0bc21deafe79aca655e1aa62646d7b02efe97bf2"
+            }
+          }
+        },
+        "input_faces": [
+          {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-2-cylinder.brep",
+            "sha256": "71efec6c67c099bb8da0b7e11165c975121f3dbe4902985d20a0c6854f140a6b"
+          },
+          {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/healthy-2-plane.brep",
+            "sha256": "7c852c74bc9639ac4acd074e9175af02c448a5c9d7b12943c6a1a90add3e6707"
+          }
+        ],
+        "injection_verified": null
+      },
+      "duplicate": {
+        "registered": {
+          "status": "geometry_fail",
+          "passed": false,
+          "assertions": {
+            "operation_completed": "PASS",
+            "branch_count": "PASS",
+            "support_residual": "PASS",
+            "domain_coverage": "FAIL"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/duplicate.log",
+            "sha256": "8db3c96bddf4976932c56dc1ee346105d7d9498c422b8084153987dd198afcd8"
+          }
+        },
+        "independent": "FAIL",
+        "geometry": {
+          "native": {
+            "branches": {
+              "-100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      -100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        1.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              },
+              "100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        2.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        2.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              }
+            },
+            "distinct_loci": 2,
+            "full": true,
+            "input_domains": [
+              [
+                1.0,
+                0.0,
+                6.283185307179586,
+                -2e+100,
+                2e+100
+              ],
+              [
+                2.0,
+                -2e+100,
+                2e+100,
+                -2e+100,
+                2e+100
+              ]
+            ],
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/duplicate-read-native.log",
+              "sha256": "8577078ede86f9af16f7a5061d0a2e0524007ffce746cf5175982c4c814c442c"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/duplicate-native.brep",
+              "sha256": "407edd8114a875b8f6a9248e0bc21deafe79aca655e1aa62646d7b02efe97bf2"
+            }
+          },
+          "submitted": {
+            "branches": {
+              "-100": {
+                "present": false,
+                "edges": [],
+                "complete": false,
+                "z_intervals": []
+              },
+              "100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        1.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  },
+                  {
+                    "origin": [
+                      0.0,
+                      100.0,
+                      37.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      -1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        2.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        2.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              }
+            },
+            "distinct_loci": 1,
+            "full": false,
+            "input_domains": [
+              [
+                1.0,
+                0.0,
+                6.283185307179586,
+                -2e+100,
+                2e+100
+              ],
+              [
+                2.0,
+                -2e+100,
+                2e+100,
+                -2e+100,
+                2e+100
+              ]
+            ],
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/duplicate-read-submitted.log",
+              "sha256": "4a572dfce93ded383f5b0dee2576c5231ea28bff9ce1839fc1406a0f60dd0e9f"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/duplicate-submitted.brep",
+              "sha256": "04d231bf8ba203237bdb719288c6eed2b2aa9828e045d29d079514fc4065c170"
+            }
+          }
+        },
+        "input_faces": [
+          {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/duplicate-cylinder.brep",
+            "sha256": "71efec6c67c099bb8da0b7e11165c975121f3dbe4902985d20a0c6854f140a6b"
+          },
+          {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/duplicate-plane.brep",
+            "sha256": "7c852c74bc9639ac4acd074e9175af02c448a5c9d7b12943c6a1a90add3e6707"
+          }
+        ],
+        "injection_verified": true
+      },
+      "far-trim": {
+        "registered": {
+          "status": "geometry_pass",
+          "passed": true,
+          "assertions": {
+            "operation_completed": "PASS",
+            "branch_count": "PASS",
+            "support_residual": "PASS",
+            "domain_coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/far-trim.log",
+            "sha256": "4601a594289acda87a68bf317b9b7d926e95e213447e380080686e27deaf83e7"
+          }
+        },
+        "independent": "FAIL",
+        "geometry": {
+          "native": {
+            "branches": {
+              "-100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      -100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        1.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              },
+              "100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        2.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        2.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              }
+            },
+            "distinct_loci": 2,
+            "full": true,
+            "input_domains": [
+              [
+                1.0,
+                0.0,
+                6.283185307179586,
+                -2e+100,
+                2e+100
+              ],
+              [
+                2.0,
+                -2e+100,
+                2e+100,
+                -2e+100,
+                2e+100
+              ]
+            ],
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/far-trim-read-native.log",
+              "sha256": "8577078ede86f9af16f7a5061d0a2e0524007ffce746cf5175982c4c814c442c"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/far-trim-native.brep",
+              "sha256": "407edd8114a875b8f6a9248e0bc21deafe79aca655e1aa62646d7b02efe97bf2"
+            }
+          },
+          "submitted": {
+            "branches": {
+              "-100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      -100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      2e+100
+                    ],
+                    "lower_z": null,
+                    "upper_z": null,
+                    "end_records": [
+                      [
+                        2.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        2.0,
+                        1.0,
+                        1.0,
+                        1.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": true,
+                "z_intervals": [
+                  [
+                    null,
+                    null
+                  ]
+                ]
+              },
+              "100": {
+                "present": true,
+                "edges": [
+                  {
+                    "origin": [
+                      0.0,
+                      100.0,
+                      0.0
+                    ],
+                    "direction": [
+                      0.0,
+                      0.0,
+                      1.0
+                    ],
+                    "range": [
+                      -2e+100,
+                      20000000000.0
+                    ],
+                    "lower_z": null,
+                    "upper_z": 20000000000.0,
+                    "end_records": [
+                      [
+                        1.0,
+                        0.0,
+                        1.0,
+                        1.0
+                      ],
+                      [
+                        1.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        100.0,
+                        20000000000.0
+                      ]
+                    ]
+                  }
+                ],
+                "complete": false,
+                "z_intervals": [
+                  [
+                    null,
+                    20000000000.0
+                  ]
+                ]
+              }
+            },
+            "distinct_loci": 2,
+            "full": false,
+            "input_domains": [
+              [
+                1.0,
+                0.0,
+                6.283185307179586,
+                -2e+100,
+                2e+100
+              ],
+              [
+                2.0,
+                -2e+100,
+                2e+100,
+                -2e+100,
+                2e+100
+              ]
+            ],
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/far-trim-read-submitted.log",
+              "sha256": "ded9894a81b2a56f498437f73bb22fcbad9727830af217f6ff879292828585e2"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/far-trim-submitted.brep",
+              "sha256": "af55b5d84187d74512caac4492f792736c22c6ce76fb23b705bde5ef36744cbd"
+            }
+          }
+        },
+        "input_faces": [
+          {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/far-trim-cylinder.brep",
+            "sha256": "71efec6c67c099bb8da0b7e11165c975121f3dbe4902985d20a0c6854f140a6b"
+          },
+          {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/far-trim-plane.brep",
+            "sha256": "7c852c74bc9639ac4acd074e9175af02c448a5c9d7b12943c6a1a90add3e6707"
+          }
+        ],
+        "injection_verified": true
+      }
+    },
+    "previous_healthy": {
+      "path": "research/kernel-regression-v1/rollout-v10/receipts/lines/frozen-result.json",
+      "sha256": "f67bba1d4a4d196338efe375c8b82537e7c2b61463d4b557f6480a682aff9149"
+    },
+    "independent_scope": "Unbounded cylindrical and axial planar faces. Two unique line loci, each with connected coverage of the entire real z axis."
+  },
+  "guide": {
+    "source": {
+      "source_id": "occt801-b8f597c67781-periodic-fillet",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "toolchain": "occt1115-periodic-fillet-gcc",
+      "toolchain_config": {
+        "path": "toolchains/occt1115-periodic-fillet-gcc.json",
+        "sha256": "1346fc507e7d3a79dd4733409bc9e2b753a7a3023a988a97ad7e5411a5152b43"
+      },
+      "build_entry": {
+        "path": "tools/occt1115-periodic-fillet-gcc/build.sh",
+        "sha256": "38432f6b5049118f1e52cb11c70563eb6a6349daebfc8f7ea858bfa4d1e15713"
+      },
+      "declared_public_targets": [
+        "TKBool",
+        "TKFillet",
+        "TKOffset"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/identity.json",
+      "sha256": "3b24ab27e9f96b9ef4deb911074e168e94ad25f14c7265059db898bb0645b76c"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/runtime.json",
+      "sha256": "a53a5d173cc498fec58a8497d6104ba90d5a86a4c6b558ce47a1d19236c835d3"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/core-1.json",
+          "sha256": "d5d02ac2f7dc3b0e7b6126c4a47c436ead1db0d29c5593189a297befd645eaca"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/core-2.json",
+          "sha256": "e7f31ba1181334584e4b7018f67d2306ce87a6fea39580f02db4ef5a6be0d525"
+        }
+      ],
+      "native_attempt": {
+        "checks": {
+          "box-common": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "disjoint": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "cut-fuse": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "plane-sphere": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "hole-classification": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "brep-roundtrip": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          }
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/core-native.json",
+          "sha256": "bc63dee3a2df473f2f71c41c07a4a13043980ba3ea180fd60fc4c0dc290908a7"
+        },
+        "status": "BLOCKED"
+      },
+      "geometry_profile": "Unchanged probe and thresholds with the locked OCCT 8 TopExp argument type alias supplied at compilation.",
+      "compatibility_header": {
+        "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/alias.hxx",
+        "sha256": "110706bfa4815f78a0a105fa6a3e7cf70833586030d873ca9221211525fc6684"
+      }
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "registered_baseline": {
+      "passed": true,
+      "output": "verdict=pass\n",
+      "receipt": {
+        "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/registered.json",
+        "sha256": "828d8a2c0127ff562ee4ac037ff3b81eab3c4b443e2949688483fbb60b7ec190"
+      }
+    },
+    "independent_status": "CALIBRATED",
+    "controls": {
+      "healthy-1": {
+        "registered": {
+          "passed": true,
+          "output": "verdict=pass\n",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/healthy-1-registered.json",
+            "sha256": "da32339a0c33e03e5d06ec68e3efaf91d9f3b2c9151155eff55837513efe8d65"
+          }
+        },
+        "input": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/healthy-1-input.brep",
+          "sha256": "5dcd56a80ea89f3af06473d0857fff546f97d40c2ada785f5d46637eb8d9c4be"
+        },
+        "geometry": {
+          "native": {
+            "periodic": true,
+            "closed_flag": true,
+            "same_vertex": true,
+            "degree": 6,
+            "first_multiplicity": 6,
+            "range": [
+              0.0,
+              125.663706143592
+            ],
+            "start": [
+              19.999999999999996,
+              -2.220446049250313e-15,
+              0.0
+            ],
+            "end": [
+              20.0,
+              2.6634419883878585e-13,
+              0.0
+            ],
+            "endpoint_distance": 2.685881424380467e-13,
+            "physical_closed": true,
+            "fit_center": [
+              0,
+              0,
+              0
+            ],
+            "all_spans_certified": [
+              {
+                "t": [
+                  0.0,
+                  31.415926535897757
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730144478,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  31.415926535897757,
+                  62.83185307179562
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181329248,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  62.83185307179562,
+                  94.24777960769362
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181327458,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  94.24777960769362,
+                  125.66370614359172
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730119207,
+                "plane_bound": 0.0
+              }
+            ],
+            "maximum_radial_bound": 0.028624954181329248,
+            "maximum_plane_bound": 0.0,
+            "max_join_error": 0.0,
+            "internal_tangent_angles_rad": [
+              8.283039504820624e-30,
+              6.813976169889436e-16,
+              8.67746995743113e-30
+            ],
+            "seam_tangent_angle_rad": 4.6512484100211504e-15,
+            "winding_angle": 6.283185307179586,
+            "missing_world_angles_about_fit_center": [],
+            "nominal_radius_error_lower_bound": 0.014270605832329863,
+            "cardinal_displacements": [
+              4.189529226675416e-15,
+              1.802822846389327e-14,
+              1.5011331087223234e-14,
+              1.8299626230221374e-14
+            ],
+            "center_position": "PASS",
+            "radial_fit": "FAIL",
+            "witnessed_radius_error": {
+              "parameter": 82.46680715673187,
+              "point": [
+                -11.096240034000967,
+                -16.622359535418905,
+                0.0
+              ],
+              "radial_error": 0.014270605832329863
+            },
+            "direct_receipt": "healthy-1-direct.log",
+            "max_direct_decomposition_difference": 1.517719948885615e-14,
+            "complete_at_fit_center": true,
+            "independent": "FAIL",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/healthy-1-read-native.log",
+              "sha256": "f23b065c517dc3fe145bed88fe49eef9b569d6ed8b63a8f62e6e5bfd69d3fd00"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/healthy-1-native.brep",
+              "sha256": "00d847bb19e857c226a284be88af3ff59cf12f1ba72b8d4e8741123fddf6f3a0"
+            }
+          },
+          "result": {
+            "periodic": true,
+            "closed_flag": true,
+            "same_vertex": true,
+            "degree": 6,
+            "first_multiplicity": 6,
+            "range": [
+              0.0,
+              125.663706143592
+            ],
+            "start": [
+              19.999999999999996,
+              -2.220446049250313e-15,
+              0.0
+            ],
+            "end": [
+              20.0,
+              2.6634419883878585e-13,
+              0.0
+            ],
+            "endpoint_distance": 2.685881424380467e-13,
+            "physical_closed": true,
+            "fit_center": [
+              0,
+              0,
+              0
+            ],
+            "all_spans_certified": [
+              {
+                "t": [
+                  0.0,
+                  31.415926535897757
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730144478,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  31.415926535897757,
+                  62.83185307179562
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181329248,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  62.83185307179562,
+                  94.24777960769362
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181327458,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  94.24777960769362,
+                  125.66370614359172
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730119207,
+                "plane_bound": 0.0
+              }
+            ],
+            "maximum_radial_bound": 0.028624954181329248,
+            "maximum_plane_bound": 0.0,
+            "max_join_error": 0.0,
+            "internal_tangent_angles_rad": [
+              8.283039504820624e-30,
+              6.813976169889436e-16,
+              8.67746995743113e-30
+            ],
+            "seam_tangent_angle_rad": 4.6512484100211504e-15,
+            "winding_angle": 6.283185307179586,
+            "missing_world_angles_about_fit_center": [],
+            "nominal_radius_error_lower_bound": 0.014270605832329863,
+            "cardinal_displacements": [
+              4.189529226675416e-15,
+              1.802822846389327e-14,
+              1.5011331087223234e-14,
+              1.8299626230221374e-14
+            ],
+            "center_position": "PASS",
+            "radial_fit": "FAIL",
+            "witnessed_radius_error": {
+              "parameter": 82.46680715673187,
+              "point": [
+                -11.096240034000967,
+                -16.622359535418905,
+                0.0
+              ],
+              "radial_error": 0.014270605832329863
+            },
+            "direct_receipt": "healthy-1-direct.log",
+            "max_direct_decomposition_difference": 1.517719948885615e-14,
+            "complete_at_fit_center": true,
+            "independent": "FAIL",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/healthy-1-read-result.log",
+              "sha256": "f23b065c517dc3fe145bed88fe49eef9b569d6ed8b63a8f62e6e5bfd69d3fd00"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/healthy-1-result.brep",
+              "sha256": "00d847bb19e857c226a284be88af3ff59cf12f1ba72b8d4e8741123fddf6f3a0"
+            }
+          }
+        },
+        "injection_verified": null
+      },
+      "healthy-2": {
+        "registered": {
+          "passed": true,
+          "output": "verdict=pass\n",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/healthy-2-registered.json",
+            "sha256": "d809bef6abfc636d1edb2eb30c58c9760ee08adc478fefa02899599fbc8b7e0a"
+          }
+        },
+        "input": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/healthy-2-input.brep",
+          "sha256": "5dcd56a80ea89f3af06473d0857fff546f97d40c2ada785f5d46637eb8d9c4be"
+        },
+        "geometry": {
+          "native": {
+            "periodic": true,
+            "closed_flag": true,
+            "same_vertex": true,
+            "degree": 6,
+            "first_multiplicity": 6,
+            "range": [
+              0.0,
+              125.663706143592
+            ],
+            "start": [
+              19.999999999999996,
+              -2.220446049250313e-15,
+              0.0
+            ],
+            "end": [
+              20.0,
+              2.6634419883878585e-13,
+              0.0
+            ],
+            "endpoint_distance": 2.685881424380467e-13,
+            "physical_closed": true,
+            "fit_center": [
+              0,
+              0,
+              0
+            ],
+            "all_spans_certified": [
+              {
+                "t": [
+                  0.0,
+                  31.415926535897757
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730144478,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  31.415926535897757,
+                  62.83185307179562
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181329248,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  62.83185307179562,
+                  94.24777960769362
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181327458,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  94.24777960769362,
+                  125.66370614359172
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730119207,
+                "plane_bound": 0.0
+              }
+            ],
+            "maximum_radial_bound": 0.028624954181329248,
+            "maximum_plane_bound": 0.0,
+            "max_join_error": 0.0,
+            "internal_tangent_angles_rad": [
+              8.283039504820624e-30,
+              6.813976169889436e-16,
+              8.67746995743113e-30
+            ],
+            "seam_tangent_angle_rad": 4.6512484100211504e-15,
+            "winding_angle": 6.283185307179586,
+            "missing_world_angles_about_fit_center": [],
+            "nominal_radius_error_lower_bound": 0.014270605832329863,
+            "cardinal_displacements": [
+              4.189529226675416e-15,
+              1.802822846389327e-14,
+              1.5011331087223234e-14,
+              1.8299626230221374e-14
+            ],
+            "center_position": "PASS",
+            "radial_fit": "FAIL",
+            "witnessed_radius_error": {
+              "parameter": 82.46680715673187,
+              "point": [
+                -11.096240034000967,
+                -16.622359535418905,
+                0.0
+              ],
+              "radial_error": 0.014270605832329863
+            },
+            "direct_receipt": "healthy-1-direct.log",
+            "max_direct_decomposition_difference": 1.517719948885615e-14,
+            "complete_at_fit_center": true,
+            "independent": "FAIL",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/healthy-2-read-native.log",
+              "sha256": "f23b065c517dc3fe145bed88fe49eef9b569d6ed8b63a8f62e6e5bfd69d3fd00"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/healthy-2-native.brep",
+              "sha256": "00d847bb19e857c226a284be88af3ff59cf12f1ba72b8d4e8741123fddf6f3a0"
+            }
+          },
+          "result": {
+            "periodic": true,
+            "closed_flag": true,
+            "same_vertex": true,
+            "degree": 6,
+            "first_multiplicity": 6,
+            "range": [
+              0.0,
+              125.663706143592
+            ],
+            "start": [
+              19.999999999999996,
+              -2.220446049250313e-15,
+              0.0
+            ],
+            "end": [
+              20.0,
+              2.6634419883878585e-13,
+              0.0
+            ],
+            "endpoint_distance": 2.685881424380467e-13,
+            "physical_closed": true,
+            "fit_center": [
+              0,
+              0,
+              0
+            ],
+            "all_spans_certified": [
+              {
+                "t": [
+                  0.0,
+                  31.415926535897757
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730144478,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  31.415926535897757,
+                  62.83185307179562
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181329248,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  62.83185307179562,
+                  94.24777960769362
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181327458,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  94.24777960769362,
+                  125.66370614359172
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730119207,
+                "plane_bound": 0.0
+              }
+            ],
+            "maximum_radial_bound": 0.028624954181329248,
+            "maximum_plane_bound": 0.0,
+            "max_join_error": 0.0,
+            "internal_tangent_angles_rad": [
+              8.283039504820624e-30,
+              6.813976169889436e-16,
+              8.67746995743113e-30
+            ],
+            "seam_tangent_angle_rad": 4.6512484100211504e-15,
+            "winding_angle": 6.283185307179586,
+            "missing_world_angles_about_fit_center": [],
+            "nominal_radius_error_lower_bound": 0.014270605832329863,
+            "cardinal_displacements": [
+              4.189529226675416e-15,
+              1.802822846389327e-14,
+              1.5011331087223234e-14,
+              1.8299626230221374e-14
+            ],
+            "center_position": "PASS",
+            "radial_fit": "FAIL",
+            "witnessed_radius_error": {
+              "parameter": 82.46680715673187,
+              "point": [
+                -11.096240034000967,
+                -16.622359535418905,
+                0.0
+              ],
+              "radial_error": 0.014270605832329863
+            },
+            "direct_receipt": "healthy-2-direct.log",
+            "max_direct_decomposition_difference": 1.517719948885615e-14,
+            "complete_at_fit_center": true,
+            "independent": "FAIL",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/healthy-2-read-result.log",
+              "sha256": "f23b065c517dc3fe145bed88fe49eef9b569d6ed8b63a8f62e6e5bfd69d3fd00"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/healthy-2-result.brep",
+              "sha256": "00d847bb19e857c226a284be88af3ff59cf12f1ba72b8d4e8741123fddf6f3a0"
+            }
+          }
+        },
+        "injection_verified": null
+      },
+      "seam": {
+        "registered": {
+          "passed": false,
+          "output": "286 failed: (aCurve->Multiplicity(1))==(aCurve->Degree()) An exact periodic guide must retain the OCC22163 guarded behavior\nverdict=fail\n",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/seam-registered.json",
+            "sha256": "2b48b987a166df5765434431484408e92e5dbb07f3029c4e6e0685d259d737ed"
+          }
+        },
+        "input": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/seam-input.brep",
+          "sha256": "5dcd56a80ea89f3af06473d0857fff546f97d40c2ada785f5d46637eb8d9c4be"
+        },
+        "geometry": {
+          "native": {
+            "periodic": true,
+            "closed_flag": true,
+            "same_vertex": true,
+            "degree": 6,
+            "first_multiplicity": 6,
+            "range": [
+              0.0,
+              125.663706143592
+            ],
+            "start": [
+              19.999999999999996,
+              -2.220446049250313e-15,
+              0.0
+            ],
+            "end": [
+              20.0,
+              2.6634419883878585e-13,
+              0.0
+            ],
+            "endpoint_distance": 2.685881424380467e-13,
+            "physical_closed": true,
+            "fit_center": [
+              0,
+              0,
+              0
+            ],
+            "all_spans_certified": [
+              {
+                "t": [
+                  0.0,
+                  31.415926535897757
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730144478,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  31.415926535897757,
+                  62.83185307179562
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181329248,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  62.83185307179562,
+                  94.24777960769362
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181327458,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  94.24777960769362,
+                  125.66370614359172
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730119207,
+                "plane_bound": 0.0
+              }
+            ],
+            "maximum_radial_bound": 0.028624954181329248,
+            "maximum_plane_bound": 0.0,
+            "max_join_error": 0.0,
+            "internal_tangent_angles_rad": [
+              8.283039504820624e-30,
+              6.813976169889436e-16,
+              8.67746995743113e-30
+            ],
+            "seam_tangent_angle_rad": 4.6512484100211504e-15,
+            "winding_angle": 6.283185307179586,
+            "missing_world_angles_about_fit_center": [],
+            "nominal_radius_error_lower_bound": 0.014270605832329863,
+            "cardinal_displacements": [
+              4.189529226675416e-15,
+              1.802822846389327e-14,
+              1.5011331087223234e-14,
+              1.8299626230221374e-14
+            ],
+            "center_position": "PASS",
+            "radial_fit": "FAIL",
+            "witnessed_radius_error": {
+              "parameter": 82.46680715673187,
+              "point": [
+                -11.096240034000967,
+                -16.622359535418905,
+                0.0
+              ],
+              "radial_error": 0.014270605832329863
+            },
+            "direct_receipt": "healthy-1-direct.log",
+            "max_direct_decomposition_difference": 1.517719948885615e-14,
+            "complete_at_fit_center": true,
+            "independent": "FAIL",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/seam-read-native.log",
+              "sha256": "f23b065c517dc3fe145bed88fe49eef9b569d6ed8b63a8f62e6e5bfd69d3fd00"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/seam-native.brep",
+              "sha256": "00d847bb19e857c226a284be88af3ff59cf12f1ba72b8d4e8741123fddf6f3a0"
+            }
+          },
+          "result": {
+            "periodic": true,
+            "closed_flag": true,
+            "same_vertex": true,
+            "degree": 6,
+            "first_multiplicity": 4,
+            "range": [
+              31.4159265358978,
+              157.079632679489
+            ],
+            "start": [
+              -4.229452293592053e-14,
+              19.99999999999998,
+              0.0
+            ],
+            "end": [
+              4.78597161298063e-13,
+              19.99999999999997,
+              0.0
+            ],
+            "endpoint_distance": 5.209401441644233e-13,
+            "physical_closed": true,
+            "fit_center": [
+              0,
+              0,
+              0
+            ],
+            "all_spans_certified": [
+              {
+                "t": [
+                  31.415926535897757,
+                  62.83185307179562
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181329182,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  62.83185307179562,
+                  94.24777960769362
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181327458,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  94.24777960769362,
+                  125.66370614359172
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730119207,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  125.66370614359172,
+                  157.0796326794895
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730145373,
+                "plane_bound": 0.0
+              }
+            ],
+            "maximum_radial_bound": 0.028624954181329182,
+            "maximum_plane_bound": 0.0,
+            "max_join_error": 4.2005351433116904e-14,
+            "internal_tangent_angles_rad": [
+              6.813976169889436e-16,
+              8.67746995743113e-30,
+              4.6512484100211504e-15
+            ],
+            "seam_tangent_angle_rad": 7.494178599599612e-30,
+            "winding_angle": 6.283185307179585,
+            "missing_world_angles_about_fit_center": [],
+            "nominal_radius_error_lower_bound": 0.014270605832329863,
+            "cardinal_displacements": [
+              4.189529226675416e-15,
+              1.7769009023273604e-14,
+              1.5011331087223234e-14,
+              1.8299626230221374e-14
+            ],
+            "center_position": "PASS",
+            "radial_fit": "FAIL",
+            "witnessed_radius_error": {
+              "parameter": 51.05088062083392,
+              "point": [
+                -16.622359535418905,
+                11.096240034000964,
+                0.0
+              ],
+              "radial_error": 0.014270605832329863
+            },
+            "direct_receipt": "seam-direct.log",
+            "max_direct_decomposition_difference": 1.6687357476335705e-14,
+            "complete_at_fit_center": true,
+            "independent": "FAIL",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/seam-read-result.log",
+              "sha256": "81e4246b78c689a85310aecc9c6021992ab06ad469d721202a371fed18710d2f"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/seam-result.brep",
+              "sha256": "3a6a3191de31a8b36082361c0c2e896269618a52f62d5947cb18e010f5dd8f71"
+            }
+          }
+        },
+        "injection_verified": true
+      },
+      "shifted": {
+        "registered": {
+          "passed": true,
+          "output": "verdict=pass\n",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/shifted-registered.json",
+            "sha256": "f3f0a7b4d2596fadb00b8f4febe62534e2d711f78314f974f35d99f937251495"
+          }
+        },
+        "input": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/shifted-input.brep",
+          "sha256": "5dcd56a80ea89f3af06473d0857fff546f97d40c2ada785f5d46637eb8d9c4be"
+        },
+        "geometry": {
+          "native": {
+            "periodic": true,
+            "closed_flag": true,
+            "same_vertex": true,
+            "degree": 6,
+            "first_multiplicity": 6,
+            "range": [
+              0.0,
+              125.663706143592
+            ],
+            "start": [
+              19.999999999999996,
+              -2.220446049250313e-15,
+              0.0
+            ],
+            "end": [
+              20.0,
+              2.6634419883878585e-13,
+              0.0
+            ],
+            "endpoint_distance": 2.685881424380467e-13,
+            "physical_closed": true,
+            "fit_center": [
+              0,
+              0,
+              0
+            ],
+            "all_spans_certified": [
+              {
+                "t": [
+                  0.0,
+                  31.415926535897757
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730144478,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  31.415926535897757,
+                  62.83185307179562
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181329248,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  62.83185307179562,
+                  94.24777960769362
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181327458,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  94.24777960769362,
+                  125.66370614359172
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730119207,
+                "plane_bound": 0.0
+              }
+            ],
+            "maximum_radial_bound": 0.028624954181329248,
+            "maximum_plane_bound": 0.0,
+            "max_join_error": 0.0,
+            "internal_tangent_angles_rad": [
+              8.283039504820624e-30,
+              6.813976169889436e-16,
+              8.67746995743113e-30
+            ],
+            "seam_tangent_angle_rad": 4.6512484100211504e-15,
+            "winding_angle": 6.283185307179586,
+            "missing_world_angles_about_fit_center": [],
+            "nominal_radius_error_lower_bound": 0.014270605832329863,
+            "cardinal_displacements": [
+              4.189529226675416e-15,
+              1.802822846389327e-14,
+              1.5011331087223234e-14,
+              1.8299626230221374e-14
+            ],
+            "center_position": "PASS",
+            "radial_fit": "FAIL",
+            "witnessed_radius_error": {
+              "parameter": 82.46680715673187,
+              "point": [
+                -11.096240034000967,
+                -16.622359535418905,
+                0.0
+              ],
+              "radial_error": 0.014270605832329863
+            },
+            "direct_receipt": "healthy-1-direct.log",
+            "max_direct_decomposition_difference": 1.517719948885615e-14,
+            "complete_at_fit_center": true,
+            "independent": "FAIL",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/shifted-read-native.log",
+              "sha256": "f23b065c517dc3fe145bed88fe49eef9b569d6ed8b63a8f62e6e5bfd69d3fd00"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/shifted-native.brep",
+              "sha256": "00d847bb19e857c226a284be88af3ff59cf12f1ba72b8d4e8741123fddf6f3a0"
+            }
+          },
+          "result": {
+            "periodic": true,
+            "closed_flag": true,
+            "same_vertex": true,
+            "degree": 6,
+            "first_multiplicity": 6,
+            "range": [
+              0.0,
+              125.663706143592
+            ],
+            "start": [
+              22.999999999999996,
+              -2.220446049250313e-15,
+              0.0
+            ],
+            "end": [
+              23.000000000000004,
+              2.6634419883878585e-13,
+              0.0
+            ],
+            "endpoint_distance": 2.686586227571546e-13,
+            "physical_closed": true,
+            "fit_center": [
+              3,
+              0,
+              0
+            ],
+            "all_spans_certified": [
+              {
+                "t": [
+                  0.0,
+                  31.415926535897757
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730144926,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  31.415926535897757,
+                  62.83185307179562
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181329685,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  62.83185307179562,
+                  94.24777960769362
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181327728,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  94.24777960769362,
+                  125.66370614359172
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730119436,
+                "plane_bound": 0.0
+              }
+            ],
+            "maximum_radial_bound": 0.028624954181329685,
+            "maximum_plane_bound": 0.0,
+            "max_join_error": 0.0,
+            "internal_tangent_angles_rad": [
+              8.283039504820624e-30,
+              6.813976169889207e-16,
+              8.283039504820624e-30
+            ],
+            "seam_tangent_angle_rad": 4.6512484100211504e-15,
+            "winding_angle": 6.283185307179586,
+            "missing_world_angles_about_fit_center": [],
+            "nominal_radius_error_lower_bound": 3.0000000000000178,
+            "cardinal_displacements": [
+              2.9999999999999964,
+              3.0000000000000013,
+              3.0000000000000178,
+              2.999999999999996
+            ],
+            "center_position": "FAIL",
+            "radial_fit": "FAIL",
+            "witnessed_radius_error": {
+              "parameter": 82.46680715673187,
+              "point": [
+                -8.096240034000962,
+                -16.622359535418905,
+                0.0
+              ],
+              "radial_error": 0.014270605832336969
+            },
+            "direct_receipt": "shifted-direct.log",
+            "max_direct_decomposition_difference": 1.464821375527116e-14,
+            "complete_at_fit_center": true,
+            "independent": "FAIL",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/shifted-read-result.log",
+              "sha256": "612757503aaf8db39c111b1a3fb4a8d97903bea92ec42d31f0d72ca3776c375d"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/shifted-result.brep",
+              "sha256": "1a5c836a3b8fab4ef5d03374829a3b2ff41050ea401e663aa0e9923f09f3528b"
+            }
+          }
+        },
+        "injection_verified": true
+      },
+      "gap": {
+        "registered": {
+          "passed": false,
+          "output": "285 failed: false \nverdict=fail\n",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/gap-registered.json",
+            "sha256": "aea396323d00dc3c97404a6327c0242b4bdea3094d33f2bb70b3f146ec605476"
+          }
+        },
+        "input": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/gap-input.brep",
+          "sha256": "5dcd56a80ea89f3af06473d0857fff546f97d40c2ada785f5d46637eb8d9c4be"
+        },
+        "geometry": {
+          "native": {
+            "periodic": true,
+            "closed_flag": true,
+            "same_vertex": true,
+            "degree": 6,
+            "first_multiplicity": 6,
+            "range": [
+              0.0,
+              125.663706143592
+            ],
+            "start": [
+              19.999999999999996,
+              -2.220446049250313e-15,
+              0.0
+            ],
+            "end": [
+              20.0,
+              2.6634419883878585e-13,
+              0.0
+            ],
+            "endpoint_distance": 2.685881424380467e-13,
+            "physical_closed": true,
+            "fit_center": [
+              0,
+              0,
+              0
+            ],
+            "all_spans_certified": [
+              {
+                "t": [
+                  0.0,
+                  31.415926535897757
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730144478,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  31.415926535897757,
+                  62.83185307179562
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181329248,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  62.83185307179562,
+                  94.24777960769362
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181327458,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  94.24777960769362,
+                  125.66370614359172
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730119207,
+                "plane_bound": 0.0
+              }
+            ],
+            "maximum_radial_bound": 0.028624954181329248,
+            "maximum_plane_bound": 0.0,
+            "max_join_error": 0.0,
+            "internal_tangent_angles_rad": [
+              8.283039504820624e-30,
+              6.813976169889436e-16,
+              8.67746995743113e-30
+            ],
+            "seam_tangent_angle_rad": 4.6512484100211504e-15,
+            "winding_angle": 6.283185307179586,
+            "missing_world_angles_about_fit_center": [],
+            "nominal_radius_error_lower_bound": 0.014270605832329863,
+            "cardinal_displacements": [
+              4.189529226675416e-15,
+              1.802822846389327e-14,
+              1.5011331087223234e-14,
+              1.8299626230221374e-14
+            ],
+            "center_position": "PASS",
+            "radial_fit": "FAIL",
+            "witnessed_radius_error": {
+              "parameter": 82.46680715673187,
+              "point": [
+                -11.096240034000967,
+                -16.622359535418905,
+                0.0
+              ],
+              "radial_error": 0.014270605832329863
+            },
+            "direct_receipt": "healthy-1-direct.log",
+            "max_direct_decomposition_difference": 1.517719948885615e-14,
+            "complete_at_fit_center": true,
+            "independent": "FAIL",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/gap-read-native.log",
+              "sha256": "f23b065c517dc3fe145bed88fe49eef9b569d6ed8b63a8f62e6e5bfd69d3fd00"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/gap-native.brep",
+              "sha256": "00d847bb19e857c226a284be88af3ff59cf12f1ba72b8d4e8741123fddf6f3a0"
+            }
+          },
+          "result": {
+            "periodic": false,
+            "closed_flag": false,
+            "same_vertex": false,
+            "degree": 6,
+            "first_multiplicity": 7,
+            "range": [
+              0.0,
+              94.2477796076936
+            ],
+            "start": [
+              19.999999999999996,
+              -2.220446049250313e-15,
+              0.0
+            ],
+            "end": [
+              -1.85476181918685e-14,
+              -19.999999999999982,
+              0.0
+            ],
+            "endpoint_distance": 28.284271247461895,
+            "physical_closed": false,
+            "fit_center": [
+              0,
+              0,
+              0
+            ],
+            "all_spans_certified": [
+              {
+                "t": [
+                  0.0,
+                  31.415926535897757
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.026072849730144478,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  31.415926535897757,
+                  62.83185307179562
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181329248,
+                "plane_bound": 0.0
+              },
+              {
+                "t": [
+                  62.83185307179562,
+                  94.24777960769362
+                ],
+                "subintervals": 8,
+                "radial_bound": 0.028624954181327458,
+                "plane_bound": 0.0
+              }
+            ],
+            "maximum_radial_bound": 0.028624954181329248,
+            "maximum_plane_bound": 0.0,
+            "max_join_error": 0.0,
+            "internal_tangent_angles_rad": [
+              8.283039504820624e-30,
+              6.813976169889436e-16
+            ],
+            "seam_tangent_angle_rad": null,
+            "winding_angle": 4.712388980384691,
+            "missing_world_angles_about_fit_center": [
+              [
+                4.712388980384689,
+                6.283185307179586
+              ]
+            ],
+            "nominal_radius_error_lower_bound": 0.01427060583232631,
+            "cardinal_displacements": [
+              4.189529226675416e-15,
+              1.802822846389327e-14,
+              1.5011331087223234e-14,
+              2.5681871089929103e-14
+            ],
+            "center_position": "PASS",
+            "radial_fit": "FAIL",
+            "witnessed_radius_error": {
+              "parameter": 43.19689898685945,
+              "point": [
+                -11.096240034000964,
+                16.622359535418912,
+                0.0
+              ],
+              "radial_error": 0.01427060583232631
+            },
+            "direct_receipt": "gap-direct.log",
+            "max_direct_decomposition_difference": 1.2080532582046505e-14,
+            "complete_at_fit_center": false,
+            "independent": "FAIL",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/gap-read-result.log",
+              "sha256": "a8c667ec48d4ad447cd2c2a4ec25b3f60b1154db9204dcb339d1fce4c51c5672"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/gap-result.brep",
+              "sha256": "1c8048ec35d5d389f1274e9433598688bef6df13d0a78acba4db45c1cec9eecd"
+            }
+          }
+        },
+        "injection_verified": true
+      }
+    },
+    "analytic_controls": {
+      "exact": {
+        "periodic": true,
+        "closed_flag": true,
+        "same_vertex": true,
+        "degree": 2,
+        "first_multiplicity": 2,
+        "range": [
+          0.0,
+          4.0
+        ],
+        "start": [
+          20.0,
+          0.0,
+          0.0
+        ],
+        "end": [
+          20.0,
+          0.0,
+          0.0
+        ],
+        "endpoint_distance": 0.0,
+        "physical_closed": true,
+        "fit_center": [
+          0,
+          0,
+          0
+        ],
+        "all_spans_certified": [
+          {
+            "t": [
+              0.0,
+              1.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          },
+          {
+            "t": [
+              1.0,
+              2.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          },
+          {
+            "t": [
+              2.0,
+              3.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          },
+          {
+            "t": [
+              3.0,
+              4.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          }
+        ],
+        "maximum_radial_bound": 1.822882308709846e-15,
+        "maximum_plane_bound": 0.0,
+        "max_join_error": 0.0,
+        "internal_tangent_angles_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "seam_tangent_angle_rad": 0.0,
+        "winding_angle": 6.283185307179586,
+        "missing_world_angles_about_fit_center": [],
+        "nominal_radius_error_lower_bound": 3.552713678800501e-15,
+        "cardinal_displacements": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "center_position": "PASS",
+        "radial_fit": "PASS",
+        "witnessed_radius_error": {
+          "parameter": 0.1875,
+          "point": [
+            19.22797916374063,
+            5.5031642969073875,
+            0.0
+          ],
+          "radial_error": 3.552713678800501e-15
+        },
+        "direct_receipt": "analytic-exact-direct.log",
+        "max_direct_decomposition_difference": 3.972054645195637e-15,
+        "complete_at_fit_center": true,
+        "independent": "PASS",
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/analytic-exact.brep",
+          "sha256": "c02acb8098b1807476c8c6ab4e629ce4760b1fd25dc5e1be459970cbc857aeb2"
+        },
+        "measured": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/analytic-exact-read.log",
+          "sha256": "47a0af21b581565820bef283c8dd8c5a8fe2faaacf21316493c79e9b0d3de78d"
+        },
+        "direct": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/analytic-exact-direct.log",
+          "sha256": "748a9e6ff8a2717f8a9d0e709bfecc4abbd11b0a2c49b626e6801a19975242d4"
+        }
+      },
+      "seam": {
+        "periodic": true,
+        "closed_flag": true,
+        "same_vertex": true,
+        "degree": 2,
+        "first_multiplicity": 2,
+        "range": [
+          1.0,
+          5.0
+        ],
+        "start": [
+          0.0,
+          20.0,
+          0.0
+        ],
+        "end": [
+          0.0,
+          20.0,
+          0.0
+        ],
+        "endpoint_distance": 0.0,
+        "physical_closed": true,
+        "fit_center": [
+          0,
+          0,
+          0
+        ],
+        "all_spans_certified": [
+          {
+            "t": [
+              1.0,
+              2.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          },
+          {
+            "t": [
+              2.0,
+              3.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          },
+          {
+            "t": [
+              3.0,
+              4.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          },
+          {
+            "t": [
+              4.0,
+              5.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          }
+        ],
+        "maximum_radial_bound": 1.822882308709846e-15,
+        "maximum_plane_bound": 0.0,
+        "max_join_error": 0.0,
+        "internal_tangent_angles_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "seam_tangent_angle_rad": 0.0,
+        "winding_angle": 6.283185307179586,
+        "missing_world_angles_about_fit_center": [],
+        "nominal_radius_error_lower_bound": 3.552713678800501e-15,
+        "cardinal_displacements": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "center_position": "PASS",
+        "radial_fit": "PASS",
+        "witnessed_radius_error": {
+          "parameter": 1.1875,
+          "point": [
+            -5.5031642969073875,
+            19.22797916374063,
+            0.0
+          ],
+          "radial_error": 3.552713678800501e-15
+        },
+        "direct_receipt": "analytic-seam-direct.log",
+        "max_direct_decomposition_difference": 3.972054645195637e-15,
+        "complete_at_fit_center": true,
+        "independent": "PASS",
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/analytic-seam.brep",
+          "sha256": "2783cbe3449122f0fa6adfd34abc46ab475949fe1f690026a94e1ff068a93daf"
+        },
+        "measured": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/analytic-seam-read.log",
+          "sha256": "ea1f7cfa4429d82245bb9e9fea78d59c89d4dfe08bceb0bccea620937987e4d7"
+        },
+        "direct": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/analytic-seam-direct.log",
+          "sha256": "9e3cf4f20f9a7a4344fc0c19e2dab94aeaadbe38bcf9c49fb7d2246172dd5412"
+        }
+      },
+      "shifted": {
+        "periodic": true,
+        "closed_flag": true,
+        "same_vertex": true,
+        "degree": 2,
+        "first_multiplicity": 2,
+        "range": [
+          0.0,
+          4.0
+        ],
+        "start": [
+          23.0,
+          0.0,
+          0.0
+        ],
+        "end": [
+          23.0,
+          0.0,
+          0.0
+        ],
+        "endpoint_distance": 0.0,
+        "physical_closed": true,
+        "fit_center": [
+          3,
+          0,
+          0
+        ],
+        "all_spans_certified": [
+          {
+            "t": [
+              0.0,
+              1.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          },
+          {
+            "t": [
+              1.0,
+              2.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          },
+          {
+            "t": [
+              2.0,
+              3.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          },
+          {
+            "t": [
+              3.0,
+              4.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          }
+        ],
+        "maximum_radial_bound": 1.822882308709846e-15,
+        "maximum_plane_bound": 0.0,
+        "max_join_error": 0.0,
+        "internal_tangent_angles_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "seam_tangent_angle_rad": 0.0,
+        "winding_angle": 6.283185307179586,
+        "missing_world_angles_about_fit_center": [],
+        "nominal_radius_error_lower_bound": 3.0,
+        "cardinal_displacements": [
+          3.0,
+          3.0,
+          3.0,
+          3.0
+        ],
+        "center_position": "FAIL",
+        "radial_fit": "PASS",
+        "witnessed_radius_error": {
+          "parameter": 0.1875,
+          "point": [
+            22.227979163740628,
+            5.5031642969073875,
+            0.0
+          ],
+          "radial_error": 3.552713678800501e-15
+        },
+        "direct_receipt": "analytic-shifted-direct.log",
+        "max_direct_decomposition_difference": 3.972054645195637e-15,
+        "complete_at_fit_center": true,
+        "independent": "FAIL",
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/analytic-shifted.brep",
+          "sha256": "adbc20122342768a96b7efa7f26dea8c732e3c56620185eccb83d3f4a3ba2c15"
+        },
+        "measured": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/analytic-shifted-read.log",
+          "sha256": "edb9d88af42e1726ca91f02d1d0691f6da4052d5db8063b6733322ed346d26be"
+        },
+        "direct": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/analytic-shifted-direct.log",
+          "sha256": "5df632b3100508e1d1c3340d6660d181449020e9dcd164969b379c0693c276e8"
+        }
+      },
+      "gap": {
+        "periodic": false,
+        "closed_flag": false,
+        "same_vertex": false,
+        "degree": 2,
+        "first_multiplicity": 3,
+        "range": [
+          0.0,
+          3.0
+        ],
+        "start": [
+          20.0,
+          0.0,
+          0.0
+        ],
+        "end": [
+          0.0,
+          -20.0,
+          0.0
+        ],
+        "endpoint_distance": 28.284271247461902,
+        "physical_closed": false,
+        "fit_center": [
+          0,
+          0,
+          0
+        ],
+        "all_spans_certified": [
+          {
+            "t": [
+              0.0,
+              1.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          },
+          {
+            "t": [
+              1.0,
+              2.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          },
+          {
+            "t": [
+              2.0,
+              3.0
+            ],
+            "subintervals": 1,
+            "radial_bound": 1.822882308709846e-15,
+            "plane_bound": 0.0
+          }
+        ],
+        "maximum_radial_bound": 1.822882308709846e-15,
+        "maximum_plane_bound": 0.0,
+        "max_join_error": 0.0,
+        "internal_tangent_angles_rad": [
+          0.0,
+          0.0
+        ],
+        "seam_tangent_angle_rad": null,
+        "winding_angle": 4.71238898038469,
+        "missing_world_angles_about_fit_center": [
+          [
+            4.71238898038469,
+            6.283185307179586
+          ]
+        ],
+        "nominal_radius_error_lower_bound": 3.552713678800501e-15,
+        "cardinal_displacements": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "center_position": "PASS",
+        "radial_fit": "PASS",
+        "witnessed_radius_error": {
+          "parameter": 0.1875,
+          "point": [
+            19.22797916374063,
+            5.5031642969073875,
+            0.0
+          ],
+          "radial_error": 3.552713678800501e-15
+        },
+        "direct_receipt": "analytic-gap-direct.log",
+        "max_direct_decomposition_difference": 3.972054645195637e-15,
+        "complete_at_fit_center": false,
+        "independent": "FAIL",
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/analytic-gap.brep",
+          "sha256": "d7d40d4161e1c2adfc4f3fd97aa5ea2d723bca15e517e50511468b2f3bba6d3d"
+        },
+        "measured": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/analytic-gap-read.log",
+          "sha256": "d24dd4de445219d9280c634dc4eb8690faaf198fddef31de2de738bc94c282e1"
+        },
+        "direct": {
+          "path": "research/kernel-regression-v1/rollout-v10/receipts/guide/analytic-gap-direct.log",
+          "sha256": "a47d34a6fb795ea5bf0b08dbcccfa5e7f32b41d659024d03df2db76cc3c67f0b"
+        }
+      }
+    },
+    "native_geometry": "BASELINE_FAIL",
+    "release_as_healthy_baseline": "BLOCKED",
+    "independent_scope": "Analytically qualified position and complete sweep on this four-arc planar circle. The native guide fails the fixed radial threshold; it is not a qualified healthy patch-regression baseline."
+  }
+}

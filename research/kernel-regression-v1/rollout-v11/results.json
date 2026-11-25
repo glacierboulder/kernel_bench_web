@@ -1,0 +1,5159 @@
+{
+  "planes": {
+    "source": {
+      "source_id": "occt-single20-m25818-32ab8bfc4f09",
+      "commit": "32ab8bfc4f09acb95d1f8403f4d44f5afad97b8b",
+      "materialized_tree_sha256": "cca2aa3bd5541ec361da198125ab731fec5cd6849b992136be0de552f77d3df5",
+      "toolchain": "occt-v4-clang10-o0-tcl86",
+      "toolchain_config": {
+        "path": "toolchains/occt-v4-clang10-o0-tcl86.json",
+        "sha256": "6c1675f2f34f07dd5945a9782f3835878e74bfc97838eb6ccc22a6f9a0d855e3"
+      },
+      "build_entry": {
+        "path": "tools/occt-v4-clang10-o0/build.sh",
+        "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/identity.json",
+      "sha256": "d4c623bf17854627024dc68c160d264840e395e86c65e5311b8b796841e8315d"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/runtime.json",
+      "sha256": "202a0fe31e5c981d00c5ee2b328dd76f362ddfed2c0d066d2b8335224f64121d"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/core-1.json",
+          "sha256": "8861d4ca3714ea4aeddb9cc922cf3d192baf89b5def245add9041cff070cba1f"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/core-2.json",
+          "sha256": "8a829eb387366950d68e7543f76f2ff7be1ca5f44904f13865dbf9f9a15fd1fd"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "registered_baseline": {
+      "passed": true,
+      "assertions": {
+        "operation_completed": "PASS",
+        "branch_count": "PASS",
+        "support_residual": "PASS",
+        "domain_coverage": "PASS"
+      },
+      "log": {
+        "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/registered.log",
+        "sha256": "f2fd525804c8d6071c9f3a81c2499826d06d8b2694dcdba867e6a02fa6d58894"
+      }
+    },
+    "independent_status": "CALIBRATED",
+    "independent_scope": "Axial line on both planes covering the face-domain interval; separately, exact Section endpoints and continuous linear coverage for these two bounded quadrilaterals.",
+    "registered_limitation": "Partial support [-12,12] satisfies registered span >=2, but leaves part of the face intersection unsupported. The original API does not produce a trimmed Section edge.",
+    "history_source": {
+      "path": "benchmarks/occt/evaluation/provenance/single20/occt-25818/evidence.json",
+      "sha256": "96e7adb26b8891918c6f4694dc881df6fec2b0c59fe8c9f4ad36e2c419520e6f"
+    },
+    "historical_baseline": {
+      "25818-neighborhood_mixed_domain": "geometry_pass",
+      "25818-neighborhood_rigid": "geometry_fail",
+      "25818-original": "geometry_fail",
+      "25818-regression_bounded": "geometry_pass"
+    },
+    "command_source": {
+      "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/BOPTest_BOPCommands.cxx",
+      "sha256": "c4716e1884a4339f003a14f772e43de2ea77e5a049301f84963071599e8dc21f"
+    },
+    "controls": {
+      "healthy-1": {
+        "registered": {
+          "passed": true,
+          "assertions": {
+            "operation_completed": "PASS",
+            "branch_count": "PASS",
+            "support_residual": "PASS",
+            "domain_coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-1.log",
+            "sha256": "f2fd525804c8d6071c9f3a81c2499826d06d8b2694dcdba867e6a02fa6d58894"
+          }
+        },
+        "analytic_domain_y": [
+          -20.0,
+          20.0
+        ],
+        "geometry": {
+          "support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -24.0,
+              24.0
+            ],
+            "world_y": [
+              -24.0,
+              24.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -24.0,
+                0.0
+              ],
+              [
+                0.0,
+                24.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "native-support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -24.0,
+              24.0
+            ],
+            "world_y": [
+              -24.0,
+              24.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -24.0,
+                0.0
+              ],
+              [
+                0.0,
+                24.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          },
+          "native-section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          }
+        },
+        "usable_support": "PASS",
+        "finite_section": "PASS",
+        "read_receipt": {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-1-read.log",
+          "sha256": "59605a62080c73587c5dab5978550945ad68983e309c5e7ca8c1031b524f1dc1"
+        },
+        "artifacts": {
+          "first": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-1-first.brep",
+            "sha256": "353bf911eadd82c1631b4a82de20ec355237cfcaa0233b011fbea723dbda9801"
+          },
+          "second": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-1-second.brep",
+            "sha256": "47e648c5fba381cadc5857770bbdfa6cd6f37ee247f4617c08326e0e9057fee7"
+          },
+          "support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-1-support.brep",
+            "sha256": "583f7dbf3763e19f658979c366a9125d3ce0051f0694577aef9432eae14d65e2"
+          },
+          "native-support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-1-native-support.brep",
+            "sha256": "583f7dbf3763e19f658979c366a9125d3ce0051f0694577aef9432eae14d65e2"
+          },
+          "section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-1-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          },
+          "native-section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-1-native-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          }
+        },
+        "section_in_registered_checkpoint": "NOT_APPLICABLE",
+        "injection_verified": false
+      },
+      "healthy-2": {
+        "registered": {
+          "passed": true,
+          "assertions": {
+            "operation_completed": "PASS",
+            "branch_count": "PASS",
+            "support_residual": "PASS",
+            "domain_coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-2.log",
+            "sha256": "f2fd525804c8d6071c9f3a81c2499826d06d8b2694dcdba867e6a02fa6d58894"
+          }
+        },
+        "analytic_domain_y": [
+          -20.0,
+          20.0
+        ],
+        "geometry": {
+          "support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -24.0,
+              24.0
+            ],
+            "world_y": [
+              -24.0,
+              24.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -24.0,
+                0.0
+              ],
+              [
+                0.0,
+                24.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "native-support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -24.0,
+              24.0
+            ],
+            "world_y": [
+              -24.0,
+              24.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -24.0,
+                0.0
+              ],
+              [
+                0.0,
+                24.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          },
+          "native-section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          }
+        },
+        "usable_support": "PASS",
+        "finite_section": "PASS",
+        "read_receipt": {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-2-read.log",
+          "sha256": "59605a62080c73587c5dab5978550945ad68983e309c5e7ca8c1031b524f1dc1"
+        },
+        "artifacts": {
+          "first": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-2-first.brep",
+            "sha256": "353bf911eadd82c1631b4a82de20ec355237cfcaa0233b011fbea723dbda9801"
+          },
+          "second": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-2-second.brep",
+            "sha256": "47e648c5fba381cadc5857770bbdfa6cd6f37ee247f4617c08326e0e9057fee7"
+          },
+          "support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-2-support.brep",
+            "sha256": "583f7dbf3763e19f658979c366a9125d3ce0051f0694577aef9432eae14d65e2"
+          },
+          "native-support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-2-native-support.brep",
+            "sha256": "583f7dbf3763e19f658979c366a9125d3ce0051f0694577aef9432eae14d65e2"
+          },
+          "section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-2-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          },
+          "native-section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/healthy-2-native-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          }
+        },
+        "section_in_registered_checkpoint": "NOT_APPLICABLE",
+        "injection_verified": false
+      },
+      "unbounded-support": {
+        "registered": {
+          "passed": true,
+          "assertions": {
+            "operation_completed": "PASS",
+            "branch_count": "PASS",
+            "support_residual": "PASS",
+            "domain_coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/unbounded-support.log",
+            "sha256": "5799a6b25618abb209db20695d4d256e84f79ea24d18fcb0a7f06bdc92df7f53"
+          }
+        },
+        "analytic_domain_y": [
+          -20.0,
+          20.0
+        ],
+        "geometry": {
+          "support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -2e+100,
+              2e+100
+            ],
+            "world_y": [
+              null,
+              null
+            ],
+            "vertices": [
+              null,
+              null
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "native-support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -24.0,
+              24.0
+            ],
+            "world_y": [
+              -24.0,
+              24.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -24.0,
+                0.0
+              ],
+              [
+                0.0,
+                24.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          },
+          "native-section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          }
+        },
+        "usable_support": "PASS",
+        "finite_section": "PASS",
+        "read_receipt": {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/unbounded-support-read.log",
+          "sha256": "28e38fab84c40e1b7e96497395113a0c92dd5ab944fe635d8d523b0495755584"
+        },
+        "artifacts": {
+          "first": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/unbounded-support-first.brep",
+            "sha256": "353bf911eadd82c1631b4a82de20ec355237cfcaa0233b011fbea723dbda9801"
+          },
+          "second": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/unbounded-support-second.brep",
+            "sha256": "47e648c5fba381cadc5857770bbdfa6cd6f37ee247f4617c08326e0e9057fee7"
+          },
+          "support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/unbounded-support-support.brep",
+            "sha256": "88773a8e1ee3fac5bad5fc29ddf6fa1200eb85029999a047306f83c93b97ac89"
+          },
+          "native-support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/unbounded-support-native-support.brep",
+            "sha256": "583f7dbf3763e19f658979c366a9125d3ce0051f0694577aef9432eae14d65e2"
+          },
+          "section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/unbounded-support-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          },
+          "native-section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/unbounded-support-native-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          }
+        },
+        "section_in_registered_checkpoint": "NOT_APPLICABLE",
+        "injection_verified": true
+      },
+      "off-support": {
+        "registered": {
+          "passed": false,
+          "assertions": {
+            "operation_completed": "PASS",
+            "branch_count": "PASS",
+            "support_residual": "FAIL",
+            "domain_coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/off-support.log",
+            "sha256": "ba8891ff08722f28793ce077cd3cf951091320d2d4a9ca361838591be38d217c"
+          }
+        },
+        "analytic_domain_y": [
+          -20.0,
+          20.0
+        ],
+        "geometry": {
+          "support": {
+            "on_both_planes": false,
+            "origin": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -2e+100,
+              2e+100
+            ],
+            "world_y": [
+              null,
+              null
+            ],
+            "vertices": [
+              null,
+              null
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "native-support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -24.0,
+              24.0
+            ],
+            "world_y": [
+              -24.0,
+              24.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -24.0,
+                0.0
+              ],
+              [
+                0.0,
+                24.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          },
+          "native-section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          }
+        },
+        "usable_support": "FAIL",
+        "finite_section": "PASS",
+        "read_receipt": {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/off-support-read.log",
+          "sha256": "aeb8b7fe046d6d8555a4faae602ee06d1313d09c4da2b556282594b5162f3f49"
+        },
+        "artifacts": {
+          "first": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/off-support-first.brep",
+            "sha256": "353bf911eadd82c1631b4a82de20ec355237cfcaa0233b011fbea723dbda9801"
+          },
+          "second": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/off-support-second.brep",
+            "sha256": "47e648c5fba381cadc5857770bbdfa6cd6f37ee247f4617c08326e0e9057fee7"
+          },
+          "support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/off-support-support.brep",
+            "sha256": "45a1865b42035f685bdfeeff5e945d290e951a7bf80a8e54e14070c1bf230817"
+          },
+          "native-support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/off-support-native-support.brep",
+            "sha256": "583f7dbf3763e19f658979c366a9125d3ce0051f0694577aef9432eae14d65e2"
+          },
+          "section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/off-support-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          },
+          "native-section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/off-support-native-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          }
+        },
+        "section_in_registered_checkpoint": "NOT_APPLICABLE",
+        "injection_verified": true
+      },
+      "segment-shift": {
+        "registered": {
+          "passed": true,
+          "assertions": {
+            "operation_completed": "PASS",
+            "branch_count": "PASS",
+            "support_residual": "PASS",
+            "domain_coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-shift.log",
+            "sha256": "f2fd525804c8d6071c9f3a81c2499826d06d8b2694dcdba867e6a02fa6d58894"
+          }
+        },
+        "analytic_domain_y": [
+          -20.0,
+          20.0
+        ],
+        "geometry": {
+          "support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -24.0,
+              24.0
+            ],
+            "world_y": [
+              -24.0,
+              24.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -24.0,
+                0.0
+              ],
+              [
+                0.0,
+                24.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "native-support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -24.0,
+              24.0
+            ],
+            "world_y": [
+              -24.0,
+              24.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -24.0,
+                0.0
+              ],
+              [
+                0.0,
+                24.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              -17.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              0.0,
+              40.0
+            ],
+            "world_y": [
+              -17.0,
+              23.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -17.0,
+                0.0
+              ],
+              [
+                0.0,
+                23.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": false,
+            "exact_physical_ends": false
+          },
+          "native-section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          }
+        },
+        "usable_support": "PASS",
+        "finite_section": "FAIL",
+        "read_receipt": {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-shift-read.log",
+          "sha256": "13d8f0018e6e9fcb8b10d213d8c0078b38109de20fe39e6d54ad8590f4add993"
+        },
+        "artifacts": {
+          "first": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-shift-first.brep",
+            "sha256": "353bf911eadd82c1631b4a82de20ec355237cfcaa0233b011fbea723dbda9801"
+          },
+          "second": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-shift-second.brep",
+            "sha256": "47e648c5fba381cadc5857770bbdfa6cd6f37ee247f4617c08326e0e9057fee7"
+          },
+          "support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-shift-support.brep",
+            "sha256": "583f7dbf3763e19f658979c366a9125d3ce0051f0694577aef9432eae14d65e2"
+          },
+          "native-support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-shift-native-support.brep",
+            "sha256": "583f7dbf3763e19f658979c366a9125d3ce0051f0694577aef9432eae14d65e2"
+          },
+          "section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-shift-section.brep",
+            "sha256": "1b1839464919f34e9bf03aa62dda4bc9526cf0aabedc836d18855f4383c0a27c"
+          },
+          "native-section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-shift-native-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          }
+        },
+        "section_in_registered_checkpoint": "NOT_APPLICABLE",
+        "injection_verified": true
+      },
+      "segment-trim": {
+        "registered": {
+          "passed": true,
+          "assertions": {
+            "operation_completed": "PASS",
+            "branch_count": "PASS",
+            "support_residual": "PASS",
+            "domain_coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-trim.log",
+            "sha256": "f2fd525804c8d6071c9f3a81c2499826d06d8b2694dcdba867e6a02fa6d58894"
+          }
+        },
+        "analytic_domain_y": [
+          -20.0,
+          20.0
+        ],
+        "geometry": {
+          "support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -24.0,
+              24.0
+            ],
+            "world_y": [
+              -24.0,
+              24.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -24.0,
+                0.0
+              ],
+              [
+                0.0,
+                24.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "native-support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -24.0,
+              24.0
+            ],
+            "world_y": [
+              -24.0,
+              24.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -24.0,
+                0.0
+              ],
+              [
+                0.0,
+                24.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              -20.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              0.0,
+              32.0
+            ],
+            "world_y": [
+              -20.0,
+              12.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                12.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": false,
+            "exact_physical_ends": false
+          },
+          "native-section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          }
+        },
+        "usable_support": "PASS",
+        "finite_section": "FAIL",
+        "read_receipt": {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-trim-read.log",
+          "sha256": "ac9fd97d1d14f18c08ab5db761cf377147f4d39e47e3062a767b559ead2bd286"
+        },
+        "artifacts": {
+          "first": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-trim-first.brep",
+            "sha256": "353bf911eadd82c1631b4a82de20ec355237cfcaa0233b011fbea723dbda9801"
+          },
+          "second": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-trim-second.brep",
+            "sha256": "47e648c5fba381cadc5857770bbdfa6cd6f37ee247f4617c08326e0e9057fee7"
+          },
+          "support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-trim-support.brep",
+            "sha256": "583f7dbf3763e19f658979c366a9125d3ce0051f0694577aef9432eae14d65e2"
+          },
+          "native-support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-trim-native-support.brep",
+            "sha256": "583f7dbf3763e19f658979c366a9125d3ce0051f0694577aef9432eae14d65e2"
+          },
+          "section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-trim-section.brep",
+            "sha256": "98d9c640e43aaa92a7520dae5a1dc9634fbf838c0d71f6cd37a7df75b710f9d6"
+          },
+          "native-section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/segment-trim-native-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          }
+        },
+        "section_in_registered_checkpoint": "NOT_APPLICABLE",
+        "injection_verified": true
+      },
+      "short-span": {
+        "registered": {
+          "passed": false,
+          "assertions": {
+            "operation_completed": "PASS",
+            "branch_count": "PASS",
+            "support_residual": "PASS",
+            "domain_coverage": "FAIL"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/short-span.log",
+            "sha256": "e089dc3e62efbeb37033374a8ca8f65bf7b02f4f9726af70876d0064ff4ddafc"
+          }
+        },
+        "analytic_domain_y": [
+          -20.0,
+          20.0
+        ],
+        "geometry": {
+          "support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -0.5,
+              0.5
+            ],
+            "world_y": [
+              -0.5,
+              0.5
+            ],
+            "vertices": [
+              [
+                0.0,
+                -0.5,
+                0.0
+              ],
+              [
+                0.0,
+                0.5,
+                0.0
+              ]
+            ],
+            "covers_face_interval": false,
+            "exact_physical_ends": false
+          },
+          "native-support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -24.0,
+              24.0
+            ],
+            "world_y": [
+              -24.0,
+              24.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -24.0,
+                0.0
+              ],
+              [
+                0.0,
+                24.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          },
+          "native-section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          }
+        },
+        "usable_support": "FAIL",
+        "finite_section": "PASS",
+        "read_receipt": {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/short-span-read.log",
+          "sha256": "b8974cbabaf21ef0237b1e9d2ea4b874c08e4093e9b5b09953c27f6aab9004a0"
+        },
+        "artifacts": {
+          "first": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/short-span-first.brep",
+            "sha256": "353bf911eadd82c1631b4a82de20ec355237cfcaa0233b011fbea723dbda9801"
+          },
+          "second": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/short-span-second.brep",
+            "sha256": "47e648c5fba381cadc5857770bbdfa6cd6f37ee247f4617c08326e0e9057fee7"
+          },
+          "support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/short-span-support.brep",
+            "sha256": "3d9eb09718d30488ffda4656f7869fca175ad53193b9d712ecef698648952fe9"
+          },
+          "native-support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/short-span-native-support.brep",
+            "sha256": "583f7dbf3763e19f658979c366a9125d3ce0051f0694577aef9432eae14d65e2"
+          },
+          "section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/short-span-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          },
+          "native-section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/short-span-native-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          }
+        },
+        "section_in_registered_checkpoint": "NOT_APPLICABLE",
+        "injection_verified": true
+      },
+      "partial-support": {
+        "registered": {
+          "passed": true,
+          "assertions": {
+            "operation_completed": "PASS",
+            "branch_count": "PASS",
+            "support_residual": "PASS",
+            "domain_coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/partial-support.log",
+            "sha256": "64fb0cc614bf9fe30dbb487a645403e6ff485c417434e69ad98fe7c0dcf4b033"
+          }
+        },
+        "analytic_domain_y": [
+          -20.0,
+          20.0
+        ],
+        "geometry": {
+          "support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -12.0,
+              12.0
+            ],
+            "world_y": [
+              -12.0,
+              12.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -12.0,
+                0.0
+              ],
+              [
+                0.0,
+                12.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": false,
+            "exact_physical_ends": false
+          },
+          "native-support": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -24.0,
+              24.0
+            ],
+            "world_y": [
+              -24.0,
+              24.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -24.0,
+                0.0
+              ],
+              [
+                0.0,
+                24.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": false
+          },
+          "section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          },
+          "native-section": {
+            "on_both_planes": true,
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "direction": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "domain": [
+              -20.0,
+              20.0
+            ],
+            "world_y": [
+              -20.0,
+              20.0
+            ],
+            "vertices": [
+              [
+                0.0,
+                -20.0,
+                0.0
+              ],
+              [
+                0.0,
+                20.0,
+                0.0
+              ]
+            ],
+            "covers_face_interval": true,
+            "exact_physical_ends": true
+          }
+        },
+        "usable_support": "FAIL",
+        "finite_section": "PASS",
+        "read_receipt": {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/partial-support-read.log",
+          "sha256": "7a6e60eff5f83da0a736c7274fc7ea82789983c8935735c478171cff457d5cba"
+        },
+        "artifacts": {
+          "first": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/partial-support-first.brep",
+            "sha256": "353bf911eadd82c1631b4a82de20ec355237cfcaa0233b011fbea723dbda9801"
+          },
+          "second": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/partial-support-second.brep",
+            "sha256": "47e648c5fba381cadc5857770bbdfa6cd6f37ee247f4617c08326e0e9057fee7"
+          },
+          "support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/partial-support-support.brep",
+            "sha256": "05233495d53acd90b434aed47ccddf7b3ee41de55a2299e732308eae5e80da45"
+          },
+          "native-support": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/partial-support-native-support.brep",
+            "sha256": "583f7dbf3763e19f658979c366a9125d3ce0051f0694577aef9432eae14d65e2"
+          },
+          "section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/partial-support-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          },
+          "native-section": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/planes/partial-support-native-section.brep",
+            "sha256": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250"
+          }
+        },
+        "section_in_registered_checkpoint": "NOT_APPLICABLE",
+        "injection_verified": true
+      }
+    }
+  },
+  "fillet": {
+    "source": {
+      "source_id": "occt801-1163-b-6ba582362af7",
+      "commit": "6ba582362af730d90854235c2fd6b472618b6c0d",
+      "materialized_tree_sha256": "a52d6c9ec516040a98a4d3c53f41b24eabd0f59e976964c1058aa235162c73ea",
+      "toolchain": "occt8-gcc13-cpp-20261112",
+      "toolchain_config": {
+        "path": "toolchains/occt8-gcc13-cpp-20261112.json",
+        "sha256": "859802cd60dc1127b7f5951f0688ac27d953d653b4c915fa6b4231620d8d39a0"
+      },
+      "build_entry": {
+        "path": "tools/occt8-gcc13-cpp/build.sh",
+        "sha256": "b166ea190712b4b3f2ba57d1d008fad24b9d434ea082016e4f099033f8c6177e"
+      },
+      "declared_public_targets": [
+        "TKFillet",
+        "TKPrim"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/identity.json",
+      "sha256": "28e3536187ce34f81f628f9ec37e15f7639b32281fa0f527c8f2eee7501d349f"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/runtime.json",
+      "sha256": "33af2a7bc2fc0c2a73da4fc60c13ce15ff1e1dd5a790e5d14f04608af215d74f"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/core-1.json",
+          "sha256": "3421d7140bd59375abca66b236df9bb78af35bf30254b96a59aa6fea5a7dcf04"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/core-2.json",
+          "sha256": "ad22b6109c9b10addbe9d6809663ada1ae931514d691ea97b350799f5efc189b"
+        }
+      ],
+      "native_attempt": {
+        "checks": {
+          "box-common": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "disjoint": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "cut-fuse": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "plane-sphere": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "hole-classification": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "brep-roundtrip": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          }
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/core-native.json",
+          "sha256": "c3fe68b0dc1757946bf5ec616e6d1ecdbaa0a0f7f518860d6661414d55025f06"
+        },
+        "status": "BLOCKED"
+      },
+      "geometry_profile": "Unchanged probe and thresholds with the locked OCCT 8 TopExp argument type alias supplied at compilation.",
+      "compatibility_header": {
+        "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/alias.hxx",
+        "sha256": "110706bfa4815f78a0a105fa6a3e7cf70833586030d873ca9221211525fc6684"
+      }
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "registered_baseline": {
+      "passed": true,
+      "receipt": {
+        "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/registered.json",
+        "sha256": "d0054713ddbc3bb9cf19e55a99c2d0ce775a759be2c3663ecb6d19a570f90fe3"
+      },
+      "output": "INPUT_OK mode=box edge=1\nVALID_RESULT faces=7 TEST_DONE\n"
+    },
+    "independent_status": "CALIBRATED",
+    "independent_scope": "This exact box, radius and mapped edge. Analytic quarter-cylinder patch, unaffected planes, volume and material witnesses.",
+    "history_source": {
+      "path": "research/occt-authoring-20261114/github-1163/验证证据/frozen-B.json",
+      "sha256": "cb6cffb73356d655c1102bb847a652e5b57e72ccc0ec0c132055df0b5c6124ba"
+    },
+    "historical_baseline": {
+      "1163-original": {
+        "status": "failed",
+        "exit": -11
+      },
+      "1163-translate": {
+        "status": "failed",
+        "exit": -11
+      },
+      "1163-rotate": {
+        "status": "failed",
+        "exit": -11
+      },
+      "1163-copy": {
+        "status": "passed",
+        "exit": 0
+      },
+      "1163-box": {
+        "status": "passed",
+        "exit": 0
+      }
+    },
+    "controls": {
+      "healthy-1": {
+        "registered": {
+          "passed": true,
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-1-registered.json",
+            "sha256": "dbfa710b71b6b6b43db786f3bd90d5c7310b16cc25cd576823082ec9a8f3e41f"
+          },
+          "output": "INPUT_OK mode=box edge=1\nVALID_RESULT faces=7 TEST_DONE\n"
+        },
+        "geometry": {
+          "box": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                20.0
+              ],
+              "opposite": [
+                20.0,
+                20.0,
+                0.0,
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 6,
+            "volume": 7999.999999999998,
+            "expected_volume": 8000,
+            "original_six_planes": true,
+            "cylinder": [],
+            "quarter_patch_points": [],
+            "quarter_at_target": null,
+            "quarter_at_opposite": null,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  10.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": true,
+            "independent": "PASS",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-1-read-box.log",
+              "sha256": "501b3638fff36a40afef3c8098e512be109c92f041787f1f96d30f516bbaef58"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-1-box.brep",
+              "sha256": "977011318797e2c602af9bcf42a12c802cf117be56deff181c7cf0594c775119"
+            }
+          },
+          "native": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                20.0
+              ],
+              "opposite": [
+                20.0,
+                20.0,
+                0.0,
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 7,
+            "volume": 7995.707963267949,
+            "expected_volume": 7995.707963267949,
+            "original_six_planes": true,
+            "cylinder": [
+              [
+                0.9999999999999998,
+                0.9999999999999998,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                1.5707963267949,
+                0.0,
+                20.0
+              ]
+            ],
+            "quarter_patch_points": [
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                0.0
+              ],
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                20.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                0.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                20.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                0.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                20.0
+              ]
+            ],
+            "quarter_at_target": true,
+            "quarter_at_opposite": false,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  10.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": false,
+            "independent": "PASS",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-1-read-native.log",
+              "sha256": "7dbb9bd606ce8422192eb9d4eaa775b13785ab6761e0b2cafa939ea88f90e228"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-1-native.brep",
+              "sha256": "b0c649c09de05a1663a51c47dd673c599f083ebf8dee7a11b311e84fe12e816a"
+            }
+          },
+          "result": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                20.0
+              ],
+              "opposite": [
+                20.0,
+                20.0,
+                0.0,
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 7,
+            "volume": 7995.707963267949,
+            "expected_volume": 7995.707963267949,
+            "original_six_planes": true,
+            "cylinder": [
+              [
+                0.9999999999999998,
+                0.9999999999999998,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                1.5707963267949,
+                0.0,
+                20.0
+              ]
+            ],
+            "quarter_patch_points": [
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                0.0
+              ],
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                20.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                0.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                20.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                0.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                20.0
+              ]
+            ],
+            "quarter_at_target": true,
+            "quarter_at_opposite": false,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  10.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": false,
+            "independent": "PASS",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-1-read-result.log",
+              "sha256": "7dbb9bd606ce8422192eb9d4eaa775b13785ab6761e0b2cafa939ea88f90e228"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-1-result.brep",
+              "sha256": "b0c649c09de05a1663a51c47dd673c599f083ebf8dee7a11b311e84fe12e816a"
+            }
+          }
+        },
+        "edge_indices": [
+          1,
+          7
+        ],
+        "edges": {
+          "target": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-1-target.brep",
+            "sha256": "96ee750d9096c91d9ee17642db4f797eba09c8860368859a44ad9fcd4177fa31"
+          },
+          "opposite": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-1-opposite.brep",
+            "sha256": "7ffc9436412ad84e264b5caac3c74978466a1bfc0f11e955a2591627266adc08"
+          }
+        },
+        "injection_verified": false
+      },
+      "healthy-2": {
+        "registered": {
+          "passed": true,
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-2-registered.json",
+            "sha256": "63dab9a3f3a3dc4d0e3b9d0f48a73844bd92f346eb6b07e46054fb5c5cf77088"
+          },
+          "output": "INPUT_OK mode=box edge=1\nVALID_RESULT faces=7 TEST_DONE\n"
+        },
+        "geometry": {
+          "box": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                20.0
+              ],
+              "opposite": [
+                20.0,
+                20.0,
+                0.0,
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 6,
+            "volume": 7999.999999999998,
+            "expected_volume": 8000,
+            "original_six_planes": true,
+            "cylinder": [],
+            "quarter_patch_points": [],
+            "quarter_at_target": null,
+            "quarter_at_opposite": null,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  10.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": true,
+            "independent": "PASS",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-2-read-box.log",
+              "sha256": "501b3638fff36a40afef3c8098e512be109c92f041787f1f96d30f516bbaef58"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-2-box.brep",
+              "sha256": "977011318797e2c602af9bcf42a12c802cf117be56deff181c7cf0594c775119"
+            }
+          },
+          "native": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                20.0
+              ],
+              "opposite": [
+                20.0,
+                20.0,
+                0.0,
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 7,
+            "volume": 7995.707963267949,
+            "expected_volume": 7995.707963267949,
+            "original_six_planes": true,
+            "cylinder": [
+              [
+                0.9999999999999998,
+                0.9999999999999998,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                1.5707963267949,
+                0.0,
+                20.0
+              ]
+            ],
+            "quarter_patch_points": [
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                0.0
+              ],
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                20.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                0.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                20.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                0.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                20.0
+              ]
+            ],
+            "quarter_at_target": true,
+            "quarter_at_opposite": false,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  10.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": false,
+            "independent": "PASS",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-2-read-native.log",
+              "sha256": "7dbb9bd606ce8422192eb9d4eaa775b13785ab6761e0b2cafa939ea88f90e228"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-2-native.brep",
+              "sha256": "b0c649c09de05a1663a51c47dd673c599f083ebf8dee7a11b311e84fe12e816a"
+            }
+          },
+          "result": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                20.0
+              ],
+              "opposite": [
+                20.0,
+                20.0,
+                0.0,
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 7,
+            "volume": 7995.707963267949,
+            "expected_volume": 7995.707963267949,
+            "original_six_planes": true,
+            "cylinder": [
+              [
+                0.9999999999999998,
+                0.9999999999999998,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                1.5707963267949,
+                0.0,
+                20.0
+              ]
+            ],
+            "quarter_patch_points": [
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                0.0
+              ],
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                20.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                0.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                20.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                0.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                20.0
+              ]
+            ],
+            "quarter_at_target": true,
+            "quarter_at_opposite": false,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  10.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": false,
+            "independent": "PASS",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-2-read-result.log",
+              "sha256": "7dbb9bd606ce8422192eb9d4eaa775b13785ab6761e0b2cafa939ea88f90e228"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-2-result.brep",
+              "sha256": "b0c649c09de05a1663a51c47dd673c599f083ebf8dee7a11b311e84fe12e816a"
+            }
+          }
+        },
+        "edge_indices": [
+          1,
+          7
+        ],
+        "edges": {
+          "target": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-2-target.brep",
+            "sha256": "96ee750d9096c91d9ee17642db4f797eba09c8860368859a44ad9fcd4177fa31"
+          },
+          "opposite": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/healthy-2-opposite.brep",
+            "sha256": "7ffc9436412ad84e264b5caac3c74978466a1bfc0f11e955a2591627266adc08"
+          }
+        },
+        "injection_verified": false
+      },
+      "opposite": {
+        "registered": {
+          "passed": true,
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/opposite-registered.json",
+            "sha256": "2efdb2e1e45e267234e20fabccae7e21a1eda979003974c575a1403b793eea6d"
+          },
+          "output": "INPUT_OK mode=box edge=1\nVALID_RESULT faces=7 TEST_DONE\n"
+        },
+        "geometry": {
+          "box": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                20.0
+              ],
+              "opposite": [
+                20.0,
+                20.0,
+                0.0,
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 6,
+            "volume": 7999.999999999998,
+            "expected_volume": 8000,
+            "original_six_planes": true,
+            "cylinder": [],
+            "quarter_patch_points": [],
+            "quarter_at_target": null,
+            "quarter_at_opposite": null,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  10.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": true,
+            "independent": "PASS",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/opposite-read-box.log",
+              "sha256": "501b3638fff36a40afef3c8098e512be109c92f041787f1f96d30f516bbaef58"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/opposite-box.brep",
+              "sha256": "977011318797e2c602af9bcf42a12c802cf117be56deff181c7cf0594c775119"
+            }
+          },
+          "native": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                20.0
+              ],
+              "opposite": [
+                20.0,
+                20.0,
+                0.0,
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 7,
+            "volume": 7995.707963267949,
+            "expected_volume": 7995.707963267949,
+            "original_six_planes": true,
+            "cylinder": [
+              [
+                0.9999999999999998,
+                0.9999999999999998,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                1.5707963267949,
+                0.0,
+                20.0
+              ]
+            ],
+            "quarter_patch_points": [
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                0.0
+              ],
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                20.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                0.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                20.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                0.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                20.0
+              ]
+            ],
+            "quarter_at_target": true,
+            "quarter_at_opposite": false,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  10.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": false,
+            "independent": "PASS",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/opposite-read-native.log",
+              "sha256": "7dbb9bd606ce8422192eb9d4eaa775b13785ab6761e0b2cafa939ea88f90e228"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/opposite-native.brep",
+              "sha256": "b0c649c09de05a1663a51c47dd673c599f083ebf8dee7a11b311e84fe12e816a"
+            }
+          },
+          "result": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                20.0
+              ],
+              "opposite": [
+                20.0,
+                20.0,
+                0.0,
+                20.0,
+                20.0,
+                20.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 7,
+            "volume": 7995.707963267949,
+            "expected_volume": 7995.707963267949,
+            "original_six_planes": true,
+            "cylinder": [
+              [
+                19.0,
+                19.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                1.5707963267948966,
+                0.0,
+                20.0
+              ]
+            ],
+            "quarter_patch_points": [
+              [
+                20.0,
+                19.0,
+                0.0
+              ],
+              [
+                20.0,
+                19.0,
+                20.0
+              ],
+              [
+                19.707106781186546,
+                19.707106781186546,
+                0.0
+              ],
+              [
+                19.707106781186546,
+                19.707106781186546,
+                20.0
+              ],
+              [
+                19.0,
+                20.0,
+                0.0
+              ],
+              [
+                19.0,
+                20.0,
+                20.0
+              ]
+            ],
+            "quarter_at_target": false,
+            "quarter_at_opposite": true,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.5,
+                  0.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  19.5,
+                  19.5,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  10.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  10.0,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  10.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  10.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  18.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  19.9,
+                  19.9,
+                  18.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "matches_opposite_material": true,
+            "independent": "FAIL",
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/opposite-read-result.log",
+              "sha256": "1a353f44211da86f44c30a861bb4e0ab5f26a5be99d6a47ce5fb5ce97f48b074"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/opposite-result.brep",
+              "sha256": "87f3ea1b389fe283d150420a51752c46bdb1a140c8c7f6db490bb60f0e0a781b"
+            }
+          }
+        },
+        "edge_indices": [
+          1,
+          7
+        ],
+        "edges": {
+          "target": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/opposite-target.brep",
+            "sha256": "96ee750d9096c91d9ee17642db4f797eba09c8860368859a44ad9fcd4177fa31"
+          },
+          "opposite": {
+            "path": "research/kernel-regression-v1/rollout-v11/receipts/fillet/opposite-opposite.brep",
+            "sha256": "7ffc9436412ad84e264b5caac3c74978466a1bfc0f11e955a2591627266adc08"
+          }
+        },
+        "injection_verified": true
+      }
+    }
+  }
+}

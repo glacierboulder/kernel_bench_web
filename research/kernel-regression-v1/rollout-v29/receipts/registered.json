@@ -1,0 +1,34 @@
+{
+  "original-0": {
+    "status": "failed",
+    "passed": false,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 0.412,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 1,
+      "elapsed_seconds": 0.021,
+      "output_tail": "94 failed: std::abs((aPatch.Value(aUMax, aVMin).Distance(aP10))-(0.))<=(aTol) \n96 failed: std::abs((aPatch.Value(aUMin, aVMax).Distance(aP01))-(0.))<=(aTol) \n101 failed: std::abs((aPatch.Value(aUMax, aVMid).Distance(gp_Pnt(10., 5., 0.)))-(0.))<=(aTol) \n102 failed: std::abs((aPatch.Value(aUMin, aVMid).Distance(gp_Pnt(0., 5., 0.)))-(0.))<=(aTol) \n103 failed: std::abs((aPatch.Value(aUMid, aVMin).Distance(gp_Pnt(5., 0., 0.)))-(0.))<=(aTol) \n104 failed: std::abs((aPatch.Value(aUMid, aVMax).Distance(gp_Pnt(5., 10., 0.)))-(0.))<=(aTol) \n105 failed: std::abs((aPatch.Value(3., 7.).Distance(gp_Pnt(3., 7., 0.)))-(0.))<=(aTol) \nverdict=fail\n",
+      "timed_out": false
+    }
+  },
+  "regression-3": {
+    "status": "passed",
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 0.442,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.004,
+      "output_tail": "verdict=pass\n",
+      "timed_out": false
+    }
+  }
+}

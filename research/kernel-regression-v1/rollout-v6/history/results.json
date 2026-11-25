@@ -1,0 +1,165 @@
+{
+  "issue": "M32942",
+  "repair_grade": "R1",
+  "model_sessions": 0,
+  "registered_suite": "occt-boolean-intersection-v4-mantis-32942@1",
+  "research_spatial_oracle": "M32942-spatial-v2-candidate",
+  "registered_passes": 4,
+  "spatial_native_witnesses_matched": 48,
+  "negative_controls_rejected": 9,
+  "distinct_runtime_libraries": [
+    "libTKBO"
+  ],
+  "native": {
+    "original": {
+      "v1": "geometry_pass",
+      "spatial": "PASS",
+      "witness_count": 16,
+      "matches_historical_reference_brep": true,
+      "volume": 109365.88829348898,
+      "centroid": [
+        3.5340632180546616,
+        52.17162516884015,
+        26.354346240288137
+      ],
+      "adaptive_integration_relative_error": 3.91396206229495e-09
+    },
+    "rigid_z": {
+      "v1": "geometry_pass",
+      "spatial": "PASS",
+      "witness_count": 16,
+      "matches_historical_reference_brep": true,
+      "volume": 109365.88829348891,
+      "centroid": [
+        -39.1716251688402,
+        -3.465936781945398,
+        31.354346240288123
+      ],
+      "adaptive_integration_relative_error": 3.91396207032646e-09
+    },
+    "rigid_x": {
+      "v1": "geometry_pass",
+      "spatial": "PASS",
+      "witness_count": 16,
+      "matches_historical_reference_brep": true,
+      "volume": 109365.88829348922,
+      "centroid": [
+        -0.4659367819453379,
+        -15.354346240288137,
+        61.17162516884017
+      ],
+      "adaptive_integration_relative_error": 3.913962065490875e-09
+    },
+    "regression": {
+      "v1": "geometry_pass",
+      "spatial": "NOT_APPLICABLE",
+      "witness_count": 0,
+      "matches_historical_reference_brep": true,
+      "volume": 134.04128655316487,
+      "centroid": [
+        1.499999999999926,
+        -1.0601848938211694e-16,
+        -1.081879741378922e-17
+      ],
+      "adaptive_integration_relative_error": 8.881784197001244e-17
+    }
+  },
+  "negative_controls": {
+    "original": {
+      "dx": {
+        "v1": "geometry_pass",
+        "spatial": "FAIL",
+        "wrong_witnesses": 4,
+        "measured_centroid_delta": [
+          18.999999999999993,
+          0.0,
+          -3.552713678800501e-15
+        ]
+      },
+      "dy": {
+        "v1": "geometry_pass",
+        "spatial": "FAIL",
+        "wrong_witnesses": 4,
+        "measured_centroid_delta": [
+          -7.993605777301127e-15,
+          22.999999999999986,
+          0.0
+        ]
+      },
+      "dz": {
+        "v1": "geometry_pass",
+        "spatial": "FAIL",
+        "wrong_witnesses": 4,
+        "measured_centroid_delta": [
+          4.884981308350689e-15,
+          7.105427357601002e-15,
+          17.0
+        ]
+      }
+    },
+    "rigid_z": {
+      "dx": {
+        "v1": "geometry_pass",
+        "spatial": "FAIL",
+        "wrong_witnesses": 2,
+        "measured_centroid_delta": [
+          19.000000000000014,
+          -4.440892098500626e-16,
+          0.0
+        ]
+      },
+      "dy": {
+        "v1": "geometry_pass",
+        "spatial": "FAIL",
+        "wrong_witnesses": 4,
+        "measured_centroid_delta": [
+          1.4210854715202004e-14,
+          23.000000000000018,
+          -3.552713678800501e-15
+        ]
+      },
+      "dz": {
+        "v1": "geometry_pass",
+        "spatial": "FAIL",
+        "wrong_witnesses": 4,
+        "measured_centroid_delta": [
+          1.4210854715202004e-14,
+          1.554312234475219e-14,
+          17.0
+        ]
+      }
+    },
+    "rigid_x": {
+      "dx": {
+        "v1": "geometry_pass",
+        "spatial": "FAIL",
+        "wrong_witnesses": 4,
+        "measured_centroid_delta": [
+          19.000000000000004,
+          0.0,
+          0.0
+        ]
+      },
+      "dy": {
+        "v1": "geometry_pass",
+        "spatial": "FAIL",
+        "wrong_witnesses": 4,
+        "measured_centroid_delta": [
+          6.38378239159465e-15,
+          22.999999999999993,
+          -1.4210854715202004e-14
+        ]
+      },
+      "dz": {
+        "v1": "geometry_pass",
+        "spatial": "FAIL",
+        "wrong_witnesses": 4,
+        "measured_centroid_delta": [
+          1.0547118733938987e-14,
+          0.0,
+          16.999999999999993
+        ]
+      }
+    }
+  }
+}

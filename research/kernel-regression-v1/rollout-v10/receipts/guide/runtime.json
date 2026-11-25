@@ -1,0 +1,35 @@
+{
+  "source_id": "occt801-b8f597c67781-periodic-fillet",
+  "toolchain": "occt1115-periodic-fillet-gcc",
+  "config": {
+    "BUILD_ADDITIONAL_TOOLKITS": "TKOffset;TKBool;TKFillet",
+    "BUILD_MODULE_ApplicationFramework": "OFF",
+    "BUILD_MODULE_DataExchange": "OFF",
+    "BUILD_MODULE_Draw": "OFF",
+    "BUILD_MODULE_FoundationClasses": "OFF",
+    "BUILD_MODULE_ModelingAlgorithms": "OFF",
+    "BUILD_MODULE_ModelingData": "OFF",
+    "BUILD_MODULE_Visualization": "OFF",
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+    "CMAKE_CXX_FLAGS_RELEASE": "-O1 -DNDEBUG"
+  },
+  "libraries": {
+    "libTKBO.so": "2c2c29e7717dca3ebe4f2850f8a6e215fb3f6f8295ff6cd2ecb9491068480491",
+    "libTKBRep.so": "5006fb3bcaea7540b11ef04f581f265b95f0fcc73de27751facb551fae5763c6",
+    "libTKBool.so": "e05dc1c80d60c9419ba78c3c1d941b5d9354af3f311c947fe5df36c34e527066",
+    "libTKFillet.so": "41011b99d6d66ee3f6f6ccf7404efee396db9776001a92bbc440807aaabc3be4",
+    "libTKG2d.so": "f88680f5cb2bf049048432c7c547f562079a4b2d8304c5c5289ce7154660db0c",
+    "libTKG3d.so": "0d0a6087b177627c1a15e5ca65fe952a4839707162aad55156efb5557ae1ea74",
+    "libTKGeomAlgo.so": "2d0c652c9fe0a396e72490d778016c6046e5606233c63cb12b95c886a29a652f",
+    "libTKGeomBase.so": "7769e47036790b94ff2f69407f40f32b2cf39d5ea76772c9e15453c2212a0a63",
+    "libTKMath.so": "5bb1696fd0697f19d33a46938c1aed0a76077de7dd1f0222f284e7a7040202f5",
+    "libTKOffset.so": "17ca8d99857861049ae05ed3abfd61a109e67a39591137400e9d7bd225eb57ab",
+    "libTKPrim.so": "10bd0c3448d89755441fae1c30ecd9b9a119db46c3de199a19f2a593dd5ea31d",
+    "libTKShHealing.so": "44e7e8244e3aeff01573479d1a5a586725a82242bc256393da32db394574b07f",
+    "libTKTopAlgo.so": "bb438f2f4de1fa24453473105e3cb6f0db826b8ba0a44b729295b2456c236e6d",
+    "libTKernel.so": "2fa72fd7ee9bc34293a04d88f378fbb672723748ba0419126361d6addabedda4"
+  },
+  "cache_sha256": "96e3b106ffd6a588903c45b493c72b42a5b5eadfcadcf1b16503c9da8c6dd1ba",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+}

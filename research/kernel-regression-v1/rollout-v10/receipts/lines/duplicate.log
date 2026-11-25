@@ -1,0 +1,9 @@
+DRAW is running in batch mode
+BENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=0|2 curve(s) found.|c_1 c_2 | kind=expression
+BENCH_ASSERT_PASS branch_count observed=2 expected=2 kind=numeric
+BENCH_ASSERT_PASS support_residual max_distance=0.0 limit=1e-7 kind=numeric
+BENCH_ASSERT_FAIL domain_coverage unbounded=1 positive_generator=1 negative_generator=0 kind=numeric
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=4 numeric_assertions=3
+TEST_DONE assertions=4 numeric_assertions=3
+SCRIPT_RETURN 0 

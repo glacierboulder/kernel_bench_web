@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "source_id": "occt-1177-b-cbca11e97518",
+  "baseline_commit": "cbca11e97518a66de27bdc5100ceacf9e77e2e87",
+  "baseline_tree_sha256": "5577b347bd0d241e249520b08bf1332e15826d158651ad1fbafc425a77f48351",
+  "toolchain": "occt8-gcc13-cpp-20261112",
+  "role": "baseline",
+  "files_sha256": {
+    "probe.cxx": "fa3955b44300951c35f7b5d9e3dcd2b57f6a07e89f14d7221bba295bac195563",
+    "replay.py": "ebd69c4610a4b75384b83e241ccefacca56d3d4705b2bb9023672e845b3a93ef"
+  },
+  "cases": {
+    "box-common": {
+      "geometry": {
+        "status": "PASS",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 499.9999999999999,
+          "cx": 7.500000000000001,
+          "swapped_volume": 499.9999999999999,
+          "swapped_cx": 7.5
+        },
+        "failed": []
+      },
+      "wrong_shape": {
+        "status": "FAIL",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 499.9999999999999,
+          "cx": 2.5,
+          "swapped_volume": 499.9999999999999,
+          "swapped_cx": 2.4999999999999996
+        },
+        "failed": [
+          "cx",
+          "swapped_cx"
+        ]
+      },
+      "expected_fault_rejected": true
+    },
+    "disjoint": {
+      "geometry": {
+        "status": "PASS",
+        "values": {
+          "valid": 1.0,
+          "solids": 0.0,
+          "volume": 0.0
+        },
+        "failed": []
+      },
+      "wrong_shape": {
+        "status": "FAIL",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 99.99999999999997
+        },
+        "failed": [
+          "solids",
+          "volume"
+        ]
+      },
+      "expected_fault_rejected": true
+    },
+    "cut-fuse": {
+      "geometry": {
+        "status": "PASS",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 499.9999999999999,
+          "cx": 2.5,
+          "fused_volume": 1499.9999999999993,
+          "fused_valid": 1.0
+        },
+        "failed": []
+      },
+      "wrong_shape": {
+        "status": "FAIL",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 499.9999999999999,
+          "cx": 2.5,
+          "fused_volume": 999.9999999999998,
+          "fused_valid": 1.0
+        },
+        "failed": [
+          "fused_volume"
+        ]
+      },
+      "expected_fault_rejected": true
+    },
+    "plane-sphere": {
+      "geometry": {
+        "status": "PASS",
+        "values": {
+          "length": 31.41592653589793,
+          "valid": 1.0,
+          "witness_distance": 1.7319121124709867e-15
+        },
+        "failed": []
+      },
+      "wrong_shape": {
+        "status": "FAIL",
+        "values": {
+          "length": 25.132741228718345,
+          "valid": 1.0,
+          "witness_distance": 3.1622776601683795
+        },
+        "failed": [
+          "length",
+          "witness_distance"
+        ]
+      },
+      "expected_fault_rejected": true
+    },
+    "hole-classification": {
+      "geometry": {
+        "status": "PASS",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 874.336293856408,
+          "cx": 5.0,
+          "hole_out": 1.0,
+          "wall_in": 1.0
+        },
+        "failed": []
+      },
+      "wrong_shape": {
+        "status": "FAIL",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 874.3362938564082,
+          "cx": 4.999999999999999,
+          "hole_out": 0.0,
+          "wall_in": 0.0
+        },
+        "failed": [
+          "hole_out",
+          "wall_in"
+        ]
+      },
+      "expected_fault_rejected": true
+    },
+    "brep-roundtrip": {
+      "geometry": {
+        "status": "PASS",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 874.3362938564078,
+          "cx": 5.0,
+          "hole_out": 1.0,
+          "wall_in": 1.0
+        },
+        "failed": []
+      },
+      "wrong_shape": {
+        "status": "FAIL",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 999.9999999999998,
+          "cx": 5.0,
+          "hole_out": 0.0,
+          "wall_in": 1.0
+        },
+        "failed": [
+          "volume",
+          "hole_out"
+        ]
+      },
+      "expected_fault_rejected": true
+    }
+  },
+  "status": "PASS",
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-I/inputs/compat",
+    "-O0",
+    "-I/workspace/build/include/opencascade",
+    "/inputs/probe.cxx",
+    "-L/workspace/build/lin64/gcc/lib",
+    "-o",
+    "/tmp/tmprs0ucuqt/probe",
+    "-lTKBO",
+    "-lTKPrim",
+    "-lTKTopAlgo",
+    "-lTKBRep",
+    "-lTKGeomAlgo",
+    "-lTKG3d",
+    "-lTKG2d",
+    "-lTKGeomBase",
+    "-lTKMath",
+    "-lTKernel"
+  ],
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "build": {
+    "status": "PASS"
+  },
+  "kernel_libraries_sha256": {
+    "libTKBO.so.8.1": "31a5aa1d12eaf535bdfe7a314d3e10a854b8ed5a5ff62d96d432cefa6c51b0dc",
+    "libTKPrim.so.8.1": "421d4c47c73a12f2867819ea774c62e26afc49477c5c68a09cacbf4339bcf7b5",
+    "libTKTopAlgo.so.8.1": "98cd74eaa4a398657488cd27c00d72d865214bd8f4fe985a5b75a9c6375fec00",
+    "libTKBRep.so.8.1": "bc5f62eba3df7baa22597ddfad0105702f0d875af246609fce7c1632a34cd8c0",
+    "libTKGeomBase.so.8.1": "0f2d975e4ea93de129ad93c1e5a660753e740c417bc05b68f25ab1e85b67870d",
+    "libTKMath.so.8.1": "d775ab6d65f8c80031757fec1b9e36db0157a9cbbc5584152b3fa742d1b3bed9",
+    "libTKernel.so.8.1": "a4fb893438906accae96feb7168d9abfb5f1df996243ccfddf37128b68bfcc1f",
+    "libTKShHealing.so.8.1": "f77406315eedb033939c412a7c234e0e70c611c56de0f1d5b92a76988f0c5fc9",
+    "libTKGeomAlgo.so.8.1": "3f10f6bf14a66a5989aa54fdc851cf558f0d1304705edad52b7a221b7bfc4afd",
+    "libTKG3d.so.8.1": "8c3e3a831e4afe99dbd57649b8014a2846985e538518c11ed2eb6f0f375b0990",
+    "libTKG2d.so.8.1": "06f1d052b87c6640c319cab28772bab241e5e94b102008937a658b5f684d653f"
+  },
+  "elapsed_seconds": 0.66
+}

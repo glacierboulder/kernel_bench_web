@@ -1,0 +1,1752 @@
+{
+  "sphere": {
+    "source": {
+      "source_id": "occt-v4-b84f42008b74",
+      "commit": "84f42008b74b4545e18e0ec361fd14e48d6a961d",
+      "materialized_tree_sha256": "5b99158d0acbca6f7f83138b52a4fc67a128208e4cac3804501834c271004eb4",
+      "toolchain": "occt-v4-clang10-o3-tcl86",
+      "toolchain_config": {
+        "path": "toolchains/occt-v4-clang10-o3-tcl86.json",
+        "sha256": "36d26cd94a139ac502457d363c7f246b4cc466169afc7fa817c25e0eb2fcbbe1"
+      },
+      "build_entry": {
+        "path": "tools/occt-v4-clang10-o3/build.sh",
+        "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/identity.json",
+      "sha256": "8a5bfb52ed7bab6748a5fa26cd168464dab38aaff3c5160d6f81a523f3408529"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/runtime.json",
+      "sha256": "c7499807d8d8a3b281d368684db684732d33a2c3b79a3902f213992fe4f67dc7"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/core-1.json",
+          "sha256": "be1166e4ddceefd0e2a8dc28beef673bc62a18757a8ccb57fa3deba008b7a5d0"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/core-2.json",
+          "sha256": "9c5e54450cb2b501bdcc1b62030dfa9adfcf72cbe9ac1f0e79fbaf2c12c9b431"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "controls": {
+      "healthy-1": {
+        "registered": "geometry_pass",
+        "independent": "PASS",
+        "injection_verified": null,
+        "cut_plane": [
+          0.0,
+          -4.0,
+          -4.0
+        ],
+        "outward_normal": [
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        "volume": 134.0412865531645,
+        "centroid": [
+          1.5,
+          2.1203697876423447e-16,
+          -1.5493768141760443e-16
+        ],
+        "target_witnesses": [
+          "IN",
+          "OUT",
+          "IN",
+          "OUT",
+          "ON",
+          "ON",
+          "OUT"
+        ],
+        "measured_witnesses": [
+          "IN",
+          "OUT",
+          "IN",
+          "OUT",
+          "ON",
+          "ON",
+          "OUT"
+        ],
+        "mismatched_indices": [],
+        "read": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/healthy-1-read.log",
+          "sha256": "5dc132bf5732158ce2c02b2090df149095e3ac0d0a87ac1fc063cd430b296477"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/healthy-1.log",
+          "sha256": "6c31ffd51b14ee4754ea765021b1a2e022bae9115cbecdea83a0b3126728ed7e"
+        },
+        "breps": {
+          "A": {
+            "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/healthy-1-A.brep",
+            "sha256": "e25c72175b68d8c4830b8f4de7789b1fa2f91d0f7a5e04225f150fe7359b428a"
+          },
+          "B": {
+            "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/healthy-1-B.brep",
+            "sha256": "9d9e2b11a4ff752d69670364369d548278c720d70db7ed5de5419884384d0e18"
+          },
+          "R": {
+            "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/healthy-1-R.brep",
+            "sha256": "cdc18e32d79c8a85e873509d4f4c8b4d2f3ddebc2d6e39635e39282f1b8ee1d2"
+          }
+        }
+      },
+      "healthy-2": {
+        "registered": "geometry_pass",
+        "independent": "PASS",
+        "injection_verified": null,
+        "cut_plane": [
+          0.0,
+          -4.0,
+          -4.0
+        ],
+        "outward_normal": [
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        "volume": 134.0412865531645,
+        "centroid": [
+          1.5,
+          2.1203697876423447e-16,
+          -1.5493768141760443e-16
+        ],
+        "target_witnesses": [
+          "IN",
+          "OUT",
+          "IN",
+          "OUT",
+          "ON",
+          "ON",
+          "OUT"
+        ],
+        "measured_witnesses": [
+          "IN",
+          "OUT",
+          "IN",
+          "OUT",
+          "ON",
+          "ON",
+          "OUT"
+        ],
+        "mismatched_indices": [],
+        "read": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/healthy-2-read.log",
+          "sha256": "5dc132bf5732158ce2c02b2090df149095e3ac0d0a87ac1fc063cd430b296477"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/healthy-2.log",
+          "sha256": "6c31ffd51b14ee4754ea765021b1a2e022bae9115cbecdea83a0b3126728ed7e"
+        },
+        "breps": {
+          "A": {
+            "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/healthy-2-A.brep",
+            "sha256": "e25c72175b68d8c4830b8f4de7789b1fa2f91d0f7a5e04225f150fe7359b428a"
+          },
+          "B": {
+            "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/healthy-2-B.brep",
+            "sha256": "9d9e2b11a4ff752d69670364369d548278c720d70db7ed5de5419884384d0e18"
+          },
+          "R": {
+            "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/healthy-2-R.brep",
+            "sha256": "cdc18e32d79c8a85e873509d4f4c8b4d2f3ddebc2d6e39635e39282f1b8ee1d2"
+          }
+        }
+      },
+      "opposite": {
+        "registered": "geometry_pass",
+        "independent": "FAIL",
+        "injection_verified": true,
+        "cut_plane": [
+          0.0,
+          -4.0,
+          -4.0
+        ],
+        "outward_normal": [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        "volume": 134.04128655316453,
+        "centroid": [
+          -1.5,
+          1.0991236413446571e-16,
+          0.0
+        ],
+        "target_witnesses": [
+          "IN",
+          "OUT",
+          "IN",
+          "OUT",
+          "ON",
+          "ON",
+          "OUT"
+        ],
+        "measured_witnesses": [
+          "OUT",
+          "IN",
+          "OUT",
+          "IN",
+          "ON",
+          "ON",
+          "OUT"
+        ],
+        "mismatched_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "read": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/opposite-read.log",
+          "sha256": "bf070adc209c51a3aa7402211b8eceaf1c3a82aefaea4367ba957e6dc254d51f"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/opposite.log",
+          "sha256": "6c31ffd51b14ee4754ea765021b1a2e022bae9115cbecdea83a0b3126728ed7e"
+        },
+        "breps": {
+          "A": {
+            "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/opposite-A.brep",
+            "sha256": "e25c72175b68d8c4830b8f4de7789b1fa2f91d0f7a5e04225f150fe7359b428a"
+          },
+          "B": {
+            "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/opposite-B.brep",
+            "sha256": "9d9e2b11a4ff752d69670364369d548278c720d70db7ed5de5419884384d0e18"
+          },
+          "R": {
+            "path": "research/kernel-regression-v1/rollout-v6/receipts/sphere/opposite-R.brep",
+            "sha256": "81d52b478afaa3f6e34f4fec21d4cded808a47c82fd3d0af1501224fb5b1bb6a"
+          }
+        }
+      }
+    },
+    "registered_status": "CALIBRATION_FAILED",
+    "additional_status": "CALIBRATED",
+    "original_four": {
+      "path": "research/kernel-regression-v1/rollout-v6/history/results.json",
+      "sha256": "9c0398100eced75ff938db5c348e0e695c57914332ebca1845361625e234aa5c"
+    },
+    "historical_registered_passes": 4
+  },
+  "torus": {
+    "source": {
+      "source_id": "occt23612-derived-e79fa864aeb8-torus",
+      "commit": "e79fa864aeb87e65d0f7550b4c8ad64725b0c1b8",
+      "materialized_tree_sha256": "2bf3e2955ab757ef37300b7b755c45d0788756b610b9738d80d16493b058f10f",
+      "toolchain": "occt1116-torus-gcc",
+      "toolchain_config": {
+        "path": "toolchains/occt1116-torus-gcc.json",
+        "sha256": "167fc4435b3bbc7a220a55d94b342cf58ca47d9bfca911b99bed27528462d578"
+      },
+      "build_entry": {
+        "path": "tools/occt1116-torus-gcc/build.sh",
+        "sha256": "7e421345bab6eee82f3f00247d8a7b24767b57bed4a367c81d39b0aed1c90e44"
+      },
+      "declared_public_targets": [
+        "TKPrim"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/identity.json",
+      "sha256": "56a4cb2ce7ae6953acb75f692fffbecf8c546b57d81cb52e61f3efc0fd60f5c0"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/runtime.json",
+      "sha256": "3cf39105051f5cbcc3026d724e8553bc1db13f4c9108aa1582d865925b88df0a"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/core-1.json",
+          "sha256": "7b0a976e7665ab4fa16a05881215f92a1224a4f3ee364b13d8ea0c05055e23b8"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "additional_status": "CALIBRATED",
+    "controls": {
+      "healthy-1": {
+        "registered": "PASS",
+        "independent": "PASS",
+        "injection_verified": null,
+        "equivalent_period_shift_verified": null,
+        "request_radians": [
+          0.0,
+          0.7853981633974483,
+          -0.7853981633974483,
+          0.7853981633974483
+        ],
+        "raw_face_uv": [
+          0.0,
+          0.7853981633974483,
+          -0.7853981633974483,
+          0.7853981633974483
+        ],
+        "world_frame_azimuth": 0.0,
+        "rectangular_edge_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "periodic_coverage_by_axis": {
+          "u": {
+            "actual_world_interval": [
+              0.0,
+              0.7853981633974483
+            ],
+            "gold": [
+              0.0,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.0
+            ],
+            "missing_angle": 0,
+            "excess_angle": 0,
+            "passed": true
+          },
+          "v": {
+            "actual_world_interval": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "gold": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.0
+            ],
+            "missing_angle": 0,
+            "excess_angle": 0,
+            "passed": true
+          }
+        },
+        "world_points": 25,
+        "max_error_to_requested_geometry": 0.0,
+        "max_error_to_target": 0.0,
+        "corners": [
+          {
+            "fractions": [
+              0.0,
+              0.0
+            ],
+            "actual": [
+              11.414213562373096,
+              0.0,
+              -1.414213562373095
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              -1.414213562373095
+            ],
+            "error": 0.0
+          },
+          {
+            "fractions": [
+              0.0,
+              1.0
+            ],
+            "actual": [
+              11.414213562373096,
+              0.0,
+              1.414213562373095
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              1.414213562373095
+            ],
+            "error": 0.0
+          },
+          {
+            "fractions": [
+              1.0,
+              0.0
+            ],
+            "actual": [
+              8.071067811865476,
+              8.071067811865476,
+              -1.414213562373095
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              -1.414213562373095
+            ],
+            "error": 0.0
+          },
+          {
+            "fractions": [
+              1.0,
+              1.0
+            ],
+            "actual": [
+              8.071067811865476,
+              8.071067811865476,
+              1.414213562373095
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              1.414213562373095
+            ],
+            "error": 0.0
+          }
+        ],
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/healthy-1.brep",
+          "sha256": "08ed773e896f9b9ff31bddaae7a426ddaab3ff5b56450c926af48cf1df3504fa"
+        },
+        "read": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/healthy-1-read.log",
+          "sha256": "140cc2bd09e816a68531269c27de028083c098cb5057fc505229baf229f626f6"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/healthy-1-registered.log",
+          "sha256": "0b0240116d2be8b835b6e84006003fb9246bb4267681119388b281f17b719d4b"
+        }
+      },
+      "healthy-2": {
+        "registered": "PASS",
+        "independent": "PASS",
+        "injection_verified": null,
+        "equivalent_period_shift_verified": null,
+        "request_radians": [
+          0.0,
+          0.7853981633974483,
+          -0.7853981633974483,
+          0.7853981633974483
+        ],
+        "raw_face_uv": [
+          0.0,
+          0.7853981633974483,
+          -0.7853981633974483,
+          0.7853981633974483
+        ],
+        "world_frame_azimuth": 0.0,
+        "rectangular_edge_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "periodic_coverage_by_axis": {
+          "u": {
+            "actual_world_interval": [
+              0.0,
+              0.7853981633974483
+            ],
+            "gold": [
+              0.0,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.0
+            ],
+            "missing_angle": 0,
+            "excess_angle": 0,
+            "passed": true
+          },
+          "v": {
+            "actual_world_interval": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "gold": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.0
+            ],
+            "missing_angle": 0,
+            "excess_angle": 0,
+            "passed": true
+          }
+        },
+        "world_points": 25,
+        "max_error_to_requested_geometry": 0.0,
+        "max_error_to_target": 0.0,
+        "corners": [
+          {
+            "fractions": [
+              0.0,
+              0.0
+            ],
+            "actual": [
+              11.414213562373096,
+              0.0,
+              -1.414213562373095
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              -1.414213562373095
+            ],
+            "error": 0.0
+          },
+          {
+            "fractions": [
+              0.0,
+              1.0
+            ],
+            "actual": [
+              11.414213562373096,
+              0.0,
+              1.414213562373095
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              1.414213562373095
+            ],
+            "error": 0.0
+          },
+          {
+            "fractions": [
+              1.0,
+              0.0
+            ],
+            "actual": [
+              8.071067811865476,
+              8.071067811865476,
+              -1.414213562373095
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              -1.414213562373095
+            ],
+            "error": 0.0
+          },
+          {
+            "fractions": [
+              1.0,
+              1.0
+            ],
+            "actual": [
+              8.071067811865476,
+              8.071067811865476,
+              1.414213562373095
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              1.414213562373095
+            ],
+            "error": 0.0
+          }
+        ],
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/healthy-2.brep",
+          "sha256": "08ed773e896f9b9ff31bddaae7a426ddaab3ff5b56450c926af48cf1df3504fa"
+        },
+        "read": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/healthy-2-read.log",
+          "sha256": "140cc2bd09e816a68531269c27de028083c098cb5057fc505229baf229f626f6"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/healthy-2-registered.log",
+          "sha256": "0b0240116d2be8b835b6e84006003fb9246bb4267681119388b281f17b719d4b"
+        }
+      },
+      "u-period": {
+        "registered": "PASS",
+        "independent": "PASS",
+        "injection_verified": null,
+        "equivalent_period_shift_verified": true,
+        "request_radians": [
+          6.283185307179586,
+          7.0685834705770345,
+          -0.7853981633974483,
+          0.7853981633974483
+        ],
+        "raw_face_uv": [
+          0.0,
+          0.7853981633974483,
+          -0.7853981633974483,
+          0.7853981633974483
+        ],
+        "world_frame_azimuth": -2.4492935982947064e-16,
+        "rectangular_edge_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "periodic_coverage_by_axis": {
+          "u": {
+            "actual_world_interval": [
+              -2.4492935982947064e-16,
+              0.7853981633974481
+            ],
+            "gold": [
+              0.0,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              2.4492935982947064e-16,
+              2.220446049250313e-16
+            ],
+            "missing_angle": 0,
+            "excess_angle": 0,
+            "passed": true
+          },
+          "v": {
+            "actual_world_interval": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "gold": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.0
+            ],
+            "missing_angle": 0,
+            "excess_angle": 0,
+            "passed": true
+          }
+        },
+        "world_points": 25,
+        "max_error_to_requested_geometry": 5.687116766346677e-15,
+        "max_error_to_target": 3.202372833989377e-15,
+        "corners": [
+          {
+            "fractions": [
+              0.0,
+              0.0
+            ],
+            "actual": [
+              11.414213562373096,
+              -2.795676020788904e-15,
+              -1.414213562373095
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              -1.414213562373095
+            ],
+            "error": 2.795676020788904e-15
+          },
+          {
+            "fractions": [
+              0.0,
+              1.0
+            ],
+            "actual": [
+              11.414213562373096,
+              -2.795676020788904e-15,
+              1.414213562373095
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              1.414213562373095
+            ],
+            "error": 2.795676020788904e-15
+          },
+          {
+            "fractions": [
+              1.0,
+              0.0
+            ],
+            "actual": [
+              8.071067811865477,
+              8.071067811865474,
+              -1.414213562373095
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              -1.414213562373095
+            ],
+            "error": 2.5121479338940403e-15
+          },
+          {
+            "fractions": [
+              1.0,
+              1.0
+            ],
+            "actual": [
+              8.071067811865477,
+              8.071067811865474,
+              1.414213562373095
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              1.414213562373095
+            ],
+            "error": 2.5121479338940403e-15
+          }
+        ],
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/u-period.brep",
+          "sha256": "a252da82eb5315e4439d0b92792cd4dc85f02a1fb2e9a9b917ec65b5bcee072d"
+        },
+        "read": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/u-period-read.log",
+          "sha256": "1a957ca261422417c654ef12f59cc12fb23492b604042b704d7f02e90f570cb6"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/u-period-registered.log",
+          "sha256": "0b0240116d2be8b835b6e84006003fb9246bb4267681119388b281f17b719d4b"
+        }
+      },
+      "v-period": {
+        "registered": "PASS",
+        "independent": "PASS",
+        "injection_verified": null,
+        "equivalent_period_shift_verified": true,
+        "request_radians": [
+          0.0,
+          0.7853981633974483,
+          5.497787143782138,
+          7.0685834705770345
+        ],
+        "raw_face_uv": [
+          0.0,
+          0.7853981633974483,
+          5.497787143782138,
+          7.0685834705770345
+        ],
+        "world_frame_azimuth": 0.0,
+        "rectangular_edge_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "periodic_coverage_by_axis": {
+          "u": {
+            "actual_world_interval": [
+              0.0,
+              0.7853981633974483
+            ],
+            "gold": [
+              0.0,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.0
+            ],
+            "missing_angle": 0,
+            "excess_angle": 0,
+            "passed": true
+          },
+          "v": {
+            "actual_world_interval": [
+              5.497787143782138,
+              7.0685834705770345
+            ],
+            "gold": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.0
+            ],
+            "missing_angle": 0,
+            "excess_angle": 0,
+            "passed": true
+          }
+        },
+        "world_points": 25,
+        "max_error_to_requested_geometry": 4.898587196589413e-16,
+        "max_error_to_target": 2.79326464745136e-15,
+        "corners": [
+          {
+            "fractions": [
+              0.0,
+              0.0
+            ],
+            "actual": [
+              11.414213562373094,
+              0.0,
+              -1.4142135623730954
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              -1.414213562373095
+            ],
+            "error": 1.831026719408895e-15
+          },
+          {
+            "fractions": [
+              0.0,
+              1.0
+            ],
+            "actual": [
+              11.414213562373096,
+              0.0,
+              1.4142135623730947
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              1.414213562373095
+            ],
+            "error": 2.220446049250313e-16
+          },
+          {
+            "fractions": [
+              1.0,
+              0.0
+            ],
+            "actual": [
+              8.071067811865476,
+              8.071067811865474,
+              -1.4142135623730954
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              -1.414213562373095
+            ],
+            "error": 1.831026719408895e-15
+          },
+          {
+            "fractions": [
+              1.0,
+              1.0
+            ],
+            "actual": [
+              8.071067811865476,
+              8.071067811865476,
+              1.4142135623730947
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              1.414213562373095
+            ],
+            "error": 2.220446049250313e-16
+          }
+        ],
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/v-period.brep",
+          "sha256": "940af13cf943a752184e1033411d4c858363e18c089c573d972dc0baaf174b31"
+        },
+        "read": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/v-period-read.log",
+          "sha256": "087ed327fdbd6ca8cbdd65b8324b3325de4fba4aa4879dbc7d0ddd20a2eb684b"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/v-period-registered.log",
+          "sha256": "0b0240116d2be8b835b6e84006003fb9246bb4267681119388b281f17b719d4b"
+        }
+      },
+      "u-shift": {
+        "registered": "PASS",
+        "independent": "FAIL",
+        "injection_verified": true,
+        "equivalent_period_shift_verified": null,
+        "request_radians": [
+          0.7853981633974483,
+          1.5707963267948966,
+          -0.7853981633974483,
+          0.7853981633974483
+        ],
+        "raw_face_uv": [
+          0.0,
+          0.7853981633974483,
+          -0.7853981633974483,
+          0.7853981633974483
+        ],
+        "world_frame_azimuth": 0.7853981633974482,
+        "rectangular_edge_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "periodic_coverage_by_axis": {
+          "u": {
+            "actual_world_interval": [
+              0.7853981633974482,
+              1.5707963267948966
+            ],
+            "gold": [
+              0.0,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.7853981633974482,
+              0.7853981633974483
+            ],
+            "missing_angle": 0.7853981633974482,
+            "excess_angle": 0.7853981633974483,
+            "passed": false
+          },
+          "v": {
+            "actual_world_interval": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "gold": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.0
+            ],
+            "missing_angle": 0,
+            "excess_angle": 0,
+            "passed": true
+          }
+        },
+        "world_points": 25,
+        "max_error_to_requested_geometry": 1.831026719408895e-15,
+        "max_error_to_target": 9.184402376762154,
+        "corners": [
+          {
+            "fractions": [
+              0.0,
+              0.0
+            ],
+            "actual": [
+              8.071067811865476,
+              8.071067811865476,
+              -1.414213562373095
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              -1.414213562373095
+            ],
+            "error": 8.73606084759419
+          },
+          {
+            "fractions": [
+              0.0,
+              1.0
+            ],
+            "actual": [
+              8.071067811865476,
+              8.071067811865476,
+              1.414213562373095
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              1.414213562373095
+            ],
+            "error": 8.73606084759419
+          },
+          {
+            "fractions": [
+              1.0,
+              0.0
+            ],
+            "actual": [
+              8.881784197001252e-16,
+              11.414213562373096,
+              -1.414213562373095
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              -1.414213562373095
+            ],
+            "error": 8.73606084759419
+          },
+          {
+            "fractions": [
+              1.0,
+              1.0
+            ],
+            "actual": [
+              8.881784197001252e-16,
+              11.414213562373096,
+              1.414213562373095
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              1.414213562373095
+            ],
+            "error": 8.73606084759419
+          }
+        ],
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/u-shift.brep",
+          "sha256": "1031268d60ff8abd690eced08955bfd4931bcff49cdc05e69fbe70b979335305"
+        },
+        "read": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/u-shift-read.log",
+          "sha256": "353fc3c482d84987fc3e0475bb080ce6c88a604a4536f6dde276d6f11b0ad584"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/u-shift-registered.log",
+          "sha256": "0b0240116d2be8b835b6e84006003fb9246bb4267681119388b281f17b719d4b"
+        }
+      },
+      "v-shift": {
+        "registered": "PASS",
+        "independent": "FAIL",
+        "injection_verified": true,
+        "equivalent_period_shift_verified": null,
+        "request_radians": [
+          0.0,
+          0.7853981633974483,
+          -0.39269908169872414,
+          1.1780972450961724
+        ],
+        "raw_face_uv": [
+          0.0,
+          0.7853981633974483,
+          -0.39269908169872414,
+          1.1780972450961724
+        ],
+        "world_frame_azimuth": 0.0,
+        "rectangular_edge_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "periodic_coverage_by_axis": {
+          "u": {
+            "actual_world_interval": [
+              0.0,
+              0.7853981633974483
+            ],
+            "gold": [
+              0.0,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.0
+            ],
+            "missing_angle": 0,
+            "excess_angle": 0,
+            "passed": true
+          },
+          "v": {
+            "actual_world_interval": [
+              -0.39269908169872414,
+              1.1780972450961724
+            ],
+            "gold": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.39269908169872414,
+              0.39269908169872414
+            ],
+            "missing_angle": 0.3926990816987237,
+            "excess_angle": 0.3926990816987237,
+            "passed": false
+          }
+        },
+        "world_points": 25,
+        "max_error_to_requested_geometry": 0.0,
+        "max_error_to_target": 0.7803612880645152,
+        "corners": [
+          {
+            "fractions": [
+              0.0,
+              0.0
+            ],
+            "actual": [
+              11.847759065022574,
+              0.0,
+              -0.7653668647301796
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              -1.414213562373095
+            ],
+            "error": 0.7803612880645128
+          },
+          {
+            "fractions": [
+              0.0,
+              1.0
+            ],
+            "actual": [
+              10.76536686473018,
+              0.0,
+              1.8477590650225735
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              1.414213562373095
+            ],
+            "error": 0.7803612880645141
+          },
+          {
+            "fractions": [
+              1.0,
+              0.0
+            ],
+            "actual": [
+              8.377630776741853,
+              8.377630776741851,
+              -0.7653668647301796
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              -1.414213562373095
+            ],
+            "error": 0.7803612880645131
+          },
+          {
+            "fractions": [
+              1.0,
+              1.0
+            ],
+            "actual": [
+              7.612263912011673,
+              7.612263912011671,
+              1.8477590650225735
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              1.414213562373095
+            ],
+            "error": 0.7803612880645137
+          }
+        ],
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/v-shift.brep",
+          "sha256": "3353d6192f4ce3a344df364a20bedba11ade98f8b56070950b87df3eb48a2651"
+        },
+        "read": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/v-shift-read.log",
+          "sha256": "916c8dea56a87beb6c1ef48a6c20386377f313c5156609a1331ac6ddff168ef3"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/v-shift-registered.log",
+          "sha256": "0b0240116d2be8b835b6e84006003fb9246bb4267681119388b281f17b719d4b"
+        }
+      },
+      "u-short": {
+        "registered": "FAIL",
+        "independent": "FAIL",
+        "injection_verified": true,
+        "equivalent_period_shift_verified": null,
+        "request_radians": [
+          0.0,
+          0.39269908169872414,
+          -0.7853981633974483,
+          0.7853981633974483
+        ],
+        "raw_face_uv": [
+          0.0,
+          0.39269908169872414,
+          -0.7853981633974483,
+          0.7853981633974483
+        ],
+        "world_frame_azimuth": 0.0,
+        "rectangular_edge_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "periodic_coverage_by_axis": {
+          "u": {
+            "actual_world_interval": [
+              0.0,
+              0.39269908169872414
+            ],
+            "gold": [
+              0.0,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.39269908169872414
+            ],
+            "missing_angle": 0.39269908169872414,
+            "excess_angle": 0,
+            "passed": false
+          },
+          "v": {
+            "actual_world_interval": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "gold": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.0
+            ],
+            "missing_angle": 0,
+            "excess_angle": 0,
+            "passed": true
+          }
+        },
+        "world_points": 25,
+        "max_error_to_requested_geometry": 0.0,
+        "max_error_to_target": 4.682167728387077,
+        "corners": [
+          {
+            "fractions": [
+              0.0,
+              0.0
+            ],
+            "actual": [
+              11.414213562373096,
+              0.0,
+              -1.414213562373095
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              -1.414213562373095
+            ],
+            "error": 0.0
+          },
+          {
+            "fractions": [
+              0.0,
+              1.0
+            ],
+            "actual": [
+              11.414213562373096,
+              0.0,
+              1.414213562373095
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              1.414213562373095
+            ],
+            "error": 0.0
+          },
+          {
+            "fractions": [
+              1.0,
+              0.0
+            ],
+            "actual": [
+              10.545358289989245,
+              4.368030423797095,
+              -1.414213562373095
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              -1.414213562373095
+            ],
+            "error": 4.453605198888452
+          },
+          {
+            "fractions": [
+              1.0,
+              1.0
+            ],
+            "actual": [
+              10.545358289989245,
+              4.368030423797095,
+              1.414213562373095
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              1.414213562373095
+            ],
+            "error": 4.453605198888452
+          }
+        ],
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/u-short.brep",
+          "sha256": "316fd1eec073886fe76c44f9bf8be3eee0dc8c6288d5279a26eb0242f392f208"
+        },
+        "read": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/u-short-read.log",
+          "sha256": "d2fc236bc4660e124d10cd22a6925f78285f7269dcbcf566030545f31cf45d4c"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/u-short-registered.log",
+          "sha256": "e610747ae29af70eca23e70e2e0d067fc0b0eac69d5f738bdf89ed22f34eaabc"
+        }
+      },
+      "v-short": {
+        "registered": "FAIL",
+        "independent": "FAIL",
+        "injection_verified": true,
+        "equivalent_period_shift_verified": null,
+        "request_radians": [
+          0.0,
+          0.7853981633974483,
+          -0.7853981633974483,
+          0.39269908169872414
+        ],
+        "raw_face_uv": [
+          0.0,
+          0.7853981633974483,
+          -0.7853981633974483,
+          0.39269908169872414
+        ],
+        "world_frame_azimuth": 0.0,
+        "rectangular_edge_pairs": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "periodic_coverage_by_axis": {
+          "u": {
+            "actual_world_interval": [
+              0.0,
+              0.7853981633974483
+            ],
+            "gold": [
+              0.0,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.0
+            ],
+            "missing_angle": 0,
+            "excess_angle": 0,
+            "passed": true
+          },
+          "v": {
+            "actual_world_interval": [
+              -0.7853981633974483,
+              0.39269908169872414
+            ],
+            "gold": [
+              -0.7853981633974483,
+              0.7853981633974483
+            ],
+            "endpoint_angle_errors": [
+              0.0,
+              0.39269908169872414
+            ],
+            "missing_angle": 0.3926990816987237,
+            "excess_angle": 0,
+            "passed": false
+          }
+        },
+        "world_points": 25,
+        "max_error_to_requested_geometry": 0.0,
+        "max_error_to_target": 0.7803612880645134,
+        "corners": [
+          {
+            "fractions": [
+              0.0,
+              0.0
+            ],
+            "actual": [
+              11.414213562373096,
+              0.0,
+              -1.414213562373095
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              -1.414213562373095
+            ],
+            "error": 0.0
+          },
+          {
+            "fractions": [
+              0.0,
+              1.0
+            ],
+            "actual": [
+              11.847759065022574,
+              0.0,
+              0.7653668647301796
+            ],
+            "gold": [
+              11.414213562373096,
+              0.0,
+              1.414213562373095
+            ],
+            "error": 0.7803612880645128
+          },
+          {
+            "fractions": [
+              1.0,
+              0.0
+            ],
+            "actual": [
+              8.071067811865476,
+              8.071067811865476,
+              -1.414213562373095
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              -1.414213562373095
+            ],
+            "error": 0.0
+          },
+          {
+            "fractions": [
+              1.0,
+              1.0
+            ],
+            "actual": [
+              8.377630776741853,
+              8.377630776741851,
+              0.7653668647301796
+            ],
+            "gold": [
+              8.071067811865476,
+              8.071067811865476,
+              1.414213562373095
+            ],
+            "error": 0.7803612880645131
+          }
+        ],
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/v-short.brep",
+          "sha256": "4b6e06551312580646a6b5b2422b1b2755583efda89cf580ae7dbdf696613f8c"
+        },
+        "read": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/v-short-read.log",
+          "sha256": "f7eeb5474c877374bb39ba6bca113ef751f94605d8e4d739cab38a1c6fb39867"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/v-short-registered.log",
+          "sha256": "e610747ae29af70eca23e70e2e0d067fc0b0eac69d5f738bdf89ed22f34eaabc"
+        }
+      }
+    },
+    "scope": "Single valid ring-torus solid with one rectangular lateral face of four straight UV trims and the frozen major/minor radii.",
+    "original": {
+      "path": "research/kernel-regression-v1/rollout-v6/receipts/torus/registered.log",
+      "sha256": "0b0240116d2be8b835b6e84006003fb9246bb4267681119388b281f17b719d4b"
+    }
+  }
+}

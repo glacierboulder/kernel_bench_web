@@ -1,0 +1,2452 @@
+{
+  "rings": {
+    "source": {
+      "source_id": "occt-single20-cfde7eebb37b",
+      "commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "materialized_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "toolchain": "occt-v4-clang10-o0-tcl86",
+      "toolchain_config": {
+        "path": "toolchains/occt-v4-clang10-o0-tcl86.json",
+        "sha256": "6c1675f2f34f07dd5945a9782f3835878e74bfc97838eb6ccc22a6f9a0d855e3"
+      },
+      "build_entry": {
+        "path": "tools/occt-v4-clang10-o0/build.sh",
+        "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/identity.json",
+      "sha256": "837954cf4e011aea449ab4e79c5764c33b497a369dfec12b5ce9d9eecf416135"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/runtime.json",
+      "sha256": "2cc934ab9a4048ab9c052c688ff9c55350e4d73a12f311a12bd3ac4ffcbb2043"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/core-1.json",
+          "sha256": "72154a7c7f85f32401ab5cedd0ec192079cf9b0c883783d9761da2b82025670e"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/core-2.json",
+          "sha256": "3b20552109170cc6ec089c1c5830bd6fcd75f4632692693bbb891586d8042f93"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "independent_status": "CALIBRATED",
+    "registered_baseline": {
+      "passed": true,
+      "status": "geometry_pass",
+      "assertions": {
+        "operation_completed": "PASS",
+        "nonempty": "PASS",
+        "support": "PASS",
+        "coverage": "PASS"
+      },
+      "log": {
+        "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/registered.log",
+        "sha256": "89e5187ebd0b77c7b7ae2b703e58bb6752ee06a7bcc748b4c96ceb60d8fb244e"
+      }
+    },
+    "previous_healthy": {
+      "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/history/result.json",
+      "sha256": "a2b093f142d8b4e30f2e2aa2c2fd489eb2baa9667365346d8fe26fd18a75d02f"
+    },
+    "controls": {
+      "healthy-1": {
+        "registered": {
+          "passed": true,
+          "status": "geometry_pass",
+          "assertions": {
+            "operation_completed": "PASS",
+            "nonempty": "PASS",
+            "support": "PASS",
+            "coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-1.log",
+            "sha256": "9e2294ac686c07fbe51e493155ed0a10329dd8ae47f5086aff69522e77730ae2"
+          }
+        },
+        "source_faces": {
+          "torus": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-1-torus.brep",
+            "sha256": "4e426fcbd52b196231c105862db3779917c20daa298d5cce463b4014bf2e7db4"
+          },
+          "plane": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-1-plane.brep",
+            "sha256": "cf1e4646376157330415e271747fdbb11018d30f5642f91184feb5f777e9bb89"
+          }
+        },
+        "original_and_scored": {
+          "native": {
+            "torus": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              100.0,
+              20.0
+            ],
+            "plane": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              -0.0,
+              -0.0,
+              1.0,
+              0.0
+            ],
+            "domains": [
+              [
+                1.0,
+                0.0,
+                6.28318530717959,
+                0.0,
+                6.28318530717959
+              ],
+              [
+                2.0,
+                -200.0,
+                200.0,
+                -200.0,
+                200.0
+              ]
+            ],
+            "input_face_wires_verified": true,
+            "edges": [
+              {
+                "radius": 120.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    120.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    120.0,
+                    3.9693411827652363e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              },
+              {
+                "radius": 80.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    80.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    80.0,
+                    2.646227455176824e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              }
+            ],
+            "branches": {
+              "80": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              },
+              "120": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              }
+            },
+            "branch_presence": "PASS",
+            "continuous_coverage": "PASS",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-1-read-native.log",
+              "sha256": "0f3f63c16d4d9b2ee0e53aa4ca28020ec63e84c94263e18031875615ccf9df0a"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-1-native.brep",
+              "sha256": "aa9423f75438e85a7af115607422ab26cd02a32d9a151d239aa2c81882724ae0"
+            }
+          },
+          "result": {
+            "torus": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              100.0,
+              20.0
+            ],
+            "plane": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              -0.0,
+              -0.0,
+              1.0,
+              0.0
+            ],
+            "domains": [
+              [
+                1.0,
+                0.0,
+                6.28318530717959,
+                0.0,
+                6.28318530717959
+              ],
+              [
+                2.0,
+                -200.0,
+                200.0,
+                -200.0,
+                200.0
+              ]
+            ],
+            "input_face_wires_verified": true,
+            "edges": [
+              {
+                "radius": 120.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    120.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    120.0,
+                    3.9693411827652363e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              },
+              {
+                "radius": 80.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    80.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    80.0,
+                    2.646227455176824e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              }
+            ],
+            "branches": {
+              "80": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              },
+              "120": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              }
+            },
+            "branch_presence": "PASS",
+            "continuous_coverage": "PASS",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-1-read-result.log",
+              "sha256": "0f3f63c16d4d9b2ee0e53aa4ca28020ec63e84c94263e18031875615ccf9df0a"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-1-result.brep",
+              "sha256": "aa9423f75438e85a7af115607422ab26cd02a32d9a151d239aa2c81882724ae0"
+            }
+          }
+        },
+        "witness_distances": [
+          [
+            80.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -80.0,
+            0.0,
+            0.0,
+            9.797174393178826e-15
+          ],
+          [
+            0.0,
+            80.0,
+            0.0,
+            4.898587196589413e-15
+          ],
+          [
+            0.0,
+            -80.0,
+            0.0,
+            1.4695761589768237e-14
+          ],
+          [
+            120.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -120.0,
+            0.0,
+            0.0,
+            1.469576158976824e-14
+          ],
+          [
+            0.0,
+            120.0,
+            0.0,
+            7.34788079488412e-15
+          ],
+          [
+            0.0,
+            -120.0,
+            0.0,
+            2.2043642384652355e-14
+          ]
+        ],
+        "sampled_support_max": 1.4210854715202004e-14,
+        "sampled_support_points": 130,
+        "injection_verified": null
+      },
+      "healthy-2": {
+        "registered": {
+          "passed": true,
+          "status": "geometry_pass",
+          "assertions": {
+            "operation_completed": "PASS",
+            "nonempty": "PASS",
+            "support": "PASS",
+            "coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-2.log",
+            "sha256": "9e2294ac686c07fbe51e493155ed0a10329dd8ae47f5086aff69522e77730ae2"
+          }
+        },
+        "source_faces": {
+          "torus": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-2-torus.brep",
+            "sha256": "4e426fcbd52b196231c105862db3779917c20daa298d5cce463b4014bf2e7db4"
+          },
+          "plane": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-2-plane.brep",
+            "sha256": "cf1e4646376157330415e271747fdbb11018d30f5642f91184feb5f777e9bb89"
+          }
+        },
+        "original_and_scored": {
+          "native": {
+            "torus": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              100.0,
+              20.0
+            ],
+            "plane": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              -0.0,
+              -0.0,
+              1.0,
+              0.0
+            ],
+            "domains": [
+              [
+                1.0,
+                0.0,
+                6.28318530717959,
+                0.0,
+                6.28318530717959
+              ],
+              [
+                2.0,
+                -200.0,
+                200.0,
+                -200.0,
+                200.0
+              ]
+            ],
+            "input_face_wires_verified": true,
+            "edges": [
+              {
+                "radius": 120.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    120.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    120.0,
+                    3.9693411827652363e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              },
+              {
+                "radius": 80.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    80.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    80.0,
+                    2.646227455176824e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              }
+            ],
+            "branches": {
+              "80": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              },
+              "120": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              }
+            },
+            "branch_presence": "PASS",
+            "continuous_coverage": "PASS",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-2-read-native.log",
+              "sha256": "0f3f63c16d4d9b2ee0e53aa4ca28020ec63e84c94263e18031875615ccf9df0a"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-2-native.brep",
+              "sha256": "aa9423f75438e85a7af115607422ab26cd02a32d9a151d239aa2c81882724ae0"
+            }
+          },
+          "result": {
+            "torus": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              100.0,
+              20.0
+            ],
+            "plane": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              -0.0,
+              -0.0,
+              1.0,
+              0.0
+            ],
+            "domains": [
+              [
+                1.0,
+                0.0,
+                6.28318530717959,
+                0.0,
+                6.28318530717959
+              ],
+              [
+                2.0,
+                -200.0,
+                200.0,
+                -200.0,
+                200.0
+              ]
+            ],
+            "input_face_wires_verified": true,
+            "edges": [
+              {
+                "radius": 120.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    120.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    120.0,
+                    3.9693411827652363e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              },
+              {
+                "radius": 80.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    80.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    80.0,
+                    2.646227455176824e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              }
+            ],
+            "branches": {
+              "80": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              },
+              "120": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              }
+            },
+            "branch_presence": "PASS",
+            "continuous_coverage": "PASS",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-2-read-result.log",
+              "sha256": "0f3f63c16d4d9b2ee0e53aa4ca28020ec63e84c94263e18031875615ccf9df0a"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/healthy-2-result.brep",
+              "sha256": "aa9423f75438e85a7af115607422ab26cd02a32d9a151d239aa2c81882724ae0"
+            }
+          }
+        },
+        "witness_distances": [
+          [
+            80.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -80.0,
+            0.0,
+            0.0,
+            9.797174393178826e-15
+          ],
+          [
+            0.0,
+            80.0,
+            0.0,
+            4.898587196589413e-15
+          ],
+          [
+            0.0,
+            -80.0,
+            0.0,
+            1.4695761589768237e-14
+          ],
+          [
+            120.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -120.0,
+            0.0,
+            0.0,
+            1.469576158976824e-14
+          ],
+          [
+            0.0,
+            120.0,
+            0.0,
+            7.34788079488412e-15
+          ],
+          [
+            0.0,
+            -120.0,
+            0.0,
+            2.2043642384652355e-14
+          ]
+        ],
+        "sampled_support_max": 1.4210854715202004e-14,
+        "sampled_support_points": 130,
+        "injection_verified": null
+      },
+      "missing-inner": {
+        "registered": {
+          "passed": false,
+          "status": "geometry_fail",
+          "assertions": {
+            "operation_completed": "PASS",
+            "nonempty": "PASS",
+            "support": "PASS",
+            "coverage": "FAIL"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/missing-inner.log",
+            "sha256": "346e4bce6461d825ce8151e2db87af62fc7243706a2cc5344a8e72a0a8cd15b5"
+          }
+        },
+        "source_faces": {
+          "torus": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/missing-inner-torus.brep",
+            "sha256": "4e426fcbd52b196231c105862db3779917c20daa298d5cce463b4014bf2e7db4"
+          },
+          "plane": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/missing-inner-plane.brep",
+            "sha256": "cf1e4646376157330415e271747fdbb11018d30f5642f91184feb5f777e9bb89"
+          }
+        },
+        "original_and_scored": {
+          "native": {
+            "torus": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              100.0,
+              20.0
+            ],
+            "plane": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              -0.0,
+              -0.0,
+              1.0,
+              0.0
+            ],
+            "domains": [
+              [
+                1.0,
+                0.0,
+                6.28318530717959,
+                0.0,
+                6.28318530717959
+              ],
+              [
+                2.0,
+                -200.0,
+                200.0,
+                -200.0,
+                200.0
+              ]
+            ],
+            "input_face_wires_verified": true,
+            "edges": [
+              {
+                "radius": 120.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    120.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    120.0,
+                    3.9693411827652363e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              },
+              {
+                "radius": 80.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    80.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    80.0,
+                    2.646227455176824e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              }
+            ],
+            "branches": {
+              "80": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              },
+              "120": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              }
+            },
+            "branch_presence": "PASS",
+            "continuous_coverage": "PASS",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/missing-inner-read-native.log",
+              "sha256": "0f3f63c16d4d9b2ee0e53aa4ca28020ec63e84c94263e18031875615ccf9df0a"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/missing-inner-native.brep",
+              "sha256": "aa9423f75438e85a7af115607422ab26cd02a32d9a151d239aa2c81882724ae0"
+            }
+          },
+          "result": {
+            "torus": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              100.0,
+              20.0
+            ],
+            "plane": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              -0.0,
+              -0.0,
+              1.0,
+              0.0
+            ],
+            "domains": [
+              [
+                1.0,
+                0.0,
+                6.28318530717959,
+                0.0,
+                6.28318530717959
+              ],
+              [
+                2.0,
+                -200.0,
+                200.0,
+                -200.0,
+                200.0
+              ]
+            ],
+            "input_face_wires_verified": true,
+            "edges": [
+              {
+                "radius": 120.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    120.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    120.0,
+                    3.9693411827652363e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              }
+            ],
+            "branches": {
+              "80": {
+                "present": false,
+                "pieces": 0,
+                "world_gaps": [
+                  [
+                    0.0,
+                    6.283185307179586
+                  ]
+                ],
+                "missing_length": 502.6548245743669,
+                "complete": false
+              },
+              "120": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              }
+            },
+            "branch_presence": "FAIL",
+            "continuous_coverage": "FAIL",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/missing-inner-read-result.log",
+              "sha256": "54c665f6cc40b6b539421f8bc29fe9cd1ee59cc5689968d45a17dc64b3807a6d"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/missing-inner-result.brep",
+              "sha256": "aec10325dbb55ca6462fe5ca7583a0df1dc249305c9ad0e92ccb3253483e25c8"
+            }
+          }
+        },
+        "witness_distances": [
+          [
+            80.0,
+            0.0,
+            0.0,
+            40.0
+          ],
+          [
+            -80.0,
+            0.0,
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            80.0,
+            0.0,
+            40.0
+          ],
+          [
+            0.0,
+            -80.0,
+            0.0,
+            40.0
+          ],
+          [
+            120.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -120.0,
+            0.0,
+            0.0,
+            1.469576158976824e-14
+          ],
+          [
+            0.0,
+            120.0,
+            0.0,
+            7.34788079488412e-15
+          ],
+          [
+            0.0,
+            -120.0,
+            0.0,
+            2.2043642384652355e-14
+          ]
+        ],
+        "sampled_support_max": 1.4210854715202004e-14,
+        "sampled_support_points": 65,
+        "injection_verified": true
+      },
+      "outer-gap": {
+        "registered": {
+          "passed": true,
+          "status": "geometry_pass",
+          "assertions": {
+            "operation_completed": "PASS",
+            "nonempty": "PASS",
+            "support": "PASS",
+            "coverage": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/outer-gap.log",
+            "sha256": "4f12e02b62de9cf1644f5249e9eb36d0210fde9b4b36e302a64b66fdab9017c1"
+          }
+        },
+        "source_faces": {
+          "torus": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/outer-gap-torus.brep",
+            "sha256": "4e426fcbd52b196231c105862db3779917c20daa298d5cce463b4014bf2e7db4"
+          },
+          "plane": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/outer-gap-plane.brep",
+            "sha256": "cf1e4646376157330415e271747fdbb11018d30f5642f91184feb5f777e9bb89"
+          }
+        },
+        "original_and_scored": {
+          "native": {
+            "torus": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              100.0,
+              20.0
+            ],
+            "plane": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              -0.0,
+              -0.0,
+              1.0,
+              0.0
+            ],
+            "domains": [
+              [
+                1.0,
+                0.0,
+                6.28318530717959,
+                0.0,
+                6.28318530717959
+              ],
+              [
+                2.0,
+                -200.0,
+                200.0,
+                -200.0,
+                200.0
+              ]
+            ],
+            "input_face_wires_verified": true,
+            "edges": [
+              {
+                "radius": 120.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    120.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    120.0,
+                    3.9693411827652363e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              },
+              {
+                "radius": 80.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    80.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    80.0,
+                    2.646227455176824e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              }
+            ],
+            "branches": {
+              "80": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              },
+              "120": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              }
+            },
+            "branch_presence": "PASS",
+            "continuous_coverage": "PASS",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/outer-gap-read-native.log",
+              "sha256": "0f3f63c16d4d9b2ee0e53aa4ca28020ec63e84c94263e18031875615ccf9df0a"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/outer-gap-native.brep",
+              "sha256": "aa9423f75438e85a7af115607422ab26cd02a32d9a151d239aa2c81882724ae0"
+            }
+          },
+          "result": {
+            "torus": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              100.0,
+              20.0
+            ],
+            "plane": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              -0.0,
+              -0.0,
+              1.0,
+              0.0
+            ],
+            "domains": [
+              [
+                1.0,
+                0.0,
+                6.28318530717959,
+                0.0,
+                6.28318530717959
+              ],
+              [
+                2.0,
+                -200.0,
+                200.0,
+                -200.0,
+                200.0
+              ]
+            ],
+            "input_face_wires_verified": true,
+            "edges": [
+              {
+                "radius": 120.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  0.3
+                ],
+                "endpoints": [
+                  [
+                    120.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    114.64037869507271,
+                    35.46242479936075,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 0.3
+              },
+              {
+                "radius": 120.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.5,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    105.30990742684473,
+                    57.53106463250436,
+                    0.0
+                  ],
+                  [
+                    120.0,
+                    3.9693411827652363e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.5,
+                "span": 5.78318530717959
+              },
+              {
+                "radius": 80.0,
+                "center": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "parameter_x": [
+                  1.0,
+                  0.0,
+                  -0.0
+                ],
+                "native_domain": [
+                  0.0,
+                  6.28318530717959
+                ],
+                "endpoints": [
+                  [
+                    80.0,
+                    0.0,
+                    0.0
+                  ],
+                  [
+                    80.0,
+                    2.646227455176824e-13,
+                    0.0
+                  ]
+                ],
+                "azimuth_start": 0.0,
+                "span": 6.28318530717959
+              }
+            ],
+            "branches": {
+              "80": {
+                "present": true,
+                "pieces": 1,
+                "world_gaps": [],
+                "missing_length": 0.0,
+                "complete": true
+              },
+              "120": {
+                "present": true,
+                "pieces": 2,
+                "world_gaps": [
+                  [
+                    0.3,
+                    0.5
+                  ]
+                ],
+                "missing_length": 24.0,
+                "complete": false
+              }
+            },
+            "branch_presence": "PASS",
+            "continuous_coverage": "FAIL",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/outer-gap-read-result.log",
+              "sha256": "0c64e7f9ff16fc073f7f80e4d57e02bf82cfd55d76bda492abb531dcf3c5494a"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/rings/outer-gap-result.brep",
+              "sha256": "193c1dd3d3ea86ab9d6610ba0b51fa7a79ce40061789c65df9146b1001f41298"
+            }
+          }
+        },
+        "witness_distances": [
+          [
+            80.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -80.0,
+            0.0,
+            0.0,
+            9.797174393178826e-15
+          ],
+          [
+            0.0,
+            80.0,
+            0.0,
+            4.898587196589413e-15
+          ],
+          [
+            0.0,
+            -80.0,
+            0.0,
+            1.4695761589768237e-14
+          ],
+          [
+            120.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -120.0,
+            0.0,
+            0.0,
+            1.469576158976824e-14
+          ],
+          [
+            0.0,
+            120.0,
+            0.0,
+            7.34788079488412e-15
+          ],
+          [
+            0.0,
+            -120.0,
+            0.0,
+            2.2043642384652355e-14
+          ]
+        ],
+        "sampled_support_max": 1.4210854715202004e-14,
+        "sampled_support_points": 195,
+        "injection_verified": true
+      }
+    },
+    "independent_scope": "Exact centered equatorial section of this full analytic torus by the verified finite plane; union of trimmed world azimuths on each radius."
+  },
+  "cut": {
+    "source": {
+      "source_id": "occt33570-derived-381c5ec350fd-sphere-cut",
+      "commit": "381c5ec350fde3b9808475d8070bf00eda0260c9",
+      "materialized_tree_sha256": "b6e8390a470b05b460277341f325df52d723ede889d72494a0c53a99921a8904",
+      "toolchain": "occt1115-sphere-cut-gcc",
+      "toolchain_config": {
+        "path": "toolchains/occt1115-sphere-cut-gcc.json",
+        "sha256": "bc4b7662e2d021a2a182b17158cf94e0fc5fea589476cfc12e563131bc93ab3a"
+      },
+      "build_entry": {
+        "path": "tools/occt1115-sphere-cut-gcc/build.sh",
+        "sha256": "0c9e7eb593cabe4c7d1466d139149feeb743e47a156badf09a188f7bfa1c8390"
+      },
+      "declared_public_targets": [
+        "TKBO",
+        "TKPrim"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/identity.json",
+      "sha256": "557553b4daee17119e5b7ba9c2ef58e4861293c785b2fab973987efaeb53e8f8"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/runtime.json",
+      "sha256": "5fd9687f36f2548c627b4570e97137ae659cb85ec56c6fe69834a19aff5e5c3c"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/compatibility/core-1.json",
+          "sha256": "5294f3d9ebf6e5a063789647cb24e58f7d2bbc0be92da44ebfc74f10db66e4c3"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/compatibility/core-2.json",
+          "sha256": "be318ee51c4624ab800531a1a96dbc84936caf2427a1fe87894eaa06ff4907b7"
+        }
+      ],
+      "native_attempt": {
+        "checks": {
+          "box-common": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "disjoint": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "cut-fuse": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "plane-sphere": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "hole-classification": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "brep-roundtrip": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          }
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/core-native.json",
+          "sha256": "a48f557a1f633b2c249aaccd7a48199eeed4c39daf9d7120cf530fb1165a23a6"
+        },
+        "status": "BLOCKED"
+      },
+      "geometry_profile": "Unchanged probe and thresholds with the locked OCCT 8 TopExp argument type alias supplied at compilation.",
+      "compatibility_header": {
+        "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/compatibility/alias.hxx",
+        "sha256": "110706bfa4815f78a0a105fa6a3e7cf70833586030d873ca9221211525fc6684"
+      }
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "independent_status": "CALIBRATED",
+    "registered_baseline": {
+      "verdict": "PASS",
+      "valid": true,
+      "volume": 268.082573106329,
+      "counts_VEWF": [
+        2,
+        3,
+        1,
+        1
+      ],
+      "receipt": {
+        "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/official-registered.json",
+        "sha256": "919ca1c7a558a6b5233bba198bb93b44bc2f94dd0247dce6d06080a93151245f"
+      }
+    },
+    "center_distance": 8.06225774829855,
+    "minimum_clearance": 3.062257748298549,
+    "controls": {
+      "healthy-1": {
+        "registered": {
+          "verdict": "PASS",
+          "valid": true,
+          "volume": 268.082573106329,
+          "counts_VEWF": [
+            2,
+            3,
+            1,
+            1
+          ],
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/official-healthy-1.json",
+            "sha256": "79c7fed24a5704a8cf6c3b4c62328fd490a6bd6238e5ebcd2685162c0d2e7947"
+          }
+        },
+        "restored_solids": {
+          "a": {
+            "center": [
+              0.0,
+              5.5,
+              18.0
+            ],
+            "radius": 4.0,
+            "volume": 268.082573106329,
+            "centroid": [
+              -2.343783059862876e-16,
+              5.5,
+              18.0
+            ],
+            "valid": true,
+            "material": [
+              "IN",
+              "OUT",
+              "IN",
+              "OUT",
+              "OUT"
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/healthy-1-a.brep",
+              "sha256": "511ea12bdd9b8e5009d1f95ccb8edef5ec48abe412c6beeb067b339ef5dfbddf"
+            }
+          },
+          "b": {
+            "center": [
+              0.0,
+              4.5,
+              10.0
+            ],
+            "radius": 1.0,
+            "volume": 4.18879020478639,
+            "centroid": [
+              -6.088784597593823e-17,
+              4.5,
+              10.0
+            ],
+            "valid": true,
+            "material": [
+              "OUT",
+              "OUT",
+              "OUT",
+              "IN",
+              "OUT"
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/healthy-1-b.brep",
+              "sha256": "db9fa2fde0ae64968a7e3ddf46b9d4c97498ccd95622cb0c18e80ce13e34a1bb"
+            }
+          },
+          "native": {
+            "center": [
+              0.0,
+              5.5,
+              18.0
+            ],
+            "radius": 4.0,
+            "volume": 268.082573106329,
+            "centroid": [
+              -2.343783059862876e-16,
+              5.5,
+              18.0
+            ],
+            "valid": true,
+            "material": [
+              "IN",
+              "OUT",
+              "IN",
+              "OUT",
+              "OUT"
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/healthy-1-native.brep",
+              "sha256": "5a5ffaf7e7d4d3bf13fd3572ba014df329eb542ca05dde555a1b3b3b227c7fc7"
+            }
+          },
+          "result": {
+            "center": [
+              0.0,
+              5.5,
+              18.0
+            ],
+            "radius": 4.0,
+            "volume": 268.082573106329,
+            "centroid": [
+              -2.343783059862876e-16,
+              5.5,
+              18.0
+            ],
+            "valid": true,
+            "material": [
+              "IN",
+              "OUT",
+              "IN",
+              "OUT",
+              "OUT"
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/healthy-1-result.brep",
+              "sha256": "5a5ffaf7e7d4d3bf13fd3572ba014df329eb542ca05dde555a1b3b3b227c7fc7"
+            }
+          }
+        },
+        "input_surface_clearance": 3.062257748298549,
+        "center_displacement": 0.0,
+        "position": "PASS",
+        "material": "PASS",
+        "witnesses": [
+          [
+            -3,
+            5.5,
+            18
+          ],
+          [
+            6,
+            5.5,
+            18
+          ],
+          [
+            1.5,
+            5.5,
+            18
+          ],
+          [
+            0,
+            4.5,
+            10
+          ],
+          [
+            9,
+            5.5,
+            18
+          ]
+        ],
+        "gold": [
+          "IN",
+          "OUT",
+          "IN",
+          "OUT",
+          "OUT"
+        ],
+        "actual": [
+          "IN",
+          "OUT",
+          "IN",
+          "OUT",
+          "OUT"
+        ],
+        "different_witness_numbers": [],
+        "reader": {
+          "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/healthy-1-read.log",
+          "sha256": "f7558574fb5b14ea38d030ee339efe2d61e20a3329a3ff3e969f175c50e96597"
+        },
+        "injection_verified": null
+      },
+      "healthy-2": {
+        "registered": {
+          "verdict": "PASS",
+          "valid": true,
+          "volume": 268.082573106329,
+          "counts_VEWF": [
+            2,
+            3,
+            1,
+            1
+          ],
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/official-healthy-2.json",
+            "sha256": "bbe11eb26a537a17c84b26e3539510907f48069bdc7d160becc84c1c8f1992f2"
+          }
+        },
+        "restored_solids": {
+          "a": {
+            "center": [
+              0.0,
+              5.5,
+              18.0
+            ],
+            "radius": 4.0,
+            "volume": 268.082573106329,
+            "centroid": [
+              -2.343783059862876e-16,
+              5.5,
+              18.0
+            ],
+            "valid": true,
+            "material": [
+              "IN",
+              "OUT",
+              "IN",
+              "OUT",
+              "OUT"
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/healthy-2-a.brep",
+              "sha256": "511ea12bdd9b8e5009d1f95ccb8edef5ec48abe412c6beeb067b339ef5dfbddf"
+            }
+          },
+          "b": {
+            "center": [
+              0.0,
+              4.5,
+              10.0
+            ],
+            "radius": 1.0,
+            "volume": 4.18879020478639,
+            "centroid": [
+              -6.088784597593823e-17,
+              4.5,
+              10.0
+            ],
+            "valid": true,
+            "material": [
+              "OUT",
+              "OUT",
+              "OUT",
+              "IN",
+              "OUT"
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/healthy-2-b.brep",
+              "sha256": "db9fa2fde0ae64968a7e3ddf46b9d4c97498ccd95622cb0c18e80ce13e34a1bb"
+            }
+          },
+          "native": {
+            "center": [
+              0.0,
+              5.5,
+              18.0
+            ],
+            "radius": 4.0,
+            "volume": 268.082573106329,
+            "centroid": [
+              -2.343783059862876e-16,
+              5.5,
+              18.0
+            ],
+            "valid": true,
+            "material": [
+              "IN",
+              "OUT",
+              "IN",
+              "OUT",
+              "OUT"
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/healthy-2-native.brep",
+              "sha256": "5a5ffaf7e7d4d3bf13fd3572ba014df329eb542ca05dde555a1b3b3b227c7fc7"
+            }
+          },
+          "result": {
+            "center": [
+              0.0,
+              5.5,
+              18.0
+            ],
+            "radius": 4.0,
+            "volume": 268.082573106329,
+            "centroid": [
+              -2.343783059862876e-16,
+              5.5,
+              18.0
+            ],
+            "valid": true,
+            "material": [
+              "IN",
+              "OUT",
+              "IN",
+              "OUT",
+              "OUT"
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/healthy-2-result.brep",
+              "sha256": "5a5ffaf7e7d4d3bf13fd3572ba014df329eb542ca05dde555a1b3b3b227c7fc7"
+            }
+          }
+        },
+        "input_surface_clearance": 3.062257748298549,
+        "center_displacement": 0.0,
+        "position": "PASS",
+        "material": "PASS",
+        "witnesses": [
+          [
+            -3,
+            5.5,
+            18
+          ],
+          [
+            6,
+            5.5,
+            18
+          ],
+          [
+            1.5,
+            5.5,
+            18
+          ],
+          [
+            0,
+            4.5,
+            10
+          ],
+          [
+            9,
+            5.5,
+            18
+          ]
+        ],
+        "gold": [
+          "IN",
+          "OUT",
+          "IN",
+          "OUT",
+          "OUT"
+        ],
+        "actual": [
+          "IN",
+          "OUT",
+          "IN",
+          "OUT",
+          "OUT"
+        ],
+        "different_witness_numbers": [],
+        "reader": {
+          "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/healthy-2-read.log",
+          "sha256": "f7558574fb5b14ea38d030ee339efe2d61e20a3329a3ff3e969f175c50e96597"
+        },
+        "injection_verified": null
+      },
+      "translated": {
+        "registered": {
+          "verdict": "PASS",
+          "valid": true,
+          "volume": 268.082573106329,
+          "counts_VEWF": [
+            2,
+            3,
+            1,
+            1
+          ],
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/official-translated.json",
+            "sha256": "53b1b2d3162e04c7df643392f1e8b60b24776c301bd5ded004a990f61cae38ce"
+          }
+        },
+        "restored_solids": {
+          "a": {
+            "center": [
+              0.0,
+              5.5,
+              18.0
+            ],
+            "radius": 4.0,
+            "volume": 268.082573106329,
+            "centroid": [
+              -2.343783059862876e-16,
+              5.5,
+              18.0
+            ],
+            "valid": true,
+            "material": [
+              "IN",
+              "OUT",
+              "IN",
+              "OUT",
+              "OUT"
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/translated-a.brep",
+              "sha256": "511ea12bdd9b8e5009d1f95ccb8edef5ec48abe412c6beeb067b339ef5dfbddf"
+            }
+          },
+          "b": {
+            "center": [
+              0.0,
+              4.5,
+              10.0
+            ],
+            "radius": 1.0,
+            "volume": 4.18879020478639,
+            "centroid": [
+              -6.088784597593823e-17,
+              4.5,
+              10.0
+            ],
+            "valid": true,
+            "material": [
+              "OUT",
+              "OUT",
+              "OUT",
+              "IN",
+              "OUT"
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/translated-b.brep",
+              "sha256": "db9fa2fde0ae64968a7e3ddf46b9d4c97498ccd95622cb0c18e80ce13e34a1bb"
+            }
+          },
+          "native": {
+            "center": [
+              0.0,
+              5.5,
+              18.0
+            ],
+            "radius": 4.0,
+            "volume": 268.082573106329,
+            "centroid": [
+              -2.343783059862876e-16,
+              5.5,
+              18.0
+            ],
+            "valid": true,
+            "material": [
+              "IN",
+              "OUT",
+              "IN",
+              "OUT",
+              "OUT"
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/translated-native.brep",
+              "sha256": "5a5ffaf7e7d4d3bf13fd3572ba014df329eb542ca05dde555a1b3b3b227c7fc7"
+            }
+          },
+          "result": {
+            "center": [
+              3.0,
+              5.5,
+              18.0
+            ],
+            "radius": 4.0,
+            "volume": 268.082573106329,
+            "centroid": [
+              3.0,
+              5.5,
+              18.0
+            ],
+            "valid": true,
+            "material": [
+              "OUT",
+              "IN",
+              "IN",
+              "OUT",
+              "OUT"
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/translated-result.brep",
+              "sha256": "4e04366c9ab78848db8cf3218d6080f8b17cc4ae8f1156768836c7f503ba1293"
+            }
+          }
+        },
+        "input_surface_clearance": 3.062257748298549,
+        "center_displacement": 3.0,
+        "position": "FAIL",
+        "material": "FAIL",
+        "witnesses": [
+          [
+            -3,
+            5.5,
+            18
+          ],
+          [
+            6,
+            5.5,
+            18
+          ],
+          [
+            1.5,
+            5.5,
+            18
+          ],
+          [
+            0,
+            4.5,
+            10
+          ],
+          [
+            9,
+            5.5,
+            18
+          ]
+        ],
+        "gold": [
+          "IN",
+          "OUT",
+          "IN",
+          "OUT",
+          "OUT"
+        ],
+        "actual": [
+          "OUT",
+          "IN",
+          "IN",
+          "OUT",
+          "OUT"
+        ],
+        "different_witness_numbers": [
+          1,
+          2
+        ],
+        "reader": {
+          "path": "research/kernel-regression-v1/rollout-v9/receipts/cut/translated-read.log",
+          "sha256": "6f635abb138d5ef58622dab251be845135e5d110b25bcc407f99a88a27e31849"
+        },
+        "injection_verified": true
+      }
+    },
+    "independent_scope": "Verified separated positive-radius spherical solids, retained full sphere center/radius, volume and inside/outside membership."
+  }
+}

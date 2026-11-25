@@ -1,0 +1,74 @@
+{
+  "source_id": "occt-single20-cfde7eebb37b",
+  "commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+  "materialized_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+  "toolchain": "occt-v4-clang10-o0-tcl86",
+  "toolchain_config": {
+    "path": "toolchains/occt-v4-clang10-o0-tcl86.json",
+    "sha256": "6c1675f2f34f07dd5945a9782f3835878e74bfc97838eb6ccc22a6f9a0d855e3"
+  },
+  "build_entry": {
+    "path": "tools/occt-v4-clang10-o0/build.sh",
+    "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+  },
+  "declared_public_targets": [
+    "DRAWEXE",
+    "TKTopTest"
+  ],
+  "source": "/var/tmp/cad-bench-lzy-single20-20261102/jobs/frozen-replay-09/occt-single20-27227/b/runtime/source",
+  "build": "/var/tmp/cad-bench-lzy-single20-20261102/jobs/frozen-replay-09/occt-single20-27227/b/runtime/build",
+  "frozen_assets": {
+    "lin64/clang/lib/libTKFeat.so.7.7.0": "2f012f0a32f75dd128fe8615f2349b3d6c9e7ad76c04ce5c34d2ce7a410e8c56",
+    "lin64/clang/lib/libTKOffset.so.7.7.0": "00c33ee2b6cc0c1f4b237b2e369864f8fd83efde47c5528cfcf7aa0c2b546869",
+    "lin64/clang/lib/libTKHLR.so.7.7.0": "28429fa9654d65380fb223afea4a0d844d87af6d1b153a881bfb95520c08adf9",
+    "lin64/clang/lib/libTKGeomAlgo.so.7.7.0": "549b19f2712ded07361c51b4095883c7838e33396de48cbee296ccc5ee7acdfd",
+    "lin64/clang/lib/libTKG2d.so.7.7.0": "5e0d3f89f76982d2e5af8e018191926c8ce67faf00d34429c65d695f11a60bb7",
+    "lin64/clang/lib/libTKGeomBase.so.7.7.0": "404127709f0bd0cac119b2c0629950ac4757b74f330acec4de677253f77b8778",
+    "lin64/clang/lib/libTKMath.so.7.7.0": "3cf0523fa0981960ece5fe56a0b5c74b631867c05776611c662c3b7e8b6d52dd",
+    "lin64/clang/lib/libTKTopTest.so.7.7.0": "804b931fd7d9d162c1caa191a2bfc3f228119f667d2a065190a1c359ae926f37",
+    "lin64/clang/lib/libTKG3d.so.7.7.0": "cde760c46480d773084e7210c7a8a4cd84649cbd677ad354addaa9e4e7b6b85a",
+    "lin64/clang/lib/libTKV3d.so.7.7.0": "e6a738b2783f25f724de9f1cc309dfffe114f541e36595f2e470bb4cdd2d341e",
+    "lin64/clang/lib/libTKernel.so.7.7.0": "5d057d2f0314efcde11d846aa031aa2a22392b102b4a11e6e922545e59b53daf",
+    "lin64/clang/lib/libTKService.so.7.7.0": "37fd0fe2e0563330a4a59e935927209b9f422c1ea34ea33829f246ee0485ef92",
+    "lin64/clang/lib/libTKPrim.so.7.7.0": "0e970f1ff7d93d68847f8d5b5559c03bf8efeb1bfa7c6e00a7ef651ba90122d6",
+    "lin64/clang/lib/libTKBool.so.7.7.0": "86fb72fb01b0fc91d037dcb01b0b07ae03f8ee1782bbf5f68a78f6a19f90803b",
+    "lin64/clang/lib/libTKShHealing.so.7.7.0": "09159b1d8db93862c74196b30773ba02cc88c0a61a9c1e2be407e3d5e1362ed2",
+    "lin64/clang/lib/libTKBRep.so.7.7.0": "2229119310fc93a57237d956703adeb2441d90b718686a5f7ecca3bf6bbdfb8b",
+    "lin64/clang/lib/libTKTopAlgo.so.7.7.0": "f095cd4d2912b83f0a87b0b3c78461cd41cfa4247089c7dd7058adcba20b23c2",
+    "lin64/clang/lib/libTKFillet.so.7.7.0": "8deb3ae7322ee64230ddc092cdf2c695e9dd919e63affacecf14cb2a61a59f8c",
+    "lin64/clang/lib/libTKMesh.so.7.7.0": "63049d693e2fca5e6dc409aca328382ee606447cd846c9654e65f39ee74ab1ed",
+    "lin64/clang/lib/libTKBO.so.7.7.0": "24949c3d221d9748bef836b8210c46c6f5046396a83c292f16e27f826b944509",
+    "lin64/clang/lib/libTKDraw.so.7.7.0": "ce6069656b93bdf25c1daf403906195408f680de54a7b745d3b23f6c1441b6e7",
+    "lin64/clang/bin/DRAWEXE-7.7.0": "40fec23ecfdfc3d0dbc95b1aab3aa4e026b58202eeedd7113663ccddf4e3a90e",
+    "src/DRAWEXE/CMakeFiles/DRAWEXE.dir/DRAWEXE.cxx.o": "b8ce8e804cd937f81969f3eae20c9e85cc8e90dd99e286ed939f4db053088e54",
+    "src/DRAWEXE/CMakeFiles/DRAWEXE.dir/DRAWEXE.cxx.o.d": "4ec4f1da5b8d2c4184df816e5a11e992d27c77ddde1563699b0718deebf879a9"
+  },
+  "frozen_verification": {
+    "snapshot_unchanged": true,
+    "source_unchanged": true,
+    "shared_public_build_exit_code": 0,
+    "build_log_sha256": "60b748be7763f60202306a62375681cba8b94d18a4e180a324306b8033798c4c",
+    "runtime_binary_count": 24
+  },
+  "registered_build": {
+    "label": "m24418-natural-f-build-01",
+    "started_at": "2026-11-02T11:56:42.366533+00:00",
+    "source_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+    "git_tree": "b72dfb3316a1f3124107b0901d01cb5d433eacb3",
+    "source_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+    "model_called": false,
+    "compiler_jobs": 2,
+    "toolchain": "occt-v4-clang10-o0-tcl86",
+    "worker_sha256": "3bace75af607a1c52aca0191cb7f5f950f35cb52d32064cc81fcbcbd7ee12c38",
+    "status": "built",
+    "build_helper_sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305",
+    "build_exit_code": 0,
+    "build_seconds": 429.5590589350031,
+    "build_log_sha256": "4f9f8a1cd3ee807a71bd2e10c6d2e3b25c8dd58505ad56191cbe9ac2a4f8889c",
+    "libraries": {},
+    "final_source_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+    "source_unchanged": true,
+    "finished_at": "2026-11-02T12:03:57.044816+00:00"
+  },
+  "observed_tree": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a"
+}

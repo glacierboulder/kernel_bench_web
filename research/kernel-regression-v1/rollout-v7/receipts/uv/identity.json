@@ -1,0 +1,27 @@
+{
+  "source_id": "occt801-b8f597c67781-singularity",
+  "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "toolchain": "occt1116-singularity-gcc",
+  "toolchain_config": {
+    "path": "toolchains/occt1116-singularity-gcc.json",
+    "sha256": "35e0c0e5439fb37b19e5f3f7ba35948887c46815e280eb81ed5b59ffc6d56df5"
+  },
+  "build_entry": {
+    "path": "tools/occt1116-singularity-gcc/build.sh",
+    "sha256": "d4ef908f2a0d94449ca83cdca13c28f9da0381ca2124d7aa5d2e9ee7dd70db0e"
+  },
+  "declared_public_targets": [
+    "TKShHealing"
+  ],
+  "observed_tree": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "source": "/var/tmp/m25542-positive-reference-20261119/release/source",
+  "build": "/var/tmp/cad-regression-batch7.nLKz9AdC/uv-build",
+  "interface_sha256": "61e1d414fdb04e0a1bf1e8773721e0d363506dbbf326a3fbc6a51f714e2af60b",
+  "implementation_sha256": "38270dd593fb1fef0c15ed3c1ca3891610f5847024e36901d37130f4ce35d739",
+  "contract_lines": [
+    261,
+    272
+  ],
+  "excerpt_sha256": "0a9a0a5b3570650caf5e43f31d18907692d4062b21c49a634e92f3b1a5eb41e3"
+}

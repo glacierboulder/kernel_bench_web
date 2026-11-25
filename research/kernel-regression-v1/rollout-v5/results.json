@@ -1,0 +1,891 @@
+{
+  "cone": {
+    "source": {
+      "source_id": "occt-single20-029311e00f28",
+      "commit": "029311e00f2822c762f676f863f9b932ad8ca8ef",
+      "materialized_tree_sha256": "dbf7237b12b0712f11b7d3fb020950577fdec9eb6b1f66a95bad6a29239248b6",
+      "toolchain": "occt-v4-clang10-o0-tcl86",
+      "toolchain_config": {
+        "path": "toolchains/occt-v4-clang10-o0-tcl86.json",
+        "sha256": "6c1675f2f34f07dd5945a9782f3835878e74bfc97838eb6ccc22a6f9a0d855e3"
+      },
+      "build_entry": {
+        "path": "tools/occt-v4-clang10-o0/build.sh",
+        "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v5/receipts/cone/identity.json",
+      "sha256": "0e3e306daebaf793b4aae61e8eab28c80593a5d75d6bafc73a5d66fdc528b0d2"
+    },
+    "actual_runtime": {
+      "path": "research/kernel-regression-v1/rollout-v5/receipts/cone/runtime.json",
+      "sha256": "d575d0d003610692c21bac0c2c2332c5c7b8a2469e29ab933f5f22cbf05515fb"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/cone/core-1.json",
+          "sha256": "fdd62c7d12b70c5fea7c86a0af5068592ae6124e59b0444b470a1698d03f22ce"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/cone/core-2.json",
+          "sha256": "72dadae039744f896f3d5b0874cbe0c8d7b521666a80bc5bc3e0445885dd1c94"
+        }
+      ]
+    },
+    "status": "CALIBRATED",
+    "controls": {
+      "healthy-1": {
+        "registered": {
+          "operation_completed": "PASS",
+          "shape_valid": "PASS",
+          "section_length": "PASS",
+          "analytic_support": "PASS",
+          "connected_component": "PASS",
+          "endpoint_and_branch_coverage": "PASS"
+        },
+        "registered_verdict": "PASS",
+        "independent_verdict": "PASS",
+        "injection_verified": null,
+        "exact_support": true,
+        "angular_coverage_in_own_circle": true,
+        "full_gold_coverage": true,
+        "length_ok": true,
+        "length": 87.96459430050533,
+        "missing_angle": 4.1655567883935873e-13,
+        "missing_intervals": [
+          [
+            0.0,
+            4.1655567883935873e-13
+          ]
+        ],
+        "cone_radius_at_cut": 13.999999999999515,
+        "cone_v_at_cut": -2.2360679775000065,
+        "arcs": [
+          {
+            "center": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "radius": 13.999999999999515,
+            "normal": [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "x_axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "trim": [
+              0.0,
+              6.28318530717917
+            ],
+            "endpoints": [
+              [
+                13.999999999999515,
+                0.0,
+                2.0
+              ],
+              [
+                13.999999999999515,
+                5.835208514788433e-12,
+                2.0
+              ]
+            ]
+          }
+        ],
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/healthy-1-read.log",
+          "sha256": "9a699b3e0c7714264c52e9b452d9ea3cf32030ca7e519a96ce00b46c281bb5c6"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/healthy-1.log",
+          "sha256": "7b3614410ac6826cfd174768d640ad92e1b269e185b2d27c4e1ab3fcec5a59d6"
+        },
+        "breps": {
+          "A": {
+            "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/healthy-1-A.brep",
+            "sha256": "c3bc27e957926e4d8dec43d5acd78ab25dfa69cbc72c9cb6c52425ccb422fa83"
+          },
+          "B": {
+            "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/healthy-1-B.brep",
+            "sha256": "320c1c6d82e649c1a2995a452db3d47c6edbca7f32e67ffbfde683921cfbb59a"
+          },
+          "R": {
+            "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/healthy-1-R.brep",
+            "sha256": "6180cab5fdb63d48a40304225ea61400b0b0c967370573c11bb49fe33d1bde1b"
+          }
+        }
+      },
+      "healthy-2": {
+        "registered": {
+          "operation_completed": "PASS",
+          "shape_valid": "PASS",
+          "section_length": "PASS",
+          "analytic_support": "PASS",
+          "connected_component": "PASS",
+          "endpoint_and_branch_coverage": "PASS"
+        },
+        "registered_verdict": "PASS",
+        "independent_verdict": "PASS",
+        "injection_verified": null,
+        "exact_support": true,
+        "angular_coverage_in_own_circle": true,
+        "full_gold_coverage": true,
+        "length_ok": true,
+        "length": 87.96459430050533,
+        "missing_angle": 4.1655567883935873e-13,
+        "missing_intervals": [
+          [
+            0.0,
+            4.1655567883935873e-13
+          ]
+        ],
+        "cone_radius_at_cut": 13.999999999999515,
+        "cone_v_at_cut": -2.2360679775000065,
+        "arcs": [
+          {
+            "center": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "radius": 13.999999999999515,
+            "normal": [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "x_axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "trim": [
+              0.0,
+              6.28318530717917
+            ],
+            "endpoints": [
+              [
+                13.999999999999515,
+                0.0,
+                2.0
+              ],
+              [
+                13.999999999999515,
+                5.835208514788433e-12,
+                2.0
+              ]
+            ]
+          }
+        ],
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/healthy-2-read.log",
+          "sha256": "9a699b3e0c7714264c52e9b452d9ea3cf32030ca7e519a96ce00b46c281bb5c6"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/healthy-2.log",
+          "sha256": "7b3614410ac6826cfd174768d640ad92e1b269e185b2d27c4e1ab3fcec5a59d6"
+        },
+        "breps": {
+          "A": {
+            "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/healthy-2-A.brep",
+            "sha256": "c3bc27e957926e4d8dec43d5acd78ab25dfa69cbc72c9cb6c52425ccb422fa83"
+          },
+          "B": {
+            "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/healthy-2-B.brep",
+            "sha256": "320c1c6d82e649c1a2995a452db3d47c6edbca7f32e67ffbfde683921cfbb59a"
+          },
+          "R": {
+            "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/healthy-2-R.brep",
+            "sha256": "6180cab5fdb63d48a40304225ea61400b0b0c967370573c11bb49fe33d1bde1b"
+          }
+        }
+      },
+      "shift": {
+        "registered": {
+          "operation_completed": "PASS",
+          "shape_valid": "PASS",
+          "section_length": "PASS",
+          "analytic_support": "FAIL",
+          "connected_component": "PASS",
+          "endpoint_and_branch_coverage": "FAIL"
+        },
+        "registered_verdict": "FAIL",
+        "independent_verdict": "FAIL",
+        "injection_verified": true,
+        "exact_support": false,
+        "angular_coverage_in_own_circle": true,
+        "full_gold_coverage": false,
+        "length_ok": true,
+        "length": 87.96459430050533,
+        "missing_angle": 4.1655567883935873e-13,
+        "missing_intervals": [
+          [
+            0.0,
+            4.1655567883935873e-13
+          ]
+        ],
+        "cone_radius_at_cut": 13.999999999999515,
+        "cone_v_at_cut": -2.2360679775000065,
+        "arcs": [
+          {
+            "center": [
+              2.0,
+              0.0,
+              2.0
+            ],
+            "radius": 13.999999999999515,
+            "normal": [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "x_axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "trim": [
+              0.0,
+              6.28318530717917
+            ],
+            "endpoints": [
+              [
+                15.999999999999515,
+                0.0,
+                2.0
+              ],
+              [
+                15.999999999999515,
+                5.835208514788433e-12,
+                2.0
+              ]
+            ]
+          }
+        ],
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/shift-read.log",
+          "sha256": "0e30ebe17b9cb92dc1a4f080358a0a66b17691ceafabf70ce89b957426cdfa78"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/shift.log",
+          "sha256": "935f1feecad20c00b111388037fcea35f2608e575d8cdeaadd8b4de982d41589"
+        },
+        "breps": {
+          "A": {
+            "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/shift-A.brep",
+            "sha256": "c3bc27e957926e4d8dec43d5acd78ab25dfa69cbc72c9cb6c52425ccb422fa83"
+          },
+          "B": {
+            "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/shift-B.brep",
+            "sha256": "320c1c6d82e649c1a2995a452db3d47c6edbca7f32e67ffbfde683921cfbb59a"
+          },
+          "R": {
+            "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/shift-R.brep",
+            "sha256": "322a333c1ae783a40afa2b22c4ec248fc62d50eab770f36cff7d2c611ba08ba9"
+          }
+        }
+      },
+      "gap": {
+        "registered": {
+          "operation_completed": "PASS",
+          "shape_valid": "PASS",
+          "section_length": "FAIL",
+          "analytic_support": "PASS",
+          "connected_component": "FAIL",
+          "endpoint_and_branch_coverage": "PASS"
+        },
+        "registered_verdict": "FAIL",
+        "independent_verdict": "FAIL",
+        "injection_verified": true,
+        "exact_support": true,
+        "angular_coverage_in_own_circle": false,
+        "full_gold_coverage": false,
+        "length_ok": false,
+        "length": 85.16459430051425,
+        "missing_angle": 0.19999999999999662,
+        "missing_intervals": [
+          [
+            0.3000000000000034,
+            0.5
+          ]
+        ],
+        "cone_radius_at_cut": 13.999999999999515,
+        "cone_v_at_cut": -2.2360679775000065,
+        "arcs": [
+          {
+            "center": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "radius": 14.0,
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "x_axis": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "trim": [
+              0.5,
+              6.58318530717959
+            ],
+            "endpoints": [
+              [
+                12.286155866465219,
+                6.711957540458842,
+                2.0
+              ],
+              [
+                13.374710847758472,
+                4.137282893258796,
+                2.0
+              ]
+            ]
+          }
+        ],
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/gap-read.log",
+          "sha256": "f6924f4532a8c614d110f7e618b6e2ff00f6f8922a177dd125c16c876dbcb074"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/gap.log",
+          "sha256": "fda5023ca84fca5aa32c1bda996d03ae852fe65cdccc747461891e81abfbc33f"
+        },
+        "breps": {
+          "A": {
+            "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/gap-A.brep",
+            "sha256": "c3bc27e957926e4d8dec43d5acd78ab25dfa69cbc72c9cb6c52425ccb422fa83"
+          },
+          "B": {
+            "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/gap-B.brep",
+            "sha256": "320c1c6d82e649c1a2995a452db3d47c6edbca7f32e67ffbfde683921cfbb59a"
+          },
+          "R": {
+            "path": "research/kernel-regression-v1/rollout-v5/receipts/cone-specialist/gap-R.brep",
+            "sha256": "cc7e3254507b35a7eae7bba700aad8ac3ab0516cccc171e8dc5666bbf661bddb"
+          }
+        }
+      }
+    },
+    "registered_status": "CALIBRATED",
+    "additional_status": "CALIBRATED",
+    "initial_specialist": {
+      "status": "BLOCKED",
+      "cause": "Missing explicit TKG2d library in the inspector link command.",
+      "evidence": {
+        "path": "research/kernel-regression-v1/rollout-v5/receipts/cone/circle-compile.log",
+        "sha256": "4f2a5358cb00dfde74868b4ac414d8196dc7a9cb3e6be7a71cad148b64d7e36b"
+      }
+    }
+  },
+  "coons": {
+    "source": {
+      "source_id": "occt801-b8f597c67781-coons",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "toolchain": "occt1115-coons-gcc",
+      "toolchain_config": {
+        "path": "toolchains/occt1115-coons-gcc.json",
+        "sha256": "a400446c544ed5b89daca03ee501ad82ce69d4aff709cc38bea085ab8d636649"
+      },
+      "build_entry": {
+        "path": "tools/occt1115-coons-gcc/build.sh",
+        "sha256": "58d7d875401b28aa56bca65b9b083cb669cb5c60214c75d1dd6a2734849af766"
+      },
+      "declared_public_targets": [
+        "TKGeomAlgo"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v5/receipts/coons/identity.json",
+      "sha256": "8c7f007b90e396f23d58164a01805be9cbfd2172628ba34e6013a86dd67c9380"
+    },
+    "actual_runtime": {
+      "path": "research/kernel-regression-v1/rollout-v5/receipts/coons/runtime.json",
+      "sha256": "04e593ce6906a6103a55d3a21637f83c98efb0e7596e295cdcc00f1f2c04d72d"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/coons/core-1.json",
+          "sha256": "844f17c256c533a2998fd7f89e1f2d2fa7d32efb750bd1982c6f27ab0ec91fc9"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "controls": {
+      "baseline-normal": {
+        "registered_diagonal": "PASS",
+        "diagonal_point": [
+          3.0,
+          2.9999999999999996,
+          0.0
+        ],
+        "queries": [
+          {
+            "request": [
+              2,
+              5
+            ],
+            "call": [
+              2,
+              5
+            ],
+            "point": [
+              -4.440892098500626e-16,
+              6.999999999999998,
+              8.999999999999998
+            ],
+            "gold": [
+              -1.8,
+              7,
+              6.6
+            ],
+            "error": 2.9999999999999987,
+            "call_gold_error": 2.9999999999999987,
+            "verdict": "FAIL"
+          },
+          {
+            "request": [
+              4,
+              1
+            ],
+            "call": [
+              4,
+              1
+            ],
+            "point": [
+              -2.3999999999999995,
+              3.0,
+              5.8
+            ],
+            "gold": [
+              -0.6000000000000001,
+              3,
+              8.2
+            ],
+            "error": 2.999999999999999,
+            "call_gold_error": 2.999999999999999,
+            "verdict": "FAIL"
+          }
+        ],
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/coons/baseline-normal.log",
+          "sha256": "0a4da6825d35471d11a75838fbf0fead12b53bdd889463b43f4acf30e55344af"
+        }
+      },
+      "baseline-swap": {
+        "registered_diagonal": "PASS",
+        "diagonal_point": [
+          3.0,
+          2.9999999999999996,
+          0.0
+        ],
+        "queries": [
+          {
+            "request": [
+              2,
+              5
+            ],
+            "call": [
+              5,
+              2
+            ],
+            "point": [
+              -1.7999999999999998,
+              3.9999999999999987,
+              6.599999999999998
+            ],
+            "gold": [
+              -1.8,
+              7,
+              6.6
+            ],
+            "error": 3.0000000000000013,
+            "call_gold_error": 3.0000000000000018,
+            "verdict": "FAIL"
+          },
+          {
+            "request": [
+              4,
+              1
+            ],
+            "call": [
+              1,
+              4
+            ],
+            "point": [
+              -0.6000000000000001,
+              6.0,
+              8.2
+            ],
+            "gold": [
+              -0.6000000000000001,
+              3,
+              8.2
+            ],
+            "error": 3.0,
+            "call_gold_error": 2.999999999999999,
+            "verdict": "FAIL"
+          }
+        ],
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/coons/baseline-swap.log",
+          "sha256": "4ae7605963a4d9d1e456c621422d3985eb9d8c8be06357bb00c799def309ffb9"
+        }
+      },
+      "reference-normal": {
+        "registered_diagonal": "PASS",
+        "diagonal_point": [
+          3.0,
+          2.9999999999999996,
+          0.0
+        ],
+        "queries": [
+          {
+            "request": [
+              2,
+              5
+            ],
+            "call": [
+              2,
+              5
+            ],
+            "point": [
+              -1.8000000000000007,
+              6.999999999999998,
+              6.6
+            ],
+            "gold": [
+              -1.8,
+              7,
+              6.6
+            ],
+            "error": 1.897149936107019e-15,
+            "call_gold_error": 1.897149936107019e-15,
+            "verdict": "PASS"
+          },
+          {
+            "request": [
+              4,
+              1
+            ],
+            "call": [
+              4,
+              1
+            ],
+            "point": [
+              -0.5999999999999998,
+              3.0,
+              8.199999999999998
+            ],
+            "gold": [
+              -0.6000000000000001,
+              3,
+              8.2
+            ],
+            "error": 1.807312143953211e-15,
+            "call_gold_error": 1.807312143953211e-15,
+            "verdict": "PASS"
+          }
+        ],
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/coons/reference-normal.log",
+          "sha256": "3d09db7c491e6e368012681824bb8cf239137424a4b388e9a4c876146cd78047"
+        }
+      },
+      "reference-swap": {
+        "registered_diagonal": "PASS",
+        "diagonal_point": [
+          3.0,
+          2.9999999999999996,
+          0.0
+        ],
+        "queries": [
+          {
+            "request": [
+              2,
+              5
+            ],
+            "call": [
+              5,
+              2
+            ],
+            "point": [
+              0.0,
+              3.9999999999999987,
+              8.999999999999998
+            ],
+            "gold": [
+              -1.8,
+              7,
+              6.6
+            ],
+            "error": 4.242640687119286,
+            "call_gold_error": 2.220446049250313e-15,
+            "verdict": "FAIL"
+          },
+          {
+            "request": [
+              4,
+              1
+            ],
+            "call": [
+              1,
+              4
+            ],
+            "point": [
+              -2.400000000000001,
+              6.0,
+              5.800000000000001
+            ],
+            "gold": [
+              -0.6000000000000001,
+              3,
+              8.2
+            ],
+            "error": 4.242640687119285,
+            "call_gold_error": 1.2560739669470201e-15,
+            "verdict": "FAIL"
+          }
+        ],
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v5/receipts/coons/reference-swap.log",
+          "sha256": "2c19b4d7bd5c92fdab1ce3eb4ab4a2ae37316dbe1a5f3919b3c6b229ae112180"
+        }
+      }
+    },
+    "registered_status": "CALIBRATION_FAILED",
+    "additional_status": "CALIBRATED",
+    "scope": "Registered diagonal is invariant to argument interchange. Off-diagonal check calibrated on a separately linked same-build reference.",
+    "reference": {
+      "path": "research/kernel-regression-v1/rollout-v5/receipts/coons/reference-implementation.json",
+      "sha256": "26423ed248ae586c145deb4632fd9ed15008d71bcc43983ceb3461df03805414"
+    },
+    "reference_patch": {
+      "path": "benchmarks/occt/evaluation/provenance/geometry-1550/reference.patch",
+      "sha256": "b0752741ca7146f2eaf3095e6de55f39bd84e9e348ba741c9d7e0e72256a716c"
+    },
+    "historical_other_identity": {
+      "status": "NOT_APPLICABLE",
+      "receipt": {
+        "path": "benchmarks/occt/evaluation/provenance/geometry-1550/offline-reference.json",
+        "sha256": "ec23fae615890cf8712fd618fcc71a897478a03a1ddaf8998989ebf6c095e972"
+      }
+    }
+  }
+}

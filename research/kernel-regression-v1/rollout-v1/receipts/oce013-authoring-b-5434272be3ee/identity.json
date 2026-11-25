@@ -1,0 +1,275 @@
+{
+  "source_id": "oce013-authoring-b-5434272be3ee",
+  "runtime": "/var/tmp/cad-boolean-screen30-20261118/baseline",
+  "commit": "5434272be3eecaf06f0921f8fa4f1a6df7672033",
+  "toolchain": "oce013-gcc13-tcl86-v1",
+  "registered_build": {
+    "path": "tools/oce013-gcc13-tcl86-v1/build.sh",
+    "sha256": "25c327186a7b23887382276fb62313b217daf73871c2e7a844eff6c773e12795"
+  },
+  "tree": "f87a2533d98b8816ac2820b9ba0e4a2eb791c1467ef422c41348c1fe3d2ad6ec",
+  "warm": {
+    "tree": "f87a2533d98b8816ac2820b9ba0e4a2eb791c1467ef422c41348c1fe3d2ad6ec",
+    "commit": "5434272be3eecaf06f0921f8fa4f1a6df7672033",
+    "at": "2026-11-18T12:38:22.260796+00:00",
+    "build_log": "f34e9dd51430d4bd2d14d56311d140bc89a23cfbe799c0336c1d125d8b5a58cf",
+    "tools": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\ng++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\ncmake version 3.28.3\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n1.11.1\n8.6.14\n"
+  },
+  "warm_sha256": "136ee81236c5c9217736dfb523d104297392ca9018f326b04eada46789bd860c",
+  "actual_build_sha256": "25c327186a7b23887382276fb62313b217daf73871c2e7a844eff6c773e12795",
+  "libraries": {
+    "libTKBO.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKBO/Unix/x86_64-Release-64/libTKBO.so.7.0.0",
+      "sha256": "9a57d556a65c29b43003264ac751f55c5933e5b7bfd34d8f7be0807bf3d672b9"
+    },
+    "libTKBO.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKBO/Unix/x86_64-Release-64/libTKBO.so.7.0.0",
+      "sha256": "9a57d556a65c29b43003264ac751f55c5933e5b7bfd34d8f7be0807bf3d672b9"
+    },
+    "libTKBO.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKBO/Unix/x86_64-Release-64/libTKBO.so.7.0.0",
+      "sha256": "9a57d556a65c29b43003264ac751f55c5933e5b7bfd34d8f7be0807bf3d672b9"
+    },
+    "libTKBRep.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKBRep/Unix/x86_64-Release-64/libTKBRep.so.7.0.0",
+      "sha256": "267d869acb5ec52aff302dec2188f094f43ae5bb12cbac4fca18f19df192fa21"
+    },
+    "libTKBRep.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKBRep/Unix/x86_64-Release-64/libTKBRep.so.7.0.0",
+      "sha256": "267d869acb5ec52aff302dec2188f094f43ae5bb12cbac4fca18f19df192fa21"
+    },
+    "libTKBRep.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKBRep/Unix/x86_64-Release-64/libTKBRep.so.7.0.0",
+      "sha256": "267d869acb5ec52aff302dec2188f094f43ae5bb12cbac4fca18f19df192fa21"
+    },
+    "libTKBool.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKBool/Unix/x86_64-Release-64/libTKBool.so.7.0.0",
+      "sha256": "79342add822ac64b7c986012e5502981884afdbfacc72e357c2e20fb7807e94d"
+    },
+    "libTKBool.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKBool/Unix/x86_64-Release-64/libTKBool.so.7.0.0",
+      "sha256": "79342add822ac64b7c986012e5502981884afdbfacc72e357c2e20fb7807e94d"
+    },
+    "libTKBool.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKBool/Unix/x86_64-Release-64/libTKBool.so.7.0.0",
+      "sha256": "79342add822ac64b7c986012e5502981884afdbfacc72e357c2e20fb7807e94d"
+    },
+    "libTKDraw.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKDraw/Unix/x86_64-Release-64/libTKDraw.so.7.0.0",
+      "sha256": "c0c4cde28c4055e7dae32a8b8e3734e617ee965d46a73d8a311ab3b5ee08a4fd"
+    },
+    "libTKDraw.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKDraw/Unix/x86_64-Release-64/libTKDraw.so.7.0.0",
+      "sha256": "c0c4cde28c4055e7dae32a8b8e3734e617ee965d46a73d8a311ab3b5ee08a4fd"
+    },
+    "libTKDraw.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKDraw/Unix/x86_64-Release-64/libTKDraw.so.7.0.0",
+      "sha256": "c0c4cde28c4055e7dae32a8b8e3734e617ee965d46a73d8a311ab3b5ee08a4fd"
+    },
+    "libTKFeat.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKFeat/Unix/x86_64-Release-64/libTKFeat.so.7.0.0",
+      "sha256": "9fcc658ad302cca0087213b1e6bbb2602b8a0b31c8738ddbbf1981a55980d524"
+    },
+    "libTKFeat.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKFeat/Unix/x86_64-Release-64/libTKFeat.so.7.0.0",
+      "sha256": "9fcc658ad302cca0087213b1e6bbb2602b8a0b31c8738ddbbf1981a55980d524"
+    },
+    "libTKFeat.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKFeat/Unix/x86_64-Release-64/libTKFeat.so.7.0.0",
+      "sha256": "9fcc658ad302cca0087213b1e6bbb2602b8a0b31c8738ddbbf1981a55980d524"
+    },
+    "libTKFillet.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKFillet/Unix/x86_64-Release-64/libTKFillet.so.7.0.0",
+      "sha256": "f00e01af5a1baef19fa0d3f16fe151ee3ec1c596d4bc66607ee759b6eb4e2780"
+    },
+    "libTKFillet.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKFillet/Unix/x86_64-Release-64/libTKFillet.so.7.0.0",
+      "sha256": "f00e01af5a1baef19fa0d3f16fe151ee3ec1c596d4bc66607ee759b6eb4e2780"
+    },
+    "libTKFillet.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKFillet/Unix/x86_64-Release-64/libTKFillet.so.7.0.0",
+      "sha256": "f00e01af5a1baef19fa0d3f16fe151ee3ec1c596d4bc66607ee759b6eb4e2780"
+    },
+    "libTKG2d.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKG2d/Unix/x86_64-Release-64/libTKG2d.so.7.0.0",
+      "sha256": "f359df9aa7458aa0728fecdf8a0bae29fafad2637c9d38d9f035239d65074dc8"
+    },
+    "libTKG2d.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKG2d/Unix/x86_64-Release-64/libTKG2d.so.7.0.0",
+      "sha256": "f359df9aa7458aa0728fecdf8a0bae29fafad2637c9d38d9f035239d65074dc8"
+    },
+    "libTKG2d.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKG2d/Unix/x86_64-Release-64/libTKG2d.so.7.0.0",
+      "sha256": "f359df9aa7458aa0728fecdf8a0bae29fafad2637c9d38d9f035239d65074dc8"
+    },
+    "libTKG3d.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKG3d/Unix/x86_64-Release-64/libTKG3d.so.7.0.0",
+      "sha256": "91b00ffe2b3aab13b36c0b2a50c2aca3fba563606c2e31e058e180adee81fc70"
+    },
+    "libTKG3d.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKG3d/Unix/x86_64-Release-64/libTKG3d.so.7.0.0",
+      "sha256": "91b00ffe2b3aab13b36c0b2a50c2aca3fba563606c2e31e058e180adee81fc70"
+    },
+    "libTKG3d.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKG3d/Unix/x86_64-Release-64/libTKG3d.so.7.0.0",
+      "sha256": "91b00ffe2b3aab13b36c0b2a50c2aca3fba563606c2e31e058e180adee81fc70"
+    },
+    "libTKGeomAlgo.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKGeomAlgo/Unix/x86_64-Release-64/libTKGeomAlgo.so.7.0.0",
+      "sha256": "c77508f7fea7a8ee6d9b3ea37ef8aeccd3d7d6d3122074c6ec297f2620aed824"
+    },
+    "libTKGeomAlgo.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKGeomAlgo/Unix/x86_64-Release-64/libTKGeomAlgo.so.7.0.0",
+      "sha256": "c77508f7fea7a8ee6d9b3ea37ef8aeccd3d7d6d3122074c6ec297f2620aed824"
+    },
+    "libTKGeomAlgo.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKGeomAlgo/Unix/x86_64-Release-64/libTKGeomAlgo.so.7.0.0",
+      "sha256": "c77508f7fea7a8ee6d9b3ea37ef8aeccd3d7d6d3122074c6ec297f2620aed824"
+    },
+    "libTKGeomBase.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKGeomBase/Unix/x86_64-Release-64/libTKGeomBase.so.7.0.0",
+      "sha256": "f97119cc6c308ceefe3c2b4393ff0dfe7a3fb9415b454e66ffd475d144c27cfb"
+    },
+    "libTKGeomBase.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKGeomBase/Unix/x86_64-Release-64/libTKGeomBase.so.7.0.0",
+      "sha256": "f97119cc6c308ceefe3c2b4393ff0dfe7a3fb9415b454e66ffd475d144c27cfb"
+    },
+    "libTKGeomBase.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKGeomBase/Unix/x86_64-Release-64/libTKGeomBase.so.7.0.0",
+      "sha256": "f97119cc6c308ceefe3c2b4393ff0dfe7a3fb9415b454e66ffd475d144c27cfb"
+    },
+    "libTKHLR.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKHLR/Unix/x86_64-Release-64/libTKHLR.so.7.0.0",
+      "sha256": "1b5bb95ce1b220588464d478b3fd16f1fc4d5a51bef239e56f1dc7f84d8213c4"
+    },
+    "libTKHLR.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKHLR/Unix/x86_64-Release-64/libTKHLR.so.7.0.0",
+      "sha256": "1b5bb95ce1b220588464d478b3fd16f1fc4d5a51bef239e56f1dc7f84d8213c4"
+    },
+    "libTKHLR.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKHLR/Unix/x86_64-Release-64/libTKHLR.so.7.0.0",
+      "sha256": "1b5bb95ce1b220588464d478b3fd16f1fc4d5a51bef239e56f1dc7f84d8213c4"
+    },
+    "libTKMath.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKMath/Unix/x86_64-Release-64/libTKMath.so.7.0.0",
+      "sha256": "4a34a268904c96a6ac1a17012b5ebb5b9871ad751ec8662ffee3c9395b9ad406"
+    },
+    "libTKMath.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKMath/Unix/x86_64-Release-64/libTKMath.so.7.0.0",
+      "sha256": "4a34a268904c96a6ac1a17012b5ebb5b9871ad751ec8662ffee3c9395b9ad406"
+    },
+    "libTKMath.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKMath/Unix/x86_64-Release-64/libTKMath.so.7.0.0",
+      "sha256": "4a34a268904c96a6ac1a17012b5ebb5b9871ad751ec8662ffee3c9395b9ad406"
+    },
+    "libTKMesh.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKMesh/Unix/x86_64-Release-64/libTKMesh.so.7.0.0",
+      "sha256": "47ab778662b64644af6bf8ab0ae11e46c97612ed226d7cc3da742e4b4870d968"
+    },
+    "libTKMesh.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKMesh/Unix/x86_64-Release-64/libTKMesh.so.7.0.0",
+      "sha256": "47ab778662b64644af6bf8ab0ae11e46c97612ed226d7cc3da742e4b4870d968"
+    },
+    "libTKMesh.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKMesh/Unix/x86_64-Release-64/libTKMesh.so.7.0.0",
+      "sha256": "47ab778662b64644af6bf8ab0ae11e46c97612ed226d7cc3da742e4b4870d968"
+    },
+    "libTKOffset.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKOffset/Unix/x86_64-Release-64/libTKOffset.so.7.0.0",
+      "sha256": "47cd1a7bfc8bb66d9ca9e6802ce93f829151eec31dff63b60535d822a00807cd"
+    },
+    "libTKOffset.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKOffset/Unix/x86_64-Release-64/libTKOffset.so.7.0.0",
+      "sha256": "47cd1a7bfc8bb66d9ca9e6802ce93f829151eec31dff63b60535d822a00807cd"
+    },
+    "libTKOffset.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKOffset/Unix/x86_64-Release-64/libTKOffset.so.7.0.0",
+      "sha256": "47cd1a7bfc8bb66d9ca9e6802ce93f829151eec31dff63b60535d822a00807cd"
+    },
+    "libTKPrim.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKPrim/Unix/x86_64-Release-64/libTKPrim.so.7.0.0",
+      "sha256": "33375e291728940402c71616aad59625d6ecd50d6faa8dd5f1a60fe8960504b1"
+    },
+    "libTKPrim.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKPrim/Unix/x86_64-Release-64/libTKPrim.so.7.0.0",
+      "sha256": "33375e291728940402c71616aad59625d6ecd50d6faa8dd5f1a60fe8960504b1"
+    },
+    "libTKPrim.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKPrim/Unix/x86_64-Release-64/libTKPrim.so.7.0.0",
+      "sha256": "33375e291728940402c71616aad59625d6ecd50d6faa8dd5f1a60fe8960504b1"
+    },
+    "libTKService.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKService/Unix/x86_64-Release-64/libTKService.so.7.0.0",
+      "sha256": "bed8d30e562063e00be93f0ce10f850bdc918f14e35eadbbe89052835063c2f7"
+    },
+    "libTKService.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKService/Unix/x86_64-Release-64/libTKService.so.7.0.0",
+      "sha256": "bed8d30e562063e00be93f0ce10f850bdc918f14e35eadbbe89052835063c2f7"
+    },
+    "libTKService.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKService/Unix/x86_64-Release-64/libTKService.so.7.0.0",
+      "sha256": "bed8d30e562063e00be93f0ce10f850bdc918f14e35eadbbe89052835063c2f7"
+    },
+    "libTKShHealing.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKShHealing/Unix/x86_64-Release-64/libTKShHealing.so.7.0.0",
+      "sha256": "19188f43728961e0f07162a734b2b55be78af8d6180daea082f36e30ce51a8ad"
+    },
+    "libTKShHealing.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKShHealing/Unix/x86_64-Release-64/libTKShHealing.so.7.0.0",
+      "sha256": "19188f43728961e0f07162a734b2b55be78af8d6180daea082f36e30ce51a8ad"
+    },
+    "libTKShHealing.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKShHealing/Unix/x86_64-Release-64/libTKShHealing.so.7.0.0",
+      "sha256": "19188f43728961e0f07162a734b2b55be78af8d6180daea082f36e30ce51a8ad"
+    },
+    "libTKTopAlgo.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKTopAlgo/Unix/x86_64-Release-64/libTKTopAlgo.so.7.0.0",
+      "sha256": "bc2401d38b581294143aab04518b9679bfb31dd5271092d734a456ecc027d689"
+    },
+    "libTKTopAlgo.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKTopAlgo/Unix/x86_64-Release-64/libTKTopAlgo.so.7.0.0",
+      "sha256": "bc2401d38b581294143aab04518b9679bfb31dd5271092d734a456ecc027d689"
+    },
+    "libTKTopAlgo.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKTopAlgo/Unix/x86_64-Release-64/libTKTopAlgo.so.7.0.0",
+      "sha256": "bc2401d38b581294143aab04518b9679bfb31dd5271092d734a456ecc027d689"
+    },
+    "libTKTopTest.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKTopTest/Unix/x86_64-Release-64/libTKTopTest.so.7.0.0",
+      "sha256": "41563f6b05e358d5330b95d583f6b682b83ecc4a582f2dd408b5f083b86bd7c5"
+    },
+    "libTKTopTest.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKTopTest/Unix/x86_64-Release-64/libTKTopTest.so.7.0.0",
+      "sha256": "41563f6b05e358d5330b95d583f6b682b83ecc4a582f2dd408b5f083b86bd7c5"
+    },
+    "libTKTopTest.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKTopTest/Unix/x86_64-Release-64/libTKTopTest.so.7.0.0",
+      "sha256": "41563f6b05e358d5330b95d583f6b682b83ecc4a582f2dd408b5f083b86bd7c5"
+    },
+    "libTKV3d.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKV3d/Unix/x86_64-Release-64/libTKV3d.so.7.0.0",
+      "sha256": "c38919376b23cd5f1a8e44a52a82e65b42720369c195da496815c1344eb2159d"
+    },
+    "libTKV3d.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKV3d/Unix/x86_64-Release-64/libTKV3d.so.7.0.0",
+      "sha256": "c38919376b23cd5f1a8e44a52a82e65b42720369c195da496815c1344eb2159d"
+    },
+    "libTKV3d.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKV3d/Unix/x86_64-Release-64/libTKV3d.so.7.0.0",
+      "sha256": "c38919376b23cd5f1a8e44a52a82e65b42720369c195da496815c1344eb2159d"
+    },
+    "libTKernel.so": {
+      "location": "build/oce-compat/build/adm/cmake/TKernel/Unix/x86_64-Release-64/libTKernel.so.7.0.0",
+      "sha256": "9f23c4432081fc67cf5074ec8189b3fc2ba97548f1dce5f5dc119f58eea5db55"
+    },
+    "libTKernel.so.7": {
+      "location": "build/oce-compat/build/adm/cmake/TKernel/Unix/x86_64-Release-64/libTKernel.so.7.0.0",
+      "sha256": "9f23c4432081fc67cf5074ec8189b3fc2ba97548f1dce5f5dc119f58eea5db55"
+    },
+    "libTKernel.so.7.0.0": {
+      "location": "build/oce-compat/build/adm/cmake/TKernel/Unix/x86_64-Release-64/libTKernel.so.7.0.0",
+      "sha256": "9f23c4432081fc67cf5074ec8189b3fc2ba97548f1dce5f5dc119f58eea5db55"
+    }
+  },
+  "draw_sha256": "931891ef6fd8fc535e157052e4ea9169af63ea94d975408f657924a6714a5b1d"
+}

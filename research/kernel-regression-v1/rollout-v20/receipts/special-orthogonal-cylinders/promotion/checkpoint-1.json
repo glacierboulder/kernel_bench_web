@@ -1,0 +1,32 @@
+{
+  "suite": {
+    "id": "occt-31835-version-regression",
+    "version": "1",
+    "path": "evaluation/suites/regression/occt-31835-version-regression/1.json"
+  },
+  "source_id": "occt-d9d3107d8df1",
+  "toolchain": "occt-clang10-tcl86-bf-d9-v1",
+  "checkpoint": "orthogonal-cylinders",
+  "status": "passed",
+  "runner_sha256": "28b3a0baffa7fdf047f91fa33ed5f5c68e422b48ebecef84c3666296187ee93d",
+  "assets": {
+    "evaluation/cases/version-regressions/1/orthogonal-cylinders.cxx": "8600de0671a8ef2164c64f5824258c4f9d2ed5383822a14d3714915e8b4320f7",
+    "evaluation/cases/version-regressions/1/orthogonal-cylinders/healthy.brep": "ac85440271022d0904ea1178d91c2993b1341331cad879f3583466a22c25fe76",
+    "evaluation/cases/version-regressions/1/orthogonal-cylinders/negative.brep": "35abc44cb6d0f76b04e49b00bc617ba709d55ff9707ab3273d76acf12be76af5"
+  },
+  "raw": {
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 0.393,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.162,
+      "output_tail": "CYL 0 1 0 0 80 0 0 -100 100 20\nCYL 1 0 0 1 80 0 0 -100 100 20\nCYL 2 0 -1 0 80 0 0 -100 100 20\nDOT 0 1 0\nDOT 0 2 0\nDOT 1 2 0\nELIGIBLE generated-r80-orthogonal\nSHAPE first 1 1 2730666.6667207046 2730666.6666666665\nSHAPE native 1 1 2399381.248518995 2399381.2485198025\nSHAPE healthy 1 1 2399381.2485189964 2399381.2485198025\nSHAPE dropped_first_result 1 1 2730666.6667207023 2730666.6666666665\nSHAPE missing_third 1 1 2730666.6667207023 2399381.2485198025\nhealthy pass\nnegative missing_third\nTEST_DONE\n",
+      "timed_out": false
+    }
+  }
+}

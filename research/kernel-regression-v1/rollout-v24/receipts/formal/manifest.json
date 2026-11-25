@@ -1,0 +1,36 @@
+{
+  "host": "ws01",
+  "run": "7e2e47f8c3407830",
+  "patch": "b187fd86178b05251b6ecd379a49785fc58a998899adce24acbc5329ec71dfd7",
+  "case_hashes": {
+    "evaluation/cases/version-regressions/1/fillet-cut.cxx": "eb53a605d20711c86b27c970deb5014b0db178540cd2adc092c1dddba3732ebf",
+    "issues/occt-github-1701/1/public/inputs/prefillet.brep": "92742b66390d4c4dc9112eae6bf4368a459dbdd77e2657dcfd9a2e0038762cab",
+    "evaluation/cases/authoring-fillet-20261112/occt-github-1701/1/smaller.txt": "777aecc0f9af03ddc853cd40fcf34e56464517063f3d798e7a0280cb1059d5a1",
+    "evaluation/cases/version-regressions/1/fillet-cut/witnesses.txt": "2e6b742fdc2f9aa9098a11031301730ccbb9edd59b6711978146c20addbfd031",
+    "evaluation/cases/version-regressions/1/fillet-cut/healthy-1-result.brep": "357eb3015319667cef233b0e474b203721f430da0a31a751748d968cb21291f9",
+    "evaluation/cases/version-regressions/1/fillet-cut/healthy-1-cut.brep": "49ddf92c1e3b1092ec1a3e6b3ca348b920417e1e892992dd2e119f84425746e3",
+    "evaluation/cases/version-regressions/1/fillet-cut/healthy-1-removed.brep": "fe3303c9b3f4769fc4bf78ef4bcb55a7b90f345dd21ce92ecf1c7fedee618f65",
+    "evaluation/cases/version-regressions/1/fillet-cut/healthy-2-result.brep": "357eb3015319667cef233b0e474b203721f430da0a31a751748d968cb21291f9",
+    "evaluation/cases/version-regressions/1/fillet-cut/healthy-2-cut.brep": "49ddf92c1e3b1092ec1a3e6b3ca348b920417e1e892992dd2e119f84425746e3",
+    "evaluation/cases/version-regressions/1/fillet-cut/healthy-2-removed.brep": "fe3303c9b3f4769fc4bf78ef4bcb55a7b90f345dd21ce92ecf1c7fedee618f65",
+    "evaluation/cases/version-regressions/1/fillet-cut/wrong-edge-result.brep": "5196d0196d886df608849e540a233e051b2cf3254727d8b40487ebd1a86bddc4",
+    "evaluation/cases/version-regressions/1/fillet-cut/wrong-edge-cut.brep": "3b07ebef28d0cc0c0bf763395d750554b8d49b24af5f1a1b2a9590384dc279d3",
+    "evaluation/cases/version-regressions/1/fillet-cut/wrong-edge-removed.brep": "75e2d971e2f0bdd0c00a04bb699ae49ef12bff9f46df30eaac7ff27c1cce0033",
+    "evaluation/cases/version-regressions/1/fillet-cut/wrong-cut-result.brep": "357eb3015319667cef233b0e474b203721f430da0a31a751748d968cb21291f9",
+    "evaluation/cases/version-regressions/1/fillet-cut/wrong-cut-cut.brep": "c60d0fa655a53676e2330b7187a2a9cb344382627ec7784595c1e80fc2586bd1",
+    "evaluation/cases/version-regressions/1/fillet-cut/wrong-cut-removed.brep": "ea9d0cb57fd76f49be16211a49c9b5b9f859f7f7f3987138106d5553fc30d006"
+  },
+  "runner": "144cbdc3bc0bef78180e0e8c107149aa8ffe9b86709af51f61f97d8225fedca5",
+  "build_helper": "77aaa283436d3d2d2c03498a5c208c9f12408093764635afd2adb76f9b09874e",
+  "receipts": {
+    "cli.json": "bca68710cdaec44d16f32592f136d18bb1c3a42b45e7c3e6c6dde4de3d954001",
+    "cli.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "driver.json": "28cf6b77c834d42d56b51f6d544a65244216f9c869a19280d4a2d301226bb34c",
+    "internal.json": "76b0f1853b6d45bc5a35032ab631fcb03f5a744ee228fd68c8c7cc967056b4cc",
+    "driver.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "snapshot.json": "0ee2129f7b26d081666b083bcaf8e59394e30b29e7d8c5bb5fde6c2ea4996123",
+    "suite.json": "02b3c014db0bb1b2b13df7af224e19e7259652993dc4fce4eef74bb3302c59bb",
+    "source-lock.json": "5218fc310e0ec1b1c0cf0832c232e4bef3cac3fda21c86c408622ead112a244e",
+    "toolchain.json": "a18f4fd06a5096a44f272cb7d636d55e3af329d603a07c33862650590f7ce209"
+  }
+}

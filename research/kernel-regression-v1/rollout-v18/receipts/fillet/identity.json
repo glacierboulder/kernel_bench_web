@@ -1,0 +1,26 @@
+{
+  "source_id": "occt801-1371-b-b8f597c67781",
+  "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "toolchain": "occt8-gcc13-cpp-20261112",
+  "toolchain_config": {
+    "path": "toolchains/occt8-gcc13-cpp-20261112.json",
+    "sha256": "859802cd60dc1127b7f5951f0688ac27d953d653b4c915fa6b4231620d8d39a0"
+  },
+  "build_entry": {
+    "path": "tools/occt8-gcc13-cpp/build.sh",
+    "sha256": "b166ea190712b4b3f2ba57d1d008fad24b9d434ea082016e4f099033f8c6177e"
+  },
+  "declared_public_targets": [
+    "TKFillet",
+    "TKPrim"
+  ],
+  "source": "/var/tmp/m25542-positive-reference-20261119/release/source",
+  "build": "/home/lzy/cad-bench-experiment/rollout12.gIoEAq5S/fillet-build",
+  "observed_tree": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "git_tree": "76543d44e49c73bfffa2d141089e6c5add106f9a",
+  "source_commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "cache_sha256": "dfad318cd8a1c560a8d0535753ccea3f3d0ec152ede432af04f7c7abc85422ce",
+  "cache_identity": "d2d83fa8b2a35226cfcdec3105051b532a611b790a1af02d67deb80b685e5ce8",
+  "cache_runtime": "2b5b072deab027b549287424f57b134dd9150d0a99ffa7f4e1a797267710d536"
+}

@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "units": "设计用例使用固定模型长度单位。L 为指定工件包围盒对角线，epsilon=max(1e-7,1e-8*L)。以下 epsilon 仅用于新设计的解析工件。旧用例沿用各自冻结的原阈值。",
+  "families": {
+    "cells": {
+      "modules": ["BOPAlgo", "BRepAlgoAPI", "BRepClass3d"], "triggers": ["BOPAlgo", "BOPDS", "BRepAlgo", "BOPTools"],
+      "fixture": "两边长10的盒沿X相错5。同序、换序和共同平移重复。另设相离及仅面接触。",
+      "oracle": "交、差、并体积500/500/1500，分别用内部点验证左右材料归属。仅面接触允许不同表示，但不得有正体积实体。体积容许1e-5，点距边界至少0.1。",
+      "negative": "镜像交体，保持体积及有效性；另以一个输入代替并输出。"
+    },
+    "intersection": {
+      "modules": ["IntPatch", "IntTools", "GeomAPI", "TKBO"], "triggers": ["IntPatch", "IntTools", "IntCurveSurface", "GeomInt", "IntAna", "IntWalk"],
+      "fixture": "半径5的圆柱与 y 方向有限直线，x=4.99/5.01、z固定；补两张有限正交面和偏心球面截圆。",
+      "oracle": "相割根 y=±sqrt(25-x²)，各一次，参数误差≤epsilon；外侧零根。有限正交面以解析裁剪线段核验两个端点及参数区间并集；留出正长度缺口即失败。截圆的四见证仅作采样另记。",
+      "negative": "去掉一个根；截去线段中部；复制一支使边数仍正确。"
+    },
+    "pcurve": {
+      "modules": ["Geom2d", "GeomProjLib", "BRepLib", "BRepCheck"], "triggers": ["Geom2d", "GeomProjLib", "ShapeConstruct", "BRepLib", "Approx", "ProjLib"],
+      "fixture": "显式双一次非平面B样条 S(u,v)=(u,v,uv)，单位域且U/V非周期；固定 v=0.4 的3D线。另设圆柱跨缝圆弧。",
+      "oracle": "在非周期面上(u,0.4)为唯一分支，端点、全参数域和嵌入3D偏差≤epsilon。分段多项式用导数极值或经验证上界逐段核验；只有采样时标有限证据。周期面允许一个全段一致的2π平移，拒绝内部跳支。精确有效性仅在该API可用且已校准时计入。",
+      "negative": "保留正确端点但在内部偏离；截短一端；跨缝中段额外跳2π。"
+    },
+    "tolerance": {
+      "modules": ["BRep_Tool", "BRepCheck", "BOPAlgo"], "triggers": ["BRepCheck", "BRep_Tool", "BOPAlgo", "BOPDS", "Precision"],
+      "fixture": "单位盒上横穿两相对面的线段，连续两次相同Common；另取原题已冻结的连续布尔容差检查。",
+      "oracle": "逐个实体保存顶点/边容差与曲线到支撑面的解析最大距离，分别报告。标准盒夹线端点误差≤epsilon，输入不得被悄悄扩大，新结果上界预先按对应版本健康夹具冻结。登记题自己的2e-7等阈值原样执行。",
+      "negative": "只提高顶点容差而不移动几何；只移动端点并维持属性容差。"
+    },
+    "topology": {
+      "modules": ["TopoDS", "BRepTools", "ShapeUpgrade", "BRepCheck"], "triggers": ["TopoDS", "ShapeUpgrade", "ShapeFix", "TopExp", "BRepTools"],
+      "fixture": "把10×10×10盒的顶面分割为两块同域平面，再合并同域；另建有通孔的实体进行 BREP 读写。",
+      "oracle": "闭壳且边的有向使用成对，分割前后体积1000、外表面积600，顶面内部的指定人工缝消失，其余锐边需要保留。通孔读写后分类、体积和有效性复验。",
+      "negative": "保留人工缝；删去真棱或塞回通孔；只用一个额外小面补偿面积。"
+    },
+    "history": {
+      "modules": ["BRepAlgoAPI", "BOPAlgo", "TopTools"], "triggers": ["BRepAlgoAPI", "BRepTools_History", "BOPAlgo_Builder"],
+      "fixture": "具有保留面、被切分面和被完全移除面的非重合两盒Cut。用输入面的平面方程和位置建立身份，记录已启用历史的调用方式。",
+      "oracle": "逐一检查对应版本头文件和参考结果已确认的Modified/Generated/IsDeleted，返回的元素均属于结果。单独探测Builder/DSFiller及其适用构造方式。缺声明、未启用历史、旧版语义不同分开登记。",
+      "negative": "交换已保留面与已删除面记录；以无关结果面替换一个后代，保持列表长度。"
+    },
+    "partition": {
+      "modules": ["BOPAlgo_Builder", "BOPDS", "TopExp"], "triggers": ["BOPAlgo_Builder", "BOPAlgo_PaveFiller", "BOPDS"],
+      "fixture": "两边长10的盒错开5，General Fuse保留各个分块，反转输入顺序复核。",
+      "oracle": "三块内部不相交，按其x范围对应500/500/500，内部见证及分区体积守恒；拓扑遍历顺序自由。",
+      "negative": "重复中块、漏一外块，使块数和总体积仍相同。"
+    },
+    "offset": {
+      "modules": ["Geom2d", "Geom", "Geom_OffsetSurface", "BRepOffsetAPI"], "triggers": ["Geom_Offset", "Geom2d_Offset", "BRepOffset", "GeomEvaluator"],
+      "fixture": "平面 z=0 取正向法矢平移距离2；定向半径5圆偏置距离1；另用已知参数圆柱螺旋检验曲线导数。",
+      "oracle": "核验有向距离、正常点导数及周期裁剪端点。圆的有向半径按 N×T 或该API声明的法矢约定预先固定。平面反向后偏置符号反转。仅在该版具有相应2D/3D接口时执行各子项。",
+      "negative": "翻转偏置方向；沿用未裁剪全周期；交换二、三阶导数。"
+    },
+    "fillet": {
+      "modules": ["ChFi3d", "BRepFilletAPI", "Blend", "BRepCheck"], "triggers": ["ChFi", "Blend", "BRepFillet", "FilletSurf"],
+      "fixture": "10立方盒一条完整直棱作半径1圆角；另取登记的周期脊线或无效半径原测试。",
+      "oracle": "圆角后体积1000−10(1−π/4)，长棱中截面半径1，指定相邻两面切向吻合。无效输入按版本契约拒绝或返回已验证结果。",
+      "negative": "保留锐边；改圆角半径；报告成功但留下开线框。"
+    },
+    "projection": {
+      "modules": ["ShapeAnalysis", "Extrema", "GeomAPI"], "triggers": ["ShapeAnalysis", "Extrema", "GeomAPI_Project"],
+      "fixture": "点投影至 z=0 平面及单位球，球极点附多个等价U初值，另有远离极点的对照。",
+      "oracle": "面上点坐标和解析最近距离误差≤epsilon；极点不要求唯一U，非退化点另核UV连续。扩展单列已收敛参数提示的契约。",
+      "negative": "返回球背面的驻点；在非退化面错误复用上一次参数。"
+    },
+    "properties": {
+      "modules": ["BRepGProp", "GProp", "BRepClass3d"], "triggers": ["BRepGProp", "GProp", "BRepClass"],
+      "fixture": "2×4×6长方体密度1，平移和旋转，质心惯量与参考点惯量分别检查。",
+      "oracle": "质量48，质心(1,2,3)，质心主轴惯量208/160/80。平移按平行轴定理，旋转按 R I R^T；相对误差1e-8，零分量绝对误差1e-7。",
+      "negative": "用原点惯量替代质心惯量；保存特征值但错置主轴。"
+    },
+    "construction": {
+      "modules": ["GeomFill", "Geom_BSplineSurface", "BRepPrim"], "triggers": ["GeomFill", "BSpl", "BRepPrim", "BRepSweep"],
+      "fixture": "以 S(u,v)=(u,v,uv) 四条直边作Coons面，另取扫掠的通孔平板或部分圆环体测试。",
+      "oracle": "Coons四界位置一致、内部双线性插值及法向方向正确。矩形10×8、半径2孔的平板扫掠3，体积3(80−4π)且孔中点在实体外。圆环体按扫角比例核验体积。",
+      "negative": "倒置一条边界；填平孔；部分圆环错误补成整环。"
+    },
+    "exchange": {
+      "modules": ["BRepTools", "STEPControl", "XSControl"], "triggers": ["STEP", "XSControl", "DESTEP", "BRepTools"],
+      "fixture": "固定带孔盒，用原生BREP和（构建显式提供时）STEP分别写出，清空模型后再读取，统一单位。",
+      "oracle": "几何质心、体积、孔内外见证、闭合及有效性；不用文件字节或STEP面号判等。STEP单列交换精度及依赖版本。",
+      "negative": "写回填孔几何或单位缩放错误的实体。"
+    },
+    "mesh": {
+      "modules": ["BRepMesh", "Poly", "BRepTools"], "triggers": ["BRepMesh", "Poly_", "IMesh"],
+      "fixture": "半径5球和带孔平面清空三角缓存，按绝对弦差0.05、0.02分别离散。",
+      "oracle": "各三角面方向、退化、孔开口与球面几何分别检查；球三角形平面片至解析球的最大弦差以片上最近球心点求得，先在冻结版本校准允许上界，记录每个误差，禁用仅比较三角数。",
+      "negative": "反向一片；跨孔补三角；移动局部顶点。"
+    }
+  }
+}

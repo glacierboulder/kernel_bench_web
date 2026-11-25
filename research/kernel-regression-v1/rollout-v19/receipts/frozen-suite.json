@@ -1,0 +1,56 @@
+{
+  "checkpoints": [
+    {
+      "case": "evaluation/cases/occt-544-samedomain/1/merge.cxx",
+      "category": "regression",
+      "id": "544-merge-boxes",
+      "issue_id": "occt-544",
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "inputs": [
+          "evaluation/cases/occt-544-samedomain/1/healthy.brep",
+          "evaluation/cases/occt-544-samedomain/1/seam.brep",
+          "evaluation/cases/occt-544-samedomain/1/shift.brep",
+          "evaluation/cases/occt-544-samedomain/1/notch.brep"
+        ],
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "NATIVE PASS",
+          "CONTROL healthy PASS",
+          "CONTROL seam REJECT seam_residual",
+          "CONTROL shift REJECT displaced",
+          "CONTROL notch REJECT material_loss",
+          "TEST_DONE"
+        ]
+      },
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt_boolean_single_544"
+  ],
+  "id": "occt-544-samedomain-regression",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-3e80fad1779e"
+  ],
+  "support_files": [
+    "evaluation/cases/occt-544-samedomain/1/judge.py",
+    "evaluation/cases/occt-544-samedomain/1/geometry.hxx"
+  ],
+  "title": "OCCT 544 · 同域合并后的外形、位置和材料",
+  "version": "1"
+}

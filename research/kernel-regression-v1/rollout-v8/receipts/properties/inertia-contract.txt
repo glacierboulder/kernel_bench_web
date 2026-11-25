@@ -1,0 +1,20 @@
+  //! The matrix of inertia is returned in the central coordinate
+  //! system (G, Gx, Gy, Gz), where G is the centre of mass of the
+  //! system and Gx, Gy, Gz are parallel to the X(1, 0, 0), Y(0, 1, 0)
+  //! and Z(0, 0, 1) directions of the absolute Cartesian coordinate
+  //! system. To compute the matrix of inertia at another location use
+  //! GProp::HOperator() (Huygens' theorem).
+  Standard_EXPORT gp_Mat MatrixOfInertia() const;
+
+  //! Returns the static moments of inertia of the current system -
+  //! i.e. the moments of inertia about the three axes of the absolute
+  //! Cartesian coordinate system.
+  //!
+  //! @param[out] Ix static moment of inertia about X
+  //! @param[out] Iy static moment of inertia about Y
+  //! @param[out] Iz static moment of inertia about Z
+  Standard_EXPORT void StaticMoments(double& Ix, double& Iy, double& Iz) const;
+
+  //! Computes the moment of inertia of the system about the axis A.
+  //! @param[in] A axis about which the moment of inertia is computed
+  Standard_EXPORT double MomentOfInertia(const gp_Ax1& A) const;

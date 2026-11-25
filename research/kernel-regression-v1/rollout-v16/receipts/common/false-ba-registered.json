@@ -1,0 +1,18 @@
+{
+  "checkpoint": "disjoint",
+  "case_sha256": "7139e2faaed8c86438d07c9ce7d86e0a4057f20b1e1898b6e180327d0825ed25",
+  "payload_sha256": "7139e2faaed8c86438d07c9ce7d86e0a4057f20b1e1898b6e180327d0825ed25",
+  "passed": false,
+  "compile": {
+    "return_code": 0,
+    "elapsed_seconds": 0.406,
+    "output_tail": "",
+    "timed_out": false
+  },
+  "result": {
+    "return_code": 1,
+    "elapsed_seconds": 0.005,
+    "output_tail": "3 swap=0 edges=0 length=0 pass=1\n3 swap=1 edges=1 length=0.100002 pass=0\n",
+    "timed_out": false
+  }
+}

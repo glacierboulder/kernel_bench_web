@@ -1,0 +1,199 @@
+{
+  "source_commit": "bdeea0a89759f4f1117022267807f79aad55d3e2",
+  "source_tree": "bafb9568643aa78e29a198267e20ce905525eac77d0bb73f608efd521520d5ff",
+  "reference_commit": "870ae593c3c060fe822e20bd2f1acfdd3fcbd449",
+  "suite": "occt-boolean-intersection-v4-mantis-31470@1",
+  "suite_sha256": "fdbe7d9b0d8172e62bdfeea1b4263c3ee0d22b1c3330d8655b177ede5639b98e",
+  "model_sessions": 0,
+  "provenance_sha256": "713b3576565b1ee537a40cdb2088a59759129e316f1093eb95e145b321eaf596",
+  "runner_sha256": "03227faa9c98b96821b88e77e547bb3212a3061a9d565ea6d0b4458ccd82b56d",
+  "patch_sha256": "6d7f21a4867e1608423b02ddb4536657f2759082001dbb4ec7f2874e4d5ad89b",
+  "patched_checks": {
+    "original-31470-upstream": {
+      "status": "PASS",
+      "oracle": "geometry_pass",
+      "category": "original",
+      "runner_exit": 0,
+      "elapsed_seconds": 0.164,
+      "assertions": [
+        {
+          "status": "PASS",
+          "id": "official_oracle_completed",
+          "kind": "expression"
+        }
+      ],
+      "tolerance_log": null,
+      "diagnostics": [],
+      "raw_score": "patched/original-31470-upstream/runner.json",
+      "case_sha256": "4971299a70fbfdaf5df770610bba99414f5fb34264fc5380330f6380c5c726bb"
+    },
+    "neighborhood-31470-1-official-shell-rigid-z": {
+      "status": "PASS",
+      "oracle": "geometry_pass",
+      "category": "neighborhood",
+      "runner_exit": 0,
+      "elapsed_seconds": 0.214,
+      "assertions": [
+        {
+          "status": "PASS",
+          "id": "shape_check",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "topology_counts",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "max_tolerance",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "official_volume",
+          "kind": "expression"
+        }
+      ],
+      "tolerance_log": null,
+      "diagnostics": [],
+      "raw_score": "patched/neighborhood-31470-1-official-shell-rigid-z/runner.json",
+      "case_sha256": "b150705c23dbe9b1782116e6907ffe2486aadd17905c0a8ff7779600368ab0ee"
+    },
+    "neighborhood-31470-2-official-shell-rigid-x": {
+      "status": "PASS",
+      "oracle": "geometry_pass",
+      "category": "neighborhood",
+      "runner_exit": 0,
+      "elapsed_seconds": 0.164,
+      "assertions": [
+        {
+          "status": "PASS",
+          "id": "shape_check",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "topology_counts",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "max_tolerance",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "official_volume",
+          "kind": "expression"
+        }
+      ],
+      "tolerance_log": null,
+      "diagnostics": [],
+      "raw_score": "patched/neighborhood-31470-2-official-shell-rigid-x/runner.json",
+      "case_sha256": "3b7a71a491f6250fff9344f1b90715b4f3e908734a91cc32a3f19857b372b989"
+    },
+    "regression-31470-contained-shell": {
+      "status": "PASS",
+      "oracle": "geometry_pass",
+      "category": "regression",
+      "runner_exit": 0,
+      "elapsed_seconds": 0.064,
+      "assertions": [
+        {
+          "status": "PASS",
+          "id": "shape_check",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "bop_valid",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "max_tolerance",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "shell_volume",
+          "kind": "expression"
+        }
+      ],
+      "tolerance_log": null,
+      "diagnostics": [],
+      "raw_score": "patched/regression-31470-contained-shell/runner.json",
+      "case_sha256": "b7a202a49135cb743664f5c468a8b46724a551c612aa900af89d04d7d3a243d9"
+    }
+  },
+  "stage_grade": "R1",
+  "baseline_original": {
+    "status": "FAIL",
+    "oracle": "geometry_fail",
+    "category": "original",
+    "runner_exit": 1,
+    "elapsed_seconds": 0.114,
+    "assertions": [
+      {
+        "status": "PASS",
+        "id": "official_oracle_completed",
+        "kind": "expression"
+      }
+    ],
+    "tolerance_log": null,
+    "diagnostics": [
+      "Error: bad tolerance of result"
+    ],
+    "raw_score": "locked/original-31470-upstream/runner.json",
+    "case_sha256": "4971299a70fbfdaf5df770610bba99414f5fb34264fc5380330f6380c5c726bb"
+  },
+  "reference_original": {
+    "status": "PASS",
+    "oracle": "geometry_pass",
+    "category": "original",
+    "runner_exit": 0,
+    "elapsed_seconds": 0.164,
+    "assertions": [
+      {
+        "status": "PASS",
+        "id": "official_oracle_completed",
+        "kind": "expression"
+      }
+    ],
+    "tolerance_log": null,
+    "diagnostics": [],
+    "raw_score": "reference/original-31470-upstream/runner.json",
+    "case_sha256": "4971299a70fbfdaf5df770610bba99414f5fb34264fc5380330f6380c5c726bb"
+  },
+  "applied": {
+    "before": {
+      "src/Approx/Approx_ComputeCLine.gxx": "c9e7ed838d8b5ebc3d62def7c42210174316cfbd",
+      "src/Approx/Approx_FitAndDivide.hxx": "552af14087abb0e848b0cf2dc3b21ce0e116a03c",
+      "src/Approx/Approx_FitAndDivide2d.hxx": "c1d4283b3e0baeb6d1cbc3558b0008a336036f74",
+      "src/BRepFill/BRepFill_ComputeCLine.hxx": "273515069aa9bd5ac4f0bc048119aaed9fc68119",
+      "src/ProjLib/ProjLib_ComputeApprox.cxx": "cdf6442b4ef6e58a43f37bacbf7b9548d63a6d1f"
+    },
+    "after": {
+      "src/Approx/Approx_ComputeCLine.gxx": "597c972145e4006329f3630172221848df48be10",
+      "src/Approx/Approx_FitAndDivide.hxx": "70443fdeaaed951ace8f6fd555f8eb4a2ba7e030",
+      "src/Approx/Approx_FitAndDivide2d.hxx": "2a334ce59721e14bd8a340723a60c99d2ec144b5",
+      "src/BRepFill/BRepFill_ComputeCLine.hxx": "e736d53bd5518e80de0a88f371cd114f354174c2",
+      "src/ProjLib/ProjLib_ComputeApprox.cxx": "63ee160ebb6264f23af9c52175e711d5baea0f67"
+    },
+    "upstream_unadjusted_check_exit": 1,
+    "patched_source_tree": "b776b1cb6f77c6a9d69480ab7e797ea3fe1fa89dc815db4bbfdcfd72344f48f9"
+  },
+  "build_exit": 0,
+  "built_TKGeomBase_sha256": "862048cf619a10f8d918bce5ecc23c7bb44200fa5ee08288e438109c8ed0f0e8",
+  "artifacts": {
+    "build.log": "fbdca7932add9fd5948c30a300f7f6c23c65c7f2eec2bbab8b51ac9e30942dd8",
+    "locked/original-31470-upstream/runner.json": "cbed402d1ce6c9655fbbb9ff10cecdade0f2344dea8649a1ca42ce1769a6cb86",
+    "patched/neighborhood-31470-1-official-shell-rigid-z/runner.json": "632496494360a3df9f43780ba3fef587b517c698f442ec2f159336f5cebd9e48",
+    "patched/neighborhood-31470-2-official-shell-rigid-x/runner.json": "237932a2d10c7e6eb5acd088bf933e7fbefabd6da7294fa4631a0b6ec41bc7f4",
+    "patched/original-31470-upstream/runner.json": "4ad4dc4639e75590bc15a34fae4d3bf4d69a4665cb6c42dfea593bbb85ca2d70",
+    "patched/regression-31470-contained-shell/runner.json": "fecba9ea606528d62381318af460669f53d3ec3df86aac9f4b5f4f2e54959944",
+    "reference/original-31470-upstream/runner.json": "d7c2c1ab47612652db2e471b3e58e16af661ff53afdaa05c63b2afba6c09814a",
+    "upstream-apply-check.log": "4e06ff0d1e0ffcce7e7df472e95d87cbcf80bd09c643f245aba48db11d10763e"
+  }
+}

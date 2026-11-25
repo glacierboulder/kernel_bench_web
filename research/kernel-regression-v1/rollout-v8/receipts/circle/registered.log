@@ -1,0 +1,11 @@
+DRAW is running in batch mode
+M29972_REG_CURVES=1 expected=1
+BENCH_ASSERT_PASS solution_count  kind=expression
+checklength regcurve -l 31.41592653589793
+The expected length is 31.41592653589793
+M29972_REG_LENGTH=31.415926535897931 expected=31.41592653589793 relative_error=0.0
+BENCH_ASSERT_PASS curve_length  kind=expression
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=2 numeric_assertions=0
+TEST_DONE assertions=2 numeric_assertions=0
+SCRIPT_RETURN 0 

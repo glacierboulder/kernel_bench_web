@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "source_id": "occt33570-derived-381c5ec350fd-sphere-cut",
+  "baseline_commit": "381c5ec350fde3b9808475d8070bf00eda0260c9",
+  "baseline_tree_sha256": "b6e8390a470b05b460277341f325df52d723ede889d72494a0c53a99921a8904",
+  "toolchain": "occt1115-sphere-cut-gcc",
+  "role": "baseline",
+  "files_sha256": {
+    "probe.cxx": "fa3955b44300951c35f7b5d9e3dcd2b57f6a07e89f14d7221bba295bac195563",
+    "replay.py": "ebd69c4610a4b75384b83e241ccefacca56d3d4705b2bb9023672e845b3a93ef"
+  },
+  "cases": {},
+  "status": "INCONCLUSIVE",
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O0",
+    "-I/workspace/build/include/opencascade",
+    "/inputs/probe.cxx",
+    "-L/workspace/build/lin64/gcc/lib",
+    "-o",
+    "/tmp/tmpzszf2266/probe",
+    "-lTKBO",
+    "-lTKPrim",
+    "-lTKTopAlgo",
+    "-lTKBRep",
+    "-lTKGeomAlgo",
+    "-lTKG3d",
+    "-lTKG2d",
+    "-lTKGeomBase",
+    "-lTKMath",
+    "-lTKernel"
+  ],
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "build": {
+    "status": "INCONCLUSIVE",
+    "log": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+  },
+  "elapsed_seconds": 0.058
+}

@@ -1,0 +1,39 @@
+/inputs/edge-check.cxx: In function 'int main(int, char**)':
+/inputs/edge-check.cxx:56:65: warning: 'const char* Standard_Failure::GetMessageString() const' is deprecated: Use what() instead [-Wdeprecated-declarations]
+   56 |  }catch(const Standard_Failure& e){std::cerr<<e.GetMessageString()<<std::endl;return 4;}
+      |                                               ~~~~~~~~~~~~~~~~~~^~
+In file included from /workspace/build/include/opencascade/Standard_Failure.hxx:15,
+                 from /workspace/source/src/FoundationClasses/TKernel/Standard/Standard_DomainError.hxx:22,
+                 from /workspace/build/include/opencascade/Standard_DomainError.hxx:15,
+                 from /workspace/source/src/FoundationClasses/TKernel/Standard/Standard_RangeError.hxx:21,
+                 from /workspace/build/include/opencascade/Standard_RangeError.hxx:15,
+                 from /workspace/source/src/FoundationClasses/TKernel/Standard/Standard_OutOfRange.hxx:21,
+                 from /workspace/build/include/opencascade/Standard_OutOfRange.hxx:15,
+                 from /workspace/source/src/FoundationClasses/TKMath/gp/gp_Mat.hxx:19,
+                 from /workspace/build/include/opencascade/gp_Mat.hxx:15,
+                 from /workspace/source/src/FoundationClasses/TKMath/gp/gp_Trsf.hxx:19,
+                 from /workspace/build/include/opencascade/gp_Trsf.hxx:15,
+                 from /workspace/source/src/FoundationClasses/TKMath/TopLoc/TopLoc_Datum3D.hxx:23,
+                 from /workspace/build/include/opencascade/TopLoc_Datum3D.hxx:15,
+                 from /workspace/source/src/FoundationClasses/TKMath/TopLoc/TopLoc_Location.lxx:19,
+                 from /workspace/build/include/opencascade/TopLoc_Location.lxx:15,
+                 from /workspace/source/src/FoundationClasses/TKMath/TopLoc/TopLoc_Location.hxx:163,
+                 from /workspace/build/include/opencascade/TopLoc_Location.hxx:15,
+                 from /workspace/source/src/ModelingData/TKBRep/TopoDS/TopoDS_Shape.hxx:21,
+                 from /workspace/build/include/opencascade/TopoDS_Shape.hxx:15,
+                 from /workspace/source/src/ModelingData/TKBRep/TopTools/TopTools_ShapeMapHasher.hxx:20,
+                 from /workspace/build/include/opencascade/TopTools_ShapeMapHasher.hxx:15,
+                 from /workspace/source/src/ModelingData/TKBRep/BRepTools/BRepTools.hxx:26,
+                 from /workspace/build/include/opencascade/BRepTools.hxx:15,
+                 from /inputs/edge-check.cxx:2:
+/workspace/source/src/FoundationClasses/TKernel/Standard/Standard_Failure.hxx:60:15: note: declared here
+   60 |   const char* GetMessageString() const noexcept { return what(); }
+      |               ^~~~~~~~~~~~~~~~
+ORIGINAL a valid=1
+VERTEX_IN_EDGE a code=0
+VERTEX_IN_EDGE a code=0
+ORIGINAL b valid=0
+VERTEX_IN_EDGE b code=1 InvalidPointOnCurve
+VERTEX_IN_EDGE b code=0
+VALID_CONTROL 0 children=0 valid=1
+VALID_CONTROL 1 children=0 valid=1

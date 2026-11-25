@@ -1,0 +1,55 @@
+{
+  "checkpoints": [
+    {
+      "case": "evaluation/cases/version-regressions/1/section-uv.cxx",
+      "category": "regression",
+      "id": "section-uv",
+      "issue_id": "occt-27780",
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "inputs": [
+          "evaluation/cases/version-regressions/1/section-uv/native-1.brep",
+          "evaluation/cases/version-regressions/1/section-uv/native-2.brep",
+          "evaluation/cases/version-regressions/1/section-uv/short.brep",
+          "evaluation/cases/version-regressions/1/section-uv/one-side.brep"
+        ],
+        "legacy_clang_layout": true,
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel",
+          "dl"
+        ],
+        "stdout_contains": [
+          "CONTROL native pass",
+          "CONTROL healthy-1 pass",
+          "CONTROL healthy-2 pass",
+          "CONTROL short truncated",
+          "CONTROL one-side second_side_mismatch",
+          "TEST_DONE"
+        ]
+      },
+      "timeout_seconds": 120,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt-single-27780"
+  ],
+  "id": "occt-27780-version-regression",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-2613378e60ff"
+  ],
+  "title": "occt-27780 version regression",
+  "version": "1"
+}

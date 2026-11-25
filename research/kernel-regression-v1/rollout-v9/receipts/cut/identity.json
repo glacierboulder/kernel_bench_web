@@ -1,0 +1,25 @@
+{
+  "source_id": "occt33570-derived-381c5ec350fd-sphere-cut",
+  "commit": "381c5ec350fde3b9808475d8070bf00eda0260c9",
+  "materialized_tree_sha256": "b6e8390a470b05b460277341f325df52d723ede889d72494a0c53a99921a8904",
+  "toolchain": "occt1115-sphere-cut-gcc",
+  "toolchain_config": {
+    "path": "toolchains/occt1115-sphere-cut-gcc.json",
+    "sha256": "bc4b7662e2d021a2a182b17158cf94e0fc5fea589476cfc12e563131bc93ab3a"
+  },
+  "build_entry": {
+    "path": "tools/occt1115-sphere-cut-gcc/build.sh",
+    "sha256": "0c9e7eb593cabe4c7d1466d139149feeb743e47a156badf09a188f7bfa1c8390"
+  },
+  "declared_public_targets": [
+    "TKBO",
+    "TKPrim"
+  ],
+  "source": "/var/tmp/cad-regression-batch9.j0OKCjq0/cut-source",
+  "build": "/var/tmp/cad-regression-batch9.j0OKCjq0/cut-build",
+  "parent": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "git_tree": "654d2a685b2e96d5756b0c4738b3f5e93d329c08",
+  "derived_commit": "381c5ec350fde3b9808475d8070bf00eda0260c9",
+  "reference_patch_sha256": "894ae595135ea73edbb57bb9ca35276b172765b1a446cdc8798e80d277323f32",
+  "observed_tree": "b6e8390a470b05b460277341f325df52d723ede889d72494a0c53a99921a8904"
+}

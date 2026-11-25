@@ -1,0 +1,4847 @@
+{
+  "cyl": {
+    "source": {
+      "source_id": "occt-single20-ea80ac2f61af",
+      "commit": "ea80ac2f61af25a4bcf4516a89e0b302e10e7e82",
+      "materialized_tree_sha256": "68c2998046770a79ef06930800143bda51405c3ed162bcc91c973c1c40101973",
+      "toolchain": "occt-v4-clang10-o0-tcl86",
+      "toolchain_config": {
+        "path": "toolchains/occt-v4-clang10-o0-tcl86.json",
+        "sha256": "6c1675f2f34f07dd5945a9782f3835878e74bfc97838eb6ccc22a6f9a0d855e3"
+      },
+      "build_entry": {
+        "path": "tools/occt-v4-clang10-o0/build.sh",
+        "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/identity.json",
+      "sha256": "c625879a74ef36dd92ef450766d7047c06b71e3b5cde41e7adeaa4f45571e616"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/runtime.json",
+      "sha256": "94c09eea31ebd6f2168d33aa3f9abd429f910b822fe622be3e8d5637a878f3d7"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/core-1.json",
+          "sha256": "9e7819b84bf8f900f46ef5f66a14a46df9dffc3f2006d593e2d90445d4adfce2"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/core-2.json",
+          "sha256": "cb9ca2f8706a26fb23c3b2efe8762499c38b00d5bd4ef96a082899283105ea94"
+        }
+      ]
+    },
+    "status": "CALIBRATED",
+    "registered_status": "CALIBRATED",
+    "registered_baseline": {
+      "passed": true,
+      "assertions": {
+        "input_validity": "PASS",
+        "operation_completed": "PASS",
+        "branches": "PASS",
+        "support": "PASS",
+        "section_closure": "PASS"
+      },
+      "receipt": {
+        "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/registered.log",
+        "sha256": "467a126dab39ac96cfd52655f750f88cde9b78105c5fbc8b2c8b5af6c878873c"
+      }
+    },
+    "independent_status": "CALIBRATED",
+    "independent_scope": "Two full parallel finite cylinders with projected disk gap 970 and overlapping axial domains. Face curves and Section edges must separately be empty.",
+    "controls": {
+      "healthy-1": {
+        "geometry": {
+          "native-curves": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-1-native-curves.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          },
+          "curves": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-1-curves.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          },
+          "native-section": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-1-native-section.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          },
+          "section": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-1-section.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          }
+        },
+        "analytic_axis_distance": 1000.0,
+        "analytic_gap": 970.0,
+        "measured_distance": 970.0,
+        "supports": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            20.0,
+            0.0,
+            6.28318530717959,
+            0.0,
+            50.0
+          ],
+          [
+            1000.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            10.0,
+            0.0,
+            6.28318530717959,
+            0.0,
+            50.0
+          ]
+        ],
+        "inputs": {
+          "first": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-1-first.brep",
+            "sha256": "ba1e189c43ebb0bed1caa8ca6a42999f3fc689c42cc0c053eea74a8a556c0a74"
+          },
+          "second": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-1-second.brep",
+            "sha256": "e3ada0b4ebc704a668fc45251069f2a56c7f55a367da15534a9504910c25e510"
+          },
+          "side1": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-1-side1.brep",
+            "sha256": "68b66eaf7257ade72442a0bc1e63e632c340b21efd8b1eddecf35c84e333295d"
+          },
+          "side2": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-1-side2.brep",
+            "sha256": "367b4c5e35853290e5a6ada8cdb66e0ff72cf62eef979e3ce9c8d6f09a65f02e"
+          }
+        },
+        "injection_verified": null,
+        "mutated_layer": null,
+        "constant_line_residuals": null,
+        "registered": {
+          "passed": true,
+          "assertions": {
+            "input_validity": "PASS",
+            "operation_completed": "PASS",
+            "branches": "PASS",
+            "support": "PASS",
+            "section_closure": "PASS"
+          },
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-1.log",
+            "sha256": "467a126dab39ac96cfd52655f750f88cde9b78105c5fbc8b2c8b5af6c878873c"
+          }
+        },
+        "measured": {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-1-read.log",
+          "sha256": "b607738b2a98ddc20039d463ab37d68b5bee77f59b53a1178e4b2cb20e7ee294"
+        }
+      },
+      "healthy-2": {
+        "geometry": {
+          "native-curves": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-2-native-curves.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          },
+          "curves": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-2-curves.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          },
+          "native-section": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-2-native-section.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          },
+          "section": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-2-section.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          }
+        },
+        "analytic_axis_distance": 1000.0,
+        "analytic_gap": 970.0,
+        "measured_distance": 970.0,
+        "supports": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            20.0,
+            0.0,
+            6.28318530717959,
+            0.0,
+            50.0
+          ],
+          [
+            1000.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            10.0,
+            0.0,
+            6.28318530717959,
+            0.0,
+            50.0
+          ]
+        ],
+        "inputs": {
+          "first": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-2-first.brep",
+            "sha256": "ba1e189c43ebb0bed1caa8ca6a42999f3fc689c42cc0c053eea74a8a556c0a74"
+          },
+          "second": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-2-second.brep",
+            "sha256": "e3ada0b4ebc704a668fc45251069f2a56c7f55a367da15534a9504910c25e510"
+          },
+          "side1": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-2-side1.brep",
+            "sha256": "68b66eaf7257ade72442a0bc1e63e632c340b21efd8b1eddecf35c84e333295d"
+          },
+          "side2": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-2-side2.brep",
+            "sha256": "367b4c5e35853290e5a6ada8cdb66e0ff72cf62eef979e3ce9c8d6f09a65f02e"
+          }
+        },
+        "injection_verified": null,
+        "mutated_layer": null,
+        "constant_line_residuals": null,
+        "registered": {
+          "passed": true,
+          "assertions": {
+            "input_validity": "PASS",
+            "operation_completed": "PASS",
+            "branches": "PASS",
+            "support": "PASS",
+            "section_closure": "PASS"
+          },
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-2.log",
+            "sha256": "467a126dab39ac96cfd52655f750f88cde9b78105c5fbc8b2c8b5af6c878873c"
+          }
+        },
+        "measured": {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/healthy-2-read.log",
+          "sha256": "b607738b2a98ddc20039d463ab37d68b5bee77f59b53a1178e4b2cb20e7ee294"
+        }
+      },
+      "false-curve": {
+        "geometry": {
+          "native-curves": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-curve-native-curves.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          },
+          "curves": {
+            "valid": true,
+            "edges": 1,
+            "vertices": 2,
+            "endpoints": [
+              [
+                20.0,
+                0.0,
+                10.0,
+                20.0,
+                0.0,
+                40.0,
+                0.0,
+                30.0
+              ]
+            ],
+            "independent": "FAIL",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-curve-curves.brep",
+              "sha256": "78b12d5f47527be36f36354a2bd1b724877005d412093e57f6a8d4d81223e5e6"
+            }
+          },
+          "native-section": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-curve-native-section.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          },
+          "section": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-curve-section.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          }
+        },
+        "analytic_axis_distance": 1000.0,
+        "analytic_gap": 970.0,
+        "measured_distance": 970.0,
+        "supports": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            20.0,
+            0.0,
+            6.28318530717959,
+            0.0,
+            50.0
+          ],
+          [
+            1000.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            10.0,
+            0.0,
+            6.28318530717959,
+            0.0,
+            50.0
+          ]
+        ],
+        "inputs": {
+          "first": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-curve-first.brep",
+            "sha256": "ba1e189c43ebb0bed1caa8ca6a42999f3fc689c42cc0c053eea74a8a556c0a74"
+          },
+          "second": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-curve-second.brep",
+            "sha256": "e3ada0b4ebc704a668fc45251069f2a56c7f55a367da15534a9504910c25e510"
+          },
+          "side1": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-curve-side1.brep",
+            "sha256": "68b66eaf7257ade72442a0bc1e63e632c340b21efd8b1eddecf35c84e333295d"
+          },
+          "side2": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-curve-side2.brep",
+            "sha256": "367b4c5e35853290e5a6ada8cdb66e0ff72cf62eef979e3ce9c8d6f09a65f02e"
+          }
+        },
+        "injection_verified": true,
+        "mutated_layer": "curves",
+        "constant_line_residuals": [
+          0.0,
+          970.0
+        ],
+        "registered": {
+          "passed": false,
+          "assertions": {
+            "input_validity": "PASS",
+            "operation_completed": "PASS",
+            "branches": "FAIL",
+            "support": "FAIL",
+            "section_closure": "PASS"
+          },
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-curve.log",
+            "sha256": "08d7507059930835922fb43388668c7bb5b84c268f96cc6494f0b5c639d63ce4"
+          }
+        },
+        "measured": {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-curve-read.log",
+          "sha256": "b326234c42a2e0951b426810517e04a6555538433579c8b5a39b959a2d1c1380"
+        },
+        "serialized_draw_curve": {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-curve-curve.draw",
+          "sha256": "1b6b17c4d3a45ac3e9c4ed291f372ad4190b7df6c16eea1e061ca2057d54b882"
+        }
+      },
+      "false-edge": {
+        "geometry": {
+          "native-curves": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-edge-native-curves.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          },
+          "curves": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-edge-curves.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          },
+          "native-section": {
+            "valid": true,
+            "edges": 0,
+            "vertices": 0,
+            "endpoints": [],
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-edge-native-section.brep",
+              "sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+            }
+          },
+          "section": {
+            "valid": true,
+            "edges": 1,
+            "vertices": 2,
+            "endpoints": [
+              [
+                20.0,
+                0.0,
+                10.0,
+                20.0,
+                0.0,
+                40.0,
+                0.0,
+                30.0
+              ]
+            ],
+            "independent": "FAIL",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-edge-section.brep",
+              "sha256": "78b12d5f47527be36f36354a2bd1b724877005d412093e57f6a8d4d81223e5e6"
+            }
+          }
+        },
+        "analytic_axis_distance": 1000.0,
+        "analytic_gap": 970.0,
+        "measured_distance": 970.0,
+        "supports": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            20.0,
+            0.0,
+            6.28318530717959,
+            0.0,
+            50.0
+          ],
+          [
+            1000.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            10.0,
+            0.0,
+            6.28318530717959,
+            0.0,
+            50.0
+          ]
+        ],
+        "inputs": {
+          "first": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-edge-first.brep",
+            "sha256": "ba1e189c43ebb0bed1caa8ca6a42999f3fc689c42cc0c053eea74a8a556c0a74"
+          },
+          "second": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-edge-second.brep",
+            "sha256": "e3ada0b4ebc704a668fc45251069f2a56c7f55a367da15534a9504910c25e510"
+          },
+          "side1": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-edge-side1.brep",
+            "sha256": "68b66eaf7257ade72442a0bc1e63e632c340b21efd8b1eddecf35c84e333295d"
+          },
+          "side2": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-edge-side2.brep",
+            "sha256": "367b4c5e35853290e5a6ada8cdb66e0ff72cf62eef979e3ce9c8d6f09a65f02e"
+          }
+        },
+        "injection_verified": true,
+        "mutated_layer": "section",
+        "constant_line_residuals": [
+          0.0,
+          970.0
+        ],
+        "registered": {
+          "passed": false,
+          "assertions": {
+            "input_validity": "PASS",
+            "operation_completed": "PASS",
+            "branches": "PASS",
+            "support": "PASS",
+            "section_closure": "FAIL"
+          },
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-edge.log",
+            "sha256": "acd8d7769fa8b26805dd6d234c14e1dc6116ced43176bb6fdf986f7bed555d9e"
+          }
+        },
+        "measured": {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/cyl/false-edge-read.log",
+          "sha256": "65ace37ecfd81c9bd8512578fa38bddad317b79cf241111407ea4ebf86f25dfe"
+        }
+      }
+    },
+    "history_source": {
+      "path": "benchmarks/occt/evaluation/provenance/single20/occt-26310/evidence.json",
+      "sha256": "1835e232a20bb0a6af1fa7e9310b955347355fa5af5e3f4cdd0442c780219756"
+    },
+    "historical_baseline": {
+      "26310-original": "geometry_fail",
+      "26310-neighborhood_rigid": "geometry_fail",
+      "26310-neighborhood_swap": "geometry_fail",
+      "26310-regression_separated": "geometry_pass"
+    }
+  },
+  "fillet": {
+    "source": {
+      "source_id": "occt801-1702-b-b8f597c67781",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "toolchain": "occt8-gcc13-cpp-20261112",
+      "toolchain_config": {
+        "path": "toolchains/occt8-gcc13-cpp-20261112.json",
+        "sha256": "859802cd60dc1127b7f5951f0688ac27d953d653b4c915fa6b4231620d8d39a0"
+      },
+      "build_entry": {
+        "path": "tools/occt8-gcc13-cpp/build.sh",
+        "sha256": "b166ea190712b4b3f2ba57d1d008fad24b9d434ea082016e4f099033f8c6177e"
+      },
+      "declared_public_targets": [
+        "TKFillet",
+        "TKPrim"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/identity.json",
+      "sha256": "60b04adfd9cb596c69755610506bf44ab03bebf48f981ab87e8b6dde89c5137c"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/runtime.json",
+      "sha256": "f4b8c97b2bc70a1558efccb5ba7693e1331a0bbfb4192a6ac031a67e8ffeaf7c"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/core-1.json",
+          "sha256": "22d49a7a554a4636e3d0445635dd55470c5d5983c5433023992ba60fcf26effa"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/core-2.json",
+          "sha256": "ed74cb9ea72ec97954d5cc87ddbda4cd0ebba9714eef6f214e7aef6c68383ab5"
+        }
+      ],
+      "native_attempt": {
+        "checks": {
+          "box-common": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "disjoint": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "cut-fuse": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "plane-sphere": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "hole-classification": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "brep-roundtrip": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          }
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/core-native.json",
+          "sha256": "0b4381cc848474a481503536e8e1b83da176c6086536c6b7ba827659ee6cdfd1"
+        },
+        "status": "BLOCKED"
+      },
+      "geometry_profile": "Unchanged probe and thresholds with the locked OCCT 8 TopExp argument type alias supplied at compilation.",
+      "compatibility_header": {
+        "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/alias.hxx",
+        "sha256": "110706bfa4815f78a0a105fa6a3e7cf70833586030d873ca9221211525fc6684"
+      }
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "registered_baseline": {
+      "passed": true,
+      "output": "edges=11,0 radius=1.3\ndone=1\nvalid=1 tol=1.50000038414e-07 volume=4719.22072747 rise=0\nfaults=0\nTEST_DONE\n",
+      "receipt": {
+        "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/registered.json",
+        "sha256": "2586fa98870e4b47752bef0df9873c15250da466824643095e662e5646432418"
+      }
+    },
+    "independent_status": "CALIBRATED",
+    "controls": {
+      "healthy-1": {
+        "registered": {
+          "passed": true,
+          "output": "edges=11,0 radius=1.3\ndone=1\nvalid=1 tol=1.50000038414e-07 volume=4719.22072747 rise=0\nfaults=0\nTEST_DONE\n",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/healthy-1-registered.json",
+            "sha256": "3381b6c0ae6a207caa66b6fc75060ca3795500e706a39ce18e013e54d8b353ed"
+          }
+        },
+        "geometry": {
+          "native": {
+            "volume": 4719.220727465446,
+            "faces": 18,
+            "valid_single_solid": true,
+            "measured_cylinders": [
+              [
+                3.0,
+                -1.3811227316933135,
+                -42.478181168839704,
+                -2.55,
+                -0.0,
+                1.0,
+                -0.0,
+                1.3,
+                0.0,
+                0.49638416512912614,
+                -2.1316282072803006e-14,
+                84.95636233767942
+              ],
+              [
+                5.0,
+                1.6653345369377348e-16,
+                49.9,
+                -1.6653345369377348e-16,
+                -0.0,
+                1.0,
+                -0.0,
+                1.5999999999999999,
+                -3.552713678800501e-15,
+                3.106686068549907,
+                -97.8,
+                -2.0
+              ],
+              [
+                15.0,
+                -1.6653345369377348e-16,
+                49.9,
+                1.6653345369377348e-16,
+                -0.0,
+                1.0,
+                -0.0,
+                1.5999999999999999,
+                -3.552713678800501e-15,
+                3.106686068549907,
+                -97.8,
+                -2.0
+              ]
+            ],
+            "blend_domain": [
+              {
+                "axis_xz": [
+                  -1.3811227316933135,
+                  -2.55
+                ],
+                "world_y_bounds": [
+                  -42.478181168839726,
+                  42.47818116883972
+                ],
+                "radius": 1.3,
+                "angle_span": 0.49638416512912614
+              }
+            ],
+            "remote_witnesses_preserved": 8,
+            "surface": {
+              "lower": {
+                "min_distance": 0.0,
+                "max_distance": 7.105427357601002e-15,
+                "pass_count": 15,
+                "n": 15
+              },
+              "upper": {
+                "min_distance": 0.009997048563770372,
+                "max_distance": 0.0398344389012566,
+                "pass_count": 0,
+                "n": 15
+              }
+            },
+            "material": {
+              "lower-fill-0": [
+                "-1.0593188183847744",
+                "-42",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-0": [
+                "-1.0642318552291796",
+                "-42",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-1": [
+                "-1.0593188183847744",
+                "-25",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-1": [
+                "-1.0642318552291796",
+                "-25",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-2": [
+                "-1.0593188183847744",
+                "0",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-2": [
+                "-1.0642318552291796",
+                "0",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-3": [
+                "-1.0593188183847744",
+                "25",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-3": [
+                "-1.0642318552291796",
+                "25",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-4": [
+                "-1.0593188183847744",
+                "42",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-4": [
+                "-1.0642318552291796",
+                "42",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-5": [
+                "-1.0593188183847744",
+                "-45",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-5": [
+                "-1.0642318552291796",
+                "-45",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-6": [
+                "-1.0593188183847744",
+                "45",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-6": [
+                "-1.0642318552291796",
+                "45",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-0": [
+                "-1.0593188183847744",
+                "-42",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-0": [
+                "-1.0642318552291796",
+                "-42",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-1": [
+                "-1.0593188183847744",
+                "-25",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-1": [
+                "-1.0642318552291796",
+                "-25",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-2": [
+                "-1.0593188183847744",
+                "0",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-2": [
+                "-1.0642318552291796",
+                "0",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-3": [
+                "-1.0593188183847744",
+                "25",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-3": [
+                "-1.0642318552291796",
+                "25",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-4": [
+                "-1.0593188183847744",
+                "42",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-4": [
+                "-1.0642318552291796",
+                "42",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-5": [
+                "-1.0593188183847744",
+                "-45",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-5": [
+                "-1.0642318552291796",
+                "-45",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-6": [
+                "-1.0593188183847744",
+                "45",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-6": [
+                "-1.0642318552291796",
+                "45",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "fixed-0": [
+                "-10",
+                "0",
+                "0",
+                "IN"
+              ],
+              "fixed-1": [
+                "-10",
+                "0",
+                "2",
+                "OUT"
+              ],
+              "fixed-2": [
+                "-10",
+                "0",
+                "-2",
+                "OUT"
+              ],
+              "fixed-3": [
+                "0",
+                "0",
+                "0",
+                "IN"
+              ],
+              "fixed-4": [
+                "4",
+                "0",
+                "0",
+                "OUT"
+              ],
+              "fixed-5": [
+                "0",
+                "45",
+                "0",
+                "IN"
+              ],
+              "fixed-6": [
+                "0",
+                "-45",
+                "0",
+                "IN"
+              ],
+              "fixed-7": [
+                "0",
+                "52",
+                "0",
+                "OUT"
+              ]
+            },
+            "surface_measurements": {
+              "lower-skin-0-0": [
+                "-1.2202116218039807",
+                "-42",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-0-1": [
+                "-1.0617753368069769",
+                "-42",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-0-2": [
+                "-0.9082506386028848",
+                "-42",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-1-0": [
+                "-1.2202116218039807",
+                "-25",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-1-1": [
+                "-1.0617753368069769",
+                "-25",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-1-2": [
+                "-0.9082506386028848",
+                "-25",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-2-0": [
+                "-1.2202116218039807",
+                "0",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-2-1": [
+                "-1.0617753368069769",
+                "0",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-2-2": [
+                "-0.9082506386028848",
+                "0",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-3-0": [
+                "-1.2202116218039807",
+                "25",
+                "-1.2599970485637704",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-3-1": [
+                "-1.0617753368069769",
+                "25",
+                "-1.2898344389012566",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-3-2": [
+                "-0.9082506386028848",
+                "25",
+                "-1.3390532697198125",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-0": [
+                "-1.2202116218039807",
+                "42",
+                "-1.2599970485637704",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-1": [
+                "-1.0617753368069769",
+                "42",
+                "-1.2898344389012566",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-2": [
+                "-0.9082506386028848",
+                "42",
+                "-1.3390532697198125",
+                "7.1054273576010019e-15"
+              ],
+              "upper-skin-0-0": [
+                "-1.2202116218039807",
+                "-42",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-0-1": [
+                "-1.0617753368069769",
+                "-42",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-0-2": [
+                "-0.9082506386028848",
+                "-42",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-1-0": [
+                "-1.2202116218039807",
+                "-25",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-1-1": [
+                "-1.0617753368069769",
+                "-25",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-1-2": [
+                "-0.9082506386028848",
+                "-25",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-2-0": [
+                "-1.2202116218039807",
+                "0",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-2-1": [
+                "-1.0617753368069769",
+                "0",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-2-2": [
+                "-0.9082506386028848",
+                "0",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-3-0": [
+                "-1.2202116218039807",
+                "25",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-3-1": [
+                "-1.0617753368069769",
+                "25",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-3-2": [
+                "-0.9082506386028848",
+                "25",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-4-0": [
+                "-1.2202116218039807",
+                "42",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-4-1": [
+                "-1.0617753368069769",
+                "42",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-4-2": [
+                "-0.9082506386028848",
+                "42",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ]
+            },
+            "interpretation": {
+              "lower": {
+                "passed": true,
+                "material_mismatch": []
+              },
+              "upper": {
+                "passed": false,
+                "material_mismatch": [
+                  "lower-fill-0",
+                  "lower-fill-1",
+                  "lower-fill-2",
+                  "lower-fill-3",
+                  "lower-fill-4",
+                  "upper-fill-0",
+                  "upper-fill-1",
+                  "upper-fill-2",
+                  "upper-fill-3",
+                  "upper-fill-4"
+                ]
+              },
+              "input": {
+                "passed": false,
+                "material_mismatch": [
+                  "lower-fill-0",
+                  "lower-fill-1",
+                  "lower-fill-2",
+                  "lower-fill-3",
+                  "lower-fill-4"
+                ]
+              }
+            },
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/healthy-1-read-native.log",
+              "sha256": "e239e3dfa665fef9bf797801ca07be023f1080be33782c52104d2ee6898e27b3"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/healthy-1-native.brep",
+              "sha256": "1fab541cb765a6ea8b95abaa27bb60218946ea51524b87ad679c7a479526d80d"
+            }
+          },
+          "result": {
+            "volume": 4719.220727465446,
+            "faces": 18,
+            "valid_single_solid": true,
+            "measured_cylinders": [
+              [
+                3.0,
+                -1.3811227316933135,
+                -42.478181168839704,
+                -2.55,
+                -0.0,
+                1.0,
+                -0.0,
+                1.3,
+                0.0,
+                0.49638416512912614,
+                -2.1316282072803006e-14,
+                84.95636233767942
+              ],
+              [
+                5.0,
+                1.6653345369377348e-16,
+                49.9,
+                -1.6653345369377348e-16,
+                -0.0,
+                1.0,
+                -0.0,
+                1.5999999999999999,
+                -3.552713678800501e-15,
+                3.106686068549907,
+                -97.8,
+                -2.0
+              ],
+              [
+                15.0,
+                -1.6653345369377348e-16,
+                49.9,
+                1.6653345369377348e-16,
+                -0.0,
+                1.0,
+                -0.0,
+                1.5999999999999999,
+                -3.552713678800501e-15,
+                3.106686068549907,
+                -97.8,
+                -2.0
+              ]
+            ],
+            "blend_domain": [
+              {
+                "axis_xz": [
+                  -1.3811227316933135,
+                  -2.55
+                ],
+                "world_y_bounds": [
+                  -42.478181168839726,
+                  42.47818116883972
+                ],
+                "radius": 1.3,
+                "angle_span": 0.49638416512912614
+              }
+            ],
+            "remote_witnesses_preserved": 8,
+            "surface": {
+              "lower": {
+                "min_distance": 0.0,
+                "max_distance": 7.105427357601002e-15,
+                "pass_count": 15,
+                "n": 15
+              },
+              "upper": {
+                "min_distance": 0.009997048563770372,
+                "max_distance": 0.0398344389012566,
+                "pass_count": 0,
+                "n": 15
+              }
+            },
+            "material": {
+              "lower-fill-0": [
+                "-1.0593188183847744",
+                "-42",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-0": [
+                "-1.0642318552291796",
+                "-42",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-1": [
+                "-1.0593188183847744",
+                "-25",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-1": [
+                "-1.0642318552291796",
+                "-25",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-2": [
+                "-1.0593188183847744",
+                "0",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-2": [
+                "-1.0642318552291796",
+                "0",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-3": [
+                "-1.0593188183847744",
+                "25",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-3": [
+                "-1.0642318552291796",
+                "25",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-4": [
+                "-1.0593188183847744",
+                "42",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-4": [
+                "-1.0642318552291796",
+                "42",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-5": [
+                "-1.0593188183847744",
+                "-45",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-5": [
+                "-1.0642318552291796",
+                "-45",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-6": [
+                "-1.0593188183847744",
+                "45",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-6": [
+                "-1.0642318552291796",
+                "45",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-0": [
+                "-1.0593188183847744",
+                "-42",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-0": [
+                "-1.0642318552291796",
+                "-42",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-1": [
+                "-1.0593188183847744",
+                "-25",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-1": [
+                "-1.0642318552291796",
+                "-25",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-2": [
+                "-1.0593188183847744",
+                "0",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-2": [
+                "-1.0642318552291796",
+                "0",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-3": [
+                "-1.0593188183847744",
+                "25",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-3": [
+                "-1.0642318552291796",
+                "25",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-4": [
+                "-1.0593188183847744",
+                "42",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-4": [
+                "-1.0642318552291796",
+                "42",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-5": [
+                "-1.0593188183847744",
+                "-45",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-5": [
+                "-1.0642318552291796",
+                "-45",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-6": [
+                "-1.0593188183847744",
+                "45",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-6": [
+                "-1.0642318552291796",
+                "45",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "fixed-0": [
+                "-10",
+                "0",
+                "0",
+                "IN"
+              ],
+              "fixed-1": [
+                "-10",
+                "0",
+                "2",
+                "OUT"
+              ],
+              "fixed-2": [
+                "-10",
+                "0",
+                "-2",
+                "OUT"
+              ],
+              "fixed-3": [
+                "0",
+                "0",
+                "0",
+                "IN"
+              ],
+              "fixed-4": [
+                "4",
+                "0",
+                "0",
+                "OUT"
+              ],
+              "fixed-5": [
+                "0",
+                "45",
+                "0",
+                "IN"
+              ],
+              "fixed-6": [
+                "0",
+                "-45",
+                "0",
+                "IN"
+              ],
+              "fixed-7": [
+                "0",
+                "52",
+                "0",
+                "OUT"
+              ]
+            },
+            "surface_measurements": {
+              "lower-skin-0-0": [
+                "-1.2202116218039807",
+                "-42",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-0-1": [
+                "-1.0617753368069769",
+                "-42",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-0-2": [
+                "-0.9082506386028848",
+                "-42",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-1-0": [
+                "-1.2202116218039807",
+                "-25",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-1-1": [
+                "-1.0617753368069769",
+                "-25",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-1-2": [
+                "-0.9082506386028848",
+                "-25",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-2-0": [
+                "-1.2202116218039807",
+                "0",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-2-1": [
+                "-1.0617753368069769",
+                "0",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-2-2": [
+                "-0.9082506386028848",
+                "0",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-3-0": [
+                "-1.2202116218039807",
+                "25",
+                "-1.2599970485637704",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-3-1": [
+                "-1.0617753368069769",
+                "25",
+                "-1.2898344389012566",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-3-2": [
+                "-0.9082506386028848",
+                "25",
+                "-1.3390532697198125",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-0": [
+                "-1.2202116218039807",
+                "42",
+                "-1.2599970485637704",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-1": [
+                "-1.0617753368069769",
+                "42",
+                "-1.2898344389012566",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-2": [
+                "-0.9082506386028848",
+                "42",
+                "-1.3390532697198125",
+                "7.1054273576010019e-15"
+              ],
+              "upper-skin-0-0": [
+                "-1.2202116218039807",
+                "-42",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-0-1": [
+                "-1.0617753368069769",
+                "-42",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-0-2": [
+                "-0.9082506386028848",
+                "-42",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-1-0": [
+                "-1.2202116218039807",
+                "-25",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-1-1": [
+                "-1.0617753368069769",
+                "-25",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-1-2": [
+                "-0.9082506386028848",
+                "-25",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-2-0": [
+                "-1.2202116218039807",
+                "0",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-2-1": [
+                "-1.0617753368069769",
+                "0",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-2-2": [
+                "-0.9082506386028848",
+                "0",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-3-0": [
+                "-1.2202116218039807",
+                "25",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-3-1": [
+                "-1.0617753368069769",
+                "25",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-3-2": [
+                "-0.9082506386028848",
+                "25",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-4-0": [
+                "-1.2202116218039807",
+                "42",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-4-1": [
+                "-1.0617753368069769",
+                "42",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-4-2": [
+                "-0.9082506386028848",
+                "42",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ]
+            },
+            "interpretation": {
+              "lower": {
+                "passed": true,
+                "material_mismatch": []
+              },
+              "upper": {
+                "passed": false,
+                "material_mismatch": [
+                  "lower-fill-0",
+                  "lower-fill-1",
+                  "lower-fill-2",
+                  "lower-fill-3",
+                  "lower-fill-4",
+                  "upper-fill-0",
+                  "upper-fill-1",
+                  "upper-fill-2",
+                  "upper-fill-3",
+                  "upper-fill-4"
+                ]
+              },
+              "input": {
+                "passed": false,
+                "material_mismatch": [
+                  "lower-fill-0",
+                  "lower-fill-1",
+                  "lower-fill-2",
+                  "lower-fill-3",
+                  "lower-fill-4"
+                ]
+              }
+            },
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/healthy-1-read-result.log",
+              "sha256": "e239e3dfa665fef9bf797801ca07be023f1080be33782c52104d2ee6898e27b3"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/healthy-1-result.brep",
+              "sha256": "1fab541cb765a6ea8b95abaa27bb60218946ea51524b87ad679c7a479526d80d"
+            }
+          }
+        },
+        "independent": "PASS",
+        "injection_verified": null
+      },
+      "healthy-2": {
+        "registered": {
+          "passed": true,
+          "output": "edges=11,0 radius=1.3\ndone=1\nvalid=1 tol=1.50000038414e-07 volume=4719.22072747 rise=0\nfaults=0\nTEST_DONE\n",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/healthy-2-registered.json",
+            "sha256": "86bbf38c6379adb1b6b0381515cb55aa107d9f457d5d0ae93213b5dfc60c0154"
+          }
+        },
+        "geometry": {
+          "native": {
+            "volume": 4719.220727465446,
+            "faces": 18,
+            "valid_single_solid": true,
+            "measured_cylinders": [
+              [
+                3.0,
+                -1.3811227316933135,
+                -42.478181168839704,
+                -2.55,
+                -0.0,
+                1.0,
+                -0.0,
+                1.3,
+                0.0,
+                0.49638416512912614,
+                -2.1316282072803006e-14,
+                84.95636233767942
+              ],
+              [
+                5.0,
+                1.6653345369377348e-16,
+                49.9,
+                -1.6653345369377348e-16,
+                -0.0,
+                1.0,
+                -0.0,
+                1.5999999999999999,
+                -3.552713678800501e-15,
+                3.106686068549907,
+                -97.8,
+                -2.0
+              ],
+              [
+                15.0,
+                -1.6653345369377348e-16,
+                49.9,
+                1.6653345369377348e-16,
+                -0.0,
+                1.0,
+                -0.0,
+                1.5999999999999999,
+                -3.552713678800501e-15,
+                3.106686068549907,
+                -97.8,
+                -2.0
+              ]
+            ],
+            "blend_domain": [
+              {
+                "axis_xz": [
+                  -1.3811227316933135,
+                  -2.55
+                ],
+                "world_y_bounds": [
+                  -42.478181168839726,
+                  42.47818116883972
+                ],
+                "radius": 1.3,
+                "angle_span": 0.49638416512912614
+              }
+            ],
+            "remote_witnesses_preserved": 8,
+            "surface": {
+              "lower": {
+                "min_distance": 0.0,
+                "max_distance": 7.105427357601002e-15,
+                "pass_count": 15,
+                "n": 15
+              },
+              "upper": {
+                "min_distance": 0.009997048563770372,
+                "max_distance": 0.0398344389012566,
+                "pass_count": 0,
+                "n": 15
+              }
+            },
+            "material": {
+              "lower-fill-0": [
+                "-1.0593188183847744",
+                "-42",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-0": [
+                "-1.0642318552291796",
+                "-42",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-1": [
+                "-1.0593188183847744",
+                "-25",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-1": [
+                "-1.0642318552291796",
+                "-25",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-2": [
+                "-1.0593188183847744",
+                "0",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-2": [
+                "-1.0642318552291796",
+                "0",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-3": [
+                "-1.0593188183847744",
+                "25",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-3": [
+                "-1.0642318552291796",
+                "25",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-4": [
+                "-1.0593188183847744",
+                "42",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-4": [
+                "-1.0642318552291796",
+                "42",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-5": [
+                "-1.0593188183847744",
+                "-45",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-5": [
+                "-1.0642318552291796",
+                "-45",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-6": [
+                "-1.0593188183847744",
+                "45",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-6": [
+                "-1.0642318552291796",
+                "45",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-0": [
+                "-1.0593188183847744",
+                "-42",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-0": [
+                "-1.0642318552291796",
+                "-42",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-1": [
+                "-1.0593188183847744",
+                "-25",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-1": [
+                "-1.0642318552291796",
+                "-25",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-2": [
+                "-1.0593188183847744",
+                "0",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-2": [
+                "-1.0642318552291796",
+                "0",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-3": [
+                "-1.0593188183847744",
+                "25",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-3": [
+                "-1.0642318552291796",
+                "25",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-4": [
+                "-1.0593188183847744",
+                "42",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-4": [
+                "-1.0642318552291796",
+                "42",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-5": [
+                "-1.0593188183847744",
+                "-45",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-5": [
+                "-1.0642318552291796",
+                "-45",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-6": [
+                "-1.0593188183847744",
+                "45",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-6": [
+                "-1.0642318552291796",
+                "45",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "fixed-0": [
+                "-10",
+                "0",
+                "0",
+                "IN"
+              ],
+              "fixed-1": [
+                "-10",
+                "0",
+                "2",
+                "OUT"
+              ],
+              "fixed-2": [
+                "-10",
+                "0",
+                "-2",
+                "OUT"
+              ],
+              "fixed-3": [
+                "0",
+                "0",
+                "0",
+                "IN"
+              ],
+              "fixed-4": [
+                "4",
+                "0",
+                "0",
+                "OUT"
+              ],
+              "fixed-5": [
+                "0",
+                "45",
+                "0",
+                "IN"
+              ],
+              "fixed-6": [
+                "0",
+                "-45",
+                "0",
+                "IN"
+              ],
+              "fixed-7": [
+                "0",
+                "52",
+                "0",
+                "OUT"
+              ]
+            },
+            "surface_measurements": {
+              "lower-skin-0-0": [
+                "-1.2202116218039807",
+                "-42",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-0-1": [
+                "-1.0617753368069769",
+                "-42",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-0-2": [
+                "-0.9082506386028848",
+                "-42",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-1-0": [
+                "-1.2202116218039807",
+                "-25",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-1-1": [
+                "-1.0617753368069769",
+                "-25",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-1-2": [
+                "-0.9082506386028848",
+                "-25",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-2-0": [
+                "-1.2202116218039807",
+                "0",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-2-1": [
+                "-1.0617753368069769",
+                "0",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-2-2": [
+                "-0.9082506386028848",
+                "0",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-3-0": [
+                "-1.2202116218039807",
+                "25",
+                "-1.2599970485637704",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-3-1": [
+                "-1.0617753368069769",
+                "25",
+                "-1.2898344389012566",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-3-2": [
+                "-0.9082506386028848",
+                "25",
+                "-1.3390532697198125",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-0": [
+                "-1.2202116218039807",
+                "42",
+                "-1.2599970485637704",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-1": [
+                "-1.0617753368069769",
+                "42",
+                "-1.2898344389012566",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-2": [
+                "-0.9082506386028848",
+                "42",
+                "-1.3390532697198125",
+                "7.1054273576010019e-15"
+              ],
+              "upper-skin-0-0": [
+                "-1.2202116218039807",
+                "-42",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-0-1": [
+                "-1.0617753368069769",
+                "-42",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-0-2": [
+                "-0.9082506386028848",
+                "-42",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-1-0": [
+                "-1.2202116218039807",
+                "-25",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-1-1": [
+                "-1.0617753368069769",
+                "-25",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-1-2": [
+                "-0.9082506386028848",
+                "-25",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-2-0": [
+                "-1.2202116218039807",
+                "0",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-2-1": [
+                "-1.0617753368069769",
+                "0",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-2-2": [
+                "-0.9082506386028848",
+                "0",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-3-0": [
+                "-1.2202116218039807",
+                "25",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-3-1": [
+                "-1.0617753368069769",
+                "25",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-3-2": [
+                "-0.9082506386028848",
+                "25",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-4-0": [
+                "-1.2202116218039807",
+                "42",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-4-1": [
+                "-1.0617753368069769",
+                "42",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-4-2": [
+                "-0.9082506386028848",
+                "42",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ]
+            },
+            "interpretation": {
+              "lower": {
+                "passed": true,
+                "material_mismatch": []
+              },
+              "upper": {
+                "passed": false,
+                "material_mismatch": [
+                  "lower-fill-0",
+                  "lower-fill-1",
+                  "lower-fill-2",
+                  "lower-fill-3",
+                  "lower-fill-4",
+                  "upper-fill-0",
+                  "upper-fill-1",
+                  "upper-fill-2",
+                  "upper-fill-3",
+                  "upper-fill-4"
+                ]
+              },
+              "input": {
+                "passed": false,
+                "material_mismatch": [
+                  "lower-fill-0",
+                  "lower-fill-1",
+                  "lower-fill-2",
+                  "lower-fill-3",
+                  "lower-fill-4"
+                ]
+              }
+            },
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/healthy-2-read-native.log",
+              "sha256": "e239e3dfa665fef9bf797801ca07be023f1080be33782c52104d2ee6898e27b3"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/healthy-2-native.brep",
+              "sha256": "1fab541cb765a6ea8b95abaa27bb60218946ea51524b87ad679c7a479526d80d"
+            }
+          },
+          "result": {
+            "volume": 4719.220727465446,
+            "faces": 18,
+            "valid_single_solid": true,
+            "measured_cylinders": [
+              [
+                3.0,
+                -1.3811227316933135,
+                -42.478181168839704,
+                -2.55,
+                -0.0,
+                1.0,
+                -0.0,
+                1.3,
+                0.0,
+                0.49638416512912614,
+                -2.1316282072803006e-14,
+                84.95636233767942
+              ],
+              [
+                5.0,
+                1.6653345369377348e-16,
+                49.9,
+                -1.6653345369377348e-16,
+                -0.0,
+                1.0,
+                -0.0,
+                1.5999999999999999,
+                -3.552713678800501e-15,
+                3.106686068549907,
+                -97.8,
+                -2.0
+              ],
+              [
+                15.0,
+                -1.6653345369377348e-16,
+                49.9,
+                1.6653345369377348e-16,
+                -0.0,
+                1.0,
+                -0.0,
+                1.5999999999999999,
+                -3.552713678800501e-15,
+                3.106686068549907,
+                -97.8,
+                -2.0
+              ]
+            ],
+            "blend_domain": [
+              {
+                "axis_xz": [
+                  -1.3811227316933135,
+                  -2.55
+                ],
+                "world_y_bounds": [
+                  -42.478181168839726,
+                  42.47818116883972
+                ],
+                "radius": 1.3,
+                "angle_span": 0.49638416512912614
+              }
+            ],
+            "remote_witnesses_preserved": 8,
+            "surface": {
+              "lower": {
+                "min_distance": 0.0,
+                "max_distance": 7.105427357601002e-15,
+                "pass_count": 15,
+                "n": 15
+              },
+              "upper": {
+                "min_distance": 0.009997048563770372,
+                "max_distance": 0.0398344389012566,
+                "pass_count": 0,
+                "n": 15
+              }
+            },
+            "material": {
+              "lower-fill-0": [
+                "-1.0593188183847744",
+                "-42",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-0": [
+                "-1.0642318552291796",
+                "-42",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-1": [
+                "-1.0593188183847744",
+                "-25",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-1": [
+                "-1.0642318552291796",
+                "-25",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-2": [
+                "-1.0593188183847744",
+                "0",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-2": [
+                "-1.0642318552291796",
+                "0",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-3": [
+                "-1.0593188183847744",
+                "25",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-3": [
+                "-1.0642318552291796",
+                "25",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-4": [
+                "-1.0593188183847744",
+                "42",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-4": [
+                "-1.0642318552291796",
+                "42",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-5": [
+                "-1.0593188183847744",
+                "-45",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-5": [
+                "-1.0642318552291796",
+                "-45",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-6": [
+                "-1.0593188183847744",
+                "45",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-6": [
+                "-1.0642318552291796",
+                "45",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-0": [
+                "-1.0593188183847744",
+                "-42",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-0": [
+                "-1.0642318552291796",
+                "-42",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-1": [
+                "-1.0593188183847744",
+                "-25",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-1": [
+                "-1.0642318552291796",
+                "-25",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-2": [
+                "-1.0593188183847744",
+                "0",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-2": [
+                "-1.0642318552291796",
+                "0",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-3": [
+                "-1.0593188183847744",
+                "25",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-3": [
+                "-1.0642318552291796",
+                "25",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-4": [
+                "-1.0593188183847744",
+                "42",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-4": [
+                "-1.0642318552291796",
+                "42",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-5": [
+                "-1.0593188183847744",
+                "-45",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-5": [
+                "-1.0642318552291796",
+                "-45",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-6": [
+                "-1.0593188183847744",
+                "45",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-6": [
+                "-1.0642318552291796",
+                "45",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "fixed-0": [
+                "-10",
+                "0",
+                "0",
+                "IN"
+              ],
+              "fixed-1": [
+                "-10",
+                "0",
+                "2",
+                "OUT"
+              ],
+              "fixed-2": [
+                "-10",
+                "0",
+                "-2",
+                "OUT"
+              ],
+              "fixed-3": [
+                "0",
+                "0",
+                "0",
+                "IN"
+              ],
+              "fixed-4": [
+                "4",
+                "0",
+                "0",
+                "OUT"
+              ],
+              "fixed-5": [
+                "0",
+                "45",
+                "0",
+                "IN"
+              ],
+              "fixed-6": [
+                "0",
+                "-45",
+                "0",
+                "IN"
+              ],
+              "fixed-7": [
+                "0",
+                "52",
+                "0",
+                "OUT"
+              ]
+            },
+            "surface_measurements": {
+              "lower-skin-0-0": [
+                "-1.2202116218039807",
+                "-42",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-0-1": [
+                "-1.0617753368069769",
+                "-42",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-0-2": [
+                "-0.9082506386028848",
+                "-42",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-1-0": [
+                "-1.2202116218039807",
+                "-25",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-1-1": [
+                "-1.0617753368069769",
+                "-25",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-1-2": [
+                "-0.9082506386028848",
+                "-25",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-2-0": [
+                "-1.2202116218039807",
+                "0",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-2-1": [
+                "-1.0617753368069769",
+                "0",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-2-2": [
+                "-0.9082506386028848",
+                "0",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-3-0": [
+                "-1.2202116218039807",
+                "25",
+                "-1.2599970485637704",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-3-1": [
+                "-1.0617753368069769",
+                "25",
+                "-1.2898344389012566",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-3-2": [
+                "-0.9082506386028848",
+                "25",
+                "-1.3390532697198125",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-0": [
+                "-1.2202116218039807",
+                "42",
+                "-1.2599970485637704",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-1": [
+                "-1.0617753368069769",
+                "42",
+                "-1.2898344389012566",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-2": [
+                "-0.9082506386028848",
+                "42",
+                "-1.3390532697198125",
+                "7.1054273576010019e-15"
+              ],
+              "upper-skin-0-0": [
+                "-1.2202116218039807",
+                "-42",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-0-1": [
+                "-1.0617753368069769",
+                "-42",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-0-2": [
+                "-0.9082506386028848",
+                "-42",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-1-0": [
+                "-1.2202116218039807",
+                "-25",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-1-1": [
+                "-1.0617753368069769",
+                "-25",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-1-2": [
+                "-0.9082506386028848",
+                "-25",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-2-0": [
+                "-1.2202116218039807",
+                "0",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-2-1": [
+                "-1.0617753368069769",
+                "0",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-2-2": [
+                "-0.9082506386028848",
+                "0",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-3-0": [
+                "-1.2202116218039807",
+                "25",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-3-1": [
+                "-1.0617753368069769",
+                "25",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-3-2": [
+                "-0.9082506386028848",
+                "25",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-4-0": [
+                "-1.2202116218039807",
+                "42",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-4-1": [
+                "-1.0617753368069769",
+                "42",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-4-2": [
+                "-0.9082506386028848",
+                "42",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ]
+            },
+            "interpretation": {
+              "lower": {
+                "passed": true,
+                "material_mismatch": []
+              },
+              "upper": {
+                "passed": false,
+                "material_mismatch": [
+                  "lower-fill-0",
+                  "lower-fill-1",
+                  "lower-fill-2",
+                  "lower-fill-3",
+                  "lower-fill-4",
+                  "upper-fill-0",
+                  "upper-fill-1",
+                  "upper-fill-2",
+                  "upper-fill-3",
+                  "upper-fill-4"
+                ]
+              },
+              "input": {
+                "passed": false,
+                "material_mismatch": [
+                  "lower-fill-0",
+                  "lower-fill-1",
+                  "lower-fill-2",
+                  "lower-fill-3",
+                  "lower-fill-4"
+                ]
+              }
+            },
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/healthy-2-read-result.log",
+              "sha256": "e239e3dfa665fef9bf797801ca07be023f1080be33782c52104d2ee6898e27b3"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/healthy-2-result.brep",
+              "sha256": "1fab541cb765a6ea8b95abaa27bb60218946ea51524b87ad679c7a479526d80d"
+            }
+          }
+        },
+        "independent": "PASS",
+        "injection_verified": null
+      },
+      "wrong-edge": {
+        "registered": {
+          "passed": true,
+          "output": "edges=11,0 radius=1.3\ndone=1\nvalid=1 tol=1.50000038414e-07 volume=4719.22072745 rise=0\nfaults=0\nTEST_DONE\n",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/wrong-edge-registered.json",
+            "sha256": "db0427f21a00342156aa4551c75078c8d241334658efb2f20b7a108e76ebb1b9"
+          }
+        },
+        "geometry": {
+          "native": {
+            "volume": 4719.220727465446,
+            "faces": 18,
+            "valid_single_solid": true,
+            "measured_cylinders": [
+              [
+                3.0,
+                -1.3811227316933135,
+                -42.478181168839704,
+                -2.55,
+                -0.0,
+                1.0,
+                -0.0,
+                1.3,
+                0.0,
+                0.49638416512912614,
+                -2.1316282072803006e-14,
+                84.95636233767942
+              ],
+              [
+                5.0,
+                1.6653345369377348e-16,
+                49.9,
+                -1.6653345369377348e-16,
+                -0.0,
+                1.0,
+                -0.0,
+                1.5999999999999999,
+                -3.552713678800501e-15,
+                3.106686068549907,
+                -97.8,
+                -2.0
+              ],
+              [
+                15.0,
+                -1.6653345369377348e-16,
+                49.9,
+                1.6653345369377348e-16,
+                -0.0,
+                1.0,
+                -0.0,
+                1.5999999999999999,
+                -3.552713678800501e-15,
+                3.106686068549907,
+                -97.8,
+                -2.0
+              ]
+            ],
+            "blend_domain": [
+              {
+                "axis_xz": [
+                  -1.3811227316933135,
+                  -2.55
+                ],
+                "world_y_bounds": [
+                  -42.478181168839726,
+                  42.47818116883972
+                ],
+                "radius": 1.3,
+                "angle_span": 0.49638416512912614
+              }
+            ],
+            "remote_witnesses_preserved": 8,
+            "surface": {
+              "lower": {
+                "min_distance": 0.0,
+                "max_distance": 7.105427357601002e-15,
+                "pass_count": 15,
+                "n": 15
+              },
+              "upper": {
+                "min_distance": 0.009997048563770372,
+                "max_distance": 0.0398344389012566,
+                "pass_count": 0,
+                "n": 15
+              }
+            },
+            "material": {
+              "lower-fill-0": [
+                "-1.0593188183847744",
+                "-42",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-0": [
+                "-1.0642318552291796",
+                "-42",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-1": [
+                "-1.0593188183847744",
+                "-25",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-1": [
+                "-1.0642318552291796",
+                "-25",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-2": [
+                "-1.0593188183847744",
+                "0",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-2": [
+                "-1.0642318552291796",
+                "0",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-3": [
+                "-1.0593188183847744",
+                "25",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-3": [
+                "-1.0642318552291796",
+                "25",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-4": [
+                "-1.0593188183847744",
+                "42",
+                "-1.2801408576620357",
+                "IN"
+              ],
+              "lower-void-4": [
+                "-1.0642318552291796",
+                "42",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-5": [
+                "-1.0593188183847744",
+                "-45",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-5": [
+                "-1.0642318552291796",
+                "-45",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-6": [
+                "-1.0593188183847744",
+                "45",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-6": [
+                "-1.0642318552291796",
+                "45",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-0": [
+                "-1.0593188183847744",
+                "-42",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-0": [
+                "-1.0642318552291796",
+                "-42",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-1": [
+                "-1.0593188183847744",
+                "-25",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-1": [
+                "-1.0642318552291796",
+                "-25",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-2": [
+                "-1.0593188183847744",
+                "0",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-2": [
+                "-1.0642318552291796",
+                "0",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-3": [
+                "-1.0593188183847744",
+                "25",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-3": [
+                "-1.0642318552291796",
+                "25",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-4": [
+                "-1.0593188183847744",
+                "42",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-4": [
+                "-1.0642318552291796",
+                "42",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-5": [
+                "-1.0593188183847744",
+                "-45",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-5": [
+                "-1.0642318552291796",
+                "-45",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-6": [
+                "-1.0593188183847744",
+                "45",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-6": [
+                "-1.0642318552291796",
+                "45",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "fixed-0": [
+                "-10",
+                "0",
+                "0",
+                "IN"
+              ],
+              "fixed-1": [
+                "-10",
+                "0",
+                "2",
+                "OUT"
+              ],
+              "fixed-2": [
+                "-10",
+                "0",
+                "-2",
+                "OUT"
+              ],
+              "fixed-3": [
+                "0",
+                "0",
+                "0",
+                "IN"
+              ],
+              "fixed-4": [
+                "4",
+                "0",
+                "0",
+                "OUT"
+              ],
+              "fixed-5": [
+                "0",
+                "45",
+                "0",
+                "IN"
+              ],
+              "fixed-6": [
+                "0",
+                "-45",
+                "0",
+                "IN"
+              ],
+              "fixed-7": [
+                "0",
+                "52",
+                "0",
+                "OUT"
+              ]
+            },
+            "surface_measurements": {
+              "lower-skin-0-0": [
+                "-1.2202116218039807",
+                "-42",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-0-1": [
+                "-1.0617753368069769",
+                "-42",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-0-2": [
+                "-0.9082506386028848",
+                "-42",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-1-0": [
+                "-1.2202116218039807",
+                "-25",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-1-1": [
+                "-1.0617753368069769",
+                "-25",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-1-2": [
+                "-0.9082506386028848",
+                "-25",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-2-0": [
+                "-1.2202116218039807",
+                "0",
+                "-1.2599970485637704",
+                "0"
+              ],
+              "lower-skin-2-1": [
+                "-1.0617753368069769",
+                "0",
+                "-1.2898344389012566",
+                "0"
+              ],
+              "lower-skin-2-2": [
+                "-0.9082506386028848",
+                "0",
+                "-1.3390532697198125",
+                "0"
+              ],
+              "lower-skin-3-0": [
+                "-1.2202116218039807",
+                "25",
+                "-1.2599970485637704",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-3-1": [
+                "-1.0617753368069769",
+                "25",
+                "-1.2898344389012566",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-3-2": [
+                "-0.9082506386028848",
+                "25",
+                "-1.3390532697198125",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-0": [
+                "-1.2202116218039807",
+                "42",
+                "-1.2599970485637704",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-1": [
+                "-1.0617753368069769",
+                "42",
+                "-1.2898344389012566",
+                "7.1054273576010019e-15"
+              ],
+              "lower-skin-4-2": [
+                "-0.9082506386028848",
+                "42",
+                "-1.3390532697198125",
+                "7.1054273576010019e-15"
+              ],
+              "upper-skin-0-0": [
+                "-1.2202116218039807",
+                "-42",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-0-1": [
+                "-1.0617753368069769",
+                "-42",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-0-2": [
+                "-0.9082506386028848",
+                "-42",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-1-0": [
+                "-1.2202116218039807",
+                "-25",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-1-1": [
+                "-1.0617753368069769",
+                "-25",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-1-2": [
+                "-0.9082506386028848",
+                "-25",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-2-0": [
+                "-1.2202116218039807",
+                "0",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-2-1": [
+                "-1.0617753368069769",
+                "0",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-2-2": [
+                "-0.9082506386028848",
+                "0",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-3-0": [
+                "-1.2202116218039807",
+                "25",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-3-1": [
+                "-1.0617753368069769",
+                "25",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-3-2": [
+                "-0.9082506386028848",
+                "25",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ],
+              "upper-skin-4-0": [
+                "-1.2202116218039807",
+                "42",
+                "1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "upper-skin-4-1": [
+                "-1.0617753368069769",
+                "42",
+                "1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "upper-skin-4-2": [
+                "-0.9082506386028848",
+                "42",
+                "1.3390532697198125",
+                "0.018018195716558542"
+              ]
+            },
+            "interpretation": {
+              "lower": {
+                "passed": true,
+                "material_mismatch": []
+              },
+              "upper": {
+                "passed": false,
+                "material_mismatch": [
+                  "lower-fill-0",
+                  "lower-fill-1",
+                  "lower-fill-2",
+                  "lower-fill-3",
+                  "lower-fill-4",
+                  "upper-fill-0",
+                  "upper-fill-1",
+                  "upper-fill-2",
+                  "upper-fill-3",
+                  "upper-fill-4"
+                ]
+              },
+              "input": {
+                "passed": false,
+                "material_mismatch": [
+                  "lower-fill-0",
+                  "lower-fill-1",
+                  "lower-fill-2",
+                  "lower-fill-3",
+                  "lower-fill-4"
+                ]
+              }
+            },
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/wrong-edge-read-native.log",
+              "sha256": "e239e3dfa665fef9bf797801ca07be023f1080be33782c52104d2ee6898e27b3"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/wrong-edge-native.brep",
+              "sha256": "1fab541cb765a6ea8b95abaa27bb60218946ea51524b87ad679c7a479526d80d"
+            }
+          },
+          "result": {
+            "volume": 4719.220727446883,
+            "faces": 18,
+            "valid_single_solid": true,
+            "measured_cylinders": [
+              [
+                3.0,
+                -1.381122731693314,
+                -42.478181168839704,
+                2.55,
+                -0.0,
+                1.0,
+                -0.0,
+                1.3,
+                0.0,
+                0.4963841651291263,
+                -2.131655795494367e-14,
+                84.95636233767942
+              ],
+              [
+                5.0,
+                -1.6653345369377348e-16,
+                49.9,
+                1.6653345369377348e-16,
+                -0.0,
+                1.0,
+                -0.0,
+                1.5999999999999999,
+                -3.552713678800501e-15,
+                3.106686068549907,
+                -97.8,
+                -2.0
+              ],
+              [
+                16.0,
+                1.6653345369377348e-16,
+                49.9,
+                -1.6653345369377348e-16,
+                -0.0,
+                1.0,
+                -0.0,
+                1.5999999999999999,
+                -3.552713678800501e-15,
+                3.106686068549907,
+                -97.8,
+                -2.0
+              ]
+            ],
+            "blend_domain": [
+              {
+                "axis_xz": [
+                  -1.381122731693314,
+                  2.55
+                ],
+                "world_y_bounds": [
+                  -42.478181168839726,
+                  42.47818116883972
+                ],
+                "radius": 1.3,
+                "angle_span": 0.4963841651291263
+              }
+            ],
+            "remote_witnesses_preserved": 8,
+            "surface": {
+              "lower": {
+                "min_distance": 0.009997048563770372,
+                "max_distance": 0.0398344389012566,
+                "pass_count": 0,
+                "n": 15
+              },
+              "upper": {
+                "min_distance": 0.0,
+                "max_distance": 7.105427357601002e-15,
+                "pass_count": 15,
+                "n": 15
+              }
+            },
+            "material": {
+              "lower-fill-0": [
+                "-1.0593188183847744",
+                "-42",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-0": [
+                "-1.0642318552291796",
+                "-42",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-1": [
+                "-1.0593188183847744",
+                "-25",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-1": [
+                "-1.0642318552291796",
+                "-25",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-2": [
+                "-1.0593188183847744",
+                "0",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-2": [
+                "-1.0642318552291796",
+                "0",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-3": [
+                "-1.0593188183847744",
+                "25",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-3": [
+                "-1.0642318552291796",
+                "25",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-4": [
+                "-1.0593188183847744",
+                "42",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-4": [
+                "-1.0642318552291796",
+                "42",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-5": [
+                "-1.0593188183847744",
+                "-45",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-5": [
+                "-1.0642318552291796",
+                "-45",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "lower-fill-6": [
+                "-1.0593188183847744",
+                "45",
+                "-1.2801408576620357",
+                "OUT"
+              ],
+              "lower-void-6": [
+                "-1.0642318552291796",
+                "45",
+                "-1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-0": [
+                "-1.0593188183847744",
+                "-42",
+                "1.2801408576620357",
+                "IN"
+              ],
+              "upper-void-0": [
+                "-1.0642318552291796",
+                "-42",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-1": [
+                "-1.0593188183847744",
+                "-25",
+                "1.2801408576620357",
+                "IN"
+              ],
+              "upper-void-1": [
+                "-1.0642318552291796",
+                "-25",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-2": [
+                "-1.0593188183847744",
+                "0",
+                "1.2801408576620357",
+                "IN"
+              ],
+              "upper-void-2": [
+                "-1.0642318552291796",
+                "0",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-3": [
+                "-1.0593188183847744",
+                "25",
+                "1.2801408576620357",
+                "IN"
+              ],
+              "upper-void-3": [
+                "-1.0642318552291796",
+                "25",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-4": [
+                "-1.0593188183847744",
+                "42",
+                "1.2801408576620357",
+                "IN"
+              ],
+              "upper-void-4": [
+                "-1.0642318552291796",
+                "42",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-5": [
+                "-1.0593188183847744",
+                "-45",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-5": [
+                "-1.0642318552291796",
+                "-45",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "upper-fill-6": [
+                "-1.0593188183847744",
+                "45",
+                "1.2801408576620357",
+                "OUT"
+              ],
+              "upper-void-6": [
+                "-1.0642318552291796",
+                "45",
+                "1.2995280201404777",
+                "OUT"
+              ],
+              "fixed-0": [
+                "-10",
+                "0",
+                "0",
+                "IN"
+              ],
+              "fixed-1": [
+                "-10",
+                "0",
+                "2",
+                "OUT"
+              ],
+              "fixed-2": [
+                "-10",
+                "0",
+                "-2",
+                "OUT"
+              ],
+              "fixed-3": [
+                "0",
+                "0",
+                "0",
+                "IN"
+              ],
+              "fixed-4": [
+                "4",
+                "0",
+                "0",
+                "OUT"
+              ],
+              "fixed-5": [
+                "0",
+                "45",
+                "0",
+                "IN"
+              ],
+              "fixed-6": [
+                "0",
+                "-45",
+                "0",
+                "IN"
+              ],
+              "fixed-7": [
+                "0",
+                "52",
+                "0",
+                "OUT"
+              ]
+            },
+            "surface_measurements": {
+              "lower-skin-0-0": [
+                "-1.2202116218039807",
+                "-42",
+                "-1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "lower-skin-0-1": [
+                "-1.0617753368069769",
+                "-42",
+                "-1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "lower-skin-0-2": [
+                "-0.9082506386028848",
+                "-42",
+                "-1.3390532697198125",
+                "0.018018195716558785"
+              ],
+              "lower-skin-1-0": [
+                "-1.2202116218039807",
+                "-25",
+                "-1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "lower-skin-1-1": [
+                "-1.0617753368069769",
+                "-25",
+                "-1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "lower-skin-1-2": [
+                "-0.9082506386028848",
+                "-25",
+                "-1.3390532697198125",
+                "0.018018195716558785"
+              ],
+              "lower-skin-2-0": [
+                "-1.2202116218039807",
+                "0",
+                "-1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "lower-skin-2-1": [
+                "-1.0617753368069769",
+                "0",
+                "-1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "lower-skin-2-2": [
+                "-0.9082506386028848",
+                "0",
+                "-1.3390532697198125",
+                "0.018018195716558785"
+              ],
+              "lower-skin-3-0": [
+                "-1.2202116218039807",
+                "25",
+                "-1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "lower-skin-3-1": [
+                "-1.0617753368069769",
+                "25",
+                "-1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "lower-skin-3-2": [
+                "-0.9082506386028848",
+                "25",
+                "-1.3390532697198125",
+                "0.018018195716558785"
+              ],
+              "lower-skin-4-0": [
+                "-1.2202116218039807",
+                "42",
+                "-1.2599970485637704",
+                "0.0099970485637703721"
+              ],
+              "lower-skin-4-1": [
+                "-1.0617753368069769",
+                "42",
+                "-1.2898344389012566",
+                "0.039834438901256597"
+              ],
+              "lower-skin-4-2": [
+                "-0.9082506386028848",
+                "42",
+                "-1.3390532697198125",
+                "0.018018195716558785"
+              ],
+              "upper-skin-0-0": [
+                "-1.2202116218039807",
+                "-42",
+                "1.2599970485637704",
+                "0"
+              ],
+              "upper-skin-0-1": [
+                "-1.0617753368069769",
+                "-42",
+                "1.2898344389012566",
+                "0"
+              ],
+              "upper-skin-0-2": [
+                "-0.9082506386028848",
+                "-42",
+                "1.3390532697198125",
+                "0"
+              ],
+              "upper-skin-1-0": [
+                "-1.2202116218039807",
+                "-25",
+                "1.2599970485637704",
+                "0"
+              ],
+              "upper-skin-1-1": [
+                "-1.0617753368069769",
+                "-25",
+                "1.2898344389012566",
+                "0"
+              ],
+              "upper-skin-1-2": [
+                "-0.9082506386028848",
+                "-25",
+                "1.3390532697198125",
+                "0"
+              ],
+              "upper-skin-2-0": [
+                "-1.2202116218039807",
+                "0",
+                "1.2599970485637704",
+                "0"
+              ],
+              "upper-skin-2-1": [
+                "-1.0617753368069769",
+                "0",
+                "1.2898344389012566",
+                "0"
+              ],
+              "upper-skin-2-2": [
+                "-0.9082506386028848",
+                "0",
+                "1.3390532697198125",
+                "0"
+              ],
+              "upper-skin-3-0": [
+                "-1.2202116218039807",
+                "25",
+                "1.2599970485637704",
+                "7.1054273576010019e-15"
+              ],
+              "upper-skin-3-1": [
+                "-1.0617753368069769",
+                "25",
+                "1.2898344389012566",
+                "7.1054273576010019e-15"
+              ],
+              "upper-skin-3-2": [
+                "-0.9082506386028848",
+                "25",
+                "1.3390532697198125",
+                "7.1054273576010019e-15"
+              ],
+              "upper-skin-4-0": [
+                "-1.2202116218039807",
+                "42",
+                "1.2599970485637704",
+                "7.1054273576010019e-15"
+              ],
+              "upper-skin-4-1": [
+                "-1.0617753368069769",
+                "42",
+                "1.2898344389012566",
+                "7.1054273576010019e-15"
+              ],
+              "upper-skin-4-2": [
+                "-0.9082506386028848",
+                "42",
+                "1.3390532697198125",
+                "7.1054273576010019e-15"
+              ]
+            },
+            "interpretation": {
+              "lower": {
+                "passed": false,
+                "material_mismatch": [
+                  "lower-fill-0",
+                  "lower-fill-1",
+                  "lower-fill-2",
+                  "lower-fill-3",
+                  "lower-fill-4",
+                  "upper-fill-0",
+                  "upper-fill-1",
+                  "upper-fill-2",
+                  "upper-fill-3",
+                  "upper-fill-4"
+                ]
+              },
+              "upper": {
+                "passed": true,
+                "material_mismatch": []
+              },
+              "input": {
+                "passed": false,
+                "material_mismatch": [
+                  "upper-fill-0",
+                  "upper-fill-1",
+                  "upper-fill-2",
+                  "upper-fill-3",
+                  "upper-fill-4"
+                ]
+              }
+            },
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/wrong-edge-read-result.log",
+              "sha256": "0faf12a48b21594a2faab6a2e1315f48e0dba171f33519839455bcf7682cab09"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/wrong-edge-result.brep",
+              "sha256": "f78c78c5280d4f7f62e1132899e0c8dc293e58dd065b42628b2ed2423576c17d"
+            }
+          }
+        },
+        "independent": "FAIL",
+        "injection_verified": true
+      }
+    },
+    "independent_scope": "Specified straight rod/plate edge, five interior transverse sections, both sides and the enumerated remote material witnesses. Finite observations only.",
+    "identity_scans": {
+      "scan-1": {
+        "identity": {
+          "target": {
+            "index": 11,
+            "endpoints": [
+              [
+                -0.998749217771909,
+                -42.4781811688397,
+                -1.25
+              ],
+              [
+                -0.998749217771909,
+                42.4781811688397,
+                -1.25
+              ]
+            ],
+            "plane": [
+              4.0,
+              0.0,
+              0.0,
+              0.0,
+              -42.478181168839726,
+              -1.25,
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "cylinder": [
+              3.0,
+              1.0,
+              1.0,
+              1.6653345369377348e-16,
+              49.9,
+              -1.6653345369377348e-16,
+              -0.0,
+              1.0,
+              -0.0,
+              1.5999999999999999
+            ]
+          },
+          "alternate": {
+            "index": 41,
+            "endpoints": [
+              [
+                -0.998749217771909,
+                -42.4781811688397,
+                1.25
+              ],
+              [
+                -0.998749217771909,
+                42.4781811688397,
+                1.25
+              ]
+            ],
+            "plane": [
+              14.0,
+              0.0,
+              0.0,
+              0.0,
+              42.478181168839726,
+              1.25,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "cylinder": [
+              15.0,
+              1.0,
+              1.0,
+              -1.6653345369377348e-16,
+              49.9,
+              1.6653345369377348e-16,
+              -0.0,
+              1.0,
+              -0.0,
+              1.5999999999999999
+            ]
+          }
+        },
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/scan-1.log",
+          "sha256": "5a1c627127866057eae316ee0d730828a9314553dc03bccc12f1684a7e90a3f1"
+        }
+      },
+      "scan-2": {
+        "identity": {
+          "target": {
+            "index": 11,
+            "endpoints": [
+              [
+                -0.998749217771909,
+                -42.4781811688397,
+                -1.25
+              ],
+              [
+                -0.998749217771909,
+                42.4781811688397,
+                -1.25
+              ]
+            ],
+            "plane": [
+              4.0,
+              0.0,
+              0.0,
+              0.0,
+              -42.478181168839726,
+              -1.25,
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "cylinder": [
+              3.0,
+              1.0,
+              1.0,
+              1.6653345369377348e-16,
+              49.9,
+              -1.6653345369377348e-16,
+              -0.0,
+              1.0,
+              -0.0,
+              1.5999999999999999
+            ]
+          },
+          "alternate": {
+            "index": 41,
+            "endpoints": [
+              [
+                -0.998749217771909,
+                -42.4781811688397,
+                1.25
+              ],
+              [
+                -0.998749217771909,
+                42.4781811688397,
+                1.25
+              ]
+            ],
+            "plane": [
+              14.0,
+              0.0,
+              0.0,
+              0.0,
+              42.478181168839726,
+              1.25,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "cylinder": [
+              15.0,
+              1.0,
+              1.0,
+              -1.6653345369377348e-16,
+              49.9,
+              1.6653345369377348e-16,
+              -0.0,
+              1.0,
+              -0.0,
+              1.5999999999999999
+            ]
+          }
+        },
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/scan-2.log",
+          "sha256": "5a1c627127866057eae316ee0d730828a9314553dc03bccc12f1684a7e90a3f1"
+        }
+      },
+      "scan-roundtrip": {
+        "identity": {
+          "target": {
+            "index": 11,
+            "endpoints": [
+              [
+                -0.998749217771909,
+                -42.4781811688397,
+                -1.25
+              ],
+              [
+                -0.998749217771909,
+                42.4781811688397,
+                -1.25
+              ]
+            ],
+            "plane": [
+              4.0,
+              0.0,
+              0.0,
+              0.0,
+              -42.478181168839726,
+              -1.25,
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "cylinder": [
+              3.0,
+              1.0,
+              1.0,
+              1.6653345369377348e-16,
+              49.9,
+              -1.6653345369377348e-16,
+              -0.0,
+              1.0,
+              -0.0,
+              1.5999999999999999
+            ]
+          },
+          "alternate": {
+            "index": 41,
+            "endpoints": [
+              [
+                -0.998749217771909,
+                -42.4781811688397,
+                1.25
+              ],
+              [
+                -0.998749217771909,
+                42.4781811688397,
+                1.25
+              ]
+            ],
+            "plane": [
+              14.0,
+              0.0,
+              0.0,
+              0.0,
+              42.478181168839726,
+              1.25,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "cylinder": [
+              15.0,
+              1.0,
+              1.0,
+              -1.6653345369377348e-16,
+              49.9,
+              1.6653345369377348e-16,
+              -0.0,
+              1.0,
+              -0.0,
+              1.5999999999999999
+            ]
+          }
+        },
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/scan-roundtrip.log",
+          "sha256": "5a1c627127866057eae316ee0d730828a9314553dc03bccc12f1684a7e90a3f1"
+        }
+      }
+    },
+    "registered_input": {
+      "path": "benchmarks/occt/issues/occt-github-1702/1/public/inputs/bar_plate_r1.6.brep",
+      "sha256": "975b482d5a38fb930a0720b42bd2c48a352e7b0dd53c773fca686ee8884d35a0"
+    },
+    "roundtrip_input": {
+      "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/roundtrip.brep",
+      "sha256": "e61291f6a110bfa6d5da0e11310ec10d84e815328833bd1acc2288430f9008bb"
+    },
+    "input_control": {
+      "volume": 4718.219412417403,
+      "faces": 17,
+      "valid_single_solid": true,
+      "measured_cylinders": [
+        [
+          3.0,
+          1.6653345369377348e-16,
+          49.9,
+          -1.6653345369377348e-16,
+          -0.0,
+          1.0,
+          -0.0,
+          1.5999999999999999,
+          -3.552713678800501e-15,
+          3.106686068549907,
+          -97.8,
+          -2.0
+        ],
+        [
+          15.0,
+          -1.6653345369377348e-16,
+          49.9,
+          1.6653345369377348e-16,
+          -0.0,
+          1.0,
+          -0.0,
+          1.5999999999999999,
+          -3.552713678800501e-15,
+          3.106686068549907,
+          -97.8,
+          -2.0
+        ]
+      ],
+      "blend_domain": [],
+      "remote_witnesses_preserved": 8,
+      "surface": {
+        "lower": {
+          "min_distance": 0.009997048563770372,
+          "max_distance": 0.0398344389012566,
+          "pass_count": 0,
+          "n": 15
+        },
+        "upper": {
+          "min_distance": 0.009997048563770372,
+          "max_distance": 0.0398344389012566,
+          "pass_count": 0,
+          "n": 15
+        }
+      },
+      "material": {
+        "lower-fill-0": [
+          "-1.0593188183847744",
+          "-42",
+          "-1.2801408576620357",
+          "OUT"
+        ],
+        "lower-void-0": [
+          "-1.0642318552291796",
+          "-42",
+          "-1.2995280201404777",
+          "OUT"
+        ],
+        "lower-fill-1": [
+          "-1.0593188183847744",
+          "-25",
+          "-1.2801408576620357",
+          "OUT"
+        ],
+        "lower-void-1": [
+          "-1.0642318552291796",
+          "-25",
+          "-1.2995280201404777",
+          "OUT"
+        ],
+        "lower-fill-2": [
+          "-1.0593188183847744",
+          "0",
+          "-1.2801408576620357",
+          "OUT"
+        ],
+        "lower-void-2": [
+          "-1.0642318552291796",
+          "0",
+          "-1.2995280201404777",
+          "OUT"
+        ],
+        "lower-fill-3": [
+          "-1.0593188183847744",
+          "25",
+          "-1.2801408576620357",
+          "OUT"
+        ],
+        "lower-void-3": [
+          "-1.0642318552291796",
+          "25",
+          "-1.2995280201404777",
+          "OUT"
+        ],
+        "lower-fill-4": [
+          "-1.0593188183847744",
+          "42",
+          "-1.2801408576620357",
+          "OUT"
+        ],
+        "lower-void-4": [
+          "-1.0642318552291796",
+          "42",
+          "-1.2995280201404777",
+          "OUT"
+        ],
+        "lower-fill-5": [
+          "-1.0593188183847744",
+          "-45",
+          "-1.2801408576620357",
+          "OUT"
+        ],
+        "lower-void-5": [
+          "-1.0642318552291796",
+          "-45",
+          "-1.2995280201404777",
+          "OUT"
+        ],
+        "lower-fill-6": [
+          "-1.0593188183847744",
+          "45",
+          "-1.2801408576620357",
+          "OUT"
+        ],
+        "lower-void-6": [
+          "-1.0642318552291796",
+          "45",
+          "-1.2995280201404777",
+          "OUT"
+        ],
+        "upper-fill-0": [
+          "-1.0593188183847744",
+          "-42",
+          "1.2801408576620357",
+          "OUT"
+        ],
+        "upper-void-0": [
+          "-1.0642318552291796",
+          "-42",
+          "1.2995280201404777",
+          "OUT"
+        ],
+        "upper-fill-1": [
+          "-1.0593188183847744",
+          "-25",
+          "1.2801408576620357",
+          "OUT"
+        ],
+        "upper-void-1": [
+          "-1.0642318552291796",
+          "-25",
+          "1.2995280201404777",
+          "OUT"
+        ],
+        "upper-fill-2": [
+          "-1.0593188183847744",
+          "0",
+          "1.2801408576620357",
+          "OUT"
+        ],
+        "upper-void-2": [
+          "-1.0642318552291796",
+          "0",
+          "1.2995280201404777",
+          "OUT"
+        ],
+        "upper-fill-3": [
+          "-1.0593188183847744",
+          "25",
+          "1.2801408576620357",
+          "OUT"
+        ],
+        "upper-void-3": [
+          "-1.0642318552291796",
+          "25",
+          "1.2995280201404777",
+          "OUT"
+        ],
+        "upper-fill-4": [
+          "-1.0593188183847744",
+          "42",
+          "1.2801408576620357",
+          "OUT"
+        ],
+        "upper-void-4": [
+          "-1.0642318552291796",
+          "42",
+          "1.2995280201404777",
+          "OUT"
+        ],
+        "upper-fill-5": [
+          "-1.0593188183847744",
+          "-45",
+          "1.2801408576620357",
+          "OUT"
+        ],
+        "upper-void-5": [
+          "-1.0642318552291796",
+          "-45",
+          "1.2995280201404777",
+          "OUT"
+        ],
+        "upper-fill-6": [
+          "-1.0593188183847744",
+          "45",
+          "1.2801408576620357",
+          "OUT"
+        ],
+        "upper-void-6": [
+          "-1.0642318552291796",
+          "45",
+          "1.2995280201404777",
+          "OUT"
+        ],
+        "fixed-0": [
+          "-10",
+          "0",
+          "0",
+          "IN"
+        ],
+        "fixed-1": [
+          "-10",
+          "0",
+          "2",
+          "OUT"
+        ],
+        "fixed-2": [
+          "-10",
+          "0",
+          "-2",
+          "OUT"
+        ],
+        "fixed-3": [
+          "0",
+          "0",
+          "0",
+          "IN"
+        ],
+        "fixed-4": [
+          "4",
+          "0",
+          "0",
+          "OUT"
+        ],
+        "fixed-5": [
+          "0",
+          "45",
+          "0",
+          "IN"
+        ],
+        "fixed-6": [
+          "0",
+          "-45",
+          "0",
+          "IN"
+        ],
+        "fixed-7": [
+          "0",
+          "52",
+          "0",
+          "OUT"
+        ]
+      },
+      "surface_measurements": {
+        "lower-skin-0-0": [
+          "-1.2202116218039807",
+          "-42",
+          "-1.2599970485637704",
+          "0.0099970485637703721"
+        ],
+        "lower-skin-0-1": [
+          "-1.0617753368069769",
+          "-42",
+          "-1.2898344389012566",
+          "0.039834438901256597"
+        ],
+        "lower-skin-0-2": [
+          "-0.9082506386028848",
+          "-42",
+          "-1.3390532697198125",
+          "0.018018195716558785"
+        ],
+        "lower-skin-1-0": [
+          "-1.2202116218039807",
+          "-25",
+          "-1.2599970485637704",
+          "0.0099970485637703721"
+        ],
+        "lower-skin-1-1": [
+          "-1.0617753368069769",
+          "-25",
+          "-1.2898344389012566",
+          "0.039834438901256597"
+        ],
+        "lower-skin-1-2": [
+          "-0.9082506386028848",
+          "-25",
+          "-1.3390532697198125",
+          "0.018018195716558785"
+        ],
+        "lower-skin-2-0": [
+          "-1.2202116218039807",
+          "0",
+          "-1.2599970485637704",
+          "0.0099970485637703721"
+        ],
+        "lower-skin-2-1": [
+          "-1.0617753368069769",
+          "0",
+          "-1.2898344389012566",
+          "0.039834438901256597"
+        ],
+        "lower-skin-2-2": [
+          "-0.9082506386028848",
+          "0",
+          "-1.3390532697198125",
+          "0.018018195716558785"
+        ],
+        "lower-skin-3-0": [
+          "-1.2202116218039807",
+          "25",
+          "-1.2599970485637704",
+          "0.0099970485637703721"
+        ],
+        "lower-skin-3-1": [
+          "-1.0617753368069769",
+          "25",
+          "-1.2898344389012566",
+          "0.039834438901256597"
+        ],
+        "lower-skin-3-2": [
+          "-0.9082506386028848",
+          "25",
+          "-1.3390532697198125",
+          "0.018018195716558785"
+        ],
+        "lower-skin-4-0": [
+          "-1.2202116218039807",
+          "42",
+          "-1.2599970485637704",
+          "0.0099970485637703721"
+        ],
+        "lower-skin-4-1": [
+          "-1.0617753368069769",
+          "42",
+          "-1.2898344389012566",
+          "0.039834438901256597"
+        ],
+        "lower-skin-4-2": [
+          "-0.9082506386028848",
+          "42",
+          "-1.3390532697198125",
+          "0.018018195716558785"
+        ],
+        "upper-skin-0-0": [
+          "-1.2202116218039807",
+          "-42",
+          "1.2599970485637704",
+          "0.0099970485637703721"
+        ],
+        "upper-skin-0-1": [
+          "-1.0617753368069769",
+          "-42",
+          "1.2898344389012566",
+          "0.039834438901256597"
+        ],
+        "upper-skin-0-2": [
+          "-0.9082506386028848",
+          "-42",
+          "1.3390532697198125",
+          "0.018018195716558542"
+        ],
+        "upper-skin-1-0": [
+          "-1.2202116218039807",
+          "-25",
+          "1.2599970485637704",
+          "0.0099970485637703721"
+        ],
+        "upper-skin-1-1": [
+          "-1.0617753368069769",
+          "-25",
+          "1.2898344389012566",
+          "0.039834438901256597"
+        ],
+        "upper-skin-1-2": [
+          "-0.9082506386028848",
+          "-25",
+          "1.3390532697198125",
+          "0.018018195716558542"
+        ],
+        "upper-skin-2-0": [
+          "-1.2202116218039807",
+          "0",
+          "1.2599970485637704",
+          "0.0099970485637703721"
+        ],
+        "upper-skin-2-1": [
+          "-1.0617753368069769",
+          "0",
+          "1.2898344389012566",
+          "0.039834438901256597"
+        ],
+        "upper-skin-2-2": [
+          "-0.9082506386028848",
+          "0",
+          "1.3390532697198125",
+          "0.018018195716558542"
+        ],
+        "upper-skin-3-0": [
+          "-1.2202116218039807",
+          "25",
+          "1.2599970485637704",
+          "0.0099970485637703721"
+        ],
+        "upper-skin-3-1": [
+          "-1.0617753368069769",
+          "25",
+          "1.2898344389012566",
+          "0.039834438901256597"
+        ],
+        "upper-skin-3-2": [
+          "-0.9082506386028848",
+          "25",
+          "1.3390532697198125",
+          "0.018018195716558542"
+        ],
+        "upper-skin-4-0": [
+          "-1.2202116218039807",
+          "42",
+          "1.2599970485637704",
+          "0.0099970485637703721"
+        ],
+        "upper-skin-4-1": [
+          "-1.0617753368069769",
+          "42",
+          "1.2898344389012566",
+          "0.039834438901256597"
+        ],
+        "upper-skin-4-2": [
+          "-0.9082506386028848",
+          "42",
+          "1.3390532697198125",
+          "0.018018195716558542"
+        ]
+      },
+      "interpretation": {
+        "lower": {
+          "passed": false,
+          "material_mismatch": [
+            "lower-fill-0",
+            "lower-fill-1",
+            "lower-fill-2",
+            "lower-fill-3",
+            "lower-fill-4"
+          ]
+        },
+        "upper": {
+          "passed": false,
+          "material_mismatch": [
+            "upper-fill-0",
+            "upper-fill-1",
+            "upper-fill-2",
+            "upper-fill-3",
+            "upper-fill-4"
+          ]
+        },
+        "input": {
+          "passed": true,
+          "material_mismatch": []
+        }
+      },
+      "receipt": {
+        "path": "research/kernel-regression-v1/rollout-v12/receipts/fillet/input-read.log",
+        "sha256": "d180c17dfcc0938d0ef2b870a58447ff6836a48da9ef0fd205c41bf80e877d46"
+      }
+    },
+    "history_source": {
+      "path": "research/occt-authoring-20261114/github-1702/验证证据/1702-frozen-B.json",
+      "sha256": "4f3166050fd98a3522c63314c5141839e6a80e011e47a0ff340e027ab9790ab8"
+    },
+    "historical_baseline": {
+      "1702-original": "failed",
+      "1702-line": "passed",
+      "1702-arc": "passed",
+      "1702-near": "passed"
+    }
+  }
+}

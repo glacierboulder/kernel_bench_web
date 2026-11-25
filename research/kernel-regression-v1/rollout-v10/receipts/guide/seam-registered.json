@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "compile": {
+    "return_code": 0,
+    "elapsed_seconds": 0.677,
+    "output_tail": "",
+    "timed_out": false
+  },
+  "result": {
+    "return_code": 1,
+    "elapsed_seconds": 0.006,
+    "output_tail": "286 failed: (aCurve->Multiplicity(1))==(aCurve->Degree()) An exact periodic guide must retain the OCC22163 guarded behavior\nverdict=fail\n",
+    "timed_out": false
+  }
+}

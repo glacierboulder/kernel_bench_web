@@ -1,0 +1,23 @@
+{
+  "source_id": "occt-ng04r-derived-fe81a63b",
+  "commit": "75fad89c90cf0390a6a053fa43a290b3fbb05069",
+  "materialized_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+  "toolchain": "occt-intersection-clang10-v1",
+  "toolchain_config": {
+    "path": "toolchains/occt-intersection-clang10-v1.json",
+    "sha256": "91babc51e4d826eb9abe7e14e9e31af0ac92e4b7fd90d9fc5d983297e3b5763e"
+  },
+  "build_entry": {
+    "path": "tools/occt-intersection-clang10-v1/build.sh",
+    "sha256": "2cd5240d19bd09b851d4a0db87b6458c85a76bc18d3abefb6cc3a88b591b59da"
+  },
+  "declared_public_targets": [
+    "DRAWEXE",
+    "TKTopTest"
+  ],
+  "source_commit": "75fad89c90cf0390a6a053fa43a290b3fbb05069",
+  "git_tree": "f8c888ac96c4e16a645464c5f558468d7ac3c3d3",
+  "observed_tree": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+  "source": "/home/lzy/cad-bench-experiment/rollout17.hbEUflhU/cyl-source",
+  "build": "/home/lzy/cad-bench-experiment/rollout17.hbEUflhU/cyl-build"
+}

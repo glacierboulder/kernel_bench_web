@@ -1,0 +1,12 @@
+DRAW is running in batch mode
+BENCH_ASSERT_PASS input_validity both_valid=1 kind=expression
+CYLINDER first_1 0 0 0 0.0 0.0 1.0 20
+CYLINDER second_1 1000 0 0 0.0 0.0 1.0 10
+BENCH_ASSERT_PASS operation_completed error=0 report= has no 3d curves| has no 3d points| kind=expression
+BENCH_ASSERT_FAIL branches curves=1 expected=0 error=0 report= has no 3d curves| has no 3d points| kind=numeric
+BENCH_ASSERT_FAIL support points=66 maximum=970.0 absolute_limit=1e-6 kind=numeric
+BENCH_ASSERT_PASS section_closure edges=0 alone=0 valid=1 healthy=1 error=0 kind=numeric
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=5 numeric_assertions=3
+TEST_DONE assertions=5 numeric_assertions=3
+SCRIPT_RETURN 0 

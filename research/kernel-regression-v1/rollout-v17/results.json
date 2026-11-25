@@ -1,0 +1,3144 @@
+{
+  "cyl": {
+    "source": {
+      "source_id": "occt-ng04r-derived-fe81a63b",
+      "commit": "75fad89c90cf0390a6a053fa43a290b3fbb05069",
+      "materialized_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+      "toolchain": "occt-intersection-clang10-v1",
+      "toolchain_config": {
+        "path": "toolchains/occt-intersection-clang10-v1.json",
+        "sha256": "91babc51e4d826eb9abe7e14e9e31af0ac92e4b7fd90d9fc5d983297e3b5763e"
+      },
+      "build_entry": {
+        "path": "tools/occt-intersection-clang10-v1/build.sh",
+        "sha256": "2cd5240d19bd09b851d4a0db87b6458c85a76bc18d3abefb6cc3a88b591b59da"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/identity.json",
+      "sha256": "80e267390d9cf89d0974843e53d69a48439850bee380c809978e06c9a562c7a3"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/runtime.json",
+      "sha256": "457ca0a41ea8dc9b97dccdc647c0824d2f7d69de14390b396e418d7df2d977c8"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "INCONCLUSIVE",
+          "runs": [
+            {
+              "status": "INCONCLUSIVE",
+              "geometry_executed": true,
+              "exit_by_role": {
+                "geometry": -11,
+                "wrong_shape": -11
+              }
+            },
+            {
+              "status": "INCONCLUSIVE",
+              "geometry_executed": true,
+              "exit_by_role": {
+                "geometry": -11,
+                "wrong_shape": -11
+              }
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/core-1.json",
+          "sha256": "f082c3a1c61996712303e10f9fbb2c9e134b8de5ddb78c8fc0f6c0d3508b813e"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/core-2.json",
+          "sha256": "e0718adb36fa167c00144f62d107d379e5bcb3e5f5af2fe527a42c2041f2667a"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "independent_status": "CALIBRATED",
+    "independent_scope": "Exact analytic cylinder support and separation; discrete bidirectional branch coverage on the registered finite output segments.",
+    "baseline_geometry_status": "geometry_pass",
+    "registered_baseline": {
+      "passed": true,
+      "assertions": 2,
+      "failures": 0,
+      "receipt": {
+        "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/registered-regular-receipt.json",
+        "sha256": "1192276d9af1bdec87d40c7f40e9df5d519bd44147e112001cd4bf926f1a1cca"
+      }
+    },
+    "controls": {
+      "healthy-1": {
+        "far": {
+          "axis_distance": 664.3442185874231,
+          "surface_clearance": 661.0942185874231,
+          "passed": true,
+          "branches": {}
+        },
+        "regular": {
+          "analytic_y_offset": 2.75,
+          "analytic_distinct_signs_away_from_tangency": 2,
+          "returned_segments": 4,
+          "branches": {
+            "1": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ],
+                [
+                  -123.772171592333,
+                  -64.3442185874231,
+                  -19.5
+                ]
+              ],
+              "x_relative": [
+                0.0,
+                1.6583100173936884
+              ],
+              "z_relative": [
+                -0.25,
+                0.24999869955166076
+              ],
+              "sampled_max_residual": [
+                5.4227439483245377e-08,
+                1.4071586118546975e-08
+              ]
+            },
+            "2": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ],
+                [
+                  -126.170087353989,
+                  -64.3442185874231,
+                  -19.5
+                ]
+              ],
+              "x_relative": [
+                -1.658310017393731,
+                0.0
+              ],
+              "z_relative": [
+                -0.25,
+                0.24999869955166787
+              ],
+              "sampled_max_residual": [
+                5.4227439816312284e-08,
+                1.407159855304485e-08
+              ]
+            },
+            "3": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -123.772171592333,
+                  -64.3442185874231,
+                  -19.5
+                ],
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ]
+              ],
+              "x_relative": [
+                0.0,
+                1.1989578808280044
+              ],
+              "z_relative": [
+                -0.25,
+                0.0
+              ],
+              "sampled_max_residual": [
+                5.911014100412615e-08,
+                9.553086322000581e-09
+              ]
+            },
+            "4": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -126.170087353989,
+                  -64.3442185874231,
+                  -19.5
+                ],
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ]
+              ],
+              "x_relative": [
+                -1.1989578808280044,
+                0.0
+              ],
+              "z_relative": [
+                -0.25,
+                0.0
+              ],
+              "sampled_max_residual": [
+                5.9110151606756034e-08,
+                9.553099200587667e-09
+              ]
+            }
+          },
+          "reference_hits_by_sign_and_slot": {
+            "-1": {
+              "1": 1,
+              "2": 271,
+              "3": 1,
+              "4": 91
+            },
+            "1": {
+              "1": 271,
+              "2": 1,
+              "3": 91,
+              "4": 1
+            }
+          },
+          "exclusive_witness_count": {
+            "1": 269,
+            "2": 269,
+            "3": 89,
+            "4": 89
+          },
+          "missed_witnesses": 0,
+          "largest_missed_witness": null,
+          "maximum_reference_distance": 6.46043428345453e-08,
+          "reverse_support_samples_passed": true,
+          "passed": true
+        },
+        "passed": true,
+        "registered": {
+          "passed": true,
+          "assertions": 2,
+          "failures": 0,
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/healthy-1-regular-receipt.json",
+            "sha256": "8c5329f9007082245cff45a3df107455a3be9aef285f63ffa1c3bd0c69bb7a45"
+          }
+        },
+        "raw": {
+          "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/healthy-1-read.log",
+          "sha256": "0cdc2434b4664c6816482a5598d11747cb075337e39d25a09a9d76ebde4aee23"
+        }
+      },
+      "healthy-2": {
+        "far": {
+          "axis_distance": 664.3442185874231,
+          "surface_clearance": 661.0942185874231,
+          "passed": true,
+          "branches": {}
+        },
+        "regular": {
+          "analytic_y_offset": 2.75,
+          "analytic_distinct_signs_away_from_tangency": 2,
+          "returned_segments": 4,
+          "branches": {
+            "1": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ],
+                [
+                  -123.772171592333,
+                  -64.3442185874231,
+                  -19.5
+                ]
+              ],
+              "x_relative": [
+                0.0,
+                1.6583100173936884
+              ],
+              "z_relative": [
+                -0.25,
+                0.24999869955166076
+              ],
+              "sampled_max_residual": [
+                5.4227439483245377e-08,
+                1.4071586118546975e-08
+              ]
+            },
+            "2": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ],
+                [
+                  -126.170087353989,
+                  -64.3442185874231,
+                  -19.5
+                ]
+              ],
+              "x_relative": [
+                -1.658310017393731,
+                0.0
+              ],
+              "z_relative": [
+                -0.25,
+                0.24999869955166787
+              ],
+              "sampled_max_residual": [
+                5.4227439816312284e-08,
+                1.407159855304485e-08
+              ]
+            },
+            "3": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -123.772171592333,
+                  -64.3442185874231,
+                  -19.5
+                ],
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ]
+              ],
+              "x_relative": [
+                0.0,
+                1.1989578808280044
+              ],
+              "z_relative": [
+                -0.25,
+                0.0
+              ],
+              "sampled_max_residual": [
+                5.911014100412615e-08,
+                9.553086322000581e-09
+              ]
+            },
+            "4": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -126.170087353989,
+                  -64.3442185874231,
+                  -19.5
+                ],
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ]
+              ],
+              "x_relative": [
+                -1.1989578808280044,
+                0.0
+              ],
+              "z_relative": [
+                -0.25,
+                0.0
+              ],
+              "sampled_max_residual": [
+                5.9110151606756034e-08,
+                9.553099200587667e-09
+              ]
+            }
+          },
+          "reference_hits_by_sign_and_slot": {
+            "-1": {
+              "1": 1,
+              "2": 271,
+              "3": 1,
+              "4": 91
+            },
+            "1": {
+              "1": 271,
+              "2": 1,
+              "3": 91,
+              "4": 1
+            }
+          },
+          "exclusive_witness_count": {
+            "1": 269,
+            "2": 269,
+            "3": 89,
+            "4": 89
+          },
+          "missed_witnesses": 0,
+          "largest_missed_witness": null,
+          "maximum_reference_distance": 6.46043428345453e-08,
+          "reverse_support_samples_passed": true,
+          "passed": true
+        },
+        "passed": true,
+        "registered": {
+          "passed": true,
+          "assertions": 2,
+          "failures": 0,
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/healthy-2-regular-receipt.json",
+            "sha256": "8c5329f9007082245cff45a3df107455a3be9aef285f63ffa1c3bd0c69bb7a45"
+          }
+        },
+        "raw": {
+          "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/healthy-2-read.log",
+          "sha256": "0cdc2434b4664c6816482a5598d11747cb075337e39d25a09a9d76ebde4aee23"
+        }
+      },
+      "false-far": {
+        "far": {
+          "axis_distance": 664.3442185874231,
+          "surface_clearance": 661.0942185874231,
+          "passed": false,
+          "branches": {
+            "1": {
+              "range": [
+                0.0,
+                6.283185307179586
+              ],
+              "ends": [
+                [
+                  -106.471129473161,
+                  -64.3442185874231,
+                  -19.0
+                ],
+                [
+                  -106.471129473161,
+                  -64.3442185874231,
+                  -19.0
+                ]
+              ],
+              "x_relative": [
+                -1006.471129473161,
+                -1006.471129473161
+              ],
+              "z_relative": [
+                -0.25,
+                0.25
+              ],
+              "sampled_max_residual": [
+                6.716849298982197e-15,
+                1203.096849279861
+              ]
+            }
+          }
+        },
+        "regular": {
+          "analytic_y_offset": 2.75,
+          "analytic_distinct_signs_away_from_tangency": 2,
+          "returned_segments": 4,
+          "branches": {
+            "1": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ],
+                [
+                  -123.772171592333,
+                  -64.3442185874231,
+                  -19.5
+                ]
+              ],
+              "x_relative": [
+                0.0,
+                1.6583100173936884
+              ],
+              "z_relative": [
+                -0.25,
+                0.24999869955166076
+              ],
+              "sampled_max_residual": [
+                5.4227439483245377e-08,
+                1.4071586118546975e-08
+              ]
+            },
+            "2": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ],
+                [
+                  -126.170087353989,
+                  -64.3442185874231,
+                  -19.5
+                ]
+              ],
+              "x_relative": [
+                -1.658310017393731,
+                0.0
+              ],
+              "z_relative": [
+                -0.25,
+                0.24999869955166787
+              ],
+              "sampled_max_residual": [
+                5.4227439816312284e-08,
+                1.407159855304485e-08
+              ]
+            },
+            "3": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -123.772171592333,
+                  -64.3442185874231,
+                  -19.5
+                ],
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ]
+              ],
+              "x_relative": [
+                0.0,
+                1.1989578808280044
+              ],
+              "z_relative": [
+                -0.25,
+                0.0
+              ],
+              "sampled_max_residual": [
+                5.911014100412615e-08,
+                9.553086322000581e-09
+              ]
+            },
+            "4": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -126.170087353989,
+                  -64.3442185874231,
+                  -19.5
+                ],
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ]
+              ],
+              "x_relative": [
+                -1.1989578808280044,
+                0.0
+              ],
+              "z_relative": [
+                -0.25,
+                0.0
+              ],
+              "sampled_max_residual": [
+                5.9110151606756034e-08,
+                9.553099200587667e-09
+              ]
+            }
+          },
+          "reference_hits_by_sign_and_slot": {
+            "-1": {
+              "1": 1,
+              "2": 271,
+              "3": 1,
+              "4": 91
+            },
+            "1": {
+              "1": 271,
+              "2": 1,
+              "3": 91,
+              "4": 1
+            }
+          },
+          "exclusive_witness_count": {
+            "1": 269,
+            "2": 269,
+            "3": 89,
+            "4": 89
+          },
+          "missed_witnesses": 0,
+          "largest_missed_witness": null,
+          "maximum_reference_distance": 6.46043428345453e-08,
+          "reverse_support_samples_passed": true,
+          "passed": true
+        },
+        "passed": false,
+        "registered": {
+          "passed": false,
+          "assertions": 2,
+          "failures": 1,
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/false-far-regular-receipt.json",
+            "sha256": "d9d410a4ed545b78bf3ddd7b62e10ab3ebaa27d2bea6e5a4c5cd73ca12ed4bcc"
+          }
+        },
+        "raw": {
+          "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/false-far-read.log",
+          "sha256": "8110074da3b2b5da0d37066a05e8d021d33277e6d1bf74c39479ed56eaf5ff54"
+        }
+      },
+      "duplicate": {
+        "far": {
+          "axis_distance": 664.3442185874231,
+          "surface_clearance": 661.0942185874231,
+          "passed": true,
+          "branches": {}
+        },
+        "regular": {
+          "analytic_y_offset": 2.75,
+          "analytic_distinct_signs_away_from_tangency": 2,
+          "returned_segments": 4,
+          "branches": {
+            "1": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ],
+                [
+                  -123.772171592333,
+                  -64.3442185874231,
+                  -19.5
+                ]
+              ],
+              "x_relative": [
+                0.0,
+                1.6583100173936884
+              ],
+              "z_relative": [
+                -0.25,
+                0.24999869955166076
+              ],
+              "sampled_max_residual": [
+                5.4227439483245377e-08,
+                1.4071586118546975e-08
+              ]
+            },
+            "2": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ],
+                [
+                  -123.772171592333,
+                  -64.3442185874231,
+                  -19.5
+                ]
+              ],
+              "x_relative": [
+                0.0,
+                1.6583100173936884
+              ],
+              "z_relative": [
+                -0.25,
+                0.24999869955166076
+              ],
+              "sampled_max_residual": [
+                5.4227439483245377e-08,
+                1.4071586118546975e-08
+              ]
+            },
+            "3": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -123.772171592333,
+                  -64.3442185874231,
+                  -19.5
+                ],
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ]
+              ],
+              "x_relative": [
+                0.0,
+                1.1989578808280044
+              ],
+              "z_relative": [
+                -0.25,
+                0.0
+              ],
+              "sampled_max_residual": [
+                5.911014100412615e-08,
+                9.553086322000581e-09
+              ]
+            },
+            "4": {
+              "range": [
+                0.0,
+                1.0
+              ],
+              "ends": [
+                [
+                  -126.170087353989,
+                  -64.3442185874231,
+                  -19.5
+                ],
+                [
+                  -124.971129473161,
+                  -64.0942185874231,
+                  -19.25
+                ]
+              ],
+              "x_relative": [
+                -1.1989578808280044,
+                0.0
+              ],
+              "z_relative": [
+                -0.25,
+                0.0
+              ],
+              "sampled_max_residual": [
+                5.9110151606756034e-08,
+                9.553099200587667e-09
+              ]
+            }
+          },
+          "reference_hits_by_sign_and_slot": {
+            "-1": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 91
+            },
+            "1": {
+              "1": 271,
+              "2": 271,
+              "3": 91,
+              "4": 1
+            }
+          },
+          "exclusive_witness_count": {
+            "1": 0,
+            "2": 0,
+            "3": 89,
+            "4": 90
+          },
+          "missed_witnesses": 269,
+          "largest_missed_witness": [
+            -1,
+            160,
+            0.5984944675212469,
+            -126.60648523406844,
+            -64.57914174261958,
+            -19.164494964168583
+          ],
+          "maximum_reference_distance": 0.5984944675212469,
+          "reverse_support_samples_passed": true,
+          "passed": false,
+          "omission_certificate": {
+            "witness": [
+              -126.60648523406844,
+              -64.57914174261958,
+              -19.164494964168583
+            ],
+            "curve_bounds": [
+              {
+                "slot": 1,
+                "box": [
+                  [
+                    -124.971129473261,
+                    -123.312817077883
+                  ],
+                  [
+                    -64.5942185875231,
+                    -64.0942185798461
+                  ],
+                  [
+                    -19.5000000001,
+                    -18.9995431050313
+                  ]
+                ],
+                "distance_lower_bound": 1.6353557607074425
+              },
+              {
+                "slot": 2,
+                "box": [
+                  [
+                    -124.971129473261,
+                    -123.312817077883
+                  ],
+                  [
+                    -64.5942185875231,
+                    -64.0942185798461
+                  ],
+                  [
+                    -19.5000000001,
+                    -18.9995431050313
+                  ]
+                ],
+                "distance_lower_bound": 1.6353557607074425
+              },
+              {
+                "slot": 3,
+                "box": [
+                  [
+                    -124.971129473261,
+                    -123.772171592233
+                  ],
+                  [
+                    -64.3442185875231,
+                    -64.0942185873231
+                  ],
+                  [
+                    -19.5000000001,
+                    -19.2499999999
+                  ]
+                ],
+                "distance_lower_bound": 1.6543543949260495
+              },
+              {
+                "slot": 4,
+                "box": [
+                  [
+                    -126.170087354089,
+                    -124.971129473061
+                  ],
+                  [
+                    -64.3442185875231,
+                    -64.0942185873231
+                  ],
+                  [
+                    -19.5000000001,
+                    -19.2499999999
+                  ]
+                ],
+                "distance_lower_bound": 0.5029344982061561
+              }
+            ],
+            "minimum_distance_lower_bound": 0.5029344982061561
+          }
+        },
+        "passed": false,
+        "registered": {
+          "passed": true,
+          "assertions": 2,
+          "failures": 0,
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/duplicate-regular-receipt.json",
+            "sha256": "8c5329f9007082245cff45a3df107455a3be9aef285f63ffa1c3bd0c69bb7a45"
+          }
+        },
+        "raw": {
+          "path": "research/kernel-regression-v1/rollout-v17/receipts/cyl/duplicate-read.log",
+          "sha256": "013783ed3ee873628bdcdbaa550b4298bb8152c8b3a4f9fd040b0d27009e8574"
+        }
+      }
+    },
+    "coverage_scope": "720 analytic witnesses and 257 samples per output curve; no continuous error certificate."
+  },
+  "uv": {
+    "source": {
+      "source_id": "occt-ng04t-v1-baseline-ef5af939",
+      "commit": "201a54e50b9f24ecd5d9c401461ad64312de9870",
+      "materialized_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+      "toolchain": "occt-intersection-clang10-v1",
+      "toolchain_config": {
+        "path": "toolchains/occt-intersection-clang10-v1.json",
+        "sha256": "91babc51e4d826eb9abe7e14e9e31af0ac92e4b7fd90d9fc5d983297e3b5763e"
+      },
+      "build_entry": {
+        "path": "tools/occt-intersection-clang10-v1/build.sh",
+        "sha256": "2cd5240d19bd09b851d4a0db87b6458c85a76bc18d3abefb6cc3a88b591b59da"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/identity.json",
+      "sha256": "bcd0cdbef9ff8ab2a45b270472afddd730b878f8418aec755048e36cfa49f1a9"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/runtime.json",
+      "sha256": "3c1d80b60bc4dfbdb0863c59a0b78f83508c6a834d3c5250f9d06c199739e20a"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "INCONCLUSIVE",
+          "runs": [
+            {
+              "status": "INCONCLUSIVE",
+              "geometry_executed": true,
+              "exit_by_role": {
+                "geometry": -11,
+                "wrong_shape": -11
+              }
+            },
+            {
+              "status": "INCONCLUSIVE",
+              "geometry_executed": true,
+              "exit_by_role": {
+                "geometry": -11,
+                "wrong_shape": -11
+              }
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/core-1.json",
+          "sha256": "359953642d49d8cc87e9685b6f4b5a040794e10f678b91ebda37ff5b0ccaae58"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/core-2.json",
+          "sha256": "7230d659bcae66b0fb36931823b2f584ab0cc1e65fc8507577dacf1932fbf3ae"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "independent_status": "CALIBRATED",
+    "independent_scope": "257 same-parameter physical lifts per face in each order; includes both trim ends. No continuous bound.",
+    "baseline_geometry_status": "geometry_fail",
+    "registered_baseline": {
+      "passed": false,
+      "assertions": 5,
+      "failures": 2,
+      "receipt": {
+        "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/registered-swapped-receipt.json",
+        "sha256": "690e62fdacc36d9ab6dcc675303d9e0a418c9296b0f5301b1b29abcf8c8f61aa"
+      }
+    },
+    "roles": {
+      "locked": {
+        "originals": {
+          "standard": {
+            "passed": false,
+            "assertions": 5,
+            "failures": 4,
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/registered-standard-receipt.json",
+              "sha256": "6b364236375e157a87f9223b9790357bc55aaf7342138f2e6b4a7da053c0357d"
+            }
+          },
+          "swapped": {
+            "passed": false,
+            "assertions": 5,
+            "failures": 2,
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/registered-swapped-receipt.json",
+              "sha256": "690e62fdacc36d9ab6dcc675303d9e0a418c9296b0f5301b1b29abcf8c8f61aa"
+            }
+          }
+        },
+        "controls": {
+          "healthy-1": {
+            "standard": {
+              "sides": {
+                "1": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-1-standard-f1.brep",
+                    "sha256": "a4db020d6d5bb9ca6dbacb91a703f2adbf4ec684a3b704f270a8798a8da0222e"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-1-standard-c2d1_1.draw",
+                    "sha256": "26fc805d57c52b3fba01aa6d51a727aa1ef416d6625a94d1789b8188ed2185a0"
+                  },
+                  "physical_face": 1,
+                  "returned_slot": 1,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    8.245013655747e-07,
+                    576.45175122543,
+                    122.68078250809,
+                    0.9999999999999999,
+                    -2.1073400643811513e-08,
+                    -4.674453838202743e-14,
+                    9.567082039817725e-09,
+                    0.4539904997400553,
+                    -0.8910065241881089,
+                    1.877655868204229e-08,
+                    0.8910065241881086,
+                    0.45399049974005534
+                  ],
+                  "radius": 200.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    0.0,
+                    6.28318530717959,
+                    0.0,
+                    300.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 5.45602570055531,
+                  "worst_index": 255,
+                  "end_errors": [
+                    2.230784161838533e-06,
+                    2.230784161838533e-06
+                  ],
+                  "passing_samples": 256,
+                  "passed": false,
+                  "max_equivalent_period_lift_difference": 2.9673135796061134e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    3.468887168622814e-06,
+                    9.084601515496615e-09
+                  ]
+                },
+                "2": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-1-standard-f2.brep",
+                    "sha256": "d238a62a2b77855243435bad74eef5d8a77daa44be1fe72778cf8931780e8dba"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-1-standard-c2d2_1.draw",
+                    "sha256": "494d8304ef8a4bc0112c975a4e03117c846ba2027f108c414feb752ce7d53d1f"
+                  },
+                  "physical_face": 2,
+                  "returned_slot": 2,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    0.0,
+                    0.0,
+                    -150.0,
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -1.0,
+                    0.0,
+                    -0.0,
+                    -0.0,
+                    -1.0
+                  ],
+                  "radius": 750.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    -4.1389114358025836e-13,
+                    6.283185307179586,
+                    -708.0,
+                    0.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.39610680465523e-06,
+                  "worst_index": 255,
+                  "end_errors": [
+                    2.2307837355128982e-06,
+                    2.2307837355128982e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 8.920070983137529e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    8.219380731588899e-11,
+                    3.0044418508623494e-08
+                  ]
+                }
+              },
+              "passed": false,
+              "raw": {
+                "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-1-read.log",
+                "sha256": "8bc888305099f0261dd4253025caa16493431e8e123bf09aaa7b560ab7e96638"
+              },
+              "cross_order_max_distance": 6.405238118962618e-08,
+              "cross_order_tangent_cosine_range": [
+                -1.0,
+                1.0000000000000002
+              ],
+              "projected_endpoint_parameters": [
+                0.0,
+                0.0
+              ],
+              "source_endpoint_parameters": [
+                0.0,
+                1.0
+              ],
+              "registered": {
+                "passed": false,
+                "assertions": 5,
+                "failures": 4,
+                "receipt": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-1-standard-receipt.json",
+                  "sha256": "46531e61ffeb620519c3369de87b2fbaaeacc0b0e2bbe2ea3dba9ade321af4e9"
+                }
+              }
+            },
+            "swapped": {
+              "sides": {
+                "1": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-1-swapped-f1.brep",
+                    "sha256": "a4db020d6d5bb9ca6dbacb91a703f2adbf4ec684a3b704f270a8798a8da0222e"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-1-swapped-c2d2_1.draw",
+                    "sha256": "62888d6285a14d61eba8d36e6aeaa8d2454435fe97bc6e84f3740b69935a9966"
+                  },
+                  "physical_face": 1,
+                  "returned_slot": 2,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    8.245013655747e-07,
+                    576.45175122543,
+                    122.68078250809,
+                    0.9999999999999999,
+                    -2.1073400643811513e-08,
+                    -4.674453838202743e-14,
+                    9.567082039817725e-09,
+                    0.4539904997400553,
+                    -0.8910065241881089,
+                    1.877655868204229e-08,
+                    0.8910065241881086,
+                    0.45399049974005534
+                  ],
+                  "radius": 200.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    0.0,
+                    6.28318530717959,
+                    0.0,
+                    300.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 5.348842291241073,
+                  "worst_index": 255,
+                  "end_errors": [
+                    2.230784161838533e-06,
+                    2.230784161838533e-06
+                  ],
+                  "passing_samples": 256,
+                  "passed": false,
+                  "max_equivalent_period_lift_difference": 3.228085657724633e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    3.4366166081767346e-06,
+                    9.091195352084469e-09
+                  ]
+                },
+                "2": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-1-swapped-f2.brep",
+                    "sha256": "d238a62a2b77855243435bad74eef5d8a77daa44be1fe72778cf8931780e8dba"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-1-swapped-c2d1_1.draw",
+                    "sha256": "b9f42dc64d453ab03b7bd5c1a18bc38b45ee64154f2d64cb8868442e7f9361c5"
+                  },
+                  "physical_face": 2,
+                  "returned_slot": 1,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    0.0,
+                    0.0,
+                    -150.0,
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -1.0,
+                    0.0,
+                    -0.0,
+                    -0.0,
+                    -1.0
+                  ],
+                  "radius": 750.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    -4.1389114358025836e-13,
+                    6.283185307179586,
+                    -708.0,
+                    0.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.3776707783332543e-06,
+                  "worst_index": 255,
+                  "end_errors": [
+                    2.2307837355128982e-06,
+                    2.2307837355128982e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 9.183335362992872e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    8.218581371011169e-11,
+                    3.004561222041957e-08
+                  ]
+                }
+              },
+              "passed": false,
+              "raw": {
+                "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-1-read.log",
+                "sha256": "8bc888305099f0261dd4253025caa16493431e8e123bf09aaa7b560ab7e96638"
+              },
+              "cross_order_max_distance": 6.404406991763894e-08,
+              "cross_order_tangent_cosine_range": [
+                -1.0,
+                1.0000000000000004
+              ],
+              "projected_endpoint_parameters": [
+                0.0,
+                0.0
+              ],
+              "source_endpoint_parameters": [
+                0.0,
+                1.0
+              ],
+              "registered": {
+                "passed": false,
+                "assertions": 5,
+                "failures": 2,
+                "receipt": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-1-swapped-receipt.json",
+                  "sha256": "0fb6706a6656f11051fb94c51a5fae31ca5b10e9e8abde659c3ffffdba2d6b41"
+                }
+              }
+            }
+          },
+          "healthy-2": {
+            "standard": {
+              "sides": {
+                "1": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-2-standard-f1.brep",
+                    "sha256": "a4db020d6d5bb9ca6dbacb91a703f2adbf4ec684a3b704f270a8798a8da0222e"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-2-standard-c2d1_1.draw",
+                    "sha256": "26fc805d57c52b3fba01aa6d51a727aa1ef416d6625a94d1789b8188ed2185a0"
+                  },
+                  "physical_face": 1,
+                  "returned_slot": 1,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    8.245013655747e-07,
+                    576.45175122543,
+                    122.68078250809,
+                    0.9999999999999999,
+                    -2.1073400643811513e-08,
+                    -4.674453838202743e-14,
+                    9.567082039817725e-09,
+                    0.4539904997400553,
+                    -0.8910065241881089,
+                    1.877655868204229e-08,
+                    0.8910065241881086,
+                    0.45399049974005534
+                  ],
+                  "radius": 200.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    0.0,
+                    6.28318530717959,
+                    0.0,
+                    300.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 5.45602570055531,
+                  "worst_index": 255,
+                  "end_errors": [
+                    2.230784161838533e-06,
+                    2.230784161838533e-06
+                  ],
+                  "passing_samples": 256,
+                  "passed": false,
+                  "max_equivalent_period_lift_difference": 2.9673135796061134e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    3.468887168622814e-06,
+                    9.084601515496615e-09
+                  ]
+                },
+                "2": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-2-standard-f2.brep",
+                    "sha256": "d238a62a2b77855243435bad74eef5d8a77daa44be1fe72778cf8931780e8dba"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-2-standard-c2d2_1.draw",
+                    "sha256": "494d8304ef8a4bc0112c975a4e03117c846ba2027f108c414feb752ce7d53d1f"
+                  },
+                  "physical_face": 2,
+                  "returned_slot": 2,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    0.0,
+                    0.0,
+                    -150.0,
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -1.0,
+                    0.0,
+                    -0.0,
+                    -0.0,
+                    -1.0
+                  ],
+                  "radius": 750.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    -4.1389114358025836e-13,
+                    6.283185307179586,
+                    -708.0,
+                    0.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.39610680465523e-06,
+                  "worst_index": 255,
+                  "end_errors": [
+                    2.2307837355128982e-06,
+                    2.2307837355128982e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 8.920070983137529e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    8.219380731588899e-11,
+                    3.0044418508623494e-08
+                  ]
+                }
+              },
+              "passed": false,
+              "raw": {
+                "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-2-read.log",
+                "sha256": "8bc888305099f0261dd4253025caa16493431e8e123bf09aaa7b560ab7e96638"
+              },
+              "cross_order_max_distance": 6.405238118962618e-08,
+              "cross_order_tangent_cosine_range": [
+                -1.0,
+                1.0000000000000002
+              ],
+              "projected_endpoint_parameters": [
+                0.0,
+                0.0
+              ],
+              "source_endpoint_parameters": [
+                0.0,
+                1.0
+              ],
+              "registered": {
+                "passed": false,
+                "assertions": 5,
+                "failures": 4,
+                "receipt": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-2-standard-receipt.json",
+                  "sha256": "46531e61ffeb620519c3369de87b2fbaaeacc0b0e2bbe2ea3dba9ade321af4e9"
+                }
+              }
+            },
+            "swapped": {
+              "sides": {
+                "1": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-2-swapped-f1.brep",
+                    "sha256": "a4db020d6d5bb9ca6dbacb91a703f2adbf4ec684a3b704f270a8798a8da0222e"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-2-swapped-c2d2_1.draw",
+                    "sha256": "62888d6285a14d61eba8d36e6aeaa8d2454435fe97bc6e84f3740b69935a9966"
+                  },
+                  "physical_face": 1,
+                  "returned_slot": 2,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    8.245013655747e-07,
+                    576.45175122543,
+                    122.68078250809,
+                    0.9999999999999999,
+                    -2.1073400643811513e-08,
+                    -4.674453838202743e-14,
+                    9.567082039817725e-09,
+                    0.4539904997400553,
+                    -0.8910065241881089,
+                    1.877655868204229e-08,
+                    0.8910065241881086,
+                    0.45399049974005534
+                  ],
+                  "radius": 200.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    0.0,
+                    6.28318530717959,
+                    0.0,
+                    300.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 5.348842291241073,
+                  "worst_index": 255,
+                  "end_errors": [
+                    2.230784161838533e-06,
+                    2.230784161838533e-06
+                  ],
+                  "passing_samples": 256,
+                  "passed": false,
+                  "max_equivalent_period_lift_difference": 3.228085657724633e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    3.4366166081767346e-06,
+                    9.091195352084469e-09
+                  ]
+                },
+                "2": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-2-swapped-f2.brep",
+                    "sha256": "d238a62a2b77855243435bad74eef5d8a77daa44be1fe72778cf8931780e8dba"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-2-swapped-c2d1_1.draw",
+                    "sha256": "b9f42dc64d453ab03b7bd5c1a18bc38b45ee64154f2d64cb8868442e7f9361c5"
+                  },
+                  "physical_face": 2,
+                  "returned_slot": 1,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    0.0,
+                    0.0,
+                    -150.0,
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -1.0,
+                    0.0,
+                    -0.0,
+                    -0.0,
+                    -1.0
+                  ],
+                  "radius": 750.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    -4.1389114358025836e-13,
+                    6.283185307179586,
+                    -708.0,
+                    0.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.3776707783332543e-06,
+                  "worst_index": 255,
+                  "end_errors": [
+                    2.2307837355128982e-06,
+                    2.2307837355128982e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 9.183335362992872e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    8.218581371011169e-11,
+                    3.004561222041957e-08
+                  ]
+                }
+              },
+              "passed": false,
+              "raw": {
+                "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-2-read.log",
+                "sha256": "8bc888305099f0261dd4253025caa16493431e8e123bf09aaa7b560ab7e96638"
+              },
+              "cross_order_max_distance": 6.404406991763894e-08,
+              "cross_order_tangent_cosine_range": [
+                -1.0,
+                1.0000000000000004
+              ],
+              "projected_endpoint_parameters": [
+                0.0,
+                0.0
+              ],
+              "source_endpoint_parameters": [
+                0.0,
+                1.0
+              ],
+              "registered": {
+                "passed": false,
+                "assertions": 5,
+                "failures": 2,
+                "receipt": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/healthy-2-swapped-receipt.json",
+                  "sha256": "0fb6706a6656f11051fb94c51a5fae31ca5b10e9e8abde659c3ffffdba2d6b41"
+                }
+              }
+            }
+          },
+          "wrong-side": {
+            "standard": {
+              "sides": {
+                "1": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-standard-f1.brep",
+                    "sha256": "a4db020d6d5bb9ca6dbacb91a703f2adbf4ec684a3b704f270a8798a8da0222e"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-standard-c2d1_1.draw",
+                    "sha256": "26fc805d57c52b3fba01aa6d51a727aa1ef416d6625a94d1789b8188ed2185a0"
+                  },
+                  "physical_face": 1,
+                  "returned_slot": 1,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    8.245013655747e-07,
+                    576.45175122543,
+                    122.68078250809,
+                    0.9999999999999999,
+                    -2.1073400643811513e-08,
+                    -4.674453838202743e-14,
+                    9.567082039817725e-09,
+                    0.4539904997400553,
+                    -0.8910065241881089,
+                    1.877655868204229e-08,
+                    0.8910065241881086,
+                    0.45399049974005534
+                  ],
+                  "radius": 200.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    0.0,
+                    6.28318530717959,
+                    0.0,
+                    300.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 5.45602570055531,
+                  "worst_index": 255,
+                  "end_errors": [
+                    2.230784161838533e-06,
+                    2.230784161838533e-06
+                  ],
+                  "passing_samples": 256,
+                  "passed": false,
+                  "max_equivalent_period_lift_difference": 2.9673135796061134e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    3.468887168622814e-06,
+                    9.084601515496615e-09
+                  ]
+                },
+                "2": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-standard-f2.brep",
+                    "sha256": "d238a62a2b77855243435bad74eef5d8a77daa44be1fe72778cf8931780e8dba"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-standard-c2d2_1.draw",
+                    "sha256": "813d20b9e27db8e740c3490ce18c3dec551166a26b3745b8aa4e7f9654adeb7c"
+                  },
+                  "physical_face": 2,
+                  "returned_slot": 2,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    0.0,
+                    0.0,
+                    -150.0,
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -1.0,
+                    0.0,
+                    -0.0,
+                    -0.0,
+                    -1.0
+                  ],
+                  "radius": 750.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    -4.1389114358025836e-13,
+                    6.283185307179586,
+                    -708.0,
+                    0.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 93.688974658688,
+                  "worst_index": 6,
+                  "end_errors": [
+                    93.68897465491935,
+                    93.68897465491935
+                  ],
+                  "passing_samples": 0,
+                  "passed": false,
+                  "max_equivalent_period_lift_difference": 9.183335362992872e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    8.219558367272839e-11,
+                    3.0044418508623494e-08
+                  ]
+                }
+              },
+              "passed": false,
+              "raw": {
+                "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-read.log",
+                "sha256": "8074b30eb39a8006e00a291d39a7d920a505246c94af04f12ee46389b2843610"
+              },
+              "cross_order_max_distance": 6.405238118962618e-08,
+              "cross_order_tangent_cosine_range": [
+                -1.0,
+                1.0000000000000002
+              ],
+              "projected_endpoint_parameters": [
+                0.0,
+                0.0
+              ],
+              "source_endpoint_parameters": [
+                0.0,
+                1.0
+              ],
+              "registered": {
+                "passed": false,
+                "assertions": 5,
+                "failures": 4,
+                "receipt": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-standard-receipt.json",
+                  "sha256": "45c3e92107b128f368328ebfdb54208d55b02a0cdff6331254646ad2d4670329"
+                }
+              },
+              "face2_spatial_displacement_range": [
+                93.68897676356767,
+                93.68897676357169
+              ],
+              "whole_domain_injection": {
+                "pole_count": 247,
+                "max_pole_translation_error": 0.0,
+                "analytic_chord": 93.6889767635703,
+                "displacement_error_bound": 1e-10,
+                "before": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-standard-pre-shift.draw",
+                  "sha256": "494d8304ef8a4bc0112c975a4e03117c846ba2027f108c414feb752ce7d53d1f"
+                },
+                "after": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-standard-c2d2_1.draw",
+                  "sha256": "813d20b9e27db8e740c3490ce18c3dec551166a26b3745b8aa4e7f9654adeb7c"
+                }
+              }
+            },
+            "swapped": {
+              "sides": {
+                "1": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-swapped-f1.brep",
+                    "sha256": "a4db020d6d5bb9ca6dbacb91a703f2adbf4ec684a3b704f270a8798a8da0222e"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-swapped-c2d2_1.draw",
+                    "sha256": "62888d6285a14d61eba8d36e6aeaa8d2454435fe97bc6e84f3740b69935a9966"
+                  },
+                  "physical_face": 1,
+                  "returned_slot": 2,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    8.245013655747e-07,
+                    576.45175122543,
+                    122.68078250809,
+                    0.9999999999999999,
+                    -2.1073400643811513e-08,
+                    -4.674453838202743e-14,
+                    9.567082039817725e-09,
+                    0.4539904997400553,
+                    -0.8910065241881089,
+                    1.877655868204229e-08,
+                    0.8910065241881086,
+                    0.45399049974005534
+                  ],
+                  "radius": 200.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    0.0,
+                    6.28318530717959,
+                    0.0,
+                    300.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 5.348842291241073,
+                  "worst_index": 255,
+                  "end_errors": [
+                    2.230784161838533e-06,
+                    2.230784161838533e-06
+                  ],
+                  "passing_samples": 256,
+                  "passed": false,
+                  "max_equivalent_period_lift_difference": 3.228085657724633e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    3.4366166081767346e-06,
+                    9.091195352084469e-09
+                  ]
+                },
+                "2": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-swapped-f2.brep",
+                    "sha256": "d238a62a2b77855243435bad74eef5d8a77daa44be1fe72778cf8931780e8dba"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-swapped-c2d1_1.draw",
+                    "sha256": "743d8c9b572e2e61bd25134670e07aecdf1fc8d63d41830a34fed9f956807eb9"
+                  },
+                  "physical_face": 2,
+                  "returned_slot": 1,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    0.0,
+                    0.0,
+                    -150.0,
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -1.0,
+                    0.0,
+                    -0.0,
+                    -0.0,
+                    -1.0
+                  ],
+                  "radius": 750.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    -4.1389114358025836e-13,
+                    6.283185307179586,
+                    -708.0,
+                    0.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 93.68897465863373,
+                  "worst_index": 6,
+                  "end_errors": [
+                    93.68897465491935,
+                    93.68897465491935
+                  ],
+                  "passing_samples": 0,
+                  "passed": false,
+                  "max_equivalent_period_lift_difference": 8.920070983137529e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    8.218403735327229e-11,
+                    3.004561222041957e-08
+                  ]
+                }
+              },
+              "passed": false,
+              "raw": {
+                "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-read.log",
+                "sha256": "8074b30eb39a8006e00a291d39a7d920a505246c94af04f12ee46389b2843610"
+              },
+              "cross_order_max_distance": 6.404406991763894e-08,
+              "cross_order_tangent_cosine_range": [
+                -1.0,
+                1.0000000000000004
+              ],
+              "projected_endpoint_parameters": [
+                0.0,
+                0.0
+              ],
+              "source_endpoint_parameters": [
+                0.0,
+                1.0
+              ],
+              "registered": {
+                "passed": false,
+                "assertions": 5,
+                "failures": 2,
+                "receipt": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-swapped-receipt.json",
+                  "sha256": "dc89a2323f9a058071c30fac7cf80678b132db43d18a38f61cf88bb645a73f70"
+                }
+              },
+              "face2_spatial_displacement_range": [
+                93.68897676356767,
+                93.68897676357295
+              ],
+              "whole_domain_injection": {
+                "pole_count": 247,
+                "max_pole_translation_error": 0.0,
+                "analytic_chord": 93.6889767635703,
+                "displacement_error_bound": 1e-10,
+                "before": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-swapped-pre-shift.draw",
+                  "sha256": "b9f42dc64d453ab03b7bd5c1a18bc38b45ee64154f2d64cb8868442e7f9361c5"
+                },
+                "after": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv/wrong-side-swapped-c2d1_1.draw",
+                  "sha256": "743d8c9b572e2e61bd25134670e07aecdf1fc8d63d41830a34fed9f956807eb9"
+                }
+              }
+            }
+          }
+        }
+      },
+      "paired-reference": {
+        "originals": {
+          "standard": {
+            "passed": true,
+            "assertions": 5,
+            "failures": 0,
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/registered-standard-receipt.json",
+              "sha256": "497078ae6f8e8a04f6ba3b97310b6aebf887c1e1ff1d38a04e7ac32163f5759b"
+            }
+          },
+          "swapped": {
+            "passed": true,
+            "assertions": 5,
+            "failures": 0,
+            "receipt": {
+              "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/registered-swapped-receipt.json",
+              "sha256": "342d937fa1115caa35e7219b309ffa70216fde59809c9449b97b50517cef8762"
+            }
+          }
+        },
+        "controls": {
+          "healthy-1": {
+            "standard": {
+              "sides": {
+                "1": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-1-standard-f1.brep",
+                    "sha256": "a4db020d6d5bb9ca6dbacb91a703f2adbf4ec684a3b704f270a8798a8da0222e"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-1-standard-c2d1_1.draw",
+                    "sha256": "301d36e89fa6d91cb49e2377f91a3b12d77a41e55ce8e6f03bcd3fb24f8e813f"
+                  },
+                  "physical_face": 1,
+                  "returned_slot": 1,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    8.245013655747e-07,
+                    576.45175122543,
+                    122.68078250809,
+                    0.9999999999999999,
+                    -2.1073400643811513e-08,
+                    -4.674453838202743e-14,
+                    9.567082039817725e-09,
+                    0.4539904997400553,
+                    -0.8910065241881089,
+                    1.877655868204229e-08,
+                    0.8910065241881086,
+                    0.45399049974005534
+                  ],
+                  "radius": 200.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    0.0,
+                    6.28318530717959,
+                    0.0,
+                    300.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.4040689393497082e-06,
+                  "worst_index": 185,
+                  "end_errors": [
+                    2.230784161838533e-06,
+                    2.2307841618385863e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 3.228085657724633e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    2.878808302853031e-11,
+                    1.2281361705390736e-08
+                  ]
+                },
+                "2": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-1-standard-f2.brep",
+                    "sha256": "d238a62a2b77855243435bad74eef5d8a77daa44be1fe72778cf8931780e8dba"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-1-standard-c2d2_1.draw",
+                    "sha256": "d14706f5e2a29633d355e07be67e38182492bade1de2683f5f0289002fe55f9d"
+                  },
+                  "physical_face": 2,
+                  "returned_slot": 2,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    0.0,
+                    0.0,
+                    -150.0,
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -1.0,
+                    0.0,
+                    -0.0,
+                    -0.0,
+                    -1.0
+                  ],
+                  "radius": 750.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    -4.1389114358025836e-13,
+                    6.283185307179586,
+                    -708.0,
+                    0.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.3217739043459754e-06,
+                  "worst_index": 184,
+                  "end_errors": [
+                    2.2307837355128982e-06,
+                    2.2307837355128982e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 8.824471647278656e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    8.446132682138341e-11,
+                    2.7464636787044583e-08
+                  ]
+                }
+              },
+              "passed": true,
+              "raw": {
+                "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-1-read.log",
+                "sha256": "eb3b965b24b6e11fdd2062178f2ab10c5c80d21953d995f827ee776f9e01153b"
+              },
+              "cross_order_max_distance": 6.593887303281048e-08,
+              "cross_order_tangent_cosine_range": [
+                0.9999999999999997,
+                1.0000000000000004
+              ],
+              "projected_endpoint_parameters": [
+                0.0,
+                0.0
+              ],
+              "source_endpoint_parameters": [
+                0.0,
+                1.0
+              ],
+              "registered": {
+                "passed": true,
+                "assertions": 5,
+                "failures": 0,
+                "receipt": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-1-standard-receipt.json",
+                  "sha256": "1f88255cbf7d75290606c969bb8cf60f39b7a5f4470e6e733bbf9afedbfd283a"
+                }
+              }
+            },
+            "swapped": {
+              "sides": {
+                "1": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-1-swapped-f1.brep",
+                    "sha256": "a4db020d6d5bb9ca6dbacb91a703f2adbf4ec684a3b704f270a8798a8da0222e"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-1-swapped-c2d2_1.draw",
+                    "sha256": "ffa68435fe8fb02cebca6a0787839ffecd01616b7f08c89cb43c1bef42ac6a40"
+                  },
+                  "physical_face": 1,
+                  "returned_slot": 2,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    8.245013655747e-07,
+                    576.45175122543,
+                    122.68078250809,
+                    0.9999999999999999,
+                    -2.1073400643811513e-08,
+                    -4.674453838202743e-14,
+                    9.567082039817725e-09,
+                    0.4539904997400553,
+                    -0.8910065241881089,
+                    1.877655868204229e-08,
+                    0.8910065241881086,
+                    0.45399049974005534
+                  ],
+                  "radius": 200.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    0.0,
+                    6.28318530717959,
+                    0.0,
+                    300.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.404259913778942e-06,
+                  "worst_index": 185,
+                  "end_errors": [
+                    2.230784161838533e-06,
+                    2.2307841618385863e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 3.0212691549237007e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    2.878897120695001e-11,
+                    1.228306700795656e-08
+                  ]
+                },
+                "2": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-1-swapped-f2.brep",
+                    "sha256": "d238a62a2b77855243435bad74eef5d8a77daa44be1fe72778cf8931780e8dba"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-1-swapped-c2d1_1.draw",
+                    "sha256": "713c5404a3534d67c4100f15ef0515bb2f4115a60ff9b12e25acc16a9368f572"
+                  },
+                  "physical_face": 2,
+                  "returned_slot": 1,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    0.0,
+                    0.0,
+                    -150.0,
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -1.0,
+                    0.0,
+                    -0.0,
+                    -0.0,
+                    -1.0
+                  ],
+                  "radius": 750.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    -4.1389114358025836e-13,
+                    6.283185307179586,
+                    -708.0,
+                    0.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.3217911086225776e-06,
+                  "worst_index": 184,
+                  "end_errors": [
+                    2.2307837355128982e-06,
+                    2.2307837355128982e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 9.183335362992872e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    8.446043864296371e-11,
+                    2.7462874641059898e-08
+                  ]
+                }
+              },
+              "passed": true,
+              "raw": {
+                "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-1-read.log",
+                "sha256": "eb3b965b24b6e11fdd2062178f2ab10c5c80d21953d995f827ee776f9e01153b"
+              },
+              "cross_order_max_distance": 6.593824197077504e-08,
+              "cross_order_tangent_cosine_range": [
+                0.9999999999999997,
+                1.0000000000000004
+              ],
+              "projected_endpoint_parameters": [
+                0.0,
+                0.0
+              ],
+              "source_endpoint_parameters": [
+                0.0,
+                1.0
+              ],
+              "registered": {
+                "passed": true,
+                "assertions": 5,
+                "failures": 0,
+                "receipt": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-1-swapped-receipt.json",
+                  "sha256": "5afc7b29f8d777c25e6d375d0f845ba27d0d1678d6aa25634ab211a84766e334"
+                }
+              }
+            }
+          },
+          "healthy-2": {
+            "standard": {
+              "sides": {
+                "1": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-2-standard-f1.brep",
+                    "sha256": "a4db020d6d5bb9ca6dbacb91a703f2adbf4ec684a3b704f270a8798a8da0222e"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-2-standard-c2d1_1.draw",
+                    "sha256": "301d36e89fa6d91cb49e2377f91a3b12d77a41e55ce8e6f03bcd3fb24f8e813f"
+                  },
+                  "physical_face": 1,
+                  "returned_slot": 1,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    8.245013655747e-07,
+                    576.45175122543,
+                    122.68078250809,
+                    0.9999999999999999,
+                    -2.1073400643811513e-08,
+                    -4.674453838202743e-14,
+                    9.567082039817725e-09,
+                    0.4539904997400553,
+                    -0.8910065241881089,
+                    1.877655868204229e-08,
+                    0.8910065241881086,
+                    0.45399049974005534
+                  ],
+                  "radius": 200.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    0.0,
+                    6.28318530717959,
+                    0.0,
+                    300.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.4040689393497082e-06,
+                  "worst_index": 185,
+                  "end_errors": [
+                    2.230784161838533e-06,
+                    2.2307841618385863e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 3.228085657724633e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    2.878808302853031e-11,
+                    1.2281361705390736e-08
+                  ]
+                },
+                "2": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-2-standard-f2.brep",
+                    "sha256": "d238a62a2b77855243435bad74eef5d8a77daa44be1fe72778cf8931780e8dba"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-2-standard-c2d2_1.draw",
+                    "sha256": "d14706f5e2a29633d355e07be67e38182492bade1de2683f5f0289002fe55f9d"
+                  },
+                  "physical_face": 2,
+                  "returned_slot": 2,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    0.0,
+                    0.0,
+                    -150.0,
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -1.0,
+                    0.0,
+                    -0.0,
+                    -0.0,
+                    -1.0
+                  ],
+                  "radius": 750.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    -4.1389114358025836e-13,
+                    6.283185307179586,
+                    -708.0,
+                    0.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.3217739043459754e-06,
+                  "worst_index": 184,
+                  "end_errors": [
+                    2.2307837355128982e-06,
+                    2.2307837355128982e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 8.824471647278656e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    8.446132682138341e-11,
+                    2.7464636787044583e-08
+                  ]
+                }
+              },
+              "passed": true,
+              "raw": {
+                "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-2-read.log",
+                "sha256": "eb3b965b24b6e11fdd2062178f2ab10c5c80d21953d995f827ee776f9e01153b"
+              },
+              "cross_order_max_distance": 6.593887303281048e-08,
+              "cross_order_tangent_cosine_range": [
+                0.9999999999999997,
+                1.0000000000000004
+              ],
+              "projected_endpoint_parameters": [
+                0.0,
+                0.0
+              ],
+              "source_endpoint_parameters": [
+                0.0,
+                1.0
+              ],
+              "registered": {
+                "passed": true,
+                "assertions": 5,
+                "failures": 0,
+                "receipt": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-2-standard-receipt.json",
+                  "sha256": "8dbbfc4431434d9ba855551825a49eb0632fcad29f5231cc099453d4fc649bf1"
+                }
+              }
+            },
+            "swapped": {
+              "sides": {
+                "1": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-2-swapped-f1.brep",
+                    "sha256": "a4db020d6d5bb9ca6dbacb91a703f2adbf4ec684a3b704f270a8798a8da0222e"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-2-swapped-c2d2_1.draw",
+                    "sha256": "ffa68435fe8fb02cebca6a0787839ffecd01616b7f08c89cb43c1bef42ac6a40"
+                  },
+                  "physical_face": 1,
+                  "returned_slot": 2,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    8.245013655747e-07,
+                    576.45175122543,
+                    122.68078250809,
+                    0.9999999999999999,
+                    -2.1073400643811513e-08,
+                    -4.674453838202743e-14,
+                    9.567082039817725e-09,
+                    0.4539904997400553,
+                    -0.8910065241881089,
+                    1.877655868204229e-08,
+                    0.8910065241881086,
+                    0.45399049974005534
+                  ],
+                  "radius": 200.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    0.0,
+                    6.28318530717959,
+                    0.0,
+                    300.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.404259913778942e-06,
+                  "worst_index": 185,
+                  "end_errors": [
+                    2.230784161838533e-06,
+                    2.2307841618385863e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 3.0212691549237007e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    2.878897120695001e-11,
+                    1.228306700795656e-08
+                  ]
+                },
+                "2": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-2-swapped-f2.brep",
+                    "sha256": "d238a62a2b77855243435bad74eef5d8a77daa44be1fe72778cf8931780e8dba"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-2-swapped-c2d1_1.draw",
+                    "sha256": "713c5404a3534d67c4100f15ef0515bb2f4115a60ff9b12e25acc16a9368f572"
+                  },
+                  "physical_face": 2,
+                  "returned_slot": 1,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    0.0,
+                    0.0,
+                    -150.0,
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -1.0,
+                    0.0,
+                    -0.0,
+                    -0.0,
+                    -1.0
+                  ],
+                  "radius": 750.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    -4.1389114358025836e-13,
+                    6.283185307179586,
+                    -708.0,
+                    0.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.3217911086225776e-06,
+                  "worst_index": 184,
+                  "end_errors": [
+                    2.2307837355128982e-06,
+                    2.2307837355128982e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 9.183335362992872e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    8.446043864296371e-11,
+                    2.7462874641059898e-08
+                  ]
+                }
+              },
+              "passed": true,
+              "raw": {
+                "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-2-read.log",
+                "sha256": "eb3b965b24b6e11fdd2062178f2ab10c5c80d21953d995f827ee776f9e01153b"
+              },
+              "cross_order_max_distance": 6.593824197077504e-08,
+              "cross_order_tangent_cosine_range": [
+                0.9999999999999997,
+                1.0000000000000004
+              ],
+              "projected_endpoint_parameters": [
+                0.0,
+                0.0
+              ],
+              "source_endpoint_parameters": [
+                0.0,
+                1.0
+              ],
+              "registered": {
+                "passed": true,
+                "assertions": 5,
+                "failures": 0,
+                "receipt": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/healthy-2-swapped-receipt.json",
+                  "sha256": "5afc7b29f8d777c25e6d375d0f845ba27d0d1678d6aa25634ab211a84766e334"
+                }
+              }
+            }
+          },
+          "wrong-side": {
+            "standard": {
+              "sides": {
+                "1": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-standard-f1.brep",
+                    "sha256": "a4db020d6d5bb9ca6dbacb91a703f2adbf4ec684a3b704f270a8798a8da0222e"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-standard-c2d1_1.draw",
+                    "sha256": "301d36e89fa6d91cb49e2377f91a3b12d77a41e55ce8e6f03bcd3fb24f8e813f"
+                  },
+                  "physical_face": 1,
+                  "returned_slot": 1,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    8.245013655747e-07,
+                    576.45175122543,
+                    122.68078250809,
+                    0.9999999999999999,
+                    -2.1073400643811513e-08,
+                    -4.674453838202743e-14,
+                    9.567082039817725e-09,
+                    0.4539904997400553,
+                    -0.8910065241881089,
+                    1.877655868204229e-08,
+                    0.8910065241881086,
+                    0.45399049974005534
+                  ],
+                  "radius": 200.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    0.0,
+                    6.28318530717959,
+                    0.0,
+                    300.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.4040689393497082e-06,
+                  "worst_index": 185,
+                  "end_errors": [
+                    2.230784161838533e-06,
+                    2.2307841618385863e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 3.228085657724633e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    2.878808302853031e-11,
+                    1.2281361705390736e-08
+                  ]
+                },
+                "2": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-standard-f2.brep",
+                    "sha256": "d238a62a2b77855243435bad74eef5d8a77daa44be1fe72778cf8931780e8dba"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-standard-c2d2_1.draw",
+                    "sha256": "4b0c0f012589df9fdc8027bf5e1e320e0d623994c35fa3f12c3899e53ae0b338"
+                  },
+                  "physical_face": 2,
+                  "returned_slot": 2,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    0.0,
+                    0.0,
+                    -150.0,
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -1.0,
+                    0.0,
+                    -0.0,
+                    -0.0,
+                    -1.0
+                  ],
+                  "radius": 750.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    -4.1389114358025836e-13,
+                    6.283185307179586,
+                    -708.0,
+                    0.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 93.68897465864634,
+                  "worst_index": 6,
+                  "end_errors": [
+                    93.68897465491935,
+                    93.68897465491935
+                  ],
+                  "passing_samples": 0,
+                  "passed": false,
+                  "max_equivalent_period_lift_difference": 8.824471647278656e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    8.446221499980311e-11,
+                    2.7464636787044583e-08
+                  ]
+                }
+              },
+              "passed": false,
+              "raw": {
+                "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-read.log",
+                "sha256": "719d89f375bc52dfc068d9e007ac6b1443668527989b9037340ce82a91c201ee"
+              },
+              "cross_order_max_distance": 6.593887303281048e-08,
+              "cross_order_tangent_cosine_range": [
+                0.9999999999999997,
+                1.0000000000000004
+              ],
+              "projected_endpoint_parameters": [
+                0.0,
+                0.0
+              ],
+              "source_endpoint_parameters": [
+                0.0,
+                1.0
+              ],
+              "registered": {
+                "passed": true,
+                "assertions": 5,
+                "failures": 0,
+                "receipt": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-standard-receipt.json",
+                  "sha256": "b05cd2159b1163cf84b12e76157b7c5b1a6cbf32b6c4c902a9e4c156f95693a5"
+                }
+              },
+              "face2_spatial_displacement_range": [
+                93.68897676356829,
+                93.68897676357166
+              ],
+              "whole_domain_injection": {
+                "pole_count": 198,
+                "max_pole_translation_error": 0.0,
+                "analytic_chord": 93.6889767635703,
+                "displacement_error_bound": 1e-10,
+                "before": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-standard-pre-shift.draw",
+                  "sha256": "d14706f5e2a29633d355e07be67e38182492bade1de2683f5f0289002fe55f9d"
+                },
+                "after": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-standard-c2d2_1.draw",
+                  "sha256": "4b0c0f012589df9fdc8027bf5e1e320e0d623994c35fa3f12c3899e53ae0b338"
+                }
+              }
+            },
+            "swapped": {
+              "sides": {
+                "1": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-swapped-f1.brep",
+                    "sha256": "a4db020d6d5bb9ca6dbacb91a703f2adbf4ec684a3b704f270a8798a8da0222e"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-swapped-c2d2_1.draw",
+                    "sha256": "ffa68435fe8fb02cebca6a0787839ffecd01616b7f08c89cb43c1bef42ac6a40"
+                  },
+                  "physical_face": 1,
+                  "returned_slot": 2,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    8.245013655747e-07,
+                    576.45175122543,
+                    122.68078250809,
+                    0.9999999999999999,
+                    -2.1073400643811513e-08,
+                    -4.674453838202743e-14,
+                    9.567082039817725e-09,
+                    0.4539904997400553,
+                    -0.8910065241881089,
+                    1.877655868204229e-08,
+                    0.8910065241881086,
+                    0.45399049974005534
+                  ],
+                  "radius": 200.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    0.0,
+                    6.28318530717959,
+                    0.0,
+                    300.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 2.404259913778942e-06,
+                  "worst_index": 185,
+                  "end_errors": [
+                    2.230784161838533e-06,
+                    2.2307841618385863e-06
+                  ],
+                  "passing_samples": 257,
+                  "passed": true,
+                  "max_equivalent_period_lift_difference": 3.0212691549237007e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    2.878897120695001e-11,
+                    1.228306700795656e-08
+                  ]
+                },
+                "2": {
+                  "face_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-swapped-f2.brep",
+                    "sha256": "d238a62a2b77855243435bad74eef5d8a77daa44be1fe72778cf8931780e8dba"
+                  },
+                  "pcurve_artifact": {
+                    "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-swapped-c2d1_1.draw",
+                    "sha256": "1108e4c67bd281bd9c56ec7a5c9cd786587f4e0128ff2a846ad037ea6a75f8c1"
+                  },
+                  "physical_face": 2,
+                  "returned_slot": 1,
+                  "surface_type": "cylinder",
+                  "orientation": 0,
+                  "periods": [
+                    6.283185307179586,
+                    0.0
+                  ],
+                  "world_frame": [
+                    0.0,
+                    0.0,
+                    -150.0,
+                    1.0,
+                    0.0,
+                    -0.0,
+                    0.0,
+                    -1.0,
+                    0.0,
+                    -0.0,
+                    -0.0,
+                    -1.0
+                  ],
+                  "radius": 750.0,
+                  "semi_angle": 0.0,
+                  "face_uv_bounds": [
+                    -4.1389114358025836e-13,
+                    6.283185307179586,
+                    -708.0,
+                    0.0
+                  ],
+                  "sample_count": 257,
+                  "range": [
+                    0.0,
+                    1.0
+                  ],
+                  "max_error": 93.68897465859384,
+                  "worst_index": 6,
+                  "end_errors": [
+                    93.68897465491935,
+                    93.68897465491935
+                  ],
+                  "passing_samples": 0,
+                  "passed": false,
+                  "max_equivalent_period_lift_difference": 8.920070983137529e-13,
+                  "cross_order_spatial_matches": 257,
+                  "max_wrapped_uv_difference_at_spatial_matches": [
+                    8.445866228612431e-11,
+                    2.7462874641059898e-08
+                  ]
+                }
+              },
+              "passed": false,
+              "raw": {
+                "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-read.log",
+                "sha256": "719d89f375bc52dfc068d9e007ac6b1443668527989b9037340ce82a91c201ee"
+              },
+              "cross_order_max_distance": 6.593824197077504e-08,
+              "cross_order_tangent_cosine_range": [
+                0.9999999999999997,
+                1.0000000000000004
+              ],
+              "projected_endpoint_parameters": [
+                0.0,
+                0.0
+              ],
+              "source_endpoint_parameters": [
+                0.0,
+                1.0
+              ],
+              "registered": {
+                "passed": true,
+                "assertions": 5,
+                "failures": 0,
+                "receipt": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-swapped-receipt.json",
+                  "sha256": "f48c1909eaa07292f7e00a618d024fdcd3986622dc892d989b85bcc754945b01"
+                }
+              },
+              "face2_spatial_displacement_range": [
+                93.68897676356829,
+                93.68897676357233
+              ],
+              "whole_domain_injection": {
+                "pole_count": 198,
+                "max_pole_translation_error": 0.0,
+                "analytic_chord": 93.6889767635703,
+                "displacement_error_bound": 1e-10,
+                "before": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-swapped-pre-shift.draw",
+                  "sha256": "713c5404a3534d67c4100f15ef0515bb2f4115a60ff9b12e25acc16a9368f572"
+                },
+                "after": {
+                  "path": "research/kernel-regression-v1/rollout-v17/receipts/uv-reference/wrong-side-swapped-c2d1_1.draw",
+                  "sha256": "1108e4c67bd281bd9c56ec7a5c9cd786587f4e0128ff2a846ad037ea6a75f8c1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "interpretation": "A baseline failure is pre-existing. Paired reference positives and single-side injected controls are separate from registered scores."
+  }
+}

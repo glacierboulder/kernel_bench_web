@@ -1,0 +1,18 @@
+CURVE EvalD2 0 2 2 0.25
+VECTOR EvalD2 origin 0 0 0
+VECTOR EvalD2 x 1 0 0
+VECTOR EvalD2 y 0 1 0
+VECTOR EvalD2 n 0 0 1
+VECTOR EvalD2 point 2.25 0 0
+VECTOR EvalD2 d1 0 2.25 0
+VECTOR EvalD2 d2 -2.25 0 0
+CURVE EvalD3 0 2 2 0.5
+VECTOR EvalD3 origin 0 0 0
+VECTOR EvalD3 x 1 0 -0
+VECTOR EvalD3 y -0 1 0
+VECTOR EvalD3 n 0 0 1
+VECTOR EvalD3 point 2.5 0 0
+VECTOR EvalD3 d1 -0 2.5 0
+VECTOR EvalD3 d2 -2.5 -0 0
+EvalD3 D2.X=-2.5 EvalD2 D2.X=-2.25 expected=-2.25
+verdict=fail

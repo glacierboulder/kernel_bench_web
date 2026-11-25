@@ -1,0 +1,11 @@
+FACE 1 0 -1 1 -5 5 0 0 0 1 0 -0 -0 1 0
+FACE 2 0 -5 5 -1 1 0 0 0 -0 1 0 0 -0 1
+VERTICES 0 -5 0 0 5 0
+EDGE 0 -5 5 9.9999999999999995e-08
+C3 Geom_Line
+PC 1 Geom2d_TrimmedCurve -5 5
+SPAN 1 -5 5 1 0 0 0 0
+PC 2 Geom2d_TrimmedCurve -5 5
+SPAN 2 -5 5 1 0 0 0 0
+C3END -5 0 -5 0
+C3END 5 0 5 0

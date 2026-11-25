@@ -1,0 +1,26 @@
+{
+  "case": "afe1c3b0a98f8439f5a2972b3a3ca1bdadf79505b2fb9fe569ad7db9a438d598",
+  "runner": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+  "exit": 0,
+  "result": {
+    "protocol": "draw_case_oracle_v1",
+    "passed": false,
+    "test_done_marker": false,
+    "return_code": 0,
+    "timed_out": false,
+    "assertions": 5,
+    "numeric_assertions": 4,
+    "failed_assertions": 2,
+    "tcl_error_detected": true,
+    "expected_oracle_error": true,
+    "infrastructure_tcl_error": false,
+    "occt_error_detected": false,
+    "oracle_summary_found": false,
+    "stdout_tail": "DRAW is running in batch mode\nPROBE_DOMAIN c_1 0 1\nPROBE_DOMAIN c2d1_1 0 1\nPROBE_DOMAIN c2d2_1 0 1\nPROBE_ORDER swapped physical_face2_shift=0.125\nBENCH_ASSERT_PASS kind=expression label={reversed pair retains one branch} detail=value=1\nBENCH_ASSERT_PASS kind=numeric label={first reversed pcurve has finite length} detail={actual=926.14996318963085 lower=100 upper=1500}\nBENCH_ASSERT_PASS kind=numeric label={second reversed pcurve has finite length} detail={actual=422.95543295058678 lower=100 upper=1500}\n",
+    "stderr_tail": "BENCH_ASSERT_FAIL kind=numeric label={reversed pair tolerance bound} detail={actual=400.30075250765805 lower=0 upper=2.5e-6}\nBENCH_ASSERT_FAIL kind=numeric label={reversed 3D length invariant} detail={actual=1368.9823242007424 expected=1340.6982492258749 tolerance=0.02 absolute_error=28.284074974867508}\nBENCH_ORACLE_FAILED assertions=5 failures=2\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"/tmp/working-cases/swapped.tcl\" line 130)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+    "full_log_failure_detected": true,
+    "script": "/tmp/working-cases/swapped.tcl",
+    "draw_executable": "/workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+    "elapsed_seconds": 0.064
+  }
+}

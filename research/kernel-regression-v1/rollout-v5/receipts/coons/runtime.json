@@ -1,0 +1,28 @@
+{
+  "source_id": "occt801-b8f597c67781-coons",
+  "toolchain": "occt1115-coons-gcc",
+  "libraries": {
+    "libTKBRep.so": "63e2067951b1691997c2e8eefa3845ff612bafd65365c871e525991ab16b49d6",
+    "libTKG2d.so": "5ca4a6009da1a68e67e81bf541f10ad41a67cb2721223c4361d22074fc6e1c14",
+    "libTKG3d.so": "d1eae34e1bd8bb3cc441c479b84ada7d8ac06c0befecbd938b348ef316a9448d",
+    "libTKGeomAlgo.so": "11fe1c94d73c0b83e3aef16529d0a625a4eab3ea1c91eac1bb1feb69fedd0d59",
+    "libTKGeomBase.so": "823f31ce6e7b4a4f00d40d0ce3b1f13bb212c9b2931140fa5401bce28db6de19",
+    "libTKMath.so": "bf09180f8f18304942460040d8acfd2e9647259834194c433bcf6d5054eb4d9b",
+    "libTKernel.so": "f2a89759f01dc319958126323048074ae203e5c89028c188598a8e44bc77f36b"
+  },
+  "config": {
+    "BUILD_ADDITIONAL_TOOLKITS": "TKGeomAlgo",
+    "BUILD_MODULE_ApplicationFramework": "OFF",
+    "BUILD_MODULE_DataExchange": "OFF",
+    "BUILD_MODULE_Draw": "OFF",
+    "BUILD_MODULE_FoundationClasses": "OFF",
+    "BUILD_MODULE_ModelingAlgorithms": "OFF",
+    "BUILD_MODULE_ModelingData": "OFF",
+    "BUILD_MODULE_Visualization": "OFF",
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+    "CMAKE_CXX_FLAGS_RELEASE": "-O3 -DNDEBUG"
+  },
+  "cache_sha256": "46c1163a44ace4d3387d0644d0cde89f115abece14f5b24fe1545eb4993e2eb5",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+}

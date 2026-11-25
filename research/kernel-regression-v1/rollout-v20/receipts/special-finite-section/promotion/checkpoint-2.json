@@ -1,0 +1,34 @@
+{
+  "suite": {
+    "id": "occt-25818-version-regression",
+    "version": "1",
+    "path": "evaluation/suites/regression/occt-25818-version-regression/1.json"
+  },
+  "source_id": "occt-single20-m25818-32ab8bfc4f09",
+  "toolchain": "occt-v4-clang10-o0-tcl86",
+  "checkpoint": "finite-section",
+  "status": "passed",
+  "runner_sha256": "28b3a0baffa7fdf047f91fa33ed5f5c68e422b48ebecef84c3666296187ee93d",
+  "assets": {
+    "evaluation/cases/version-regressions/1/lines.cxx": "8f1d70a34b631e8a1a2ce2e1ea35615032768b1730763d7d93962ede5b308ce9",
+    "evaluation/cases/version-regressions/1/finite-section/fixture.txt": "37a08bfa1b82b1f96f0cfc6feeadc4852e998dd6dfd07e57675619f343397d1d",
+    "evaluation/cases/version-regressions/1/finite-section/healthy.brep": "0570e5172378ce5ae6ab1bf1f8f823fa85652262630eadb8fb7c456c8013d250",
+    "evaluation/cases/version-regressions/1/finite-section/negative.brep": "1b1839464919f34e9bf03aa62dda4bc9526cf0aabedc836d18855f4383c0a27c",
+    "evaluation/cases/version-regressions/1/finite-section/truncated.brep": "98d9c640e43aaa92a7520dae5a1dc9634fbf838c0d71f6cd37a7df75b710f9d6"
+  },
+  "raw": {
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 0.369,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.008,
+      "output_tail": "METRICS segment_y=-20 20\nMETRICS segment_y=-20 20\nMETRICS segment_y=-17 23\nMETRICS segment_y=-20 12\nnative pass\nhealthy pass\nnegative shifted\ntruncated truncated\nTEST_DONE\n",
+      "timed_out": false
+    }
+  }
+}

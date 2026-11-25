@@ -1,0 +1,27 @@
+{
+  "host": "ws01",
+  "run": "2b7242d38c5efba7",
+  "patch": "b187fd86178b05251b6ecd379a49785fc58a998899adce24acbc5329ec71dfd7",
+  "case_hashes": {
+    "evaluation/cases/version-regressions/1/fillet-gap.cxx": "2159368b5ef51b5a9587036df90abf38f5c5e0f376b720752041c84d7c067aa8",
+    "evaluation/cases/authoring-fillet-20261112/occt-github-1177/1/gap.txt": "0ffe1abf5f1a57cc20a81f24d38b43b697fcb0342365afe608917192288de92f",
+    "evaluation/cases/version-regressions/1/fillet-gap/healthy-1-result.brep": "47c7d9ffd889a2e66c09d953f5e7e415da2e24af808212f9b94f7554006b5691",
+    "evaluation/cases/version-regressions/1/fillet-gap/healthy-2-result.brep": "47c7d9ffd889a2e66c09d953f5e7e415da2e24af808212f9b94f7554006b5691",
+    "evaluation/cases/version-regressions/1/fillet-gap/missing-result.brep": "493c445611507fe1de7f6eb389d834da50089f0620b1a799b3bd038fc4e823b4",
+    "evaluation/cases/version-regressions/1/fillet-gap/wide-result.brep": "96b6643296a7b6713bb16f558b5dd18aad025bcf24b7c6b5d1d688c75023ecf4",
+    "evaluation/cases/version-regressions/1/fillet-gap/shifted-result.brep": "c425530d98be185b429225bf488a081d964b1b7c129c21336adb42a9b2cd3755"
+  },
+  "runner": "144cbdc3bc0bef78180e0e8c107149aa8ffe9b86709af51f61f97d8225fedca5",
+  "build_helper": "77aaa283436d3d2d2c03498a5c208c9f12408093764635afd2adb76f9b09874e",
+  "receipts": {
+    "cli.json": "2ba9e7f24d80e5e330162c08e9e470ff3bf8bfb8265fc7c46ec79495935bfdfe",
+    "cli.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "driver.json": "92b3a0567e985b4bf05c8bead19d2cb78ef222a1c0daf2940ddebb9991e9e7f4",
+    "internal.json": "1d594d66bc275761dd7ba810ded507962c45a15b02a165b3c9ae2ae02e6a47cb",
+    "driver.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "snapshot.json": "9006b3d3bb51bb1d39b6f4c35416294fc3f1dd586a81532acde83698df09663e",
+    "suite.json": "add817a6488997d4e647e268431bdfba37b2e64bd6229572ae0679b267cec211",
+    "source-lock.json": "2c2489229dacc65fd4a7e9b342e563069da9c7eab9f6ad22a68780352c2b8d73",
+    "toolchain.json": "a18f4fd06a5096a44f272cb7d636d55e3af329d603a07c33862650590f7ce209"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source_id": "occt801-1701-b-b8f597c67781",
+  "toolchain": "occt8-gcc13-cpp-20261112",
+  "config": {
+    "BUILD_ADDITIONAL_TOOLKITS": "TKFillet;TKPrim",
+    "BUILD_MODULE_ApplicationFramework": "OFF",
+    "BUILD_MODULE_DataExchange": "OFF",
+    "BUILD_MODULE_Draw": "OFF",
+    "BUILD_MODULE_FoundationClasses": "OFF",
+    "BUILD_MODULE_ModelingAlgorithms": "OFF",
+    "BUILD_MODULE_ModelingData": "OFF",
+    "BUILD_MODULE_Visualization": "OFF",
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+    "CMAKE_CXX_FLAGS_RELEASE": "-O3 -DNDEBUG"
+  },
+  "libraries": {
+    "libTKBO.so": "f3891f982ea01651e60ee196c2bb789ad1dd551fafa88ace1a8089246ed4500e",
+    "libTKBRep.so": "63e2067951b1691997c2e8eefa3845ff612bafd65365c871e525991ab16b49d6",
+    "libTKBool.so": "dbc9edd6d898a173fe3cbc9943647e9f001f17b71683f7b66f91d63c7639a7f7",
+    "libTKFillet.so": "60ee6d780830279c24cd3efdc58febb0d3a9bb941a39a3c825f81a49e31cdee2",
+    "libTKG2d.so": "5ca4a6009da1a68e67e81bf541f10ad41a67cb2721223c4361d22074fc6e1c14",
+    "libTKG3d.so": "d1eae34e1bd8bb3cc441c479b84ada7d8ac06c0befecbd938b348ef316a9448d",
+    "libTKGeomAlgo.so": "11fe1c94d73c0b83e3aef16529d0a625a4eab3ea1c91eac1bb1feb69fedd0d59",
+    "libTKGeomBase.so": "823f31ce6e7b4a4f00d40d0ce3b1f13bb212c9b2931140fa5401bce28db6de19",
+    "libTKMath.so": "bf09180f8f18304942460040d8acfd2e9647259834194c433bcf6d5054eb4d9b",
+    "libTKPrim.so": "c4dc456b5efa555b855c18f321c7e481279d27d0b2b1368bc53afa2c8eba9204",
+    "libTKShHealing.so": "b289531dbbbb294ffe46bd0319ccb51efba7e87a1ba560d585d86e14143a84c1",
+    "libTKTopAlgo.so": "0cc7393e622667899c12d2e1dc939fa858ca0ccd8bbd142de18efa4e6e3019d7",
+    "libTKernel.so": "f2a89759f01dc319958126323048074ae203e5c89028c188598a8e44bc77f36b"
+  },
+  "cache_sha256": "dfad318cd8a1c560a8d0535753ccea3f3d0ec152ede432af04f7c7abc85422ce",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+}

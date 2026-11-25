@@ -1,0 +1,57 @@
+{
+  "checkpoints": [
+    {
+      "case": "evaluation/cases/version-regressions/1/line-fillet.cxx",
+      "category": "regression",
+      "id": "line-fillet",
+      "issue_id": "occt-github-1702",
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "issues/occt-github-1702/1/public/inputs/bar_plate_r1.6.brep",
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1702/1/line.txt",
+          "evaluation/cases/version-regressions/1/line-fillet/healthy-1-result.brep",
+          "evaluation/cases/version-regressions/1/line-fillet/healthy-2-result.brep",
+          "evaluation/cases/version-regressions/1/line-fillet/wrong-edge-result.brep"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo",
+          "TKG2d",
+          "dl"
+        ],
+        "stdout_contains": [
+          "CONTROL input changed_side=0 wrong_target=5 fixed=8",
+          "CONTROL native changed_side=-1 wrong_target=0 fixed=8",
+          "CONTROL healthy-1 changed_side=-1 wrong_target=0 fixed=8",
+          "CONTROL healthy-2 changed_side=-1 wrong_target=0 fixed=8",
+          "CONTROL wrong-edge changed_side=1 wrong_target=10 fixed=8",
+          "TEST_DONE"
+        ]
+      },
+      "timeout_seconds": 60,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt-single-github-1702"
+  ],
+  "id": "occt-github-1702-version-regression",
+  "schema_version": 1,
+  "source_ids": [
+    "occt801-1702-b-b8f597c67781"
+  ],
+  "title": "GH-1702 straight-edge fillet location and preserved opposite junction",
+  "version": "1"
+}

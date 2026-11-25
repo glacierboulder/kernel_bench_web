@@ -1,0 +1,11 @@
+DRAW is running in batch mode
+BENCH_ASSERT_PASS shape_check checkshape executed kind=expression
+BENCH_ASSERT_PASS bop_valid bopcheck= This shape seems to be OK.| kind=expression
+checkmaxtol result 
+BENCH_ASSERT_PASS max_tolerance official limit<=2e-7 observed=9.9999999999999995e-08 kind=expression
+checkprops result -v 9948.3767363677
+BENCH_ASSERT_PASS shell_volume contained shell analytic volume 9948.3767363677; checkprops enforced kind=expression
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=4 numeric_assertions=0
+TEST_DONE assertions=4 numeric_assertions=0
+SCRIPT_RETURN 0 

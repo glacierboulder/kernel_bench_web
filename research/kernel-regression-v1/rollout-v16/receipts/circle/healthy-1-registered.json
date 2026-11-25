@@ -1,0 +1,77 @@
+{
+  "checkpoint": "regression-30703-plane-cylinder",
+  "case_sha256": "eeb6215c1520cc752ffb284313541ee983f86be47a9d26446e0def6f65d33716",
+  "payload_sha256": "619a363bc7a161047865b42a976eb58dbb9e01ea656f86fb07add991361784ea",
+  "passed": true,
+  "result": {
+    "protocol": "occt-checkpoint-v1",
+    "checkpoint_id": "regression-30703-plane-cylinder",
+    "category": "regression",
+    "passed": true,
+    "status": "geometry_pass",
+    "oracle_ran": true,
+    "return_code": 0,
+    "test_done_marker": true,
+    "timed_out": false,
+    "runner_process_return_code": 0,
+    "pending_requirements": [],
+    "elapsed_seconds": null,
+    "raw_result": {
+      "passed": true,
+      "status": "geometry_pass",
+      "checkpoint_id": "regression-30703-plane-cylinder",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "curve_length",
+        "solution_count"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "solution_count",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "curve_length",
+          "kind": "expression"
+        }
+      ],
+      "missing_assertions": [],
+      "unexpected_assertions": [],
+      "duplicate_assertions": [],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_geometry_failure_signature_seen": false,
+      "base_runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": true,
+        "test_done_marker": true,
+        "tcl_standard_library": {
+          "init_script": "/py/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 2,
+        "numeric_assertions": 0,
+        "failed_assertions": 0,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nM30703_REG_TYPES_c=c is a a surface\n\nM30703_REG_TYPES_p=p is a a surface\n\nREPLAY_CURVE_RANGE=0,6.2831853071795898\nREPLAY_CURVE_START=5,0,0\nM30703_REG_INFO_COUNT=1 expected=1\nBENCH_ASSERT_PASS solution_count  kind=expression\nchecklength res -l 31.41592653589793\nThe expected length is 31.41592653589793\nM30703_REG_LENGTH_OBSERVED=31.415926535897949 expected=31.41592653589793 relative_error=5.654319433712919e-16 official_relative_limit=0.01\nBENCH_ASSERT_PASS curve_length  kind=expression\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=2 numeric_assertions=0\nTEST_DONE assertions=2 numeric_assertions=0\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "script": "/tmp/cases/issues/mantis-30703/1/regression_plane_cylinder.tcl",
+        "draw_executable": "/workspace/build/lin64/clang/bin/DRAWEXE-7.4.1",
+        "elapsed_seconds": 0.032
+      },
+      "return_code": 0
+    },
+    "case_sha256": "eeb6215c1520cc752ffb284313541ee983f86be47a9d26446e0def6f65d33716",
+    "adapter_sha256": "d2a16988a53f9ec5ba840b5f89d2eead6a1d0d7f936f94cf141f3c0ae60638b7"
+  }
+}

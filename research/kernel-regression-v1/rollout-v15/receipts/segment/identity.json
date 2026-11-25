@@ -1,0 +1,22 @@
+{
+  "source_id": "occt-2613378e60ff",
+  "commit": "2613378e60ff5e517b2bf73699184d0c6f636bb8",
+  "materialized_tree_sha256": "5ead8e62e4d72f801f43d8bd81dda610925dd2b9704ff51aaebe755def165104",
+  "toolchain": "occt-clang10-tcl86-bf-g3-v1",
+  "toolchain_config": {
+    "path": "toolchains/occt-clang10-tcl86-bf-g3-v1.json",
+    "sha256": "1f03c30804161d50729eca0dfe10207ea07b0903d9ae9378cf1abe7c605baa7f"
+  },
+  "build_entry": {
+    "path": "tools/occt-clang10-bf-g3-v1/build.sh",
+    "sha256": "2be7eb67f45784de87339203b200b043280f8c753dda056a36587c813305d7d1"
+  },
+  "declared_public_targets": [
+    "DRAWEXE",
+    "TKTopTest"
+  ],
+  "source": "/home/lzy/cad-bench-experiment/rollout15.ZDrEAGVA/g3-source",
+  "build": "/home/lzy/cad-bench-experiment/rollout15.ZDrEAGVA/g3-build",
+  "observed_tree": "5ead8e62e4d72f801f43d8bd81dda610925dd2b9704ff51aaebe755def165104",
+  "git_tree": "43c6421991ea0372ec0f7622aa8daea5676a7b7e"
+}

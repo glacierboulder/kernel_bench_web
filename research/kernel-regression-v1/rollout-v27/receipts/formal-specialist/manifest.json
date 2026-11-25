@@ -1,0 +1,29 @@
+{
+  "host": "ws01",
+  "run": "ceee18c8ca0d5832",
+  "patch": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "case_hashes": {
+    "evaluation/cases/version-regressions/1/periodic-fillet.cxx": "412c9a2768f66fb8f6571dd6f91ea0c80f07a0a7398f363b266c80ce8bc1671c",
+    "evaluation/cases/version-regressions/1/periodic-fillet/round-0-1-result.brep": "9324dbd1c9b50cabe88ec023b1ee043c4db1f54010ec4e2dc15e5f605b29c505",
+    "evaluation/cases/version-regressions/1/periodic-fillet/round-0-2-result.brep": "a70d78bc57980639c601411949fce484337db57745b58bc84616165643725dc9",
+    "evaluation/cases/version-regressions/1/periodic-fillet/round-1-1-result.brep": "f55762239f8fb57bf8b19de43031cf741be3453d6749992382e7cb5fd5238ee9",
+    "evaluation/cases/version-regressions/1/periodic-fillet/round-1-2-result.brep": "a4b6ae45df4a58ba3ce1e33eafe3580640cdedf756acf17096693034461454b1"
+  },
+  "runner": "144cbdc3bc0bef78180e0e8c107149aa8ffe9b86709af51f61f97d8225fedca5",
+  "build_helper": "8152f414dddf73608b7f0c16141feafc2f5ae3f959b763a2ca15ca526098c6ab",
+  "receipts": {
+    "cli.json": "aaf670ad31fc1b9d7ae5d3fc6b992cdb486be7d8fbf8ecc2bf9a97620f585dfb",
+    "cli.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "empty.patch": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "driver.json": "609874ebe7a9dd03f08c44056b62697332b50d4a6e42dc77f19c06de1ecb25cd",
+    "internal.json": "d431158e4c2071b1144721edf97524019baa7cc85a354f4b72503ced05321e1b",
+    "driver.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "build-commands.txt": "fd8c62652fa06d4b2ca1749ad73d6c57d4b26e81ad40f9a67f5df831b482e917",
+    "source-verification.json": "14142b7abab660ebe7a89adfcc02c282948334d99779bc237855dff1fa628ba1",
+    "sandbox-wrapper.sh": "d2028e545e8a5370417a54505932f66197100c1f1b36dc67979662befe1bdcfb",
+    "snapshot.json": "8228f9ee9f49fa37bdca37a661200f6e19af7ed9243811d57b2c3b419555c866",
+    "suite.json": "e191ee29c1239f41dc6d6d5141fa3c254e662b18996ff04e925df9f00bc95981",
+    "source-lock.json": "0ff471e9ed26d0126efb1c2a5e9d9822e3abf5bba017db32af43171d40c9771e",
+    "toolchain.json": "0a3ac1063fd91bf1228278b72e3722fe481cd755cd1a10c3fd33929f0606ea11"
+  }
+}

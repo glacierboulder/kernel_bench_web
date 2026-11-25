@@ -1,0 +1,11 @@
+DRAW is running in batch mode
+BENCH_ASSERT_PASS operation_completed error=0 report= kind=expression
+BENCH_ASSERT_PASS common_valid checkshape=This shape seems to be valid kind=expression
+BENCH_ASSERT_PASS common_solid_count observed=1 expected=1 kind=numeric
+BENCH_ASSERT_PASS common_area observed=399.99999999999989 expected=400.0 limit=1e-7 kind=numeric
+BENCH_ASSERT_PASS common_volume observed=499.99999999999989 expected=500.0 limit=1e-7 kind=numeric
+BENCH_ASSERT_PASS common_centroid_domain centroid=7.5000000000000009 5 5 containing_input_box=-9.9999999999999995e-08 -9.9999999999999995e-08 -9.9999999999999995e-08 10.000000099999999 10.000000099999999 10.000000099999999 limit=1e-5 kind=numeric
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=6 numeric_assertions=4
+TEST_DONE assertions=6 numeric_assertions=4
+SCRIPT_RETURN 0 

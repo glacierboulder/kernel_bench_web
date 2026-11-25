@@ -1,0 +1,25 @@
+{
+  "case": "d7b16bf795d51ed9924aad0888132e0d17a636fd347adc8e7d51382028e3d7e9",
+  "runner": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+  "exit": 0,
+  "result": {
+    "protocol": "draw_case_oracle_v1",
+    "passed": true,
+    "test_done_marker": true,
+    "return_code": 0,
+    "timed_out": false,
+    "assertions": 2,
+    "numeric_assertions": 0,
+    "failed_assertions": 0,
+    "tcl_error_detected": false,
+    "expected_oracle_error": false,
+    "infrastructure_tcl_error": false,
+    "occt_error_detected": false,
+    "oracle_summary_found": true,
+    "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={separated cylinders have no curves} detail=value=1\nBENCH_ASSERT_PASS kind=expression label={regular cylinder pair has four curves} detail=value=1\nBENCH_ORACLE_OK assertions=2 numeric_assertions=0\nTEST_DONE assertions=2 numeric_assertions=0\n",
+    "stderr_tail": "",
+    "script": "/inputs/registered/cyl.tcl",
+    "draw_executable": "/workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+    "elapsed_seconds": 0.032
+  }
+}

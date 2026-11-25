@@ -1,0 +1,22 @@
+#!/bin/bash
+set -euo pipefail
+args=("$@")
+if [[ "${args[0]:-}" == "--build" ]]; then
+    for ((i=1; i+1<${#args[@]}; ++i)); do
+        if [[ "${args[i]}" == "--parallel" ]]; then
+            args[i+1]=2
+            break
+        fi
+    done
+fi
+printf '%q ' /usr/bin/cmake "${args[@]}" >> /workspace/gh1550-build-commands.txt
+printf '\n' >> /workspace/gh1550-build-commands.txt
+/usr/bin/cmake "${args[@]}"
+if [[ "${args[0]:-}" == "--build" ]]; then
+    build=${args[1]}
+    {
+        g++ -dumpfullversion
+        grep -E '^CMAKE_CXX_FLAGS_RELEASE:|^BUILD_ADDITIONAL_TOOLKITS:' "$build/CMakeCache.txt"
+        sha256sum "$build/CMakeCache.txt" "$build"/lin64/gcc/lib/libTK*.so
+    } > /workspace/gh1550-build-sha256.txt
+fi
