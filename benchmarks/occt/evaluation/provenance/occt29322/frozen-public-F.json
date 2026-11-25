@@ -1,0 +1,20 @@
+{
+  "issue": 29322,
+  "commit": "b7cd7c2b7c54cca90dedfa38e7e59f0cc0a0ccd8",
+  "command": [
+    "DRAWEXE",
+    "-b",
+    "-f",
+    "reproduce.tcl"
+  ],
+  "working_directory": "visible/issue_29322",
+  "snapshot_sha256": "f560a37c3e16d5e78d4efabc92ce7fe9705c6e98aba778f20e3e462fca8f3ea0",
+  "files": {
+    "issue.json": "2e6bef63dcac308ce3ecb6a1f8c9da5b6ba8e10b5bd0ed913e1e98ab3ad20085",
+    "reproduce.tcl": "2118bab8e5a4af9fc20b59655273511852b40aceef32428a526e9624fe676a14",
+    "statement.md": "5f2e678464f3fd270589da4bf599d9df9c261b48c6a9a523cac96b001677d9b2"
+  },
+  "stdout": "DRAW is running in batch mode\nThis shape seems to be valid\nNumber of shapes in result\n VERTEX    : 2\n EDGE      : 1\n WIRE      : 0\n FACE      : 0\n SHELL     : 0\n SOLID     : 0\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 4\n\n\n\nMass :              10\n\nCenter of gravity : \nX =               0\nY =               0\nZ =               5\n\nMatrix of Inertia : \n        83.3333               0               0\n              0         83.3333               0\n              0               0               0\n\nMoments : \nIX =         83.3333\nIY =         83.3333\nIZ =               0\n\n\n",
+  "stderr": "",
+  "returncode": 0
+}
