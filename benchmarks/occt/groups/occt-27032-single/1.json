@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-27032-single",
+  "version": "1",
+  "title": "边界边与截线重合时，Section 漏掉一段交边",
+  "kind": "single",
+  "source_id": "occt70-27032-b-7d835040071b",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-27032",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-27032-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}
