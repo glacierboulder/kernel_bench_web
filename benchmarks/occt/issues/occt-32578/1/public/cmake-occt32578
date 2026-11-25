@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+# The 7.6 development revision references FreeType constants in Font_FTFont.
+# Enabling its upstream CMake option supplies both the headers and library.
+for option in "$@"; do
+    if [ "$option" = "-S" ]; then
+        exec cmake "$@" -DUSE_FREETYPE=ON
+    fi
+done
+exec cmake "$@"

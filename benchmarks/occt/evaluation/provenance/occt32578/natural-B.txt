@@ -1,0 +1,16 @@
+revision=3e9cb8064479cfe776221f91820a10e995b20431
+DRAW is running in batch mode
+original missing_result=1 splitter_report=Warning: The positioning of the shapes leads to creation of the small edges without valid range
+Error: The intersection of the arguments has failed
+
+original verdict=fail
+translated missing_result=1 splitter_report=Warning: The positioning of the shapes leads to creation of the small edges without valid range
+Error: The intersection of the arguments has failed
+
+translated verdict=fail
+alternate missing_result=1 splitter_report=Warning: The positioning of the shapes leads to creation of the small edges without valid range
+Error: The intersection of the arguments has failed
+
+alternate verdict=fail
+control valid=1 interferenceFree=1 counts=6 7 2 2 area=100
+control verdict=pass
