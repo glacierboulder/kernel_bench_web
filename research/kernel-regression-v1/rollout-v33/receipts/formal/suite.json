@@ -1,0 +1,46 @@
+{
+  "checkpoints": [
+    {
+      "case": "evaluation/cases/version-regressions/1/coons-tangents.cxx",
+      "category": "regression",
+      "id": "coons-d1u-d1v",
+      "issue_id": "occt-github-1550",
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "libraries": [
+          "TKGeomAlgo",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "CONTROL rectangle native good_u=25 good_v=25",
+          "CONTROL rectangle swap good_u=0 good_v=0",
+          "CONTROL rectangle reverse-u good_u=0 good_v=25",
+          "CONTROL rectangle reverse-v good_u=25 good_v=0",
+          "CONTROL bilinear native good_u=25 good_v=25",
+          "CONTROL bilinear swap good_u=0 good_v=0",
+          "CONTROL bilinear reverse-u good_u=0 good_v=25",
+          "CONTROL bilinear reverse-v good_u=25 good_v=0",
+          "TEST_DONE"
+        ]
+      },
+      "timeout_seconds": 60,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt-github-1550-single"
+  ],
+  "id": "occt-github-1550-tangents-version-regression",
+  "schema_version": 1,
+  "source_ids": [
+    "occt801-b8f597c67781-coons"
+  ],
+  "title": "GH-1550 Coons parameter tangents",
+  "version": "1"
+}

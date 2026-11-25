@@ -1,0 +1,253 @@
+{
+  "source_id": "occt801-b8f597c67781-coons",
+  "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "toolchain": "occt1115-coons-gcc",
+  "suite": "occt-github-1550-tangents-version-regression@1",
+  "checkpoint": "coons-d1u-d1v",
+  "elapsed_seconds": 461.065,
+  "controls": {
+    "rectangle": {
+      "native": {
+        "verdict": "PASS",
+        "good_u": 25,
+        "good_v": 25,
+        "max_u": 3.510833468576701e-16,
+        "max_v": 2.220446049250313e-16,
+        "stations": 25
+      },
+      "swap": {
+        "verdict": "FAIL",
+        "good_u": 0,
+        "good_v": 0,
+        "max_u": 1.4142135623730951,
+        "max_v": 1.4142135623730951,
+        "stations": 25
+      },
+      "reverse-u": {
+        "verdict": "FAIL",
+        "good_u": 0,
+        "good_v": 25,
+        "max_u": 2.0,
+        "max_v": 2.220446049250313e-16,
+        "stations": 25
+      },
+      "reverse-v": {
+        "verdict": "FAIL",
+        "good_u": 25,
+        "good_v": 0,
+        "max_u": 3.510833468576701e-16,
+        "max_v": 2.0,
+        "stations": 25
+      }
+    },
+    "bilinear": {
+      "native": {
+        "verdict": "PASS",
+        "good_u": 25,
+        "good_v": 25,
+        "max_u": 6.855408455140608e-13,
+        "max_v": 6.855408455140608e-13,
+        "stations": 25
+      },
+      "swap": {
+        "verdict": "FAIL",
+        "good_u": 0,
+        "good_v": 0,
+        "max_u": 14.696938456699069,
+        "max_v": 14.696938456699336,
+        "stations": 25
+      },
+      "reverse-u": {
+        "verdict": "FAIL",
+        "good_u": 0,
+        "good_v": 25,
+        "max_u": 20.396078054371515,
+        "max_v": 6.855408455140608e-13,
+        "stations": 25
+      },
+      "reverse-v": {
+        "verdict": "FAIL",
+        "good_u": 25,
+        "good_v": 0,
+        "max_u": 6.855408455140608e-13,
+        "max_v": 20.396078054371515,
+        "stations": 25
+      }
+    }
+  },
+  "build_artifacts": {
+    "CMakeCache.txt": {
+      "sha256": "cc14ac4c60c6ff1f7f19236fa01e9d595530fa9269dd4e302b1f20e1a2259912",
+      "path": "/tmp/manifest-suite-zur7z0z_/build/CMakeCache.txt"
+    },
+    "libTKBRep.so": {
+      "sha256": "d043a4766803f1a0a843c5529ba0bd1cab83a4484f00af7c0118f99993d4d13d",
+      "path": "/tmp/manifest-suite-zur7z0z_/build/lin64/gcc/lib/libTKBRep.so"
+    },
+    "libTKG2d.so": {
+      "sha256": "471d785fe528c3908e78539fceb1a7cc985eb970a5d2f2da936b276fdc2e9b12",
+      "path": "/tmp/manifest-suite-zur7z0z_/build/lin64/gcc/lib/libTKG2d.so"
+    },
+    "libTKG3d.so": {
+      "sha256": "c63a759e7e06be8629c8c4956245505f70a4b80f01a50b3083824ad3c13d796d",
+      "path": "/tmp/manifest-suite-zur7z0z_/build/lin64/gcc/lib/libTKG3d.so"
+    },
+    "libTKGeomAlgo.so": {
+      "sha256": "7b8a1da83c21ed66adf99162649cb5b58c119438bbb4a8881b3cf998d6472275",
+      "path": "/tmp/manifest-suite-zur7z0z_/build/lin64/gcc/lib/libTKGeomAlgo.so"
+    },
+    "libTKGeomBase.so": {
+      "sha256": "65e01b9fb0ad0be0bc3bde0a64ed1cd3d06a43132d60d130fadb1f4fb86c00e9",
+      "path": "/tmp/manifest-suite-zur7z0z_/build/lin64/gcc/lib/libTKGeomBase.so"
+    },
+    "libTKMath.so": {
+      "sha256": "a2f30952752eddd7117402adfc8e0cc4e0a6aa717a492f8bcd0d552091a3c463",
+      "path": "/tmp/manifest-suite-zur7z0z_/build/lin64/gcc/lib/libTKMath.so"
+    },
+    "libTKernel.so": {
+      "sha256": "88ae6a93aabc129cea4de4f2920890581845fa16590ab2698481b4e6440de4dc",
+      "path": "/tmp/manifest-suite-zur7z0z_/build/lin64/gcc/lib/libTKernel.so"
+    }
+  },
+  "artifact": {
+    "path": "research/kernel-regression-v1/rollout-v33/receipts/formal/gh1550-tangents.csv",
+    "sha256": "2b78cdca8d9eb7f857f00d240bf641484e478ff2a9c93664c5583b810984b1bc"
+  },
+  "receipts": [
+    {
+      "path": "research/kernel-regression-v1/rollout-v33/receipts/formal/cli.json",
+      "sha256": "88224883b36ce28faea3eb7e2e880acf24baf616bcc5e903fc0a6b2c4a8dabc0"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v33/receipts/formal/driver.json",
+      "sha256": "e976bf457c07aa9a83c56e65021a45e6f572fce3e72346d036f32ffdec7afc3c"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v33/receipts/formal/manifest.json",
+      "sha256": "729d3d21b25ebd8a1975032556a236234bc56dbc6d2aa25434cefa8f7bd40aa9"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v33/receipts/formal/gh1550-build-sha256.txt",
+      "sha256": "796452ba68b9dee68f79e74efe959e07efa3e839bda24b29766e52240d73d026"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v33/receipts/formal/gh1550-build-commands.txt",
+      "sha256": "4234787dd380031235b98b156511c89094af1f047122899f4b80f6393914372a"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v33/receipts/formal/run-artifact-sha256.txt",
+      "sha256": "dacafff109bc1894c76eeea8bfb67eeee142c169149af398d8ede59e86ffaa84"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v33/receipts/formal/verified-source.json",
+      "sha256": "858a4507d163b10782abf02655f2aca41160eaf00ba71dfb9bfa2b8fc66a1cbe"
+    }
+  ],
+  "clean": {
+    "controls": {
+      "rectangle": {
+        "native": {
+          "verdict": "PASS",
+          "good_u": 25,
+          "good_v": 25,
+          "max_u": 3.510833468576701e-16,
+          "max_v": 2.220446049250313e-16,
+          "stations": 25
+        },
+        "swap": {
+          "verdict": "FAIL",
+          "good_u": 0,
+          "good_v": 0,
+          "max_u": 1.4142135623730951,
+          "max_v": 1.4142135623730951,
+          "stations": 25
+        },
+        "reverse-u": {
+          "verdict": "FAIL",
+          "good_u": 0,
+          "good_v": 25,
+          "max_u": 2.0,
+          "max_v": 2.220446049250313e-16,
+          "stations": 25
+        },
+        "reverse-v": {
+          "verdict": "FAIL",
+          "good_u": 25,
+          "good_v": 0,
+          "max_u": 3.510833468576701e-16,
+          "max_v": 2.0,
+          "stations": 25
+        }
+      },
+      "bilinear": {
+        "native": {
+          "verdict": "PASS",
+          "good_u": 25,
+          "good_v": 25,
+          "max_u": 6.855408455140608e-13,
+          "max_v": 6.855408455140608e-13,
+          "stations": 25
+        },
+        "swap": {
+          "verdict": "FAIL",
+          "good_u": 0,
+          "good_v": 0,
+          "max_u": 14.696938456699069,
+          "max_v": 14.696938456699336,
+          "stations": 25
+        },
+        "reverse-u": {
+          "verdict": "FAIL",
+          "good_u": 0,
+          "good_v": 25,
+          "max_u": 20.396078054371515,
+          "max_v": 6.855408455140608e-13,
+          "stations": 25
+        },
+        "reverse-v": {
+          "verdict": "FAIL",
+          "good_u": 25,
+          "good_v": 0,
+          "max_u": 6.855408455140608e-13,
+          "max_v": 20.396078054371515,
+          "stations": 25
+        }
+      }
+    },
+    "artifact": {
+      "path": "research/kernel-regression-v1/rollout-v33/receipts/clean/gh1550-tangents.csv",
+      "sha256": "2b78cdca8d9eb7f857f00d240bf641484e478ff2a9c93664c5583b810984b1bc"
+    },
+    "checkpoint": {
+      "path": "research/kernel-regression-v1/rollout-v33/receipts/clean/checkpoint.json",
+      "sha256": "0d81b113ccf4ed1ed3bad40ca1a30fa82fbf17e964d8153313825d0319c16d80"
+    },
+    "build": {
+      "path": "research/kernel-regression-v1/rollout-v33/receipts/clean/process.json",
+      "sha256": "90ac551f8167d5cd8934ac762065ae10725f58c1dbe185a2c9597ca5b1ee8a47"
+    }
+  },
+  "scope": "D1U and D1V only, on the locked tilted rectangle and straight-sided bilinear Coons fixtures.",
+  "value_history": {
+    "status": "BASELINE_FAIL",
+    "receipt": {
+      "path": "research/kernel-regression-v1/rollout-v29/results.json",
+      "sha256": "170f2241cfa564234c9e815c6b27a5bbf5f513b7846f1e6e7ecab004a9d99fb6"
+    }
+  },
+  "registered_references": {
+    "NOT_RUN": 65,
+    "CALIBRATED": 37,
+    "CALIBRATION_FAILED": 27
+  },
+  "coverage": {
+    "identities": 37,
+    "complete_portable_six": 37,
+    "at_least_one_calibrated_specialist_including_separate_controls": 37,
+    "both_portable_and_registered_specialist": 37,
+    "both_portable_and_a_specialist_including_separate_controls": 37
+  },
+  "model_runs": 0,
+  "behavior_changing_patches_evaluated": 0
+}

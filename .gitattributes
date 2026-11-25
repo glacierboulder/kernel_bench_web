@@ -1,0 +1,6 @@
+# Hash-bound geometry assets and raw receipts must retain their archived bytes.
+benchmarks/occt/evaluation/cases/occt-544-samedomain/**/*.brep binary -whitespace
+benchmarks/occt/evaluation/cases/version-regressions/**/*.brep binary -whitespace
+benchmarks/occt/evaluation/cases/version-regressions/**/*.draw -text -whitespace
+research/kernel-regression-v1/** -text
+research/kernel-regression-v1/**/receipts/** -whitespace linguist-generated=true

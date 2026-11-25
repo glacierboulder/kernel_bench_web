@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+"""Use the same immutable GCC 13 userspace as the archived fillet build."""
+import os
+import sys
+
+image = "/var/tmp/cad-boolean-screen30-20261118/image"
+arguments = sys.argv[1:]
+prefix = []
+while arguments:
+    if arguments[0] == "--ro-bind" and arguments[1:2] in (["/usr"], ["/lib"], ["/lib64"], ["/bin"]):
+        prefix += ["--ro-bind", image + arguments[1], arguments[2]]
+        arguments = arguments[3:]
+    elif arguments[:2] == ["--dir", "/etc"]:
+        prefix += ["--ro-bind", image + "/etc", "/etc"]
+        arguments = arguments[2:]
+    elif arguments[:2] == ["--setenv", "PATH"]:
+        prefix += ["--setenv", "PATH", "/workspace:" + arguments[2]]
+        arguments = arguments[3:]
+    elif arguments[:2] == ["--remount-ro", "/"]:
+        prefix += ["--ro-bind", '/home/lzy/cad-bench-experiment/rollout27-specialist.ijy4L9NN/research/kernel-regression-v1/rollout-v27/cmake', "/workspace/cmake"] + arguments[:2]
+        arguments = arguments[2:]
+    elif arguments[0] == "--chdir":
+        prefix += arguments
+        break
+    else:
+        prefix.append(arguments.pop(0))
+os.execv("/usr/bin/bwrap", ["/usr/bin/bwrap", *prefix])

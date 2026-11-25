@@ -1,0 +1,25 @@
+{
+  "source_id": "occt801-b8f597c67781-offset-plane",
+  "toolchain": "occt1116-offset-plane-gcc",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "libraries": {
+    "libTKG2d.so": "5ca4a6009da1a68e67e81bf541f10ad41a67cb2721223c4361d22074fc6e1c14",
+    "libTKG3d.so": "d1eae34e1bd8bb3cc441c479b84ada7d8ac06c0befecbd938b348ef316a9448d",
+    "libTKMath.so": "bf09180f8f18304942460040d8acfd2e9647259834194c433bcf6d5054eb4d9b",
+    "libTKernel.so": "f2a89759f01dc319958126323048074ae203e5c89028c188598a8e44bc77f36b"
+  },
+  "config": {
+    "BUILD_ADDITIONAL_TOOLKITS": "TKG3d",
+    "BUILD_MODULE_ApplicationFramework": "OFF",
+    "BUILD_MODULE_DataExchange": "OFF",
+    "BUILD_MODULE_Draw": "OFF",
+    "BUILD_MODULE_FoundationClasses": "OFF",
+    "BUILD_MODULE_ModelingAlgorithms": "OFF",
+    "BUILD_MODULE_ModelingData": "OFF",
+    "BUILD_MODULE_Visualization": "OFF",
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+    "CMAKE_CXX_FLAGS_RELEASE": "-O3 -DNDEBUG"
+  },
+  "cache_sha256": "b053b7e25853f5368ada1f2d9317f7ab3c4056e55c901a5425b668f2b4afcb4f"
+}

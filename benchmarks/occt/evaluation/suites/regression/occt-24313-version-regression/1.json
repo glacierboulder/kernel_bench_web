@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "occt-24313-version-regression",
+  "version": "1",
+  "title": "occt-24313 version regression (generators)",
+  "source_ids": [
+    "occt-single20-m24313-78b6b239841f"
+  ],
+  "group_ids": [
+    "occt-single20-24313"
+  ],
+  "checkpoints": [
+    {
+      "id": "generators",
+      "issue_id": "occt-24313",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/version-regressions/1/lines.cxx",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel",
+          "TKGeomAlgo",
+          "dl"
+        ],
+        "inputs": [
+          "evaluation/cases/version-regressions/1/generators/fixture.txt",
+          "evaluation/cases/version-regressions/1/generators/healthy.brep",
+          "evaluation/cases/version-regressions/1/generators/negative.brep",
+          "evaluation/cases/version-regressions/1/generators/truncated.brep"
+        ],
+        "stdout_contains": [
+          "native pass",
+          "healthy pass",
+          "negative duplicate",
+          "truncated truncated",
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}

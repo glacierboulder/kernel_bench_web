@@ -1,0 +1,96 @@
+{
+  "group_id": "occt-single20-27227",
+  "role": "b",
+  "checkpoint_id": "27227-regression_plane",
+  "category": "regression",
+  "source_commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+  "source_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+  "reference_patch_sha256": null,
+  "reference_kind": "locked_baseline",
+  "snapshot_sha256": "2aa8a75e8c639f729663c9c922a42252f67a46bbe2f1711f51b8deba326a9350",
+  "prebuild_binary_manifest_sha256": "555e974cab4987c738f6122f4fdf91b07c81b59cd460da7cdd56609e5a3ac189",
+  "runtime_binaries_sha256": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c",
+  "process_return_code": 0,
+  "oracle": {
+    "protocol": "occt-checkpoint-v1",
+    "checkpoint_id": "27227-regression_plane",
+    "category": "regression",
+    "passed": true,
+    "status": "geometry_pass",
+    "oracle_ran": true,
+    "return_code": 0,
+    "test_done_marker": true,
+    "timed_out": false,
+    "runner_process_return_code": 0,
+    "elapsed_seconds": null,
+    "raw_result": {
+      "passed": true,
+      "status": "geometry_pass",
+      "checkpoint_id": "27227-regression_plane",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "nonempty",
+        "support",
+        "coverage"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "operation_completed",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "nonempty",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "support",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "coverage",
+          "kind": "numeric"
+        }
+      ],
+      "missing_assertions": [],
+      "unexpected_assertions": [],
+      "duplicate_assertions": [],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_geometry_failure_signature_seen": false,
+      "base_runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": true,
+        "test_done_marker": true,
+        "tcl_standard_library": {
+          "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 4,
+        "numeric_assertions": 3,
+        "failed_assertions": 0,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=2.4493180912306897e-15|2 curve(s) found.|c_1 (c2d1_1, c2d2_1) c_2 (c2d1_2, c2d2_2) | kind=expression\nBENCH_ASSERT_PASS nonempty curves=2 error=0 report=Tolerance Reached=2.4493180912306897e-15|2 curve(s) found.|c_1 (c2d1_1, c2d2_1) c_2 (c2d1_2, c2d2_2) | kind=numeric\nBENCH_ASSERT_PASS support max_distance=1.4210854715202004e-14 limit=1e-5 kind=numeric\nBENCH_ASSERT_PASS coverage witnesses=8 maximum=2.2043642384652355e-14 limit=1e-5 kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=4 numeric_assertions=3\nTEST_DONE assertions=4 numeric_assertions=3\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "script": "/workspace/control/cases/bundle/evaluation/cases/single20/occt-27227/1/regression_plane.tcl",
+        "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.7.0",
+        "elapsed_seconds": 0.032
+      },
+      "return_code": 0
+    },
+    "case_sha256": "5d3125ba8f97ee4279df9f4e7d1142b907501807f198e2dff85ad26e611ef0cd",
+    "adapter_sha256": "4e516fedcd16a5781479fa30dc1bde2a85f6e1ef5ecb295235ef6295c553644c"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "occt-boolean-regression-1511c7e9",
+  "version": "1",
+  "title": "OCCT 1511c7e9 布尔专项回归 · M28195 Z90°",
+  "source_ids": [
+    "occt-single20-1511c7e90f1a"
+  ],
+  "group_ids": [
+    "occt-single20-28195"
+  ],
+  "checkpoints": [
+    {
+      "id": "28195-regression_z90",
+      "issue_id": "occt-28195",
+      "category": "regression",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/single20/occt-28195/2/regression_z90.tcl",
+      "timeout_seconds": 180,
+      "required": true,
+      "runner_options": {
+        "case_timeout_seconds": 180,
+        "expected_assertion_ids": [
+          "operation_completed",
+          "input_1_qualified",
+          "input_2_qualified",
+          "validity",
+          "topology",
+          "volume",
+          "operand_membership",
+          "grid_membership",
+          "exclusion_membership"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/single20/solid_checks.tcl",
+    "evaluation/cases/single20/occt-28195/1/bug28195_solidsKO.brep",
+    "evaluation/cases/single20/occt-28195/2/rotated_common.tcl",
+    "evaluation/cases/single20/occt-28195/2/z90.points"
+  ]
+}

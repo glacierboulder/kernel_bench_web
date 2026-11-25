@@ -1,0 +1,118 @@
+{
+  "protocol": "manifest-suite-v1",
+  "suite": {
+    "id": "occt-544-samedomain-regression",
+    "version": "1"
+  },
+  "tests": [
+    {
+      "test": "544-merge-boxes",
+      "id": "544-merge-boxes",
+      "status": "passed",
+      "passed": true,
+      "result": {
+        "passed": true,
+        "compile": {
+          "return_code": 0,
+          "elapsed_seconds": 0.429,
+          "output_tail": "",
+          "timed_out": false
+        },
+        "result": {
+          "return_code": 0,
+          "elapsed_seconds": 0.096,
+          "output_tail": "NATIVE PASS\nEVIDENCE {\"role\":\"native\",\"observed\":\"pass\",\"metrics\":{\"volume\":480.0,\"surface_area\":376.0,\"centroid\":[4.999999999999999,4.0,3.0],\"faces\":6,\"edges\":12,\"bounds\":[0.0,0.0,0.0,10.0,8.0,6.0],\"valid\":true,\"closed_rectangle_shell\":true,\"one_face_per_side\":true,\"material\":{\"tested\":128,\"mismatches\":0,\"examples\":[]}},\"brep_sha256\":\"e423ec0dd41af773aba4441b965face4dea1cfd5c0036f51b5e545bc7f89643f\"}\nCONTROL healthy PASS\nEVIDENCE {\"role\":\"healthy\",\"observed\":\"pass\",\"metrics\":{\"volume\":480.0,\"surface_area\":376.0,\"centroid\":[4.999999999999999,4.0,3.0],\"faces\":6,\"edges\":12,\"bounds\":[0.0,0.0,0.0,10.0,8.0,6.0],\"valid\":true,\"closed_rectangle_shell\":true,\"one_face_per_side\":true,\"material\":{\"tested\":128,\"mismatches\":0,\"examples\":[]}},\"brep_sha256\":\"e423ec0dd41af773aba4441b965face4dea1cfd5c0036f51b5e545bc7f89643f\"}\nCONTROL seam REJECT seam_residual\nEVIDENCE {\"role\":\"seam\",\"observed\":\"seam_residual\",\"metrics\":{\"volume\":480.0,\"surface_area\":376.0,\"centroid\":[4.999999999999999,4.0,3.0],\"faces\":10,\"edges\":20,\"bounds\":[0.0,0.0,0.0,10.0,8.0,6.0],\"valid\":true,\"closed_rectangle_shell\":true,\"one_face_per_side\":false,\"material\":{\"tested\":128,\"mismatches\":0,\"examples\":[]}},\"brep_sha256\":\"d96aa91295b84563d03b692e02d959e2e6fe64ab0fd739822a451c5a710e153f\"}\nCONTROL shift REJECT displaced\nEVIDENCE {\"role\":\"shift\",\"observed\":\"displaced\",\"metrics\":{\"volume\":480.0,\"surface_area\":376.0,\"centroid\":[5.999999999999999,4.0,3.0],\"faces\":6,\"edges\":12,\"bounds\":[1.0,0.0,0.0,11.0,8.0,6.0],\"valid\":true,\"closed_rectangle_shell\":false,\"one_face_per_side\":false,\"material\":{\"tested\":128,\"mismatches\":8,\"examples\":[{\"x\":0.25,\"y\":2.5,\"z\":1.0,\"want\":\"IN\",\"observed\":\"OUT\"},{\"x\":0.25,\"y\":2.5,\"z\":5.0,\"want\":\"IN\",\"observed\":\"OUT\"},{\"x\":0.25,\"y\":6.0,\"z\":1.0,\"want\":\"IN\",\"observed\":\"OUT\"},{\"x\":0.25,\"y\":6.0,\"z\":5.0,\"want\":\"IN\",\"observed\":\"OUT\"}]}},\"brep_sha256\":\"c6a78c15d2ac17a9d88e66e3785578b95f57e2ef6c727e96d70d0e5816ba841d\"}\nCONTROL notch REJECT material_loss\nEVIDENCE {\"role\":\"notch\",\"observed\":\"material_loss\",\"metrics\":{\"volume\":472.0,\"surface_area\":392.0,\"centroid\":[5.016949152542374,4.016949152542375,2.9661016949152543],\"faces\":11,\"edges\":24,\"bounds\":[0.0,0.0,0.0,10.0,8.0,6.0],\"valid\":true,\"closed_rectangle_shell\":false,\"one_face_per_side\":false,\"material\":{\"tested\":128,\"mismatches\":2,\"examples\":[{\"x\":3.5,\"y\":2.5,\"z\":5.0,\"want\":\"IN\",\"observed\":\"OUT\"},{\"x\":4.75,\"y\":2.5,\"z\":5.0,\"want\":\"IN\",\"observed\":\"OUT\"}]}},\"brep_sha256\":\"c251e7cd56c0724529fcde8c4527f72203991ee6c7da5fdad2cb9b5aba32e4ad\"}\nTEST_DONE\n",
+          "timed_out": false
+        }
+      },
+      "category": "regression",
+      "visibility": "hidden",
+      "issue_id": "occt-544",
+      "elapsed_seconds": 0.096
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "544-merge-boxes",
+      "status": "passed",
+      "passed": true,
+      "result": {
+        "passed": true,
+        "compile": {
+          "return_code": 0,
+          "elapsed_seconds": 0.429,
+          "output_tail": "",
+          "timed_out": false
+        },
+        "result": {
+          "return_code": 0,
+          "elapsed_seconds": 0.096,
+          "output_tail": "NATIVE PASS\nEVIDENCE {\"role\":\"native\",\"observed\":\"pass\",\"metrics\":{\"volume\":480.0,\"surface_area\":376.0,\"centroid\":[4.999999999999999,4.0,3.0],\"faces\":6,\"edges\":12,\"bounds\":[0.0,0.0,0.0,10.0,8.0,6.0],\"valid\":true,\"closed_rectangle_shell\":true,\"one_face_per_side\":true,\"material\":{\"tested\":128,\"mismatches\":0,\"examples\":[]}},\"brep_sha256\":\"e423ec0dd41af773aba4441b965face4dea1cfd5c0036f51b5e545bc7f89643f\"}\nCONTROL healthy PASS\nEVIDENCE {\"role\":\"healthy\",\"observed\":\"pass\",\"metrics\":{\"volume\":480.0,\"surface_area\":376.0,\"centroid\":[4.999999999999999,4.0,3.0],\"faces\":6,\"edges\":12,\"bounds\":[0.0,0.0,0.0,10.0,8.0,6.0],\"valid\":true,\"closed_rectangle_shell\":true,\"one_face_per_side\":true,\"material\":{\"tested\":128,\"mismatches\":0,\"examples\":[]}},\"brep_sha256\":\"e423ec0dd41af773aba4441b965face4dea1cfd5c0036f51b5e545bc7f89643f\"}\nCONTROL seam REJECT seam_residual\nEVIDENCE {\"role\":\"seam\",\"observed\":\"seam_residual\",\"metrics\":{\"volume\":480.0,\"surface_area\":376.0,\"centroid\":[4.999999999999999,4.0,3.0],\"faces\":10,\"edges\":20,\"bounds\":[0.0,0.0,0.0,10.0,8.0,6.0],\"valid\":true,\"closed_rectangle_shell\":true,\"one_face_per_side\":false,\"material\":{\"tested\":128,\"mismatches\":0,\"examples\":[]}},\"brep_sha256\":\"d96aa91295b84563d03b692e02d959e2e6fe64ab0fd739822a451c5a710e153f\"}\nCONTROL shift REJECT displaced\nEVIDENCE {\"role\":\"shift\",\"observed\":\"displaced\",\"metrics\":{\"volume\":480.0,\"surface_area\":376.0,\"centroid\":[5.999999999999999,4.0,3.0],\"faces\":6,\"edges\":12,\"bounds\":[1.0,0.0,0.0,11.0,8.0,6.0],\"valid\":true,\"closed_rectangle_shell\":false,\"one_face_per_side\":false,\"material\":{\"tested\":128,\"mismatches\":8,\"examples\":[{\"x\":0.25,\"y\":2.5,\"z\":1.0,\"want\":\"IN\",\"observed\":\"OUT\"},{\"x\":0.25,\"y\":2.5,\"z\":5.0,\"want\":\"IN\",\"observed\":\"OUT\"},{\"x\":0.25,\"y\":6.0,\"z\":1.0,\"want\":\"IN\",\"observed\":\"OUT\"},{\"x\":0.25,\"y\":6.0,\"z\":5.0,\"want\":\"IN\",\"observed\":\"OUT\"}]}},\"brep_sha256\":\"c6a78c15d2ac17a9d88e66e3785578b95f57e2ef6c727e96d70d0e5816ba841d\"}\nCONTROL notch REJECT material_loss\nEVIDENCE {\"role\":\"notch\",\"observed\":\"material_loss\",\"metrics\":{\"volume\":472.0,\"surface_area\":392.0,\"centroid\":[5.016949152542374,4.016949152542375,2.9661016949152543],\"faces\":11,\"edges\":24,\"bounds\":[0.0,0.0,0.0,10.0,8.0,6.0],\"valid\":true,\"closed_rectangle_shell\":false,\"one_face_per_side\":false,\"material\":{\"tested\":128,\"mismatches\":2,\"examples\":[{\"x\":3.5,\"y\":2.5,\"z\":5.0,\"want\":\"IN\",\"observed\":\"OUT\"},{\"x\":4.75,\"y\":2.5,\"z\":5.0,\"want\":\"IN\",\"observed\":\"OUT\"}]}},\"brep_sha256\":\"c251e7cd56c0724529fcde8c4527f72203991ee6c7da5fdad2cb9b5aba32e4ad\"}\nTEST_DONE\n",
+          "timed_out": false
+        }
+      },
+      "category": "regression",
+      "visibility": "hidden",
+      "issue_id": "occt-544",
+      "elapsed_seconds": 0.096
+    }
+  ],
+  "limitations": [
+    "Checks are only those declared in this frozen suite; this is not the full upstream test suite."
+  ],
+  "report": {
+    "provided": false
+  },
+  "patch_bytes": 209,
+  "build": {
+    "configure": {
+      "command": [
+        "cmake",
+        "-S",
+        "/tmp/manifest-suite-aqofykup/source",
+        "-B",
+        "/tmp/manifest-suite-aqofykup/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_FLAGS_RELEASE=-O1 -DNDEBUG",
+        "-DCMAKE_CXX_FLAGS_RELEASE=-O1 -DNDEBUG",
+        "-DCMAKE_C_COMPILER=clang-10",
+        "-DCMAKE_CXX_COMPILER=clang++-10",
+        "-DBUILD_LIBRARY_TYPE=Shared",
+        "-DBUILD_ADDITIONAL_TOOLKITS=TKTopTest;DRAWEXE",
+        "-DBUILD_MODULE_ApplicationFramework=OFF",
+        "-DBUILD_MODULE_DataExchange=OFF",
+        "-DBUILD_MODULE_Draw=OFF",
+        "-DBUILD_MODULE_FoundationClasses=OFF",
+        "-DBUILD_MODULE_ModelingAlgorithms=OFF",
+        "-DBUILD_MODULE_ModelingData=OFF",
+        "-DBUILD_MODULE_Visualization=OFF",
+        "-DUSE_FREETYPE=OFF",
+        "-DUSE_TK=OFF",
+        "-D3RDPARTY_TCL_DIR=/home/lzy/cad-bench-experiment/runtime/py311",
+        "-D3RDPARTY_TCL_INCLUDE_DIR=/home/lzy/cad-bench-experiment/runtime/py311/include",
+        "-D3RDPARTY_TCL_LIBRARY=/home/lzy/cad-bench-experiment/runtime/py311/lib/libtcl8.6.so",
+        "-D3RDPARTY_TCL_LIBRARY_DIR=/home/lzy/cad-bench-experiment/runtime/py311/lib"
+      ],
+      "return_code": 0,
+      "elapsed_seconds": 1.051,
+      "output_tail": "-- The C compiler identification is Clang 10.0.0\n-- The CXX compiler identification is Clang 10.0.0\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /usr/bin/clang-10 - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/clang++-10 - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Info: TCL is used by OCCT\n-- Info: Xlib is used by OCCT\n-- Found Tclsh: /home/lzy/cad-bench-experiment/runtime/py311/bin/tclsh (found version \"8.6\") \n-- Info: TK is used from TCL folder: /home/lzy/cad-bench-experiment/runtime/py311\n-- Info: The directories of 3rdparty headers: \n\t/home/lzy/cad-bench-experiment/runtime/py311/include\n-- Info: The directories of 3rdparty libraries: \n\t/home/lzy/cad-bench-experiment/runtime/py311/lib\n-- \nInfo: (19:46:07) Start collecting all OCCT header files into /tmp/manifest-suite-aqofykup/build/inc ...\n-- Info: (19:46:07) End the collecting\n-- Info: Used native memory manager\n-- Info: (19:46:07) OCCT toolkits processed\n-- Info: (19:46:07) OCCT configuration files prepared\n-- Configuring done (0.8s)\n-- Generating done (0.1s)\n-- Build files have been written to: /tmp/manifest-suite-aqofykup/build\n"
+    },
+    "build": {
+      "command": [
+        "cmake",
+        "--build",
+        "/tmp/manifest-suite-aqofykup/build",
+        "--target",
+        "DRAWEXE",
+        "TKTopTest",
+        "--parallel",
+        "2"
+      ],
+      "return_code": 0,
+      "elapsed_seconds": 743.878,
+      "output_tail": "set.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffsetAPI/BRepOffsetAPI_MakeOffsetShape.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffsetAPI/BRepOffsetAPI_MakePipe.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffsetAPI/BRepOffsetAPI_MakePipeShell.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffsetAPI/BRepOffsetAPI_MakeThickSolid.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffsetAPI/BRepOffsetAPI_MiddlePath.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffsetAPI/BRepOffsetAPI_NormalProjection.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffsetAPI/BRepOffsetAPI_ThruSections.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/Draft/Draft.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/Draft/Draft_EdgeInfo.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/Draft/Draft_FaceInfo.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/Draft/Draft_Modification.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/Draft/Draft_Modification_1.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/Draft/Draft_VertexInfo.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffset/BRepOffset.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffset/BRepOffset_Analyse.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffset/BRepOffset_Inter2d.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffset/BRepOffset_Inter3d.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffset/BRepOffset_Interval.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffset/BRepOffset_MakeLoops.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffset/BRepOffset_MakeOffset.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffset/BRepOffset_MakeOffset_1.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffset/BRepOffset_MakeSimpleOffset.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffset/BRepOffset_Offset.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffset/BRepOffset_SimpleOffset.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BRepOffset/BRepOffset_Tool.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BiTgte/BiTgte_Blend.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BiTgte/BiTgte_CurveOnEdge.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKOffset/CMakeFiles/TKOffset.dir/BiTgte/BiTgte_CurveOnVertex.cxx.o\n[ 97%] Linking CXX shared library ../../../lin64/clang/lib/libTKOffset.so\n[ 97%] Built target TKOffset\n[ 97%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_BasicCommands.cxx.o\n[ 97%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest.cxx.o\n[ 97%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_ChamferCommands.cxx.o\n[ 97%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_CheckCommands.cxx.o\n[ 97%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_CurveCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_DraftAngleCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_DrawableHistory.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_ExtremaCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_FeatureCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_Fillet2DCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_FilletCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_FillingCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_GPropCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_HistoryCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_MatCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_Objects.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_OtherCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_PrimitiveCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_ProjectionCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_SurfaceCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_SweepCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BRepTest/BRepTest_TopologyCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeometryTest/GeometryTest.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeometryTest/GeometryTest_APICommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeometryTest/GeometryTest_ConstraintCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeometryTest/GeometryTest_ContinuityCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeometryTest/GeometryTest_CurveCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeometryTest/GeometryTest_CurveTanCommands.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeometryTest/GeometryTest_DrawableQualifiedCurve2d.cxx.o\n[ 98%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeometryTest/GeometryTest_FairCurveCommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeometryTest/GeometryTest_PolyCommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeometryTest/GeometryTest_SurfaceCommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeometryTest/GeometryTest_TestProjCommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/HLRTest/HLRTest.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/HLRTest/HLRTest_DrawableEdgeTool.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/HLRTest/HLRTest_DrawablePolyEdgeTool.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/HLRTest/HLRTest_OutLiner.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/HLRTest/HLRTest_Projector.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/HLRTest/HLRTest_ShapeData.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/MeshTest/MeshTest.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/MeshTest/MeshTest_CheckTopology.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/MeshTest/MeshTest_PluginCommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/MeshTest/MeshTest_Debug.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeomliteTest/GeomliteTest.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeomliteTest/GeomliteTest_API2dCommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeomliteTest/GeomliteTest_ApproxCommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeomliteTest/GeomliteTest_CurveCommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeomliteTest/GeomliteTest_ModificationCommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/GeomliteTest/GeomliteTest_SurfaceCommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/DrawFairCurve/DrawFairCurve_Batten.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/DrawFairCurve/DrawFairCurve_MinimalVariation.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_APICommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_BOPCommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_CheckCommands.cxx.o\n[ 99%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_DrawableShape.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_LowCommands.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_MkConnectedCommands.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_ObjCommands.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_Objects.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_OptionCommands.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_PartitionCommands.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_PeriodicityCommands.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_TolerCommands.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_DebugCommands.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_CellsCommands.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_RemoveFeaturesCommands.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/BOPTest/BOPTest_UtilityCommands.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/SWDRAW/SWDRAW.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/SWDRAW/SWDRAW_ShapeAnalysis.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/SWDRAW/SWDRAW_ShapeCustom.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/SWDRAW/SWDRAW_ShapeExtend.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/SWDRAW/SWDRAW_ShapeFix.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/SWDRAW/SWDRAW_ShapeProcess.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/SWDRAW/SWDRAW_ShapeProcessAPI.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/SWDRAW/SWDRAW_ShapeTool.cxx.o\n[100%] Building CXX object src/Draw/TKTopTest/CMakeFiles/TKTopTest.dir/SWDRAW/SWDRAW_ShapeUpgrade.cxx.o\n[100%] Linking CXX shared library ../../../lin64/clang/lib/libTKTopTest.so\n[100%] Built target TKTopTest\n"
+    }
+  },
+  "elapsed_seconds": 746.451,
+  "passed": true
+}

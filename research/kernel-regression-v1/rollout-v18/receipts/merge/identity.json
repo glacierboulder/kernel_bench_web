@@ -1,0 +1,23 @@
+{
+  "source_id": "occt-3e80fad1779e",
+  "commit": "3e80fad1779e4fab620d1ab1982bfd7722b6c92b",
+  "materialized_tree_sha256": "c53024a6a438c14a4bca3e3aae84bead8890cc7e82fdd9f018f235153e57507f",
+  "toolchain": "occt-clang10-tcl86-v1",
+  "toolchain_config": {
+    "path": "toolchains/occt-clang10-tcl86-v1.json",
+    "sha256": "769c081794400de38ae921646ad63e2db53f4e4e3b63d9e0ab4b0e2ae2fd560d"
+  },
+  "build_entry": {
+    "path": "tools/occt-clang10-v1/build.sh",
+    "sha256": "d8b730eb7aead0ccbe489495f0ebd9ca9ad8c1210a9c3bb975e231820f11ff82"
+  },
+  "declared_public_targets": [
+    "DRAWEXE",
+    "TKTopTest"
+  ],
+  "source": "/var/tmp/cad-bench-lzy-20261026/cache/sources/occt-3e80fad1779e/source",
+  "build": "/home/lzy/cad-bench-experiment/rollout18.76ynRiIc/merge-build",
+  "observed_tree": "c53024a6a438c14a4bca3e3aae84bead8890cc7e82fdd9f018f235153e57507f",
+  "git_tree": "68280064c3c376b5ff59f5e8d7f14295d4ab5050",
+  "source_commit": "3e80fad1779e4fab620d1ab1982bfd7722b6c92b"
+}

@@ -1,0 +1,23 @@
+{
+  "source_id": "occt-1177-b-cbca11e97518",
+  "commit": "cbca11e97518a66de27bdc5100ceacf9e77e2e87",
+  "materialized_tree_sha256": "5577b347bd0d241e249520b08bf1332e15826d158651ad1fbafc425a77f48351",
+  "toolchain": "occt8-gcc13-cpp-20261112",
+  "toolchain_config": {
+    "path": "toolchains/occt8-gcc13-cpp-20261112.json",
+    "sha256": "859802cd60dc1127b7f5951f0688ac27d953d653b4c915fa6b4231620d8d39a0"
+  },
+  "build_entry": {
+    "path": "tools/occt8-gcc13-cpp/build.sh",
+    "sha256": "b166ea190712b4b3f2ba57d1d008fad24b9d434ea082016e4f099033f8c6177e"
+  },
+  "declared_public_targets": [
+    "TKFillet",
+    "TKPrim"
+  ],
+  "source": "/home/lzy/cad-bench-experiment/rollout13.odpdBr3j/strip-source",
+  "build": "/home/lzy/cad-bench-experiment/rollout13.odpdBr3j/strip-build",
+  "source_commit": "cbca11e97518a66de27bdc5100ceacf9e77e2e87",
+  "git_tree": "b925366b26693d677f935a6f366d25c893899f3e",
+  "observed_tree": "5577b347bd0d241e249520b08bf1332e15826d158651ad1fbafc425a77f48351"
+}

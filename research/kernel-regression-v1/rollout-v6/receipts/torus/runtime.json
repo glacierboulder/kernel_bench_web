@@ -1,0 +1,30 @@
+{
+  "source_id": "occt23612-derived-e79fa864aeb8-torus",
+  "toolchain": "occt1116-torus-gcc",
+  "config": {
+    "BUILD_ADDITIONAL_TOOLKITS": "TKPrim",
+    "BUILD_MODULE_ApplicationFramework": "OFF",
+    "BUILD_MODULE_DataExchange": "OFF",
+    "BUILD_MODULE_Draw": "OFF",
+    "BUILD_MODULE_FoundationClasses": "OFF",
+    "BUILD_MODULE_ModelingAlgorithms": "OFF",
+    "BUILD_MODULE_ModelingData": "OFF",
+    "BUILD_MODULE_Visualization": "OFF",
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+    "CMAKE_CXX_FLAGS_RELEASE": "-O1 -DNDEBUG"
+  },
+  "libraries": {
+    "libTKBRep.so": "5006fb3bcaea7540b11ef04f581f265b95f0fcc73de27751facb551fae5763c6",
+    "libTKG2d.so": "f88680f5cb2bf049048432c7c547f562079a4b2d8304c5c5289ce7154660db0c",
+    "libTKG3d.so": "0d0a6087b177627c1a15e5ca65fe952a4839707162aad55156efb5557ae1ea74",
+    "libTKGeomAlgo.so": "2d0c652c9fe0a396e72490d778016c6046e5606233c63cb12b95c886a29a652f",
+    "libTKGeomBase.so": "7769e47036790b94ff2f69407f40f32b2cf39d5ea76772c9e15453c2212a0a63",
+    "libTKMath.so": "5bb1696fd0697f19d33a46938c1aed0a76077de7dd1f0222f284e7a7040202f5",
+    "libTKPrim.so": "3da6073ba22d798e56bb441658dfb1744aec6b13e79edeffe368ac60888651db",
+    "libTKTopAlgo.so": "bb438f2f4de1fa24453473105e3cb6f0db826b8ba0a44b729295b2456c236e6d",
+    "libTKernel.so": "2fa72fd7ee9bc34293a04d88f378fbb672723748ba0419126361d6addabedda4"
+  },
+  "cache_sha256": "798effd188fd2fad5d427b6cb6e3c054ea2611e05d0615c015f788fb771b0a5a",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+}

@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "compile": {
+    "return_code": 0,
+    "elapsed_seconds": 0.721,
+    "output_tail": "/tmp/registered/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp: In function 'int main(int, char**)':\n/tmp/registered/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp:89:64: warning: 'const char* Standard_Failure::GetMessageString() const' is deprecated: Use what() instead [-Wdeprecated-declarations]\n   89 |     std::cerr << \"OCCT exception: \" << failure.GetMessageString() << \"\\n\";\n      |                                        ~~~~~~~~~~~~~~~~~~~~~~~~^~\nIn file included from /workspace/build/include/opencascade/Standard_Failure.hxx:15,\n                 from /workspace/source/src/FoundationClasses/TKernel/Standard/Standard_DomainError.hxx:22,\n                 from /workspace/build/include/opencascade/Standard_DomainError.hxx:15,\n                 from /workspace/source/src/FoundationClasses/TKernel/Standard/Standard_RangeError.hxx:21,\n                 from /workspace/build/include/opencascade/Standard_RangeError.hxx:15,\n                 from /workspace/source/src/FoundationClasses/TKernel/Standard/Standard_OutOfRange.hxx:21,\n                 from /workspace/build/include/opencascade/Standard_OutOfRange.hxx:15,\n                 from /workspace/source/src/FoundationClasses/TKMath/gp/gp_Mat.hxx:19,\n                 from /workspace/build/include/opencascade/gp_Mat.hxx:15,\n                 from /workspace/source/src/FoundationClasses/TKMath/gp/gp_XYZ.hxx:19,\n                 from /workspace/build/include/opencascade/gp_XYZ.hxx:15,\n                 from /workspace/source/src/FoundationClasses/TKMath/gp/gp_Pnt.hxx:21,\n                 from /workspace/build/include/opencascade/gp_Pnt.hxx:15,\n                 from /workspace/source/src/ModelingData/TKG3d/Geom/Geom_Curve.hxx:24,\n                 from /workspace/build/include/opencascade/Geom_Curve.hxx:15,\n                 from /workspace/source/src/ModelingData/TKG3d/Geom/Geom_Surface.hxx:20,\n                 from /workspace/build/include/opencascade/Geom_Surface.hxx:15,\n                 from /workspace/source/src/ModelingData/TKBRep/BRep/BRep_Tool.hxx:25,\n                 from /workspace/build/include/opencascade/BRep_Tool.hxx:15,\n                 from /tmp/registered/evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/check.cpp:2:\n/workspace/source/src/FoundationClasses/TKernel/Standard/Standard_Failure.hxx:60:15: note: declared here\n   60 |   const char* GetMessageString() const noexcept { return what(); }\n      |               ^~~~~~~~~~~~~~~~\n",
+    "timed_out": false
+  },
+  "result": {
+    "return_code": 0,
+    "elapsed_seconds": 0.04,
+    "output_tail": "INPUT_OK mode=box edge=1\nVALID_RESULT faces=7 TEST_DONE\n",
+    "timed_out": false
+  },
+  "case_sha256": "f78e8a590c71f9c9b8f612099b9fd9742396ff9b44ea92de20213c266e5ad030"
+}

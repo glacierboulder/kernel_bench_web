@@ -1,0 +1,70 @@
+{
+  "source": {
+    "source_id": "occt-3e80fad1779e",
+    "commit": "3e80fad1779e4fab620d1ab1982bfd7722b6c92b",
+    "materialized_tree_sha256": "c53024a6a438c14a4bca3e3aae84bead8890cc7e82fdd9f018f235153e57507f",
+    "toolchain": "occt-clang10-tcl86-v1",
+    "toolchain_config": {
+      "path": "toolchains/occt-clang10-tcl86-v1.json",
+      "sha256": "769c081794400de38ae921646ad63e2db53f4e4e3b63d9e0ab4b0e2ae2fd560d"
+    },
+    "build_entry": {
+      "path": "tools/occt-clang10-v1/build.sh",
+      "sha256": "d8b730eb7aead0ccbe489495f0ebd9ca9ad8c1210a9c3bb975e231820f11ff82"
+    },
+    "declared_public_targets": [
+      "DRAWEXE",
+      "TKTopTest"
+    ]
+  },
+  "suite": "occt-544-samedomain-regression@1",
+  "checkpoint": "544-merge-boxes",
+  "group": "occt_boolean_single_544",
+  "default_suite": "occt-single-544@1",
+  "artifacts": {
+    "healthy": {
+      "case": "benchmarks/occt/evaluation/cases/occt-544-samedomain/1/healthy.brep",
+      "original": "research/kernel-regression-v1/rollout-v18/receipts/merge/healthy-1-out.brep",
+      "sha256": "e423ec0dd41af773aba4441b965face4dea1cfd5c0036f51b5e545bc7f89643f",
+      "expect": "pass",
+      "mismatches": 0
+    },
+    "seam": {
+      "case": "benchmarks/occt/evaluation/cases/occt-544-samedomain/1/seam.brep",
+      "original": "research/kernel-regression-v1/rollout-v18/receipts/merge/seam-out.brep",
+      "sha256": "d96aa91295b84563d03b692e02d959e2e6fe64ab0fd739822a451c5a710e153f",
+      "expect": "seam_residual",
+      "mismatches": 0
+    },
+    "shift": {
+      "case": "benchmarks/occt/evaluation/cases/occt-544-samedomain/1/shift.brep",
+      "original": "research/kernel-regression-v1/rollout-v18/receipts/merge/shift-out.brep",
+      "sha256": "c6a78c15d2ac17a9d88e66e3785578b95f57e2ef6c727e96d70d0e5816ba841d",
+      "expect": "displaced",
+      "mismatches": 8
+    },
+    "notch": {
+      "case": "benchmarks/occt/evaluation/cases/occt-544-samedomain/1/notch.brep",
+      "original": "research/kernel-regression-v1/rollout-v18/receipts/merge/notch-out.brep",
+      "sha256": "c251e7cd56c0724529fcde8c4527f72203991ee6c7da5fdad2cb9b5aba32e4ad",
+      "expect": "material_loss",
+      "mismatches": 2
+    }
+  },
+  "hashes": {
+    "benchmarks/occt/evaluation/suites/regression/occt-544-samedomain-regression/1.json": "a644ef3968c224a5be149e8a8720d06f80913fd30e577c4f75cc48ae9997bc45",
+    "benchmarks/occt/evaluation/cases/occt-544-samedomain/1/geometry.hxx": "f5ac0ce5dbce4887cf92f473087c423602f846f746e682641ed8d2304235727e",
+    "benchmarks/occt/evaluation/cases/occt-544-samedomain/1/judge.py": "0f5090ef67c9b3f980c23829661916064df18557ce652a07321f2bb3c55d10de",
+    "benchmarks/occt/evaluation/cases/occt-544-samedomain/1/merge.cxx": "2da8ede7895cb9efe5b7b5e56a491fc5f227111beac1ddd586caf490ad744b8b",
+    "research/kernel-regression-v1/rollout-v19/neutral.diff": "c2ac9bfbda0234ae38323f5cf7ac382b35c07194a20b8c3926025f1db55dc453",
+    "research/kernel-regression-v1/rollout-v19/run-entry.sh": "593ca563c20fa3c899290e76d9ec488acb9b1238d9cc71bea48d777bcaad16d1",
+    "research/kernel-regression-v1/rollout-v18/ledger.json": "574bec36447aa4ee6fbff5326fb1616f61b1cb35b98ec5cbfbeb3e00f97c885f",
+    "research/kernel-regression-v1/rollout-v18/results.json": "5defb1a98fd3f1d65b7ae5a5cedfd7a52ee88db1e83ddb6fe68e61af11a8b62a",
+    "research/kernel-regression-v1/rollout-v18/receipts/merge/identity.json": "ab4e84cd524848ce5ef94c4c1ce31dcb74d42b93eacaaa3c9b8d142665d0d5f7",
+    "research/kernel-regression-v1/version-plan.json": "ccbad3bfccfb30d6600a5d7b9a5af96453b533dc163896f62712ac835a10d1ef",
+    "backend/suite_driver.py": "28b3a0baffa7fdf047f91fa33ed5f5c68e422b48ebecef84c3666296187ee93d",
+    "backend/reevaluate.py": "1e7e91648ec73a557b9f29fec934d0d066a5c9c051fe0edaeda0fcdbee436ea7",
+    "benchmarks/occt/catalog.json": "332522adbc525616497e103fdec5701d7cea0af387ea6f55c4d2a28ad9f79489"
+  },
+  "model_runs": 0
+}

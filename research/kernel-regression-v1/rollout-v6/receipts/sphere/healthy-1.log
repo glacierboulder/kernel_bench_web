@@ -1,0 +1,8 @@
+DRAW is running in batch mode
+BENCH_ASSERT_PASS bop_valid bopcheck= This shape seems to be OK.| kind=expression
+checkprops result -v 134.04128655316
+BENCH_ASSERT_PASS analytic_volume checkprops enforces analytically derived volume=134.04128655316 kind=expression
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=2 numeric_assertions=0
+TEST_DONE assertions=2 numeric_assertions=0
+SCRIPT_RETURN 0 

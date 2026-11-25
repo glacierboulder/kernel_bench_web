@@ -1,11 +1,38 @@
+import os
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from backend.suite_driver import _execute
 
 
 class SuiteDriverTests(unittest.TestCase):
+    def test_legacy_clang_layout_only_changes_opted_in_checkpoints(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "case.cxx").write_text("int main() {}")
+            (root / "inc").mkdir()
+            spec = {"id": "legacy-layout", "runner": "cpp_case_v1", "case": "case.cxx",
+                    "timeout_seconds": 20, "runner_options": {"libraries": ["TKernel"]}}
+            success = {"return_code": 0, "output_tail": "TEST_DONE", "timed_out": False}
+            for legacy in (False, True):
+                with self.subTest(legacy=legacy), patch.dict(os.environ, {"BENCH_TOOLCHAIN_NAME": "clang-o0"}), \
+                        patch("backend.suite_driver._run", return_value=success) as runner:
+                    spec["runner_options"]["legacy_clang_layout"] = legacy
+                    self.assertTrue(_execute(spec, case_root=root, build=root, source=root,
+                                             work=root, draw_runner=root / "unused")["passed"])
+                    compile_call, test_call = runner.call_args_list
+                    lib = root / "lin64" / ("clang" if legacy else "clang-o0") / "lib"
+                    include = root / "inc" if legacy else root / "include/opencascade"
+                    self.assertIn(str(lib), compile_call.args[0])
+                    self.assertIn(str(include), compile_call.args[0])
+                    env = test_call.kwargs["env"]
+                    if legacy:
+                        self.assertEqual(env["LD_LIBRARY_PATH"].split(os.pathsep)[0], str(lib))
+                    else:
+                        self.assertIsNone(env)
+
     def test_manifest_case_selects_each_draw_script_in_the_same_directory(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);cases=root/"cases";case_dir=cases/"issues/new-check"
@@ -44,7 +71,6 @@ class SuiteDriverTests(unittest.TestCase):
 
     def test_staged_geometry_record_uses_oracle_verdict(self):
         import json
-        from unittest.mock import patch
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             (root / "case.tcl").write_text("puts TEST_DONE\n")

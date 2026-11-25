@@ -1,0 +1,114 @@
+{
+  "runner_sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1",
+  "body_sha256": "e359d80f2464e3207cc07b285eb57b70b69cabc0021ea8b084fa59a596b440c1",
+  "case_sha256": "8a8c92c161210c4c4c3e5db8fde50810835f4af38d76acfceab48895009f1221",
+  "result": {
+    "address_space_limit_gib": 4,
+    "build": {
+      "artifact_verification_path": null,
+      "artifact_verification_sha256": null,
+      "build_record_path": null,
+      "build_record_sha256": null,
+      "compiler": "GCC 9.4.0",
+      "drawexe_path": "/workspace/build/lin64/gcc/bin/DRAWEXE",
+      "drawexe_sha256": "a19e1273fb68509d44b2b7b1a0a6349fa34d7572040624014d906acb0b66ea83",
+      "env_script_path": "/workspace/build/env.sh",
+      "env_script_sha256": "511a5ce8a6f5fc5f3f01c41c85c917a88fb387a59918130e3eeb2f89bb41b40c",
+      "jobs": 2,
+      "optimization": "-O0 -DNDEBUG",
+      "return_code": 0,
+      "status": "passed",
+      "targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "case_id": "M27252_regression_cylinder_plane",
+    "case_input_files": [],
+    "command": [
+      "bash",
+      "-lc",
+      "export CSF_OCCTResourcePath=/workspace/source/src && source /workspace/build/env.sh && export CSF_OCCTResourcePath=/workspace/source/src CSF_OCCTLibPath=/workspace/build/lin64/gcc/lib CSF_OCCTBinPath=/workspace/build/lin64/gcc/bin DRAWHOME=/workspace/source/src/DrawResources CSF_DrawPluginDefaults=/workspace/source/src/DrawResources && exec /workspace/build/lin64/gcc/bin/DRAWEXE -b -f /tmp/replay/evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27252_regression_cylinder_plane.tcl"
+    ],
+    "cpu_limit_seconds": 157,
+    "cwd": "/tmp/replay/evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2",
+    "draw_process_return_code": 0,
+    "drawexe_path": "/workspace/build/lin64/gcc/bin/DRAWEXE",
+    "drawexe_sha256": "a19e1273fb68509d44b2b7b1a0a6349fa34d7572040624014d906acb0b66ea83",
+    "duration_seconds": 0.065,
+    "environment_adaptations": {
+      "DISPLAY": "unset",
+      "LIBGL_ALWAYS_SOFTWARE": "1",
+      "env_script": "/workspace/build/env.sh",
+      "required_conda_env": "",
+      "resource_root": "/workspace/source/src"
+    },
+    "execution": {
+      "duration_seconds": 0.065,
+      "oracle": {
+        "checks": [
+          {
+            "id": "geometry_predicate",
+            "passed": true
+          }
+        ],
+        "detail": {
+          "curve_count": 1,
+          "endpoint_gap": 1.2246467991473533e-15,
+          "max_cylinder_radial_residual": 8.881784197001252e-16,
+          "max_plane_residual": 0.0,
+          "sample_count": 17,
+          "wrong_radius_min_residual": 0.4999999999999991
+        },
+        "status": "geometry_pass"
+      },
+      "oracle_ran": true,
+      "process_return_code": 0,
+      "signal": null,
+      "status": "completed",
+      "tcl_source_return_code": [
+        "0"
+      ],
+      "test_done_marker": true,
+      "timed_out": false
+    },
+    "expected_outcome": "pass",
+    "harness_path": "/tmp/replay/evaluation/cases/evaluator_tests/occt-bf-group-b55-27310-27773-27252-oracle-v2/M27252_regression_cylinder_plane.tcl",
+    "harness_sha256": "8a8c92c161210c4c4c3e5db8fde50810835f4af38d76acfceab48895009f1221",
+    "log_path": "/out/registered-draw.log",
+    "log_sha256": "2831db64221d442e4654abfaf5e7d81fcf2bb5aaa260dcc6bf293a5b23e6a381",
+    "materialized_tree_sha256": null,
+    "official_test_or_hidden_oracle_files": [],
+    "oracle": {
+      "checks": [
+        {
+          "id": "geometry_predicate",
+          "passed": true
+        }
+      ],
+      "detail": {
+        "curve_count": 1,
+        "endpoint_gap": 1.2246467991473533e-15,
+        "max_cylinder_radial_residual": 8.881784197001252e-16,
+        "max_plane_residual": 0.0,
+        "sample_count": 17,
+        "wrong_radius_min_residual": 0.4999999999999991
+      },
+      "status": "geometry_pass"
+    },
+    "process_return_code": 0,
+    "role": "agent",
+    "runner_id": "bf-group2-gcc9-tcl-physical-oracle-v1",
+    "runner_process_exit_mapping": {
+      "0": "completed",
+      "1": "completed",
+      "2": "runtime_error",
+      "3": "timeout"
+    },
+    "runner_sha256": "f50a54b69fc905953a0406bfdbc2cd9100450d18ddc6aa0a15c9bfc54b7623d1",
+    "schema_version": "bf-group2-staged-run-v1",
+    "source_commit": null,
+    "timeout_seconds": 160
+  },
+  "exit": 0
+}

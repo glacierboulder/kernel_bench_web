@@ -1,0 +1,33 @@
+{
+  "suite": {
+    "id": "occt-github-1371-version-regression",
+    "version": "1",
+    "path": "evaluation/suites/regression/occt-github-1371-version-regression/1.json"
+  },
+  "source_id": "occt801-1371-b-b8f597c67781",
+  "toolchain": "occt8-gcc13-cpp-20261112",
+  "checkpoint": "rim",
+  "status": "passed",
+  "runner_sha256": "28b3a0baffa7fdf047f91fa33ed5f5c68e422b48ebecef84c3666296187ee93d",
+  "assets": {
+    "evaluation/cases/version-regressions/1/rim.cxx": "9782e47c351afd843e36c50e9d75df16b2a1ea7bb5b2d0154a0e7bd41bcc740a",
+    "evaluation/cases/version-regressions/1/rim/healthy.brep": "eb08e37a82d23b3f64c24f215bfba9ea6231cf921299cc51bdfd32458342e522",
+    "evaluation/cases/version-regressions/1/rim/negative.brep": "ea1f1a57eba2ebffdbc027e6d368b699a693face89d82974ae01cb0bcc6be705",
+    "evaluation/cases/version-regressions/1/rim/untouched.brep": "f980ee6f9c29d88ad1db8b7a9a77f5dc5588628b21d5002c11b20d664b6acd46"
+  },
+  "raw": {
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 0.625,
+      "output_tail": "/out/case/evaluation/cases/version-regressions/1/rim.cxx: In function 'int main(int, char**)':\n/out/case/evaluation/cases/version-regressions/1/rim.cxx:127:46: warning: 'const char* Standard_Failure::GetMessageString() const' is deprecated: Use what() instead [-Wdeprecated-declarations]\n  127 |         std::cerr << failure.GetMessageString() << '\\n';\n      |                      ~~~~~~~~~~~~~~~~~~~~~~~~^~\nIn file included from /workspace/build/include/opencascade/Standard_Failure.hxx:15,\n                 from /workspace/source/src/FoundationClasses/TKernel/Standard/Standard_DomainError.hxx:22,\n                 from /workspace/build/include/opencascade/Standard_DomainError.hxx:15,\n                 from /workspace/source/src/FoundationClasses/TKernel/Standard/Standard_RangeError.hxx:21,\n                 from /workspace/build/include/opencascade/Standard_RangeError.hxx:15,\n                 from /workspace/source/src/FoundationClasses/TKernel/Standard/Standard_OutOfRange.hxx:21,\n                 from /workspace/build/include/opencascade/Standard_OutOfRange.hxx:15,\n                 from /workspace/source/src/FoundationClasses/TKMath/gp/gp_Mat.hxx:19,\n                 from /workspace/build/include/opencascade/gp_Mat.hxx:15,\n                 from /workspace/source/src/FoundationClasses/TKMath/gp/gp_XYZ.hxx:19,\n                 from /workspace/build/include/opencascade/gp_XYZ.hxx:15,\n                 from /workspace/source/src/FoundationClasses/TKMath/gp/gp_Pnt.hxx:21,\n                 from /workspace/build/include/opencascade/gp_Pnt.hxx:15,\n                 from /workspace/source/src/ModelingData/TKG3d/Geom/Geom_Curve.hxx:24,\n                 from /workspace/build/include/opencascade/Geom_Curve.hxx:15,\n                 from /workspace/source/src/ModelingData/TKG3d/Adaptor3d/Adaptor3d_Curve.hxx:20,\n                 from /workspace/build/include/opencascade/Adaptor3d_Curve.hxx:15,\n                 from /workspace/source/src/ModelingData/TKG3d/GeomAdaptor/GeomAdaptor_TransformedCurve.hxx:17,\n                 from /workspace/build/include/opencascade/GeomAdaptor_TransformedCurve.hxx:15,\n                 from /workspace/source/src/ModelingData/TKBRep/BRepAdaptor/BRepAdaptor_Curve.hxx:20,\n                 from /workspace/build/include/opencascade/BRepAdaptor_Curve.hxx:15,\n                 from /out/case/evaluation/cases/version-regressions/1/rim.cxx:2:\n/workspace/source/src/FoundationClasses/TKernel/Standard/Standard_Failure.hxx:60:15: note: declared here\n   60 |   const char* GetMessageString() const noexcept { return what(); }\n      |               ^~~~~~~~~~~~~~~~\n",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.016,
+      "output_tail": "METRICS torus_count=1 target=1 volume=778.95743341971195 material_mismatches=0\nnative pass\nMETRICS torus_count=1 target=1 volume=778.95743341971217 material_mismatches=0\nhealthy pass\nMETRICS torus_count=1 target=0 volume=778.95743341971217 material_mismatches=48\nwrong-rim wrong_rim\nMETRICS torus_count=0 target=0 volume=785.39816339744812 material_mismatches=24\nuntouched uncut\nTEST_DONE\n",
+      "timed_out": false
+    }
+  }
+}

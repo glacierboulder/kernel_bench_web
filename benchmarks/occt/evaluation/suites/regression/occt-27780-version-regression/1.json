@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "occt-27780-version-regression",
+  "version": "1",
+  "title": "occt-27780 version regression",
+  "source_ids": [
+    "occt-2613378e60ff"
+  ],
+  "group_ids": [
+    "occt-single-27780"
+  ],
+  "checkpoints": [
+    {
+      "id": "section-uv",
+      "issue_id": "occt-27780",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/version-regressions/1/section-uv.cxx",
+      "timeout_seconds": 120,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel",
+          "dl"
+        ],
+        "inputs": [
+          "evaluation/cases/version-regressions/1/section-uv/native-1.brep",
+          "evaluation/cases/version-regressions/1/section-uv/native-2.brep",
+          "evaluation/cases/version-regressions/1/section-uv/short.brep",
+          "evaluation/cases/version-regressions/1/section-uv/one-side.brep"
+        ],
+        "stdout_contains": [
+          "CONTROL native pass",
+          "CONTROL healthy-1 pass",
+          "CONTROL healthy-2 pass",
+          "CONTROL short truncated",
+          "CONTROL one-side second_side_mismatch",
+          "TEST_DONE"
+        ],
+        "legacy_clang_layout": true
+      }
+    }
+  ]
+}

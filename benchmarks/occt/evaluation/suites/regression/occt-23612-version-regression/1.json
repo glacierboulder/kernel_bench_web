@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "occt-23612-version-regression",
+  "version": "1",
+  "title": "occt-23612 version regression (torus-trim)",
+  "source_ids": [
+    "occt23612-derived-e79fa864aeb8-torus"
+  ],
+  "group_ids": [
+    "occt-23612-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "torus-trim",
+      "issue_id": "occt-23612",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/version-regressions/1/torus-trim.cxx",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel"
+        ],
+        "inputs": [
+          "evaluation/cases/version-regressions/1/torus-trim/healthy.brep",
+          "evaluation/cases/version-regressions/1/torus-trim/period.brep",
+          "evaluation/cases/version-regressions/1/torus-trim/negative.brep",
+          "evaluation/cases/version-regressions/1/torus-trim/v-shift.brep",
+          "evaluation/cases/version-regressions/1/torus-trim/truncated.brep"
+        ],
+        "stdout_contains": [
+          "native pass",
+          "healthy pass",
+          "period pass",
+          "u-shift displaced",
+          "v-shift displaced",
+          "truncated truncated",
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}

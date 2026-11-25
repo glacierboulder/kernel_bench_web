@@ -1,0 +1,17 @@
+DRAW is running in batch mode
+BENCH_ASSERT_PASS operation_completed error=0 report=Tolerance Reached=2.4493180912306897e-15|2 curve(s) found.|c_1 (c2d1_1, c2d2_1) c_2 (c2d1_2, c2d2_2) | kind=expression
+BENCH_ASSERT_PASS nonempty curves=2 error=0 report=Tolerance Reached=2.4493180912306897e-15|2 curve(s) found.|c_1 (c2d1_1, c2d2_1) c_2 (c2d1_2, c2d2_2) | kind=numeric
+BENCH_ASSERT_PASS support max_distance=1.4210854715202004e-14 limit=1e-5 kind=numeric
+WITNESS 80 0 0 0
+WITNESS -80 0 0 9.7971743931788261e-15
+WITNESS 0 80 0 4.898587196589413e-15
+WITNESS 0 -80 0 1.4695761589768237e-14
+WITNESS 120 0 0 0
+WITNESS -120 0 0 1.469576158976824e-14
+WITNESS 0 120 0 7.3478807948841199e-15
+WITNESS 0 -120 0 2.2043642384652355e-14
+BENCH_ASSERT_PASS coverage witnesses=8 maximum=2.2043642384652355e-14 limit=1e-5 kind=numeric
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=4 numeric_assertions=3
+TEST_DONE assertions=4 numeric_assertions=3
+SCRIPT_RETURN 0 

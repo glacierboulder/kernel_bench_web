@@ -1,0 +1,22 @@
+{
+  "source_id": "occt-b55bd0235351",
+  "commit": "b55bd02353519ebba14575f8056bb2b14585089e",
+  "materialized_tree_sha256": "b65869dfa1367bb32a63e47accc1552de0fa6a6d5bd8a90a38db64bd4c7aaa77",
+  "toolchain": "occt-gcc9-gcc-o0-bf-b55-v2",
+  "toolchain_config": {
+    "path": "toolchains/occt-gcc9-gcc-o0-bf-b55-v2.json",
+    "sha256": "743082092d969acc29a7d75a4a12563faae883ca15b2a414ed66bf118c295c7b"
+  },
+  "build_entry": {
+    "path": "tools/occt-gcc9-bf-b55-v2/build.sh",
+    "sha256": "e2e20a5d9e997757a093e7b8e51f5f486cbd981505178a8b76d152176f6d2816"
+  },
+  "declared_public_targets": [
+    "DRAWEXE",
+    "TKTopTest"
+  ],
+  "source": "/var/tmp/cad-bench-lzy-suite-v2-20261027/jobs/baseline-b55/source",
+  "build": "/var/tmp/cad-bench-lzy-suite-v2-20261027/jobs/baseline-b55/build",
+  "observed_tree": "b65869dfa1367bb32a63e47accc1552de0fa6a6d5bd8a90a38db64bd4c7aaa77",
+  "git_tree": "4f7bb9c62242b211d7edcd98e8792a158fc8dddf"
+}

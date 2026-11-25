@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "source_id": "occt801-1163-b-6ba582362af7",
+  "baseline_commit": "6ba582362af730d90854235c2fd6b472618b6c0d",
+  "baseline_tree_sha256": "a52d6c9ec516040a98a4d3c53f41b24eabd0f59e976964c1058aa235162c73ea",
+  "toolchain": "occt8-gcc13-cpp-20261112",
+  "role": "baseline",
+  "files_sha256": {
+    "probe.cxx": "fa3955b44300951c35f7b5d9e3dcd2b57f6a07e89f14d7221bba295bac195563",
+    "replay.py": "ebd69c4610a4b75384b83e241ccefacca56d3d4705b2bb9023672e845b3a93ef"
+  },
+  "cases": {
+    "box-common": {
+      "geometry": {
+        "status": "PASS",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 499.9999999999999,
+          "cx": 7.500000000000001,
+          "swapped_volume": 499.9999999999999,
+          "swapped_cx": 7.5
+        },
+        "failed": []
+      },
+      "wrong_shape": {
+        "status": "FAIL",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 499.9999999999999,
+          "cx": 2.5,
+          "swapped_volume": 499.9999999999999,
+          "swapped_cx": 2.4999999999999996
+        },
+        "failed": [
+          "cx",
+          "swapped_cx"
+        ]
+      },
+      "expected_fault_rejected": true
+    },
+    "disjoint": {
+      "geometry": {
+        "status": "PASS",
+        "values": {
+          "valid": 1.0,
+          "solids": 0.0,
+          "volume": 0.0
+        },
+        "failed": []
+      },
+      "wrong_shape": {
+        "status": "FAIL",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 99.99999999999997
+        },
+        "failed": [
+          "solids",
+          "volume"
+        ]
+      },
+      "expected_fault_rejected": true
+    },
+    "cut-fuse": {
+      "geometry": {
+        "status": "PASS",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 499.9999999999999,
+          "cx": 2.5,
+          "fused_volume": 1499.9999999999993,
+          "fused_valid": 1.0
+        },
+        "failed": []
+      },
+      "wrong_shape": {
+        "status": "FAIL",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 499.9999999999999,
+          "cx": 2.5,
+          "fused_volume": 999.9999999999998,
+          "fused_valid": 1.0
+        },
+        "failed": [
+          "fused_volume"
+        ]
+      },
+      "expected_fault_rejected": true
+    },
+    "plane-sphere": {
+      "geometry": {
+        "status": "PASS",
+        "values": {
+          "length": 31.41592653589793,
+          "valid": 1.0,
+          "witness_distance": 1.7319121124709867e-15
+        },
+        "failed": []
+      },
+      "wrong_shape": {
+        "status": "FAIL",
+        "values": {
+          "length": 25.132741228718345,
+          "valid": 1.0,
+          "witness_distance": 3.1622776601683795
+        },
+        "failed": [
+          "length",
+          "witness_distance"
+        ]
+      },
+      "expected_fault_rejected": true
+    },
+    "hole-classification": {
+      "geometry": {
+        "status": "PASS",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 874.336293856408,
+          "cx": 5.0,
+          "hole_out": 1.0,
+          "wall_in": 1.0
+        },
+        "failed": []
+      },
+      "wrong_shape": {
+        "status": "FAIL",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 874.3362938564082,
+          "cx": 4.999999999999999,
+          "hole_out": 0.0,
+          "wall_in": 0.0
+        },
+        "failed": [
+          "hole_out",
+          "wall_in"
+        ]
+      },
+      "expected_fault_rejected": true
+    },
+    "brep-roundtrip": {
+      "geometry": {
+        "status": "PASS",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 874.3362938564078,
+          "cx": 5.0,
+          "hole_out": 1.0,
+          "wall_in": 1.0
+        },
+        "failed": []
+      },
+      "wrong_shape": {
+        "status": "FAIL",
+        "values": {
+          "valid": 1.0,
+          "solids": 1.0,
+          "volume": 999.9999999999998,
+          "cx": 5.0,
+          "hole_out": 0.0,
+          "wall_in": 1.0
+        },
+        "failed": [
+          "volume",
+          "hole_out"
+        ]
+      },
+      "expected_fault_rejected": true
+    }
+  },
+  "status": "PASS",
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-I/inputs/compat",
+    "-O0",
+    "-I/workspace/build/include/opencascade",
+    "/inputs/probe.cxx",
+    "-L/workspace/build/lin64/gcc/lib",
+    "-o",
+    "/tmp/tmpmwkk7m4t/probe",
+    "-lTKBO",
+    "-lTKPrim",
+    "-lTKTopAlgo",
+    "-lTKBRep",
+    "-lTKGeomAlgo",
+    "-lTKG3d",
+    "-lTKG2d",
+    "-lTKGeomBase",
+    "-lTKMath",
+    "-lTKernel"
+  ],
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "build": {
+    "status": "PASS"
+  },
+  "kernel_libraries_sha256": {
+    "libTKBO.so.8.0": "f3891f982ea01651e60ee196c2bb789ad1dd551fafa88ace1a8089246ed4500e",
+    "libTKPrim.so.8.0": "c4dc456b5efa555b855c18f321c7e481279d27d0b2b1368bc53afa2c8eba9204",
+    "libTKTopAlgo.so.8.0": "0cc7393e622667899c12d2e1dc939fa858ca0ccd8bbd142de18efa4e6e3019d7",
+    "libTKBRep.so.8.0": "63e2067951b1691997c2e8eefa3845ff612bafd65365c871e525991ab16b49d6",
+    "libTKGeomBase.so.8.0": "823f31ce6e7b4a4f00d40d0ce3b1f13bb212c9b2931140fa5401bce28db6de19",
+    "libTKMath.so.8.0": "bf09180f8f18304942460040d8acfd2e9647259834194c433bcf6d5054eb4d9b",
+    "libTKernel.so.8.0": "f2a89759f01dc319958126323048074ae203e5c89028c188598a8e44bc77f36b",
+    "libTKShHealing.so.8.0": "b289531dbbbb294ffe46bd0319ccb51efba7e87a1ba560d585d86e14143a84c1",
+    "libTKGeomAlgo.so.8.0": "11fe1c94d73c0b83e3aef16529d0a625a4eab3ea1c91eac1bb1feb69fedd0d59",
+    "libTKG3d.so.8.0": "d1eae34e1bd8bb3cc441c479b84ada7d8ac06c0befecbd938b348ef316a9448d",
+    "libTKG2d.so.8.0": "5ca4a6009da1a68e67e81bf541f10ad41a67cb2721223c4361d22074fc6e1c14"
+  },
+  "elapsed_seconds": 0.616
+}

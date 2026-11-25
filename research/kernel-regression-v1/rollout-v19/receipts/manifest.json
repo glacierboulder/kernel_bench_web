@@ -1,0 +1,36 @@
+{
+  "host": "ws01",
+  "run": "0e0bf6498e65ef20",
+  "suite": "occt-544-samedomain-regression",
+  "version": "1",
+  "patch": "c2ac9bfbda0234ae38323f5cf7ac382b35c07194a20b8c3926025f1db55dc453",
+  "assets": {
+    "evaluation/cases/occt-544-samedomain/1/merge.cxx": "2da8ede7895cb9efe5b7b5e56a491fc5f227111beac1ddd586caf490ad744b8b",
+    "evaluation/cases/occt-544-samedomain/1/healthy.brep": "e423ec0dd41af773aba4441b965face4dea1cfd5c0036f51b5e545bc7f89643f",
+    "evaluation/cases/occt-544-samedomain/1/seam.brep": "d96aa91295b84563d03b692e02d959e2e6fe64ab0fd739822a451c5a710e153f",
+    "evaluation/cases/occt-544-samedomain/1/shift.brep": "c6a78c15d2ac17a9d88e66e3785578b95f57e2ef6c727e96d70d0e5816ba841d",
+    "evaluation/cases/occt-544-samedomain/1/notch.brep": "c251e7cd56c0724529fcde8c4527f72203991ee6c7da5fdad2cb9b5aba32e4ad",
+    "evaluation/cases/occt-544-samedomain/1/judge.py": "0f5090ef67c9b3f980c23829661916064df18557ce652a07321f2bb3c55d10de",
+    "evaluation/cases/occt-544-samedomain/1/geometry.hxx": "f5ac0ce5dbce4887cf92f473087c423602f846f746e682641ed8d2304235727e"
+  },
+  "driver": "28b3a0baffa7fdf047f91fa33ed5f5c68e422b48ebecef84c3666296187ee93d",
+  "helper": "8b9760668ed793592c467a732538e267b9a7422fc4e674ef0cd1021780aa90d7",
+  "selected_group": "occt_boolean_single_544",
+  "default_suite": {
+    "id": "occt-single-544",
+    "version": "1"
+  },
+  "foreign_source": "occt-single20-1511c7e90f1a",
+  "selection_rejection": "target evaluation suite is incompatible with the selected source_id",
+  "receipts": {
+    "cli.json": "67c6436ccfb493ca4d90843de7406edb587e36bd4f9ccf95d501d821ce0f76f3",
+    "cli.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "driver.json": "662bddd0efae92efecc364cb74ae3dd19517128117df8bc2125e009b122d7951",
+    "driver.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "internal.json": "29819783ba40430f2eb7423b872a7aa91f5f046f363c35c71030742cc7c817bb",
+    "snapshot.json": "30dc9b5673fa628c7ac5a954d7ea6ef6fdcb756b033e822e79a18f547bb1b8c8",
+    "frozen-suite.json": "a53e46c05651553e6d6c6e24445fa6ff85744d7755f12dab3182288aa840282b",
+    "source-lock.json": "667411f58db7df8fe9b8d1771712e44a410150d8be33a8895e6df8f347c86329",
+    "toolchain.json": "858b8a0a1f237f01399f4a35cc21eda3fa5d4a58cd887213aca8aff1f25c1c90"
+  }
+}

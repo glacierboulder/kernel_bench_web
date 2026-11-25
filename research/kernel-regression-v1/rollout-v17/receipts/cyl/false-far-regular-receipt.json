@@ -1,0 +1,26 @@
+{
+  "case": "09754b00fe74736be78b1a252440980ec3e2ac113f6267cd9d68a996b46ad955",
+  "runner": "9d93f03e0cb89a580b0a74d6632647cab76bbc2f4c3d32f7fb3fbb5a712a4b80",
+  "exit": 0,
+  "result": {
+    "protocol": "draw_case_oracle_v1",
+    "passed": false,
+    "test_done_marker": false,
+    "return_code": 0,
+    "timed_out": false,
+    "assertions": 2,
+    "numeric_assertions": 0,
+    "failed_assertions": 1,
+    "tcl_error_detected": true,
+    "expected_oracle_error": true,
+    "infrastructure_tcl_error": false,
+    "occt_error_detected": false,
+    "oracle_summary_found": false,
+    "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS kind=expression label={regular cylinder pair has four curves} detail=value=1\n",
+    "stderr_tail": "BENCH_ASSERT_FAIL kind=expression label={separated cylinders have no curves} detail=value=0\nBENCH_ORACLE_FAILED assertions=2 failures=1\nBENCH_TCL_ERROR: one or more benchmark assertions failed\none or more benchmark assertions failed\n    while executing\n\"bench_finish\"\n    (file \"/tmp/working-cases/regular.tcl\" line 166)\n    invoked from within\n\"source $::bench_runner_script\"\n",
+    "full_log_failure_detected": true,
+    "script": "/tmp/working-cases/regular.tcl",
+    "draw_executable": "/workspace/build/lin64/clang/bin/DRAWEXE-7.8.2",
+    "elapsed_seconds": 0.032
+  }
+}

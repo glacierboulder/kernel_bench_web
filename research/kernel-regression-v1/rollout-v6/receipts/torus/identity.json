@@ -1,0 +1,21 @@
+{
+  "source_id": "occt23612-derived-e79fa864aeb8-torus",
+  "commit": "e79fa864aeb87e65d0f7550b4c8ad64725b0c1b8",
+  "materialized_tree_sha256": "2bf3e2955ab757ef37300b7b755c45d0788756b610b9738d80d16493b058f10f",
+  "toolchain": "occt1116-torus-gcc",
+  "toolchain_config": {
+    "path": "toolchains/occt1116-torus-gcc.json",
+    "sha256": "167fc4435b3bbc7a220a55d94b342cf58ca47d9bfca911b99bed27528462d578"
+  },
+  "build_entry": {
+    "path": "tools/occt1116-torus-gcc/build.sh",
+    "sha256": "7e421345bab6eee82f3f00247d8a7b24767b57bed4a367c81d39b0aed1c90e44"
+  },
+  "declared_public_targets": [
+    "TKPrim"
+  ],
+  "derivation": "04243d43358034cd04205881172f0cea544e6ddebef1c90ed38ab0e5f802790a",
+  "modern_commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "derived_commit_file": "e7af24da74832886347c6cb70b6aad30f5c74374892d3c4931a4306928540ca7",
+  "observed_tree": "2bf3e2955ab757ef37300b7b755c45d0788756b610b9738d80d16493b058f10f"
+}

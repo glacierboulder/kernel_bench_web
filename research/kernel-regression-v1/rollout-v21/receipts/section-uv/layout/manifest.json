@@ -1,0 +1,27 @@
+{
+  "host": "ws01",
+  "run": "c35adade67e3327a",
+  "patch": "b187fd86178b05251b6ecd379a49785fc58a998899adce24acbc5329ec71dfd7",
+  "suite": "occt-27780-version-regression",
+  "version": "1",
+  "case_hashes": {
+    "evaluation/cases/version-regressions/1/section-uv.cxx": "d3f89aa08013bf43a273b8bac44ffc6ac78f43b4c255085e7d3912c2d319565a",
+    "evaluation/cases/version-regressions/1/section-uv/native-1.brep": "7c6bcfbb1d4d97908a783e062a5137aab2899e97aeea1afaa48d125c94ff9193",
+    "evaluation/cases/version-regressions/1/section-uv/native-2.brep": "7c6bcfbb1d4d97908a783e062a5137aab2899e97aeea1afaa48d125c94ff9193",
+    "evaluation/cases/version-regressions/1/section-uv/short.brep": "f4cbd153e3a891075383e087e620973fea701f98d685efc630de2245756435c6",
+    "evaluation/cases/version-regressions/1/section-uv/one-side.brep": "2022cdd5504cbd1df46f917752caa2da4b7f99944b33a47e82d4042fce0a93d2"
+  },
+  "runner": "144cbdc3bc0bef78180e0e8c107149aa8ffe9b86709af51f61f97d8225fedca5",
+  "evaluator_helper": "7b9ef2a3b3b93d76419ea956908582f61966de0cd31a3daf47eecd1b7127470a",
+  "receipts": {
+    "cli.json": "c3c556cd3e72b1eacdc2d747bffbb13105321ea041cf0a600aca734420bf03c6",
+    "cli.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "driver.json": "32a24c6afc1e8fb5702072a871ddd778d85b2074de9bb004adbdb321f872c444",
+    "internal.json": "e10af4cd95ebab65b641557c9b7a5719a9a35e52eaf61c21da3f9cddf81187b9",
+    "driver.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "snapshot.json": "b9d148af309c929285a85867d523f7d4ea72bfdb88373e6a63bae2ef8f4f74a4",
+    "frozen-suite.json": "92bd3490154a3ce368bed3dfd79dcd81b963fd9fe390d59d27e1bad29fd13fbb",
+    "source-lock.json": "90c1f077b97264035a5a11d520e359328a5e4fac48f96b520b7561b5b89f5d99",
+    "toolchain.json": "1f03c30804161d50729eca0dfe10207ea07b0903d9ae9378cf1abe7c605baa7f"
+  }
+}

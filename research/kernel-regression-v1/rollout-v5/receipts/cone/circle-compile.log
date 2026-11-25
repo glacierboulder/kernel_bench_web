@@ -1,0 +1,103 @@
+In file included from /inputs/circle.cxx:2:
+In file included from /workspace/build/inc/BRepTools.hxx:1:
+In file included from /workspace/source/src/BRepTools/BRepTools.hxx:26:
+In file included from /workspace/build/inc/TopTools_IndexedMapOfShape.hxx:1:
+In file included from /workspace/source/src/TopTools/TopTools_IndexedMapOfShape.hxx:20:
+In file included from /workspace/build/inc/TopoDS_Shape.hxx:1:
+In file included from /workspace/source/src/TopoDS/TopoDS_Shape.hxx:242:
+In file included from /workspace/build/inc/TopoDS_Shape.lxx:1:
+In file included from /workspace/source/src/TopoDS/TopoDS_Shape.lxx:17:
+In file included from /workspace/build/inc/TopoDS_TShape.hxx:1:
+In file included from /workspace/source/src/TopoDS/TopoDS_TShape.hxx:23:
+In file included from /workspace/build/inc/TopoDS_ListOfShape.hxx:1:
+In file included from /workspace/source/src/TopoDS/TopoDS_ListOfShape.hxx:20:
+In file included from /workspace/build/inc/NCollection_List.hxx:1:
+In file included from /workspace/source/src/NCollection/NCollection_List.hxx:19:
+In file included from /workspace/build/inc/NCollection_TListIterator.hxx:1:
+In file included from /workspace/source/src/NCollection/NCollection_TListIterator.hxx:19:
+In file included from /workspace/build/inc/NCollection_BaseList.hxx:1:
+In file included from /workspace/source/src/NCollection/NCollection_BaseList.hxx:29:
+In file included from /workspace/build/inc/NCollection_DefineAlloc.hxx:1:
+In file included from /workspace/source/src/NCollection/NCollection_DefineAlloc.hxx:19:
+In file included from /workspace/build/inc/NCollection_BaseAllocator.hxx:1:
+In file included from /workspace/source/src/NCollection/NCollection_BaseAllocator.hxx:30:
+In file included from /workspace/build/inc/MMgt_TShared.hxx:1:
+/workspace/source/src/MMgt/MMgt_TShared.hxx:62:3: warning: 'DynamicType' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+  DEFINE_STANDARD_RTTI(MMgt_TShared,Standard_Transient)
+  ^
+/workspace/source/src/Standard/Standard_Type.hxx:34:40: note: expanded from macro 'DEFINE_STANDARD_RTTI'
+  virtual const Handle(Standard_Type)& DynamicType() const { return STANDARD_TYPE(Class); }
+                                       ^
+/workspace/source/src/Standard/Standard_Transient.hxx:62:69: note: overridden virtual function is here
+  Standard_EXPORT virtual const opencascade::handle<Standard_Type>& DynamicType() const;
+                                                                    ^
+In file included from /inputs/circle.cxx:3:
+In file included from /workspace/build/inc/BRep_Builder.hxx:1:
+In file included from /workspace/source/src/BRep/BRep_Builder.hxx:274:
+In file included from /workspace/build/inc/BRep_Builder.lxx:1:
+In file included from /workspace/source/src/BRep/BRep_Builder.lxx:19:
+In file included from /workspace/build/inc/BRep_TFace.hxx:1:
+/workspace/source/src/BRep/BRep_TFace.hxx:94:3: warning: 'DynamicType' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+  DEFINE_STANDARD_RTTI(BRep_TFace,TopoDS_TFace)
+  ^
+/workspace/source/src/Standard/Standard_Type.hxx:34:40: note: expanded from macro 'DEFINE_STANDARD_RTTI'
+  virtual const Handle(Standard_Type)& DynamicType() const { return STANDARD_TYPE(Class); }
+                                       ^
+/workspace/source/src/TopoDS/TopoDS_TFace.hxx:52:3: note: overridden virtual function is here
+  DEFINE_STANDARD_RTTI(TopoDS_TFace,TopoDS_TShape)
+  ^
+/workspace/source/src/Standard/Standard_Type.hxx:34:40: note: expanded from macro 'DEFINE_STANDARD_RTTI'
+  virtual const Handle(Standard_Type)& DynamicType() const { return STANDARD_TYPE(Class); }
+                                       ^
+In file included from /inputs/circle.cxx:4:
+In file included from /workspace/build/inc/BRepAdaptor_Surface.hxx:1:
+In file included from /workspace/source/src/BRepAdaptor/BRepAdaptor_Surface.hxx:24:
+In file included from /workspace/build/inc/GeomAdaptor_Surface.hxx:1:
+In file included from /workspace/source/src/GeomAdaptor/GeomAdaptor_Surface.hxx:26:
+In file included from /workspace/build/inc/BSplSLib_Cache.hxx:1:
+/workspace/source/src/BSplSLib/BSplSLib_Cache.hxx:61:78: warning: binding dereferenced null pointer to reference has undefined behavior [-Wnull-dereference]
+                                 const TColStd_Array2OfReal&    theWeights = NOWEIGHTS_SURF);
+                                                                             ^~~~~~~~~~~~~~
+/workspace/source/src/BSplSLib/BSplSLib_Cache.hxx:33:25: note: expanded from macro 'NOWEIGHTS_SURF'
+#define NOWEIGHTS_SURF (*((TColStd_Array2OfReal*) NULL))
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/source/src/BSplSLib/BSplSLib_Cache.hxx:89:79: warning: binding dereferenced null pointer to reference has undefined behavior [-Wnull-dereference]
+                                  const TColStd_Array2OfReal&    theWeights = NOWEIGHTS_SURF);
+                                                                              ^~~~~~~~~~~~~~
+/workspace/source/src/BSplSLib/BSplSLib_Cache.hxx:33:25: note: expanded from macro 'NOWEIGHTS_SURF'
+#define NOWEIGHTS_SURF (*((TColStd_Array2OfReal*) NULL))
+                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /inputs/circle.cxx:5:
+In file included from /workspace/build/inc/BRepAdaptor_Curve.hxx:1:
+In file included from /workspace/source/src/BRepAdaptor/BRepAdaptor_Curve.hxx:25:
+In file included from /workspace/build/inc/GeomAdaptor_Curve.hxx:1:
+In file included from /workspace/source/src/GeomAdaptor/GeomAdaptor_Curve.hxx:26:
+In file included from /workspace/build/inc/BSplCLib_Cache.hxx:1:
+/workspace/source/src/BSplCLib/BSplCLib_Cache.hxx:57:78: warning: binding dereferenced null pointer to reference has undefined behavior [-Wnull-dereference]
+                                 const TColStd_Array1OfReal&    theWeights = NOWEIGHTS_CURVE);
+                                                                             ^~~~~~~~~~~~~~~
+/workspace/source/src/BSplCLib/BSplCLib_Cache.hxx:35:26: note: expanded from macro 'NOWEIGHTS_CURVE'
+#define NOWEIGHTS_CURVE (*((TColStd_Array1OfReal*) NULL))
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/source/src/BSplCLib/BSplCLib_Cache.hxx:68:78: warning: binding dereferenced null pointer to reference has undefined behavior [-Wnull-dereference]
+                                 const TColStd_Array1OfReal&    theWeights = NOWEIGHTS_CURVE);
+                                                                             ^~~~~~~~~~~~~~~
+/workspace/source/src/BSplCLib/BSplCLib_Cache.hxx:35:26: note: expanded from macro 'NOWEIGHTS_CURVE'
+#define NOWEIGHTS_CURVE (*((TColStd_Array1OfReal*) NULL))
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/source/src/BSplCLib/BSplCLib_Cache.hxx:86:79: warning: binding dereferenced null pointer to reference has undefined behavior [-Wnull-dereference]
+                                  const TColStd_Array1OfReal&    theWeights = NOWEIGHTS_CURVE);
+                                                                              ^~~~~~~~~~~~~~~
+/workspace/source/src/BSplCLib/BSplCLib_Cache.hxx:35:26: note: expanded from macro 'NOWEIGHTS_CURVE'
+#define NOWEIGHTS_CURVE (*((TColStd_Array1OfReal*) NULL))
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/source/src/BSplCLib/BSplCLib_Cache.hxx:99:79: warning: binding dereferenced null pointer to reference has undefined behavior [-Wnull-dereference]
+                                  const TColStd_Array1OfReal&    theWeights = NOWEIGHTS_CURVE);
+                                                                              ^~~~~~~~~~~~~~~
+/workspace/source/src/BSplCLib/BSplCLib_Cache.hxx:35:26: note: expanded from macro 'NOWEIGHTS_CURVE'
+#define NOWEIGHTS_CURVE (*((TColStd_Array1OfReal*) NULL))
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+8 warnings generated.
+/usr/bin/ld: /tmp/circle-3e6421.o: undefined reference to symbol '_ZTI12Geom2d_Curve'
+/usr/bin/ld: /workspace/build/lin64/clang/lib/libTKG2d.so: error adding symbols: DSO missing from command line
+clang: error: linker command failed with exit code 1 (use -v to see invocation)

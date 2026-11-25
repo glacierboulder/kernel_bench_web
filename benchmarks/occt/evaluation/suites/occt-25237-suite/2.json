@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "id": "occt-25237-suite",
+  "version": "2",
+  "title": "Common edge must be invariant when operands are swapped",
+  "source_ids": [
+    "occt801-b8f597c67781"
+  ],
+  "group_ids": [
+    "occt-25237-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "original",
+      "issue_id": "occt-25237",
+      "category": "original",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/occt-25237/original.cpp",
+      "timeout_seconds": 30,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKGeomBase",
+          "TKBRep",
+          "TKTopAlgo",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "swap=0",
+          "swap=1",
+          "pass=1"
+        ]
+      }
+    },
+    {
+      "id": "translation",
+      "issue_id": "occt-25237",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/occt-25237/translation.cpp",
+      "timeout_seconds": 30,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKGeomBase",
+          "TKBRep",
+          "TKTopAlgo",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "swap=0",
+          "swap=1",
+          "pass=1"
+        ]
+      }
+    },
+    {
+      "id": "rotation",
+      "issue_id": "occt-25237",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/occt-25237/rotation.cpp",
+      "timeout_seconds": 30,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKGeomBase",
+          "TKBRep",
+          "TKTopAlgo",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "swap=0",
+          "swap=1",
+          "pass=1"
+        ]
+      }
+    },
+    {
+      "id": "disjoint",
+      "issue_id": "occt-25237",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/occt-25237/disjoint.cpp",
+      "timeout_seconds": 30,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKGeomBase",
+          "TKBRep",
+          "TKTopAlgo",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "swap=0",
+          "swap=1",
+          "pass=1"
+        ]
+      }
+    },
+    {
+      "id": "tilted_edges",
+      "issue_id": "occt-25237",
+      "category": "neighborhood",
+      "visibility": "public",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/occt-25237/tilted_edges.cpp",
+      "timeout_seconds": 30,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKTopAlgo",
+          "TKGeomBase",
+          "TKBRep",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "swap=0",
+          "swap=1",
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "overlapping_subarcs",
+      "issue_id": "occt-25237",
+      "category": "regression",
+      "visibility": "public",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/occt-25237/overlapping_subarcs.cpp",
+      "timeout_seconds": 30,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKTopAlgo",
+          "TKGeomBase",
+          "TKBRep",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "swap=0",
+          "swap=1",
+          "TEST_DONE"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt-25237/bug25237_b26.brep",
+    "evaluation/cases/occt-25237/bug25237_b5.brep",
+    "evaluation/cases/occt-25237/arc_v2.hxx"
+  ]
+}

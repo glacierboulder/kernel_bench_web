@@ -1,0 +1,657 @@
+{
+  "status": "BASELINE_FAIL",
+  "source_id": "occt801-b8f597c67781-coons",
+  "suite": "occt-github-1550-suite@1",
+  "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "source_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "threshold": 1e-07,
+  "stations_per_edge": 33,
+  "baseline": {
+    "square": {
+      "input_errors": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "corners": {
+        "0": {
+          "actual": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "expected": [
+            0,
+            0,
+            0
+          ],
+          "error": 0.0
+        },
+        "1": {
+          "actual": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "expected": [
+            10,
+            0,
+            0
+          ],
+          "error": 10.0
+        },
+        "2": {
+          "actual": [
+            10.0,
+            10.0,
+            0.0
+          ],
+          "expected": [
+            10,
+            10,
+            0
+          ],
+          "error": 0.0
+        },
+        "3": {
+          "actual": [
+            10.0,
+            10.0,
+            0.0
+          ],
+          "expected": [
+            0,
+            10,
+            0
+          ],
+          "error": 10.0
+        }
+      },
+      "corners_passing": 2,
+      "edges": {
+        "1": {
+          "status": "FAIL",
+          "worst_station": 32,
+          "max_error": 10.0,
+          "end_errors": [
+            0.0,
+            10.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 0.0,
+          "max_distance_from_observed_start": 0.0
+        },
+        "2": {
+          "status": "FAIL",
+          "worst_station": 0,
+          "max_error": 10.0,
+          "end_errors": [
+            10.0,
+            0.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 14.142135623730951,
+          "max_distance_from_observed_start": 14.142135623730951
+        },
+        "3": {
+          "status": "FAIL",
+          "worst_station": 0,
+          "max_error": 10.0,
+          "end_errors": [
+            10.0,
+            0.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 0.0,
+          "max_distance_from_observed_start": 0.0
+        },
+        "4": {
+          "status": "FAIL",
+          "worst_station": 32,
+          "max_error": 10.0,
+          "end_errors": [
+            0.0,
+            10.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 14.142135623730951,
+          "max_distance_from_observed_start": 14.142135623730951
+        }
+      },
+      "edges_passing": 0
+    },
+    "rectangle": {
+      "input_errors": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "corners": {
+        "0": {
+          "actual": [
+            -3.0,
+            2.0,
+            5.0
+          ],
+          "expected": [
+            -3,
+            2,
+            5
+          ],
+          "error": 0.0
+        },
+        "1": {
+          "actual": [
+            -3.0,
+            2.0,
+            5.0
+          ],
+          "expected": [
+            3,
+            2,
+            13
+          ],
+          "error": 10.0
+        },
+        "2": {
+          "actual": [
+            0.5999999999999996,
+            8.0,
+            9.8
+          ],
+          "expected": [
+            3,
+            8,
+            13
+          ],
+          "error": 4.0
+        },
+        "3": {
+          "actual": [
+            0.5999999999999996,
+            8.0,
+            9.8
+          ],
+          "expected": [
+            -3,
+            8,
+            5
+          ],
+          "error": 6.0
+        }
+      },
+      "corners_passing": 1,
+      "edges": {
+        "1": {
+          "status": "FAIL",
+          "worst_station": 32,
+          "max_error": 10.0,
+          "end_errors": [
+            0.0,
+            10.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 0.0,
+          "max_distance_from_observed_start": 0.0
+        },
+        "2": {
+          "status": "FAIL",
+          "worst_station": 0,
+          "max_error": 10.0,
+          "end_errors": [
+            10.0,
+            4.0
+          ],
+          "expected_end_span": 6.0,
+          "observed_end_span": 8.485281374238571,
+          "max_distance_from_observed_start": 8.485281374238571
+        },
+        "3": {
+          "status": "FAIL",
+          "worst_station": 0,
+          "max_error": 6.0,
+          "end_errors": [
+            6.0,
+            4.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 0.0,
+          "max_distance_from_observed_start": 0.0
+        },
+        "4": {
+          "status": "FAIL",
+          "worst_station": 32,
+          "max_error": 6.0,
+          "end_errors": [
+            0.0,
+            6.0
+          ],
+          "expected_end_span": 6.0,
+          "observed_end_span": 8.485281374238571,
+          "max_distance_from_observed_start": 8.485281374238571
+        }
+      },
+      "edges_passing": 0
+    }
+  },
+  "patched_reference": {
+    "square": {
+      "input_errors": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "corners": {
+        "0": {
+          "actual": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "expected": [
+            0,
+            0,
+            0
+          ],
+          "error": 0.0
+        },
+        "1": {
+          "actual": [
+            10.0,
+            0.0,
+            0.0
+          ],
+          "expected": [
+            10,
+            0,
+            0
+          ],
+          "error": 0.0
+        },
+        "2": {
+          "actual": [
+            10.0,
+            10.0,
+            0.0
+          ],
+          "expected": [
+            10,
+            10,
+            0
+          ],
+          "error": 0.0
+        },
+        "3": {
+          "actual": [
+            0.0,
+            10.0,
+            0.0
+          ],
+          "expected": [
+            0,
+            10,
+            0
+          ],
+          "error": 0.0
+        }
+      },
+      "corners_passing": 4,
+      "edges": {
+        "1": {
+          "status": "PASS",
+          "worst_station": 0,
+          "max_error": 0.0,
+          "end_errors": [
+            0.0,
+            0.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 10.0,
+          "max_distance_from_observed_start": 10.0
+        },
+        "2": {
+          "status": "PASS",
+          "worst_station": 0,
+          "max_error": 0.0,
+          "end_errors": [
+            0.0,
+            0.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 10.0,
+          "max_distance_from_observed_start": 10.0
+        },
+        "3": {
+          "status": "PASS",
+          "worst_station": 0,
+          "max_error": 0.0,
+          "end_errors": [
+            0.0,
+            0.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 10.0,
+          "max_distance_from_observed_start": 10.0
+        },
+        "4": {
+          "status": "PASS",
+          "worst_station": 0,
+          "max_error": 0.0,
+          "end_errors": [
+            0.0,
+            0.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 10.0,
+          "max_distance_from_observed_start": 10.0
+        }
+      },
+      "edges_passing": 4
+    },
+    "rectangle": {
+      "input_errors": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "corners": {
+        "0": {
+          "actual": [
+            -3.0,
+            2.0,
+            5.0
+          ],
+          "expected": [
+            -3,
+            2,
+            5
+          ],
+          "error": 0.0
+        },
+        "1": {
+          "actual": [
+            3.0,
+            2.0,
+            13.0
+          ],
+          "expected": [
+            3,
+            2,
+            13
+          ],
+          "error": 0.0
+        },
+        "2": {
+          "actual": [
+            3.0,
+            8.0,
+            13.0
+          ],
+          "expected": [
+            3,
+            8,
+            13
+          ],
+          "error": 0.0
+        },
+        "3": {
+          "actual": [
+            -3.0,
+            8.0,
+            5.0
+          ],
+          "expected": [
+            -3,
+            8,
+            5
+          ],
+          "error": 0.0
+        }
+      },
+      "corners_passing": 4,
+      "edges": {
+        "1": {
+          "status": "PASS",
+          "worst_station": 0,
+          "max_error": 0.0,
+          "end_errors": [
+            0.0,
+            0.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 10.0,
+          "max_distance_from_observed_start": 10.0
+        },
+        "2": {
+          "status": "PASS",
+          "worst_station": 0,
+          "max_error": 0.0,
+          "end_errors": [
+            0.0,
+            0.0
+          ],
+          "expected_end_span": 6.0,
+          "observed_end_span": 6.0,
+          "max_distance_from_observed_start": 6.0
+        },
+        "3": {
+          "status": "PASS",
+          "worst_station": 0,
+          "max_error": 0.0,
+          "end_errors": [
+            0.0,
+            0.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 10.0,
+          "max_distance_from_observed_start": 10.0
+        },
+        "4": {
+          "status": "PASS",
+          "worst_station": 0,
+          "max_error": 0.0,
+          "end_errors": [
+            0.0,
+            0.0
+          ],
+          "expected_end_span": 6.0,
+          "observed_end_span": 6.0,
+          "max_distance_from_observed_start": 6.0
+        }
+      },
+      "edges_passing": 4
+    }
+  },
+  "wrong_edge_control": {
+    "square": {
+      "input_errors": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "corners": {
+        "0": {
+          "actual": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "expected": [
+            0,
+            0,
+            0
+          ],
+          "error": 0.0
+        },
+        "1": {
+          "actual": [
+            0.0,
+            10.0,
+            0.0
+          ],
+          "expected": [
+            10,
+            0,
+            0
+          ],
+          "error": 14.142135623730951
+        },
+        "2": {
+          "actual": [
+            10.0,
+            10.0,
+            0.0
+          ],
+          "expected": [
+            10,
+            10,
+            0
+          ],
+          "error": 0.0
+        },
+        "3": {
+          "actual": [
+            10.0,
+            0.0,
+            0.0
+          ],
+          "expected": [
+            0,
+            10,
+            0
+          ],
+          "error": 14.142135623730951
+        }
+      },
+      "corners_passing": 2,
+      "edges": {
+        "1": {
+          "status": "FAIL",
+          "worst_station": 32,
+          "max_error": 14.142135623730951,
+          "end_errors": [
+            0.0,
+            14.142135623730951
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 10.0,
+          "max_distance_from_observed_start": 10.0
+        },
+        "2": {
+          "status": "FAIL",
+          "worst_station": 0,
+          "max_error": 14.142135623730951,
+          "end_errors": [
+            14.142135623730951,
+            0.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 10.0,
+          "max_distance_from_observed_start": 10.0
+        },
+        "3": {
+          "status": "FAIL",
+          "worst_station": 0,
+          "max_error": 14.142135623730951,
+          "end_errors": [
+            14.142135623730951,
+            0.0
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 10.0,
+          "max_distance_from_observed_start": 10.0
+        },
+        "4": {
+          "status": "FAIL",
+          "worst_station": 32,
+          "max_error": 14.142135623730951,
+          "end_errors": [
+            0.0,
+            14.142135623730951
+          ],
+          "expected_end_span": 10.0,
+          "observed_end_span": 10.0,
+          "max_distance_from_observed_start": 10.0
+        }
+      },
+      "edges_passing": 0
+    }
+  },
+  "registered_status": {
+    "original-0": "FAILED",
+    "regression-3": "PASSED"
+  },
+  "artifacts": [
+    {
+      "path": "research/kernel-regression-v1/rollout-v29/receipts/baseline-compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v29/receipts/baseline-normal.txt",
+      "sha256": "4b69324cc368d334c9fea7077bfe1f17d63f7f7bbaec829932ad1a5efd397a9d"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v29/receipts/baseline-symbols.txt",
+      "sha256": "d452580cd51717f05afd34e5cf1722052e4491901e4af925a31f3b332b828f07"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v29/receipts/execution.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v29/receipts/implementation.json",
+      "sha256": "541939375f309a64164fb2bed803aad109f6dd9db682e81583ff22aa2803526d"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v29/receipts/patch-apply.txt",
+      "sha256": "2cb275c319b35bb946ec868453e392386ee1ddcc2b6b3db2bc2aaa3a6e943f31"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v29/receipts/process.json",
+      "sha256": "185c952d7157ee2fadd7cdf8b2cc20dcf015c3aa29b33854de8ade68a7efa345"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v29/receipts/reference-compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v29/receipts/reference-normal.txt",
+      "sha256": "6282831f23b799b74f4ffba7e08056f7108cd3e18a276b9737d61c538a14e07f"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v29/receipts/reference-swap.txt",
+      "sha256": "77bc744b4b96be7fcd3ce63d2ebaa2ab7914dd3776f340fb16ba84deee056b13"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v29/receipts/reference-symbols.txt",
+      "sha256": "afd3f9522e1751f06e7d412208b1399c6fed628dab8e420e8d9adb98faae74d7"
+    },
+    {
+      "path": "research/kernel-regression-v1/rollout-v29/receipts/registered.json",
+      "sha256": "15c385e9daeaad2cd0ae4e4f71a1ddf0107bf7cdd1435fa07acaa0a231f699cb"
+    }
+  ],
+  "prior_reference_swap": {
+    "path": "research/kernel-regression-v1/rollout-v5/receipts/coons/reference-swap.log",
+    "sha256": "2c19b4d7bd5c92fdab1ce3eb4ab4a2ae37316dbe1a5f3919b3c6b229ae112180"
+  },
+  "new_model_runs": 0,
+  "benchmark_patch_submissions": 0,
+  "coverage": {
+    "identities": 37,
+    "complete_portable_six": 37,
+    "at_least_one_calibrated_specialist_including_separate_controls": 37,
+    "both_portable_and_registered_specialist": 34,
+    "both_portable_and_a_specialist_including_separate_controls": 37
+  },
+  "registered_references": {
+    "NOT_RUN": 66,
+    "CALIBRATED": 34,
+    "CALIBRATION_FAILED": 26
+  }
+}

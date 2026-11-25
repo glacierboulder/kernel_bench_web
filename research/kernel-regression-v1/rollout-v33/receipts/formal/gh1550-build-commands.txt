@@ -1,0 +1,2 @@
+/usr/bin/cmake -S /tmp/manifest-suite-zur7z0z_/source -B /tmp/manifest-suite-zur7z0z_/build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -DBUILD_MODULE_ApplicationFramework=OFF -DBUILD_MODULE_DataExchange=OFF -DBUILD_MODULE_Draw=OFF -DBUILD_MODULE_FoundationClasses=OFF -DBUILD_MODULE_ModelingAlgorithms=OFF -DBUILD_MODULE_ModelingData=OFF -DBUILD_MODULE_Visualization=OFF -DBUILD_ADDITIONAL_TOOLKITS=TKGeomAlgo -DUSE_FREETYPE=OFF -DUSE_TK=OFF 
+/usr/bin/cmake --build /tmp/manifest-suite-zur7z0z_/build --parallel 2 --target TKGeomAlgo 

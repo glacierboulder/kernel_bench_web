@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "result": {
+    "protocol": "occt-checkpoint-v1",
+    "checkpoint_id": "32929-regression",
+    "category": "regression",
+    "passed": true,
+    "status": "geometry_pass",
+    "oracle_ran": true,
+    "return_code": 0,
+    "test_done_marker": true,
+    "timed_out": false,
+    "runner_process_return_code": 0,
+    "pending_requirements": [],
+    "elapsed_seconds": null,
+    "raw_result": {
+      "passed": true,
+      "status": "geometry_pass",
+      "checkpoint_id": "32929-regression",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "normal_valid",
+        "normal_area"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "normal_valid",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "normal_area",
+          "kind": "numeric"
+        }
+      ],
+      "missing_assertions": [],
+      "unexpected_assertions": [],
+      "duplicate_assertions": [],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_geometry_failure_signature_seen": false,
+      "base_runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": true,
+        "test_done_marker": true,
+        "tcl_standard_library": {
+          "init_script": "/usr/share/tcltk/tcl8.6/init.tcl",
+          "sha256": "374e8e83d501dc0283d4b6cae60d96b46141048e5a57d1500dd379f966879f98"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 2,
+        "numeric_assertions": 1,
+        "failed_assertions": 0,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS normal_valid topology kind=expression\nBENCH_ASSERT_PASS normal_area analytic_area kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=2 numeric_assertions=1\nTEST_DONE assertions=2 numeric_assertions=1\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "script": "/tmp/cases/evaluation/cases/authoring-fillet-20261112/occt-32929/1/regression.tcl",
+        "draw_executable": "/workspace/build/lin64/gcc/bin/DRAWEXE-7.5.0",
+        "elapsed_seconds": 0.065
+      },
+      "return_code": 0
+    },
+    "case_sha256": "62f372c9fd1556ec51e790784cbcf6e52eaac932e0f495079b386c70f5ef3763",
+    "adapter_sha256": "d2a16988a53f9ec5ba840b5f89d2eead6a1d0d7f936f94cf141f3c0ae60638b7"
+  },
+  "case_sha256": "62f372c9fd1556ec51e790784cbcf6e52eaac932e0f495079b386c70f5ef3763"
+}

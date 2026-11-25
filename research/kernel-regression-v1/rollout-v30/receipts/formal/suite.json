@@ -1,0 +1,42 @@
+{
+  "checkpoints": [
+    {
+      "case": "evaluation/cases/version-regressions/1/cylinder-branches/check-ng05t.tcl",
+      "category": "regression",
+      "id": "cylinder-branches",
+      "issue_id": "mantis-30082",
+      "oracle": "draw_test_done_v1",
+      "required": true,
+      "runner": "draw_case_v1",
+      "timeout_seconds": 120,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "NG-05T-v1"
+  ],
+  "id": "occt-30082-ng05t-version-regression",
+  "schema_version": 1,
+  "source_ids": [
+    "occt-ng04t-v1-baseline-ef5af939"
+  ],
+  "support_files": [
+    "evaluation/cases/version-regressions/1/cylinder-branches/check.tcl",
+    "evaluation/cases/version-regressions/1/cylinder-branches/coverage.py",
+    "evaluation/cases/version-regressions/1/cylinder-branches/duplicate-regular-1.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/duplicate-regular-2.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/duplicate-regular-3.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/duplicate-regular-4.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/false-far-far-1.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-1-regular-1.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-1-regular-2.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-1-regular-3.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-1-regular-4.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-2-regular-1.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-2-regular-2.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-2-regular-3.draw",
+    "evaluation/cases/version-regressions/1/cylinder-branches/healthy-2-regular-4.draw"
+  ],
+  "title": "NG-05T M30082 cylinder intersection coverage",
+  "version": "1"
+}

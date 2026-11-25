@@ -1,0 +1,34 @@
+{
+  "suite": {
+    "id": "mantis-29972-version-regression",
+    "version": "1",
+    "path": "evaluation/suites/regression/mantis-29972-version-regression/1.json"
+  },
+  "source_id": "occt-v4-e6afb5398317",
+  "toolchain": "occt-v4-clang10-o0-tcl86",
+  "checkpoint": "cylinder-m29972",
+  "status": "passed",
+  "runner_sha256": "28b3a0baffa7fdf047f91fa33ed5f5c68e422b48ebecef84c3666296187ee93d",
+  "assets": {
+    "evaluation/cases/version-regressions/1/circles.cxx": "6773ee62e8099d3f8ef7798ba464fbdfefb08fed8eb088d1a024a7612c168e57",
+    "evaluation/cases/version-regressions/1/cylinder-m29972/fixture.txt": "2425d9c61f931475e7e08841196274a68888bb1428dbf498b1d7cedd3548b593",
+    "evaluation/cases/version-regressions/1/cylinder-m29972/healthy.brep": "0539736f4d196b08584ac2953d7a89380a23cca9e41679d074a17f0316221d39",
+    "evaluation/cases/version-regressions/1/cylinder-m29972/negative.brep": "67b1e0bcb614c404af7e0b546cdb43fd4efcbb4e816b44f16e7792faaa0d9110",
+    "evaluation/cases/version-regressions/1/cylinder-m29972/gap.brep": "ca23d0874e0f00148ff287b2ec2e3f423d207626910c0e7b16852b1c68cc7251"
+  },
+  "raw": {
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 0.446,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.007,
+      "output_tail": "METRICS radius=5 largest_gap=0\nMETRICS radius=5 largest_gap=0\nMETRICS radius=5 largest_gap=0.19999999999999662\nnative pass\nhealthy pass\nnegative displaced\ngap incomplete\nTEST_DONE\n",
+      "timed_out": false
+    }
+  }
+}

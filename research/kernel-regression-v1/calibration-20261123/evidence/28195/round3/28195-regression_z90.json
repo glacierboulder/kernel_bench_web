@@ -1,0 +1,118 @@
+{
+  "id": "28195-regression_z90",
+  "status": "passed",
+  "passed": true,
+  "result": {
+    "protocol": "occt-checkpoint-v1",
+    "checkpoint_id": "28195-regression_z90",
+    "category": "regression",
+    "passed": true,
+    "status": "geometry_pass",
+    "oracle_ran": true,
+    "return_code": 0,
+    "test_done_marker": true,
+    "timed_out": false,
+    "runner_process_return_code": 0,
+    "pending_requirements": [],
+    "elapsed_seconds": null,
+    "raw_result": {
+      "passed": true,
+      "status": "geometry_pass",
+      "checkpoint_id": "28195-regression_z90",
+      "category": "regression",
+      "expected_assertion_ids": [
+        "operation_completed",
+        "input_1_qualified",
+        "input_2_qualified",
+        "validity",
+        "topology",
+        "volume",
+        "operand_membership",
+        "grid_membership",
+        "exclusion_membership"
+      ],
+      "observed_assertion_events": [
+        {
+          "status": "PASS",
+          "id": "operation_completed",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "input_1_qualified",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "input_2_qualified",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "validity",
+          "kind": "expression"
+        },
+        {
+          "status": "PASS",
+          "id": "topology",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "volume",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "operand_membership",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "grid_membership",
+          "kind": "numeric"
+        },
+        {
+          "status": "PASS",
+          "id": "exclusion_membership",
+          "kind": "numeric"
+        }
+      ],
+      "missing_assertions": [],
+      "unexpected_assertions": [],
+      "duplicate_assertions": [],
+      "completion_sentinel_count": 1,
+      "summary_pair_valid": true,
+      "expected_geometry_failure_signature_seen": false,
+      "base_runner": {
+        "protocol": "draw_case_oracle_v1",
+        "oracle_scope": "public_script_only",
+        "passed": true,
+        "test_done_marker": true,
+        "tcl_standard_library": {
+          "init_script": "/home/lzy/cad-bench-experiment/runtime/py311/lib/tcl8.6/init.tcl",
+          "sha256": "1ac9b41bc830a1dea9dcc92db00c29db5aaf3cbb83766d6119be5ad48f8a5e89"
+        },
+        "return_code": 0,
+        "timed_out": false,
+        "assertions": 9,
+        "numeric_assertions": 7,
+        "failed_assertions": 0,
+        "tcl_error_detected": false,
+        "expected_oracle_error": false,
+        "infrastructure_tcl_error": false,
+        "occt_error_detected": false,
+        "oracle_summary_found": true,
+        "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS operation_completed bop and bopcommon returned kind=expression\nBENCH_ASSERT_PASS input_1_qualified solids=1 volume=725572727.01198173 expected=725572727.0119817 kind=numeric\nBENCH_ASSERT_PASS input_2_qualified solids=1 volume=190578321.74481627 expected=190578321.74481627 kind=numeric\nBENCH_ASSERT_PASS validity result_valid=1 kind=expression\nBENCH_ASSERT_PASS topology solids=1 expected=1 kind=numeric\nBENCH_ASSERT_PASS volume observed=172189833.59967262 rigid_reference=172189705.92920932 canonical=172189705.92920932 relative_limit=1e-4 kind=numeric\nBENCH_ASSERT_PASS operand_membership tested=129 mismatches= kind=numeric\nBENCH_ASSERT_PASS grid_membership tested=125 mismatches= kind=numeric\nBENCH_ASSERT_PASS exclusion_membership tested=4 mismatches= kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=9 numeric_assertions=7\nTEST_DONE assertions=9 numeric_assertions=7\n",
+        "stderr_tail": "",
+        "diagnostic_lines": [],
+        "script": "/control/cases/bundle/evaluation/cases/single20/occt-28195/2/regression_z90.tcl",
+        "draw_executable": "/occt-build/lin64/clang/bin/DRAWEXE-7.0.0",
+        "elapsed_seconds": 69.912
+      },
+      "return_code": 0
+    },
+    "case_sha256": "3261e7d896cd54563b87b1385fa252cfdfc58eb0954badb4737fd99c22a90f1f",
+    "adapter_sha256": "d2a16988a53f9ec5ba840b5f89d2eead6a1d0d7f936f94cf141f3c0ae60638b7"
+  }
+}

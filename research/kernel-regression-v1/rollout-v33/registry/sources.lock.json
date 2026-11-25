@@ -1,0 +1,267 @@
+{
+  "algorithm": "agent-bench-tree-sha256-v1",
+  "exclusions": [
+    ".git",
+    "__pycache__",
+    "CMakeFiles",
+    "build path components",
+    "*.pyc",
+    "*.pyo"
+  ],
+  "schema_version": 1,
+  "sources": [
+    {"source_id":"occt801-b8f597c67781","upstream_url":"https://github.com/Open-Cascade-SAS/OCCT.git","commit":"b8f597c677811d1f9f4d8a97f5ae2825c0353a42","materialized_tree_sha256":"26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5","verification_status":"verified_git","provenance":"evaluation/provenance/occt801-geometry-source.json","toolchain":"occt1610-gcc"},
+    {"source_id": "occt801-b8f597c67781-singularity", "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git", "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42", "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5", "verification_status": "verified_git", "provenance": "evaluation/provenance/geometry-1634-singularity/source.json", "toolchain": "occt1116-singularity-gcc"},
+    {"source_id": "occt801-b8f597c67781-offset-plane", "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git", "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42", "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5", "verification_status": "verified_git", "provenance": "evaluation/provenance/geometry-1644-offset-plane/source.json", "toolchain": "occt1116-offset-plane-gcc"},
+    {"source_id": "occt23612-derived-e79fa864aeb8-torus", "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git", "commit": "e79fa864aeb87e65d0f7550b4c8ad64725b0c1b8", "materialized_tree_sha256": "2bf3e2955ab757ef37300b7b755c45d0788756b610b9738d80d16493b058f10f", "verification_status": "verified_git", "provenance": "evaluation/provenance/geometry-928/source.json", "toolchain": "occt1116-torus-gcc"},
+    {"source_id": "occt801-b8f597c67781-offset3d", "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git", "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42", "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5", "verification_status": "verified_git", "provenance": "evaluation/provenance/geometry-1644-offset3d/source.json", "toolchain": "occt1116-offset3d-gcc"},
+    {"source_id": "occt801-b8f597c67781-offset2d", "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git", "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42", "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5", "verification_status": "verified_git", "provenance": "evaluation/provenance/geometry-1644-offset2d/source.json", "toolchain": "occt1116-offset2d-gcc"},
+    {"source_id": "occt801-b8f597c67781-periodic-fillet", "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git", "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42", "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5", "verification_status": "verified_git", "provenance": "evaluation/provenance/occt801-b8f597c67781-periodic-fillet.json", "toolchain": "occt1115-periodic-fillet-gcc"},
+    {"source_id": "occt33570-derived-381c5ec350fd-sphere-cut", "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git", "commit": "381c5ec350fde3b9808475d8070bf00eda0260c9", "materialized_tree_sha256": "b6e8390a470b05b460277341f325df52d723ede889d72494a0c53a99921a8904", "verification_status": "verified_git", "provenance": "evaluation/provenance/occt33570-derived-381c5ec350fd-sphere-cut.json", "toolchain": "occt1115-sphere-cut-gcc"},
+    {"source_id": "occt801-b8f597c67781-plane-properties", "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git", "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42", "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5", "verification_status": "verified_git", "provenance": "evaluation/provenance/occt801-b8f597c67781-plane-properties.json", "toolchain": "occt1115-plane-properties-gcc"},
+    {"source_id": "occt801-b8f597c67781-coons", "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git", "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42", "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5", "verification_status": "verified_git", "provenance": "evaluation/provenance/occt801-b8f597c67781-coons.json", "toolchain": "occt1115-coons-gcc"},
+    {
+      "commit": "3e80fad1779e4fab620d1ab1982bfd7722b6c92b",
+      "materialized_tree_sha256": "c53024a6a438c14a4bca3e3aae84bead8890cc7e82fdd9f018f235153e57507f",
+      "provenance": "evaluation/provenance/source-export-provenance.json",
+      "source_id": "occt-3e80fad1779e",
+      "toolchain": "occt-clang10-tcl86-v1",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "verification_status": "verified_git"
+    },
+    {
+      "commit": "75fad89c90cf0390a6a053fa43a290b3fbb05069",
+      "materialized_tree_sha256": "fe81a63b36e22d484a7ddcb49431c40d3d6e9febd2c5ce14631083c99a346c93",
+      "provenance": "sources/NG-04R-derived-source.json",
+      "source_id": "occt-ng04r-derived-fe81a63b",
+      "toolchain": "occt-intersection-clang10-v1",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "verification_status": "verified_git"
+    },
+    {
+      "commit": "201a54e50b9f24ecd5d9c401461ad64312de9870",
+      "materialized_tree_sha256": "ef5af9392e97caa3a790cdea791453b51f88a3ef4305b47205354795363cf395",
+      "provenance": "sources/NG-04T-v1-derived-source.json",
+      "source_id": "occt-ng04t-v1-baseline-ef5af939",
+      "toolchain": "occt-intersection-clang10-v1",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "verification_status": "verified_git"
+    },
+    {
+      "commit": "d9d3107d8df19cacc3d7a0cd46ba51deee0bf6f2",
+      "materialized_tree_sha256": "fdc06c2924af2315e740cec852552d1f9b8d8def2dd13f8a3f592b289885403f",
+      "provenance": "evaluation/provenance/source-d9d310.json",
+      "source_id": "occt-d9d3107d8df1",
+      "toolchain": "occt-clang10-tcl86-bf-d9-v1",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "verification_status": "verified_git"
+    },
+    {
+      "commit": "b55bd02353519ebba14575f8056bb2b14585089e",
+      "materialized_tree_sha256": "b65869dfa1367bb32a63e47accc1552de0fa6a6d5bd8a90a38db64bd4c7aaa77",
+      "provenance": "evaluation/provenance/source-b55.json",
+      "source_id": "occt-b55bd0235351",
+      "toolchain": "occt-gcc9-gcc-o0-bf-b55-v2",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "verification_status": "verified_git"
+    },
+    {
+      "commit": "2613378e60ff5e517b2bf73699184d0c6f636bb8",
+      "materialized_tree_sha256": "5ead8e62e4d72f801f43d8bd81dda610925dd2b9704ff51aaebe755def165104",
+      "provenance": "evaluation/provenance/source-occt-2613378e60ff.json",
+      "source_id": "occt-2613378e60ff",
+      "toolchain": "occt-clang10-tcl86-bf-g3-v1",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "verification_status": "verified_git"
+    },
+    {
+      "source_id": "occt-v4-b41ccce129d0",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "41ccce129d0f39b7a8a5edaaaeb2cf782e3bce2d",
+      "materialized_tree_sha256": "3cb819f514037d3ae0e90bda77e4883b03695ad34d0eff66de7dc5edf352d22e",
+      "verification_status": "verified_git",
+      "provenance": "provenance/source-B41ccce.json",
+      "toolchain": "occt-v4-clang10-o3-tcl86"
+    },
+    {
+      "source_id": "occt-v4-b84f42008b74",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "84f42008b74b4545e18e0ec361fd14e48d6a961d",
+      "materialized_tree_sha256": "5b99158d0acbca6f7f83138b52a4fc67a128208e4cac3804501834c271004eb4",
+      "verification_status": "verified_git",
+      "provenance": "provenance/source-B84f42008.json",
+      "toolchain": "occt-v4-clang10-o3-tcl86"
+    },
+    {
+      "source_id": "occt-v4-bdeea0a89759",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "bdeea0a89759f4f1117022267807f79aad55d3e2",
+      "materialized_tree_sha256": "bafb9568643aa78e29a198267e20ce905525eac77d0bb73f608efd521520d5ff",
+      "verification_status": "verified_git",
+      "provenance": "provenance/source-Bdeea0.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt-v4-e6afb5398317",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "e6afb53983172155891ef175943534e0e1a24f75",
+      "materialized_tree_sha256": "a28f641dad6310bece14379db895a7da1482305273ccffd5ebb3b8774d03e841",
+      "verification_status": "verified_git",
+      "provenance": "provenance/source-e6afb.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt-single20-m25818-32ab8bfc4f09",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "32ab8bfc4f09acb95d1f8403f4d44f5afad97b8b",
+      "materialized_tree_sha256": "cca2aa3bd5541ec361da198125ab731fec5cd6849b992136be0de552f77d3df5",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/single20/occt-25818/source.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt-single20-m24313-78b6b239841f",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "78b6b239841fdbe47b9cf51493739def58c01848",
+      "materialized_tree_sha256": "793845f1abc97f49cbf4570663181ff195688429c8f84e3b65399d52d59eac89",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/single20/occt-24313/source.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt-single20-1511c7e90f1a",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+      "materialized_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/single20/occt-24418/source.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt-single20-6435b9c7fafd",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "6435b9c7fafd294680a3be589deb61de2fdb3d3c",
+      "materialized_tree_sha256": "bfcd5874f51898884c55c0e35f4bb701a612ad91bdc6e0ab106b31d45afc692c",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/single20/occt-26796/source.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt-single20-a016080bf673",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "a016080bf6738d6aeae020badee4e888ad1540a5",
+      "materialized_tree_sha256": "f7257d990aa8dd288fa41dcb9f9aaa06f8eb713568a10b9f1026cf38950c58e7",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/single20/occt-github-1543/source.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt-single20-029311e00f28",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "029311e00f2822c762f676f863f9b932ad8ca8ef",
+      "materialized_tree_sha256": "dbf7237b12b0712f11b7d3fb020950577fdec9eb6b1f66a95bad6a29239248b6",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/single20/occt-25111/source.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt-single20-5163f4671951",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "5163f4671951fa3929e2814b7765a9956ef6cec5",
+      "materialized_tree_sha256": "f96d15055c09882b1776d3ddda41fe7e385e8518a004bc91e9de050a69bd250f",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/single20/occt-26243/source.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt-single20-cfde7eebb37b",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+      "materialized_tree_sha256": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/single20/occt-27227/source.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt-single20-ea80ac2f61af",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "ea80ac2f61af25a4bcf4516a89e0b302e10e7e82",
+      "materialized_tree_sha256": "68c2998046770a79ef06930800143bda51405c3ed162bcc91c973c1c40101973",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/single20/occt-26310/source.json",
+      "toolchain": "occt-v4-clang10-o0-tcl86"
+    },
+    {
+      "source_id": "occt801-1738-b-b8f597c67781",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-github-1738/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
+    },
+    {
+      "source_id": "occt-1177-b-cbca11e97518",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "cbca11e97518a66de27bdc5100ceacf9e77e2e87",
+      "materialized_tree_sha256": "5577b347bd0d241e249520b08bf1332e15826d158651ad1fbafc425a77f48351",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-github-1177/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
+    },
+    {
+      "source_id": "occt75-32929-b-f2724d41b326",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "f2724d41b3261b1e5814c1cb6eadb44ee1603a8a",
+      "materialized_tree_sha256": "45a0c196609235f85b36c2508935b8ceb201876f30ba8606283bad75e3770bf8",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-32929/source.json",
+      "toolchain": "occt75-gcc13-o0-tcl86-32929"
+    },
+    {
+      "commit": "5434272be3eecaf06f0921f8fa4f1a6df7672033",
+      "materialized_tree_sha256": "f87a2533d98b8816ac2820b9ba0e4a2eb791c1467ef422c41348c1fe3d2ad6ec",
+      "provenance": "evaluation/provenance/oce-31850.json",
+      "source_id": "oce013-authoring-b-5434272be3ee",
+      "toolchain": "oce013-gcc13-tcl86-v1",
+      "upstream_url": "https://github.com/tpaviot/oce.git",
+      "verification_status": "verified_git"
+    },
+    {
+      "source_id": "occt801-1163-b-6ba582362af7",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "6ba582362af730d90854235c2fd6b472618b6c0d",
+      "materialized_tree_sha256": "a52d6c9ec516040a98a4d3c53f41b24eabd0f59e976964c1058aa235162c73ea",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-github-1163/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
+    },
+    {
+      "source_id": "occt801-1371-b-b8f597c67781",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-github-1371/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
+    },
+    {
+      "source_id": "occt801-1701-b-b8f597c67781",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-github-1701/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
+    },
+    {
+      "source_id": "occt801-1702-b-b8f597c67781",
+      "upstream_url": "https://github.com/Open-Cascade-SAS/OCCT.git",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "verification_status": "verified_git",
+      "provenance": "evaluation/provenance/authoring-fillet-20261112/occt-github-1702/source.json",
+      "toolchain": "occt8-gcc13-cpp-20261112"
+    }
+  ]
+}

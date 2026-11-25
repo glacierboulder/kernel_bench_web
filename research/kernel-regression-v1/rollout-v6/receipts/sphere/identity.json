@@ -1,0 +1,395 @@
+{
+  "source_id": "occt-v4-b84f42008b74",
+  "commit": "84f42008b74b4545e18e0ec361fd14e48d6a961d",
+  "materialized_tree_sha256": "5b99158d0acbca6f7f83138b52a4fc67a128208e4cac3804501834c271004eb4",
+  "toolchain": "occt-v4-clang10-o3-tcl86",
+  "toolchain_config": {
+    "path": "toolchains/occt-v4-clang10-o3-tcl86.json",
+    "sha256": "36d26cd94a139ac502457d363c7f246b4cc466169afc7fa817c25e0eb2fcbbe1"
+  },
+  "build_entry": {
+    "path": "tools/occt-v4-clang10-o3/build.sh",
+    "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+  },
+  "declared_public_targets": [
+    "DRAWEXE",
+    "TKTopTest"
+  ],
+  "historical_manifest": "ee0b93d87f252d4807fcc71e133396a086847e7478637a1e63bc6e0615ea3d89",
+  "draw_sha256": "b9466e9d5ae80fd65948dfbe19b3ee12d3999c9ec1c40b40f3dd5fc1588674a4",
+  "historical_libraries": {
+    "libTKBO.so": {
+      "B": "194534088115d599c868c85e0f3b19ad220558e15b37c16dbd636667a7b294b8",
+      "F": "5d47b700d20e005ff12e9fc2720d551b3e8af9c5ae9e490b88e9754ba376f514",
+      "sibling": "194534088115d599c868c85e0f3b19ad220558e15b37c16dbd636667a7b294b8"
+    },
+    "libTKBO.so.7.7": {
+      "B": "194534088115d599c868c85e0f3b19ad220558e15b37c16dbd636667a7b294b8",
+      "F": "5d47b700d20e005ff12e9fc2720d551b3e8af9c5ae9e490b88e9754ba376f514",
+      "sibling": "194534088115d599c868c85e0f3b19ad220558e15b37c16dbd636667a7b294b8"
+    },
+    "libTKBO.so.7.7.0": {
+      "B": "194534088115d599c868c85e0f3b19ad220558e15b37c16dbd636667a7b294b8",
+      "F": "5d47b700d20e005ff12e9fc2720d551b3e8af9c5ae9e490b88e9754ba376f514",
+      "sibling": "194534088115d599c868c85e0f3b19ad220558e15b37c16dbd636667a7b294b8"
+    },
+    "libTKBRep.so": {
+      "B": "ab6041998c654f783d4d9756641c57593ead5e7ecfc6d60e57416656d61bd828",
+      "F": "ab6041998c654f783d4d9756641c57593ead5e7ecfc6d60e57416656d61bd828",
+      "sibling": "ab6041998c654f783d4d9756641c57593ead5e7ecfc6d60e57416656d61bd828"
+    },
+    "libTKBRep.so.7.7": {
+      "B": "ab6041998c654f783d4d9756641c57593ead5e7ecfc6d60e57416656d61bd828",
+      "F": "ab6041998c654f783d4d9756641c57593ead5e7ecfc6d60e57416656d61bd828",
+      "sibling": "ab6041998c654f783d4d9756641c57593ead5e7ecfc6d60e57416656d61bd828"
+    },
+    "libTKBRep.so.7.7.0": {
+      "B": "ab6041998c654f783d4d9756641c57593ead5e7ecfc6d60e57416656d61bd828",
+      "F": "ab6041998c654f783d4d9756641c57593ead5e7ecfc6d60e57416656d61bd828",
+      "sibling": "ab6041998c654f783d4d9756641c57593ead5e7ecfc6d60e57416656d61bd828"
+    },
+    "libTKBool.so": {
+      "B": "f9cd7cea958109955ec646efd2d2bb4de45a873ca7de9f4af705b370ca5aaf08",
+      "F": "f9cd7cea958109955ec646efd2d2bb4de45a873ca7de9f4af705b370ca5aaf08",
+      "sibling": "f9cd7cea958109955ec646efd2d2bb4de45a873ca7de9f4af705b370ca5aaf08"
+    },
+    "libTKBool.so.7.7": {
+      "B": "f9cd7cea958109955ec646efd2d2bb4de45a873ca7de9f4af705b370ca5aaf08",
+      "F": "f9cd7cea958109955ec646efd2d2bb4de45a873ca7de9f4af705b370ca5aaf08",
+      "sibling": "f9cd7cea958109955ec646efd2d2bb4de45a873ca7de9f4af705b370ca5aaf08"
+    },
+    "libTKBool.so.7.7.0": {
+      "B": "f9cd7cea958109955ec646efd2d2bb4de45a873ca7de9f4af705b370ca5aaf08",
+      "F": "f9cd7cea958109955ec646efd2d2bb4de45a873ca7de9f4af705b370ca5aaf08",
+      "sibling": "f9cd7cea958109955ec646efd2d2bb4de45a873ca7de9f4af705b370ca5aaf08"
+    },
+    "libTKDraw.so": {
+      "B": "d633ad1858b6b57d979d97ca9c948a8549b142404cbcb786287dc57c05d6cc73",
+      "F": "d633ad1858b6b57d979d97ca9c948a8549b142404cbcb786287dc57c05d6cc73",
+      "sibling": "d633ad1858b6b57d979d97ca9c948a8549b142404cbcb786287dc57c05d6cc73"
+    },
+    "libTKDraw.so.7.7": {
+      "B": "d633ad1858b6b57d979d97ca9c948a8549b142404cbcb786287dc57c05d6cc73",
+      "F": "d633ad1858b6b57d979d97ca9c948a8549b142404cbcb786287dc57c05d6cc73",
+      "sibling": "d633ad1858b6b57d979d97ca9c948a8549b142404cbcb786287dc57c05d6cc73"
+    },
+    "libTKDraw.so.7.7.0": {
+      "B": "d633ad1858b6b57d979d97ca9c948a8549b142404cbcb786287dc57c05d6cc73",
+      "F": "d633ad1858b6b57d979d97ca9c948a8549b142404cbcb786287dc57c05d6cc73",
+      "sibling": "d633ad1858b6b57d979d97ca9c948a8549b142404cbcb786287dc57c05d6cc73"
+    },
+    "libTKFeat.so": {
+      "B": "50bfb1fb43a80cd0c5ddc5516b1c5319a49559384d95f38cbb29d500559d042c",
+      "F": "50bfb1fb43a80cd0c5ddc5516b1c5319a49559384d95f38cbb29d500559d042c",
+      "sibling": "50bfb1fb43a80cd0c5ddc5516b1c5319a49559384d95f38cbb29d500559d042c"
+    },
+    "libTKFeat.so.7.7": {
+      "B": "50bfb1fb43a80cd0c5ddc5516b1c5319a49559384d95f38cbb29d500559d042c",
+      "F": "50bfb1fb43a80cd0c5ddc5516b1c5319a49559384d95f38cbb29d500559d042c",
+      "sibling": "50bfb1fb43a80cd0c5ddc5516b1c5319a49559384d95f38cbb29d500559d042c"
+    },
+    "libTKFeat.so.7.7.0": {
+      "B": "50bfb1fb43a80cd0c5ddc5516b1c5319a49559384d95f38cbb29d500559d042c",
+      "F": "50bfb1fb43a80cd0c5ddc5516b1c5319a49559384d95f38cbb29d500559d042c",
+      "sibling": "50bfb1fb43a80cd0c5ddc5516b1c5319a49559384d95f38cbb29d500559d042c"
+    },
+    "libTKFillet.so": {
+      "B": "914bda0d0171464f8322b0083dd4c44e2a7320a223ebd6ef9c7713e2df33ecc2",
+      "F": "914bda0d0171464f8322b0083dd4c44e2a7320a223ebd6ef9c7713e2df33ecc2",
+      "sibling": "914bda0d0171464f8322b0083dd4c44e2a7320a223ebd6ef9c7713e2df33ecc2"
+    },
+    "libTKFillet.so.7.7": {
+      "B": "914bda0d0171464f8322b0083dd4c44e2a7320a223ebd6ef9c7713e2df33ecc2",
+      "F": "914bda0d0171464f8322b0083dd4c44e2a7320a223ebd6ef9c7713e2df33ecc2",
+      "sibling": "914bda0d0171464f8322b0083dd4c44e2a7320a223ebd6ef9c7713e2df33ecc2"
+    },
+    "libTKFillet.so.7.7.0": {
+      "B": "914bda0d0171464f8322b0083dd4c44e2a7320a223ebd6ef9c7713e2df33ecc2",
+      "F": "914bda0d0171464f8322b0083dd4c44e2a7320a223ebd6ef9c7713e2df33ecc2",
+      "sibling": "914bda0d0171464f8322b0083dd4c44e2a7320a223ebd6ef9c7713e2df33ecc2"
+    },
+    "libTKG2d.so": {
+      "B": "318c025673bb8ea1c36dcf9dc228006ab94059ad8d629164f0f12923d96bcef4",
+      "F": "318c025673bb8ea1c36dcf9dc228006ab94059ad8d629164f0f12923d96bcef4",
+      "sibling": "318c025673bb8ea1c36dcf9dc228006ab94059ad8d629164f0f12923d96bcef4"
+    },
+    "libTKG2d.so.7.7": {
+      "B": "318c025673bb8ea1c36dcf9dc228006ab94059ad8d629164f0f12923d96bcef4",
+      "F": "318c025673bb8ea1c36dcf9dc228006ab94059ad8d629164f0f12923d96bcef4",
+      "sibling": "318c025673bb8ea1c36dcf9dc228006ab94059ad8d629164f0f12923d96bcef4"
+    },
+    "libTKG2d.so.7.7.0": {
+      "B": "318c025673bb8ea1c36dcf9dc228006ab94059ad8d629164f0f12923d96bcef4",
+      "F": "318c025673bb8ea1c36dcf9dc228006ab94059ad8d629164f0f12923d96bcef4",
+      "sibling": "318c025673bb8ea1c36dcf9dc228006ab94059ad8d629164f0f12923d96bcef4"
+    },
+    "libTKG3d.so": {
+      "B": "cd9a5f8b7447a90f0bb429109874081e8f23309da99245a364b09d745966940d",
+      "F": "cd9a5f8b7447a90f0bb429109874081e8f23309da99245a364b09d745966940d",
+      "sibling": "cd9a5f8b7447a90f0bb429109874081e8f23309da99245a364b09d745966940d"
+    },
+    "libTKG3d.so.7.7": {
+      "B": "cd9a5f8b7447a90f0bb429109874081e8f23309da99245a364b09d745966940d",
+      "F": "cd9a5f8b7447a90f0bb429109874081e8f23309da99245a364b09d745966940d",
+      "sibling": "cd9a5f8b7447a90f0bb429109874081e8f23309da99245a364b09d745966940d"
+    },
+    "libTKG3d.so.7.7.0": {
+      "B": "cd9a5f8b7447a90f0bb429109874081e8f23309da99245a364b09d745966940d",
+      "F": "cd9a5f8b7447a90f0bb429109874081e8f23309da99245a364b09d745966940d",
+      "sibling": "cd9a5f8b7447a90f0bb429109874081e8f23309da99245a364b09d745966940d"
+    },
+    "libTKGeomAlgo.so": {
+      "B": "41ba8bbf85a18f26d65b3a47bb587f4c4e67436d697ff63cdee7058dd67ed2c5",
+      "F": "41ba8bbf85a18f26d65b3a47bb587f4c4e67436d697ff63cdee7058dd67ed2c5",
+      "sibling": "b2eaffd2ee58aac8ef3a7bc986e983bc04331b71f7fe7ae622dd7abb7e5cf41b"
+    },
+    "libTKGeomAlgo.so.7.7": {
+      "B": "41ba8bbf85a18f26d65b3a47bb587f4c4e67436d697ff63cdee7058dd67ed2c5",
+      "F": "41ba8bbf85a18f26d65b3a47bb587f4c4e67436d697ff63cdee7058dd67ed2c5",
+      "sibling": "b2eaffd2ee58aac8ef3a7bc986e983bc04331b71f7fe7ae622dd7abb7e5cf41b"
+    },
+    "libTKGeomAlgo.so.7.7.0": {
+      "B": "41ba8bbf85a18f26d65b3a47bb587f4c4e67436d697ff63cdee7058dd67ed2c5",
+      "F": "41ba8bbf85a18f26d65b3a47bb587f4c4e67436d697ff63cdee7058dd67ed2c5",
+      "sibling": "b2eaffd2ee58aac8ef3a7bc986e983bc04331b71f7fe7ae622dd7abb7e5cf41b"
+    },
+    "libTKGeomBase.so": {
+      "B": "0b5dd4fdaf4ed6c2755470d309ddf480c77d8f7aa51f4f46cce02e6adb572e57",
+      "F": "0b5dd4fdaf4ed6c2755470d309ddf480c77d8f7aa51f4f46cce02e6adb572e57",
+      "sibling": "0b5dd4fdaf4ed6c2755470d309ddf480c77d8f7aa51f4f46cce02e6adb572e57"
+    },
+    "libTKGeomBase.so.7.7": {
+      "B": "0b5dd4fdaf4ed6c2755470d309ddf480c77d8f7aa51f4f46cce02e6adb572e57",
+      "F": "0b5dd4fdaf4ed6c2755470d309ddf480c77d8f7aa51f4f46cce02e6adb572e57",
+      "sibling": "0b5dd4fdaf4ed6c2755470d309ddf480c77d8f7aa51f4f46cce02e6adb572e57"
+    },
+    "libTKGeomBase.so.7.7.0": {
+      "B": "0b5dd4fdaf4ed6c2755470d309ddf480c77d8f7aa51f4f46cce02e6adb572e57",
+      "F": "0b5dd4fdaf4ed6c2755470d309ddf480c77d8f7aa51f4f46cce02e6adb572e57",
+      "sibling": "0b5dd4fdaf4ed6c2755470d309ddf480c77d8f7aa51f4f46cce02e6adb572e57"
+    },
+    "libTKHLR.so": {
+      "B": "2b27dbf768d8fe2024545dc098f208a9873b9405611961f73d93f132d5ebc5fc",
+      "F": "2b27dbf768d8fe2024545dc098f208a9873b9405611961f73d93f132d5ebc5fc",
+      "sibling": "2b27dbf768d8fe2024545dc098f208a9873b9405611961f73d93f132d5ebc5fc"
+    },
+    "libTKHLR.so.7.7": {
+      "B": "2b27dbf768d8fe2024545dc098f208a9873b9405611961f73d93f132d5ebc5fc",
+      "F": "2b27dbf768d8fe2024545dc098f208a9873b9405611961f73d93f132d5ebc5fc",
+      "sibling": "2b27dbf768d8fe2024545dc098f208a9873b9405611961f73d93f132d5ebc5fc"
+    },
+    "libTKHLR.so.7.7.0": {
+      "B": "2b27dbf768d8fe2024545dc098f208a9873b9405611961f73d93f132d5ebc5fc",
+      "F": "2b27dbf768d8fe2024545dc098f208a9873b9405611961f73d93f132d5ebc5fc",
+      "sibling": "2b27dbf768d8fe2024545dc098f208a9873b9405611961f73d93f132d5ebc5fc"
+    },
+    "libTKMath.so": {
+      "B": "81f34689e368cc51cf5daa46d9e19aa7eedfd3acc211d33475a37b3d059e85a2",
+      "F": "81f34689e368cc51cf5daa46d9e19aa7eedfd3acc211d33475a37b3d059e85a2",
+      "sibling": "81f34689e368cc51cf5daa46d9e19aa7eedfd3acc211d33475a37b3d059e85a2"
+    },
+    "libTKMath.so.7.7": {
+      "B": "81f34689e368cc51cf5daa46d9e19aa7eedfd3acc211d33475a37b3d059e85a2",
+      "F": "81f34689e368cc51cf5daa46d9e19aa7eedfd3acc211d33475a37b3d059e85a2",
+      "sibling": "81f34689e368cc51cf5daa46d9e19aa7eedfd3acc211d33475a37b3d059e85a2"
+    },
+    "libTKMath.so.7.7.0": {
+      "B": "81f34689e368cc51cf5daa46d9e19aa7eedfd3acc211d33475a37b3d059e85a2",
+      "F": "81f34689e368cc51cf5daa46d9e19aa7eedfd3acc211d33475a37b3d059e85a2",
+      "sibling": "81f34689e368cc51cf5daa46d9e19aa7eedfd3acc211d33475a37b3d059e85a2"
+    },
+    "libTKMesh.so": {
+      "B": "ed2240642733bf5e613ed88fb2cdb238ddf0f97d928e6a0173cfc5e51da16d8c",
+      "F": "ed2240642733bf5e613ed88fb2cdb238ddf0f97d928e6a0173cfc5e51da16d8c",
+      "sibling": "ed2240642733bf5e613ed88fb2cdb238ddf0f97d928e6a0173cfc5e51da16d8c"
+    },
+    "libTKMesh.so.7.7": {
+      "B": "ed2240642733bf5e613ed88fb2cdb238ddf0f97d928e6a0173cfc5e51da16d8c",
+      "F": "ed2240642733bf5e613ed88fb2cdb238ddf0f97d928e6a0173cfc5e51da16d8c",
+      "sibling": "ed2240642733bf5e613ed88fb2cdb238ddf0f97d928e6a0173cfc5e51da16d8c"
+    },
+    "libTKMesh.so.7.7.0": {
+      "B": "ed2240642733bf5e613ed88fb2cdb238ddf0f97d928e6a0173cfc5e51da16d8c",
+      "F": "ed2240642733bf5e613ed88fb2cdb238ddf0f97d928e6a0173cfc5e51da16d8c",
+      "sibling": "ed2240642733bf5e613ed88fb2cdb238ddf0f97d928e6a0173cfc5e51da16d8c"
+    },
+    "libTKOffset.so": {
+      "B": "107ebcd16955ec061c58c2c4cea71799425f19738843fc9f9438d3c257a635e0",
+      "F": "107ebcd16955ec061c58c2c4cea71799425f19738843fc9f9438d3c257a635e0",
+      "sibling": "107ebcd16955ec061c58c2c4cea71799425f19738843fc9f9438d3c257a635e0"
+    },
+    "libTKOffset.so.7.7": {
+      "B": "107ebcd16955ec061c58c2c4cea71799425f19738843fc9f9438d3c257a635e0",
+      "F": "107ebcd16955ec061c58c2c4cea71799425f19738843fc9f9438d3c257a635e0",
+      "sibling": "107ebcd16955ec061c58c2c4cea71799425f19738843fc9f9438d3c257a635e0"
+    },
+    "libTKOffset.so.7.7.0": {
+      "B": "107ebcd16955ec061c58c2c4cea71799425f19738843fc9f9438d3c257a635e0",
+      "F": "107ebcd16955ec061c58c2c4cea71799425f19738843fc9f9438d3c257a635e0",
+      "sibling": "107ebcd16955ec061c58c2c4cea71799425f19738843fc9f9438d3c257a635e0"
+    },
+    "libTKPrim.so": {
+      "B": "d6dc206d6a4234d163434897dccda2cb59b714b05542af78659c827e1bee523b",
+      "F": "d6dc206d6a4234d163434897dccda2cb59b714b05542af78659c827e1bee523b",
+      "sibling": "d6dc206d6a4234d163434897dccda2cb59b714b05542af78659c827e1bee523b"
+    },
+    "libTKPrim.so.7.7": {
+      "B": "d6dc206d6a4234d163434897dccda2cb59b714b05542af78659c827e1bee523b",
+      "F": "d6dc206d6a4234d163434897dccda2cb59b714b05542af78659c827e1bee523b",
+      "sibling": "d6dc206d6a4234d163434897dccda2cb59b714b05542af78659c827e1bee523b"
+    },
+    "libTKPrim.so.7.7.0": {
+      "B": "d6dc206d6a4234d163434897dccda2cb59b714b05542af78659c827e1bee523b",
+      "F": "d6dc206d6a4234d163434897dccda2cb59b714b05542af78659c827e1bee523b",
+      "sibling": "d6dc206d6a4234d163434897dccda2cb59b714b05542af78659c827e1bee523b"
+    },
+    "libTKService.so": {
+      "B": "a553924585b503aa4d70828819251082bed319fe1fefbb4af7f4fff956522047",
+      "F": "a553924585b503aa4d70828819251082bed319fe1fefbb4af7f4fff956522047",
+      "sibling": "a553924585b503aa4d70828819251082bed319fe1fefbb4af7f4fff956522047"
+    },
+    "libTKService.so.7.7": {
+      "B": "a553924585b503aa4d70828819251082bed319fe1fefbb4af7f4fff956522047",
+      "F": "a553924585b503aa4d70828819251082bed319fe1fefbb4af7f4fff956522047",
+      "sibling": "a553924585b503aa4d70828819251082bed319fe1fefbb4af7f4fff956522047"
+    },
+    "libTKService.so.7.7.0": {
+      "B": "a553924585b503aa4d70828819251082bed319fe1fefbb4af7f4fff956522047",
+      "F": "a553924585b503aa4d70828819251082bed319fe1fefbb4af7f4fff956522047",
+      "sibling": "a553924585b503aa4d70828819251082bed319fe1fefbb4af7f4fff956522047"
+    },
+    "libTKShHealing.so": {
+      "B": "ad1116217c175a7b52c939a16230e9296cf498e57cf3101892ec1f7073e65ac4",
+      "F": "ad1116217c175a7b52c939a16230e9296cf498e57cf3101892ec1f7073e65ac4",
+      "sibling": "ad1116217c175a7b52c939a16230e9296cf498e57cf3101892ec1f7073e65ac4"
+    },
+    "libTKShHealing.so.7.7": {
+      "B": "ad1116217c175a7b52c939a16230e9296cf498e57cf3101892ec1f7073e65ac4",
+      "F": "ad1116217c175a7b52c939a16230e9296cf498e57cf3101892ec1f7073e65ac4",
+      "sibling": "ad1116217c175a7b52c939a16230e9296cf498e57cf3101892ec1f7073e65ac4"
+    },
+    "libTKShHealing.so.7.7.0": {
+      "B": "ad1116217c175a7b52c939a16230e9296cf498e57cf3101892ec1f7073e65ac4",
+      "F": "ad1116217c175a7b52c939a16230e9296cf498e57cf3101892ec1f7073e65ac4",
+      "sibling": "ad1116217c175a7b52c939a16230e9296cf498e57cf3101892ec1f7073e65ac4"
+    },
+    "libTKTopAlgo.so": {
+      "B": "031c7838b65c7746094c37ec4789e594d32a722cbd573139768703b5c4516ffb",
+      "F": "031c7838b65c7746094c37ec4789e594d32a722cbd573139768703b5c4516ffb",
+      "sibling": "031c7838b65c7746094c37ec4789e594d32a722cbd573139768703b5c4516ffb"
+    },
+    "libTKTopAlgo.so.7.7": {
+      "B": "031c7838b65c7746094c37ec4789e594d32a722cbd573139768703b5c4516ffb",
+      "F": "031c7838b65c7746094c37ec4789e594d32a722cbd573139768703b5c4516ffb",
+      "sibling": "031c7838b65c7746094c37ec4789e594d32a722cbd573139768703b5c4516ffb"
+    },
+    "libTKTopAlgo.so.7.7.0": {
+      "B": "031c7838b65c7746094c37ec4789e594d32a722cbd573139768703b5c4516ffb",
+      "F": "031c7838b65c7746094c37ec4789e594d32a722cbd573139768703b5c4516ffb",
+      "sibling": "031c7838b65c7746094c37ec4789e594d32a722cbd573139768703b5c4516ffb"
+    },
+    "libTKTopTest.so": {
+      "B": "f062d072d6af4e59cc320228e5e226cf2a3fcc76022a0a3bba35b549bd040a8a",
+      "F": "f062d072d6af4e59cc320228e5e226cf2a3fcc76022a0a3bba35b549bd040a8a",
+      "sibling": "f062d072d6af4e59cc320228e5e226cf2a3fcc76022a0a3bba35b549bd040a8a"
+    },
+    "libTKTopTest.so.7.7": {
+      "B": "f062d072d6af4e59cc320228e5e226cf2a3fcc76022a0a3bba35b549bd040a8a",
+      "F": "f062d072d6af4e59cc320228e5e226cf2a3fcc76022a0a3bba35b549bd040a8a",
+      "sibling": "f062d072d6af4e59cc320228e5e226cf2a3fcc76022a0a3bba35b549bd040a8a"
+    },
+    "libTKTopTest.so.7.7.0": {
+      "B": "f062d072d6af4e59cc320228e5e226cf2a3fcc76022a0a3bba35b549bd040a8a",
+      "F": "f062d072d6af4e59cc320228e5e226cf2a3fcc76022a0a3bba35b549bd040a8a",
+      "sibling": "f062d072d6af4e59cc320228e5e226cf2a3fcc76022a0a3bba35b549bd040a8a"
+    },
+    "libTKV3d.so": {
+      "B": "53e8703e4240779a85f1021333c83b47302ea6785d3cf4b5b38e897f9b764db1",
+      "F": "53e8703e4240779a85f1021333c83b47302ea6785d3cf4b5b38e897f9b764db1",
+      "sibling": "53e8703e4240779a85f1021333c83b47302ea6785d3cf4b5b38e897f9b764db1"
+    },
+    "libTKV3d.so.7.7": {
+      "B": "53e8703e4240779a85f1021333c83b47302ea6785d3cf4b5b38e897f9b764db1",
+      "F": "53e8703e4240779a85f1021333c83b47302ea6785d3cf4b5b38e897f9b764db1",
+      "sibling": "53e8703e4240779a85f1021333c83b47302ea6785d3cf4b5b38e897f9b764db1"
+    },
+    "libTKV3d.so.7.7.0": {
+      "B": "53e8703e4240779a85f1021333c83b47302ea6785d3cf4b5b38e897f9b764db1",
+      "F": "53e8703e4240779a85f1021333c83b47302ea6785d3cf4b5b38e897f9b764db1",
+      "sibling": "53e8703e4240779a85f1021333c83b47302ea6785d3cf4b5b38e897f9b764db1"
+    },
+    "libTKernel.so": {
+      "B": "116738360499b82bc46aef15f9c5b5bc6ae39094d0d132591978fb6492509524",
+      "F": "116738360499b82bc46aef15f9c5b5bc6ae39094d0d132591978fb6492509524",
+      "sibling": "116738360499b82bc46aef15f9c5b5bc6ae39094d0d132591978fb6492509524"
+    },
+    "libTKernel.so.7.7": {
+      "B": "116738360499b82bc46aef15f9c5b5bc6ae39094d0d132591978fb6492509524",
+      "F": "116738360499b82bc46aef15f9c5b5bc6ae39094d0d132591978fb6492509524",
+      "sibling": "116738360499b82bc46aef15f9c5b5bc6ae39094d0d132591978fb6492509524"
+    },
+    "libTKernel.so.7.7.0": {
+      "B": "116738360499b82bc46aef15f9c5b5bc6ae39094d0d132591978fb6492509524",
+      "F": "116738360499b82bc46aef15f9c5b5bc6ae39094d0d132591978fb6492509524",
+      "sibling": "116738360499b82bc46aef15f9c5b5bc6ae39094d0d132591978fb6492509524"
+    }
+  },
+  "build_receipt": {
+    "schema_version": "kernforge.b-vs-rules.f-build.v1",
+    "reference_id": "F-84f420-M32942",
+    "base_source_commit": "84f42008b74b4545e18e0ec361fd14e48d6a961d",
+    "issues": [
+      "M32942"
+    ],
+    "baseline_source_archive_sha256": "c8a53beac835cda91f8b7d9b45424a167dd35d1b7684e1679e103f253ac89482",
+    "reference_patch": "references/F-84f420-M32942.patch",
+    "reference_patch_sha256": "0a6a39c8d251ea63ab9e965b51fd776df5748ee32da50e7460b56de9615c6ccc",
+    "patch_apply_check": {
+      "return_code": 0,
+      "elapsed_seconds": 0.001,
+      "stdout_tail": "checking file src/IntTools/IntTools_BeanFaceIntersector.cxx\n",
+      "stderr_tail": ""
+    },
+    "patch_apply_result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.001,
+      "stdout_tail": "patching file src/IntTools/IntTools_BeanFaceIntersector.cxx\n",
+      "stderr_tail": ""
+    },
+    "reference_source_files": [
+      "src/IntTools/IntTools_BeanFaceIntersector.cxx"
+    ],
+    "changed_shared_libraries": {
+      "libTKBO.so": "5d47b700d20e005ff12e9fc2720d551b3e8af9c5ae9e490b88e9754ba376f514",
+      "libTKBO.so.7.7": "5d47b700d20e005ff12e9fc2720d551b3e8af9c5ae9e490b88e9754ba376f514",
+      "libTKBO.so.7.7.0": "5d47b700d20e005ff12e9fc2720d551b3e8af9c5ae9e490b88e9754ba376f514"
+    },
+    "build_profile": {
+      "source_commit": "84f42008b74b4545e18e0ec361fd14e48d6a961d",
+      "job": "experiments/v5-three-rounds-20261109/private/jobs/v5-483ce6f73d307afb7c7fe608798475dfdca50b67",
+      "source_archive": "experiments/v5-three-rounds-20261109/private/jobs/v5-483ce6f73d307afb7c7fe608798475dfdca50b67/control/source.tar",
+      "baseline_build": "experiments/v5-three-rounds-20261109/private/jobs/v5-483ce6f73d307afb7c7fe608798475dfdca50b67/A-attempt-1/baseline-build",
+      "toolchain_name": "clang-o3",
+      "optimization_flags": "-O3 -DNDEBUG"
+    },
+    "compiler_jobs": 8,
+    "build_command": [
+      "bwrap",
+      "...",
+      "cmake --build /workspace/build --target DRAWEXE TKTopTest --parallel 8"
+    ],
+    "build_result": {
+      "return_code": 0,
+      "elapsed_seconds": 4.506,
+      "stdout_tail": "[  8%] Built target TKernel\n[ 19%] Built target TKMath\n[ 22%] Built target TKG2d\n[ 26%] Built target TKG3d\n[ 32%] Built target TKService\n[ 47%] Built target TKGeomBase\n[ 52%] Built target TKBRep\n[ 71%] Built target TKGeomAlgo\n[ 80%] Built target TKTopAlgo\n[ 84%] Built target TKHLR\n[ 91%] Built target TKShHealing\n[ 95%] Built target TKMesh\n[100%] Built target TKDraw\n[100%] Built target DRAWEXE\n[  6%] Built target TKernel\n[ 14%] Built target TKMath\n[ 16%] Built target TKG2d\n[ 20%] Built target TKService\n[ 23%] Built target TKG3d\n[ 34%] Built target TKGeomBase\n[ 37%] Built target TKBRep\n[ 51%] Built target TKGeomAlgo\n[ 57%] Built target TKTopAlgo\n[ 61%] Built target TKHLR\n[ 61%] Built target TKPrim\n[ 66%] Built target TKShHealing\n[ 69%] Built target TKMesh\n[ 72%] Built target TKDraw\n[ 72%] Building CXX object src/TKBO/CMakeFiles/TKBO.dir/__/IntTools/IntTools_BeanFaceIntersector.cxx.o\n[ 79%] Built target TKV3d\n[ 79%] Linking CXX shared library ../../lin64/clang/lib/libTKBO.so\n[ 82%] Built target TKBO\n[ 82%] Linking CXX shared library ../../lin64/clang/lib/libTKBool.so\n[ 91%] Built target TKBool\n[ 91%] Linking CXX shared library ../../lin64/clang/lib/libTKFeat.so\n[ 91%] Linking CXX shared library ../../lin64/clang/lib/libTKFillet.so\n[ 92%] Built target TKFeat\n[ 96%] Built target TKFillet\n[ 96%] Linking CXX shared library ../../lin64/clang/lib/libTKOffset.so\n[ 97%] Built target TKOffset\n[ 97%] Linking CXX shared library ../../lin64/clang/lib/libTKTopTest.so\n[100%] Built target TKTopTest\n",
+      "stderr_tail": ""
+    },
+    "elapsed_seconds": 4.689,
+    "status": "built",
+    "compiled_source_count": 1,
+    "draw_executable": "build/lin64/clang/bin/DRAWEXE-7.7.0",
+    "draw_sha256": "b9466e9d5ae80fd65948dfbe19b3ee12d3999c9ec1c40b40f3dd5fc1588674a4"
+  },
+  "reverse_patch": "3bf165085c342c3b58eb615d9d813a43860e17060e88b2e9a4a2fa6aaf8f0406",
+  "observed_tree": "5b99158d0acbca6f7f83138b52a4fc67a128208e4cac3804501834c271004eb4"
+}

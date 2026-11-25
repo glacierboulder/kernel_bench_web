@@ -1,0 +1,26 @@
+{
+  "host": "ws01",
+  "run": "9c449a886a8e3add",
+  "patch": "b187fd86178b05251b6ecd379a49785fc58a998899adce24acbc5329ec71dfd7",
+  "case_hashes": {
+    "evaluation/cases/version-regressions/1/box-fillet.cxx": "189b88988109fc384b2d98fb95ec75f4c639df44251544a57ed6832d908ee05b",
+    "issues/occt-github-1163/1/public/inputs/chamfer007.brep": "50155294a82f24ddaf47de0f80a604f39c43c13626138220b415e9734d247e13",
+    "evaluation/cases/authoring-fillet-20261112/occt-github-1163/1/box.txt": "26f8567f2569182294c3fa5b9f9cb2270b554eef628b4c149cf82a42888ff4ae",
+    "evaluation/cases/version-regressions/1/box-fillet/healthy-1-result.brep": "b0c649c09de05a1663a51c47dd673c599f083ebf8dee7a11b311e84fe12e816a",
+    "evaluation/cases/version-regressions/1/box-fillet/healthy-2-result.brep": "b0c649c09de05a1663a51c47dd673c599f083ebf8dee7a11b311e84fe12e816a",
+    "evaluation/cases/version-regressions/1/box-fillet/opposite-result.brep": "87f3ea1b389fe283d150420a51752c46bdb1a140c8c7f6db490bb60f0e0a781b"
+  },
+  "runner": "144cbdc3bc0bef78180e0e8c107149aa8ffe9b86709af51f61f97d8225fedca5",
+  "build_helper": "77aaa283436d3d2d2c03498a5c208c9f12408093764635afd2adb76f9b09874e",
+  "receipts": {
+    "cli.json": "d869bf58465b5a58a7075b6848cb4f819ec89ce2317f96d750add6cda5f5b133",
+    "cli.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "driver.json": "8bc54d20cd1d03a20aca4a402bf1a03b24e105cf22d350c8a78aefff194d1905",
+    "internal.json": "cf27f9cb73420af82d6af81e6e507019fad9d141d368af7350ef6419803898d5",
+    "driver.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "snapshot.json": "b3379c00eb932d9d8043c63e97712d47df63e5caaeccad07bc6d09be449a4fcf",
+    "suite.json": "0461d372ed5c46ba2aff55b09b6f73914e75d392380a077beb593f538f86e300",
+    "source-lock.json": "218c5de82dde06182f434251eff0b6e108caef5701464e9df0a9ba207794a4ef",
+    "toolchain.json": "a18f4fd06a5096a44f272cb7d636d55e3af329d603a07c33862650590f7ce209"
+  }
+}

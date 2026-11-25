@@ -1,0 +1,20 @@
+{
+  "source_id": "occt801-b8f597c67781-offset2d",
+  "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "toolchain": "occt1116-offset2d-gcc",
+  "toolchain_config": {
+    "path": "toolchains/occt1116-offset2d-gcc.json",
+    "sha256": "33e8e8b9dd936cdb993cb4dd1f1827cd0903b6a97ad81e176d6f7139705d170b"
+  },
+  "build_entry": {
+    "path": "tools/occt1116-offset2d-gcc/build.sh",
+    "sha256": "f6d593eb3c91c52ccd0b38305e4817fd7f83db2edc088248853a53f66e052630"
+  },
+  "declared_public_targets": [
+    "TKG2d"
+  ],
+  "observed_tree": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "source": "/var/tmp/m25542-positive-reference-20261119/release/source",
+  "build": "/home/lzy/cad-bench-experiment/rollout12.gIoEAq5S/fillet-build"
+}

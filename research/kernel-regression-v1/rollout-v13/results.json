@@ -1,0 +1,6858 @@
+{
+  "single": {
+    "source": {
+      "source_id": "occt75-32929-b-f2724d41b326",
+      "commit": "f2724d41b3261b1e5814c1cb6eadb44ee1603a8a",
+      "materialized_tree_sha256": "45a0c196609235f85b36c2508935b8ceb201876f30ba8606283bad75e3770bf8",
+      "toolchain": "occt75-gcc13-o0-tcl86-32929",
+      "toolchain_config": {
+        "path": "toolchains/occt75-gcc13-o0-tcl86-32929.json",
+        "sha256": "1239ac26949d2c14a39cefa2a39c3f4afdeb34ab3a7fc148869083a372a056a6"
+      },
+      "build_entry": {
+        "path": "tools/occt-v4-clang10-o0/build.sh",
+        "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v13/receipts/single/identity.json",
+      "sha256": "5d7be7076ceb5f2440f1b0614ac4e113ddbbe2afcac79d42723e714a83c9e264"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v13/receipts/single/runtime.json",
+      "sha256": "d901cc0a003c9682fce6770e0615ec6e128bf24f20b7ca65d0879575ce593aa9"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v13/receipts/single/core-1.json",
+          "sha256": "34e9ddbb88fd4467ef6278470ecf59c190014cb0a65d3c201c9ccf5d32ad2088"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v13/receipts/single/core-2.json",
+          "sha256": "fab3d13a46704b1b38414638f3b90f316cbb5ad0a7d205a229de15c4b3331960"
+        }
+      ],
+      "native_attempt": {
+        "checks": {
+          "box-common": {
+            "status": "CALIBRATED",
+            "geometry_executed": true,
+            "geometry": [],
+            "wrong_shape": [
+              "cx",
+              "swapped_cx"
+            ]
+          },
+          "disjoint": {
+            "status": "CALIBRATED",
+            "geometry_executed": true,
+            "geometry": [],
+            "wrong_shape": [
+              "solids",
+              "volume"
+            ]
+          },
+          "cut-fuse": {
+            "status": "CALIBRATED",
+            "geometry_executed": true,
+            "geometry": [],
+            "wrong_shape": [
+              "fused_volume"
+            ]
+          },
+          "plane-sphere": {
+            "status": "CALIBRATED",
+            "geometry_executed": true,
+            "geometry": [],
+            "wrong_shape": [
+              "length",
+              "witness_distance"
+            ]
+          },
+          "hole-classification": {
+            "status": "CALIBRATED",
+            "geometry_executed": true,
+            "geometry": [],
+            "wrong_shape": [
+              "hole_out",
+              "wall_in"
+            ]
+          },
+          "brep-roundtrip": {
+            "status": "CALIBRATED",
+            "geometry_executed": true,
+            "geometry": [],
+            "wrong_shape": [
+              "volume",
+              "hole_out"
+            ]
+          }
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v13/receipts/single/core-native.json",
+          "sha256": "086fc08b06f1032099eae4270efed9d2c5c719c048c8c45f5a14174c3ea3afe7"
+        },
+        "status": "CALIBRATED"
+      }
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "registered_baseline": {
+      "status": "PASS",
+      "receipt": {
+        "path": "research/kernel-regression-v1/rollout-v13/receipts/single/registered.json",
+        "sha256": "7aa48246633fa05a6cb8bd5251617733b8bf848e555cdb80704d19d5f08b97a8"
+      },
+      "details": {
+        "passed": true,
+        "status": "geometry_pass",
+        "checkpoint_id": "32929-regression",
+        "category": "regression",
+        "expected_assertion_ids": [
+          "normal_valid",
+          "normal_area"
+        ],
+        "observed_assertion_events": [
+          {
+            "status": "PASS",
+            "id": "normal_valid",
+            "kind": "expression"
+          },
+          {
+            "status": "PASS",
+            "id": "normal_area",
+            "kind": "numeric"
+          }
+        ],
+        "missing_assertions": [],
+        "unexpected_assertions": [],
+        "duplicate_assertions": [],
+        "completion_sentinel_count": 1,
+        "summary_pair_valid": true,
+        "expected_geometry_failure_signature_seen": false,
+        "base_runner": {
+          "protocol": "draw_case_oracle_v1",
+          "oracle_scope": "public_script_only",
+          "passed": true,
+          "test_done_marker": true,
+          "tcl_standard_library": {
+            "init_script": "/usr/share/tcltk/tcl8.6/init.tcl",
+            "sha256": "374e8e83d501dc0283d4b6cae60d96b46141048e5a57d1500dd379f966879f98"
+          },
+          "return_code": 0,
+          "timed_out": false,
+          "assertions": 2,
+          "numeric_assertions": 1,
+          "failed_assertions": 0,
+          "tcl_error_detected": false,
+          "expected_oracle_error": false,
+          "infrastructure_tcl_error": false,
+          "occt_error_detected": false,
+          "oracle_summary_found": true,
+          "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS normal_valid topology kind=expression\nBENCH_ASSERT_PASS normal_area analytic_area kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=2 numeric_assertions=1\nTEST_DONE assertions=2 numeric_assertions=1\n",
+          "stderr_tail": "",
+          "diagnostic_lines": [],
+          "script": "/tmp/cases/evaluation/cases/authoring-fillet-20261112/occt-32929/1/regression.tcl",
+          "draw_executable": "/workspace/build/lin64/gcc/bin/DRAWEXE-7.5.0",
+          "elapsed_seconds": 0.065
+        },
+        "return_code": 0
+      }
+    },
+    "independent_status": "CALIBRATED",
+    "independent_scope": "Registered 10-unit cube, indexed edge and radius 1 only. Quarter-cylinder support and trim, six bounding planes and 26 material points.",
+    "selection": {
+      "path": "research/kernel-regression-v1/rollout-v13/receipts/single/selection.json",
+      "sha256": "e076b1eda1629855bc90ce0c1299f8634c7279a3039e14cffa494991305084d4"
+    },
+    "controls": {
+      "healthy-1": {
+        "registered": {
+          "status": "PASS",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-1-registered.json",
+            "sha256": "00af0058ee27f59f02f0212a49fce47184c2588f1563fba08c7712bef564180f"
+          },
+          "details": {
+            "passed": true,
+            "status": "geometry_pass",
+            "checkpoint_id": "32929-regression",
+            "category": "regression",
+            "expected_assertion_ids": [
+              "normal_valid",
+              "normal_area"
+            ],
+            "observed_assertion_events": [
+              {
+                "status": "PASS",
+                "id": "normal_valid",
+                "kind": "expression"
+              },
+              {
+                "status": "PASS",
+                "id": "normal_area",
+                "kind": "numeric"
+              }
+            ],
+            "missing_assertions": [],
+            "unexpected_assertions": [],
+            "duplicate_assertions": [],
+            "completion_sentinel_count": 1,
+            "summary_pair_valid": true,
+            "expected_geometry_failure_signature_seen": false,
+            "base_runner": {
+              "protocol": "draw_case_oracle_v1",
+              "oracle_scope": "public_script_only",
+              "passed": true,
+              "test_done_marker": true,
+              "tcl_standard_library": {
+                "init_script": "/usr/share/tcltk/tcl8.6/init.tcl",
+                "sha256": "374e8e83d501dc0283d4b6cae60d96b46141048e5a57d1500dd379f966879f98"
+              },
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 2,
+              "numeric_assertions": 1,
+              "failed_assertions": 0,
+              "tcl_error_detected": false,
+              "expected_oracle_error": false,
+              "infrastructure_tcl_error": false,
+              "occt_error_detected": false,
+              "oracle_summary_found": true,
+              "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS normal_valid topology kind=expression\nBENCH_ASSERT_PASS normal_area analytic_area kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=2 numeric_assertions=1\nTEST_DONE assertions=2 numeric_assertions=1\n",
+              "stderr_tail": "",
+              "diagnostic_lines": [],
+              "script": "/tmp/cases/evaluation/cases/authoring-fillet-20261112/occt-32929/1/regression.tcl",
+              "draw_executable": "/workspace/build/lin64/gcc/bin/DRAWEXE-7.5.0",
+              "elapsed_seconds": 0.032
+            },
+            "return_code": 0
+          }
+        },
+        "geometry": {
+          "box": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0
+              ],
+              "opposite": [
+                10.0,
+                10.0,
+                0.0,
+                10.0,
+                10.0,
+                10.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 6,
+            "volume": 999.9999999999998,
+            "expected_volume": 1000,
+            "original_six_planes": true,
+            "cylinder": [],
+            "quarter_patch_points": [],
+            "quarter_at_target": null,
+            "quarter_at_opposite": null,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  5.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": true,
+            "independent": "PASS",
+            "area": 599.9999999999999,
+            "expected_area": 600,
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-1-read-box.log",
+              "sha256": "6d882212393d50babc3d5df4d9d62dbd9fbeca7154bb4f40724bc6c739df0767"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-1-box.brep",
+              "sha256": "bd7521f5ec6dcd8155bc0d37b3ff9d87ea3429aa64ef2a9e5c8bfc50fa1a636e"
+            }
+          },
+          "native": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0
+              ],
+              "opposite": [
+                10.0,
+                10.0,
+                0.0,
+                10.0,
+                10.0,
+                10.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 7,
+            "volume": 997.8539816339743,
+            "expected_volume": 997.8539816339745,
+            "original_six_planes": true,
+            "cylinder": [
+              [
+                0.9999999999999998,
+                0.9999999999999998,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "quarter_patch_points": [
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                0.0
+              ],
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                10.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                0.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                10.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                0.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                10.0
+              ]
+            ],
+            "quarter_at_target": true,
+            "quarter_at_opposite": false,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  5.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": false,
+            "independent": "PASS",
+            "area": 595.2787595947437,
+            "expected_area": 595.2787595947439,
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-1-read-native.log",
+              "sha256": "f5295faa83a881eafd023e8de7009de2b8613ae1df9c080559b40ab2a3de752f"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-1-native.brep",
+              "sha256": "b56c99524e6d6030311a6f5cadccf75b68f3276278f87a9a423f41acf8f59027"
+            }
+          },
+          "result": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0
+              ],
+              "opposite": [
+                10.0,
+                10.0,
+                0.0,
+                10.0,
+                10.0,
+                10.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 7,
+            "volume": 997.8539816339743,
+            "expected_volume": 997.8539816339745,
+            "original_six_planes": true,
+            "cylinder": [
+              [
+                0.9999999999999998,
+                0.9999999999999998,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "quarter_patch_points": [
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                0.0
+              ],
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                10.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                0.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                10.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                0.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                10.0
+              ]
+            ],
+            "quarter_at_target": true,
+            "quarter_at_opposite": false,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  5.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": false,
+            "independent": "PASS",
+            "area": 595.2787595947437,
+            "expected_area": 595.2787595947439,
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-1-read-result.log",
+              "sha256": "f5295faa83a881eafd023e8de7009de2b8613ae1df9c080559b40ab2a3de752f"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-1-result.brep",
+              "sha256": "b56c99524e6d6030311a6f5cadccf75b68f3276278f87a9a423f41acf8f59027"
+            }
+          }
+        }
+      },
+      "healthy-2": {
+        "registered": {
+          "status": "PASS",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-2-registered.json",
+            "sha256": "00af0058ee27f59f02f0212a49fce47184c2588f1563fba08c7712bef564180f"
+          },
+          "details": {
+            "passed": true,
+            "status": "geometry_pass",
+            "checkpoint_id": "32929-regression",
+            "category": "regression",
+            "expected_assertion_ids": [
+              "normal_valid",
+              "normal_area"
+            ],
+            "observed_assertion_events": [
+              {
+                "status": "PASS",
+                "id": "normal_valid",
+                "kind": "expression"
+              },
+              {
+                "status": "PASS",
+                "id": "normal_area",
+                "kind": "numeric"
+              }
+            ],
+            "missing_assertions": [],
+            "unexpected_assertions": [],
+            "duplicate_assertions": [],
+            "completion_sentinel_count": 1,
+            "summary_pair_valid": true,
+            "expected_geometry_failure_signature_seen": false,
+            "base_runner": {
+              "protocol": "draw_case_oracle_v1",
+              "oracle_scope": "public_script_only",
+              "passed": true,
+              "test_done_marker": true,
+              "tcl_standard_library": {
+                "init_script": "/usr/share/tcltk/tcl8.6/init.tcl",
+                "sha256": "374e8e83d501dc0283d4b6cae60d96b46141048e5a57d1500dd379f966879f98"
+              },
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 2,
+              "numeric_assertions": 1,
+              "failed_assertions": 0,
+              "tcl_error_detected": false,
+              "expected_oracle_error": false,
+              "infrastructure_tcl_error": false,
+              "occt_error_detected": false,
+              "oracle_summary_found": true,
+              "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS normal_valid topology kind=expression\nBENCH_ASSERT_PASS normal_area analytic_area kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=2 numeric_assertions=1\nTEST_DONE assertions=2 numeric_assertions=1\n",
+              "stderr_tail": "",
+              "diagnostic_lines": [],
+              "script": "/tmp/cases/evaluation/cases/authoring-fillet-20261112/occt-32929/1/regression.tcl",
+              "draw_executable": "/workspace/build/lin64/gcc/bin/DRAWEXE-7.5.0",
+              "elapsed_seconds": 0.032
+            },
+            "return_code": 0
+          }
+        },
+        "geometry": {
+          "box": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0
+              ],
+              "opposite": [
+                10.0,
+                10.0,
+                0.0,
+                10.0,
+                10.0,
+                10.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 6,
+            "volume": 999.9999999999998,
+            "expected_volume": 1000,
+            "original_six_planes": true,
+            "cylinder": [],
+            "quarter_patch_points": [],
+            "quarter_at_target": null,
+            "quarter_at_opposite": null,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  5.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": true,
+            "independent": "PASS",
+            "area": 599.9999999999999,
+            "expected_area": 600,
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-2-read-box.log",
+              "sha256": "6d882212393d50babc3d5df4d9d62dbd9fbeca7154bb4f40724bc6c739df0767"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-2-box.brep",
+              "sha256": "bd7521f5ec6dcd8155bc0d37b3ff9d87ea3429aa64ef2a9e5c8bfc50fa1a636e"
+            }
+          },
+          "native": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0
+              ],
+              "opposite": [
+                10.0,
+                10.0,
+                0.0,
+                10.0,
+                10.0,
+                10.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 7,
+            "volume": 997.8539816339743,
+            "expected_volume": 997.8539816339745,
+            "original_six_planes": true,
+            "cylinder": [
+              [
+                0.9999999999999998,
+                0.9999999999999998,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "quarter_patch_points": [
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                0.0
+              ],
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                10.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                0.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                10.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                0.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                10.0
+              ]
+            ],
+            "quarter_at_target": true,
+            "quarter_at_opposite": false,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  5.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": false,
+            "independent": "PASS",
+            "area": 595.2787595947437,
+            "expected_area": 595.2787595947439,
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-2-read-native.log",
+              "sha256": "f5295faa83a881eafd023e8de7009de2b8613ae1df9c080559b40ab2a3de752f"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-2-native.brep",
+              "sha256": "b56c99524e6d6030311a6f5cadccf75b68f3276278f87a9a423f41acf8f59027"
+            }
+          },
+          "result": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0
+              ],
+              "opposite": [
+                10.0,
+                10.0,
+                0.0,
+                10.0,
+                10.0,
+                10.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 7,
+            "volume": 997.8539816339743,
+            "expected_volume": 997.8539816339745,
+            "original_six_planes": true,
+            "cylinder": [
+              [
+                0.9999999999999998,
+                0.9999999999999998,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "quarter_patch_points": [
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                0.0
+              ],
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                10.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                0.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                10.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                0.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                10.0
+              ]
+            ],
+            "quarter_at_target": true,
+            "quarter_at_opposite": false,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  5.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": false,
+            "independent": "PASS",
+            "area": 595.2787595947437,
+            "expected_area": 595.2787595947439,
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-2-read-result.log",
+              "sha256": "f5295faa83a881eafd023e8de7009de2b8613ae1df9c080559b40ab2a3de752f"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/healthy-2-result.brep",
+              "sha256": "b56c99524e6d6030311a6f5cadccf75b68f3276278f87a9a423f41acf8f59027"
+            }
+          }
+        }
+      },
+      "opposite": {
+        "registered": {
+          "status": "PASS",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v13/receipts/single/opposite-registered.json",
+            "sha256": "00af0058ee27f59f02f0212a49fce47184c2588f1563fba08c7712bef564180f"
+          },
+          "details": {
+            "passed": true,
+            "status": "geometry_pass",
+            "checkpoint_id": "32929-regression",
+            "category": "regression",
+            "expected_assertion_ids": [
+              "normal_valid",
+              "normal_area"
+            ],
+            "observed_assertion_events": [
+              {
+                "status": "PASS",
+                "id": "normal_valid",
+                "kind": "expression"
+              },
+              {
+                "status": "PASS",
+                "id": "normal_area",
+                "kind": "numeric"
+              }
+            ],
+            "missing_assertions": [],
+            "unexpected_assertions": [],
+            "duplicate_assertions": [],
+            "completion_sentinel_count": 1,
+            "summary_pair_valid": true,
+            "expected_geometry_failure_signature_seen": false,
+            "base_runner": {
+              "protocol": "draw_case_oracle_v1",
+              "oracle_scope": "public_script_only",
+              "passed": true,
+              "test_done_marker": true,
+              "tcl_standard_library": {
+                "init_script": "/usr/share/tcltk/tcl8.6/init.tcl",
+                "sha256": "374e8e83d501dc0283d4b6cae60d96b46141048e5a57d1500dd379f966879f98"
+              },
+              "return_code": 0,
+              "timed_out": false,
+              "assertions": 2,
+              "numeric_assertions": 1,
+              "failed_assertions": 0,
+              "tcl_error_detected": false,
+              "expected_oracle_error": false,
+              "infrastructure_tcl_error": false,
+              "occt_error_detected": false,
+              "oracle_summary_found": true,
+              "stdout_tail": "DRAW is running in batch mode\nBENCH_ASSERT_PASS normal_valid topology kind=expression\nBENCH_ASSERT_PASS normal_area analytic_area kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=2 numeric_assertions=1\nTEST_DONE assertions=2 numeric_assertions=1\n",
+              "stderr_tail": "",
+              "diagnostic_lines": [],
+              "script": "/tmp/cases/evaluation/cases/authoring-fillet-20261112/occt-32929/1/regression.tcl",
+              "draw_executable": "/workspace/build/lin64/gcc/bin/DRAWEXE-7.5.0",
+              "elapsed_seconds": 0.032
+            },
+            "return_code": 0
+          }
+        },
+        "geometry": {
+          "box": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0
+              ],
+              "opposite": [
+                10.0,
+                10.0,
+                0.0,
+                10.0,
+                10.0,
+                10.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 6,
+            "volume": 999.9999999999998,
+            "expected_volume": 1000,
+            "original_six_planes": true,
+            "cylinder": [],
+            "quarter_patch_points": [],
+            "quarter_at_target": null,
+            "quarter_at_opposite": null,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  5.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": true,
+            "independent": "PASS",
+            "area": 599.9999999999999,
+            "expected_area": 600,
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/opposite-read-box.log",
+              "sha256": "6d882212393d50babc3d5df4d9d62dbd9fbeca7154bb4f40724bc6c739df0767"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/opposite-box.brep",
+              "sha256": "bd7521f5ec6dcd8155bc0d37b3ff9d87ea3429aa64ef2a9e5c8bfc50fa1a636e"
+            }
+          },
+          "native": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0
+              ],
+              "opposite": [
+                10.0,
+                10.0,
+                0.0,
+                10.0,
+                10.0,
+                10.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 7,
+            "volume": 997.8539816339743,
+            "expected_volume": 997.8539816339745,
+            "original_six_planes": true,
+            "cylinder": [
+              [
+                0.9999999999999998,
+                0.9999999999999998,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "quarter_patch_points": [
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                0.0
+              ],
+              [
+                -2.220446049250313e-16,
+                0.9999999999999998,
+                10.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                0.0
+              ],
+              [
+                0.29289321881345354,
+                0.292893218813451,
+                10.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                0.0
+              ],
+              [
+                1.0000000000000033,
+                -2.220446049250313e-16,
+                10.0
+              ]
+            ],
+            "quarter_at_target": true,
+            "quarter_at_opposite": false,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  5.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [],
+            "matches_opposite_material": false,
+            "independent": "PASS",
+            "area": 595.2787595947437,
+            "expected_area": 595.2787595947439,
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/opposite-read-native.log",
+              "sha256": "f5295faa83a881eafd023e8de7009de2b8613ae1df9c080559b40ab2a3de752f"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/opposite-native.brep",
+              "sha256": "b56c99524e6d6030311a6f5cadccf75b68f3276278f87a9a423f41acf8f59027"
+            }
+          },
+          "result": {
+            "edge_endpoints": {
+              "target": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                10.0
+              ],
+              "opposite": [
+                10.0,
+                10.0,
+                0.0,
+                10.0,
+                10.0,
+                10.0
+              ]
+            },
+            "length_axis": 2,
+            "valid_single_solid": true,
+            "face_count": 7,
+            "volume": 997.8539816339742,
+            "expected_volume": 997.8539816339745,
+            "original_six_planes": true,
+            "cylinder": [
+              [
+                9.0,
+                9.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                1.0,
+                0.0,
+                1.5707963267948966,
+                0.0,
+                10.0
+              ]
+            ],
+            "quarter_patch_points": [
+              [
+                10.0,
+                9.0,
+                0.0
+              ],
+              [
+                10.0,
+                9.0,
+                10.0
+              ],
+              [
+                9.707106781186548,
+                9.707106781186548,
+                0.0
+              ],
+              [
+                9.707106781186548,
+                9.707106781186548,
+                10.0
+              ],
+              [
+                9.0,
+                10.0,
+                0.0
+              ],
+              [
+                9.0,
+                10.0,
+                10.0
+              ]
+            ],
+            "quarter_at_target": false,
+            "quarter_at_opposite": true,
+            "material_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.1,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  0.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.5,
+                  0.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  9.5,
+                  9.5,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  5.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  -2.0,
+                  5.0,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "mismatching_target_witnesses": [
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  2.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  2.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  5.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  5.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              },
+              {
+                "point": [
+                  0.1,
+                  0.1,
+                  8.0
+                ],
+                "expected_target": "OUT",
+                "expected_opposite": "IN",
+                "actual": "IN"
+              },
+              {
+                "point": [
+                  9.9,
+                  9.9,
+                  8.0
+                ],
+                "expected_target": "IN",
+                "expected_opposite": "OUT",
+                "actual": "OUT"
+              }
+            ],
+            "matches_opposite_material": true,
+            "independent": "FAIL",
+            "area": 595.2787595947437,
+            "expected_area": 595.2787595947439,
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/opposite-read-result.log",
+              "sha256": "3a17d9031d9c4e17504326c64626d06a2d48cd25a78f451fdaae5837aae14efb"
+            },
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/single/opposite-result.brep",
+              "sha256": "d52e2cc8e18e23984fdc017fffad5d38b1590f6152995505a0550d3eb48d446f"
+            }
+          }
+        }
+      }
+    }
+  },
+  "strip": {
+    "source": {
+      "source_id": "occt-1177-b-cbca11e97518",
+      "commit": "cbca11e97518a66de27bdc5100ceacf9e77e2e87",
+      "materialized_tree_sha256": "5577b347bd0d241e249520b08bf1332e15826d158651ad1fbafc425a77f48351",
+      "toolchain": "occt8-gcc13-cpp-20261112",
+      "toolchain_config": {
+        "path": "toolchains/occt8-gcc13-cpp-20261112.json",
+        "sha256": "859802cd60dc1127b7f5951f0688ac27d953d653b4c915fa6b4231620d8d39a0"
+      },
+      "build_entry": {
+        "path": "tools/occt8-gcc13-cpp/build.sh",
+        "sha256": "b166ea190712b4b3f2ba57d1d008fad24b9d434ea082016e4f099033f8c6177e"
+      },
+      "declared_public_targets": [
+        "TKFillet",
+        "TKPrim"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/identity.json",
+      "sha256": "90977b4da85d9c116e7f4838712105eba0a6f8f61d88a70f448fe77ff96723bb"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/runtime.json",
+      "sha256": "a5f59a2b838ea77068ef44dc7d261d84a628f2803172ca9b44fecb0590d69f4f"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/core-1.json",
+          "sha256": "410f636826e70b5e06d1b619488044c798139b3f3740fd7420fb37d15c50be48"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/core-2.json",
+          "sha256": "f6cfb4b2a1c33df86b03561ac4cd3573fba522a6c1b1e768dd7d118b118a2734"
+        }
+      ],
+      "native_attempt": {
+        "checks": {
+          "box-common": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "disjoint": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "cut-fuse": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "plane-sphere": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "hole-classification": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          },
+          "brep-roundtrip": {
+            "status": "BLOCKED",
+            "geometry_executed": false,
+            "reason": "/inputs/probe.cxx:19:10: fatal error: TopTools_IndexedMapOfShape.hxx: No such file or directory\n   19 | #include <TopTools_IndexedMapOfShape.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+          }
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/core-native.json",
+          "sha256": "b1699cee633b5141f58510735556b7549f42b38643be281927c6c73560994831"
+        },
+        "status": "BLOCKED"
+      },
+      "geometry_profile": "Unchanged geometric probes and thresholds; locked TopExp map type compatibility alias.",
+      "compatibility_header": {
+        "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/alias.hxx",
+        "sha256": "110706bfa4815f78a0a105fa6a3e7cf70833586030d873ca9221211525fc6684"
+      }
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "registered_baseline": {
+      "status": "PASS",
+      "receipt": {
+        "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/registered.json",
+        "sha256": "a797415c98cc41595910d714b23585a6482c04f462accce1c4329e6cebc05615"
+      },
+      "details": "4.99,4.99 done=1 valid=1 solids=1 cylinders=2 remaining=1 volume=893.127856168 expected=893.127856168 pass=1\nTEST_DONE\n"
+    },
+    "independent_status": "CALIBRATED",
+    "independent_scope": "1177-gap only. Both actual quarter cylinders, their end and middle meridians, and the four straight sides and area of the front strip.",
+    "controls": {
+      "healthy-1": {
+        "registered": {
+          "status": "PASS",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-1-registered.json",
+            "sha256": "c3b3281d4124636fdab850e61fea75074390457dc443cf8930a2b9c3b142e27a"
+          },
+          "details": "4.99,4.99 done=1 valid=1 solids=1 cylinders=2 remaining=1 volume=893.127856168 expected=893.127856168 pass=1\nTEST_DONE\n"
+        },
+        "geometry": {
+          "box": {
+            "valid": true,
+            "volume": 999.9999999999998,
+            "planes": [
+              [
+                0,
+                0.0
+              ],
+              [
+                0,
+                10.0
+              ],
+              [
+                1,
+                0.0
+              ],
+              [
+                1,
+                10.0
+              ],
+              [
+                2,
+                0.0
+              ],
+              [
+                2,
+                10.0
+              ]
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-1-box.brep",
+              "sha256": "9b0e598f252b1f67ad52145d82eacc19fc75cdd2904da5e35e10e54234dcd8ca"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-1-read-box.log",
+              "sha256": "692432e045fb176d171c91b1f02f39993ab42fb50d2211c678ae0840686c6ff4"
+            }
+          },
+          "native": {
+            "edge_endpoints": [
+              [
+                0.0,
+                0.0,
+                10.0,
+                10.0,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "axis": 0,
+            "cross_axis": 2,
+            "edge_sides": [
+              1,
+              0
+            ],
+            "expected_radii_low_high": [
+              4.99,
+              4.99
+            ],
+            "valid_single_solid": true,
+            "faces": 8.0,
+            "volume": 893.1278561682566,
+            "expected_volume": 893.127856168256,
+            "volume_ok": true,
+            "cylinder_rows": [
+              [
+                0.0,
+                4.989999999999999,
+                4.989999999999999,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267948966,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                5.010000000000001,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "cylinder_landmarks": [
+              [
+                0.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                0.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                10.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                10.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                0.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                0.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                10.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                0.0,
+                4.990000000000017,
+                10.0
+              ],
+              [
+                10.0,
+                4.990000000000017,
+                10.0
+              ]
+            ],
+            "cylinders_match": true,
+            "matches_per_side": [
+              [
+                0
+              ],
+              [
+                1
+              ]
+            ],
+            "strip_exists": true,
+            "strip_area": 0.2000000000000135,
+            "strip_bounds": [
+              4.99,
+              5.01
+            ],
+            "strip_width": 0.019999999999999574,
+            "measured_front_edges": [
+              [
+                1.0,
+                10.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                4.99
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                5.01,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                0.0,
+                -8.88178419700125e-16,
+                5.01
+              ]
+            ],
+            "stations_from_straight_boundaries": [
+              {
+                "axial": 1,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 5,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 9,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              }
+            ],
+            "strip_width_ok": true,
+            "strip_position_ok": true,
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-1-native.brep",
+              "sha256": "47c7d9ffd889a2e66c09d953f5e7e415da2e24af808212f9b94f7554006b5691"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-1-read-native.log",
+              "sha256": "a0387483631899413f523c73212479ee26a85edd0c7fb319186f8529bca633d0"
+            }
+          },
+          "result": {
+            "edge_endpoints": [
+              [
+                0.0,
+                0.0,
+                10.0,
+                10.0,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "axis": 0,
+            "cross_axis": 2,
+            "edge_sides": [
+              1,
+              0
+            ],
+            "expected_radii_low_high": [
+              4.99,
+              4.99
+            ],
+            "valid_single_solid": true,
+            "faces": 8.0,
+            "volume": 893.1278561682566,
+            "expected_volume": 893.127856168256,
+            "volume_ok": true,
+            "cylinder_rows": [
+              [
+                0.0,
+                4.989999999999999,
+                4.989999999999999,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267948966,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                5.010000000000001,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "cylinder_landmarks": [
+              [
+                0.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                0.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                10.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                10.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                0.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                0.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                10.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                0.0,
+                4.990000000000017,
+                10.0
+              ],
+              [
+                10.0,
+                4.990000000000017,
+                10.0
+              ]
+            ],
+            "cylinders_match": true,
+            "matches_per_side": [
+              [
+                0
+              ],
+              [
+                1
+              ]
+            ],
+            "strip_exists": true,
+            "strip_area": 0.2000000000000135,
+            "strip_bounds": [
+              4.99,
+              5.01
+            ],
+            "strip_width": 0.019999999999999574,
+            "measured_front_edges": [
+              [
+                1.0,
+                10.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                4.99
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                5.01,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                0.0,
+                -8.88178419700125e-16,
+                5.01
+              ]
+            ],
+            "stations_from_straight_boundaries": [
+              {
+                "axial": 1,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 5,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 9,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              }
+            ],
+            "strip_width_ok": true,
+            "strip_position_ok": true,
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-1-result.brep",
+              "sha256": "47c7d9ffd889a2e66c09d953f5e7e415da2e24af808212f9b94f7554006b5691"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-1-read-result.log",
+              "sha256": "a0387483631899413f523c73212479ee26a85edd0c7fb319186f8529bca633d0"
+            }
+          }
+        },
+        "physical_injection": null
+      },
+      "healthy-2": {
+        "registered": {
+          "status": "PASS",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-2-registered.json",
+            "sha256": "bb4aebefd8429b116d7cec757c166d56fb06fec9dde89a8a5e2d724e24a3cef2"
+          },
+          "details": "4.99,4.99 done=1 valid=1 solids=1 cylinders=2 remaining=1 volume=893.127856168 expected=893.127856168 pass=1\nTEST_DONE\n"
+        },
+        "geometry": {
+          "box": {
+            "valid": true,
+            "volume": 999.9999999999998,
+            "planes": [
+              [
+                0,
+                0.0
+              ],
+              [
+                0,
+                10.0
+              ],
+              [
+                1,
+                0.0
+              ],
+              [
+                1,
+                10.0
+              ],
+              [
+                2,
+                0.0
+              ],
+              [
+                2,
+                10.0
+              ]
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-2-box.brep",
+              "sha256": "9b0e598f252b1f67ad52145d82eacc19fc75cdd2904da5e35e10e54234dcd8ca"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-2-read-box.log",
+              "sha256": "692432e045fb176d171c91b1f02f39993ab42fb50d2211c678ae0840686c6ff4"
+            }
+          },
+          "native": {
+            "edge_endpoints": [
+              [
+                0.0,
+                0.0,
+                10.0,
+                10.0,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "axis": 0,
+            "cross_axis": 2,
+            "edge_sides": [
+              1,
+              0
+            ],
+            "expected_radii_low_high": [
+              4.99,
+              4.99
+            ],
+            "valid_single_solid": true,
+            "faces": 8.0,
+            "volume": 893.1278561682566,
+            "expected_volume": 893.127856168256,
+            "volume_ok": true,
+            "cylinder_rows": [
+              [
+                0.0,
+                4.989999999999999,
+                4.989999999999999,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267948966,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                5.010000000000001,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "cylinder_landmarks": [
+              [
+                0.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                0.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                10.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                10.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                0.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                0.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                10.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                0.0,
+                4.990000000000017,
+                10.0
+              ],
+              [
+                10.0,
+                4.990000000000017,
+                10.0
+              ]
+            ],
+            "cylinders_match": true,
+            "matches_per_side": [
+              [
+                0
+              ],
+              [
+                1
+              ]
+            ],
+            "strip_exists": true,
+            "strip_area": 0.2000000000000135,
+            "strip_bounds": [
+              4.99,
+              5.01
+            ],
+            "strip_width": 0.019999999999999574,
+            "measured_front_edges": [
+              [
+                1.0,
+                10.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                4.99
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                5.01,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                0.0,
+                -8.88178419700125e-16,
+                5.01
+              ]
+            ],
+            "stations_from_straight_boundaries": [
+              {
+                "axial": 1,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 5,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 9,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              }
+            ],
+            "strip_width_ok": true,
+            "strip_position_ok": true,
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-2-native.brep",
+              "sha256": "47c7d9ffd889a2e66c09d953f5e7e415da2e24af808212f9b94f7554006b5691"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-2-read-native.log",
+              "sha256": "a0387483631899413f523c73212479ee26a85edd0c7fb319186f8529bca633d0"
+            }
+          },
+          "result": {
+            "edge_endpoints": [
+              [
+                0.0,
+                0.0,
+                10.0,
+                10.0,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "axis": 0,
+            "cross_axis": 2,
+            "edge_sides": [
+              1,
+              0
+            ],
+            "expected_radii_low_high": [
+              4.99,
+              4.99
+            ],
+            "valid_single_solid": true,
+            "faces": 8.0,
+            "volume": 893.1278561682566,
+            "expected_volume": 893.127856168256,
+            "volume_ok": true,
+            "cylinder_rows": [
+              [
+                0.0,
+                4.989999999999999,
+                4.989999999999999,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267948966,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                5.010000000000001,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "cylinder_landmarks": [
+              [
+                0.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                0.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                10.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                10.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                0.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                0.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                10.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                0.0,
+                4.990000000000017,
+                10.0
+              ],
+              [
+                10.0,
+                4.990000000000017,
+                10.0
+              ]
+            ],
+            "cylinders_match": true,
+            "matches_per_side": [
+              [
+                0
+              ],
+              [
+                1
+              ]
+            ],
+            "strip_exists": true,
+            "strip_area": 0.2000000000000135,
+            "strip_bounds": [
+              4.99,
+              5.01
+            ],
+            "strip_width": 0.019999999999999574,
+            "measured_front_edges": [
+              [
+                1.0,
+                10.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                4.99
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                5.01,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                0.0,
+                -8.88178419700125e-16,
+                5.01
+              ]
+            ],
+            "stations_from_straight_boundaries": [
+              {
+                "axial": 1,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 5,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 9,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              }
+            ],
+            "strip_width_ok": true,
+            "strip_position_ok": true,
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-2-result.brep",
+              "sha256": "47c7d9ffd889a2e66c09d953f5e7e415da2e24af808212f9b94f7554006b5691"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/healthy-2-read-result.log",
+              "sha256": "a0387483631899413f523c73212479ee26a85edd0c7fb319186f8529bca633d0"
+            }
+          }
+        },
+        "physical_injection": null
+      },
+      "missing": {
+        "registered": {
+          "status": "FAIL",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/missing-registered.json",
+            "sha256": "55d77753a66842fce9be4137c88883bd60c35cb1e6418eb4c688f19f1808172e"
+          },
+          "details": "4.99,4.99 done=1 valid=1 solids=1 cylinders=2 remaining=0 volume=892.699081699 expected=893.127856168 pass=0\n"
+        },
+        "geometry": {
+          "box": {
+            "valid": true,
+            "volume": 999.9999999999998,
+            "planes": [
+              [
+                0,
+                0.0
+              ],
+              [
+                0,
+                10.0
+              ],
+              [
+                1,
+                0.0
+              ],
+              [
+                1,
+                10.0
+              ],
+              [
+                2,
+                0.0
+              ],
+              [
+                2,
+                10.0
+              ]
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/missing-box.brep",
+              "sha256": "9b0e598f252b1f67ad52145d82eacc19fc75cdd2904da5e35e10e54234dcd8ca"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/missing-read-box.log",
+              "sha256": "692432e045fb176d171c91b1f02f39993ab42fb50d2211c678ae0840686c6ff4"
+            }
+          },
+          "native": {
+            "edge_endpoints": [
+              [
+                0.0,
+                0.0,
+                10.0,
+                10.0,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "axis": 0,
+            "cross_axis": 2,
+            "edge_sides": [
+              1,
+              0
+            ],
+            "expected_radii_low_high": [
+              4.99,
+              4.99
+            ],
+            "valid_single_solid": true,
+            "faces": 8.0,
+            "volume": 893.1278561682566,
+            "expected_volume": 893.127856168256,
+            "volume_ok": true,
+            "cylinder_rows": [
+              [
+                0.0,
+                4.989999999999999,
+                4.989999999999999,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267948966,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                5.010000000000001,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "cylinder_landmarks": [
+              [
+                0.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                0.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                10.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                10.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                0.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                0.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                10.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                0.0,
+                4.990000000000017,
+                10.0
+              ],
+              [
+                10.0,
+                4.990000000000017,
+                10.0
+              ]
+            ],
+            "cylinders_match": true,
+            "matches_per_side": [
+              [
+                0
+              ],
+              [
+                1
+              ]
+            ],
+            "strip_exists": true,
+            "strip_area": 0.2000000000000135,
+            "strip_bounds": [
+              4.99,
+              5.01
+            ],
+            "strip_width": 0.019999999999999574,
+            "measured_front_edges": [
+              [
+                1.0,
+                10.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                4.99
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                5.01,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                0.0,
+                -8.88178419700125e-16,
+                5.01
+              ]
+            ],
+            "stations_from_straight_boundaries": [
+              {
+                "axial": 1,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 5,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 9,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              }
+            ],
+            "strip_width_ok": true,
+            "strip_position_ok": true,
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/missing-native.brep",
+              "sha256": "47c7d9ffd889a2e66c09d953f5e7e415da2e24af808212f9b94f7554006b5691"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/missing-read-native.log",
+              "sha256": "a0387483631899413f523c73212479ee26a85edd0c7fb319186f8529bca633d0"
+            }
+          },
+          "result": {
+            "edge_endpoints": [
+              [
+                0.0,
+                0.0,
+                10.0,
+                10.0,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "axis": 0,
+            "cross_axis": 2,
+            "edge_sides": [
+              1,
+              0
+            ],
+            "expected_radii_low_high": [
+              4.99,
+              4.99
+            ],
+            "valid_single_solid": true,
+            "faces": 7.0,
+            "volume": 892.6990816987241,
+            "expected_volume": 893.127856168256,
+            "volume_ok": false,
+            "cylinder_rows": [
+              [
+                0.0,
+                5.000000000000002,
+                5.000000000000002,
+                -1.0,
+                0.0,
+                0.0,
+                5.000000000000002,
+                0.0,
+                1.5707963267949,
+                -10.0,
+                0.0
+              ],
+              [
+                0.0,
+                5.000000000000002,
+                4.999999999999998,
+                -1.0,
+                0.0,
+                0.0,
+                5.000000000000002,
+                0.0,
+                1.5707963267949,
+                -10.0,
+                0.0
+              ]
+            ],
+            "cylinder_landmarks": [
+              [
+                10.0,
+                5.0,
+                0.0
+              ],
+              [
+                0.0,
+                5.0,
+                0.0
+              ],
+              [
+                10.0,
+                1.4644660940672551,
+                1.4644660940672707
+              ],
+              [
+                0.0,
+                1.4644660940672551,
+                1.4644660940672707
+              ],
+              [
+                10.0,
+                0.0,
+                5.000000000000021
+              ],
+              [
+                0.0,
+                0.0,
+                5.000000000000021
+              ],
+              [
+                10.0,
+                0.0,
+                5.0
+              ],
+              [
+                0.0,
+                0.0,
+                5.0
+              ],
+              [
+                10.0,
+                1.4644660940672707,
+                8.535533905932745
+              ],
+              [
+                0.0,
+                1.4644660940672707,
+                8.535533905932745
+              ],
+              [
+                10.0,
+                5.000000000000021,
+                10.0
+              ],
+              [
+                0.0,
+                5.000000000000021,
+                10.0
+              ]
+            ],
+            "cylinders_match": false,
+            "matches_per_side": [
+              [],
+              []
+            ],
+            "strip_exists": false,
+            "strip_area": null,
+            "strip_bounds": [],
+            "strip_width": null,
+            "measured_front_edges": [],
+            "stations_from_straight_boundaries": [
+              {
+                "axial": 1,
+                "observed": [],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 5,
+                "observed": [],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 9,
+                "observed": [],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              }
+            ],
+            "strip_width_ok": false,
+            "strip_position_ok": false,
+            "independent": "FAIL",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/missing-result.brep",
+              "sha256": "493c445611507fe1de7f6eb389d834da50089f0620b1a799b3bd038fc4e823b4"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/missing-read-result.log",
+              "sha256": "aea0e633e803ab493a72c86bccf3d06f001c62bd86b14508ea81e3b0e39ed524"
+            }
+          }
+        },
+        "physical_injection": {
+          "edge_endpoints": [
+            [
+              0.0,
+              0.0,
+              10.0,
+              10.0,
+              0.0,
+              10.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              10.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "axis": 0,
+          "cross_axis": 2,
+          "edge_sides": [
+            1,
+            0
+          ],
+          "expected_radii_low_high": [
+            5,
+            5
+          ],
+          "valid_single_solid": true,
+          "faces": 7.0,
+          "volume": 892.6990816987241,
+          "expected_volume": 892.6990816987242,
+          "volume_ok": true,
+          "cylinder_rows": [
+            [
+              0.0,
+              5.000000000000002,
+              5.000000000000002,
+              -1.0,
+              0.0,
+              0.0,
+              5.000000000000002,
+              0.0,
+              1.5707963267949,
+              -10.0,
+              0.0
+            ],
+            [
+              0.0,
+              5.000000000000002,
+              4.999999999999998,
+              -1.0,
+              0.0,
+              0.0,
+              5.000000000000002,
+              0.0,
+              1.5707963267949,
+              -10.0,
+              0.0
+            ]
+          ],
+          "cylinder_landmarks": [
+            [
+              10.0,
+              5.0,
+              0.0
+            ],
+            [
+              0.0,
+              5.0,
+              0.0
+            ],
+            [
+              10.0,
+              1.4644660940672551,
+              1.4644660940672707
+            ],
+            [
+              0.0,
+              1.4644660940672551,
+              1.4644660940672707
+            ],
+            [
+              10.0,
+              0.0,
+              5.000000000000021
+            ],
+            [
+              0.0,
+              0.0,
+              5.000000000000021
+            ],
+            [
+              10.0,
+              0.0,
+              5.0
+            ],
+            [
+              0.0,
+              0.0,
+              5.0
+            ],
+            [
+              10.0,
+              1.4644660940672707,
+              8.535533905932745
+            ],
+            [
+              0.0,
+              1.4644660940672707,
+              8.535533905932745
+            ],
+            [
+              10.0,
+              5.000000000000021,
+              10.0
+            ],
+            [
+              0.0,
+              5.000000000000021,
+              10.0
+            ]
+          ],
+          "cylinders_match": true,
+          "matches_per_side": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "strip_exists": false,
+          "strip_area": null,
+          "strip_bounds": [],
+          "strip_width": null,
+          "measured_front_edges": [],
+          "stations_from_straight_boundaries": [
+            {
+              "axial": 1,
+              "observed": [],
+              "expected": []
+            },
+            {
+              "axial": 5,
+              "observed": [],
+              "expected": []
+            },
+            {
+              "axial": 9,
+              "observed": [],
+              "expected": []
+            }
+          ],
+          "strip_width_ok": true,
+          "strip_position_ok": true,
+          "independent": "PASS"
+        }
+      },
+      "wide": {
+        "registered": {
+          "status": "FAIL",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/wide-registered.json",
+            "sha256": "fd8eb56ab508dfa02789e2603110dcd6c14d0d18c6c69294612067d855845b64"
+          },
+          "details": "4.99,4.99 done=1 valid=1 solids=1 cylinders=2 remaining=1 volume=893.55577223 expected=893.127856168 pass=0\n"
+        },
+        "geometry": {
+          "box": {
+            "valid": true,
+            "volume": 999.9999999999998,
+            "planes": [
+              [
+                0,
+                0.0
+              ],
+              [
+                0,
+                10.0
+              ],
+              [
+                1,
+                0.0
+              ],
+              [
+                1,
+                10.0
+              ],
+              [
+                2,
+                0.0
+              ],
+              [
+                2,
+                10.0
+              ]
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/wide-box.brep",
+              "sha256": "9b0e598f252b1f67ad52145d82eacc19fc75cdd2904da5e35e10e54234dcd8ca"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/wide-read-box.log",
+              "sha256": "692432e045fb176d171c91b1f02f39993ab42fb50d2211c678ae0840686c6ff4"
+            }
+          },
+          "native": {
+            "edge_endpoints": [
+              [
+                0.0,
+                0.0,
+                10.0,
+                10.0,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "axis": 0,
+            "cross_axis": 2,
+            "edge_sides": [
+              1,
+              0
+            ],
+            "expected_radii_low_high": [
+              4.99,
+              4.99
+            ],
+            "valid_single_solid": true,
+            "faces": 8.0,
+            "volume": 893.1278561682566,
+            "expected_volume": 893.127856168256,
+            "volume_ok": true,
+            "cylinder_rows": [
+              [
+                0.0,
+                4.989999999999999,
+                4.989999999999999,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267948966,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                5.010000000000001,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "cylinder_landmarks": [
+              [
+                0.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                0.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                10.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                10.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                0.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                0.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                10.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                0.0,
+                4.990000000000017,
+                10.0
+              ],
+              [
+                10.0,
+                4.990000000000017,
+                10.0
+              ]
+            ],
+            "cylinders_match": true,
+            "matches_per_side": [
+              [
+                0
+              ],
+              [
+                1
+              ]
+            ],
+            "strip_exists": true,
+            "strip_area": 0.2000000000000135,
+            "strip_bounds": [
+              4.99,
+              5.01
+            ],
+            "strip_width": 0.019999999999999574,
+            "measured_front_edges": [
+              [
+                1.0,
+                10.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                4.99
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                5.01,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                0.0,
+                -8.88178419700125e-16,
+                5.01
+              ]
+            ],
+            "stations_from_straight_boundaries": [
+              {
+                "axial": 1,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 5,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 9,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              }
+            ],
+            "strip_width_ok": true,
+            "strip_position_ok": true,
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/wide-native.brep",
+              "sha256": "47c7d9ffd889a2e66c09d953f5e7e415da2e24af808212f9b94f7554006b5691"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/wide-read-native.log",
+              "sha256": "a0387483631899413f523c73212479ee26a85edd0c7fb319186f8529bca633d0"
+            }
+          },
+          "result": {
+            "edge_endpoints": [
+              [
+                0.0,
+                0.0,
+                10.0,
+                10.0,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "axis": 0,
+            "cross_axis": 2,
+            "edge_sides": [
+              1,
+              0
+            ],
+            "expected_radii_low_high": [
+              4.99,
+              4.99
+            ],
+            "valid_single_solid": true,
+            "faces": 8.0,
+            "volume": 893.5557722304421,
+            "expected_volume": 893.127856168256,
+            "volume_ok": false,
+            "cylinder_rows": [
+              [
+                0.0,
+                4.9799999999999995,
+                4.9799999999999995,
+                1.0,
+                0.0,
+                -0.0,
+                4.98,
+                0.0,
+                1.5707963267948966,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                4.9799999999999995,
+                5.0200000000000005,
+                1.0,
+                0.0,
+                -0.0,
+                4.98,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "cylinder_landmarks": [
+              [
+                0.0,
+                -8.881784197001252e-16,
+                4.9799999999999995
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                4.9799999999999995
+              ],
+              [
+                0.0,
+                1.4586082296909924,
+                1.4586082296909928
+              ],
+              [
+                10.0,
+                1.4586082296909924,
+                1.4586082296909928
+              ],
+              [
+                0.0,
+                4.9799999999999995,
+                -8.881784197001252e-16
+              ],
+              [
+                10.0,
+                4.9799999999999995,
+                -8.881784197001252e-16
+              ],
+              [
+                0.0,
+                -8.881784197001252e-16,
+                5.0200000000000005
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                5.0200000000000005
+              ],
+              [
+                0.0,
+                1.458608229690999,
+                8.541391770309014
+              ],
+              [
+                10.0,
+                1.458608229690999,
+                8.541391770309014
+              ],
+              [
+                0.0,
+                4.980000000000017,
+                10.0
+              ],
+              [
+                10.0,
+                4.980000000000017,
+                10.0
+              ]
+            ],
+            "cylinders_match": false,
+            "matches_per_side": [
+              [],
+              []
+            ],
+            "strip_exists": true,
+            "strip_area": 0.40000000000000924,
+            "strip_bounds": [
+              4.98,
+              5.02
+            ],
+            "strip_width": 0.03999999999999915,
+            "measured_front_edges": [
+              [
+                1.0,
+                10.0,
+                -8.88178419700125e-16,
+                4.98,
+                10.0,
+                -8.88178419700125e-16,
+                5.02
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.98,
+                10.0,
+                -8.88178419700125e-16,
+                4.98
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                5.02,
+                10.0,
+                -8.88178419700125e-16,
+                5.02
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.98,
+                0.0,
+                -8.88178419700125e-16,
+                5.02
+              ]
+            ],
+            "stations_from_straight_boundaries": [
+              {
+                "axial": 1,
+                "observed": [
+                  4.98,
+                  5.02
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 5,
+                "observed": [
+                  4.98,
+                  5.02
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 9,
+                "observed": [
+                  4.98,
+                  5.02
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              }
+            ],
+            "strip_width_ok": false,
+            "strip_position_ok": false,
+            "independent": "FAIL",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/wide-result.brep",
+              "sha256": "96b6643296a7b6713bb16f558b5dd18aad025bcf24b7c6b5d1d688c75023ecf4"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/wide-read-result.log",
+              "sha256": "4e7371dba4e45b04b97bcc80cf9b2b54a2b449ef1c6af76dd682a574705f7ef5"
+            }
+          }
+        },
+        "physical_injection": {
+          "edge_endpoints": [
+            [
+              0.0,
+              0.0,
+              10.0,
+              10.0,
+              0.0,
+              10.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              10.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "axis": 0,
+          "cross_axis": 2,
+          "edge_sides": [
+            1,
+            0
+          ],
+          "expected_radii_low_high": [
+            4.98,
+            4.98
+          ],
+          "valid_single_solid": true,
+          "faces": 8.0,
+          "volume": 893.5557722304421,
+          "expected_volume": 893.5557722304416,
+          "volume_ok": true,
+          "cylinder_rows": [
+            [
+              0.0,
+              4.9799999999999995,
+              4.9799999999999995,
+              1.0,
+              0.0,
+              -0.0,
+              4.98,
+              0.0,
+              1.5707963267948966,
+              0.0,
+              10.0
+            ],
+            [
+              0.0,
+              4.9799999999999995,
+              5.0200000000000005,
+              1.0,
+              0.0,
+              -0.0,
+              4.98,
+              0.0,
+              1.5707963267949,
+              0.0,
+              10.0
+            ]
+          ],
+          "cylinder_landmarks": [
+            [
+              0.0,
+              -8.881784197001252e-16,
+              4.9799999999999995
+            ],
+            [
+              10.0,
+              -8.881784197001252e-16,
+              4.9799999999999995
+            ],
+            [
+              0.0,
+              1.4586082296909924,
+              1.4586082296909928
+            ],
+            [
+              10.0,
+              1.4586082296909924,
+              1.4586082296909928
+            ],
+            [
+              0.0,
+              4.9799999999999995,
+              -8.881784197001252e-16
+            ],
+            [
+              10.0,
+              4.9799999999999995,
+              -8.881784197001252e-16
+            ],
+            [
+              0.0,
+              -8.881784197001252e-16,
+              5.0200000000000005
+            ],
+            [
+              10.0,
+              -8.881784197001252e-16,
+              5.0200000000000005
+            ],
+            [
+              0.0,
+              1.458608229690999,
+              8.541391770309014
+            ],
+            [
+              10.0,
+              1.458608229690999,
+              8.541391770309014
+            ],
+            [
+              0.0,
+              4.980000000000017,
+              10.0
+            ],
+            [
+              10.0,
+              4.980000000000017,
+              10.0
+            ]
+          ],
+          "cylinders_match": true,
+          "matches_per_side": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "strip_exists": true,
+          "strip_area": 0.40000000000000924,
+          "strip_bounds": [
+            4.98,
+            5.02
+          ],
+          "strip_width": 0.03999999999999915,
+          "measured_front_edges": [
+            [
+              1.0,
+              10.0,
+              -8.88178419700125e-16,
+              4.98,
+              10.0,
+              -8.88178419700125e-16,
+              5.02
+            ],
+            [
+              1.0,
+              0.0,
+              -8.88178419700125e-16,
+              4.98,
+              10.0,
+              -8.88178419700125e-16,
+              4.98
+            ],
+            [
+              1.0,
+              0.0,
+              -8.88178419700125e-16,
+              5.02,
+              10.0,
+              -8.88178419700125e-16,
+              5.02
+            ],
+            [
+              1.0,
+              0.0,
+              -8.88178419700125e-16,
+              4.98,
+              0.0,
+              -8.88178419700125e-16,
+              5.02
+            ]
+          ],
+          "stations_from_straight_boundaries": [
+            {
+              "axial": 1,
+              "observed": [
+                4.98,
+                5.02
+              ],
+              "expected": [
+                4.98,
+                5.02
+              ]
+            },
+            {
+              "axial": 5,
+              "observed": [
+                4.98,
+                5.02
+              ],
+              "expected": [
+                4.98,
+                5.02
+              ]
+            },
+            {
+              "axial": 9,
+              "observed": [
+                4.98,
+                5.02
+              ],
+              "expected": [
+                4.98,
+                5.02
+              ]
+            }
+          ],
+          "strip_width_ok": true,
+          "strip_position_ok": true,
+          "independent": "PASS"
+        }
+      },
+      "shifted": {
+        "registered": {
+          "status": "PASS",
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/shifted-registered.json",
+            "sha256": "8bdaa00941a5974dc37489faadca19e36b39e7c879e81041f3459fca120319b7"
+          },
+          "details": "4.99,4.99 done=1 valid=1 solids=1 cylinders=2 remaining=1 volume=893.127787496 expected=893.127856168 pass=1\nTEST_DONE\n"
+        },
+        "geometry": {
+          "box": {
+            "valid": true,
+            "volume": 999.9999999999998,
+            "planes": [
+              [
+                0,
+                0.0
+              ],
+              [
+                0,
+                10.0
+              ],
+              [
+                1,
+                0.0
+              ],
+              [
+                1,
+                10.0
+              ],
+              [
+                2,
+                0.0
+              ],
+              [
+                2,
+                10.0
+              ]
+            ],
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/shifted-box.brep",
+              "sha256": "9b0e598f252b1f67ad52145d82eacc19fc75cdd2904da5e35e10e54234dcd8ca"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/shifted-read-box.log",
+              "sha256": "692432e045fb176d171c91b1f02f39993ab42fb50d2211c678ae0840686c6ff4"
+            }
+          },
+          "native": {
+            "edge_endpoints": [
+              [
+                0.0,
+                0.0,
+                10.0,
+                10.0,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "axis": 0,
+            "cross_axis": 2,
+            "edge_sides": [
+              1,
+              0
+            ],
+            "expected_radii_low_high": [
+              4.99,
+              4.99
+            ],
+            "valid_single_solid": true,
+            "faces": 8.0,
+            "volume": 893.1278561682566,
+            "expected_volume": 893.127856168256,
+            "volume_ok": true,
+            "cylinder_rows": [
+              [
+                0.0,
+                4.989999999999999,
+                4.989999999999999,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267948966,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                5.010000000000001,
+                1.0,
+                0.0,
+                -0.0,
+                4.99,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "cylinder_landmarks": [
+              [
+                0.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                4.989999999999999
+              ],
+              [
+                0.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                10.0,
+                1.4615371618791269,
+                1.4615371618791273
+              ],
+              [
+                0.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                10.0,
+                4.989999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                0.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                5.010000000000001
+              ],
+              [
+                0.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                10.0,
+                1.4615371618791335,
+                8.538462838120878
+              ],
+              [
+                0.0,
+                4.990000000000017,
+                10.0
+              ],
+              [
+                10.0,
+                4.990000000000017,
+                10.0
+              ]
+            ],
+            "cylinders_match": true,
+            "matches_per_side": [
+              [
+                0
+              ],
+              [
+                1
+              ]
+            ],
+            "strip_exists": true,
+            "strip_area": 0.2000000000000135,
+            "strip_bounds": [
+              4.99,
+              5.01
+            ],
+            "strip_width": 0.019999999999999574,
+            "measured_front_edges": [
+              [
+                1.0,
+                10.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                10.0,
+                -8.88178419700125e-16,
+                4.99
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                5.01,
+                10.0,
+                -8.88178419700125e-16,
+                5.01
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.99,
+                0.0,
+                -8.88178419700125e-16,
+                5.01
+              ]
+            ],
+            "stations_from_straight_boundaries": [
+              {
+                "axial": 1,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 5,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 9,
+                "observed": [
+                  4.99,
+                  5.01
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              }
+            ],
+            "strip_width_ok": true,
+            "strip_position_ok": true,
+            "independent": "PASS",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/shifted-native.brep",
+              "sha256": "47c7d9ffd889a2e66c09d953f5e7e415da2e24af808212f9b94f7554006b5691"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/shifted-read-native.log",
+              "sha256": "a0387483631899413f523c73212479ee26a85edd0c7fb319186f8529bca633d0"
+            }
+          },
+          "result": {
+            "edge_endpoints": [
+              [
+                0.0,
+                0.0,
+                10.0,
+                10.0,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                10.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "axis": 0,
+            "cross_axis": 2,
+            "edge_sides": [
+              1,
+              0
+            ],
+            "expected_radii_low_high": [
+              4.99,
+              4.99
+            ],
+            "valid_single_solid": true,
+            "faces": 8.0,
+            "volume": 893.127787495669,
+            "expected_volume": 893.127856168256,
+            "volume_ok": true,
+            "cylinder_rows": [
+              [
+                0.0,
+                4.985999999999999,
+                4.985999999999999,
+                1.0,
+                0.0,
+                -0.0,
+                4.986,
+                0.0,
+                1.5707963267948966,
+                0.0,
+                10.0
+              ],
+              [
+                0.0,
+                4.993999999999999,
+                5.006000000000001,
+                1.0,
+                0.0,
+                -0.0,
+                4.994,
+                0.0,
+                1.5707963267949,
+                0.0,
+                10.0
+              ]
+            ],
+            "cylinder_landmarks": [
+              [
+                0.0,
+                -8.881784197001252e-16,
+                4.985999999999999
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                4.985999999999999
+              ],
+              [
+                0.0,
+                1.4603655890038727,
+                1.4603655890038736
+              ],
+              [
+                10.0,
+                1.4603655890038727,
+                1.4603655890038736
+              ],
+              [
+                0.0,
+                4.985999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                10.0,
+                4.985999999999999,
+                -8.881784197001252e-16
+              ],
+              [
+                0.0,
+                -8.881784197001252e-16,
+                5.006000000000001
+              ],
+              [
+                10.0,
+                -8.881784197001252e-16,
+                5.006000000000001
+              ],
+              [
+                0.0,
+                1.4627087347543872,
+                8.537291265245626
+              ],
+              [
+                10.0,
+                1.4627087347543872,
+                8.537291265245626
+              ],
+              [
+                0.0,
+                4.994000000000017,
+                10.0
+              ],
+              [
+                10.0,
+                4.994000000000017,
+                10.0
+              ]
+            ],
+            "cylinders_match": false,
+            "matches_per_side": [
+              [],
+              []
+            ],
+            "strip_exists": true,
+            "strip_area": 0.20000000000002238,
+            "strip_bounds": [
+              4.986,
+              5.006
+            ],
+            "strip_width": 0.020000000000000462,
+            "measured_front_edges": [
+              [
+                1.0,
+                10.0,
+                -8.88178419700125e-16,
+                4.986,
+                10.0,
+                -8.88178419700125e-16,
+                5.006
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.986,
+                10.0,
+                -8.88178419700125e-16,
+                4.986
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                5.006,
+                10.0,
+                -8.88178419700125e-16,
+                5.006
+              ],
+              [
+                1.0,
+                0.0,
+                -8.88178419700125e-16,
+                4.986,
+                0.0,
+                -8.88178419700125e-16,
+                5.006
+              ]
+            ],
+            "stations_from_straight_boundaries": [
+              {
+                "axial": 1,
+                "observed": [
+                  4.986,
+                  5.006
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 5,
+                "observed": [
+                  4.986,
+                  5.006
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              },
+              {
+                "axial": 9,
+                "observed": [
+                  4.986,
+                  5.006
+                ],
+                "expected": [
+                  4.99,
+                  5.01
+                ]
+              }
+            ],
+            "strip_width_ok": true,
+            "strip_position_ok": false,
+            "independent": "FAIL",
+            "brep": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/shifted-result.brep",
+              "sha256": "c425530d98be185b429225bf488a081d964b1b7c129c21336adb42a9b2cd3755"
+            },
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v13/receipts/strip/shifted-read-result.log",
+              "sha256": "688b12d1d8245630138b5fedbd191c0539d2302def897ce8e5de0932dded6853"
+            }
+          }
+        },
+        "physical_injection": {
+          "edge_endpoints": [
+            [
+              0.0,
+              0.0,
+              10.0,
+              10.0,
+              0.0,
+              10.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              10.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "axis": 0,
+          "cross_axis": 2,
+          "edge_sides": [
+            1,
+            0
+          ],
+          "expected_radii_low_high": [
+            4.986,
+            4.994
+          ],
+          "valid_single_solid": true,
+          "faces": 8.0,
+          "volume": 893.127787495669,
+          "expected_volume": 893.1277874956684,
+          "volume_ok": true,
+          "cylinder_rows": [
+            [
+              0.0,
+              4.985999999999999,
+              4.985999999999999,
+              1.0,
+              0.0,
+              -0.0,
+              4.986,
+              0.0,
+              1.5707963267948966,
+              0.0,
+              10.0
+            ],
+            [
+              0.0,
+              4.993999999999999,
+              5.006000000000001,
+              1.0,
+              0.0,
+              -0.0,
+              4.994,
+              0.0,
+              1.5707963267949,
+              0.0,
+              10.0
+            ]
+          ],
+          "cylinder_landmarks": [
+            [
+              0.0,
+              -8.881784197001252e-16,
+              4.985999999999999
+            ],
+            [
+              10.0,
+              -8.881784197001252e-16,
+              4.985999999999999
+            ],
+            [
+              0.0,
+              1.4603655890038727,
+              1.4603655890038736
+            ],
+            [
+              10.0,
+              1.4603655890038727,
+              1.4603655890038736
+            ],
+            [
+              0.0,
+              4.985999999999999,
+              -8.881784197001252e-16
+            ],
+            [
+              10.0,
+              4.985999999999999,
+              -8.881784197001252e-16
+            ],
+            [
+              0.0,
+              -8.881784197001252e-16,
+              5.006000000000001
+            ],
+            [
+              10.0,
+              -8.881784197001252e-16,
+              5.006000000000001
+            ],
+            [
+              0.0,
+              1.4627087347543872,
+              8.537291265245626
+            ],
+            [
+              10.0,
+              1.4627087347543872,
+              8.537291265245626
+            ],
+            [
+              0.0,
+              4.994000000000017,
+              10.0
+            ],
+            [
+              10.0,
+              4.994000000000017,
+              10.0
+            ]
+          ],
+          "cylinders_match": true,
+          "matches_per_side": [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "strip_exists": true,
+          "strip_area": 0.20000000000002238,
+          "strip_bounds": [
+            4.986,
+            5.006
+          ],
+          "strip_width": 0.020000000000000462,
+          "measured_front_edges": [
+            [
+              1.0,
+              10.0,
+              -8.88178419700125e-16,
+              4.986,
+              10.0,
+              -8.88178419700125e-16,
+              5.006
+            ],
+            [
+              1.0,
+              0.0,
+              -8.88178419700125e-16,
+              4.986,
+              10.0,
+              -8.88178419700125e-16,
+              4.986
+            ],
+            [
+              1.0,
+              0.0,
+              -8.88178419700125e-16,
+              5.006,
+              10.0,
+              -8.88178419700125e-16,
+              5.006
+            ],
+            [
+              1.0,
+              0.0,
+              -8.88178419700125e-16,
+              4.986,
+              0.0,
+              -8.88178419700125e-16,
+              5.006
+            ]
+          ],
+          "stations_from_straight_boundaries": [
+            {
+              "axial": 1,
+              "observed": [
+                4.986,
+                5.006
+              ],
+              "expected": [
+                4.986,
+                5.006
+              ]
+            },
+            {
+              "axial": 5,
+              "observed": [
+                4.986,
+                5.006
+              ],
+              "expected": [
+                4.986,
+                5.006
+              ]
+            },
+            {
+              "axial": 9,
+              "observed": [
+                4.986,
+                5.006
+              ],
+              "expected": [
+                4.986,
+                5.006
+              ]
+            }
+          ],
+          "strip_width_ok": true,
+          "strip_position_ok": true,
+          "independent": "PASS"
+        }
+      }
+    }
+  }
+}

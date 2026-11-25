@@ -22,6 +22,7 @@ TRUSTED_ORACLES = {"draw_test_done_v1", "stdout_contains_v1"}
 TRUSTED_CPP_LIBRARIES = {
     "TKFillet", "TKBool", "TKBO", "TKPrim", "TKTopAlgo", "TKBRep", "TKGeomBase", "TKG3d", "TKG2d",
     "TKMath", "TKernel", "TKGeomAlgo", "TKShHealing", "TKOffset",
+    "dl",
 }
 TRUSTED_TASK_KINDS = {"single", "group", "active", "visible3", "visible4", "visible5", "visible5all"}
 PUBLIC_BANNED_FIELDS = {"private", "hidden_issue", "evaluator_path", "secret", "api_key"}
@@ -301,7 +302,9 @@ def validate_bundle(bundle_root: Path | str) -> dict[str, Any]:
                 if case_path.suffix.lower() not in {".tcl"}:
                     raise CatalogError(f"checkpoint {identity} DRAW case must be a Tcl script")
             else:
-                _fields(options,set(),{"libraries","inputs","stdout_contains","case_timeout_seconds"},"C++ runner options")
+                _fields(options,set(),{"libraries","inputs","stdout_contains","case_timeout_seconds","legacy_clang_layout"},"C++ runner options")
+                if not isinstance(options.get("legacy_clang_layout",False),bool):
+                    raise CatalogError(f"checkpoint {identity} has invalid legacy Clang layout option")
                 libraries=options.get("libraries",[])
                 inputs=options.get("inputs",[])
                 if (not isinstance(libraries,list) or not libraries or

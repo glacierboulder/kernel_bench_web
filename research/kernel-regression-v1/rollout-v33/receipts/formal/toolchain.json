@@ -1,0 +1,19 @@
+{
+  "compiler_jobs_max": 2,
+  "compiler_output_directory": "gcc",
+  "evaluator_directory": "evaluation/cases/occt1115-coons-gcc",
+  "executables": {
+    "c_compiler": "gcc",
+    "cmake": "cmake",
+    "cxx_compiler": "g++"
+  },
+  "id": "occt1115-coons-gcc",
+  "platforms": [
+    "linux-x86_64"
+  ],
+  "schema_version": 1,
+  "tcl_paths": "deployment configuration or BENCH_TCL_* environment variables",
+  "tcl_version": "8.6",
+  "title": "OCCT 8.0.1 GCC",
+  "tools_directory": "occt1115-coons-gcc"
+}

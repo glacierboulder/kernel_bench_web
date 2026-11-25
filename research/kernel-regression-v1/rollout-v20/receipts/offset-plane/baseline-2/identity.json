@@ -1,0 +1,20 @@
+{
+  "source_id": "occt801-b8f597c67781-offset-plane",
+  "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "toolchain": "occt1116-offset-plane-gcc",
+  "toolchain_config": {
+    "path": "toolchains/occt1116-offset-plane-gcc.json",
+    "sha256": "e4af3b9d172189c749a8ed786ee302065eff0f0b75feb708c0534cf9431f76a1"
+  },
+  "build_entry": {
+    "path": "tools/occt1116-offset-plane-gcc/build.sh",
+    "sha256": "5339cb991118ff761db7f70fdaf07fdc3521e5d4bdb97a5f5ffed3d023857c3b"
+  },
+  "declared_public_targets": [
+    "TKG3d"
+  ],
+  "observed_tree": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "source": "/var/tmp/m25542-positive-reference-20261119/release/source",
+  "build": "/home/lzy/cad-bench-experiment/rollout12.gIoEAq5S/fillet-build"
+}

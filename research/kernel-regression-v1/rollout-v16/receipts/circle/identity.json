@@ -1,0 +1,23 @@
+{
+  "source_id": "occt-v4-b41ccce129d0",
+  "commit": "41ccce129d0f39b7a8a5edaaaeb2cf782e3bce2d",
+  "materialized_tree_sha256": "3cb819f514037d3ae0e90bda77e4883b03695ad34d0eff66de7dc5edf352d22e",
+  "toolchain": "occt-v4-clang10-o3-tcl86",
+  "toolchain_config": {
+    "path": "toolchains/occt-v4-clang10-o3-tcl86.json",
+    "sha256": "36d26cd94a139ac502457d363c7f246b4cc466169afc7fa817c25e0eb2fcbbe1"
+  },
+  "build_entry": {
+    "path": "tools/occt-v4-clang10-o3/build.sh",
+    "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+  },
+  "declared_public_targets": [
+    "DRAWEXE",
+    "TKTopTest"
+  ],
+  "source": "/home/lzy/cad-bench-experiment/rollout16.UFbkiaU1/circle-source",
+  "build": "/home/lzy/cad-bench-experiment/rollout16.UFbkiaU1/circle-build",
+  "source_commit": "41ccce129d0f39b7a8a5edaaaeb2cf782e3bce2d",
+  "observed_tree": "3cb819f514037d3ae0e90bda77e4883b03695ad34d0eff66de7dc5edf352d22e",
+  "git_tree": "43d587f9192b1c9ad0f2ce86b72720dbd5955b73"
+}

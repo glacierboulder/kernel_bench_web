@@ -1,0 +1,65 @@
+{
+  "checkpoints": [
+    {
+      "case": "evaluation/cases/version-regressions/1/periodic-fillet.cxx",
+      "category": "regression",
+      "id": "periodic-fillet-location",
+      "issue_id": "occt-github-1501",
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "inputs": [
+          "evaluation/cases/version-regressions/1/periodic-fillet/round-0-1-result.brep",
+          "evaluation/cases/version-regressions/1/periodic-fillet/round-0-2-result.brep",
+          "evaluation/cases/version-regressions/1/periodic-fillet/round-1-1-result.brep",
+          "evaluation/cases/version-regressions/1/periodic-fillet/round-1-2-result.brep"
+        ],
+        "libraries": [
+          "TKernel",
+          "TKMath",
+          "TKG2d",
+          "TKG3d",
+          "TKGeomBase",
+          "TKBRep",
+          "TKGeomAlgo",
+          "TKTopAlgo",
+          "TKPrim",
+          "TKBO",
+          "TKShHealing",
+          "TKOffset",
+          "TKFillet",
+          "TKBool",
+          "dl"
+        ],
+        "stdout_contains": [
+          "CONTROL cylinder-top native healthy=1 material=96",
+          "CONTROL cylinder-top frozen healthy=1 material=96",
+          "CONTROL cylinder-top opposite rejected=1",
+          "CONTROL cylinder-bottom native healthy=1 material=96",
+          "CONTROL cylinder-bottom frozen healthy=1 material=96",
+          "CONTROL cylinder-bottom opposite rejected=1",
+          "CONTROL cone-top native healthy=1 material=96",
+          "CONTROL cone-top frozen healthy=1 material=96",
+          "CONTROL cone-top opposite rejected=1",
+          "CONTROL cone-bottom native healthy=1 material=96",
+          "CONTROL cone-bottom frozen healthy=1 material=96",
+          "CONTROL cone-bottom opposite rejected=1",
+          "TEST_DONE"
+        ]
+      },
+      "timeout_seconds": 90,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt-github-1501-single"
+  ],
+  "id": "occt-github-1501-version-regression",
+  "schema_version": 1,
+  "source_ids": [
+    "occt801-b8f597c67781-periodic-fillet"
+  ],
+  "title": "GH-1501 periodic circular fillet location",
+  "version": "1"
+}

@@ -1,0 +1,23 @@
+{
+  "source_id": "occt-v4-e6afb5398317",
+  "commit": "e6afb53983172155891ef175943534e0e1a24f75",
+  "materialized_tree_sha256": "a28f641dad6310bece14379db895a7da1482305273ccffd5ebb3b8774d03e841",
+  "toolchain": "occt-v4-clang10-o0-tcl86",
+  "toolchain_config": {
+    "path": "toolchains/occt-v4-clang10-o0-tcl86.json",
+    "sha256": "6c1675f2f34f07dd5945a9782f3835878e74bfc97838eb6ccc22a6f9a0d855e3"
+  },
+  "build_entry": {
+    "path": "tools/occt-v4-clang10-o0/build.sh",
+    "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+  },
+  "declared_public_targets": [
+    "DRAWEXE",
+    "TKTopTest"
+  ],
+  "source_path": "/var/tmp/cad-regression-batch8.X4XWTxBC/circle-source",
+  "build_path": "/var/tmp/cad-regression-batch8.X4XWTxBC/circle-build",
+  "git_tree": "c4eef2db9b5c2873b4b287346a8142bb97280e1b",
+  "source_provenance": "8c17809675f37ad5c7684426dd5c13993c3fa0802514e05c8b3bbc7066c665cc",
+  "observed_tree": "a28f641dad6310bece14379db895a7da1482305273ccffd5ebb3b8774d03e841"
+}

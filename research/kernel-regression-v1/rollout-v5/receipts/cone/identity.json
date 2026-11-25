@@ -1,0 +1,61 @@
+{
+  "source_id": "occt-single20-029311e00f28",
+  "commit": "029311e00f2822c762f676f863f9b932ad8ca8ef",
+  "materialized_tree_sha256": "dbf7237b12b0712f11b7d3fb020950577fdec9eb6b1f66a95bad6a29239248b6",
+  "toolchain": "occt-v4-clang10-o0-tcl86",
+  "toolchain_config": {
+    "path": "toolchains/occt-v4-clang10-o0-tcl86.json",
+    "sha256": "6c1675f2f34f07dd5945a9782f3835878e74bfc97838eb6ccc22a6f9a0d855e3"
+  },
+  "build_entry": {
+    "path": "tools/occt-v4-clang10-o0/build.sh",
+    "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+  },
+  "declared_public_targets": [
+    "DRAWEXE",
+    "TKTopTest"
+  ],
+  "observed_tree": "dbf7237b12b0712f11b7d3fb020950577fdec9eb6b1f66a95bad6a29239248b6",
+  "source_location": "/var/tmp/cad-bench-lzy-single20-20261102/jobs/frozen-replay-06/occt-single20-25111/b/runtime/source",
+  "archive": {
+    "binary_manifest": "a86ec4e962eee806093351d05f86d6fe14c21191a776cf4ef67b4ac529d4a0d6",
+    "tools": {
+      "build.sh": "120226564a3a284562b373d2ac97cbd55f87b6a48aa401755b705f9c13f82068",
+      "build-profile.json": "5fdb279b9b2a8975d1ffc7205fbe1b00030502284feee0e1cbe459a618148fa3",
+      "public_build.py": "a200915acaf228097a82268139c53f7198420f92b8f0c77ae836dad42b580c42"
+    }
+  },
+  "binaries": {
+    "lin64/clang/lib/libTKMesh.so": "a747ed074b4de96bdd0eb2e0e3bbd6a0d0419b3ce080f852a45e8965b49f02f4",
+    "lin64/clang/lib/libTKG3d.so": "150482cd7339d93f8ff698d4f6fea77d3099dadb5e6505ef4466784e16e6d228",
+    "lin64/clang/lib/libTKOffset.so": "f94f659f599496a503be8fd02a7d1362e89710c33b4277cd960eef76760d22d5",
+    "lin64/clang/lib/libTKBRep.so": "e2730bd2c81bd0ef83ca416be9140b6c09d2af272c9b93b1a666856f337963e9",
+    "lin64/clang/lib/libTKV3d.so": "57155f3e7343c39714d22a6f88eb5463c99f0ceba6832115dfca98b8945709fd",
+    "lin64/clang/lib/libTKTopAlgo.so": "6ac934ee96992f6015fc598b18104dd5047327ec28621a2782fde3da6b3ff397",
+    "lin64/clang/lib/libTKDraw.so": "b21dc9b5160ae44a15a8304c625df9377af111626dc19a0d62df52cea748a62e",
+    "lin64/clang/lib/libTKBO.so": "4830357bd05ba79ae23c2dad2eb09f9ea28d4f4c8c72f16bcc044ebf79b124b5",
+    "lin64/clang/lib/libTKGeomAlgo.so": "4a1ebbfeea133330570aa03efa025747046f27b52cdbe47dd191135012afb32b",
+    "lin64/clang/lib/libTKTopTest.so": "9f35e514f4d79d83645d7c0543ccba0272e8f78b44e51b80ed9f32c48fc60694",
+    "lin64/clang/lib/libTKernel.so": "cdd690e33810e8946d81e581c388781006aa64ce71da60c53408838fef73c159",
+    "lin64/clang/lib/libTKFillet.so": "95b76dc341b606de570aaa5cf50e678351d7e11592d2370e5e0c10a03a508562",
+    "lin64/clang/lib/libTKMath.so": "390c4809a58a5b2a2200f4c68df399e8cd3347efb5e473228076b0faab00649a",
+    "lin64/clang/lib/libTKShHealing.so": "aa15efc237be3feaf8f1018ed56466124a4b6ada78459ce96e9a93c59f9a0536",
+    "lin64/clang/lib/libTKPrim.so": "0e83f6c6499f138b25e7a72d4a621df049cdc8ed4d3d5ba8896ad427bfbedf03",
+    "lin64/clang/lib/libTKHLR.so": "6b61449b00dfba480f9355c36f8e2dc6d815a09728cf1917c1fc1f81ffd5789c",
+    "lin64/clang/lib/libTKFeat.so": "f5c224c401df4fa59cb634d04e1cdff65000172572ee80d3c1936f145f32fe45",
+    "lin64/clang/lib/libTKGeomBase.so": "3ad5dc00d1144f07d4507e1b20741680fa914e3d73089b16f15dc09c22892b36",
+    "lin64/clang/lib/libTKService.so": "86f7b31acf99170c8b308b51456f18075f706448c7756b362e3671ea06419c5f",
+    "lin64/clang/lib/libTKG2d.so": "e63eefd86437d9057f2b946dbb957eca6eb513fe01f25f89281c5aea3a732bd8",
+    "lin64/clang/lib/libTKBool.so": "cf77bcec7c34b7bf511c1444ecd2a8e6f5b5ae6c1aba65561f4787aac952bfc3",
+    "lin64/clang/bin/DRAWEXE": "5c1bdabbf155d4d53ba9a984467600c4b6a70b13d283f4560a3713bbd58d7c08",
+    "src/DRAWEXE/CMakeFiles/DRAWEXE.dir/DRAWEXE.cxx.o": "61ba89d1df5fa7cffd0a779ecb9676e43c92a3c5f5198dc054769f2ce8fe043c",
+    "src/DRAWEXE/CMakeFiles/DRAWEXE.dir/DRAWEXE.cxx.o.d": "6b89a46982bdc164349ae90b399dd05596263b47ab2956f6e06b05dc1b9b1136"
+  },
+  "verification": {
+    "snapshot_unchanged": true,
+    "source_unchanged": true,
+    "shared_public_build_exit_code": 0,
+    "build_log_sha256": "cc490ef6687172fc3d97fb72ebe9fb91a9d65ca9c20dd608eb580f3c493f70bd",
+    "runtime_binary_count": 24
+  }
+}

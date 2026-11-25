@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "id": "occt-28366-suite",
+  "version": "2",
+  "title": "Plane and fuselage Boolean common",
+  "source_ids": [
+    "occt801-b8f597c67781"
+  ],
+  "group_ids": [
+    "occt-28366-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "original",
+      "issue_id": "occt-28366",
+      "category": "original",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/occt-28366/original.cpp",
+      "timeout_seconds": 45,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKGeomBase",
+          "TKBRep",
+          "TKTopAlgo",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "rotate37",
+      "issue_id": "occt-28366",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/occt-28366/rotate37.cpp",
+      "timeout_seconds": 45,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKGeomBase",
+          "TKBRep",
+          "TKTopAlgo",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "rotate90",
+      "issue_id": "occt-28366",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/occt-28366/rotate90.cpp",
+      "timeout_seconds": 45,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKGeomBase",
+          "TKBRep",
+          "TKTopAlgo",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "box",
+      "issue_id": "occt-28366",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/occt-28366/box.cpp",
+      "timeout_seconds": 45,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKGeomBase",
+          "TKBRep",
+          "TKTopAlgo",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "placed_section",
+      "issue_id": "occt-28366",
+      "category": "neighborhood",
+      "visibility": "public",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/occt-28366/placed_section.cpp",
+      "timeout_seconds": 45,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKTopAlgo",
+          "TKGeomBase",
+          "TKBRep",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    },
+    {
+      "id": "offset_section",
+      "issue_id": "occt-28366",
+      "category": "regression",
+      "visibility": "public",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/occt-28366/offset_section.cpp",
+      "timeout_seconds": 45,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKTopAlgo",
+          "TKGeomBase",
+          "TKBRep",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel"
+        ],
+        "stdout_contains": [
+          "TEST_DONE"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt-28366/fuselage-derived.brep",
+    "evaluation/cases/occt-28366/slice_v2.hxx",
+    "evaluation/cases/occt-28366/zero-gold.txt",
+    "evaluation/cases/occt-28366/plus-gold.txt"
+  ]
+}

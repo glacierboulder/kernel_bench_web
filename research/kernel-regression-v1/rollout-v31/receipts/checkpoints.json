@@ -1,0 +1,96 @@
+{
+  "manifest": {
+    "id": "occt-github-1738-edge8-artifact-audit",
+    "version": "1",
+    "scope": "read-only artifact qualification",
+    "source_id": "occt801-1738-b-b8f597c67781",
+    "checks": [
+      {
+        "id": "existing-edge8-output",
+        "runner": "cpp_case_v1",
+        "case": "edge8.cxx",
+        "timeout_seconds": 60,
+        "runner_options": {
+          "libraries": [
+            "TKPrim",
+            "TKTopAlgo",
+            "TKBRep",
+            "TKGeomAlgo",
+            "TKGeomBase",
+            "TKG3d",
+            "TKG2d",
+            "TKMath",
+            "TKernel"
+          ],
+          "inputs": [
+            "input.brep",
+            "edge8-output.brep"
+          ],
+          "stdout_contains": [
+            "EDGE8_VERDICT=PASS"
+          ]
+        }
+      },
+      {
+        "id": "existing-wrong-edge-output",
+        "runner": "cpp_case_v1",
+        "case": "edge8.cxx",
+        "timeout_seconds": 60,
+        "runner_options": {
+          "libraries": [
+            "TKPrim",
+            "TKTopAlgo",
+            "TKBRep",
+            "TKGeomAlgo",
+            "TKGeomBase",
+            "TKG3d",
+            "TKG2d",
+            "TKMath",
+            "TKernel"
+          ],
+          "inputs": [
+            "input.brep",
+            "other-edge-output.brep"
+          ],
+          "stdout_contains": [
+            "EDGE8_VERDICT=PASS"
+          ]
+        }
+      }
+    ]
+  },
+  "results": {
+    "existing-edge8-output": {
+      "status": "passed",
+      "passed": true,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 0.631,
+        "output_tail": "",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": 0,
+        "elapsed_seconds": 0.011,
+        "output_tail": "INPUT index=8 span=60 adjacent=2 floor=1 wall=1 volume=201205.7504117311\nBOUNDARY edges=4 wall=1 floor=1 x_min=1 x_max=1\nCYLINDER y=-29.199999999999999 z=0.80000000000000315 x_axis=1 radius=0.80000000000000004 angle=1.5707963267948997 span=60\nOUTPUT valid=1 solids=1 radius_matches=1 target_matches=1 trim_matches=1 removed_witnesses=5 kept_witnesses=5 remote_witnesses=6 removal=8.240710525540635\nEDGE8_VERDICT=PASS\n",
+        "timed_out": false
+      }
+    },
+    "existing-wrong-edge-output": {
+      "status": "failed",
+      "passed": false,
+      "compile": {
+        "return_code": 0,
+        "elapsed_seconds": 0.626,
+        "output_tail": "",
+        "timed_out": false
+      },
+      "result": {
+        "return_code": 1,
+        "elapsed_seconds": 0.016,
+        "output_tail": "INPUT index=8 span=60 adjacent=2 floor=1 wall=1 volume=201205.7504117311\nCYLINDER y=-15.800000000000002 z=100.8 x_axis=-1 radius=0.80000000000000016 angle=1.5707963267948946 span=60.000000065711276\nOUTPUT valid=1 solids=1 radius_matches=1 target_matches=0 trim_matches=0 removed_witnesses=0 kept_witnesses=5 remote_witnesses=6 removal=-8.2404610851081088\nEDGE8_VERDICT=FAIL\n",
+        "timed_out": false
+      }
+    }
+  }
+}

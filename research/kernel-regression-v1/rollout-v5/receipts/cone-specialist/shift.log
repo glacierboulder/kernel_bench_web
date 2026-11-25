@@ -1,0 +1,11 @@
+DRAW is running in batch mode
+BENCH_ASSERT_PASS operation_completed error=0 report= kind=expression
+BENCH_ASSERT_PASS shape_valid checkshape=This shape seems to be valid kind=expression
+BENCH_ASSERT_PASS section_length observed=87.964594300505368 expected=87.96459430051421 limit=1e-5 kind=numeric
+BENCH_ASSERT_FAIL analytic_support normalized_max_distance=1.7888543820002654 limit=1e-5 scale=1 kind=numeric
+BENCH_ASSERT_PASS connected_component nodes=1 connected=1 open_ends=0 expected_ends=0 kind=numeric
+BENCH_ASSERT_FAIL endpoint_and_branch_coverage witnesses=4 max_distance=2.000000000000485 limit=1e-5 kind=numeric
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=6 numeric_assertions=4
+TEST_DONE assertions=6 numeric_assertions=4
+SCRIPT_RETURN 0 

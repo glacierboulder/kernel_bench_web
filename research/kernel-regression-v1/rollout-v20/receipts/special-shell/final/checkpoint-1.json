@@ -1,0 +1,33 @@
+{
+  "suite": {
+    "id": "mantis-31470-version-regression",
+    "version": "1",
+    "path": "evaluation/suites/regression/mantis-31470-version-regression/1.json"
+  },
+  "source_id": "occt-v4-bdeea0a89759",
+  "toolchain": "occt-v4-clang10-o0-tcl86",
+  "checkpoint": "shell",
+  "status": "passed",
+  "runner_sha256": "28b3a0baffa7fdf047f91fa33ed5f5c68e422b48ebecef84c3666296187ee93d",
+  "assets": {
+    "evaluation/cases/version-regressions/1/material.cxx": "c5d98e02ffdb4fcf64032bac6151ddf5b5a1e962a047dd0e095fa020b428dfda",
+    "evaluation/cases/version-regressions/1/shell/fixture.txt": "5c485cdc1a890a816971ba337bbfb6d58cd8edaee7f53fd38fb41f59150aa597",
+    "evaluation/cases/version-regressions/1/shell/healthy.brep": "85237e7fb0eb5918cffd41ab33de13a13f6ae988167c3473fb813f7563ae8ba4",
+    "evaluation/cases/version-regressions/1/shell/negative.brep": "2a8f980d69a92bf58fee0f0c39d2ebe77b916b52e94455158fcfd1cb7c8e1d65"
+  },
+  "raw": {
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 0.609,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.024,
+      "output_tail": "METRICS volume=9948.3767363676816 center_error=1.2306961192854808e-14 material_mismatches=0 surface_support=1\nMETRICS volume=9948.3767363676816 center_error=1.2306961192854808e-14 material_mismatches=0 surface_support=1\nMETRICS volume=9948.3767363676761 center_error=0.84210526315789025 material_mismatches=1 surface_support=0\nnative pass\nhealthy pass\nnegative wrong_location\nTEST_DONE\n",
+      "timed_out": false
+    }
+  }
+}

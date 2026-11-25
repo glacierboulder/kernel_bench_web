@@ -1,0 +1,142 @@
+{
+  "id": "8fbfe326caa792cb",
+  "created_at": "2026-11-24T09:00:19.057134+00:00",
+  "run_id": null,
+  "experiment_id": null,
+  "kind": "reevaluation",
+  "result": {
+    "protocol": "manifest-suite-v1",
+    "suite": {
+      "id": "occt-26796-version-regression",
+      "version": "1"
+    },
+    "tests": [],
+    "checkpoints": [
+      {
+        "id": "hidden-summary",
+        "issue_id": null,
+        "name": "隐藏检查（详情不公开）",
+        "visibility": "hidden",
+        "category_summary": {
+          "declared": 1,
+          "passed": 1,
+          "failed": 0,
+          "timeout": 0,
+          "error": 0,
+          "not_run": 0,
+          "skipped": 0,
+          "inconclusive": 0
+        }
+      }
+    ],
+    "limitations": [
+      "Checks are only those declared in this frozen suite; this is not the full upstream test suite."
+    ],
+    "report": {
+      "provided": false
+    },
+    "patch_bytes": 210,
+    "build": {
+      "configure": {
+        "return_code": 0
+      },
+      "build": {
+        "return_code": 0
+      }
+    },
+    "elapsed_seconds": 395.288,
+    "passed": true,
+    "evaluation_suites": [
+      {
+        "id": "occt-26796-version-regression",
+        "version": "1"
+      }
+    ],
+    "category_summary": {
+      "original": {
+        "declared": 0,
+        "executed": 0,
+        "passed": 0,
+        "failed": 0,
+        "timeout": 0,
+        "error": 0,
+        "not_run": 0,
+        "skipped": 0,
+        "inconclusive": 0,
+        "state": "未配置"
+      },
+      "neighborhood": {
+        "declared": 0,
+        "executed": 0,
+        "passed": 0,
+        "failed": 0,
+        "timeout": 0,
+        "error": 0,
+        "not_run": 0,
+        "skipped": 0,
+        "inconclusive": 0,
+        "state": "未配置"
+      },
+      "regression": {
+        "declared": 1,
+        "executed": 1,
+        "passed": 1,
+        "failed": 0,
+        "timeout": 0,
+        "error": 0,
+        "not_run": 0,
+        "skipped": 0,
+        "inconclusive": 0,
+        "state": "configured"
+      }
+    },
+    "technical_passed": true,
+    "hidden_check_summary": {
+      "declared": 1,
+      "passed": 1,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    }
+  },
+  "returncode": 0,
+  "stages": [
+    {
+      "name": "submission",
+      "status": "failed"
+    },
+    {
+      "name": "patch_application",
+      "status": "passed"
+    },
+    {
+      "name": "configure",
+      "status": "passed"
+    },
+    {
+      "name": "build",
+      "status": "passed"
+    },
+    {
+      "name": "split-cells",
+      "status": "passed"
+    }
+  ],
+  "patch_sha256": "b187fd86178b05251b6ecd379a49785fc58a998899adce24acbc5329ec71dfd7",
+  "evaluator_sha256": "544188404e178f2ebd4e396c217161a05feb46cac0297069048ec5fcad9f58f3",
+  "reevaluation": {
+    "source_id": "occt-single20-6435b9c7fafd",
+    "source_commit": "6435b9c7fafd294680a3be589deb61de2fdb3d3c",
+    "source_tree_sha256": "bfcd5874f51898884c55c0e35f4bb701a612ad91bdc6e0ab106b31d45afc692c",
+    "suite_id": "occt-26796-version-regression",
+    "suite_version": "1",
+    "patch_sha256": "b187fd86178b05251b6ecd379a49785fc58a998899adce24acbc5329ec71dfd7",
+    "report_provided": false,
+    "snapshot_sha256": "159d56bf438620bb527efcc3a199a3573b10e7e30042a066f286cf3d8dfa64a1",
+    "model_called": false,
+    "baseline_verification": "explicit_source_id_for_patch"
+  }
+}

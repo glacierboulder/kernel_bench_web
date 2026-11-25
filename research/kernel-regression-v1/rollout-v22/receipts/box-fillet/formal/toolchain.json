@@ -1,0 +1,19 @@
+{
+  "compiler_jobs_max": 2,
+  "compiler_output_directory": "gcc",
+  "evaluator_directory": "evaluation/cases/occt8-cpp-local",
+  "executables": {
+    "c_compiler": "gcc",
+    "cmake": "cmake",
+    "cxx_compiler": "g++"
+  },
+  "id": "occt8-gcc13-cpp-20261112",
+  "platforms": [
+    "linux-x86_64"
+  ],
+  "schema_version": 1,
+  "tcl_paths": "Use deployment BENCH_TCL_* environment variables",
+  "tcl_version": "8.6",
+  "title": "OCCT 8 GCC 13 C++ 本机候选",
+  "tools_directory": "occt8-gcc13-cpp"
+}

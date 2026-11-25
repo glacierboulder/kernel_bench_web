@@ -1,0 +1,28 @@
+{
+  "source_id": "occt801-b8f597c67781-periodic-fillet",
+  "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "toolchain": "occt1115-periodic-fillet-gcc",
+  "toolchain_config": {
+    "path": "toolchains/occt1115-periodic-fillet-gcc.json",
+    "sha256": "1346fc507e7d3a79dd4733409bc9e2b753a7a3023a988a97ad7e5411a5152b43"
+  },
+  "build_entry": {
+    "path": "tools/occt1115-periodic-fillet-gcc/build.sh",
+    "sha256": "38432f6b5049118f1e52cb11c70563eb6a6349daebfc8f7ea858bfa4d1e15713"
+  },
+  "declared_public_targets": [
+    "TKBool",
+    "TKFillet",
+    "TKOffset"
+  ],
+  "source": "/var/tmp/m25542-positive-reference-20261119/release/source",
+  "build": "/var/tmp/cad-regression-batch10.gsOvxX51/guide-build",
+  "observed_tree": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "source_export": {
+    "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+    "tree": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+    "git_tree": "76543d44e49c73bfffa2d141089e6c5add106f9a",
+    "archive_sha256": "dba62b81078dd43cec23feba89432be301582341001edad1b93342ad8bda35ea"
+  }
+}

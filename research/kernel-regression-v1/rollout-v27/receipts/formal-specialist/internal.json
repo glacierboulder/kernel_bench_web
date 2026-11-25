@@ -1,0 +1,125 @@
+{
+  "protocol": "manifest-suite-v1",
+  "suite": {
+    "id": "occt-github-1501-version-regression",
+    "version": "1"
+  },
+  "tests": [
+    {
+      "test": "periodic-fillet-location",
+      "id": "periodic-fillet-location",
+      "status": "passed",
+      "passed": true,
+      "result": {
+        "passed": true,
+        "compile": {
+          "return_code": 0,
+          "elapsed_seconds": 0.61,
+          "output_tail": "",
+          "timed_out": false
+        },
+        "result": {
+          "return_code": 0,
+          "elapsed_seconds": 0.023,
+          "output_tail": "CONTROL cylinder-top native healthy=1 material=96 center_z=46 major=16 volume=62419.646353220742\nCONTROL cylinder-top frozen healthy=1 material=96 center_z=46 major=16 volume=62419.646353220793\nCONTROL cylinder-top opposite rejected=1 center_z=4 material_errors=28 volume=62419.646353220793\nCONTROL cylinder-bottom native healthy=1 material=96 center_z=4 major=16 volume=62419.646353220742\nCONTROL cylinder-bottom frozen healthy=1 material=96 center_z=4 major=16 volume=62419.646353220793\nCONTROL cylinder-bottom opposite rejected=1 center_z=46 material_errors=28 volume=62419.646353220793\nCONTROL cone-top native healthy=1 material=96 center_z=46 major=8.9070107670113625 volume=55839.71607924116\nCONTROL cone-top frozen healthy=1 material=96 center_z=46 major=8.9070107670113625 volume=55839.716079241203\nCONTROL cone-top opposite rejected=1 center_z=4 material_errors=28 volume=55073.659327251771\nCONTROL cone-bottom native healthy=1 material=96 center_z=4 major=19.827010767011362 volume=55073.659327251749\nCONTROL cone-bottom frozen healthy=1 material=96 center_z=4 major=19.827010767011362 volume=55073.659327251771\nCONTROL cone-bottom opposite rejected=1 center_z=46 material_errors=28 volume=55839.716079241203\nTEST_DONE\n",
+          "timed_out": false
+        }
+      },
+      "category": "regression",
+      "visibility": "hidden",
+      "issue_id": "occt-github-1501",
+      "elapsed_seconds": 0.023
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "periodic-fillet-location",
+      "issue_id": "occt-github-1501",
+      "case": "evaluation/cases/version-regressions/1/periodic-fillet.cxx",
+      "category": "regression",
+      "visibility": "hidden",
+      "required": true,
+      "status": "passed",
+      "elapsed_seconds": 0.023,
+      "evidence": {
+        "passed": true,
+        "compile": {
+          "return_code": 0,
+          "elapsed_seconds": 0.61,
+          "output_tail": "",
+          "timed_out": false
+        },
+        "result": {
+          "return_code": 0,
+          "elapsed_seconds": 0.023,
+          "output_tail": "CONTROL cylinder-top native healthy=1 material=96 center_z=46 major=16 volume=62419.646353220742\nCONTROL cylinder-top frozen healthy=1 material=96 center_z=46 major=16 volume=62419.646353220793\nCONTROL cylinder-top opposite rejected=1 center_z=4 material_errors=28 volume=62419.646353220793\nCONTROL cylinder-bottom native healthy=1 material=96 center_z=4 major=16 volume=62419.646353220742\nCONTROL cylinder-bottom frozen healthy=1 material=96 center_z=4 major=16 volume=62419.646353220793\nCONTROL cylinder-bottom opposite rejected=1 center_z=46 material_errors=28 volume=62419.646353220793\nCONTROL cone-top native healthy=1 material=96 center_z=46 major=8.9070107670113625 volume=55839.71607924116\nCONTROL cone-top frozen healthy=1 material=96 center_z=46 major=8.9070107670113625 volume=55839.716079241203\nCONTROL cone-top opposite rejected=1 center_z=4 material_errors=28 volume=55073.659327251771\nCONTROL cone-bottom native healthy=1 material=96 center_z=4 major=19.827010767011362 volume=55073.659327251749\nCONTROL cone-bottom frozen healthy=1 material=96 center_z=4 major=19.827010767011362 volume=55073.659327251771\nCONTROL cone-bottom opposite rejected=1 center_z=46 material_errors=28 volume=55839.716079241203\nTEST_DONE\n",
+          "timed_out": false
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Checks are only those declared in this frozen suite; this is not the full upstream test suite."
+  ],
+  "report": {
+    "provided": false
+  },
+  "patch_bytes": 0,
+  "build": {
+    "configure": {
+      "return_code": 0,
+      "output_tail": "-- The C compiler identification is GNU 13.3.0\n-- The CXX compiler identification is GNU 13.3.0\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /usr/bin/gcc - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/g++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- \nInfo: (13:49:50) Start collecting all OCCT header files into /tmp/manifest-suite-rz_eu0wb/build/include/opencascade ...\n-- Info: (13:49:50) End the collecting\n-- Info: Used native memory manager\n-- Info: (13:49:50) OCCT configuration files prepared\n-- Configuring done (0.5s)\n-- Generating done (0.0s)\n-- Build files have been written to: /tmp/manifest-suite-rz_eu0wb/build\n"
+    },
+    "build": {
+      "return_code": 0,
+      "output_tail": " src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_ShapeListOfShape.cxx.o\n[1885/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_Section.cxx.o\n[1886/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_ShapeSet.cxx.o\n[1887/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_ShellFaceClassifier.cxx.o\n[1888/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_ShellFaceSet.cxx.o\n[1889/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_SolidAreaBuilder.cxx.o\n[1890/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_ShellToSolid.cxx.o\n[1891/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_SolidBuilder.cxx.o\n[1892/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_SREGU.cxx.o\n[1893/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_Tools2d.cxx.o\n[1894/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_Tools.cxx.o\n[1895/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_trace.cxx.o\n[1896/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_VertexInfo.cxx.o\n[1897/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_Tools_1.cxx.o\n[1898/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_WireEdgeClassifier.cxx.o\n[1899/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_WireEdgeSet.cxx.o\n[1900/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepBuild/TopOpeBRepBuild_WireToFace.cxx.o\n[1901/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool.cxx.o\n[1902/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_AncestorsTool.cxx.o\n[1903/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_2d.cxx.o\n[1904/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_box.cxx.o\n[1905/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_C2DF.cxx.o\n[1906/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_BoxSort.cxx.o\n[1907/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_connexity.cxx.o\n[1908/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_CLASSI.cxx.o\n[1909/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_CORRISO.cxx.o\n[1910/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_CurveTool.cxx.o\n[1911/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_face.cxx.o\n[1912/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_faulty.cxx.o\n[1913/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_GEOMETRY.cxx.o\n[1914/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_FuseEdges.cxx.o\n[1915/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_GeomTool.cxx.o\n[1916/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_HBoxTool.cxx.o\n[1917/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_makeTransition.cxx.o\n[1918/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_matter.cxx.o\n[1919/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_mkTondgE.cxx.o\n[1920/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_PROJECT.cxx.o\n[1921/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_PURGE.cxx.o\n[1922/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_PurgeInternalEdges.cxx.o\n[1923/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_RegularizeS.cxx.o\n[1924/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_RegularizeW.cxx.o\n[1925/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_REGUS.cxx.o\n[1926/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_SC.cxx.o\n[1927/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_REGUW.cxx.o\n[1928/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_ShapeClassifier.cxx.o\n[1929/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_ShapeTool.cxx.o\n[1930/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_STATE.cxx.o\n[1931/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_SolidClassifier.cxx.o\n[1932/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_tol.cxx.o\n[1933/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_TOPOLOGY.cxx.o\n[1934/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_trace.cxx.o\n[1935/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_traceSTATE.cxx.o\n[1936/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/TopOpeBRepTool/TopOpeBRepTool_TOOL.cxx.o\n[1937/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepAlgo/BRepAlgo_1.cxx.o\n[1938/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepAlgo/BRepAlgo.cxx.o\n[1939/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepAlgo/BRepAlgo_AsDes.cxx.o\n[1940/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepAlgo/BRepAlgo_FaceRestrictor.cxx.o\n[1941/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepAlgo/BRepAlgo_Image.cxx.o\n[1942/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepAlgo/BRepAlgo_Loop.cxx.o\n[1943/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepAlgo/BRepAlgo_NormalProjection.cxx.o\n[1944/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_ACRLaw.cxx.o\n[1945/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill.cxx.o\n[1946/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_ApproxSeewing.cxx.o\n[1947/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_AdvancedEvolved.cxx.o\n[1948/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_ComputeCLine_0.cxx.o\n[1949/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_CompatibleWires.cxx.o\n[1950/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_CurveConstraint.cxx.o\n[1951/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_DraftLaw.cxx.o\n[1952/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_Draft.cxx.o\n[1953/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_Edge3DLaw.cxx.o\n[1954/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_EdgeFaceAndOrder.cxx.o\n[1955/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_EdgeOnSurfLaw.cxx.o\n[1956/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_FaceAndOrder.cxx.o\n[1957/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_Evolved.cxx.o\n[1958/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_Filling.cxx.o\n[1959/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_Generator.cxx.o\n[1960/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_LocationLaw.cxx.o\n[1961/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_MultiLine.cxx.o\n[1962/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_NSections.cxx.o\n[1963/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_OffsetAncestors.cxx.o\n[1964/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_Pipe.cxx.o\n[1965/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_OffsetWire.cxx.o\n[1966/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_Section.cxx.o\n[1967/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_PipeShell.cxx.o\n[1968/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_SectionLaw.cxx.o\n[1969/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_SectionPlacement.cxx.o\n[1970/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_ShapeLaw.cxx.o\n[1971/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_TrimEdgeTool.cxx.o\n[1972/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_Sweep.cxx.o\n[1973/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_TrimShellCorner.cxx.o\n[1974/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepFill/BRepFill_TrimSurfaceTool.cxx.o\n[1975/1981] Building CXX object src/ModelingAlgorithms/TKBool/CMakeFiles/TKBool.dir/BRepProj/BRepProj_Projection.cxx.o\n[1976/1981] Linking CXX shared library lin64/gcc/lib/libTKBool.so.8.0.1\n[1977/1981] Creating library symlink lin64/gcc/lib/libTKBool.so.8.0 lin64/gcc/lib/libTKBool.so\n[1978/1981] Linking CXX shared library lin64/gcc/lib/libTKFillet.so.8.0.1\n[1979/1981] Creating library symlink lin64/gcc/lib/libTKFillet.so.8.0 lin64/gcc/lib/libTKFillet.so\n[1980/1981] Linking CXX shared library lin64/gcc/lib/libTKOffset.so.8.0.1\n[1981/1981] Creating library symlink lin64/gcc/lib/libTKOffset.so.8.0 lin64/gcc/lib/libTKOffset.so\n"
+    }
+  },
+  "elapsed_seconds": 719.298,
+  "passed": true,
+  "evaluation_suites": [
+    {
+      "id": "occt-github-1501-version-regression",
+      "version": "1"
+    }
+  ],
+  "category_summary": {
+    "original": {
+      "declared": 0,
+      "executed": 0,
+      "passed": 0,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "state": "未配置"
+    },
+    "neighborhood": {
+      "declared": 0,
+      "executed": 0,
+      "passed": 0,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "state": "未配置"
+    },
+    "regression": {
+      "declared": 1,
+      "executed": 1,
+      "passed": 1,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "state": "configured"
+    }
+  },
+  "technical_passed": true
+}

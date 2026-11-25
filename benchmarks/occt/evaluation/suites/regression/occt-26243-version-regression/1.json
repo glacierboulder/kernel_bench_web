@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "occt-26243-version-regression",
+  "version": "1",
+  "title": "occt-26243 version regression (box-location)",
+  "source_ids": [
+    "occt-single20-5163f4671951"
+  ],
+  "group_ids": [
+    "occt-single20-26243"
+  ],
+  "checkpoints": [
+    {
+      "id": "box-location",
+      "issue_id": "occt-26243",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/version-regressions/1/material.cxx",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel",
+          "TKGeomAlgo",
+          "dl"
+        ],
+        "inputs": [
+          "evaluation/cases/version-regressions/1/box-location/fixture.txt",
+          "evaluation/cases/version-regressions/1/box-location/healthy.brep",
+          "evaluation/cases/version-regressions/1/box-location/negative.brep"
+        ],
+        "stdout_contains": [
+          "native pass",
+          "healthy pass",
+          "negative wrong_location",
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}

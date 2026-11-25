@@ -1,0 +1,1573 @@
+{
+  "shell": {
+    "source": {
+      "source_id": "occt-v4-bdeea0a89759",
+      "commit": "bdeea0a89759f4f1117022267807f79aad55d3e2",
+      "materialized_tree_sha256": "bafb9568643aa78e29a198267e20ce905525eac77d0bb73f608efd521520d5ff",
+      "toolchain": "occt-v4-clang10-o0-tcl86",
+      "toolchain_config": {
+        "path": "toolchains/occt-v4-clang10-o0-tcl86.json",
+        "sha256": "6c1675f2f34f07dd5945a9782f3835878e74bfc97838eb6ccc22a6f9a0d855e3"
+      },
+      "build_entry": {
+        "path": "tools/occt-v4-clang10-o0/build.sh",
+        "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/runtime.json",
+      "sha256": "8d1ae02f67f223c4f554b5e85c147827e47f842b3d571406a23e584604d9ce45"
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/identity.json",
+      "sha256": "819b853e26ec014e02d79737da9b3ed89a13ab45008b1244c3819fa23854c8e9"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/core-1.json",
+          "sha256": "ed09053866c08f64c55753c157b148f8a31e6b08f7ac23dfadcab1b936804ddc"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/core-2.json",
+          "sha256": "c22b2c4999ea96ea82105851640dfba27bfd5013e36ee5ff3c1408f95ca49140"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "independent_status": "CALIBRATED",
+    "controls": {
+      "healthy-1": {
+        "registered": "PASS",
+        "independent": "PASS",
+        "injection_verified": null,
+        "outer_center": [
+          50.0,
+          50.0,
+          50.0
+        ],
+        "inner_center": [
+          50.0,
+          50.0,
+          50.0
+        ],
+        "outer_radius": 15,
+        "cavity_radius": 10,
+        "minimum_wall": 5.0,
+        "volume": 9948.376736367678,
+        "centroid": [
+          50.000000000000014,
+          50.000000000000014,
+          50.000000000000014
+        ],
+        "witness_points": [
+          [
+            39,
+            50,
+            50
+          ],
+          [
+            61,
+            50,
+            50
+          ],
+          [
+            38,
+            50,
+            50
+          ],
+          [
+            63,
+            50,
+            50
+          ],
+          [
+            50,
+            50,
+            50
+          ],
+          [
+            50,
+            65,
+            50
+          ],
+          [
+            50,
+            66,
+            50
+          ],
+          [
+            50,
+            60,
+            50
+          ]
+        ],
+        "expected": [
+          "IN",
+          "IN",
+          "IN",
+          "IN",
+          "OUT",
+          "ON",
+          "OUT",
+          "ON"
+        ],
+        "actual": [
+          "IN",
+          "IN",
+          "IN",
+          "IN",
+          "OUT",
+          "ON",
+          "OUT",
+          "ON"
+        ],
+        "different_witness_indices": [],
+        "geometry_receipt": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/healthy-1-read.log",
+          "sha256": "56e00a7482dabb5fb56c693672f51059ac082929156e89e08ab98920ccfe6c8c"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/healthy-1.log",
+          "sha256": "c0f37aec7f428c9ee44a40cbf226417248c358200f1a2896dacf2e70061744e1"
+        },
+        "breps": {
+          "outer": {
+            "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/healthy-1-outer.brep",
+            "sha256": "ac61163a4b82fe5c7d931b24e414586adecc3f950f56430f122145888699c084"
+          },
+          "nominal": {
+            "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/healthy-1-nominal.brep",
+            "sha256": "0d39a69b87acc3fc6516bb3124d353e88cdc3ede5768087130deb2b92c52faa5"
+          },
+          "used": {
+            "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/healthy-1-used.brep",
+            "sha256": "0d39a69b87acc3fc6516bb3124d353e88cdc3ede5768087130deb2b92c52faa5"
+          },
+          "R": {
+            "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/healthy-1-R.brep",
+            "sha256": "85237e7fb0eb5918cffd41ab33de13a13f6ae988167c3473fb813f7563ae8ba4"
+          }
+        }
+      },
+      "healthy-2": {
+        "registered": "PASS",
+        "independent": "PASS",
+        "injection_verified": null,
+        "outer_center": [
+          50.0,
+          50.0,
+          50.0
+        ],
+        "inner_center": [
+          50.0,
+          50.0,
+          50.0
+        ],
+        "outer_radius": 15,
+        "cavity_radius": 10,
+        "minimum_wall": 5.0,
+        "volume": 9948.376736367678,
+        "centroid": [
+          50.000000000000014,
+          50.000000000000014,
+          50.000000000000014
+        ],
+        "witness_points": [
+          [
+            39,
+            50,
+            50
+          ],
+          [
+            61,
+            50,
+            50
+          ],
+          [
+            38,
+            50,
+            50
+          ],
+          [
+            63,
+            50,
+            50
+          ],
+          [
+            50,
+            50,
+            50
+          ],
+          [
+            50,
+            65,
+            50
+          ],
+          [
+            50,
+            66,
+            50
+          ],
+          [
+            50,
+            60,
+            50
+          ]
+        ],
+        "expected": [
+          "IN",
+          "IN",
+          "IN",
+          "IN",
+          "OUT",
+          "ON",
+          "OUT",
+          "ON"
+        ],
+        "actual": [
+          "IN",
+          "IN",
+          "IN",
+          "IN",
+          "OUT",
+          "ON",
+          "OUT",
+          "ON"
+        ],
+        "different_witness_indices": [],
+        "geometry_receipt": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/healthy-2-read.log",
+          "sha256": "56e00a7482dabb5fb56c693672f51059ac082929156e89e08ab98920ccfe6c8c"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/healthy-2.log",
+          "sha256": "c0f37aec7f428c9ee44a40cbf226417248c358200f1a2896dacf2e70061744e1"
+        },
+        "breps": {
+          "outer": {
+            "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/healthy-2-outer.brep",
+            "sha256": "ac61163a4b82fe5c7d931b24e414586adecc3f950f56430f122145888699c084"
+          },
+          "nominal": {
+            "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/healthy-2-nominal.brep",
+            "sha256": "0d39a69b87acc3fc6516bb3124d353e88cdc3ede5768087130deb2b92c52faa5"
+          },
+          "used": {
+            "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/healthy-2-used.brep",
+            "sha256": "0d39a69b87acc3fc6516bb3124d353e88cdc3ede5768087130deb2b92c52faa5"
+          },
+          "R": {
+            "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/healthy-2-R.brep",
+            "sha256": "85237e7fb0eb5918cffd41ab33de13a13f6ae988167c3473fb813f7563ae8ba4"
+          }
+        }
+      },
+      "eccentric": {
+        "registered": "PASS",
+        "independent": "FAIL",
+        "injection_verified": true,
+        "outer_center": [
+          50.0,
+          50.0,
+          50.0
+        ],
+        "inner_center": [
+          52.0,
+          50.0,
+          50.0
+        ],
+        "outer_radius": 15,
+        "cavity_radius": 10,
+        "minimum_wall": 3.0,
+        "volume": 9948.376736367678,
+        "centroid": [
+          49.15789473684211,
+          50.0,
+          50.0
+        ],
+        "witness_points": [
+          [
+            39,
+            50,
+            50
+          ],
+          [
+            61,
+            50,
+            50
+          ],
+          [
+            38,
+            50,
+            50
+          ],
+          [
+            63,
+            50,
+            50
+          ],
+          [
+            50,
+            50,
+            50
+          ],
+          [
+            50,
+            65,
+            50
+          ],
+          [
+            50,
+            66,
+            50
+          ],
+          [
+            50,
+            60,
+            50
+          ]
+        ],
+        "expected": [
+          "IN",
+          "IN",
+          "IN",
+          "IN",
+          "OUT",
+          "ON",
+          "OUT",
+          "ON"
+        ],
+        "actual": [
+          "IN",
+          "OUT",
+          "IN",
+          "IN",
+          "OUT",
+          "ON",
+          "OUT",
+          "IN"
+        ],
+        "different_witness_indices": [
+          1,
+          7
+        ],
+        "geometry_receipt": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/eccentric-read.log",
+          "sha256": "9cb7ad200b73e84957849375541a9be57146412dbf55ee658c317a5b4e38cdbd"
+        },
+        "registered_log": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/eccentric.log",
+          "sha256": "c0f37aec7f428c9ee44a40cbf226417248c358200f1a2896dacf2e70061744e1"
+        },
+        "breps": {
+          "outer": {
+            "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/eccentric-outer.brep",
+            "sha256": "ac61163a4b82fe5c7d931b24e414586adecc3f950f56430f122145888699c084"
+          },
+          "nominal": {
+            "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/eccentric-nominal.brep",
+            "sha256": "0d39a69b87acc3fc6516bb3124d353e88cdc3ede5768087130deb2b92c52faa5"
+          },
+          "used": {
+            "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/eccentric-used.brep",
+            "sha256": "823e9a8600a9f62a489adf8fbbc167825039efbdca9ecf45575e33d5b2b41e0c"
+          },
+          "R": {
+            "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/eccentric-R.brep",
+            "sha256": "2a8f980d69a92bf58fee0f0c39d2ebe77b916b52e94455158fcfd1cb7c8e1d65"
+          }
+        }
+      }
+    },
+    "registered_original": {
+      "path": "research/kernel-regression-v1/rollout-v7/receipts/shell/registered.log",
+      "sha256": "c0f37aec7f428c9ee44a40cbf226417248c358200f1a2896dacf2e70061744e1"
+    },
+    "historic_result": {
+      "path": "research/kernel-regression-v1/rollout-v7/history/results.json",
+      "sha256": "5eb741fe12cf7ed3d485b56edf00cc0e91ab10f52c419242a7e5e5c25094e70b"
+    }
+  },
+  "uv": {
+    "source": {
+      "source_id": "occt801-b8f597c67781-singularity",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "toolchain": "occt1116-singularity-gcc",
+      "toolchain_config": {
+        "path": "toolchains/occt1116-singularity-gcc.json",
+        "sha256": "35e0c0e5439fb37b19e5f3f7ba35948887c46815e280eb81ed5b59ffc6d56df5"
+      },
+      "build_entry": {
+        "path": "tools/occt1116-singularity-gcc/build.sh",
+        "sha256": "d4ef908f2a0d94449ca83cdca13c28f9da0381ca2124d7aa5d2e9ee7dd70db0e"
+      },
+      "declared_public_targets": [
+        "TKShHealing"
+      ]
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v7/receipts/uv/runtime.json",
+      "sha256": "9f933a622735ade9f532424e8b05107b3c3c858bd64703c483e3ef9f660d30bf"
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v7/receipts/uv/identity.json",
+      "sha256": "9a04e8058b3cfbb744537047bb06ad8fbd870e4c6c01f2962786a88ec1391874"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/uv/core-1.json",
+          "sha256": "07213d3b38e0d140874196c280dfde2c1715e5850c177e182473e595361aa4f7"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATED",
+    "independent_status": "CALIBRATED",
+    "roles": {
+      "baseline": {
+        "controls": {
+          "ordinary": {
+            "kind": "native",
+            "requested_uv": [
+              0.375,
+              0.25
+            ],
+            "hint": [
+              0.375,
+              0.25
+            ],
+            "target": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "actual_api_return": [
+              0.375,
+              0.25
+            ],
+            "scored_uv": [
+              0.375,
+              0.25
+            ],
+            "kernel_map": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "independent_map": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 0.0,
+            "in_patch_domain": true,
+            "unique_inverse": [
+              0.375,
+              0.25
+            ],
+            "uv_error_to_inverse_or_edge": 0.0,
+            "within_uv_class": true,
+            "independent": "PASS",
+            "hint_distance": 0.0,
+            "registered_hint_predicate_if_applied": "PASS"
+          },
+          "ordinary-offset-hint": {
+            "kind": "native",
+            "requested_uv": [
+              0.375,
+              0.25
+            ],
+            "hint": [
+              0.45,
+              0.27
+            ],
+            "target": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "actual_api_return": [
+              0.375,
+              0.25
+            ],
+            "scored_uv": [
+              0.375,
+              0.25
+            ],
+            "kernel_map": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "independent_map": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 0.0,
+            "in_patch_domain": true,
+            "unique_inverse": [
+              0.375,
+              0.25
+            ],
+            "uv_error_to_inverse_or_edge": 0.0,
+            "within_uv_class": true,
+            "independent": "PASS",
+            "hint_distance": 0.07762087348130013,
+            "registered_hint_predicate_if_applied": "NOT_APPLICABLE"
+          },
+          "ordinary-wrong": {
+            "kind": "other-api",
+            "requested_uv": [
+              0.375,
+              0.25
+            ],
+            "hint": [
+              0.375,
+              0.25
+            ],
+            "target": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "actual_api_return": [
+              0.375,
+              0.25
+            ],
+            "scored_uv": [
+              0.75,
+              0.25
+            ],
+            "kernel_map": [
+              0.0625,
+              0.1875,
+              0.25
+            ],
+            "independent_map": [
+              0.0625,
+              0.1875,
+              0.25
+            ],
+            "residual_3d": 0.13258252147247768,
+            "analytic_residual_3d": 0.13258252147247768,
+            "in_patch_domain": true,
+            "unique_inverse": [
+              0.375,
+              0.25
+            ],
+            "uv_error_to_inverse_or_edge": 0.375,
+            "within_uv_class": false,
+            "independent": "FAIL",
+            "hint_distance": 0.375,
+            "registered_hint_predicate_if_applied": "FAIL"
+          },
+          "edge-a": {
+            "kind": "native",
+            "requested_uv": [
+              0.125,
+              0.0
+            ],
+            "hint": [
+              0.125,
+              0.0
+            ],
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_api_return": [
+              0.2732583222719243,
+              4.14902810298064e-17
+            ],
+            "scored_uv": [
+              0.2732583222719243,
+              4.14902810298064e-17
+            ],
+            "kernel_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "independent_map": [
+              3.015271644501086e-17,
+              1.1337564584795545e-17,
+              4.14902810298064e-17
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 5.252780311092356e-17,
+            "in_patch_domain": true,
+            "unique_inverse": null,
+            "uv_error_to_inverse_or_edge": 4.14902810298064e-17,
+            "within_uv_class": true,
+            "independent": "PASS",
+            "hint_distance": 0.14825832227192431,
+            "registered_hint_predicate_if_applied": "FAIL"
+          },
+          "edge-b": {
+            "kind": "native",
+            "requested_uv": [
+              0.375,
+              0.0
+            ],
+            "hint": [
+              0.375,
+              0.0
+            ],
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_api_return": [
+              0.2732583222719243,
+              4.14902810298064e-17
+            ],
+            "scored_uv": [
+              0.2732583222719243,
+              4.14902810298064e-17
+            ],
+            "kernel_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "independent_map": [
+              3.015271644501086e-17,
+              1.1337564584795545e-17,
+              4.14902810298064e-17
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 5.252780311092356e-17,
+            "in_patch_domain": true,
+            "unique_inverse": null,
+            "uv_error_to_inverse_or_edge": 4.14902810298064e-17,
+            "within_uv_class": true,
+            "independent": "PASS",
+            "hint_distance": 0.10174167772807569,
+            "registered_hint_predicate_if_applied": "FAIL"
+          },
+          "edge-c": {
+            "kind": "native",
+            "requested_uv": [
+              0.8,
+              0.0
+            ],
+            "hint": [
+              0.8,
+              0.0
+            ],
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_api_return": [
+              0.2732583222719243,
+              4.14902810298064e-17
+            ],
+            "scored_uv": [
+              0.2732583222719243,
+              4.14902810298064e-17
+            ],
+            "kernel_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "independent_map": [
+              3.015271644501086e-17,
+              1.1337564584795545e-17,
+              4.14902810298064e-17
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 5.252780311092356e-17,
+            "in_patch_domain": true,
+            "unique_inverse": null,
+            "uv_error_to_inverse_or_edge": 4.14902810298064e-17,
+            "within_uv_class": true,
+            "independent": "PASS",
+            "hint_distance": 0.5267416777280758,
+            "registered_hint_predicate_if_applied": "FAIL"
+          },
+          "edge-alternate": {
+            "kind": "selected",
+            "requested_uv": [
+              0.375,
+              0.0
+            ],
+            "hint": [
+              0.375,
+              0.0
+            ],
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_api_return": [
+              0.2732583222719243,
+              4.14902810298064e-17
+            ],
+            "scored_uv": [
+              0.8,
+              0.0
+            ],
+            "kernel_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "independent_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 0.0,
+            "in_patch_domain": true,
+            "unique_inverse": null,
+            "uv_error_to_inverse_or_edge": 0.0,
+            "within_uv_class": true,
+            "independent": "PASS",
+            "hint_distance": 0.42500000000000004,
+            "registered_hint_predicate_if_applied": "FAIL"
+          },
+          "edge-off": {
+            "kind": "other-api",
+            "requested_uv": [
+              0.375,
+              0.0
+            ],
+            "hint": [
+              0.375,
+              0.0
+            ],
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_api_return": [
+              0.2732583222719243,
+              4.14902810298064e-17
+            ],
+            "scored_uv": [
+              0.375,
+              0.040000000000000056
+            ],
+            "kernel_map": [
+              0.025000000000000022,
+              0.015000000000000013,
+              0.040000000000000036
+            ],
+            "independent_map": [
+              0.025000000000000036,
+              0.01500000000000002,
+              0.040000000000000056
+            ],
+            "residual_3d": 0.04949747468305837,
+            "analytic_residual_3d": 0.049497474683058394,
+            "in_patch_domain": true,
+            "unique_inverse": null,
+            "uv_error_to_inverse_or_edge": 0.040000000000000056,
+            "within_uv_class": false,
+            "independent": "FAIL",
+            "hint_distance": 0.040000000000000056,
+            "registered_hint_predicate_if_applied": "FAIL"
+          },
+          "edge-outside": {
+            "kind": "selected",
+            "requested_uv": [
+              0.375,
+              0.0
+            ],
+            "hint": [
+              0.375,
+              0.0
+            ],
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_api_return": [
+              0.2732583222719243,
+              4.14902810298064e-17
+            ],
+            "scored_uv": [
+              1.25,
+              0.0
+            ],
+            "kernel_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "independent_map": [
+              -0.0,
+              0.0,
+              0.0
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 0.0,
+            "in_patch_domain": false,
+            "unique_inverse": null,
+            "uv_error_to_inverse_or_edge": 0.0,
+            "within_uv_class": false,
+            "independent": "FAIL",
+            "hint_distance": 0.875,
+            "registered_hint_predicate_if_applied": "FAIL"
+          }
+        },
+        "registered_cases": {
+          "ordinary": {
+            "verdict": "PASS",
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v7/receipts/uv/baseline-ordinary.log",
+              "sha256": "b53a6ec60eaec8df3ae99ba746ad658d70f3784ef2807d5627925a9078c68191"
+            }
+          },
+          "original-edge": {
+            "verdict": "FAIL",
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v7/receipts/uv/baseline-original-edge.log",
+              "sha256": "7dd78046de0107d1356e444f23ff139519e35d80c24a7bd851552a30fe57677f"
+            }
+          }
+        },
+        "diagnostic": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/uv/baseline-diagnostic.log",
+          "sha256": "a03a6f428eb98bce704eb93f8f5e37ca76ce9cf9db8192dc8b656a8b4c48be0b"
+        }
+      },
+      "reference": {
+        "controls": {
+          "ordinary": {
+            "kind": "native",
+            "requested_uv": [
+              0.375,
+              0.25
+            ],
+            "hint": [
+              0.375,
+              0.25
+            ],
+            "target": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "actual_api_return": [
+              0.375,
+              0.25
+            ],
+            "scored_uv": [
+              0.375,
+              0.25
+            ],
+            "kernel_map": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "independent_map": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 0.0,
+            "in_patch_domain": true,
+            "unique_inverse": [
+              0.375,
+              0.25
+            ],
+            "uv_error_to_inverse_or_edge": 0.0,
+            "within_uv_class": true,
+            "independent": "PASS",
+            "hint_distance": 0.0,
+            "registered_hint_predicate_if_applied": "PASS"
+          },
+          "ordinary-offset-hint": {
+            "kind": "native",
+            "requested_uv": [
+              0.375,
+              0.25
+            ],
+            "hint": [
+              0.45,
+              0.27
+            ],
+            "target": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "actual_api_return": [
+              0.375,
+              0.25
+            ],
+            "scored_uv": [
+              0.375,
+              0.25
+            ],
+            "kernel_map": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "independent_map": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 0.0,
+            "in_patch_domain": true,
+            "unique_inverse": [
+              0.375,
+              0.25
+            ],
+            "uv_error_to_inverse_or_edge": 0.0,
+            "within_uv_class": true,
+            "independent": "PASS",
+            "hint_distance": 0.07762087348130013,
+            "registered_hint_predicate_if_applied": "NOT_APPLICABLE"
+          },
+          "ordinary-wrong": {
+            "kind": "other-api",
+            "requested_uv": [
+              0.375,
+              0.25
+            ],
+            "hint": [
+              0.375,
+              0.25
+            ],
+            "target": [
+              0.15625,
+              0.09375,
+              0.25
+            ],
+            "actual_api_return": [
+              0.375,
+              0.25
+            ],
+            "scored_uv": [
+              0.75,
+              0.25
+            ],
+            "kernel_map": [
+              0.0625,
+              0.1875,
+              0.25
+            ],
+            "independent_map": [
+              0.0625,
+              0.1875,
+              0.25
+            ],
+            "residual_3d": 0.13258252147247768,
+            "analytic_residual_3d": 0.13258252147247768,
+            "in_patch_domain": true,
+            "unique_inverse": [
+              0.375,
+              0.25
+            ],
+            "uv_error_to_inverse_or_edge": 0.375,
+            "within_uv_class": false,
+            "independent": "FAIL",
+            "hint_distance": 0.375,
+            "registered_hint_predicate_if_applied": "FAIL"
+          },
+          "edge-a": {
+            "kind": "native",
+            "requested_uv": [
+              0.125,
+              0.0
+            ],
+            "hint": [
+              0.125,
+              0.0
+            ],
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_api_return": [
+              0.125,
+              0.0
+            ],
+            "scored_uv": [
+              0.125,
+              0.0
+            ],
+            "kernel_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "independent_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 0.0,
+            "in_patch_domain": true,
+            "unique_inverse": null,
+            "uv_error_to_inverse_or_edge": 0.0,
+            "within_uv_class": true,
+            "independent": "PASS",
+            "hint_distance": 0.0,
+            "registered_hint_predicate_if_applied": "PASS"
+          },
+          "edge-b": {
+            "kind": "native",
+            "requested_uv": [
+              0.375,
+              0.0
+            ],
+            "hint": [
+              0.375,
+              0.0
+            ],
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_api_return": [
+              0.375,
+              0.0
+            ],
+            "scored_uv": [
+              0.375,
+              0.0
+            ],
+            "kernel_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "independent_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 0.0,
+            "in_patch_domain": true,
+            "unique_inverse": null,
+            "uv_error_to_inverse_or_edge": 0.0,
+            "within_uv_class": true,
+            "independent": "PASS",
+            "hint_distance": 0.0,
+            "registered_hint_predicate_if_applied": "PASS"
+          },
+          "edge-c": {
+            "kind": "native",
+            "requested_uv": [
+              0.8,
+              0.0
+            ],
+            "hint": [
+              0.8,
+              0.0
+            ],
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_api_return": [
+              0.8,
+              0.0
+            ],
+            "scored_uv": [
+              0.8,
+              0.0
+            ],
+            "kernel_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "independent_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 0.0,
+            "in_patch_domain": true,
+            "unique_inverse": null,
+            "uv_error_to_inverse_or_edge": 0.0,
+            "within_uv_class": true,
+            "independent": "PASS",
+            "hint_distance": 0.0,
+            "registered_hint_predicate_if_applied": "PASS"
+          },
+          "edge-alternate": {
+            "kind": "selected",
+            "requested_uv": [
+              0.375,
+              0.0
+            ],
+            "hint": [
+              0.375,
+              0.0
+            ],
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_api_return": [
+              0.375,
+              0.0
+            ],
+            "scored_uv": [
+              0.8,
+              0.0
+            ],
+            "kernel_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "independent_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 0.0,
+            "in_patch_domain": true,
+            "unique_inverse": null,
+            "uv_error_to_inverse_or_edge": 0.0,
+            "within_uv_class": true,
+            "independent": "PASS",
+            "hint_distance": 0.42500000000000004,
+            "registered_hint_predicate_if_applied": "FAIL"
+          },
+          "edge-off": {
+            "kind": "other-api",
+            "requested_uv": [
+              0.375,
+              0.0
+            ],
+            "hint": [
+              0.375,
+              0.0
+            ],
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_api_return": [
+              0.375,
+              0.0
+            ],
+            "scored_uv": [
+              0.375,
+              0.04
+            ],
+            "kernel_map": [
+              0.025000000000000022,
+              0.015000000000000013,
+              0.040000000000000036
+            ],
+            "independent_map": [
+              0.025,
+              0.015,
+              0.04
+            ],
+            "residual_3d": 0.04949747468305837,
+            "analytic_residual_3d": 0.049497474683058325,
+            "in_patch_domain": true,
+            "unique_inverse": null,
+            "uv_error_to_inverse_or_edge": 0.04,
+            "within_uv_class": false,
+            "independent": "FAIL",
+            "hint_distance": 0.04,
+            "registered_hint_predicate_if_applied": "FAIL"
+          },
+          "edge-outside": {
+            "kind": "selected",
+            "requested_uv": [
+              0.375,
+              0.0
+            ],
+            "hint": [
+              0.375,
+              0.0
+            ],
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "actual_api_return": [
+              0.375,
+              0.0
+            ],
+            "scored_uv": [
+              1.25,
+              0.0
+            ],
+            "kernel_map": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "independent_map": [
+              -0.0,
+              0.0,
+              0.0
+            ],
+            "residual_3d": 0.0,
+            "analytic_residual_3d": 0.0,
+            "in_patch_domain": false,
+            "unique_inverse": null,
+            "uv_error_to_inverse_or_edge": 0.0,
+            "within_uv_class": false,
+            "independent": "FAIL",
+            "hint_distance": 0.875,
+            "registered_hint_predicate_if_applied": "FAIL"
+          }
+        },
+        "registered_cases": {
+          "ordinary": {
+            "verdict": "PASS",
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v7/receipts/uv/reference-ordinary.log",
+              "sha256": "b53a6ec60eaec8df3ae99ba746ad658d70f3784ef2807d5627925a9078c68191"
+            }
+          },
+          "original-edge": {
+            "verdict": "PASS",
+            "log": {
+              "path": "research/kernel-regression-v1/rollout-v7/receipts/uv/reference-original-edge.log",
+              "sha256": "d4c539053beb745bda6883890a6436ca7c5c0bd47f20dedbbd5c6aa6c7e510a7"
+            }
+          }
+        },
+        "diagnostic": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/uv/reference-diagnostic.log",
+          "sha256": "656cb36cc1472061302a481186809588f4a21072613648d514276454c9367f14"
+        }
+      }
+    },
+    "registered_predicate_replays": {
+      "ordinary": {
+        "scored_uv": [
+          0.375,
+          0.25
+        ],
+        "verdict": "PASS",
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/uv-predicate/ordinary.log",
+          "sha256": "b53a6ec60eaec8df3ae99ba746ad658d70f3784ef2807d5627925a9078c68191"
+        }
+      },
+      "ordinary-wrong": {
+        "scored_uv": [
+          0.75,
+          0.25
+        ],
+        "verdict": "FAIL",
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/uv-predicate/ordinary-wrong.log",
+          "sha256": "edc53c001e4fb8b7d0e82e43158bba314abcafb07e766febf09de9c5bd887f11"
+        }
+      },
+      "edge-b": {
+        "scored_uv": [
+          0.2732583222719243,
+          4.14902810298064e-17
+        ],
+        "verdict": "FAIL",
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/uv-predicate/edge-b.log",
+          "sha256": "7dd78046de0107d1356e444f23ff139519e35d80c24a7bd851552a30fe57677f"
+        }
+      },
+      "edge-alternate": {
+        "scored_uv": [
+          0.8,
+          0.0
+        ],
+        "verdict": "FAIL",
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/uv-predicate/edge-alternate.log",
+          "sha256": "0c89e44829d746c7cdc33482428771487a12b482c8834ff1532472e0826f4360"
+        }
+      },
+      "edge-off": {
+        "scored_uv": [
+          0.375,
+          0.040000000000000056
+        ],
+        "verdict": "FAIL",
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/uv-predicate/edge-off.log",
+          "sha256": "50c985e5e6cecd0f40a45b80162b436eb6f1a6af88ccbcffcac92813cfe53602"
+        }
+      },
+      "edge-outside": {
+        "scored_uv": [
+          1.25,
+          0.0
+        ],
+        "verdict": "FAIL",
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v7/receipts/uv-predicate/edge-outside.log",
+          "sha256": "15cc4328758a7b99d9c3b092406602414342ee167fd3d7d04cddf3417449dc6e"
+        }
+      }
+    },
+    "registered_scope": "regression-3 ordinary converged hint only; original-edge remains separately scored",
+    "independent_scope": "Frozen bounded bilinear patch. Ordinary inverse and collapsed-edge equivalence, including domain membership.",
+    "interface": {
+      "representative": "NOT_SPECIFIED",
+      "evidence": {
+        "path": "research/kernel-regression-v1/rollout-v7/receipts/uv/locked-api.txt",
+        "sha256": "0a9a0a5b3570650caf5e43f31d18907692d4062b21c49a634e92f3b1a5eb41e3"
+      },
+      "header": {
+        "path": "research/kernel-regression-v1/rollout-v7/receipts/uv/locked-interface.hxx",
+        "sha256": "61e1d414fdb04e0a1bf1e8773721e0d363506dbbf326a3fbc6a51f714e2af60b"
+      }
+    },
+    "issue_specific_hint_contract": {
+      "path": "benchmarks/occt/issues/occt-github-1634-singularity/1/statement.md",
+      "sha256": "f919b21d6388218a9e36b9866b191375072b2b478e724b05567713a3bd0cbb33"
+    },
+    "reference": {
+      "path": "research/kernel-regression-v1/rollout-v7/receipts/uv/reference.json",
+      "sha256": "a8508d18b0a36e3c867e3d9647b55c01bd5aee22f8356792d4d670c6fc25dfb0"
+    },
+    "other_identity_reference": {
+      "status": "NOT_APPLICABLE",
+      "evidence": {
+        "path": "benchmarks/occt/evaluation/provenance/geometry-1634-singularity/offline-reference.json",
+        "sha256": "0b7ca7089ca2e96938dfc111206bb1ef507680f730c83ead9b591b7a5e9a4e06"
+      }
+    }
+  }
+}

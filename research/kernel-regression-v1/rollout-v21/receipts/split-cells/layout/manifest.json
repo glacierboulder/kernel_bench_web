@@ -1,0 +1,29 @@
+{
+  "host": "ws01",
+  "run": "65e90077a3bc9123",
+  "patch": "b187fd86178b05251b6ecd379a49785fc58a998899adce24acbc5329ec71dfd7",
+  "suite": "occt-26796-version-regression",
+  "version": "1",
+  "case_hashes": {
+    "evaluation/cases/version-regressions/1/split-cells.cxx": "bc9b9e98d0b32a74f6a043cce45e610bf527163370a6b4e93f049185d6e3dbb9",
+    "evaluation/cases/version-regressions/1/split-cells/healthy-1.brep": "a40c8ee6a705d0b39b9cd3364e8a9f352e212b1009cb0c9e48f0d2f391a68d5f",
+    "evaluation/cases/version-regressions/1/split-cells/healthy-2.brep": "a40c8ee6a705d0b39b9cd3364e8a9f352e212b1009cb0c9e48f0d2f391a68d5f",
+    "evaluation/cases/version-regressions/1/split-cells/missing.brep": "e5e30858b5fbb8a4f8fc45a079ef0c61bb4806611e4e1de74c76cafb9a5fecc7",
+    "evaluation/cases/version-regressions/1/split-cells/shift-all.brep": "70c1c1cf7d02e23b1a7dc72a852c6124745ac8e8af7262639056268c273fc042",
+    "evaluation/cases/version-regressions/1/split-cells/shift-one.brep": "1ad936a21b6e68efa393bc11db85f121e40dcd0275e7838cf6846112f0a6a39a",
+    "evaluation/cases/version-regressions/1/split-cells/balanced.brep": "fec6bfce49bfc1a46c953cd8fe5a25c500bbc9c457c725a062bddaa08789f33c"
+  },
+  "runner": "144cbdc3bc0bef78180e0e8c107149aa8ffe9b86709af51f61f97d8225fedca5",
+  "evaluator_helper": "ab412a4268c41c6d6ad58d17ac1095cdae10897087f3158d60eff97658cd4e84",
+  "receipts": {
+    "cli.json": "3d71fdf4c9a313bde37ee7d679c32aa36fe5670c282f598cea4ad9c2dc92d702",
+    "cli.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "driver.json": "a105cf04358df3636bcb96665cedc8625272e3c8d1ed3db87d4565abcadede32",
+    "internal.json": "710d9367045e9e5f90fcd3f5a4e5c92ff582f69384e93468ae50819d3cd9c42d",
+    "driver.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "snapshot.json": "1cedc493a76532cccaec58b3e96d2727603886149eba98d51c5cdbffb0eed112",
+    "frozen-suite.json": "f47d825c1467a7083416642c15e04c00e5b94ab454841a97f62e4f18559f07b7",
+    "source-lock.json": "982f7a371f19121bbfd610988e99ea47949d192245dd6421e7a94d04c755c56e",
+    "toolchain.json": "fd2b044d20156ca5d9e6c5094cb5750562cb9cd46b52a0ef98b3b3eab10d3cdb"
+  }
+}

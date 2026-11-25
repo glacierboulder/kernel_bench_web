@@ -1,0 +1,1286 @@
+{
+  "circle": {
+    "source": {
+      "source_id": "occt-b55bd0235351",
+      "commit": "b55bd02353519ebba14575f8056bb2b14585089e",
+      "materialized_tree_sha256": "b65869dfa1367bb32a63e47accc1552de0fa6a6d5bd8a90a38db64bd4c7aaa77",
+      "toolchain": "occt-gcc9-gcc-o0-bf-b55-v2",
+      "toolchain_config": {
+        "path": "toolchains/occt-gcc9-gcc-o0-bf-b55-v2.json",
+        "sha256": "743082092d969acc29a7d75a4a12563faae883ca15b2a414ed66bf118c295c7b"
+      },
+      "build_entry": {
+        "path": "tools/occt-gcc9-bf-b55-v2/build.sh",
+        "sha256": "e2e20a5d9e997757a093e7b8e51f5f486cbd981505178a8b76d152176f6d2816"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/identity.json",
+      "sha256": "a24e564404bd343bb1677c02c95c58204eda20ba6aebfe343438d0891e701e5d"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/runtime.json",
+      "sha256": "078bf0567213ffb17da46a6516f0492f897f92fa04906966c7eecde42ed3ff8e"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/core-1.json",
+          "sha256": "f112107afe41889a0a90fabaa566c9d60c872fa9cdbb29ac733200ee4a537b2c"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/core-2.json",
+          "sha256": "fa7141ff43bdab7d18334831ac93b0afa2fef9733a9cba7d38c196c1d6dd6349"
+        }
+      ]
+    },
+    "status": "CALIBRATED",
+    "registered_status": "CALIBRATED",
+    "registered_baseline": {
+      "passed": true,
+      "detail": {
+        "curve_count": 1,
+        "endpoint_gap": 1.2246467991473533e-15,
+        "max_cylinder_radial_residual": 8.881784197001252e-16,
+        "max_plane_residual": 0.0,
+        "sample_count": 17,
+        "wrong_radius_min_residual": 0.4999999999999991
+      },
+      "receipt": {
+        "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/registered-receipt.json",
+        "sha256": "a1b00f6cb82613e39c2b75f094b5b4c6dfdb5c14cb54738e2471f41d3dc1d2b7"
+      },
+      "log": {
+        "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/registered-draw.log",
+        "sha256": "2831db64221d442e4654abfaf5e7d81fcf2bb5aaa260dcc6bf293a5b23e6a381"
+      }
+    },
+    "baseline_geometry_status": "PASS",
+    "independent_status": "CALIBRATED",
+    "independent_scope": "Exact analytic circular support and single trimmed angle interval on these faces.",
+    "capture": {
+      "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/native-input.brep",
+      "sha256": "fba89ac98a228a5485c3e131331d679ae03399869f7890b88618abb5fffcd7f0"
+    },
+    "original_geometry": {
+      "center": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "radius": 5.0,
+      "range": [
+        0.0,
+        6.28318530717959
+      ],
+      "span_radians": 6.28318530717959,
+      "missing_arc_length": 0.0,
+      "endpoint_distance": 0.0,
+      "vertices": [
+        5.0,
+        0.0,
+        0.0,
+        5.0,
+        0.0,
+        0.0
+      ],
+      "position_pass": true,
+      "full_angular_coverage": true,
+      "passed": true
+    },
+    "command_source": {
+      "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/BOPTest_BOPCommands.cxx",
+      "sha256": "c4716e1884a4339f003a14f772e43de2ea77e5a049301f84963071599e8dc21f"
+    },
+    "controls": {
+      "native-1": {
+        "registered": {
+          "passed": true,
+          "detail": {
+            "curve_count": 1,
+            "endpoint_gap": 1.653892159485515e-14,
+            "max_cylinder_radial_residual": 0.0,
+            "max_plane_residual": 0.0,
+            "sample_count": 17,
+            "wrong_radius_min_residual": 0.5
+          },
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/native-1-registered-receipt.json",
+            "sha256": "5722868a1eb06cbb4abd8372ef37ab1b60c748fa7cba6b3dcb607161df4ed12e"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/native-1-registered-draw.log",
+            "sha256": "6824d2fe9dbed5a234016d9c28d08fd54dccc7d47b539b450952d332c829d624"
+          }
+        },
+        "independent": "PASS",
+        "geometry": {
+          "center": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius": 5.0,
+          "range": [
+            0.0,
+            6.28318530717959
+          ],
+          "span_radians": 6.28318530717959,
+          "missing_arc_length": 0.0,
+          "endpoint_distance": 0.0,
+          "vertices": [
+            5.0,
+            0.0,
+            0.0,
+            5.0,
+            0.0,
+            0.0
+          ],
+          "position_pass": true,
+          "full_angular_coverage": true,
+          "passed": true
+        },
+        "artifact": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/native-1.brep",
+          "sha256": "5676ce3b479ccf8e3a82a5eb3569e914c3103cb1e6d36db3e776412b009350ce"
+        },
+        "read_log": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/native-1-read.log",
+          "sha256": "0989dd46bad422a5bc38173c5c566e39aede54fb46492da5e97e397fcd23139b"
+        }
+      },
+      "native-2": {
+        "registered": {
+          "passed": true,
+          "detail": {
+            "curve_count": 1,
+            "endpoint_gap": 1.653892159485515e-14,
+            "max_cylinder_radial_residual": 0.0,
+            "max_plane_residual": 0.0,
+            "sample_count": 17,
+            "wrong_radius_min_residual": 0.5
+          },
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/native-2-registered-receipt.json",
+            "sha256": "c73f934fa44e7478fdb5383bfc525b835f4b3f9df34ea320654ad8d2b5526b55"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/native-2-registered-draw.log",
+            "sha256": "6824d2fe9dbed5a234016d9c28d08fd54dccc7d47b539b450952d332c829d624"
+          }
+        },
+        "independent": "PASS",
+        "geometry": {
+          "center": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius": 5.0,
+          "range": [
+            0.0,
+            6.28318530717959
+          ],
+          "span_radians": 6.28318530717959,
+          "missing_arc_length": 0.0,
+          "endpoint_distance": 0.0,
+          "vertices": [
+            5.0,
+            0.0,
+            0.0,
+            5.0,
+            0.0,
+            0.0
+          ],
+          "position_pass": true,
+          "full_angular_coverage": true,
+          "passed": true
+        },
+        "artifact": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/native-2.brep",
+          "sha256": "5676ce3b479ccf8e3a82a5eb3569e914c3103cb1e6d36db3e776412b009350ce"
+        },
+        "read_log": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/native-2-read.log",
+          "sha256": "0989dd46bad422a5bc38173c5c566e39aede54fb46492da5e97e397fcd23139b"
+        }
+      },
+      "translated": {
+        "registered": {
+          "passed": false,
+          "detail": {
+            "curve_count": 1,
+            "endpoint_gap": 1.653892159485515e-14,
+            "max_cylinder_radial_residual": 0.0,
+            "max_plane_residual": 0.25,
+            "sample_count": 17,
+            "wrong_radius_min_residual": 0.5
+          },
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/translated-registered-receipt.json",
+            "sha256": "b66665e2935e991f22462a033d78a944e8fdf5e2aaffaa48ddefbf57f156d4a0"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/translated-registered-draw.log",
+            "sha256": "dfb2c9f08b4786e6a55c12e416a0332cc4645cf79598ea571c618a3f72761c31"
+          }
+        },
+        "independent": "FAIL",
+        "geometry": {
+          "center": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius": 5.0,
+          "range": [
+            0.0,
+            6.28318530717959
+          ],
+          "span_radians": 6.28318530717959,
+          "missing_arc_length": 0.0,
+          "endpoint_distance": 0.0,
+          "vertices": [
+            5.0,
+            0.0,
+            0.25,
+            5.0,
+            0.0,
+            0.25
+          ],
+          "position_pass": false,
+          "full_angular_coverage": true,
+          "passed": false
+        },
+        "artifact": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/translated.brep",
+          "sha256": "3330c09c328ad96f98619251a231fc0b67063962000a3e814126218d0732bf2e"
+        },
+        "read_log": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/translated-read.log",
+          "sha256": "c47e5683a8fb02c6ca93aae0cf91aaeaa4dc7ccd4c140547a3f251e98430273f"
+        }
+      },
+      "gap": {
+        "registered": {
+          "passed": false,
+          "detail": {
+            "curve_count": 1,
+            "endpoint_gap": 0.9983341664682659,
+            "max_cylinder_radial_residual": 8.881784197001252e-16,
+            "max_plane_residual": 0.0,
+            "sample_count": 17,
+            "wrong_radius_min_residual": 0.5
+          },
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/gap-registered-receipt.json",
+            "sha256": "2377caff581949a8bfa27a3ccd4bb6ac1849d6f04d288bf4bae117975f5d7ec6"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/gap-registered-draw.log",
+            "sha256": "cf12181a71290b897366961dc53d1646078a1a7c00a96f03b4ba388bab2e87f3"
+          }
+        },
+        "independent": "FAIL",
+        "geometry": {
+          "center": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius": 5.0,
+          "range": [
+            0.0,
+            6.08318530717959
+          ],
+          "span_radians": 6.08318530717959,
+          "missing_arc_length": 0.9999999999999831,
+          "endpoint_distance": 0.9983341664682664,
+          "vertices": [
+            5.0,
+            0.0,
+            0.0,
+            4.90033288920621,
+            -0.993346653975291,
+            0.0
+          ],
+          "position_pass": true,
+          "full_angular_coverage": false,
+          "passed": false
+        },
+        "artifact": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/gap.brep",
+          "sha256": "5cb81cb95159c18a813b0ba79d7559b04f35281c4643022ca3ea41c29718c6ca"
+        },
+        "read_log": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/circle/gap-read.log",
+          "sha256": "ea04168bb141910821c901938c4793b929992e5a4a3d40947573beeacfd5ae33"
+        }
+      }
+    }
+  },
+  "segment": {
+    "source": {
+      "source_id": "occt-2613378e60ff",
+      "commit": "2613378e60ff5e517b2bf73699184d0c6f636bb8",
+      "materialized_tree_sha256": "5ead8e62e4d72f801f43d8bd81dda610925dd2b9704ff51aaebe755def165104",
+      "toolchain": "occt-clang10-tcl86-bf-g3-v1",
+      "toolchain_config": {
+        "path": "toolchains/occt-clang10-tcl86-bf-g3-v1.json",
+        "sha256": "1f03c30804161d50729eca0dfe10207ea07b0903d9ae9378cf1abe7c605baa7f"
+      },
+      "build_entry": {
+        "path": "tools/occt-clang10-bf-g3-v1/build.sh",
+        "sha256": "2be7eb67f45784de87339203b200b043280f8c753dda056a36587c813305d7d1"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/identity.json",
+      "sha256": "60d266ef98bf7281d9c65562af15fd12fc6e3a54f2fdce3bd62d12dac8150ce0"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/runtime.json",
+      "sha256": "17d3cc3cc612e55bb06e7aa22fa34c8ffd7390d42aace8181ff2d07805927cf9"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/core-1.json",
+          "sha256": "c1caffcefff5ada1cb58264bc704e3a8d61d88bbfb32cef99a8bd5ab35108375"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/core-2.json",
+          "sha256": "05e24c573039b815afbb8db3b9e5c653ddfbd63973439de6a14dc93cb4a14a93"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "registered_baseline": {
+      "passed": true,
+      "detail": {
+        "max_abs_x": 0.0,
+        "max_abs_z": 0.0,
+        "max_pcurve_to_surface_residual": 0.0,
+        "max_y_spacing_or_endpoint_error": 0.0,
+        "sample_count": 17,
+        "section_edge_count": 1,
+        "section_vertex_count": 2,
+        "tolerance_model_units": 1e-07
+      },
+      "receipt": {
+        "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/registered-receipt.json",
+        "sha256": "acf671a25c07289836790136e4023ba52ceab29f4fb294a2c81ff181ba5d422c"
+      },
+      "log": {
+        "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/registered-draw.log",
+        "sha256": "31306691d3cf807f964f42dcf7d3e8fbe573537b3263e200ac91acb6c3eaae4f"
+      }
+    },
+    "baseline_geometry_status": "PASS",
+    "independent_status": "CALIBRATED",
+    "independent_scope": "Finite Section edge, both endpoints, and two planar pcurve lifts evaluated at the common 3D parameter; full error bounds for the observed piecewise affine spans.",
+    "capture": {
+      "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/native-input.brep",
+      "sha256": "8d5219018b667e9128a9f13d213603ca0223d21d37e6c390661d8ef76bb21a32"
+    },
+    "original_geometry": {
+      "vertices": [
+        [
+          0.0,
+          -5.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.0,
+          0.0
+        ]
+      ],
+      "curve_endpoints": [
+        [
+          -5.0,
+          0.0,
+          -5.0,
+          0.0
+        ],
+        [
+          5.0,
+          0.0,
+          5.0,
+          0.0
+        ]
+      ],
+      "range": [
+        -5.0,
+        5.0
+      ],
+      "endpoints_and_entire_segment_pass": true,
+      "pcurves": [
+        {
+          "face": 1,
+          "kind": "Geom2d_TrimmedCurve",
+          "range": [
+            -5.0,
+            5.0
+          ],
+          "spans": [
+            [
+              -5.0,
+              5.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "maximum_same_parameter_error": 0.0,
+          "passed": true
+        },
+        {
+          "face": 2,
+          "kind": "Geom2d_TrimmedCurve",
+          "range": [
+            -5.0,
+            5.0
+          ],
+          "spans": [
+            [
+              -5.0,
+              5.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "maximum_same_parameter_error": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "command_source": {
+      "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/BOPTest_BOPCommands.cxx",
+      "sha256": "c4716e1884a4339f003a14f772e43de2ea77e5a049301f84963071599e8dc21f"
+    },
+    "controls": {
+      "native-1": {
+        "registered": {
+          "passed": true,
+          "detail": {
+            "max_abs_x": 0.0,
+            "max_abs_z": 0.0,
+            "max_pcurve_to_surface_residual": 0.0,
+            "max_y_spacing_or_endpoint_error": 0.0,
+            "sample_count": 17,
+            "section_edge_count": 1,
+            "section_vertex_count": 2,
+            "tolerance_model_units": 1e-07
+          },
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/native-1-registered-receipt.json",
+            "sha256": "45c5d118519f6e8ac7f64c281da4f871f4c612b5a2ab8a24a69eeeedeaac62fc"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/native-1-registered-draw.log",
+            "sha256": "31306691d3cf807f964f42dcf7d3e8fbe573537b3263e200ac91acb6c3eaae4f"
+          }
+        },
+        "independent": "PASS",
+        "geometry": {
+          "vertices": [
+            [
+              0.0,
+              -5.0,
+              0.0
+            ],
+            [
+              0.0,
+              5.0,
+              0.0
+            ]
+          ],
+          "curve_endpoints": [
+            [
+              -5.0,
+              0.0,
+              -5.0,
+              0.0
+            ],
+            [
+              5.0,
+              0.0,
+              5.0,
+              0.0
+            ]
+          ],
+          "range": [
+            -5.0,
+            5.0
+          ],
+          "endpoints_and_entire_segment_pass": true,
+          "pcurves": [
+            {
+              "face": 1,
+              "kind": "Geom2d_TrimmedCurve",
+              "range": [
+                -5.0,
+                5.0
+              ],
+              "spans": [
+                [
+                  -5.0,
+                  5.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "maximum_same_parameter_error": 0.0,
+              "passed": true
+            },
+            {
+              "face": 2,
+              "kind": "Geom2d_TrimmedCurve",
+              "range": [
+                -5.0,
+                5.0
+              ],
+              "spans": [
+                [
+                  -5.0,
+                  5.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "maximum_same_parameter_error": 0.0,
+              "passed": true
+            }
+          ],
+          "passed": true
+        },
+        "artifact": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/native-1.brep",
+          "sha256": "7c6bcfbb1d4d97908a783e062a5137aab2899e97aeea1afaa48d125c94ff9193"
+        },
+        "read_log": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/native-1-read.log",
+          "sha256": "615998ddd254e91e2c858ec1bdc0babf6f817967a340b39af48ca8178e99ef24"
+        }
+      },
+      "native-2": {
+        "registered": {
+          "passed": true,
+          "detail": {
+            "max_abs_x": 0.0,
+            "max_abs_z": 0.0,
+            "max_pcurve_to_surface_residual": 0.0,
+            "max_y_spacing_or_endpoint_error": 0.0,
+            "sample_count": 17,
+            "section_edge_count": 1,
+            "section_vertex_count": 2,
+            "tolerance_model_units": 1e-07
+          },
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/native-2-registered-receipt.json",
+            "sha256": "671de8ed40b1368db08a64b978f93417d559101311bb580b89ca44d61ef95250"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/native-2-registered-draw.log",
+            "sha256": "31306691d3cf807f964f42dcf7d3e8fbe573537b3263e200ac91acb6c3eaae4f"
+          }
+        },
+        "independent": "PASS",
+        "geometry": {
+          "vertices": [
+            [
+              0.0,
+              -5.0,
+              0.0
+            ],
+            [
+              0.0,
+              5.0,
+              0.0
+            ]
+          ],
+          "curve_endpoints": [
+            [
+              -5.0,
+              0.0,
+              -5.0,
+              0.0
+            ],
+            [
+              5.0,
+              0.0,
+              5.0,
+              0.0
+            ]
+          ],
+          "range": [
+            -5.0,
+            5.0
+          ],
+          "endpoints_and_entire_segment_pass": true,
+          "pcurves": [
+            {
+              "face": 1,
+              "kind": "Geom2d_TrimmedCurve",
+              "range": [
+                -5.0,
+                5.0
+              ],
+              "spans": [
+                [
+                  -5.0,
+                  5.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "maximum_same_parameter_error": 0.0,
+              "passed": true
+            },
+            {
+              "face": 2,
+              "kind": "Geom2d_TrimmedCurve",
+              "range": [
+                -5.0,
+                5.0
+              ],
+              "spans": [
+                [
+                  -5.0,
+                  5.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "maximum_same_parameter_error": 0.0,
+              "passed": true
+            }
+          ],
+          "passed": true
+        },
+        "artifact": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/native-2.brep",
+          "sha256": "7c6bcfbb1d4d97908a783e062a5137aab2899e97aeea1afaa48d125c94ff9193"
+        },
+        "read_log": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/native-2-read.log",
+          "sha256": "615998ddd254e91e2c858ec1bdc0babf6f817967a340b39af48ca8178e99ef24"
+        }
+      },
+      "short": {
+        "registered": {
+          "passed": false,
+          "detail": {
+            "max_abs_x": 0.0,
+            "max_abs_z": 0.0,
+            "max_pcurve_to_surface_residual": 0.0,
+            "max_y_spacing_or_endpoint_error": 1.0,
+            "sample_count": 17,
+            "section_edge_count": 1,
+            "section_vertex_count": 2,
+            "tolerance_model_units": 1e-07
+          },
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/short-registered-receipt.json",
+            "sha256": "edbfb4429d51dc8185d45f25a08b962c894aaec599717b3302422c3b452e51b5"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/short-registered-draw.log",
+            "sha256": "749d51400f412b4aa88feefb121f97cb4d3ed1789f7cb5d203c594dbb3110422"
+          }
+        },
+        "independent": "FAIL",
+        "geometry": {
+          "vertices": [
+            [
+              0.0,
+              -5.0,
+              0.0
+            ],
+            [
+              0.0,
+              4.0,
+              0.0
+            ]
+          ],
+          "curve_endpoints": [
+            [
+              -5.0,
+              0.0,
+              -5.0,
+              0.0
+            ],
+            [
+              4.0,
+              0.0,
+              4.0,
+              0.0
+            ]
+          ],
+          "range": [
+            -5.0,
+            4.0
+          ],
+          "endpoints_and_entire_segment_pass": false,
+          "pcurves": [
+            {
+              "face": 1,
+              "kind": "Geom2d_Line",
+              "range": [
+                -5.0,
+                4.0
+              ],
+              "spans": [
+                [
+                  -5.0,
+                  4.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "maximum_same_parameter_error": 0.0,
+              "passed": true
+            },
+            {
+              "face": 2,
+              "kind": "Geom2d_Line",
+              "range": [
+                -5.0,
+                4.0
+              ],
+              "spans": [
+                [
+                  -5.0,
+                  4.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "maximum_same_parameter_error": 0.0,
+              "passed": true
+            }
+          ],
+          "passed": false
+        },
+        "artifact": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/short.brep",
+          "sha256": "f4cbd153e3a891075383e087e620973fea701f98d685efc630de2245756435c6"
+        },
+        "read_log": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/short-read.log",
+          "sha256": "991d6d2f8ccc3e40a6faeb40d498d60153846166c5812dd6ec32be8c1e3859ff"
+        }
+      },
+      "one-side": {
+        "registered": {
+          "passed": true,
+          "detail": {
+            "max_abs_x": 0.0,
+            "max_abs_z": 0.0,
+            "max_pcurve_to_surface_residual": 4.440892098500626e-16,
+            "max_y_spacing_or_endpoint_error": 0.0,
+            "sample_count": 17,
+            "section_edge_count": 1,
+            "section_vertex_count": 2,
+            "tolerance_model_units": 1e-07
+          },
+          "receipt": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/one-side-registered-receipt.json",
+            "sha256": "8e20801e9aa350f80ca186445c19f81af7d585aadbdee0a5edbaa6e8dc0958ff"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/one-side-registered-draw.log",
+            "sha256": "16c9120081e5f81d0f97a7f0c01517331caf92b2191c1711688e63b22c15782e"
+          }
+        },
+        "independent": "FAIL",
+        "geometry": {
+          "vertices": [
+            [
+              0.0,
+              -5.0,
+              0.0
+            ],
+            [
+              0.0,
+              5.0,
+              0.0
+            ]
+          ],
+          "curve_endpoints": [
+            [
+              -5.0,
+              0.0,
+              -5.0,
+              0.0
+            ],
+            [
+              5.0,
+              0.0,
+              5.0,
+              0.0
+            ]
+          ],
+          "range": [
+            -5.0,
+            5.0
+          ],
+          "endpoints_and_entire_segment_pass": true,
+          "pcurves": [
+            {
+              "face": 1,
+              "kind": "Geom2d_TrimmedCurve",
+              "range": [
+                -5.0,
+                5.0
+              ],
+              "spans": [
+                [
+                  -5.0,
+                  5.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "maximum_same_parameter_error": 0.0,
+              "passed": true
+            },
+            {
+              "face": 2,
+              "kind": "Geom2d_BSplineCurve",
+              "range": [
+                -5.0,
+                5.0
+              ],
+              "spans": [
+                [
+                  -5.0,
+                  0.04999999999999982,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.04999999999999982,
+                  0.20000000000000018,
+                  1.0,
+                  0.125,
+                  0.0,
+                  0.0625,
+                  0.125
+                ],
+                [
+                  0.20000000000000018,
+                  0.40000000000000036,
+                  1.0,
+                  0.125,
+                  0.125,
+                  0.0625,
+                  0.0
+                ],
+                [
+                  0.40000000000000036,
+                  5.0,
+                  1.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "maximum_same_parameter_error": 0.125,
+              "passed": false
+            }
+          ],
+          "passed": false
+        },
+        "artifact": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/one-side.brep",
+          "sha256": "2022cdd5504cbd1df46f917752caa2da4b7f99944b33a47e82d4042fce0a93d2"
+        },
+        "read_log": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/one-side-read.log",
+          "sha256": "dd0d8ddd56dc2acef807c453de0d19b098e0151ae2a5e863e6b8ad1d575e03ba"
+        }
+      }
+    },
+    "live_pcurve_binding": {
+      "native-1": {
+        "three_dimensional_and_two_lifts": [
+          0.2,
+          0.0,
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.0
+        ],
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/binding-native-1-draw.log",
+          "sha256": "de89ee7986151afa5c9661eb4a7d381ff90c0ad6c96752d398f3be1c6c6a8674"
+        }
+      },
+      "one-side": {
+        "three_dimensional_and_two_lifts": [
+          0.2,
+          0.0,
+          0.2,
+          0.0,
+          0.0,
+          0.2,
+          0.0,
+          0.0,
+          0.32499999999999984,
+          0.0
+        ],
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v15/receipts/segment/binding-one-side-draw.log",
+          "sha256": "6fb90f693dc172c8e5bbabc47485ef864e2e4343787abb1ef402c94e597c7f3b"
+        }
+      }
+    }
+  }
+}

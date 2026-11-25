@@ -1,0 +1,12 @@
+  //! Projects a point P3D on the surface.
+  //! Does the same thing as ValueOfUV but tries to optimize
+  //! computations by taking into account previous point <p2dPrev>:
+  //! makes a step by UV and tries Newton algorithm.
+  //! If <maxpreci> >0. and distance between solution and
+  //! P3D is greater than <maxpreci>, that solution is considered
+  //! as bad, and ValueOfUV() is used.
+  //! If not succeeded, calls ValueOfUV()
+  Standard_EXPORT gp_Pnt2d NextValueOfUV(const gp_Pnt2d& p2dPrev,
+                                         const gp_Pnt&   P3D,
+                                         const double    preci,
+                                         const double    maxpreci = -1.0);

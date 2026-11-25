@@ -1,0 +1,38 @@
+{
+  "scope": "six portable regression fixtures",
+  "source_id": "occt-d9d3107d8df1",
+  "patch_sha256": "d370f00bf3beb357ee0413c7bef06a6a7c174bcb9d148c6530e1a1c4fdaec05b",
+  "status": "PASS",
+  "cases": {
+    "box-common": {
+      "baseline": "PASS",
+      "patch": "PASS",
+      "transition": "PRESERVED"
+    },
+    "disjoint": {
+      "baseline": "PASS",
+      "patch": "PASS",
+      "transition": "PRESERVED"
+    },
+    "cut-fuse": {
+      "baseline": "PASS",
+      "patch": "PASS",
+      "transition": "PRESERVED"
+    },
+    "plane-sphere": {
+      "baseline": "PASS",
+      "patch": "PASS",
+      "transition": "PRESERVED"
+    },
+    "hole-classification": {
+      "baseline": "PASS",
+      "patch": "PASS",
+      "transition": "PRESERVED"
+    },
+    "brep-roundtrip": {
+      "baseline": "PASS",
+      "patch": "PASS",
+      "transition": "PRESERVED"
+    }
+  }
+}

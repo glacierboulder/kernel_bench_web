@@ -1,0 +1,14 @@
+DRAW is running in batch mode
+BENCH_ASSERT_PASS input_validity both_valid=1 kind=expression
+BENCH_ASSERT_PASS operation_completed error=0 report= kind=expression
+BENCH_ASSERT_PASS shape_valid validity=This shape seems to be valid kind=expression
+BENCH_ASSERT_FAIL one_solid solids=0 expected=1 kind=numeric
+BENCH_ASSERT_FAIL analytic_volume observed=0 expected=925275412.6021273 absolute_limit=1.0 integration_epsilon=1e-10 kind=numeric
+BENCH_ASSERT_FAIL kept_positive point=(750,0,0) expected=IN observed=unavailable kind=expression
+BENCH_ASSERT_FAIL kept_negative point=(-750,0,0) expected=IN observed=unavailable kind=expression
+BENCH_ASSERT_FAIL removed_positive point=(0,750,0) expected=IN observed=unavailable kind=expression
+BENCH_ASSERT_FAIL removed_negative point=(0,-750,0) expected=IN observed=unavailable kind=expression
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=9 numeric_assertions=2
+TEST_DONE assertions=9 numeric_assertions=2
+ROLLOUT_RETURN 0 

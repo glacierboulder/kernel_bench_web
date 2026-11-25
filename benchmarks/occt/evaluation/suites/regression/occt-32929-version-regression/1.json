@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "occt-32929-version-regression",
+  "version": "1",
+  "title": "M32929 box fillet location and material",
+  "source_ids": [
+    "occt75-32929-b-f2724d41b326"
+  ],
+  "group_ids": [
+    "occt-single-32929"
+  ],
+  "checkpoints": [
+    {
+      "id": "box-fillet-32929",
+      "issue_id": "occt-32929",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/version-regressions/1/m32929-box/check.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "exact_input_edges",
+          "native",
+          "healthy-1",
+          "healthy-2",
+          "opposite_rejected"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/version-regressions/1/m32929-box/location.cxx",
+    "evaluation/cases/version-regressions/1/m32929-box/healthy-1-result.brep",
+    "evaluation/cases/version-regressions/1/m32929-box/healthy-2-result.brep",
+    "evaluation/cases/version-regressions/1/m32929-box/opposite-result.brep"
+  ]
+}

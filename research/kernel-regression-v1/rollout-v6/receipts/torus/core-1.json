@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "source_id": "occt23612-derived-e79fa864aeb8-torus",
+  "baseline_commit": "e79fa864aeb87e65d0f7550b4c8ad64725b0c1b8",
+  "baseline_tree_sha256": "2bf3e2955ab757ef37300b7b755c45d0788756b610b9738d80d16493b058f10f",
+  "toolchain": "occt1116-torus-gcc",
+  "role": "baseline",
+  "files_sha256": {
+    "probe.cxx": "fa3955b44300951c35f7b5d9e3dcd2b57f6a07e89f14d7221bba295bac195563",
+    "replay.py": "ebd69c4610a4b75384b83e241ccefacca56d3d4705b2bb9023672e845b3a93ef"
+  },
+  "cases": {},
+  "status": "INCONCLUSIVE",
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O0",
+    "-I/workspace/build/include/opencascade",
+    "/inputs/probe.cxx",
+    "-L/workspace/build/lin64/gcc/lib",
+    "-o",
+    "/tmp/tmp9cc3lc_x/probe",
+    "-lTKBO",
+    "-lTKPrim",
+    "-lTKTopAlgo",
+    "-lTKBRep",
+    "-lTKGeomAlgo",
+    "-lTKG3d",
+    "-lTKG2d",
+    "-lTKGeomBase",
+    "-lTKMath",
+    "-lTKernel"
+  ],
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "build": {
+    "status": "INCONCLUSIVE",
+    "log": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+  },
+  "elapsed_seconds": 0.006
+}

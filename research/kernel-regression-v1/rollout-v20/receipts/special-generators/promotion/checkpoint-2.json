@@ -1,0 +1,34 @@
+{
+  "suite": {
+    "id": "occt-24313-version-regression",
+    "version": "1",
+    "path": "evaluation/suites/regression/occt-24313-version-regression/1.json"
+  },
+  "source_id": "occt-single20-m24313-78b6b239841f",
+  "toolchain": "occt-v4-clang10-o0-tcl86",
+  "checkpoint": "generators",
+  "status": "passed",
+  "runner_sha256": "28b3a0baffa7fdf047f91fa33ed5f5c68e422b48ebecef84c3666296187ee93d",
+  "assets": {
+    "evaluation/cases/version-regressions/1/lines.cxx": "8f1d70a34b631e8a1a2ce2e1ea35615032768b1730763d7d93962ede5b308ce9",
+    "evaluation/cases/version-regressions/1/generators/fixture.txt": "22f67b5bc8de0522a256e11a02ab98626276253888c09df52de62debb9c8a3ca",
+    "evaluation/cases/version-regressions/1/generators/healthy.brep": "407edd8114a875b8f6a9248e0bc21deafe79aca655e1aa62646d7b02efe97bf2",
+    "evaluation/cases/version-regressions/1/generators/negative.brep": "04d231bf8ba203237bdb719288c6eed2b2aa9828e045d29d079514fc4065c170",
+    "evaluation/cases/version-regressions/1/generators/truncated.brep": "af55b5d84187d74512caac4492f792736c22c6ce76fb23b705bde5ef36744cbd"
+  },
+  "raw": {
+    "passed": true,
+    "compile": {
+      "return_code": 0,
+      "elapsed_seconds": 0.631,
+      "output_tail": "",
+      "timed_out": false
+    },
+    "result": {
+      "return_code": 0,
+      "elapsed_seconds": 0.009,
+      "output_tail": "native pass\nhealthy pass\nnegative duplicate\ntruncated truncated\nTEST_DONE\n",
+      "timed_out": false
+    }
+  }
+}

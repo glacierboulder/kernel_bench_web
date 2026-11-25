@@ -1,0 +1,1299 @@
+{
+  "merge": {
+    "source": {
+      "source_id": "occt-3e80fad1779e",
+      "commit": "3e80fad1779e4fab620d1ab1982bfd7722b6c92b",
+      "materialized_tree_sha256": "c53024a6a438c14a4bca3e3aae84bead8890cc7e82fdd9f018f235153e57507f",
+      "toolchain": "occt-clang10-tcl86-v1",
+      "toolchain_config": {
+        "path": "toolchains/occt-clang10-tcl86-v1.json",
+        "sha256": "769c081794400de38ae921646ad63e2db53f4e4e3b63d9e0ab4b0e2ae2fd560d"
+      },
+      "build_entry": {
+        "path": "tools/occt-clang10-v1/build.sh",
+        "sha256": "d8b730eb7aead0ccbe489495f0ebd9ca9ad8c1210a9c3bb975e231820f11ff82"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/identity.json",
+      "sha256": "ab4e84cd524848ce5ef94c4c1ce31dcb74d42b93eacaaa3c9b8d142665d0d5f7"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/runtime.json",
+      "sha256": "885c66f1670ddc401a8dc76875ac8ec12f05604b74efd15e71359836d0db118e"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/core-1.json",
+          "sha256": "7f7346397c7fc0601764bd53122093a883c3adc99359290322b1f0ec0d85cd13"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/core-2.json",
+          "sha256": "2fcec82fcf85e35ed2a80abe54505c3f044a3a44f15e39beb2bcb1f105b0bc5c"
+        }
+      ]
+    },
+    "registered_status": "NOT_APPLICABLE",
+    "status": "CALIBRATED",
+    "registered": false,
+    "scope": "Two adjacent cuboids; planar rectangular shell partition plus material witnesses.",
+    "native": {
+      "before": {
+        "volume": 480.0,
+        "surface_area": 376.0,
+        "centroid": [
+          4.999999999999999,
+          4.0,
+          3.0
+        ],
+        "faces": 10,
+        "edges": 20,
+        "bounds": [
+          0.0,
+          0.0,
+          0.0,
+          10.0,
+          8.0,
+          6.0
+        ],
+        "valid": true,
+        "closed_rectangle_shell": true,
+        "one_face_per_side": false,
+        "material": {
+          "tested": 128,
+          "mismatches": 0,
+          "examples": []
+        }
+      },
+      "after": {
+        "volume": 480.0,
+        "surface_area": 376.0,
+        "centroid": [
+          4.999999999999999,
+          4.0,
+          3.0
+        ],
+        "faces": 6,
+        "edges": 12,
+        "bounds": [
+          0.0,
+          0.0,
+          0.0,
+          10.0,
+          8.0,
+          6.0
+        ],
+        "valid": true,
+        "closed_rectangle_shell": true,
+        "one_face_per_side": true,
+        "material": {
+          "tested": 128,
+          "mismatches": 0,
+          "examples": []
+        }
+      },
+      "before_brep": {
+        "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/healthy-1-before.brep",
+        "sha256": "d96aa91295b84563d03b692e02d959e2e6fe64ab0fd739822a451c5a710e153f"
+      },
+      "native_brep": {
+        "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/healthy-1-native.brep",
+        "sha256": "e423ec0dd41af773aba4441b965face4dea1cfd5c0036f51b5e545bc7f89643f"
+      }
+    },
+    "controls": {
+      "healthy-1": {
+        "volume": 480.0,
+        "surface_area": 376.0,
+        "centroid": [
+          4.999999999999999,
+          4.0,
+          3.0
+        ],
+        "faces": 6,
+        "edges": 12,
+        "bounds": [
+          0.0,
+          0.0,
+          0.0,
+          10.0,
+          8.0,
+          6.0
+        ],
+        "valid": true,
+        "closed_rectangle_shell": true,
+        "one_face_per_side": true,
+        "material": {
+          "tested": 128,
+          "mismatches": 0,
+          "examples": []
+        },
+        "passed": true,
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/healthy-1-out.brep",
+          "sha256": "e423ec0dd41af773aba4441b965face4dea1cfd5c0036f51b5e545bc7f89643f"
+        },
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/healthy-1-out-read.log",
+          "sha256": "6ba68fb41a1501bceb7b709faf3eafb61963b2e84943c504d40b0854df8f4269"
+        }
+      },
+      "healthy-2": {
+        "volume": 480.0,
+        "surface_area": 376.0,
+        "centroid": [
+          4.999999999999999,
+          4.0,
+          3.0
+        ],
+        "faces": 6,
+        "edges": 12,
+        "bounds": [
+          0.0,
+          0.0,
+          0.0,
+          10.0,
+          8.0,
+          6.0
+        ],
+        "valid": true,
+        "closed_rectangle_shell": true,
+        "one_face_per_side": true,
+        "material": {
+          "tested": 128,
+          "mismatches": 0,
+          "examples": []
+        },
+        "passed": true,
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/healthy-2-out.brep",
+          "sha256": "e423ec0dd41af773aba4441b965face4dea1cfd5c0036f51b5e545bc7f89643f"
+        },
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/healthy-2-out-read.log",
+          "sha256": "6ba68fb41a1501bceb7b709faf3eafb61963b2e84943c504d40b0854df8f4269"
+        }
+      },
+      "shift": {
+        "volume": 480.0,
+        "surface_area": 376.0,
+        "centroid": [
+          5.999999999999999,
+          4.0,
+          3.0
+        ],
+        "faces": 6,
+        "edges": 12,
+        "bounds": [
+          1.0,
+          0.0,
+          0.0,
+          11.0,
+          8.0,
+          6.0
+        ],
+        "valid": true,
+        "closed_rectangle_shell": false,
+        "one_face_per_side": false,
+        "material": {
+          "tested": 128,
+          "mismatches": 8,
+          "examples": [
+            {
+              "x": 0.25,
+              "y": 2.5,
+              "z": 1.0,
+              "want": "IN",
+              "observed": "OUT"
+            },
+            {
+              "x": 0.25,
+              "y": 2.5,
+              "z": 5.0,
+              "want": "IN",
+              "observed": "OUT"
+            },
+            {
+              "x": 0.25,
+              "y": 6.0,
+              "z": 1.0,
+              "want": "IN",
+              "observed": "OUT"
+            },
+            {
+              "x": 0.25,
+              "y": 6.0,
+              "z": 5.0,
+              "want": "IN",
+              "observed": "OUT"
+            }
+          ]
+        },
+        "passed": false,
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/shift-out.brep",
+          "sha256": "c6a78c15d2ac17a9d88e66e3785578b95f57e2ef6c727e96d70d0e5816ba841d"
+        },
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/shift-out-read.log",
+          "sha256": "33cbe0170d436aa8ee87ef74ada051675c390b1c97f8a39c41129769c31e34b5"
+        }
+      },
+      "notch": {
+        "volume": 472.0,
+        "surface_area": 392.0,
+        "centroid": [
+          5.016949152542374,
+          4.016949152542375,
+          2.9661016949152543
+        ],
+        "faces": 11,
+        "edges": 24,
+        "bounds": [
+          0.0,
+          0.0,
+          0.0,
+          10.0,
+          8.0,
+          6.0
+        ],
+        "valid": true,
+        "closed_rectangle_shell": false,
+        "one_face_per_side": false,
+        "material": {
+          "tested": 128,
+          "mismatches": 2,
+          "examples": [
+            {
+              "x": 3.5,
+              "y": 2.5,
+              "z": 5.0,
+              "want": "IN",
+              "observed": "OUT"
+            },
+            {
+              "x": 4.75,
+              "y": 2.5,
+              "z": 5.0,
+              "want": "IN",
+              "observed": "OUT"
+            }
+          ]
+        },
+        "passed": false,
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/notch-out.brep",
+          "sha256": "c251e7cd56c0724529fcde8c4527f72203991ee6c7da5fdad2cb9b5aba32e4ad"
+        },
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/notch-out-read.log",
+          "sha256": "2c0bd5de5e6e48f6b8750eb09aa7bddb9ba6f0c9cf48a0ea34d1713bb58aaaef"
+        }
+      },
+      "seam": {
+        "volume": 480.0,
+        "surface_area": 376.0,
+        "centroid": [
+          4.999999999999999,
+          4.0,
+          3.0
+        ],
+        "faces": 10,
+        "edges": 20,
+        "bounds": [
+          0.0,
+          0.0,
+          0.0,
+          10.0,
+          8.0,
+          6.0
+        ],
+        "valid": true,
+        "closed_rectangle_shell": true,
+        "one_face_per_side": false,
+        "material": {
+          "tested": 128,
+          "mismatches": 0,
+          "examples": []
+        },
+        "passed": false,
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/seam-out.brep",
+          "sha256": "d96aa91295b84563d03b692e02d959e2e6fe64ab0fd739822a451c5a710e153f"
+        },
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/merge/seam-out-read.log",
+          "sha256": "bc79a00e1978feef2e6daf6b80a9c60d39b48c43ecb46cfc236b1ae2ffa9fc8f"
+        }
+      }
+    }
+  },
+  "fillet": {
+    "source": {
+      "source_id": "occt801-1371-b-b8f597c67781",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "toolchain": "occt8-gcc13-cpp-20261112",
+      "toolchain_config": {
+        "path": "toolchains/occt8-gcc13-cpp-20261112.json",
+        "sha256": "859802cd60dc1127b7f5951f0688ac27d953d653b4c915fa6b4231620d8d39a0"
+      },
+      "build_entry": {
+        "path": "tools/occt8-gcc13-cpp/build.sh",
+        "sha256": "b166ea190712b4b3f2ba57d1d008fad24b9d434ea082016e4f099033f8c6177e"
+      },
+      "declared_public_targets": [
+        "TKFillet",
+        "TKPrim"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/identity.json",
+      "sha256": "adf33f346e39147abc0e148be8cf2fe60cf4318004fbaa5fa82a32bdde4e1593"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/runtime.json",
+      "sha256": "85435d1c9c49e51be41f557d26a9a26ceb8146def4cf110db18be7bec3cbc9cd"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "exit_by_role": {},
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/core-1.json",
+          "sha256": "8e75cc5e929a5ae89ff5c93aa0256536d2489d3cfed977b414477f04b3ce8b1a"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/core-2.json",
+          "sha256": "dee48b79d3add52bf1d376731c55795c42b29abd91ae02522c5e314e782cfd67"
+        }
+      ]
+    },
+    "registered_status": "NOT_APPLICABLE",
+    "status": "CALIBRATED",
+    "registered": false,
+    "scope": "Analytic circular extrusion, designated top rim, radius-1 fillet and both rim neighborhoods.",
+    "input_geometry": {
+      "target": {
+        "id": 3,
+        "center": [
+          0.0,
+          0.0,
+          10.0
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "radius": 5.0,
+        "parameter": [
+          0.0,
+          6.28318530717959
+        ],
+        "closed": true,
+        "adjacent_faces": [
+          1,
+          3
+        ]
+      },
+      "other": {
+        "id": 2,
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "radius": 5.0,
+        "parameter": [
+          0.0,
+          6.28318530717959
+        ],
+        "closed": true,
+        "adjacent_faces": [
+          1,
+          2
+        ]
+      },
+      "source_brep": {
+        "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/healthy-1-source.brep",
+        "sha256": "bff5f67288fa187982a2335f172307ec9815296e5362453ea05509b52b9a0f23"
+      },
+      "volume": 785.3981633974481,
+      "expected_fillet_volume": 778.9574334197121
+    },
+    "controls": {
+      "healthy-1": {
+        "passed": true,
+        "valid": true,
+        "selected": {
+          "id": 1,
+          "center": [
+            0.0,
+            0.0,
+            10.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius": 5.0,
+          "parameter": [
+            0.0,
+            6.28318530717959
+          ],
+          "closed": true,
+          "adjacent_faces": []
+        },
+        "torus": [
+          [
+            2.0,
+            0.0,
+            0.0,
+            9.0,
+            0.0,
+            0.0,
+            1.0,
+            4.0,
+            1.0
+          ]
+        ],
+        "faces": 4,
+        "volume": 778.9574334197122,
+        "area": 457.3102405317999,
+        "material_against_target": {
+          "tested": 165,
+          "mismatches": 0,
+          "examples": []
+        },
+        "actual_control_material": {
+          "tested": 165,
+          "mismatches": 0,
+          "examples": []
+        },
+        "regions": {
+          "top": {
+            "tested": 66,
+            "mismatches": 0,
+            "examples": []
+          },
+          "bottom": {
+            "tested": 66,
+            "mismatches": 0,
+            "examples": []
+          },
+          "middle": {
+            "tested": 33,
+            "mismatches": 0,
+            "examples": []
+          }
+        },
+        "round_boundaries": [
+          {
+            "id": 2,
+            "center": [
+              0.0,
+              0.0,
+              9.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 5.0,
+            "parameter": [
+              0.0,
+              6.28318530717959
+            ],
+            "closed": true,
+            "adjacent_faces": [
+              1,
+              2
+            ]
+          },
+          {
+            "id": 5,
+            "center": [
+              0.0,
+              0.0,
+              10.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 4.0,
+            "parameter": [
+              0.0,
+              6.28318530717959
+            ],
+            "closed": true,
+            "adjacent_faces": [
+              2,
+              4
+            ]
+          }
+        ],
+        "target_location": true,
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/healthy-1-out.brep",
+          "sha256": "eb08e37a82d23b3f64c24f215bfba9ea6231cf921299cc51bdfd32458342e522"
+        },
+        "raw": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/healthy-1-out-read.log",
+          "sha256": "005aee4a9d2017304dbf733e85641f42e403a4b7b62aefcb31dcde2f1ee2e97b"
+        }
+      },
+      "healthy-2": {
+        "passed": true,
+        "valid": true,
+        "selected": {
+          "id": 1,
+          "center": [
+            0.0,
+            0.0,
+            10.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius": 5.0,
+          "parameter": [
+            0.0,
+            6.28318530717959
+          ],
+          "closed": true,
+          "adjacent_faces": []
+        },
+        "torus": [
+          [
+            2.0,
+            0.0,
+            0.0,
+            9.0,
+            0.0,
+            0.0,
+            1.0,
+            4.0,
+            1.0
+          ]
+        ],
+        "faces": 4,
+        "volume": 778.9574334197122,
+        "area": 457.3102405317999,
+        "material_against_target": {
+          "tested": 165,
+          "mismatches": 0,
+          "examples": []
+        },
+        "actual_control_material": {
+          "tested": 165,
+          "mismatches": 0,
+          "examples": []
+        },
+        "regions": {
+          "top": {
+            "tested": 66,
+            "mismatches": 0,
+            "examples": []
+          },
+          "bottom": {
+            "tested": 66,
+            "mismatches": 0,
+            "examples": []
+          },
+          "middle": {
+            "tested": 33,
+            "mismatches": 0,
+            "examples": []
+          }
+        },
+        "round_boundaries": [
+          {
+            "id": 2,
+            "center": [
+              0.0,
+              0.0,
+              9.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 5.0,
+            "parameter": [
+              0.0,
+              6.28318530717959
+            ],
+            "closed": true,
+            "adjacent_faces": [
+              1,
+              2
+            ]
+          },
+          {
+            "id": 5,
+            "center": [
+              0.0,
+              0.0,
+              10.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 4.0,
+            "parameter": [
+              0.0,
+              6.28318530717959
+            ],
+            "closed": true,
+            "adjacent_faces": [
+              2,
+              4
+            ]
+          }
+        ],
+        "target_location": true,
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/healthy-2-out.brep",
+          "sha256": "eb08e37a82d23b3f64c24f215bfba9ea6231cf921299cc51bdfd32458342e522"
+        },
+        "raw": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/healthy-2-out-read.log",
+          "sha256": "005aee4a9d2017304dbf733e85641f42e403a4b7b62aefcb31dcde2f1ee2e97b"
+        }
+      },
+      "wrong-rim": {
+        "passed": false,
+        "valid": true,
+        "selected": {
+          "id": 1,
+          "center": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "radius": 5.0,
+          "parameter": [
+            0.0,
+            6.28318530717959
+          ],
+          "closed": true,
+          "adjacent_faces": []
+        },
+        "torus": [
+          [
+            2.0,
+            0.0,
+            0.0,
+            1.0,
+            -0.0,
+            -0.0,
+            -1.0,
+            4.0,
+            1.0
+          ]
+        ],
+        "faces": 4,
+        "volume": 778.9574334197122,
+        "area": 457.3102405317999,
+        "material_against_target": {
+          "tested": 165,
+          "mismatches": 48,
+          "examples": [
+            {
+              "x": 4.462573025834699,
+              "y": 0.8876609651733834,
+              "z": 0.1,
+              "want": "IN",
+              "observed": "OUT"
+            },
+            {
+              "x": 2.52784456023919,
+              "y": 3.7831867359765807,
+              "z": 0.1,
+              "want": "IN",
+              "observed": "OUT"
+            },
+            {
+              "x": -0.8876609651733832,
+              "y": 4.462573025834699,
+              "z": 0.1,
+              "want": "IN",
+              "observed": "OUT"
+            },
+            {
+              "x": -3.783186735976581,
+              "y": 2.5278445602391897,
+              "z": 0.1,
+              "want": "IN",
+              "observed": "OUT"
+            }
+          ]
+        },
+        "actual_control_material": {
+          "tested": 165,
+          "mismatches": 0,
+          "examples": []
+        },
+        "regions": {
+          "top": {
+            "tested": 66,
+            "mismatches": 24,
+            "examples": [
+              {
+                "x": 4.462573025834699,
+                "y": 0.8876609651733834,
+                "z": 9.9,
+                "want": "OUT",
+                "observed": "IN"
+              },
+              {
+                "x": 2.52784456023919,
+                "y": 3.7831867359765807,
+                "z": 9.9,
+                "want": "OUT",
+                "observed": "IN"
+              },
+              {
+                "x": -0.8876609651733832,
+                "y": 4.462573025834699,
+                "z": 9.9,
+                "want": "OUT",
+                "observed": "IN"
+              },
+              {
+                "x": -3.783186735976581,
+                "y": 2.5278445602391897,
+                "z": 9.9,
+                "want": "OUT",
+                "observed": "IN"
+              }
+            ]
+          },
+          "bottom": {
+            "tested": 66,
+            "mismatches": 24,
+            "examples": [
+              {
+                "x": 4.462573025834699,
+                "y": 0.8876609651733834,
+                "z": 0.1,
+                "want": "IN",
+                "observed": "OUT"
+              },
+              {
+                "x": 2.52784456023919,
+                "y": 3.7831867359765807,
+                "z": 0.1,
+                "want": "IN",
+                "observed": "OUT"
+              },
+              {
+                "x": -0.8876609651733832,
+                "y": 4.462573025834699,
+                "z": 0.1,
+                "want": "IN",
+                "observed": "OUT"
+              },
+              {
+                "x": -3.783186735976581,
+                "y": 2.5278445602391897,
+                "z": 0.1,
+                "want": "IN",
+                "observed": "OUT"
+              }
+            ]
+          },
+          "middle": {
+            "tested": 33,
+            "mismatches": 0,
+            "examples": []
+          }
+        },
+        "round_boundaries": [
+          {
+            "id": 2,
+            "center": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 5.0,
+            "parameter": [
+              0.0,
+              6.28318530717959
+            ],
+            "closed": true,
+            "adjacent_faces": [
+              1,
+              2
+            ]
+          },
+          {
+            "id": 5,
+            "center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 4.0,
+            "parameter": [
+              0.0,
+              6.28318530717959
+            ],
+            "closed": true,
+            "adjacent_faces": [
+              2,
+              4
+            ]
+          }
+        ],
+        "target_location": false,
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/wrong-rim-out.brep",
+          "sha256": "ea1f1a57eba2ebffdbc027e6d368b699a693face89d82974ae01cb0bcc6be705"
+        },
+        "raw": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/wrong-rim-out-read.log",
+          "sha256": "8c302ecdbdfe9b3f8c974660b9312233127e0c7fceee37d22d85b4ed562ea38e"
+        }
+      },
+      "untouched": {
+        "passed": false,
+        "valid": true,
+        "selected": null,
+        "torus": [],
+        "faces": 3,
+        "volume": 785.3981633974481,
+        "area": 471.23889803846873,
+        "material_against_target": {
+          "tested": 165,
+          "mismatches": 24,
+          "examples": [
+            {
+              "x": 4.462573025834699,
+              "y": 0.8876609651733834,
+              "z": 9.9,
+              "want": "OUT",
+              "observed": "IN"
+            },
+            {
+              "x": 2.52784456023919,
+              "y": 3.7831867359765807,
+              "z": 9.9,
+              "want": "OUT",
+              "observed": "IN"
+            },
+            {
+              "x": -0.8876609651733832,
+              "y": 4.462573025834699,
+              "z": 9.9,
+              "want": "OUT",
+              "observed": "IN"
+            },
+            {
+              "x": -3.783186735976581,
+              "y": 2.5278445602391897,
+              "z": 9.9,
+              "want": "OUT",
+              "observed": "IN"
+            }
+          ]
+        },
+        "actual_control_material": {
+          "tested": 165,
+          "mismatches": 0,
+          "examples": []
+        },
+        "regions": {
+          "top": {
+            "tested": 66,
+            "mismatches": 24,
+            "examples": [
+              {
+                "x": 4.462573025834699,
+                "y": 0.8876609651733834,
+                "z": 9.9,
+                "want": "OUT",
+                "observed": "IN"
+              },
+              {
+                "x": 2.52784456023919,
+                "y": 3.7831867359765807,
+                "z": 9.9,
+                "want": "OUT",
+                "observed": "IN"
+              },
+              {
+                "x": -0.8876609651733832,
+                "y": 4.462573025834699,
+                "z": 9.9,
+                "want": "OUT",
+                "observed": "IN"
+              },
+              {
+                "x": -3.783186735976581,
+                "y": 2.5278445602391897,
+                "z": 9.9,
+                "want": "OUT",
+                "observed": "IN"
+              }
+            ]
+          },
+          "bottom": {
+            "tested": 66,
+            "mismatches": 0,
+            "examples": []
+          },
+          "middle": {
+            "tested": 33,
+            "mismatches": 0,
+            "examples": []
+          }
+        },
+        "round_boundaries": [],
+        "target_location": false,
+        "brep": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/untouched-out.brep",
+          "sha256": "f980ee6f9c29d88ad1db8b7a9a77f5dc5588628b21d5002c11b20d664b6acd46"
+        },
+        "raw": {
+          "path": "research/kernel-regression-v1/rollout-v18/receipts/fillet/untouched-out-read.log",
+          "sha256": "f2ad373b1b611881b4d901497721e59479bc91d4c86cb33020be2b963aa79f8b"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "checkpoints": [
+    {
+      "case": "evaluation/cases/version-regressions/1/fillet-cut.cxx",
+      "category": "regression",
+      "id": "fillet-cut",
+      "issue_id": "occt-github-1701",
+      "oracle": "stdout_contains_v1",
+      "required": true,
+      "runner": "cpp_case_v1",
+      "runner_options": {
+        "case_timeout_seconds": 45,
+        "inputs": [
+          "issues/occt-github-1701/1/public/inputs/prefillet.brep",
+          "evaluation/cases/authoring-fillet-20261112/occt-github-1701/1/smaller.txt",
+          "evaluation/cases/version-regressions/1/fillet-cut/witnesses.txt",
+          "evaluation/cases/version-regressions/1/fillet-cut/healthy-1-result.brep",
+          "evaluation/cases/version-regressions/1/fillet-cut/healthy-1-cut.brep",
+          "evaluation/cases/version-regressions/1/fillet-cut/healthy-1-removed.brep",
+          "evaluation/cases/version-regressions/1/fillet-cut/healthy-2-result.brep",
+          "evaluation/cases/version-regressions/1/fillet-cut/healthy-2-cut.brep",
+          "evaluation/cases/version-regressions/1/fillet-cut/healthy-2-removed.brep",
+          "evaluation/cases/version-regressions/1/fillet-cut/wrong-edge-result.brep",
+          "evaluation/cases/version-regressions/1/fillet-cut/wrong-edge-cut.brep",
+          "evaluation/cases/version-regressions/1/fillet-cut/wrong-edge-removed.brep",
+          "evaluation/cases/version-regressions/1/fillet-cut/wrong-cut-result.brep",
+          "evaluation/cases/version-regressions/1/fillet-cut/wrong-cut-cut.brep",
+          "evaluation/cases/version-regressions/1/fillet-cut/wrong-cut-removed.brep"
+        ],
+        "libraries": [
+          "TKFillet",
+          "TKPrim",
+          "TKBO",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKMath",
+          "TKernel",
+          "TKG3d",
+          "TKGeomBase",
+          "TKGeomAlgo",
+          "TKG2d",
+          "dl"
+        ],
+        "stdout_contains": [
+          "INPUT edge=6 alternate=11 witnesses=107",
+          "CONTROL native fillet_errors=0 target_faces=1 alternate_faces=0 cut_errors=0 removed_errors=0 z_low=1 z_high=2",
+          "CONTROL healthy-1 fillet_errors=0 target_faces=1 alternate_faces=0 cut_errors=0 removed_errors=0 z_low=1 z_high=2",
+          "CONTROL healthy-2 fillet_errors=0 target_faces=1 alternate_faces=0 cut_errors=0 removed_errors=0 z_low=1 z_high=2",
+          "CONTROL wrong-edge fillet_errors=24 target_faces=0 alternate_faces=1 cut_errors=0 removed_errors=0 z_low=1 z_high=2",
+          "CONTROL wrong-cut fillet_errors=0 target_faces=1 alternate_faces=0 cut_errors=37 removed_errors=37 z_low=0.25 z_high=1.25",
+          "TEST_DONE"
+        ]
+      },
+      "timeout_seconds": 60,
+      "visibility": "hidden"
+    }
+  ],
+  "group_ids": [
+    "occt-single-github-1701"
+  ],
+  "id": "occt-github-1701-version-regression",
+  "schema_version": 1,
+  "source_ids": [
+    "occt801-1701-b-b8f597c67781"
+  ],
+  "title": "GH-1701 smaller fillet and actual cut location",
+  "version": "1"
+}

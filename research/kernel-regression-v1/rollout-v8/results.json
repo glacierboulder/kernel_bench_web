@@ -1,0 +1,1907 @@
+{
+  "circle": {
+    "source": {
+      "source_id": "occt-v4-e6afb5398317",
+      "commit": "e6afb53983172155891ef175943534e0e1a24f75",
+      "materialized_tree_sha256": "a28f641dad6310bece14379db895a7da1482305273ccffd5ebb3b8774d03e841",
+      "toolchain": "occt-v4-clang10-o0-tcl86",
+      "toolchain_config": {
+        "path": "toolchains/occt-v4-clang10-o0-tcl86.json",
+        "sha256": "6c1675f2f34f07dd5945a9782f3835878e74bfc97838eb6ccc22a6f9a0d855e3"
+      },
+      "build_entry": {
+        "path": "tools/occt-v4-clang10-o0/build.sh",
+        "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/identity.json",
+      "sha256": "43026df61672590e1c3639e9f7fcaf41418c48153c269c314bfa4d1e95c80f37"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/runtime.json",
+      "sha256": "6b370c5fa042548f9fb59a52cccdd0b42fe0138dc55af6768d0d261652e1bad1"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/core-1.json",
+          "sha256": "6fe652a6b71e04f6ede08175f7b85b98794cb947465e17c5397af112a36cd983"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/core-2.json",
+          "sha256": "8146ca5bcc9caf167216ed3e6b70b8d056962869c57a13bd8777b914280e4b2f"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "independent_status": "CALIBRATED",
+    "registered_baseline": {
+      "status": "geometry_pass",
+      "assertions": {
+        "solution_count": "PASS",
+        "curve_length": "PASS"
+      },
+      "log": {
+        "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/registered.log",
+        "sha256": "36d13e923f1c3db733b0489795fe8c4c9eb7ce486bf23b3c1c448bd70b66d38d"
+      }
+    },
+    "controls": {
+      "healthy-1": {
+        "registered": {
+          "status": "geometry_pass",
+          "assertions": {
+            "solution_count": "PASS",
+            "curve_length": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-1.log",
+            "sha256": "36d13e923f1c3db733b0489795fe8c4c9eb7ce486bf23b3c1c448bd70b66d38d"
+          }
+        },
+        "independent": "PASS",
+        "injection_verified": null,
+        "input_cylinder_domain": [
+          0.0,
+          6.283185307179586,
+          -2e+100,
+          2e+100
+        ],
+        "input_plane_domain": [
+          -2e+100,
+          2e+100,
+          -2e+100,
+          2e+100
+        ],
+        "native_trim": [
+          0.0,
+          6.28318530717959
+        ],
+        "edge_checks": [
+          {
+            "center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "parameter_x": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "radius": 5.0,
+            "trim": [
+              0.0,
+              6.28318530717959
+            ],
+            "endpoints": [
+              [
+                5.0,
+                0.0,
+                0.0
+              ],
+              [
+                5.0,
+                1.653892159485515e-14,
+                0.0
+              ]
+            ],
+            "length": 31.41592653589795,
+            "nominal_length": true,
+            "endpoint_distance": 1.653892159485515e-14,
+            "closed": true,
+            "world_missing_radians": [],
+            "circle_position": "PASS",
+            "angular_coverage": "PASS",
+            "verdict": "PASS",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-1-read-edge.log",
+              "sha256": "40bf1335bc825365bd0748fbeed7182b9fd364d558dc186289d7defc23f20851"
+            }
+          },
+          {
+            "center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "parameter_x": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "radius": 5.0,
+            "trim": [
+              0.0,
+              6.28318530717959
+            ],
+            "endpoints": [
+              [
+                5.0,
+                0.0,
+                0.0
+              ],
+              [
+                5.0,
+                1.653892159485515e-14,
+                0.0
+              ]
+            ],
+            "length": 31.41592653589795,
+            "nominal_length": true,
+            "endpoint_distance": 1.653892159485515e-14,
+            "closed": true,
+            "world_missing_radians": [],
+            "circle_position": "PASS",
+            "angular_coverage": "PASS",
+            "verdict": "PASS",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-1-read-restored_edge.log",
+              "sha256": "40bf1335bc825365bd0748fbeed7182b9fd364d558dc186289d7defc23f20851"
+            }
+          }
+        ],
+        "native_reader": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-1-restore.log",
+          "sha256": "fedcf451dd7613d7432e3ef6c88d8a7c1c1a0d1f5541ff25adb86f8b00608256"
+        },
+        "artifacts": {
+          "c.draw": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-1-c.draw",
+            "sha256": "9c468fee5d687c6a38ce07766cbd5ee6a956c1e452f1092eb540461654162cdb"
+          },
+          "p.draw": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-1-p.draw",
+            "sha256": "c396218250e081125cfff15c0ed0292d4cb6dd26dfdcc5d27783e54440b88a19"
+          },
+          "regcurve.draw": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-1-regcurve.draw",
+            "sha256": "50593ef9d500c181dac67b296cb45a701f06305cb5f6ce249ec1be8bd95bdaa3"
+          },
+          "edge.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-1-edge.brep",
+            "sha256": "0539736f4d196b08584ac2953d7a89380a23cca9e41679d074a17f0316221d39"
+          },
+          "restored_edge.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-1-restored_edge.brep",
+            "sha256": "0539736f4d196b08584ac2953d7a89380a23cca9e41679d074a17f0316221d39"
+          },
+          "fc.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-1-fc.brep",
+            "sha256": "4bf8e2af3bb4315aa44c4159de84bfe19e2712692c816e3db80689b9ec0d9ec5"
+          },
+          "fp.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-1-fp.brep",
+            "sha256": "bedf5678e3dc27c21572663eaf8a1a18535d07b6ab5407d09166af7c11127061"
+          }
+        }
+      },
+      "healthy-2": {
+        "registered": {
+          "status": "geometry_pass",
+          "assertions": {
+            "solution_count": "PASS",
+            "curve_length": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-2.log",
+            "sha256": "36d13e923f1c3db733b0489795fe8c4c9eb7ce486bf23b3c1c448bd70b66d38d"
+          }
+        },
+        "independent": "PASS",
+        "injection_verified": null,
+        "input_cylinder_domain": [
+          0.0,
+          6.283185307179586,
+          -2e+100,
+          2e+100
+        ],
+        "input_plane_domain": [
+          -2e+100,
+          2e+100,
+          -2e+100,
+          2e+100
+        ],
+        "native_trim": [
+          0.0,
+          6.28318530717959
+        ],
+        "edge_checks": [
+          {
+            "center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "parameter_x": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "radius": 5.0,
+            "trim": [
+              0.0,
+              6.28318530717959
+            ],
+            "endpoints": [
+              [
+                5.0,
+                0.0,
+                0.0
+              ],
+              [
+                5.0,
+                1.653892159485515e-14,
+                0.0
+              ]
+            ],
+            "length": 31.41592653589795,
+            "nominal_length": true,
+            "endpoint_distance": 1.653892159485515e-14,
+            "closed": true,
+            "world_missing_radians": [],
+            "circle_position": "PASS",
+            "angular_coverage": "PASS",
+            "verdict": "PASS",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-2-read-edge.log",
+              "sha256": "40bf1335bc825365bd0748fbeed7182b9fd364d558dc186289d7defc23f20851"
+            }
+          },
+          {
+            "center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "parameter_x": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "radius": 5.0,
+            "trim": [
+              0.0,
+              6.28318530717959
+            ],
+            "endpoints": [
+              [
+                5.0,
+                0.0,
+                0.0
+              ],
+              [
+                5.0,
+                1.653892159485515e-14,
+                0.0
+              ]
+            ],
+            "length": 31.41592653589795,
+            "nominal_length": true,
+            "endpoint_distance": 1.653892159485515e-14,
+            "closed": true,
+            "world_missing_radians": [],
+            "circle_position": "PASS",
+            "angular_coverage": "PASS",
+            "verdict": "PASS",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-2-read-restored_edge.log",
+              "sha256": "40bf1335bc825365bd0748fbeed7182b9fd364d558dc186289d7defc23f20851"
+            }
+          }
+        ],
+        "native_reader": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-2-restore.log",
+          "sha256": "fedcf451dd7613d7432e3ef6c88d8a7c1c1a0d1f5541ff25adb86f8b00608256"
+        },
+        "artifacts": {
+          "c.draw": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-2-c.draw",
+            "sha256": "9c468fee5d687c6a38ce07766cbd5ee6a956c1e452f1092eb540461654162cdb"
+          },
+          "p.draw": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-2-p.draw",
+            "sha256": "c396218250e081125cfff15c0ed0292d4cb6dd26dfdcc5d27783e54440b88a19"
+          },
+          "regcurve.draw": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-2-regcurve.draw",
+            "sha256": "50593ef9d500c181dac67b296cb45a701f06305cb5f6ce249ec1be8bd95bdaa3"
+          },
+          "edge.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-2-edge.brep",
+            "sha256": "0539736f4d196b08584ac2953d7a89380a23cca9e41679d074a17f0316221d39"
+          },
+          "restored_edge.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-2-restored_edge.brep",
+            "sha256": "0539736f4d196b08584ac2953d7a89380a23cca9e41679d074a17f0316221d39"
+          },
+          "fc.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-2-fc.brep",
+            "sha256": "4bf8e2af3bb4315aa44c4159de84bfe19e2712692c816e3db80689b9ec0d9ec5"
+          },
+          "fp.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/healthy-2-fp.brep",
+            "sha256": "bedf5678e3dc27c21572663eaf8a1a18535d07b6ab5407d09166af7c11127061"
+          }
+        }
+      },
+      "wrong-plane": {
+        "registered": {
+          "status": "geometry_pass",
+          "assertions": {
+            "solution_count": "PASS",
+            "curve_length": "PASS"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/wrong-plane.log",
+            "sha256": "36d13e923f1c3db733b0489795fe8c4c9eb7ce486bf23b3c1c448bd70b66d38d"
+          }
+        },
+        "independent": "FAIL",
+        "injection_verified": true,
+        "input_cylinder_domain": [
+          0.0,
+          6.283185307179586,
+          -2e+100,
+          2e+100
+        ],
+        "input_plane_domain": [
+          -2e+100,
+          2e+100,
+          -2e+100,
+          2e+100
+        ],
+        "native_trim": [
+          0.0,
+          6.28318530717959
+        ],
+        "edge_checks": [
+          {
+            "center": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "parameter_x": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "radius": 5.0,
+            "trim": [
+              0.0,
+              6.28318530717959
+            ],
+            "endpoints": [
+              [
+                5.0,
+                0.0,
+                2.0
+              ],
+              [
+                5.0,
+                1.653892159485515e-14,
+                2.0
+              ]
+            ],
+            "length": 31.41592653589795,
+            "nominal_length": true,
+            "endpoint_distance": 1.653892159485515e-14,
+            "closed": true,
+            "world_missing_radians": [],
+            "circle_position": "FAIL",
+            "angular_coverage": "PASS",
+            "verdict": "FAIL",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/wrong-plane-read-edge.log",
+              "sha256": "f24fbef27e214fad78959cdc00fd2b0df893cbd7b7b06c7460df2223f76db487"
+            }
+          },
+          {
+            "center": [
+              0.0,
+              0.0,
+              2.0
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "parameter_x": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "radius": 5.0,
+            "trim": [
+              0.0,
+              6.28318530717959
+            ],
+            "endpoints": [
+              [
+                5.0,
+                0.0,
+                2.0
+              ],
+              [
+                5.0,
+                1.653892159485515e-14,
+                2.0
+              ]
+            ],
+            "length": 31.41592653589795,
+            "nominal_length": true,
+            "endpoint_distance": 1.653892159485515e-14,
+            "closed": true,
+            "world_missing_radians": [],
+            "circle_position": "FAIL",
+            "angular_coverage": "PASS",
+            "verdict": "FAIL",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/wrong-plane-read-restored_edge.log",
+              "sha256": "f24fbef27e214fad78959cdc00fd2b0df893cbd7b7b06c7460df2223f76db487"
+            }
+          }
+        ],
+        "native_reader": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/wrong-plane-restore.log",
+          "sha256": "fedcf451dd7613d7432e3ef6c88d8a7c1c1a0d1f5541ff25adb86f8b00608256"
+        },
+        "artifacts": {
+          "c.draw": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/wrong-plane-c.draw",
+            "sha256": "9c468fee5d687c6a38ce07766cbd5ee6a956c1e452f1092eb540461654162cdb"
+          },
+          "p.draw": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/wrong-plane-p.draw",
+            "sha256": "c396218250e081125cfff15c0ed0292d4cb6dd26dfdcc5d27783e54440b88a19"
+          },
+          "regcurve.draw": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/wrong-plane-regcurve.draw",
+            "sha256": "298d72b9c009ab421edfda38b36ed7ee5ac9eca1ed08817c16aeac34d08530ed"
+          },
+          "edge.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/wrong-plane-edge.brep",
+            "sha256": "67b1e0bcb614c404af7e0b546cdb43fd4efcbb4e816b44f16e7792faaa0d9110"
+          },
+          "restored_edge.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/wrong-plane-restored_edge.brep",
+            "sha256": "67b1e0bcb614c404af7e0b546cdb43fd4efcbb4e816b44f16e7792faaa0d9110"
+          },
+          "fc.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/wrong-plane-fc.brep",
+            "sha256": "4bf8e2af3bb4315aa44c4159de84bfe19e2712692c816e3db80689b9ec0d9ec5"
+          },
+          "fp.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/wrong-plane-fp.brep",
+            "sha256": "bedf5678e3dc27c21572663eaf8a1a18535d07b6ab5407d09166af7c11127061"
+          }
+        }
+      },
+      "gap": {
+        "registered": {
+          "status": "runtime_error",
+          "assertions": {
+            "solution_count": "PASS",
+            "curve_length": "FAIL"
+          },
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/gap.log",
+            "sha256": "d5d1ab55b9c06ce3360276c33fa5dff577af7d35660aa3c1b22a4f73a43765de"
+          }
+        },
+        "independent": "FAIL",
+        "injection_verified": true,
+        "input_cylinder_domain": [
+          0.0,
+          6.283185307179586,
+          -2e+100,
+          2e+100
+        ],
+        "input_plane_domain": [
+          -2e+100,
+          2e+100,
+          -2e+100,
+          2e+100
+        ],
+        "native_trim": [
+          0.5,
+          6.58318530717959
+        ],
+        "edge_checks": [
+          {
+            "center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "parameter_x": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "radius": 5.0,
+            "trim": [
+              0.5,
+              6.58318530717959
+            ],
+            "endpoints": [
+              [
+                4.387912809451864,
+                2.397127693021015,
+                0.0
+              ],
+              [
+                4.776682445628025,
+                1.4776010333067127,
+                0.0
+              ]
+            ],
+            "length": 30.41592653589795,
+            "nominal_length": false,
+            "endpoint_distance": 0.9983341664682661,
+            "closed": false,
+            "world_missing_radians": [
+              0.3000000000000034,
+              0.5
+            ],
+            "circle_position": "PASS",
+            "angular_coverage": "FAIL",
+            "verdict": "FAIL",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/gap-read-edge.log",
+              "sha256": "1a4a47cacd4ed133aca73e97b666a1a98e6af9241f1e4526efadab9ec87fae77"
+            }
+          },
+          {
+            "center": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "parameter_x": [
+              1.0,
+              0.0,
+              -0.0
+            ],
+            "radius": 5.0,
+            "trim": [
+              0.5,
+              6.58318530717959
+            ],
+            "endpoints": [
+              [
+                4.387912809451864,
+                2.397127693021015,
+                0.0
+              ],
+              [
+                4.776682445628025,
+                1.4776010333067127,
+                0.0
+              ]
+            ],
+            "length": 30.41592653589795,
+            "nominal_length": false,
+            "endpoint_distance": 0.9983341664682661,
+            "closed": false,
+            "world_missing_radians": [
+              0.3000000000000034,
+              0.5
+            ],
+            "circle_position": "PASS",
+            "angular_coverage": "FAIL",
+            "verdict": "FAIL",
+            "measurement": {
+              "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/gap-read-restored_edge.log",
+              "sha256": "1a4a47cacd4ed133aca73e97b666a1a98e6af9241f1e4526efadab9ec87fae77"
+            }
+          }
+        ],
+        "native_reader": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/gap-restore.log",
+          "sha256": "e1f5009bfadeb69621d57df8c28536d6d3b6a75405e9add031cd779153f387ad"
+        },
+        "artifacts": {
+          "c.draw": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/gap-c.draw",
+            "sha256": "9c468fee5d687c6a38ce07766cbd5ee6a956c1e452f1092eb540461654162cdb"
+          },
+          "p.draw": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/gap-p.draw",
+            "sha256": "c396218250e081125cfff15c0ed0292d4cb6dd26dfdcc5d27783e54440b88a19"
+          },
+          "regcurve.draw": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/gap-regcurve.draw",
+            "sha256": "75b6b85a1127318b00df82cdc85e8a3e1673796c076340e04f5802188ee72138"
+          },
+          "edge.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/gap-edge.brep",
+            "sha256": "27f2c13f90da52845ccd4a537ab9d7b9d842d013279338568745ecdabdfe162b"
+          },
+          "restored_edge.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/gap-restored_edge.brep",
+            "sha256": "ca23d0874e0f00148ff287b2ec2e3f423d207626910c0e7b16852b1c68cc7251"
+          },
+          "fc.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/gap-fc.brep",
+            "sha256": "4bf8e2af3bb4315aa44c4159de84bfe19e2712692c816e3db80689b9ec0d9ec5"
+          },
+          "fp.brep": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/circle/gap-fp.brep",
+            "sha256": "bedf5678e3dc27c21572663eaf8a1a18535d07b6ab5407d09166af7c11127061"
+          }
+        }
+      }
+    },
+    "independent_scope": "A perpendicular plane and analytic circle with verified finite edge parameter range and full world-azimuth coverage.",
+    "original_historical_record": {
+      "path": "benchmarks/occt/provenance/evidence10/replay_raw/M29972/regression-29972-plane-cylinder/regression_B/stdout.json",
+      "sha256": "22ed5fb29ffcea46a4c41ce0f5134ec0fe807fb8e95a89fa1510562c6bdf46f0"
+    }
+  },
+  "properties": {
+    "source": {
+      "source_id": "occt801-b8f597c67781-plane-properties",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "toolchain": "occt1115-plane-properties-gcc",
+      "toolchain_config": {
+        "path": "toolchains/occt1115-plane-properties-gcc.json",
+        "sha256": "99014a8309ac311df3df00f32a35e779c156ce04bcdb8fcb47a0a175376ef279"
+      },
+      "build_entry": {
+        "path": "tools/occt1115-plane-properties-gcc/build.sh",
+        "sha256": "ad4be7e7b0ce82c2c5c07104bc6faaa813d08c6450a1565e8f490a8a503beecc"
+      },
+      "declared_public_targets": [
+        "TKPrim"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/identity.json",
+      "sha256": "f2e2b7e623a5fc19e1aad55ae1ad0b0b170fcadae01cdd0889d92631afe03c81"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/runtime.json",
+      "sha256": "18248b7a240aa57115f2c1538398e1cd9af4e08d860b48749cd3df4763499166"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "BLOCKED",
+          "runs": [
+            {
+              "status": "BLOCKED",
+              "geometry_executed": false,
+              "reason": "/inputs/probe.cxx:2:10: fatal error: BRepAlgoAPI_Common.hxx: No such file or directory\n    2 | #include <BRepAlgoAPI_Common.hxx>\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.\n"
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/core-1.json",
+          "sha256": "68d06ea3c0e85fa5a9621266509a5972093ef30703107d634ea43df96eb094b0"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATED",
+    "independent_status": "CALIBRATED",
+    "controls": {
+      "healthy-1": {
+        "mass": 12.0,
+        "centroid": [
+          1.5,
+          2.0,
+          0.5
+        ],
+        "expected_centroid": [
+          1.5,
+          2.0,
+          0.5
+        ],
+        "central_tensor": [
+          [
+            17.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            10.000000000000007,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            25.0
+          ]
+        ],
+        "analytic_central": [
+          [
+            17.0,
+            0,
+            0
+          ],
+          [
+            0,
+            10.0,
+            0
+          ],
+          [
+            0,
+            0,
+            24.999999999999996
+          ]
+        ],
+        "fixed_origin_tensor": [
+          [
+            68.0,
+            -36.0,
+            -9.000000000000014
+          ],
+          [
+            -36.0,
+            40.00000000000001,
+            -12.000000000000007
+          ],
+          [
+            -9.000000000000014,
+            -12.000000000000007,
+            100.0
+          ]
+        ],
+        "analytic_fixed_origin": [
+          [
+            68.0,
+            -36.0,
+            -9.0
+          ],
+          [
+            -36.0,
+            40.0,
+            -12.0
+          ],
+          [
+            -9.0,
+            -12.0,
+            100.0
+          ]
+        ],
+        "origin_scalar_moments": [
+          68.0,
+          40.00000000000001,
+          100.0,
+          17.999999999999996,
+          74.99999999999999,
+          57.99999999999999
+        ],
+        "physical_vertices": {
+          "3": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              4.0,
+              1.0
+            ],
+            [
+              3.0,
+              0.0,
+              1.0
+            ],
+            [
+              3.0,
+              4.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              4.0,
+              0.0
+            ],
+            [
+              0.0,
+              4.0,
+              1.0
+            ],
+            [
+              3.0,
+              0.0,
+              0.0
+            ],
+            [
+              3.0,
+              0.0,
+              1.0
+            ],
+            [
+              3.0,
+              4.0,
+              0.0
+            ],
+            [
+              3.0,
+              4.0,
+              1.0
+            ]
+          ]
+        },
+        "registered": {
+          "mass": "PASS",
+          "centroid": "PASS",
+          "central_tensor": "PASS",
+          "measured_tensor_components": {
+            "11": {
+              "measured": 17.0,
+              "nominal": 17.0
+            },
+            "12": {
+              "measured": 5.204170427930421e-17,
+              "nominal": 0.0
+            },
+            "13": {
+              "measured": 0.0,
+              "nominal": 0.0
+            },
+            "22": {
+              "measured": 9.999999999999998,
+              "nominal": 10.0
+            },
+            "23": {
+              "measured": 0.0,
+              "nominal": 0.0
+            },
+            "33": {
+              "measured": 25.0,
+              "nominal": 25.0
+            }
+          },
+          "measured_centroid": [
+            1.5000000000000004,
+            2.0,
+            0.5
+          ],
+          "verdict": "PASS",
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/healthy-1-registered.log",
+            "sha256": "91a55e38e5d54a1069391e66a55dc71f8831552bd83e682699a2db8f8482a2e4"
+          }
+        },
+        "independent": {
+          "nominal_mass": "PASS",
+          "nominal_center": "PASS",
+          "nominal_central_tensor": "PASS",
+          "nominal_fixed_origin_tensor": "PASS",
+          "matches_analytic_geometry": true
+        },
+        "injection_verified": null,
+        "face": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/healthy-1-face.brep",
+          "sha256": "1a33eb1b8c10b52199c18dcfb5db3f46a8458a70fc9a39c1eb8ba052c95af015"
+        },
+        "solid": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/healthy-1-solid.brep",
+          "sha256": "296dd41fd9c12adbcbe19d9f90234652e07277cefc37849121181470138f3a2d"
+        },
+        "measurement": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/healthy-1-read.log",
+          "sha256": "819219c9c9c38f6df1975151766ace261372128ccb87c0cf63da96f7a7dc2093"
+        }
+      },
+      "healthy-2": {
+        "mass": 12.0,
+        "centroid": [
+          1.5,
+          2.0,
+          0.5
+        ],
+        "expected_centroid": [
+          1.5,
+          2.0,
+          0.5
+        ],
+        "central_tensor": [
+          [
+            17.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            10.000000000000007,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            25.0
+          ]
+        ],
+        "analytic_central": [
+          [
+            17.0,
+            0,
+            0
+          ],
+          [
+            0,
+            10.0,
+            0
+          ],
+          [
+            0,
+            0,
+            24.999999999999996
+          ]
+        ],
+        "fixed_origin_tensor": [
+          [
+            68.0,
+            -36.0,
+            -9.000000000000014
+          ],
+          [
+            -36.0,
+            40.00000000000001,
+            -12.000000000000007
+          ],
+          [
+            -9.000000000000014,
+            -12.000000000000007,
+            100.0
+          ]
+        ],
+        "analytic_fixed_origin": [
+          [
+            68.0,
+            -36.0,
+            -9.0
+          ],
+          [
+            -36.0,
+            40.0,
+            -12.0
+          ],
+          [
+            -9.0,
+            -12.0,
+            100.0
+          ]
+        ],
+        "origin_scalar_moments": [
+          68.0,
+          40.00000000000001,
+          100.0,
+          17.999999999999996,
+          74.99999999999999,
+          57.99999999999999
+        ],
+        "physical_vertices": {
+          "3": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              4.0,
+              1.0
+            ],
+            [
+              3.0,
+              0.0,
+              1.0
+            ],
+            [
+              3.0,
+              4.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.0,
+              4.0,
+              0.0
+            ],
+            [
+              0.0,
+              4.0,
+              1.0
+            ],
+            [
+              3.0,
+              0.0,
+              0.0
+            ],
+            [
+              3.0,
+              0.0,
+              1.0
+            ],
+            [
+              3.0,
+              4.0,
+              0.0
+            ],
+            [
+              3.0,
+              4.0,
+              1.0
+            ]
+          ]
+        },
+        "registered": {
+          "mass": "PASS",
+          "centroid": "PASS",
+          "central_tensor": "PASS",
+          "measured_tensor_components": {
+            "11": {
+              "measured": 17.0,
+              "nominal": 17.0
+            },
+            "12": {
+              "measured": 5.204170427930421e-17,
+              "nominal": 0.0
+            },
+            "13": {
+              "measured": 0.0,
+              "nominal": 0.0
+            },
+            "22": {
+              "measured": 9.999999999999998,
+              "nominal": 10.0
+            },
+            "23": {
+              "measured": 0.0,
+              "nominal": 0.0
+            },
+            "33": {
+              "measured": 25.0,
+              "nominal": 25.0
+            }
+          },
+          "measured_centroid": [
+            1.5000000000000004,
+            2.0,
+            0.5
+          ],
+          "verdict": "PASS",
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/healthy-2-registered.log",
+            "sha256": "91a55e38e5d54a1069391e66a55dc71f8831552bd83e682699a2db8f8482a2e4"
+          }
+        },
+        "independent": {
+          "nominal_mass": "PASS",
+          "nominal_center": "PASS",
+          "nominal_central_tensor": "PASS",
+          "nominal_fixed_origin_tensor": "PASS",
+          "matches_analytic_geometry": true
+        },
+        "injection_verified": null,
+        "face": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/healthy-2-face.brep",
+          "sha256": "1a33eb1b8c10b52199c18dcfb5db3f46a8458a70fc9a39c1eb8ba052c95af015"
+        },
+        "solid": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/healthy-2-solid.brep",
+          "sha256": "296dd41fd9c12adbcbe19d9f90234652e07277cefc37849121181470138f3a2d"
+        },
+        "measurement": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/healthy-2-read.log",
+          "sha256": "819219c9c9c38f6df1975151766ace261372128ccb87c0cf63da96f7a7dc2093"
+        }
+      },
+      "translate": {
+        "mass": 12.0,
+        "centroid": [
+          3.5,
+          1.0,
+          0.5
+        ],
+        "expected_centroid": [
+          3.5,
+          1.0,
+          0.5
+        ],
+        "central_tensor": [
+          [
+            17.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            9.999999999999972,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            25.0
+          ]
+        ],
+        "analytic_central": [
+          [
+            17.0,
+            0,
+            0
+          ],
+          [
+            0,
+            10.0,
+            0
+          ],
+          [
+            0,
+            0,
+            24.999999999999996
+          ]
+        ],
+        "fixed_origin_tensor": [
+          [
+            32.0,
+            -42.00000000000001,
+            -21.000000000000014
+          ],
+          [
+            -42.00000000000001,
+            159.99999999999997,
+            -6.000000000000057
+          ],
+          [
+            -21.000000000000014,
+            -6.000000000000057,
+            184.0
+          ]
+        ],
+        "analytic_fixed_origin": [
+          [
+            32.0,
+            -42.0,
+            -21.0
+          ],
+          [
+            -42.0,
+            160.0,
+            -6.0
+          ],
+          [
+            -21.0,
+            -6.0,
+            184.0
+          ]
+        ],
+        "origin_scalar_moments": [
+          32.0,
+          159.99999999999997,
+          184.0,
+          53.99999999999998,
+          86.99999999999999,
+          165.99999999999994
+        ],
+        "physical_vertices": {
+          "3": [
+            [
+              2.0,
+              -1.0,
+              1.0
+            ],
+            [
+              2.0,
+              3.0,
+              1.0
+            ],
+            [
+              5.0,
+              -1.0,
+              1.0
+            ],
+            [
+              5.0,
+              3.0,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              2.0,
+              -1.0,
+              0.0
+            ],
+            [
+              2.0,
+              -1.0,
+              1.0
+            ],
+            [
+              2.0,
+              3.0,
+              0.0
+            ],
+            [
+              2.0,
+              3.0,
+              1.0
+            ],
+            [
+              5.0,
+              -1.0,
+              0.0
+            ],
+            [
+              5.0,
+              -1.0,
+              1.0
+            ],
+            [
+              5.0,
+              3.0,
+              0.0
+            ],
+            [
+              5.0,
+              3.0,
+              1.0
+            ]
+          ]
+        },
+        "registered": {
+          "mass": "PASS",
+          "centroid": "FAIL",
+          "central_tensor": "FAIL",
+          "measured_tensor_components": {
+            "11": {
+              "measured": 29.0,
+              "nominal": 17.0
+            },
+            "12": {
+              "measured": 24.0,
+              "nominal": 0.0
+            },
+            "13": {
+              "measured": 0.0,
+              "nominal": 0.0
+            },
+            "22": {
+              "measured": 58.0,
+              "nominal": 10.0
+            },
+            "23": {
+              "measured": 0.0,
+              "nominal": 0.0
+            },
+            "33": {
+              "measured": 85.0,
+              "nominal": 25.0
+            }
+          },
+          "measured_centroid": [
+            3.5,
+            1.0,
+            0.5
+          ],
+          "verdict": "FAIL",
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/translate-registered.log",
+            "sha256": "e22b9405aae18d9538d6065226db5534adedd671484af8ce6c200bcaa5b8137f"
+          }
+        },
+        "independent": {
+          "nominal_mass": "PASS",
+          "nominal_center": "FAIL",
+          "nominal_central_tensor": "PASS",
+          "nominal_fixed_origin_tensor": "FAIL",
+          "matches_analytic_geometry": true
+        },
+        "injection_verified": true,
+        "face": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/translate-face.brep",
+          "sha256": "0081a3202f3e823aaf662f90207c5dd908bf4952dacd2d982191e450ea7546d0"
+        },
+        "solid": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/translate-solid.brep",
+          "sha256": "3803b3424353055e75c6dc6729e6665731d8eae0d0f03a55f50d74e220ede2eb"
+        },
+        "measurement": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/translate-read.log",
+          "sha256": "2cb577ac437af2fb65e8557244e456337f82a7fa230c1cfba4ec0df61f9f20e3"
+        }
+      },
+      "quarter-turn": {
+        "mass": 12.0,
+        "centroid": [
+          1.5,
+          2.0,
+          0.5
+        ],
+        "expected_centroid": [
+          1.5,
+          2.0,
+          0.5
+        ],
+        "central_tensor": [
+          [
+            10.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            17.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            25.0
+          ]
+        ],
+        "analytic_central": [
+          [
+            10.0,
+            0,
+            0
+          ],
+          [
+            0,
+            17.0,
+            0
+          ],
+          [
+            0,
+            0,
+            24.999999999999996
+          ]
+        ],
+        "fixed_origin_tensor": [
+          [
+            61.0,
+            -36.00000000000001,
+            -9.000000000000014
+          ],
+          [
+            -36.00000000000001,
+            47.0,
+            -12.000000000000007
+          ],
+          [
+            -9.000000000000014,
+            -12.000000000000007,
+            100.0
+          ]
+        ],
+        "analytic_fixed_origin": [
+          [
+            61.0,
+            -36.0,
+            -9.0
+          ],
+          [
+            -36.0,
+            47.0,
+            -12.0
+          ],
+          [
+            -9.0,
+            -12.0,
+            100.0
+          ]
+        ],
+        "origin_scalar_moments": [
+          61.0,
+          47.0,
+          100.0,
+          17.999999999999993,
+          71.49999999999999,
+          61.49999999999999
+        ],
+        "physical_vertices": {
+          "3": [
+            [
+              -0.5,
+              0.5,
+              1.0
+            ],
+            [
+              -0.5,
+              3.5,
+              1.0
+            ],
+            [
+              3.5,
+              0.5,
+              1.0
+            ],
+            [
+              3.5,
+              3.5,
+              1.0
+            ]
+          ],
+          "4": [
+            [
+              -0.5,
+              0.5,
+              0.0
+            ],
+            [
+              -0.5,
+              0.5,
+              1.0
+            ],
+            [
+              -0.5,
+              3.5,
+              0.0
+            ],
+            [
+              -0.5,
+              3.5,
+              1.0
+            ],
+            [
+              3.5,
+              0.5,
+              0.0
+            ],
+            [
+              3.5,
+              0.5,
+              1.0
+            ],
+            [
+              3.5,
+              3.5,
+              0.0
+            ],
+            [
+              3.5,
+              3.5,
+              1.0
+            ]
+          ]
+        },
+        "registered": {
+          "mass": "PASS",
+          "centroid": "PASS",
+          "central_tensor": "FAIL",
+          "measured_tensor_components": {
+            "11": {
+              "measured": 9.999999999999998,
+              "nominal": 17.0
+            },
+            "12": {
+              "measured": -2.0816681711721685e-17,
+              "nominal": 0.0
+            },
+            "13": {
+              "measured": 0.0,
+              "nominal": 0.0
+            },
+            "22": {
+              "measured": 17.000000000000004,
+              "nominal": 10.0
+            },
+            "23": {
+              "measured": 0.0,
+              "nominal": 0.0
+            },
+            "33": {
+              "measured": 25.0,
+              "nominal": 25.0
+            }
+          },
+          "measured_centroid": [
+            1.4999999999999998,
+            2.0,
+            0.5
+          ],
+          "verdict": "FAIL",
+          "log": {
+            "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/quarter-turn-registered.log",
+            "sha256": "72cf9a13d0b43a687aae13f85c46cb330901edcd4e4e9469209c7e6ee29c5461"
+          }
+        },
+        "independent": {
+          "nominal_mass": "PASS",
+          "nominal_center": "PASS",
+          "nominal_central_tensor": "FAIL",
+          "nominal_fixed_origin_tensor": "FAIL",
+          "matches_analytic_geometry": true
+        },
+        "injection_verified": true,
+        "face": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/quarter-turn-face.brep",
+          "sha256": "5d85332ddf5b8c2ad6b4cfdde160281eee836683afd9aba09a9f6e32027e9321"
+        },
+        "solid": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/quarter-turn-solid.brep",
+          "sha256": "af68367f359c587a47f045b247c7b693cd578db2749f099baa7fc6f82f0ac04c"
+        },
+        "measurement": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/quarter-turn-read.log",
+          "sha256": "fede5f3b867e1c6c3bde2f8926cfa4b9f02a47f73be86ef012def493ed1cf14b"
+        }
+      }
+    },
+    "translation_reference_point_diagnostic": {
+      "nominal": {
+        "integration_point": [
+          1.5,
+          2,
+          0.5
+        ],
+        "plane_integrator_mass": 0.0,
+        "plane_integrator_center": [
+          1.5,
+          2.0,
+          0.5
+        ],
+        "gk_center": [
+          3.5,
+          1.0,
+          0.5
+        ],
+        "observed_tensor": [
+          [
+            29.0,
+            24.0,
+            0.0
+          ],
+          [
+            24.0,
+            58.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            85.0
+          ]
+        ],
+        "agrees_with_parallel_axis": true,
+        "registered_joint_verdict": "FAIL",
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/reference-point-nominal.log",
+          "sha256": "a4e67a427cc43d861ce7506b50f6d8d6bc8dae6f9aa498cfebf8c267c5e897a3"
+        }
+      },
+      "follow": {
+        "integration_point": [
+          3.5,
+          1,
+          0.5
+        ],
+        "plane_integrator_mass": 0.0,
+        "plane_integrator_center": [
+          3.5,
+          1.0,
+          0.5
+        ],
+        "gk_center": [
+          3.5,
+          1.0,
+          0.5
+        ],
+        "observed_tensor": [
+          [
+            17.0,
+            5.204170427930421e-17,
+            0.0
+          ],
+          [
+            5.204170427930421e-17,
+            10.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            25.000000000000004
+          ]
+        ],
+        "agrees_with_parallel_axis": true,
+        "registered_joint_verdict": "FAIL",
+        "log": {
+          "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/reference-point-follow.log",
+          "sha256": "ce2a990ca3daf63f0b6baffc556a91f3aae23802d9d49d254a887fb54551d90e"
+        }
+      }
+    },
+    "registered_scope": "Joint detection for the nominal prism; translated fixed-location Vinert tensor is not the prism centroidal tensor.",
+    "registered_baseline": {
+      "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/registered.log",
+      "sha256": "fa6c7067b57e0382a6bfb182676a12bce88f93a741049e361acec93bddcf19b8"
+    },
+    "registered_replay_src": {
+      "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/registered-face.cxx",
+      "sha256": "1f496e954030e8016ef99502d5f699a0ebde6308e7c7b6262e116c82ace4c076"
+    },
+    "contract": {
+      "path": "research/kernel-regression-v1/rollout-v8/receipts/properties/inertia-contract.txt",
+      "sha256": "47c1a0011ffa16776f70ece3cba1a451f68ef08ca6ebdcde05e3863a8c5c7ca7"
+    },
+    "independent_scope": "Rectangular unit-density 3 x 4 x 1 prism, common global axes, centroidal and fixed-origin tensors independently distinguished."
+  }
+}

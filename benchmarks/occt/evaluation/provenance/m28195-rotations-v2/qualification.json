@@ -1,0 +1,416 @@
+{
+  "suite_id": "occt-single20-28195-checks",
+  "suite_version": "2",
+  "model_runs_added": 0,
+  "evaluation_surface": "registered geometric checkpoints; independent API contract unmeasured",
+  "suite_sha256": "c48557b28919ce18d71799c2220ca69f955c2f254c790976fe71a6d3e8e542dc",
+  "historical_v1_sha256": "89120bf5d5fba0fbcd4d41995a9994bda9ddf8ead209e1a0c2b7189c217c2e82",
+  "snapshot": {
+    "schema_version": 1,
+    "task_id": "occt-single20-28195",
+    "task_version": "1",
+    "source_id": "occt-single20-1511c7e90f1a",
+    "source_commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "source_tree_sha256": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "suite_id": "occt-single20-28195-checks",
+    "suite_version": "2",
+    "toolchain_id": "occt-v4-clang10-o0-tcl86",
+    "catalog_hash": "566fabf7b5b7bd14530b46fa4d37543436801377a4566e1ba160ebcf4e1893ac",
+    "group_manifest_path": "groups/single/occt-28195/1.json",
+    "suite_manifest_path": "evaluation/suites/new/occt-28195/2.json",
+    "case_path_aliases": [],
+    "snapshot_sha256": "e7e76d6299a228e67680fa76d9d4d73e3d0a816865e704e1a781fb5912e41780",
+    "frozen": true
+  },
+  "baseline": {
+    "commit": "1511c7e90f1ab04e3ee01d94fc146a04c07da160",
+    "tree": "3fe15cb35ae58e595223d40456ccb8c9c449b45f73cd57ebf2fd32c6cb047c22",
+    "runtime_manifest": "b50604998cdcebf51850fe622ec65c58282b5d8a9c7329fd8c5ea23fe8bff8c1"
+  },
+  "reference": {
+    "commit": "cfde7eebb37b82900f29fd5da99a008bac8d5aa3",
+    "tree": "2550e9ae4e714af38d90abd2a90919ee0795f9202db049ac91ed03e8a75c439a",
+    "runtime_manifest": "0ee3eace35a4ebf1cc7f318407b57c61fbcf5f5b7ab73ea8683150332ad1b60c"
+  },
+  "baseline_failed": [
+    "28195-original",
+    "28195-neighborhood_rigid",
+    "28195-neighborhood_swap",
+    "28195-neighborhood_axis31"
+  ],
+  "baseline_passed": [
+    "28195-regression_healthy",
+    "28195-regression_z90"
+  ],
+  "roles": {
+    "B": {
+      "checks": {
+        "28195-original": {
+          "status": "FAIL",
+          "failed_assertions": [
+            "topology",
+            "volume_bounds",
+            "volume_membership"
+          ],
+          "evidence": "final-results/B/28195-original.json",
+          "sha256": "a03e09b28cd764d6cedc744e92032df597433c81386a24358baf05f60a27d289"
+        },
+        "28195-neighborhood_rigid": {
+          "status": "FAIL",
+          "failed_assertions": [
+            "validity"
+          ],
+          "evidence": "final-results/B/28195-neighborhood_rigid.json",
+          "sha256": "792334638aee326abf978be3c1403ce3bdda24bfc6217f9fbc98794c51ff7fc4"
+        },
+        "28195-neighborhood_swap": {
+          "status": "FAIL",
+          "failed_assertions": [
+            "topology",
+            "volume_bounds",
+            "volume_membership"
+          ],
+          "evidence": "final-results/B/28195-neighborhood_swap.json",
+          "sha256": "a7d573378e12728544467e244fb740583074f49eb551d53f96dd64fb6fb0816e"
+        },
+        "28195-regression_healthy": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/B/28195-regression_healthy.json",
+          "sha256": "63034638a05a640233de32c94fd8b1ecc8ae7434639bbcd58d551ee9df8f332b"
+        },
+        "28195-neighborhood_axis31": {
+          "status": "FAIL",
+          "failed_assertions": [
+            "topology",
+            "volume",
+            "grid_membership"
+          ],
+          "evidence": "final-results/B/28195-neighborhood_axis31.json",
+          "sha256": "620e2a188787e21f851a330cbb30b27fea7ae9c2787bdf540cd7cf30c0860d36",
+          "volume": 0.0,
+          "independent_F_reader": "FAIL",
+          "prior_output_brep_sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+        },
+        "28195-regression_z90": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/B/28195-regression_z90.json",
+          "sha256": "e06dd267ab6e845b27c43a0fc7187bdaa45cc8043b9d4e8c0af90543b6aeedae",
+          "volume": 172191312.60483032,
+          "independent_F_reader": "PASS",
+          "prior_output_brep_sha256": "46c3cca112dfd87e3d80b92c41fbad8d5a1c4c230277c49b42989cdbd2746c9a"
+        }
+      },
+      "passed": 2
+    },
+    "F": {
+      "checks": {
+        "28195-original": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/F/28195-original.json",
+          "sha256": "c9cc9bcfb2707c314807da29e5f1637674ab57304eb60c12b4876b90a1b08cd6"
+        },
+        "28195-neighborhood_rigid": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/F/28195-neighborhood_rigid.json",
+          "sha256": "c6f5c783b10a17308fa57213d6bf68e9d6980d0b6ff6ee0cab4031e1b996d85c"
+        },
+        "28195-neighborhood_swap": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/F/28195-neighborhood_swap.json",
+          "sha256": "ac126d475ba627be754028b6db1ec93b22f86d219e4678265cef35783696b6ce"
+        },
+        "28195-regression_healthy": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/F/28195-regression_healthy.json",
+          "sha256": "0e3dc9b1a8f9eb7b9a0074bff8be1074060b0e93b81024fccae443a451e57bb9"
+        },
+        "28195-neighborhood_axis31": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/F/28195-neighborhood_axis31.json",
+          "sha256": "daf035bd521f76955bb4934bf49d56d750b5fd63fbfb384c60b1a0d53f7df973",
+          "volume": 172189705.92907548,
+          "independent_F_reader": "PASS",
+          "prior_output_brep_sha256": "e4e662d7ebac5fd0f156e4f6f625039ae87ba77b20f6691df2b6a74152dbad9a"
+        },
+        "28195-regression_z90": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/F/28195-regression_z90.json",
+          "sha256": "f480d72bb97999653f427ea8df8e48718b0f25aeb7946e04876c7cada67d6f26",
+          "volume": 172189705.92914063,
+          "independent_F_reader": "PASS",
+          "prior_output_brep_sha256": "bc6e161c32a470b923b06576cff0f029188311f1547835e8f2c2d95c98ae0646"
+        }
+      },
+      "passed": 6
+    },
+    "round1": {
+      "checks": {
+        "28195-original": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round1/28195-original.json",
+          "sha256": "493d340e9e075f08f8b2f2533dc63121b83d0c0fa35235a37ad0d84cead0cdf1"
+        },
+        "28195-neighborhood_rigid": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round1/28195-neighborhood_rigid.json",
+          "sha256": "c6e064a2ef8bd550d7e0f54f115ba99c3eeea7ff5b5ec18a840be17c5c9769d4"
+        },
+        "28195-neighborhood_swap": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round1/28195-neighborhood_swap.json",
+          "sha256": "fa3043a66715592c13a301afcf7783f8c4b2d6fcf99677a0d26a7ba0a3fec84f"
+        },
+        "28195-regression_healthy": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round1/28195-regression_healthy.json",
+          "sha256": "63034638a05a640233de32c94fd8b1ecc8ae7434639bbcd58d551ee9df8f332b"
+        },
+        "28195-neighborhood_axis31": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round1/28195-neighborhood_axis31.json",
+          "sha256": "0a2b6d831c66ca35a01bb0d1afe710a0661a52c522fb6af022918cf9738fc6d0",
+          "volume": 172189652.81692013,
+          "independent_F_reader": "PASS",
+          "prior_output_brep_sha256": "5a36f8b624921e4f113d86b330159b04b3493509ca8172f77ee5d1e48f5fc70f"
+        },
+        "28195-regression_z90": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round1/28195-regression_z90.json",
+          "sha256": "59cbffe27312d8f0e43dd12c785d4101156cc9ceb40866d85c3f52852ce58ce5",
+          "volume": 172189833.59967262,
+          "independent_F_reader": "PASS",
+          "prior_output_brep_sha256": "466df79384999b9900fa580fe5a16d8ccca353b0cfdae2273292a5f156f37fd3"
+        }
+      },
+      "passed": 6,
+      "v1_historical_passed": 4,
+      "v1_result_sha256": "9e51a4da957051a3c0216067c02e8062a4a424f7c37f4fce78149655be751fd2",
+      "patch_sha256": "e03428210b5fd33e2a7b0425c3bbd7ec8d60b91ae75e66145d2141ac900a1434",
+      "restored": [
+        "28195-original",
+        "28195-neighborhood_rigid",
+        "28195-neighborhood_swap",
+        "28195-neighborhood_axis31"
+      ],
+      "regressed": [],
+      "status": "PASS*"
+    },
+    "round2": {
+      "checks": {
+        "28195-original": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round2/28195-original.json",
+          "sha256": "018913c2bbf48b97ae9b7219e8479331675d35fe96cb266790da03379fcd9c07"
+        },
+        "28195-neighborhood_rigid": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round2/28195-neighborhood_rigid.json",
+          "sha256": "18ee86306973cf1c7e2592e66f96705b0b76d51c6a249753e5c1ae46abb87e33"
+        },
+        "28195-neighborhood_swap": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round2/28195-neighborhood_swap.json",
+          "sha256": "e324cd8b54644fa197e5c30ec5a0ecb4f449a26bfe0c9e97553a049785563c60"
+        },
+        "28195-regression_healthy": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round2/28195-regression_healthy.json",
+          "sha256": "bf9f51348682f6d677d58b507e8a7bfbd0e6b3bd51f46c8029ca1ea47214a02e"
+        },
+        "28195-neighborhood_axis31": {
+          "status": "FAIL",
+          "failed_assertions": [
+            "topology",
+            "volume",
+            "grid_membership"
+          ],
+          "evidence": "final-results/round2/28195-neighborhood_axis31.json",
+          "sha256": "44203a98685668ffa9b52bbab202b66d2351b81d97b47614169ba00dabdcd7b3",
+          "volume": 0.0,
+          "independent_F_reader": "FAIL",
+          "prior_output_brep_sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+        },
+        "28195-regression_z90": {
+          "status": "FAIL",
+          "failed_assertions": [
+            "topology",
+            "volume",
+            "grid_membership"
+          ],
+          "evidence": "final-results/round2/28195-regression_z90.json",
+          "sha256": "54b9debbc62ffbff78c8be84acd285058a66d14c4a9e8f81d180da7f6529a3b1",
+          "volume": 0.0,
+          "independent_F_reader": "FAIL",
+          "prior_output_brep_sha256": "3a58bc4bb340e8836ea4ce73da9aef11806ddc3efe66bac4a4c4fbd54417a707"
+        }
+      },
+      "passed": 4,
+      "v1_historical_passed": 4,
+      "v1_result_sha256": "9e51a4da957051a3c0216067c02e8062a4a424f7c37f4fce78149655be751fd2",
+      "patch_sha256": "17a164cfbf40ec8712748c1ecf58c78fb2e81b0bbe4faf1ac8a9c4d5fc069a78",
+      "restored": [
+        "28195-original",
+        "28195-neighborhood_rigid",
+        "28195-neighborhood_swap"
+      ],
+      "regressed": [
+        "28195-regression_z90"
+      ],
+      "status": "REG_FAIL"
+    },
+    "round3": {
+      "checks": {
+        "28195-original": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round3/28195-original.json",
+          "sha256": "599c0de67ad6a2a5d302a8415e933baa0d6d10f2cb18c6404988af89aa7ddb03"
+        },
+        "28195-neighborhood_rigid": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round3/28195-neighborhood_rigid.json",
+          "sha256": "e542b24d364bde7ce8f6efeebf3e8e09a209d2ef6424ee4df10571e7367689ea"
+        },
+        "28195-neighborhood_swap": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round3/28195-neighborhood_swap.json",
+          "sha256": "76c0983a4d1defc209cfef8d901d2fb703db758a37d3a7a540327f19a3fef77e"
+        },
+        "28195-regression_healthy": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round3/28195-regression_healthy.json",
+          "sha256": "63034638a05a640233de32c94fd8b1ecc8ae7434639bbcd58d551ee9df8f332b"
+        },
+        "28195-neighborhood_axis31": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round3/28195-neighborhood_axis31.json",
+          "sha256": "e6336a3a83670b41f73d96f9cc3c57d2a686e5bc50bb488571a488e9447a5209",
+          "volume": 172189652.81692013,
+          "independent_F_reader": "PASS",
+          "prior_output_brep_sha256": "5a36f8b624921e4f113d86b330159b04b3493509ca8172f77ee5d1e48f5fc70f"
+        },
+        "28195-regression_z90": {
+          "status": "PASS",
+          "failed_assertions": [],
+          "evidence": "final-results/round3/28195-regression_z90.json",
+          "sha256": "ddb0d5e5ffacb45f7dd934f2c43667c6b0bde0c4b6eb991fa67ae6db1bd46e8c",
+          "volume": 172189833.59967262,
+          "independent_F_reader": "PASS",
+          "prior_output_brep_sha256": "466df79384999b9900fa580fe5a16d8ccca353b0cfdae2273292a5f156f37fd3"
+        }
+      },
+      "passed": 6,
+      "v1_historical_passed": 4,
+      "v1_result_sha256": "9e51a4da957051a3c0216067c02e8062a4a424f7c37f4fce78149655be751fd2",
+      "patch_sha256": "e5ef337574050a6c8a99b25be69065fdd2815f59146bf951deade7bf1ac92c89",
+      "restored": [
+        "28195-original",
+        "28195-neighborhood_rigid",
+        "28195-neighborhood_swap",
+        "28195-neighborhood_axis31"
+      ],
+      "regressed": [],
+      "status": "PASS*"
+    }
+  },
+  "controls": [
+    {
+      "pose": "axis31",
+      "mode": "gold",
+      "status": "geometry_pass",
+      "failed_assertions": [],
+      "log_sha256": "86a7145f1002ae5a2f6a7d93a00b04b8baf30d607163d07babfb4b8181c0f108"
+    },
+    {
+      "pose": "axis31",
+      "mode": "empty",
+      "status": "geometry_fail",
+      "failed_assertions": [
+        "topology",
+        "volume",
+        "grid_membership"
+      ],
+      "log_sha256": "02ef662f4534f6f7ec4a1ff322945e180421fa2c1bec1ee7c6771923db0ad788"
+    },
+    {
+      "pose": "axis31",
+      "mode": "input_only",
+      "status": "geometry_fail",
+      "failed_assertions": [
+        "volume",
+        "exclusion_membership"
+      ],
+      "log_sha256": "3442491a449d84e340585273dea4403bde38c4d68dc03906061a74e70cb4fe31"
+    },
+    {
+      "pose": "axis31",
+      "mode": "shifted",
+      "status": "geometry_fail",
+      "failed_assertions": [
+        "grid_membership"
+      ],
+      "log_sha256": "b014de44bb8558f97686abf02a9798726ed4b9820087406c536d8ad810c4bcc3"
+    },
+    {
+      "pose": "z90",
+      "mode": "gold",
+      "status": "geometry_pass",
+      "failed_assertions": [],
+      "log_sha256": "096b140d3e03345b1d67853bf3b08ab1830fd9675d1b2b243cce763533f4ef37"
+    },
+    {
+      "pose": "z90",
+      "mode": "empty",
+      "status": "geometry_fail",
+      "failed_assertions": [
+        "topology",
+        "volume",
+        "grid_membership"
+      ],
+      "log_sha256": "d9d03d65d7f8e4b08c8ff6eb8da03d51f28297ae10fa1356c7dc17ff558d1feb"
+    },
+    {
+      "pose": "z90",
+      "mode": "input_only",
+      "status": "geometry_fail",
+      "failed_assertions": [
+        "volume",
+        "exclusion_membership"
+      ],
+      "log_sha256": "e5bb68a9856197ad8b3d998cc6a8ba1e5d897892c23f2db4a1e24bc90819850b"
+    },
+    {
+      "pose": "z90",
+      "mode": "shifted",
+      "status": "geometry_fail",
+      "failed_assertions": [
+        "grid_membership"
+      ],
+      "log_sha256": "d6099c15e00b3454b5f8f557a47ca2aa317e94f2086a7a27d230dd752eb65b1d"
+    }
+  ],
+  "prior_independent_reader_archive_sha256": "d7d87bee8f6ab2a8a443cfe87db7397af2e1dc8d357ed83ebf432d302ee3776c",
+  "evidence_archive_sha256": "7820049b9cbcc793636858a16ec4cd242d9200b0e2acbe342efe7b3f607f9f9b"
+}

@@ -1,0 +1,20 @@
+{
+  "source_id": "occt801-b8f597c67781-coons",
+  "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+  "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "toolchain": "occt1115-coons-gcc",
+  "toolchain_config": {
+    "path": "toolchains/occt1115-coons-gcc.json",
+    "sha256": "a400446c544ed5b89daca03ee501ad82ce69d4aff709cc38bea085ab8d636649"
+  },
+  "build_entry": {
+    "path": "tools/occt1115-coons-gcc/build.sh",
+    "sha256": "58d7d875401b28aa56bca65b9b083cb669cb5c60214c75d1dd6a2734849af766"
+  },
+  "declared_public_targets": [
+    "TKGeomAlgo"
+  ],
+  "observed_tree": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+  "source": "/var/tmp/m25542-positive-reference-20261119/release/source",
+  "build": "/home/lzy/cad-bench-experiment/rollout12.gIoEAq5S/fillet-build"
+}

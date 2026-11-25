@@ -1,0 +1,1350 @@
+{
+  "common": {
+    "source": {
+      "source_id": "occt801-b8f597c67781",
+      "commit": "b8f597c677811d1f9f4d8a97f5ae2825c0353a42",
+      "materialized_tree_sha256": "26ed3f36926bb569ab8921398fea620ea10c80a2c4489ed42e8fcfb2981df8c5",
+      "toolchain": "occt1610-gcc",
+      "toolchain_config": {
+        "path": "toolchains/occt1610-gcc.json",
+        "sha256": "864c2f95ce420d8d400f661fddbe9b063978bdd9bd78abfd446cd6c97bb8a4f3"
+      },
+      "build_entry": {
+        "path": "tools/occt1610-gcc/build.sh",
+        "sha256": "83e4d3e2e54e2caa3cb7ad96c0c3c300ce0af2b3bc839e58a240fc21bafa2f79"
+      },
+      "declared_public_targets": [
+        "TKBool",
+        "TKOffset"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v16/receipts/common/identity.json",
+      "sha256": "5ce5cb25437134dd80c145851e91d38772688c7007978b5350e2f67b5db60853"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v16/receipts/common/runtime.json",
+      "sha256": "fae3b4396b7fa886827deb57122cbb052eef39f8eac262e9fed1c599e1ab0a4d"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/common/core-1.json",
+          "sha256": "915fdbd026da02210e2a5b2eae4240a1e14d8db75c5358530d2ee407c30f2759"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/common/core-2.json",
+          "sha256": "8e84c3d410546ba98b74c9022060e3a0dfab9414dab9d9d2bbed8aae24d877f2"
+        }
+      ]
+    },
+    "status": "CALIBRATED",
+    "registered_status": "CALIBRATED",
+    "independent_status": "CALIBRATED",
+    "baseline_geometry_status": "geometry_pass",
+    "registered_baseline": {
+      "passed": true,
+      "orders": [
+        {
+          "swap": 0,
+          "edges": 0,
+          "length": 0.0,
+          "passed": true
+        },
+        {
+          "swap": 1,
+          "edges": 0,
+          "length": 0.0,
+          "passed": true
+        }
+      ]
+    },
+    "independent_scope": "Translated trimmed conics, empty Common in both operand orders",
+    "original_receipt": {
+      "path": "research/kernel-regression-v1/rollout-v16/receipts/common/registered.json",
+      "sha256": "c405bf1ab19ac2e8d441f3537a770ef69e0cc25f9e196b8f06e58fa7fcfcfa5e"
+    },
+    "reference": {
+      "actual_inputs": [
+        {
+          "type": 1,
+          "range": [
+            4.52772714604059,
+            4.53785605518526
+          ],
+          "center": [
+            22.0,
+            0.0,
+            0.0
+          ],
+          "cos": [
+            -0.0,
+            9.8729,
+            0.0
+          ],
+          "sin": [
+            0.0,
+            -0.0,
+            9.8729
+          ],
+          "edge_tol": 1e-07,
+          "vertices": [
+            [
+              21.999991673508795,
+              -1.8128039731843943,
+              -9.705045167337062,
+              8.5e-06
+            ],
+            [
+              21.999999999999996,
+              -1.7144110932878256,
+              -9.72290846471423,
+              8.5e-06
+            ]
+          ],
+          "limits": [
+            [
+              22.0,
+              -1.812803921712693,
+              -9.705044891777836
+            ],
+            [
+              22.0,
+              -1.7144110932878103,
+              -9.722908464714234
+            ]
+          ],
+          "endpoint_vertex_errors": [
+            8.331208676360185e-06,
+            1.6123863435197525e-14
+          ],
+          "valid": true
+        },
+        {
+          "type": 2,
+          "range": [
+            3.1411047199039,
+            3.15171595482405
+          ],
+          "center": [
+            21.83750080023485,
+            10.000949995560335,
+            0.005387692550043435
+          ],
+          "cos": [
+            -0.1624991997615603,
+            1.7153610888481887,
+            9.72829615726439
+          ],
+          "sin": [
+            0.0,
+            9.728294665367313,
+            -1.7153608257864814
+          ],
+          "edge_tol": 8.5e-06,
+          "vertices": [
+            [
+              21.999999999999996,
+              8.285588906712174,
+              -9.72290846471423,
+              8.5e-06
+            ],
+            [
+              21.999991673508795,
+              8.187196026815606,
+              -9.705045167337062,
+              8.5e-06
+            ]
+          ],
+          "limits": [
+            [
+              21.999999980652564,
+              8.290335873393287,
+              -9.723744288958642
+            ],
+            [
+              21.99999167350876,
+              8.18719602681561,
+              -9.70504516733706
+            ]
+          ],
+          "endpoint_vertex_errors": [
+            0.004819989091223793,
+            3.5748491806760727e-14
+          ],
+          "valid": false
+        }
+      ],
+      "unshifted_fixtures": [
+        {
+          "type": 1,
+          "range": [
+            4.52772714604059,
+            4.53785605518526
+          ],
+          "center": [
+            22.0,
+            0.0,
+            0.0
+          ],
+          "cos": [
+            -0.0,
+            9.8729,
+            0.0
+          ],
+          "sin": [
+            0.0,
+            -0.0,
+            9.8729
+          ],
+          "edge_tol": 1e-07,
+          "vertices": [
+            [
+              21.999991673508795,
+              -1.8128039731843943,
+              -9.705045167337062,
+              8.5e-06
+            ],
+            [
+              21.999999999999996,
+              -1.7144110932878256,
+              -9.72290846471423,
+              8.5e-06
+            ]
+          ],
+          "limits": [
+            [
+              22.0,
+              -1.812803921712693,
+              -9.705044891777836
+            ],
+            [
+              22.0,
+              -1.7144110932878103,
+              -9.722908464714234
+            ]
+          ],
+          "endpoint_vertex_errors": [
+            8.331208676360185e-06,
+            1.6123863435197525e-14
+          ],
+          "valid": true
+        },
+        {
+          "type": 2,
+          "range": [
+            3.1411047199039,
+            3.15171595482405
+          ],
+          "center": [
+            21.83750080023485,
+            0.0009499955603346473,
+            0.005387692550043435
+          ],
+          "cos": [
+            -0.1624991997615603,
+            1.7153610888481887,
+            9.72829615726439
+          ],
+          "sin": [
+            0.0,
+            9.728294665367313,
+            -1.7153608257864814
+          ],
+          "edge_tol": 8.5e-06,
+          "vertices": [
+            [
+              21.999999999999996,
+              -1.7144110932878256,
+              -9.72290846471423,
+              8.5e-06
+            ],
+            [
+              21.999991673508795,
+              -1.8128039731843943,
+              -9.705045167337062,
+              8.5e-06
+            ]
+          ],
+          "limits": [
+            [
+              21.999999980652564,
+              -1.7096641266067125,
+              -9.723744288958642
+            ],
+            [
+              21.99999167350876,
+              -1.812803973184391,
+              -9.70504516733706
+            ]
+          ],
+          "endpoint_vertex_errors": [
+            0.004819989091224012,
+            3.572710803373502e-14
+          ],
+          "valid": false
+        }
+      ],
+      "minimum_gap_bracket": {
+        "lower": 9.901623138520444,
+        "upper": 9.901623233517991,
+        "points": [
+          [
+            22.0,
+            -1.7144110932878103,
+            -9.722908464714234
+          ],
+          [
+            21.99999167350876,
+            8.187196026815611,
+            -9.705045167337058
+          ]
+        ],
+        "parameters": [
+          4.53785605518526,
+          3.15171595482405
+        ],
+        "subdivisions": 19,
+        "roundoff_padding": 1e-11,
+        "coordinate_bounds": [
+          [
+            [
+              21.99999999999,
+              22.00000000001
+            ],
+            [
+              -1.812803921722693,
+              -1.7144110932778103
+            ],
+            [
+              -9.722908464724233,
+              -9.705044891767837
+            ]
+          ],
+          [
+            [
+              21.99999167349876,
+              22.00000000000641
+            ],
+            [
+              8.187196026805612,
+              8.290335873403288
+            ],
+            [
+              -9.72374428896864,
+              -9.705045167327059
+            ]
+          ]
+        ],
+        "y_clearance_lower": 9.901607120083423,
+        "y_hulls_including_vertices": [
+          [
+            -1.8128039731943943,
+            -1.7144110932678103
+          ],
+          [
+            8.187196026795613,
+            8.290335873413287
+          ]
+        ],
+        "y_clearance_including_vertices_lower": 9.901607120063423,
+        "max_topological_tolerances": [
+          8.5e-06,
+          8.5e-06
+        ]
+      },
+      "supplemental_valid_input_controls": [
+        {
+          "order": 0,
+          "reader": {
+            "path": "research/kernel-regression-v1/rollout-v16/receipts/common/legal-0-read.log",
+            "sha256": "4bc1e0c04215a9d930d0f718ab8a9bc1f929f1a16111a2396d07d15952b1ab89"
+          },
+          "submitted_brep": {
+            "path": "research/kernel-regression-v1/rollout-v16/receipts/common/legal-0-empty.brep",
+            "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+          }
+        },
+        {
+          "order": 1,
+          "reader": {
+            "path": "research/kernel-regression-v1/rollout-v16/receipts/common/legal-1-read.log",
+            "sha256": "4bc1e0c04215a9d930d0f718ab8a9bc1f929f1a16111a2396d07d15952b1ab89"
+          },
+          "submitted_brep": {
+            "path": "research/kernel-regression-v1/rollout-v16/receipts/common/legal-1-empty.brep",
+            "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+          }
+        }
+      ],
+      "valid_control_operands": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/common/legal-a.brep",
+          "sha256": "30fa0425934a6b315c116907fd6c4bd88ad7729dddc3d7854d4ef65ce8fc0699"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/common/legal-b.brep",
+          "sha256": "dd3cf5a1232ecca88a5260333b9e2349d768c11a08b94e536e3ab8438818e79e"
+        }
+      ],
+      "original_input_validity": [
+        true,
+        false
+      ],
+      "input_diagnostics": {
+        "path": "research/kernel-regression-v1/rollout-v16/receipts/common/legal.log",
+        "sha256": "b028066516b8bef11e18b982447703087e5890aded646c4c021ede1ffaeb2c32"
+      }
+    },
+    "controls": {
+      "healthy-1": {
+        "passed": true,
+        "orders": [
+          {
+            "order": "AB",
+            "occt_distance": 9.901623233508003,
+            "fuzzy": 1e-07,
+            "conservative_allowance": 1.71e-05,
+            "submitted_edges": 0,
+            "registered": {
+              "swap": 0,
+              "edges": 0,
+              "length": 0.0,
+              "passed": true
+            },
+            "independent_passed": true,
+            "reader": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-1-0-read.log",
+              "sha256": "f603814c7dcfd1717bfc487ea43c288fe427cc515f4a1b43138e2679991d1c52"
+            },
+            "submitted_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-1-0-submitted.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            },
+            "native_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-1-0-native.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            }
+          },
+          {
+            "order": "BA",
+            "occt_distance": 9.901623233508003,
+            "fuzzy": 1e-07,
+            "conservative_allowance": 1.71e-05,
+            "submitted_edges": 0,
+            "registered": {
+              "swap": 1,
+              "edges": 0,
+              "length": 0.0,
+              "passed": true
+            },
+            "independent_passed": true,
+            "reader": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-1-1-read.log",
+              "sha256": "f603814c7dcfd1717bfc487ea43c288fe427cc515f4a1b43138e2679991d1c52"
+            },
+            "submitted_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-1-1-submitted.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            },
+            "native_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-1-1-native.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            }
+          }
+        ],
+        "registered": {
+          "passed": true,
+          "orders": [
+            {
+              "swap": 0,
+              "edges": 0,
+              "length": 0.0,
+              "passed": true
+            },
+            {
+              "swap": 1,
+              "edges": 0,
+              "length": 0.0,
+              "passed": true
+            }
+          ]
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-1-registered.json",
+          "sha256": "6460ed31992f4b4802f99914642683668792b36a9e2382864f406acbd50f4f3c"
+        }
+      },
+      "healthy-2": {
+        "passed": true,
+        "orders": [
+          {
+            "order": "AB",
+            "occt_distance": 9.901623233508003,
+            "fuzzy": 1e-07,
+            "conservative_allowance": 1.71e-05,
+            "submitted_edges": 0,
+            "registered": {
+              "swap": 0,
+              "edges": 0,
+              "length": 0.0,
+              "passed": true
+            },
+            "independent_passed": true,
+            "reader": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-2-0-read.log",
+              "sha256": "f603814c7dcfd1717bfc487ea43c288fe427cc515f4a1b43138e2679991d1c52"
+            },
+            "submitted_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-2-0-submitted.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            },
+            "native_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-2-0-native.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            }
+          },
+          {
+            "order": "BA",
+            "occt_distance": 9.901623233508003,
+            "fuzzy": 1e-07,
+            "conservative_allowance": 1.71e-05,
+            "submitted_edges": 0,
+            "registered": {
+              "swap": 1,
+              "edges": 0,
+              "length": 0.0,
+              "passed": true
+            },
+            "independent_passed": true,
+            "reader": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-2-1-read.log",
+              "sha256": "f603814c7dcfd1717bfc487ea43c288fe427cc515f4a1b43138e2679991d1c52"
+            },
+            "submitted_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-2-1-submitted.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            },
+            "native_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-2-1-native.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            }
+          }
+        ],
+        "registered": {
+          "passed": true,
+          "orders": [
+            {
+              "swap": 0,
+              "edges": 0,
+              "length": 0.0,
+              "passed": true
+            },
+            {
+              "swap": 1,
+              "edges": 0,
+              "length": 0.0,
+              "passed": true
+            }
+          ]
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/common/healthy-2-registered.json",
+          "sha256": "8b760b82d8df9b13817ea057ec49f9eb84a99a4058925f1e0b1ccdf50120a77c"
+        }
+      },
+      "false-ab": {
+        "passed": false,
+        "orders": [
+          {
+            "order": "AB",
+            "occt_distance": 9.901623233508003,
+            "fuzzy": 1e-07,
+            "conservative_allowance": 1.71e-05,
+            "submitted_edges": 1,
+            "registered": {
+              "swap": 0,
+              "edges": 1,
+              "length": 0.100002,
+              "passed": false
+            },
+            "independent_passed": false,
+            "reader": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ab-0-read.log",
+              "sha256": "52a1cc54391e6aea5d31da64da7d83c4444abd6165feeceba14659b658ea4adf"
+            },
+            "submitted_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ab-0-submitted.brep",
+              "sha256": "1ee93674439b2f6ce2824aee4f7d545aa407e1205887d84efb86c07c4e90a33b"
+            },
+            "native_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ab-0-native.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            }
+          },
+          {
+            "order": "BA",
+            "occt_distance": 9.901623233508003,
+            "fuzzy": 1e-07,
+            "conservative_allowance": 1.71e-05,
+            "submitted_edges": 0,
+            "registered": {
+              "swap": 1,
+              "edges": 0,
+              "length": 0.0,
+              "passed": true
+            },
+            "independent_passed": true,
+            "reader": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ab-1-read.log",
+              "sha256": "f603814c7dcfd1717bfc487ea43c288fe427cc515f4a1b43138e2679991d1c52"
+            },
+            "submitted_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ab-1-submitted.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            },
+            "native_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ab-1-native.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            }
+          }
+        ],
+        "registered": {
+          "passed": false,
+          "orders": [
+            {
+              "swap": 0,
+              "edges": 1,
+              "length": 0.100002,
+              "passed": false
+            },
+            {
+              "swap": 1,
+              "edges": 0,
+              "length": 0.0,
+              "passed": true
+            }
+          ]
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ab-registered.json",
+          "sha256": "9fccbc5f77c83274a68b437a8f88cfcc52a6b14bde0ab33889dd458bce12df34"
+        }
+      },
+      "false-ba": {
+        "passed": false,
+        "orders": [
+          {
+            "order": "AB",
+            "occt_distance": 9.901623233508003,
+            "fuzzy": 1e-07,
+            "conservative_allowance": 1.71e-05,
+            "submitted_edges": 0,
+            "registered": {
+              "swap": 0,
+              "edges": 0,
+              "length": 0.0,
+              "passed": true
+            },
+            "independent_passed": true,
+            "reader": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ba-0-read.log",
+              "sha256": "f603814c7dcfd1717bfc487ea43c288fe427cc515f4a1b43138e2679991d1c52"
+            },
+            "submitted_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ba-0-submitted.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            },
+            "native_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ba-0-native.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            }
+          },
+          {
+            "order": "BA",
+            "occt_distance": 9.901623233508003,
+            "fuzzy": 1e-07,
+            "conservative_allowance": 1.71e-05,
+            "submitted_edges": 1,
+            "registered": {
+              "swap": 1,
+              "edges": 1,
+              "length": 0.100002,
+              "passed": false
+            },
+            "independent_passed": false,
+            "reader": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ba-1-read.log",
+              "sha256": "52a1cc54391e6aea5d31da64da7d83c4444abd6165feeceba14659b658ea4adf"
+            },
+            "submitted_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ba-1-submitted.brep",
+              "sha256": "1ee93674439b2f6ce2824aee4f7d545aa407e1205887d84efb86c07c4e90a33b"
+            },
+            "native_brep": {
+              "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ba-1-native.brep",
+              "sha256": "fdc75bfe05a54932b6580d63f4b6c2252e66e24302a5c754eeeb1b59d04840bc"
+            }
+          }
+        ],
+        "registered": {
+          "passed": false,
+          "orders": [
+            {
+              "swap": 0,
+              "edges": 0,
+              "length": 0.0,
+              "passed": true
+            },
+            {
+              "swap": 1,
+              "edges": 1,
+              "length": 0.100002,
+              "passed": false
+            }
+          ]
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/common/false-ba-registered.json",
+          "sha256": "197b02d1ca7240bdfb0427c7b72797004e8e50e27dc381024710bfd8ad8498ff"
+        }
+      }
+    }
+  },
+  "circle": {
+    "source": {
+      "source_id": "occt-v4-b41ccce129d0",
+      "commit": "41ccce129d0f39b7a8a5edaaaeb2cf782e3bce2d",
+      "materialized_tree_sha256": "3cb819f514037d3ae0e90bda77e4883b03695ad34d0eff66de7dc5edf352d22e",
+      "toolchain": "occt-v4-clang10-o3-tcl86",
+      "toolchain_config": {
+        "path": "toolchains/occt-v4-clang10-o3-tcl86.json",
+        "sha256": "36d26cd94a139ac502457d363c7f246b4cc466169afc7fa817c25e0eb2fcbbe1"
+      },
+      "build_entry": {
+        "path": "tools/occt-v4-clang10-o3/build.sh",
+        "sha256": "00f5b24279098895b176a0ff20b27d7d99cf5d75c253a53aa8522f1f5d316305"
+      },
+      "declared_public_targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ]
+    },
+    "identity": {
+      "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/identity.json",
+      "sha256": "89588fafb2afe0da426ecee4d0c9be7c79e74dae44295ad8f06f6daea290cf88"
+    },
+    "runtime": {
+      "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/runtime.json",
+      "sha256": "47e287daa1e3176a531341b0a3208f540951d692f359acbf5e3ccac5b63f1123"
+    },
+    "core": {
+      "checks": {
+        "box-common": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "cx",
+                "swapped_cx"
+              ]
+            }
+          ]
+        },
+        "disjoint": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "solids",
+                "volume"
+              ]
+            }
+          ]
+        },
+        "cut-fuse": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "fused_volume"
+              ]
+            }
+          ]
+        },
+        "plane-sphere": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "length",
+                "witness_distance"
+              ]
+            }
+          ]
+        },
+        "hole-classification": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "hole_out",
+                "wall_in"
+              ]
+            }
+          ]
+        },
+        "brep-roundtrip": {
+          "status": "CALIBRATED",
+          "runs": [
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            },
+            {
+              "status": "CALIBRATED",
+              "geometry_executed": true,
+              "geometry": [],
+              "wrong_shape": [
+                "volume",
+                "hole_out"
+              ]
+            }
+          ]
+        }
+      },
+      "receipts": [
+        {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/core-1.json",
+          "sha256": "9fe935d417421b15880b9c00bd45525005f5070d274bb3922589552569696575"
+        },
+        {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/core-2.json",
+          "sha256": "a3ba950429ddf44ca44ce6da050d4949618f281bcc3d2ae3f0c68d7acea10d0a"
+        }
+      ]
+    },
+    "status": "PARTIALLY_CALIBRATED",
+    "registered_status": "CALIBRATION_FAILED",
+    "independent_status": "CALIBRATED",
+    "baseline_geometry_status": "geometry_pass",
+    "registered_baseline": {
+      "passed": true,
+      "assertions": {
+        "solution_count": "PASS",
+        "curve_length": "PASS"
+      },
+      "length": 31.41592653589793
+    },
+    "independent_scope": "Perpendicular plane and right circular cylinder, position and full domain of one analytic circle",
+    "original_receipt": {
+      "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/registered.json",
+      "sha256": "032d12701a91a5dd632b9de8ada2061014b27290fe88e26db0279896a5162542"
+    },
+    "reference": {
+      "actual_intersect": {
+        "radius": 5.0,
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "range": [
+          0.0,
+          6.28318530717959
+        ],
+        "span": 6.28318530717959,
+        "arc_length": 31.41592653589795,
+        "endpoint_distance": 1.653892159485515e-14,
+        "original_supports": {
+          "cylinder": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            5.0
+          ],
+          "plane": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "curve_type": "Geom_Circle",
+        "position_passed": true,
+        "full_angle_passed": true,
+        "passed": true
+      },
+      "brep": {
+        "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/original.brep",
+        "sha256": "fba89ac98a228a5485c3e131331d679ae03399869f7890b88618abb5fffcd7f0"
+      }
+    },
+    "controls": {
+      "healthy-1": {
+        "radius": 5.0,
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "range": [
+          0.0,
+          6.28318530717959
+        ],
+        "span": 6.28318530717959,
+        "arc_length": 31.41592653589795,
+        "endpoint_distance": 1.653892159485515e-14,
+        "original_supports": {
+          "cylinder": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            5.0
+          ],
+          "plane": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "curve_type": "Geom_Circle",
+        "position_passed": true,
+        "full_angle_passed": true,
+        "passed": true,
+        "registered": {
+          "passed": true,
+          "assertions": {
+            "solution_count": "PASS",
+            "curve_length": "PASS"
+          },
+          "length": 31.41592653589795
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/healthy-1-registered.json",
+          "sha256": "9a43bb80f8a950343e744ec6d21a35299b8c3e479ecd95b8edc30fbef4a87e76"
+        },
+        "submitted_brep": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/healthy-1.brep",
+          "sha256": "5676ce3b479ccf8e3a82a5eb3569e914c3103cb1e6d36db3e776412b009350ce"
+        },
+        "independent_reader": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/healthy-1-read.log",
+          "sha256": "44eec40eeaa969d42a0ac98cd3d71b2d8f3d46c1daec922478ca24b280ada920"
+        }
+      },
+      "healthy-2": {
+        "radius": 5.0,
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "range": [
+          0.0,
+          6.28318530717959
+        ],
+        "span": 6.28318530717959,
+        "arc_length": 31.41592653589795,
+        "endpoint_distance": 1.653892159485515e-14,
+        "original_supports": {
+          "cylinder": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            5.0
+          ],
+          "plane": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "curve_type": "Geom_Circle",
+        "position_passed": true,
+        "full_angle_passed": true,
+        "passed": true,
+        "registered": {
+          "passed": true,
+          "assertions": {
+            "solution_count": "PASS",
+            "curve_length": "PASS"
+          },
+          "length": 31.41592653589795
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/healthy-2-registered.json",
+          "sha256": "69289c598d415d1b4f68c8e74ad27330f1e675aba157e83618ecaae29cbbf997"
+        },
+        "submitted_brep": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/healthy-2.brep",
+          "sha256": "5676ce3b479ccf8e3a82a5eb3569e914c3103cb1e6d36db3e776412b009350ce"
+        },
+        "independent_reader": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/healthy-2-read.log",
+          "sha256": "44eec40eeaa969d42a0ac98cd3d71b2d8f3d46c1daec922478ca24b280ada920"
+        }
+      },
+      "shift": {
+        "radius": 5.0,
+        "center": [
+          0.0,
+          0.0,
+          0.25
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "range": [
+          0.0,
+          6.28318530717959
+        ],
+        "span": 6.28318530717959,
+        "arc_length": 31.41592653589795,
+        "endpoint_distance": 1.653892159485515e-14,
+        "original_supports": {
+          "cylinder": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            5.0
+          ],
+          "plane": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "curve_type": "Geom_Circle",
+        "position_passed": false,
+        "full_angle_passed": true,
+        "passed": false,
+        "registered": {
+          "passed": true,
+          "assertions": {
+            "solution_count": "PASS",
+            "curve_length": "PASS"
+          },
+          "length": 31.41592653589795
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/shift-registered.json",
+          "sha256": "e7f18ec993c12df0dcf8226fe8b64e3624f1538a3b4ff40c4fc043fd4889f5b2"
+        },
+        "submitted_brep": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/shift.brep",
+          "sha256": "3330c09c328ad96f98619251a231fc0b67063962000a3e814126218d0732bf2e"
+        },
+        "independent_reader": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/shift-read.log",
+          "sha256": "aa3fcae83417518047cc51953d2db388b3c11942b33dbaf8ed038544d65a269d"
+        }
+      },
+      "gap": {
+        "radius": 5.0,
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "range": [
+          0.0,
+          6.08318530717959
+        ],
+        "span": 6.08318530717959,
+        "arc_length": 30.41592653589795,
+        "endpoint_distance": 0.9983341664682659,
+        "original_supports": {
+          "cylinder": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            5.0
+          ],
+          "plane": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "curve_type": "Geom_Circle",
+        "position_passed": true,
+        "full_angle_passed": false,
+        "passed": false,
+        "registered": {
+          "passed": false,
+          "assertions": {
+            "solution_count": "PASS",
+            "curve_length": "FAIL"
+          },
+          "length": 30.41592653589795
+        },
+        "receipt": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/gap-registered.json",
+          "sha256": "7c2b8f41dc2bffec2fece9b8dca4912a9f5a5358047376eb9f29be1afd111742"
+        },
+        "submitted_brep": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/gap.brep",
+          "sha256": "5cb81cb95159c18a813b0ba79d7559b04f35281c4643022ca3ea41c29718c6ca"
+        },
+        "independent_reader": {
+          "path": "research/kernel-regression-v1/rollout-v16/receipts/circle/gap-read.log",
+          "sha256": "1245ebc9f7753b4126e2ec71626b0772112dd74eaf6c44d5221364eb0fcf1b0f"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "protocol": "manifest-suite-v1",
+  "suite": {
+    "id": "occt-github-1177-version-regression",
+    "version": "1"
+  },
+  "tests": [
+    {
+      "test": "fillet-gap",
+      "id": "fillet-gap",
+      "status": "passed",
+      "passed": true,
+      "result": {
+        "passed": true,
+        "compile": {
+          "return_code": 0,
+          "elapsed_seconds": 0.601,
+          "output_tail": "",
+          "timed_out": false
+        },
+        "result": {
+          "return_code": 0,
+          "elapsed_seconds": 0.011,
+          "output_tail": "INPUT top=10 bottom=9\nCYLINDER native low 4.9900000000000002 4.9899999999999993 4.9899999999999993\nCYLINDER native high 4.9900000000000002 4.9899999999999993 5.0100000000000007\nCONTROL native exists=1 width_ok=1 center_ok=1 endpoints_ok=1 low=4.9899999999999993 high=5.0100000000000007 width=0.02000000000000135 center=5 area=0.2000000000000135 volume=893.12785616825613\nCYLINDER healthy-1 low 4.9900000000000002 4.9899999999999993 4.9899999999999993\nCYLINDER healthy-1 high 4.9900000000000002 4.9899999999999993 5.0100000000000007\nCONTROL healthy-1 exists=1 width_ok=1 center_ok=1 endpoints_ok=1 low=4.9900000000000002 high=5.0099999999999998 width=0.019999999999999574 center=5 area=0.2000000000000135 volume=893.12785616825659\nCYLINDER healthy-2 low 4.9900000000000002 4.9899999999999993 4.9899999999999993\nCYLINDER healthy-2 high 4.9900000000000002 4.9899999999999993 5.0100000000000007\nCONTROL healthy-2 exists=1 width_ok=1 center_ok=1 endpoints_ok=1 low=4.9900000000000002 high=5.0099999999999998 width=0.019999999999999574 center=5 area=0.2000000000000135 volume=893.12785616825659\nCYLINDER missing low 5.0000000000000018 5.0000000000000018 5.0000000000000018\nCYLINDER missing high 5.0000000000000018 5.0000000000000018 4.9999999999999982\nCONTROL missing exists=0 width_ok=NA center_ok=NA endpoints_ok=NA volume=892.69908169872406\nCYLINDER wide low 4.9800000000000004 4.9799999999999995 4.9799999999999995\nCYLINDER wide high 4.9800000000000004 4.9799999999999995 5.0200000000000005\nCONTROL wide exists=1 width_ok=0 center_ok=1 endpoints_ok=0 low=4.9800000000000004 high=5.0199999999999996 width=0.039999999999999147 center=5 area=0.40000000000000924 volume=893.55577223044213\nCYLINDER shifted low 4.9859999999999998 4.9859999999999989 4.9859999999999989\nCYLINDER shifted high 4.9939999999999998 4.9939999999999989 5.0060000000000011\nCONTROL shifted exists=1 width_ok=1 center_ok=0 endpoints_ok=0 low=4.9859999999999998 high=5.0060000000000002 width=0.020000000000000462 center=4.9960000000000004 area=0.20000000000002238 volume=893.12778749566905\nTEST_DONE\n",
+          "timed_out": false
+        }
+      },
+      "category": "regression",
+      "visibility": "hidden",
+      "issue_id": "occt-github-1177",
+      "elapsed_seconds": 0.011
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "fillet-gap",
+      "status": "passed",
+      "passed": true,
+      "result": {
+        "passed": true,
+        "compile": {
+          "return_code": 0,
+          "elapsed_seconds": 0.601,
+          "output_tail": "",
+          "timed_out": false
+        },
+        "result": {
+          "return_code": 0,
+          "elapsed_seconds": 0.011,
+          "output_tail": "INPUT top=10 bottom=9\nCYLINDER native low 4.9900000000000002 4.9899999999999993 4.9899999999999993\nCYLINDER native high 4.9900000000000002 4.9899999999999993 5.0100000000000007\nCONTROL native exists=1 width_ok=1 center_ok=1 endpoints_ok=1 low=4.9899999999999993 high=5.0100000000000007 width=0.02000000000000135 center=5 area=0.2000000000000135 volume=893.12785616825613\nCYLINDER healthy-1 low 4.9900000000000002 4.9899999999999993 4.9899999999999993\nCYLINDER healthy-1 high 4.9900000000000002 4.9899999999999993 5.0100000000000007\nCONTROL healthy-1 exists=1 width_ok=1 center_ok=1 endpoints_ok=1 low=4.9900000000000002 high=5.0099999999999998 width=0.019999999999999574 center=5 area=0.2000000000000135 volume=893.12785616825659\nCYLINDER healthy-2 low 4.9900000000000002 4.9899999999999993 4.9899999999999993\nCYLINDER healthy-2 high 4.9900000000000002 4.9899999999999993 5.0100000000000007\nCONTROL healthy-2 exists=1 width_ok=1 center_ok=1 endpoints_ok=1 low=4.9900000000000002 high=5.0099999999999998 width=0.019999999999999574 center=5 area=0.2000000000000135 volume=893.12785616825659\nCYLINDER missing low 5.0000000000000018 5.0000000000000018 5.0000000000000018\nCYLINDER missing high 5.0000000000000018 5.0000000000000018 4.9999999999999982\nCONTROL missing exists=0 width_ok=NA center_ok=NA endpoints_ok=NA volume=892.69908169872406\nCYLINDER wide low 4.9800000000000004 4.9799999999999995 4.9799999999999995\nCYLINDER wide high 4.9800000000000004 4.9799999999999995 5.0200000000000005\nCONTROL wide exists=1 width_ok=0 center_ok=1 endpoints_ok=0 low=4.9800000000000004 high=5.0199999999999996 width=0.039999999999999147 center=5 area=0.40000000000000924 volume=893.55577223044213\nCYLINDER shifted low 4.9859999999999998 4.9859999999999989 4.9859999999999989\nCYLINDER shifted high 4.9939999999999998 4.9939999999999989 5.0060000000000011\nCONTROL shifted exists=1 width_ok=1 center_ok=0 endpoints_ok=0 low=4.9859999999999998 high=5.0060000000000002 width=0.020000000000000462 center=4.9960000000000004 area=0.20000000000002238 volume=893.12778749566905\nTEST_DONE\n",
+          "timed_out": false
+        }
+      },
+      "category": "regression",
+      "visibility": "hidden",
+      "issue_id": "occt-github-1177",
+      "elapsed_seconds": 0.011
+    }
+  ],
+  "limitations": [
+    "Checks are only those declared in this frozen suite; this is not the full upstream test suite."
+  ],
+  "report": {
+    "provided": false
+  },
+  "patch_bytes": 210,
+  "build": {
+    "occt_version": "8.1",
+    "toolkit_cache_variable": "BUILD_ADDITIONAL_TOOLKITS",
+    "configure": {
+      "command": [
+        "cmake",
+        "-S",
+        "/tmp/manifest-suite-hhlns0e6/source",
+        "-B",
+        "/tmp/manifest-suite-hhlns0e6/build",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_FLAGS_RELEASE=-O3 -DNDEBUG",
+        "-DCMAKE_CXX_FLAGS_RELEASE=-O3 -DNDEBUG",
+        "-DCMAKE_C_COMPILER=gcc",
+        "-DCMAKE_CXX_COMPILER=g++",
+        "-DBUILD_LIBRARY_TYPE=Shared",
+        "-DBUILD_ADDITIONAL_TOOLKITS=TKFillet;TKPrim",
+        "-DBUILD_MODULE_ApplicationFramework=OFF",
+        "-DBUILD_MODULE_DataExchange=OFF",
+        "-DBUILD_MODULE_Draw=OFF",
+        "-DBUILD_MODULE_FoundationClasses=OFF",
+        "-DBUILD_MODULE_ModelingAlgorithms=OFF",
+        "-DBUILD_MODULE_ModelingData=OFF",
+        "-DBUILD_MODULE_Visualization=OFF",
+        "-DUSE_TBB=OFF",
+        "-DUSE_TK=OFF"
+      ],
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.591,
+      "output_tail": "-- The C compiler identification is GNU 13.3.0\n-- The CXX compiler identification is GNU 13.3.0\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /usr/bin/gcc - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/g++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- \nInfo: (13:23:46) Start collecting all OCCT header files into /tmp/manifest-suite-hhlns0e6/build/include/opencascade ...\n-- Info: (13:23:46) End the collecting\n-- Info: Used native memory manager\n-- Info: (13:23:46) OCCT configuration files prepared\n-- Configuring done (0.4s)\n-- Generating done (0.1s)\n-- Build files have been written to: /tmp/manifest-suite-hhlns0e6/build\n"
+    },
+    "build": {
+      "command": [
+        "cmake",
+        "--build",
+        "/tmp/manifest-suite-hhlns0e6/build",
+        "--target",
+        "TKFillet",
+        "TKPrim",
+        "--parallel",
+        "2"
+      ],
+      "return_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 823.385,
+      "output_tail": "FiDS_StripeMap.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiDS/ChFiDS_SurfData.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi2d/ChFi2d.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi2d/ChFi2d_AnaFilletAlgo.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi2d/ChFi2d_Builder.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi2d/ChFi2d_Builder_0.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi2d/ChFi2d_ChamferAPI.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi2d/ChFi2d_FilletAlgo.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi2d/ChFi2d_FilletAPI.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_Builder.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_Builder_0.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_Builder_1.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_Builder_2.cxx.o\n[ 95%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_Builder_6.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_Builder_C1.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_Builder_C2.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_Builder_CnCrn.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_Builder_NotImp.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_Builder_SpKP.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_ChBuilder.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_ChBuilder_C2.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_ChBuilder_C3.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_Debug.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_FilBuilder.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_FilBuilder_C2.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_FilBuilder_C3.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFi3d/ChFi3d_SearchSing.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_ChAsymPlnCon.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_ChAsymPlnCyl.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_ChAsymPlnPln.cxx.o\n[ 96%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_ChPlnCon.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_ChPlnCyl.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_ChPlnPln.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_CS.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_Fcts.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_FilPlnCon.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_FilPlnCyl.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_FilPlnPln.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_Rotule.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/ChFiKPart/ChFiKPart_ComputeData_Sphere.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/Blend/Blend_AppFunction.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/Blend/Blend_CurvPointFuncInv.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/Blend/Blend_Debug.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/Blend/Blend_FuncInv.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/Blend/Blend_Function.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/Blend/Blend_Point.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/Blend/Blend_RstRstFunction.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/Blend/Blend_SurfCurvFuncInv.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/Blend/Blend_SurfPointFuncInv.cxx.o\n[ 97%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/Blend/Blend_SurfRstFunction.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_AppFunc.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_AppFuncRoot.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_AppFuncRst.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_AppFuncRstRst.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_AppSurf_0.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_AppSurface.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_BlendTool.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_CurvPointRadInv.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_Extremity.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_HCurve2dTool.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_HCurveTool.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_Line.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_PointOnRst.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_RstRstConstRad.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_RstRstEvolRad.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_RstRstLineBuilder.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_SurfCurvConstRadInv.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_SurfCurvEvolRadInv.cxx.o\n[ 98%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_SurfPointConstRadInv.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_SurfPointEvolRadInv.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_SurfRstConstRad.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_SurfRstEvolRad.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_SurfRstLineBuilder.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepBlend/BRepBlend_Walking.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_GenChamfer.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_GenChamfInv.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_Chamfer.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_ChamfInv.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_ChAsym.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_ChAsymInv.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_ConstRad.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_ConstRadInv.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_Corde.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_EvolRad.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_EvolRadInv.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_Tensor.cxx.o\n[ 99%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_ConstThroat.cxx.o\n[100%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_ConstThroatInv.cxx.o\n[100%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_ConstThroatWithPenetration.cxx.o\n[100%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BlendFunc/BlendFunc_ConstThroatWithPenetrationInv.cxx.o\n[100%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepFilletAPI/BRepFilletAPI_MakeChamfer.cxx.o\n[100%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepFilletAPI/BRepFilletAPI_MakeFillet.cxx.o\n[100%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/BRepFilletAPI/BRepFilletAPI_MakeFillet2d.cxx.o\n[100%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/FilletSurf/FilletSurf_Builder.cxx.o\n[100%] Building CXX object src/ModelingAlgorithms/TKFillet/CMakeFiles/TKFillet.dir/FilletSurf/FilletSurf_InternalBuilder.cxx.o\n[100%] Linking CXX shared library ../../../lin64/gcc/lib/libTKFillet.so\n[100%] Built target TKFillet\n[  9%] Built target TKernel\n[ 20%] Built target TKMath\n[ 23%] Built target TKG2d\n[ 31%] Built target TKG3d\n[ 52%] Built target TKGeomBase\n[ 61%] Built target TKBRep\n[ 86%] Built target TKGeomAlgo\n[ 97%] Built target TKTopAlgo\n[100%] Built target TKPrim\n"
+    },
+    "build_compatibility": [],
+    "build_tree_aliases": []
+  },
+  "elapsed_seconds": 825.491,
+  "passed": true
+}

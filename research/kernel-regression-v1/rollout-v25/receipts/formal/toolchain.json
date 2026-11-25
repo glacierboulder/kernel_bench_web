@@ -1,0 +1,20 @@
+{
+  "compiler_jobs_max": 2,
+  "compiler_output_directory": "gcc",
+  "evaluator_directory": "evaluation/cases/occt-single-v4-runtime-o0",
+  "executables": {
+    "c_compiler": "gcc",
+    "cmake": "cmake",
+    "cxx_compiler": "g++"
+  },
+  "id": "occt75-gcc13-o0-tcl86-32929",
+  "optimization_flags": "-O0 -DNDEBUG",
+  "platforms": [
+    "linux-x86_64"
+  ],
+  "schema_version": 1,
+  "tcl_paths": "Use deployment BENCH_TCL_* environment variables",
+  "tcl_version": "8.6",
+  "title": "OCCT 7.5 GCC 13 / Tcl 8.6 / O0",
+  "tools_directory": "occt-v4-clang10-o0"
+}

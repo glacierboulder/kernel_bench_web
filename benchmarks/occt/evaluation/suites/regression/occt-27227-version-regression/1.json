@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "occt-27227-version-regression",
+  "version": "1",
+  "title": "occt-27227 version regression (torus-rings)",
+  "source_ids": [
+    "occt-single20-cfde7eebb37b"
+  ],
+  "group_ids": [
+    "occt-single20-27227"
+  ],
+  "checkpoints": [
+    {
+      "id": "torus-rings",
+      "issue_id": "occt-27227",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "case": "evaluation/cases/version-regressions/1/circles.cxx",
+      "timeout_seconds": 90,
+      "required": true,
+      "runner_options": {
+        "libraries": [
+          "TKBO",
+          "TKPrim",
+          "TKTopAlgo",
+          "TKBRep",
+          "TKGeomBase",
+          "TKG3d",
+          "TKG2d",
+          "TKMath",
+          "TKernel",
+          "TKGeomAlgo"
+        ],
+        "inputs": [
+          "evaluation/cases/version-regressions/1/torus-rings/fixture.txt",
+          "evaluation/cases/version-regressions/1/torus-rings/healthy.brep",
+          "evaluation/cases/version-regressions/1/torus-rings/negative.brep",
+          "evaluation/cases/version-regressions/1/torus-rings/gap.brep"
+        ],
+        "stdout_contains": [
+          "native pass",
+          "healthy pass",
+          "negative missing_branch",
+          "gap incomplete",
+          "TEST_DONE"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "runner_sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+  "body_sha256": "5e40dbc6198da722a84d883e376e669742d555f77c27d067033c23f326339324",
+  "case_sha256": "480bae209e70cf47c5d474ef5f6ea27eae9e8186a7978ee54621e0440a065017",
+  "result": {
+    "actual_artifact_hashes": {
+      "drawexe_sha256": "6935aa02895da85348d780bd74e7136ea721d44f34f37b854d467500c131ae81",
+      "tktoptest_sha256": "35f2cabe86bade527e1171207fe474fa2c894d0f3f6ed2bc2b5dfac59993c73c"
+    },
+    "build": {
+      "compiler": "Clang 10",
+      "drawexe_sha256": "6935aa02895da85348d780bd74e7136ea721d44f34f37b854d467500c131ae81",
+      "jobs": 2,
+      "optimization": "-O0 -DNDEBUG",
+      "return_code": 0,
+      "status": "passed",
+      "targets": [
+        "DRAWEXE",
+        "TKTopTest"
+      ],
+      "tktoptest_sha256": "35f2cabe86bade527e1171207fe474fa2c894d0f3f6ed2bc2b5dfac59993c73c"
+    },
+    "calibration_identity": null,
+    "case_id": "M27780_regression_finite_plane",
+    "command": [
+      "bash",
+      "-lc",
+      "source /workspace/build/custom_clang_64.sh '' 64 && source /workspace/build/env.sh && export CSF_OCCTResourcePath=/workspace/source/src CSF_OCCTLibPath=/workspace/build/lin64/clang/lib CSF_OCCTBinPath=/workspace/build/lin64/clang/bin DRAWHOME=/workspace/source/src/DrawResources CSF_DrawPluginDefaults=/workspace/source/src/DrawResources && exec /workspace/build/lin64/clang/bin/DRAWEXE -b -f /tmp/replay/evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27780_regression_finite_plane.tcl"
+    ],
+    "cwd": "/tmp/replay/evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1",
+    "draw_process_return_code": 0,
+    "drawexe_sha256": "6935aa02895da85348d780bd74e7136ea721d44f34f37b854d467500c131ae81",
+    "duration_seconds": 0.032,
+    "environment_adaptations": {
+      "DISPLAY": "unset",
+      "LIBGL_ALWAYS_SOFTWARE": "1",
+      "required_conda_env": "",
+      "resource_root": "/workspace/source/src"
+    },
+    "execution": {
+      "oracle_ran": true,
+      "process_return_code": 0,
+      "raw_tcl_source_return_codes": [
+        "0"
+      ],
+      "signal": null,
+      "status": "completed",
+      "timeout_seconds": null
+    },
+    "framework_runner_path": "/inputs/evaluator_assets/five_group_originals/g3/run_draw_case.py",
+    "framework_runner_sha256": "f57bfa6e66d49b070c35f444715d31f295d7d2164ceacca6e2a3e89b013d80f7",
+    "geometry_core_path": "/inputs/evaluator_assets/occt-bf-group-b2613378-27780-27252-21494-v1/run_draw_case_core.py",
+    "geometry_core_sha256": "ab5b3f8e822b3dfcc0ff58cd7c74ad9b7790a796e8de893833b12cb10b61e7db",
+    "harness_path": "/tmp/replay/evaluation/cases/evaluator_tests/occt-bf-group-b2613378-27780-27252-21494-v1/M27780_regression_finite_plane.tcl",
+    "harness_sha256": "480bae209e70cf47c5d474ef5f6ea27eae9e8186a7978ee54621e0440a065017",
+    "log_path": "/out/registered-draw.log",
+    "log_sha256": "31306691d3cf807f964f42dcf7d3e8fbe573537b3263e200ac91acb6c3eaae4f",
+    "oracle": {
+      "checks": [
+        {
+          "id": "geometry_predicate",
+          "passed": true
+        }
+      ],
+      "detail": {
+        "max_abs_x": 0.0,
+        "max_abs_z": 0.0,
+        "max_pcurve_to_surface_residual": 0.0,
+        "max_y_spacing_or_endpoint_error": 0.0,
+        "sample_count": 17,
+        "section_edge_count": 1,
+        "section_vertex_count": 2,
+        "tolerance_model_units": 1e-07
+      },
+      "status": "geometry_pass"
+    },
+    "process_return_code": 0,
+    "requested_role": "agent",
+    "return_code": 0,
+    "role": "agent",
+    "runner_id": "bf-group3-clang10-case-mapped-v1",
+    "runner_process_exit_mapping": {
+      "0": "completed",
+      "1": "completed",
+      "2": "runtime_error",
+      "3": "timeout"
+    },
+    "runner_sha256": "ab5b3f8e822b3dfcc0ff58cd7c74ad9b7790a796e8de893833b12cb10b61e7db",
+    "schema_version": "bf-group3-staged-run-v1",
+    "test_done_marker": true,
+    "timed_out": false,
+    "tktoptest_sha256": "35f2cabe86bade527e1171207fe474fa2c894d0f3f6ed2bc2b5dfac59993c73c"
+  },
+  "exit": 0
+}

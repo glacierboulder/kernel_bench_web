@@ -1,0 +1,13 @@
+DRAW is running in batch mode
+TRIM_NATIVE 0.0 1 0.5 6.583185307179586
+M29972_REG_CURVES=1 expected=1
+BENCH_ASSERT_PASS solution_count  kind=expression
+checklength regcurve -l 31.41592653589793
+The expected length is 31.41592653589793
+Error : The length of result shape is 30.415926535897931
+M29972_REG_LENGTH=30.415926535897931 expected=31.41592653589793 relative_error=0.03183098861837907
+BENCH_ASSERT_FAIL curve_length observed=30.415926535897931 expected=31.41592653589793 kind=expression
+__BENCH_ORACLE_COMPLETE__
+BENCH_ORACLE_OK assertions=2 numeric_assertions=0
+TEST_DONE assertions=2 numeric_assertions=0
+SCRIPT_RETURN 0 
