@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "occt-29400-suite",
+  "version": "1",
+  "title": "两条样条边做布尔融合后留下相互干涉的顶点",
+  "source_ids": [
+    "occt72-29400-b-8197951d7e2f"
+  ],
+  "group_ids": [
+    "occt-29400-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "29400-original",
+      "issue_id": "occt-29400",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29400/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "29400-translated",
+      "issue_id": "occt-29400",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29400/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "29400-alternate",
+      "issue_id": "occt-29400",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29400/alternate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "29400-control",
+      "issue_id": "occt-29400",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29400/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt29400/body.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt29400/assets/bug29400_edges.brep"
+  ]
+}
