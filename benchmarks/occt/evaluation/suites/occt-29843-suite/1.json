@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "occt-29843-suite",
+  "version": "1",
+  "title": "远离原点的两个实体求交时截线缺边，公共实体丢失",
+  "source_ids": [
+    "occt74-29843-b-d7992a77f6fd"
+  ],
+  "group_ids": [
+    "occt-29843-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "29843-original",
+      "issue_id": "occt-29843",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29843/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "29843-translated",
+      "issue_id": "occt-29843",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29843/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "29843-alternate",
+      "issue_id": "occt-29843",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29843/alternate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "29843-control",
+      "issue_id": "occt-29843",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29843/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt29843/body.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt29843/assets/bug29843_loc.brep"
+  ]
+}

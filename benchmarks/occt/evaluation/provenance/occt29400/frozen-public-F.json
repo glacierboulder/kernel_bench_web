@@ -1,0 +1,21 @@
+{
+  "issue": 29400,
+  "commit": "e25185fff00ab370800b0af074313ca0c728731b",
+  "command": [
+    "DRAWEXE",
+    "-b",
+    "-f",
+    "reproduce.tcl"
+  ],
+  "working_directory": "visible/issue_29400",
+  "snapshot_sha256": "91071306a9dae299841291523d0b2cc808a11a46b910d40d822e772fc281da33",
+  "files": {
+    "bug29400_edges.brep": "28fdc555d8a5565db89cd4b2f70a410e90362ff38490e972bd68b23c4ebe3bfa",
+    "issue.json": "a7760b924612aea0a6304f19d8dd67de2baac4ae2267e82caf8c196912368b91",
+    "reproduce.tcl": "927be04c0fa0447d55c8aa60fa9d8db7fa33d76a64828476b7a74778070c0cc7",
+    "statement.md": "937c20f6c776be970397c21588f308fde44617e922d522bc96f4a5f20ccf5f93"
+  },
+  "stdout": "DRAW is running in batch mode\nNumber of shapes in result\n VERTEX    : 3\n EDGE      : 2\n WIRE      : 0\n FACE      : 0\n SHELL     : 0\n SOLID     : 0\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 6\n\n\n\nMass :         1.78839\n\nCenter of gravity : \nX =         172.707\nY =          16.125\nZ =            1.78\n\nMatrix of Inertia : \n    2.67078e-05      0.00346745      5.5235e-08\n     0.00346745        0.472029    -3.42041e-10\n     5.5235e-08    -3.42041e-10        0.472056\n\nMoments : \nIX =        0.472056\nIY =        0.472055\nIZ =     1.23647e-06\n\n\nThis shape seems to be valid\n This shape seems to be OK.\n\n",
+  "stderr": "",
+  "returncode": 0
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-28492-single",
+  "version": "1",
+  "title": "短步长步进求交产生的零碎截边",
+  "kind": "single",
+  "source_id": "occt71-28492-b-176a7959209e",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-28492",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-28492-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

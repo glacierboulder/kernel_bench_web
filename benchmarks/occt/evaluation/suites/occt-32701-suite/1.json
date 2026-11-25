@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "occt-32701-suite",
+  "version": "1",
+  "title": "退化面边界附近的截线参数曲线偏折",
+  "source_ids": [
+    "occt77-32701-b-5614b1369a23"
+  ],
+  "group_ids": [
+    "occt-32701-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "32701-original",
+      "issue_id": "occt-32701",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt32701/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "32701-translated",
+      "issue_id": "occt-32701",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt32701/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "32701-alternate",
+      "issue_id": "occt-32701",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt32701/alternate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "32701-control",
+      "issue_id": "occt-32701",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt32701/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt32701/body.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt32701/assets/bug32701s.brep",
+    "evaluation/cases/occt32701/assets/bug32701t.brep"
+  ]
+}

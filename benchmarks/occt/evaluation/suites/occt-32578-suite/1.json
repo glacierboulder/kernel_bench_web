@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "occt-32578-suite",
+  "version": "1",
+  "title": "用一组边切分曲面时遗漏分区或生成自交结果",
+  "source_ids": [
+    "occt76-32578-b-3e9cb8064479"
+  ],
+  "group_ids": [
+    "occt-32578-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "32578-original",
+      "issue_id": "occt-32578",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt32578/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "32578-translated",
+      "issue_id": "occt-32578",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt32578/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "32578-alternate",
+      "issue_id": "occt-32578",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt32578/alternate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "32578-control",
+      "issue_id": "occt-32578",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt32578/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt32578/body.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt32578/assets/bug32578_edges.brep",
+    "evaluation/cases/occt32578/assets/bug32578_face.brep"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "kind": "reevaluation",
+  "protocol": "manifest-suite-v1",
+  "returncode": 0,
+  "passed": true,
+  "technical_passed": true,
+  "model_called": false,
+  "source_id": "occt71-28690-b-f5b7241978a9",
+  "source_commit": "f5b7241978a9c2b1033e5e837f5dd7b1db9d69c2",
+  "source_tree_sha256": "a1e0f4df1b29dc9fd3bc9264e8d041a86a20b7ead1be8406e50309cf35f4ecec",
+  "patch_sha256": "70b59ef760cfb2faf90d0cb7e7c67f0ea0c8e21ef81b7dbdd7965d984bc94f54",
+  "suite": {
+    "id": "occt-28690-suite",
+    "version": "1"
+  },
+  "snapshot_sha256": "21cda3498318728250cb66cfd91de4226a32550e6549078bab72d0bdf6cc1655",
+  "evaluator_sha256": "4dbc8ed3827cf44d767b2f72868d5df0ca9a9c3aecb549d094c12e0acbc98743",
+  "checkpoints": [
+    {
+      "id": "28690-original",
+      "category": "original",
+      "status": "passed"
+    },
+    {
+      "id": "28690-translated",
+      "category": "neighborhood",
+      "status": "passed"
+    },
+    {
+      "id": "28690-alternate",
+      "category": "neighborhood",
+      "status": "passed"
+    },
+    {
+      "id": "28690-control",
+      "category": "regression",
+      "status": "passed"
+    }
+  ],
+  "category_summary": {
+    "original": {
+      "declared": 1,
+      "executed": 1,
+      "passed": 1
+    },
+    "neighborhood": {
+      "declared": 2,
+      "executed": 2,
+      "passed": 2
+    },
+    "regression": {
+      "declared": 1,
+      "executed": 1,
+      "passed": 1
+    }
+  },
+  "stages": {
+    "patch_application": "passed",
+    "configure": "passed",
+    "build": "passed"
+  },
+  "report_provided": false
+}

@@ -9,6 +9,8 @@ import re
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1] / "benchmarks/occt"
+FROZEN_CATALOG = HERE / "rollout-v33/catalog.snapshot.json"
+FROZEN_LOCK = HERE / "rollout-v33/registry/sources.lock.json"
 PROFILES = {
     "cells history partition": ["occt801-b8f597c67781"],
     "projection pcurve": ["occt801-b8f597c67781-singularity"],
@@ -55,9 +57,9 @@ def asset(path):
     return {"path": str(path.relative_to(ROOT)), "sha256": sha(path)}
 
 
-def build_plan(catalog_path=ROOT / "catalog.json"):
+def build_plan(catalog_path=FROZEN_CATALOG, lock_path=FROZEN_LOCK):
     catalog = read(catalog_path)
-    locks = read(ROOT / "sources.lock.json")["sources"]
+    locks = read(lock_path)["sources"]
     families = read(HERE / "families.json")["families"]
     profile = {key: names.split() for names, keys in PROFILES.items() for key in keys}
     if set(profile) != {s["source_id"] for s in locks}:
@@ -119,7 +121,7 @@ def build_plan(catalog_path=ROOT / "catalog.json"):
             rows[-1]["boolean_regression_suite"] = {"id": specialist["id"], "version": specialist["version"],
                                                    "checkpoint_ids": [c["id"] for c in specialist["registered_regressions"]]}
     return {"suite": "kernel-regression-v1", "catalog": {"path": "catalog.json", "sha256": sha(catalog_path)},
-            "lock": asset(ROOT/"sources.lock.json"), "family_specs_sha256":sha(HERE/"families.json"),
+            "lock": {"path": "sources.lock.json", "sha256": sha(lock_path)}, "family_specs_sha256":sha(HERE/"families.json"),
             "probe_sha256":sha(HERE/"probe.cxx"), "oracle_sha256":sha(HERE/"replay.py"),
             "counts":{"source_ids":len(rows), "commits":len({s["commit"] for s in rows}),
                 "toolchains":len({s["toolchain"] for s in rows}), "groups":len(groups), "suite_versions":len(suites),

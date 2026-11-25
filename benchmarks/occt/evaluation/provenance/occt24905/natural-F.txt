@@ -1,0 +1,12 @@
+DRAW is running in batch mode
+original valid=1 solids=1 faces=7 volume=3.54041e+06 section_edges=8 section_vertices=8
+original section_length=3965.07 closed=1
+mode=original verdict=pass
+translated valid=1 solids=1 faces=7 volume=3.54041e+06 section_edges=8 section_vertices=8
+translated section_length=3965.07 closed=1
+mode=translated verdict=pass
+alternate valid=1 solids=1 faces=7 volume=3.54041e+06 section_edges=8 section_vertices=8
+alternate section_length=3965.07 closed=1
+mode=alternate verdict=pass
+control valid=1 solids=1 faces=3 volume=4.39823e+06 section_edges=0 section_vertices=0
+mode=control verdict=pass

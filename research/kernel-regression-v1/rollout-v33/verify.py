@@ -15,7 +15,7 @@ from stage import BENCH, HERE, PREVIOUS, REPO, candidate
 sys.path.insert(0, str(REPO))
 sys.path.insert(0, str(HERE.parent))
 from backend.catalog import validate_bundle
-from make_plan import CORE, build_plan, version_index
+from make_plan import CORE, FROZEN_LOCK, build_plan, version_index
 
 PRIOR = HERE.parent / "rollout-v32"
 PRIOR_BUILD = HERE.parent / "rollout-v5/receipts/coons"
@@ -255,9 +255,11 @@ def main():
         require(read(BENCH / "catalog.json") in (
                 read(PREVIOUS / "catalog.snapshot.json"), json.loads(staged["catalog.json"])),
                 "concurrent registry changes")
-    for target, content in staged.items():
-        write(BENCH / target, content)
-    validate_bundle(BENCH)
+        write(BENCH / "catalog.json", staged["catalog.json"])
+    write(BENCH / path, staged[path])
+    bundle = validate_bundle(BENCH)
+    registered = bundle["suites"][suite["id"], suite["version"]]
+    require(registered["source_ids"] == suite["source_ids"], "Coons suite lost its locked identity")
     snapshot = HERE / "catalog.snapshot.json"
     write(snapshot, staged["catalog.json"])
     plan = build_plan(snapshot)
@@ -290,7 +292,7 @@ def main():
                                   "formal_vectors": proof["artifact"], "clean_vectors": paired["artifact"],
                                   "value_history": history}
     rows = ledger["rows"]
-    locks = read(BENCH / "sources.lock.json")["sources"]
+    locks = read(FROZEN_LOCK)["sources"]
     require(len(rows) == len(locks) == 37
             and {r["source_id"] for r in rows} == {lock["source_id"] for lock in locks},
             "coverage denominator does not match the locked inventory")

@@ -1,0 +1,845 @@
+diff --git a/src/CSLib/CSLib_Class2d.cxx b/src/CSLib/CSLib_Class2d.cxx
+index 35e84cba4c..ea51544443 100644
+--- a/src/CSLib/CSLib_Class2d.cxx
++++ b/src/CSLib/CSLib_Class2d.cxx
+@@ -26,82 +26,97 @@ static inline
+ 			    const Standard_Real umaxmumin);
+ 
+ //=======================================================================
+-//function : CSLib_Class2d
+-//purpose  : 
++//function : Init
++//purpose  :
+ //=======================================================================
+-CSLib_Class2d::CSLib_Class2d(const TColgp_Array1OfPnt2d& TP2d,
+-			     const Standard_Real aTolu,
+-			     const Standard_Real aTolv,
+-			     const Standard_Real umin,
+-			     const Standard_Real vmin,
+-			     const Standard_Real umax,
+-			     const Standard_Real vmax) 
++template <class TCol_Containers2d>
++void CSLib_Class2d::Init(const TCol_Containers2d& TP2d,
++                 const Standard_Real aTolu,
++                 const Standard_Real aTolv,
++                 const Standard_Real umin,
++                 const Standard_Real vmin,
++                 const Standard_Real umax,
++                 const Standard_Real vmax)
+ {
+-  Umin=umin;
+-  Vmin=vmin;
+-  Umax=umax;
+-  Vmax=vmax;
++  Umin = umin;
++  Vmin = vmin;
++  Umax = umax;
++  Vmax = vmax;
+   //
+-  if(umax<=umin || vmax<=vmin) { 
+-    MyPnts2dX=NULL;
+-    MyPnts2dY=NULL;
+-    N=0;
++  if ((umax <= umin) || (vmax <= vmin) || (TP2d.Length() < 3))
++  {
++    MyPnts2dX.Nullify();
++    MyPnts2dY.Nullify();
++    N = 0;
+   }
+   //
+-  else {
++  else
++  {
+     Standard_Integer i, iLower;
+-    Standard_Real du,dv,*Pnts2dX,*Pnts2dY, aPrc;   
++    Standard_Real du, dv, aPrc;
+     //
+-    aPrc=1.e-10;
++    aPrc = 1.e-10;
+     N = TP2d.Length();
+     Tolu = aTolu;
+     Tolv = aTolv;
+-    MyPnts2dX = new Standard_Real [N+1];
+-    MyPnts2dY = new Standard_Real [N+1];
+-    du=umax-umin;
+-    dv=vmax-vmin;
+-    Pnts2dX = (Standard_Real *)MyPnts2dX;
+-    Pnts2dY = (Standard_Real *)MyPnts2dY;
++    MyPnts2dX = new TColStd_Array1OfReal(0, N);
++    MyPnts2dY = new TColStd_Array1OfReal(0, N);
++    du = umax - umin;
++    dv = vmax - vmin;
+     //
+-    iLower=TP2d.Lower();
+-    for(i = 0; i<N; ++i) { 
+-      const gp_Pnt2d& aP2D=TP2d(i+iLower);
+-      Pnts2dX[i] = Transform2d(aP2D.X(), umin, du);
+-      Pnts2dY[i] = Transform2d(aP2D.Y(), vmin, dv);
++    iLower = TP2d.Lower();
++    for (i = 0; i<N; ++i)
++    {
++      const gp_Pnt2d& aP2D = TP2d(i + iLower);
++      MyPnts2dX->ChangeValue(i) = Transform2d(aP2D.X(), umin, du);
++      MyPnts2dY->ChangeValue(i) = Transform2d(aP2D.Y(), vmin, dv);
+     }
+-    Pnts2dX[N]=Pnts2dX[0];
+-    Pnts2dY[N]=Pnts2dY[0];
++    MyPnts2dX->ChangeLast() = MyPnts2dX->First();
++    MyPnts2dY->ChangeLast() = MyPnts2dY->First();
+     //
+-    if(du>aPrc) {
+-      Tolu/=du;
++    if (du>aPrc)
++    {
++      Tolu /= du;
+     }
+-    if(dv>aPrc) {
+-      Tolv/=dv;
++    if (dv>aPrc)
++    {
++      Tolv /= dv;
+     }
+   }
+ }
++
+ //=======================================================================
+-//function : Destroy
++//function : CSLib_Class2d
+ //purpose  : 
+ //=======================================================================
+-void CSLib_Class2d::Destroy() { 
+-  if(MyPnts2dX) { 
+-    delete [] (Standard_Real *)MyPnts2dX;
+-    MyPnts2dX=NULL;
+-  }
+-  if(MyPnts2dY) { 
+-    delete [] (Standard_Real *)MyPnts2dY;
+-    MyPnts2dY=NULL;
+-  }
++CSLib_Class2d::CSLib_Class2d(const TColgp_Array1OfPnt2d& thePnts2d,
++                             const Standard_Real theTolU,
++                             const Standard_Real theTolV,
++                             const Standard_Real theUMin,
++                             const Standard_Real theVMin,
++                             const Standard_Real theUMax,
++                             const Standard_Real theVMax)
++{
++  Init(thePnts2d, theTolU, theTolV, theUMin,
++       theVMin, theUMax, theVMax);
++}
++
++//=======================================================================
++//function : CSLib_Class2d
++//purpose  : 
++//=======================================================================
++CSLib_Class2d::CSLib_Class2d(const TColgp_SequenceOfPnt2d& thePnts2d,
++                             const Standard_Real theTolU,
++                             const Standard_Real theTolV,
++                             const Standard_Real theUMin,
++                             const Standard_Real theVMin,
++                             const Standard_Real theUMax,
++                             const Standard_Real theVMax)
++{
++  Init(thePnts2d, theTolU, theTolV, theUMin,
++       theVMin, theUMax, theVMax);
+ }
+ 
+-//-- Attention   Table of 0 ------> N + 1 
+-//--                      P1 ..... Pn P1
+-//--
+-//--     1  2  3
+-//--     4  0  5
+-//--     6  7  8
+-//-- 
+ //=======================================================================
+ //function : SiDans
+ //purpose  : 
+@@ -187,21 +202,18 @@ Standard_Integer CSLib_Class2d::InternalSiDans(const Standard_Real Px,
+ 					       const Standard_Real Py) const
+ { 
+   Standard_Integer nbc, i, ip1, SH, NH;
+-  Standard_Real *Pnts2dX, *Pnts2dY;
+   Standard_Real  x, y, nx, ny;
+   //
+   nbc = 0;
+   i   = 0;
+   ip1 = 1;
+-  Pnts2dX = (Standard_Real *)MyPnts2dX;
+-  Pnts2dY = (Standard_Real *)MyPnts2dY;
+-  x   = (Pnts2dX[i]-Px);
+-  y   = (Pnts2dY[i]-Py);
++  x   = (MyPnts2dX->Value(i)-Px);
++  y   = (MyPnts2dY->Value(i)-Py);
+   SH  = (y<0.)? -1 : 1;
+   //
+   for(i=0; i<N ; i++,ip1++) { 
+-    nx = Pnts2dX[ip1] - Px;
+-    ny = Pnts2dY[ip1] - Py;
++    nx = MyPnts2dX->Value(ip1) - Px;
++    ny = MyPnts2dY->Value(ip1) - Py;
+     
+     NH = (ny<0.)? -1 : 1;
+     if(NH!=SH) { 
+@@ -230,23 +242,20 @@ Standard_Integer CSLib_Class2d::InternalSiDansOuOn(const Standard_Real Px,
+ 						   const Standard_Real Py) const 
+ { 
+   Standard_Integer nbc, i, ip1, SH, NH, iRet;
+-  Standard_Real *Pnts2dX, *Pnts2dY;
+   Standard_Real x, y, nx, ny, aX;
+   Standard_Real aYmin;
+   //
+   nbc = 0;
+   i   = 0;
+   ip1 = 1;
+-  Pnts2dX = (Standard_Real *)MyPnts2dX;
+-  Pnts2dY = (Standard_Real *)MyPnts2dY;
+-  x   = (Pnts2dX[i]-Px);
+-  y   = (Pnts2dY[i]-Py);
++  x   = (MyPnts2dX->Value(i)-Px);
++  y   = (MyPnts2dY->Value(i)-Py);
+   aYmin=y;
+   SH  = (y<0.)? -1 : 1;
+   for(i=0; i<N ; i++, ip1++) { 
+    
+-    nx = Pnts2dX[ip1] - Px;
+-    ny = Pnts2dY[ip1] - Py;
++    nx = MyPnts2dX->Value(ip1) - Px;
++    ny = MyPnts2dY->Value(ip1) - Py;
+     //-- le 14 oct 97 
+     if(nx<Tolu && nx>-Tolu && ny<Tolv && ny>-Tolv) { 
+       iRet=-1;
+@@ -254,11 +263,11 @@ Standard_Integer CSLib_Class2d::InternalSiDansOuOn(const Standard_Real Px,
+     }
+     //find Y coordinate of polyline for current X gka
+     //in order to detect possible status ON
+-    Standard_Real aDx = (Pnts2dX[ip1] - Pnts2dX[ip1-1]);
+-    if( (Pnts2dX[ip1-1] - Px) * nx < 0.)
++    Standard_Real aDx = (MyPnts2dX->Value(ip1) - MyPnts2dX->Value(ip1-1));
++    if( (MyPnts2dX->Value(ip1-1) - Px) * nx < 0.)
+     {
+      
+-      Standard_Real aCurPY =  Pnts2dY[ip1] - (Pnts2dY[ip1] - Pnts2dY[ip1-1])/aDx *nx;
++      Standard_Real aCurPY = MyPnts2dY->Value(ip1) - (MyPnts2dY->Value(ip1) - MyPnts2dY->Value(ip1-1))/aDx *nx;
+       Standard_Real aDeltaY = aCurPY - Py;
+       if(aDeltaY >= -Tolv && aDeltaY <= Tolv)
+       {
+@@ -296,17 +305,6 @@ Standard_Integer CSLib_Class2d::InternalSiDansOuOn(const Standard_Real Px,
+ }
+ //modified by NIZNHY-PKV Fri Jan 15 09:03:55 2010t
+ //=======================================================================
+-//function : Copy
+-//purpose  : 
+-//=======================================================================
+-const CSLib_Class2d& CSLib_Class2d::Copy(const CSLib_Class2d& ) const 
+-{ 
+-#ifdef OCCT_DEBUG
+-  cerr<<"Copy not allowed in CSLib_Class2d"<<endl;
+-#endif
+-  throw Standard_ConstructionError();
+-}
+-//=======================================================================
+ //function : Transform2d
+ //purpose  : 
+ //=======================================================================
+diff --git a/src/CSLib/CSLib_Class2d.hxx b/src/CSLib/CSLib_Class2d.hxx
+index 96478dde4e..95ec8e2d29 100644
+--- a/src/CSLib/CSLib_Class2d.hxx
++++ b/src/CSLib/CSLib_Class2d.hxx
+@@ -25,6 +25,10 @@
+ #include <Standard_Real.hxx>
+ #include <Standard_Integer.hxx>
+ #include <TColgp_Array1OfPnt2d.hxx>
++#include <NCollection_Handle.hxx>
++#include <TColStd_Array1OfReal.hxx>
++#include <TColgp_SequenceOfPnt2d.hxx>
++
+ class gp_Pnt2d;
+ 
+ 
+@@ -38,8 +42,38 @@ public:
+   DEFINE_STANDARD_ALLOC
+ 
+   
+-  Standard_EXPORT CSLib_Class2d(const TColgp_Array1OfPnt2d& TP, const Standard_Real aTolu, const Standard_Real aTolv, const Standard_Real umin, const Standard_Real vmin, const Standard_Real umax, const Standard_Real vmax);
+-  
++    //! Constructs the 2D-polygon.
++    //! thePnts2d is the set of the vertices (closed polygon
++    //! will always be created inside of this constructor;
++    //! consequently, there is no point in repeating first and
++    //! last point in thePnts2d).
++    //! theTolu and theTolv are tolerances.
++    //! theUmin, theVmin, theUmax, theVmax are
++    //! UV-bounds of the polygon.
++    Standard_EXPORT CSLib_Class2d(const TColgp_Array1OfPnt2d& thePnts2d,
++                                  const Standard_Real theTolU,
++                                  const Standard_Real theTolV,
++                                  const Standard_Real theUMin,
++                                  const Standard_Real theVMin,
++                                  const Standard_Real theUMax,
++                                  const Standard_Real theVMax);
++
++  //! Constructs the 2D-polygon.
++  //! thePnts2d is the set of the vertices (closed polygon
++  //! will always be created inside of this constructor;
++  //! consequently, there is no point in repeating first and
++  //! last point in thePnts2d).
++  //! theTolu and theTolv are tolerances.
++  //! theUmin, theVmin, theUmax, theVmax are
++  //! UV-bounds of the polygon.
++  Standard_EXPORT CSLib_Class2d(const TColgp_SequenceOfPnt2d& thePnts2d,
++                                const Standard_Real theTolU,
++                                const Standard_Real theTolV,
++                                const Standard_Real theUMin,
++                                const Standard_Real theVMin,
++                                const Standard_Real theUMax,
++                                const Standard_Real theVMax);
++
+   Standard_EXPORT Standard_Integer SiDans (const gp_Pnt2d& P) const;
+   
+   Standard_EXPORT Standard_Integer SiDans_OnMode (const gp_Pnt2d& P, const Standard_Real Tol) const;
+@@ -48,33 +82,25 @@ public:
+   
+   Standard_EXPORT Standard_Integer InternalSiDansOuOn (const Standard_Real X, const Standard_Real Y) const;
+   
+-  Standard_EXPORT const CSLib_Class2d& Copy (const CSLib_Class2d& Other) const;
+-const CSLib_Class2d& operator= (const CSLib_Class2d& Other) const
+-{
+-  return Copy(Other);
+-}
+-  
+-  Standard_EXPORT void Destroy();
+-~CSLib_Class2d()
+-{
+-  Destroy();
+-}
+-
+-
+-
+-
+ protected:
+ 
+ 
+-
+-
+-
+ private:
+ 
++  //! Initializes theObj
++  template <class TCol_Containers2d>
++  void Init(const TCol_Containers2d& TP2d,
++                          const Standard_Real aTolu,
++                          const Standard_Real aTolv,
++                          const Standard_Real umin,
++                          const Standard_Real vmin,
++                          const Standard_Real umax,
++                          const Standard_Real vmax);
+ 
++  //! Assign operator is forbidden
++  const CSLib_Class2d& operator= (const CSLib_Class2d& Other) const;
+ 
+-  Standard_Address MyPnts2dX;
+-  Standard_Address MyPnts2dY;
++  NCollection_Handle <TColStd_Array1OfReal> MyPnts2dX, MyPnts2dY;
+   Standard_Real Tolu;
+   Standard_Real Tolv;
+   Standard_Integer N;
+diff --git a/src/GeometryTest/GeometryTest.cxx b/src/GeometryTest/GeometryTest.cxx
+index 1e0e2e5261..556a671a03 100644
+--- a/src/GeometryTest/GeometryTest.cxx
++++ b/src/GeometryTest/GeometryTest.cxx
+@@ -34,10 +34,15 @@ void GeometryTest::AllCommands(Draw_Interpretor& theCommands)
+   GeometryTest::FairCurveCommands(theCommands);
+   GeometryTest::SurfaceCommands(theCommands);
+   GeometryTest::ConstraintCommands(theCommands);
++
++// See bug #0030366
+ //  GeometryTest::API2dCommands(theCommands);
++
+   GeometryTest::APICommands(theCommands);
+   GeometryTest::ContinuityCommands(theCommands);
+   GeometryTest::TestProjCommands(theCommands);
++  GeometryTest::PolyCommands(theCommands);
++
+   // define the TCL variable Draw_GEOMETRY
+   //char* com = "set Draw_GEOMETRY 1";
+   //theCommands.Eval(com);
+diff --git a/src/GeometryTest/GeometryTest_PolyCommands.cxx b/src/GeometryTest/GeometryTest_PolyCommands.cxx
+index 5eaabdbd65..9d582b7635 100644
+--- a/src/GeometryTest/GeometryTest_PolyCommands.cxx
++++ b/src/GeometryTest/GeometryTest_PolyCommands.cxx
+@@ -21,6 +21,7 @@
+ #include <DrawTrSurf_Polygon3D.hxx>
+ #include <DrawTrSurf_Triangulation.hxx>
+ #include <GeometryTest.hxx>
++#include <Poly.hxx>
+ #include <Poly_Array1OfTriangle.hxx>
+ #include <Poly_Polygon2D.hxx>
+ #include <Poly_Polygon3D.hxx>
+@@ -183,6 +184,108 @@ static Standard_Integer shtriangles(Draw_Interpretor& , Standard_Integer n, cons
+   return 0;//wnt
+ }
+ 
++//=======================================================================
++//function : AddNode
++//purpose  : 
++//=======================================================================
++template <typename Poly, typename Point, typename PointArr>
++static inline void AddNode(const Handle(Poly)& thePolygon,
++                    const Point& thePnt,
++                    PointArr& theNodes)
++{
++  for (Standard_Integer i = thePolygon->Nodes().Lower();
++       i <= thePolygon->Nodes().Upper(); i++)
++  {
++    theNodes[i] = thePolygon->Nodes()[i];
++  }
++
++  theNodes.ChangeLast() = thePnt;
++}
++
++//=======================================================================
++//function : AddNode
++//purpose  : 
++//=======================================================================
++static Standard_Integer AddNode(Draw_Interpretor& theDI,
++                                Standard_Integer theNArg,
++                                const char** theArgVal)
++{
++  if (theNArg < 4)
++  {
++    theDI << "Not enough arguments\n";
++    return 1;
++  }
++
++  if (theNArg == 4)
++  {
++    Handle(Poly_Polygon2D) aPoly2d = DrawTrSurf::GetPolygon2D(theArgVal[1]);
++    TColgp_Array1OfPnt2d aNodes(aPoly2d->Nodes().Lower(),
++                                aPoly2d->Nodes().Upper() + 1);
++    AddNode(aPoly2d, gp_Pnt2d(Draw::Atof(theArgVal[2]),
++                              Draw::Atof(theArgVal[3])), aNodes);
++    aPoly2d.Nullify();
++    aPoly2d = new Poly_Polygon2D(aNodes);
++    DrawTrSurf::Set(theArgVal[1], aPoly2d);
++  }
++  else
++  {
++    Handle(Poly_Polygon3D) aPoly3d = DrawTrSurf::GetPolygon3D(theArgVal[1]);
++    TColgp_Array1OfPnt aNodes(aPoly3d->Nodes().Lower(),
++                                aPoly3d->Nodes().Upper() + 1);
++    AddNode(aPoly3d, gp_Pnt(Draw::Atof(theArgVal[2]),
++                            Draw::Atof(theArgVal[3]),
++                            Draw::Atof(theArgVal[4])), aNodes);
++    aPoly3d.Nullify();
++    aPoly3d = new Poly_Polygon3D(aNodes);
++    DrawTrSurf::Set(theArgVal[1], aPoly3d);
++  }
++
++  return 0;
++}
++
++//=======================================================================
++//function : PolygonProps
++//purpose  : 
++//=======================================================================
++static Standard_Integer PolygonProps(Draw_Interpretor& theDI,
++                                     Standard_Integer theNArg,
++                                     const char** theArgVal)
++{
++  if (theNArg < 2)
++  {
++    theDI << "Use: polygonprops polygon2d [-area val] [-perimeter val]\n";
++    return 1;
++  }
++
++  Handle(Poly_Polygon2D) aPoly2d = DrawTrSurf::GetPolygon2D(theArgVal[1]);
++
++  Standard_Real anArea = 0.0, aPerimeter = 0.0;
++  Poly::PolygonProperties(aPoly2d->Nodes(), anArea, aPerimeter);
++
++  theDI << "Area      = " << anArea << "\n";
++  theDI << "Perimeter = " << aPerimeter << "\n";
++
++  for (Standard_Integer i = 2; i < theNArg; i++)
++  {
++    if (!strcmp(theArgVal[i], "-area"))
++    {
++      Draw::Set(theArgVal[++i], anArea);
++      continue;
++    }
++
++    if (!strcmp(theArgVal[i], "-perimeter"))
++    {
++      Draw::Set(theArgVal[++i], aPerimeter);
++      continue;
++    }
++
++    theDI << "Error: Wrong option: \"" << theArgVal[i] << "\"\n";
++    break;
++  }
++
++  return 0;
++}
++
+ //=======================================================================
+ //function : PolyCommands
+ //purpose  : 
+@@ -196,6 +299,10 @@ void GeometryTest::PolyCommands(Draw_Interpretor& theCommands)
+   theCommands.Add("polytr","polytr name nbnodes nbtri x1 y1 z1 ... n1 n2 n3 ...",__FILE__,polytr,g);
+   theCommands.Add("polygon3d","polygon3d name nbnodes x1 y1 z1  ...",__FILE__,polygon3d,g);
+   theCommands.Add("polygon2d","polygon2d name nbnodes x1 y1  ...",__FILE__,polygon2d,g);
++  theCommands.Add("addpolygonnode","addpolygonnode polygon3d(2d) x y [z]",__FILE__, AddNode,g);
++  theCommands.Add("polygonprops","Computes area and perimeter of 2D-polygon. "
++                  "Run \"polygonprops\" w/o any arguments to read help.\n",
++                  __FILE__, PolygonProps,g);
+   theCommands.Add("shnodes","shnodes name", __FILE__,shnodes, g);
+   theCommands.Add("shtriangles","shtriangles name", __FILE__,shtriangles, g);
+ }
+diff --git a/src/IntTools/IntTools_FClass2d.cxx b/src/IntTools/IntTools_FClass2d.cxx
+index 13863dd923..33833d944b 100644
+--- a/src/IntTools/IntTools_FClass2d.cxx
++++ b/src/IntTools/IntTools_FClass2d.cxx
+@@ -43,6 +43,8 @@
+ #include <TopoDS_Edge.hxx>
+ #include <TopoDS_Face.hxx>
+ #include <TopoDS_Wire.hxx>
++#include <GeomLib.hxx>
++#include <Poly.hxx>
+ 
+ #include <stdio.h>
+ 
+@@ -85,7 +87,7 @@ void IntTools_FClass2d::Init(const TopoDS_Face& aFace,
+ 			     const Standard_Real TolUV) 
+ {
+   Standard_Boolean WireIsNotEmpty, Ancienpnt3dinitialise, degenerated;
+-  Standard_Integer nbpnts, firstpoint, NbEdges;
++  Standard_Integer firstpoint, NbEdges;
+   Standard_Integer iX, aNbs1, nbs, Avant, BadWire;
+   Standard_Real u, du, Tole, Tol, pfbid, plbid;
+   Standard_Real FlecheU, FlecheV, TolVertex1, TolVertex;
+@@ -128,7 +130,6 @@ void IntTools_FClass2d::Init(const TopoDS_Face& aFace,
+   for(; aExpF.More();  aExpF.Next()) {
+     const TopoDS_Wire& aW=*((TopoDS_Wire*)&aExpF.Current());
+     //
+-    nbpnts = 0;
+     firstpoint =1;
+     FlecheU = 0.;
+     FlecheV = 0.;
+@@ -264,7 +265,7 @@ void IntTools_FClass2d::Init(const TopoDS_Face& aFace,
+       //-- and the last point saved in SeqPnt2d
+       //-- To to set the first point of the current 
+       //-- afar from the last saved point
+-      Avant = nbpnts;
++      Avant = SeqPnt2d.Length();
+       for(iX=firstpoint; iX<=aNbs1; iX++) {
+         Standard_Boolean IsRealCurve3d;
+         Standard_Integer ii;
+@@ -282,7 +283,7 @@ void IntTools_FClass2d::Init(const TopoDS_Face& aFace,
+         aDstX=RealLast();        
+         if(degenerated==Standard_False) { 
+           P3d=C3d.Value(u);
+-          if(nbpnts>1) {
++          if(!SeqPnt2d.IsEmpty()) {
+             if(Ancienpnt3dinitialise) { 
+               aDstX=P3d.SquareDistance(Ancienpnt3d);
+             }
+@@ -308,11 +309,10 @@ void IntTools_FClass2d::Init(const TopoDS_Face& aFace,
+             Ancienpnt3d=P3d;
+             Ancienpnt3dinitialise=Standard_True;
+           }
+-          nbpnts++;
+           SeqPnt2d.Append(P2d);
+         }
+         //
+-        ii=nbpnts;
++        ii= SeqPnt2d.Length();
+         if(ii>(Avant+4)) { 
+           Standard_Real ul, dU, dV;
+           gp_Pnt2d Pp;
+@@ -386,107 +386,38 @@ void IntTools_FClass2d::Init(const TopoDS_Face& aFace,
+     }
+     //
+     else if(WireIsNotEmpty) { 
+-      TColgp_Array1OfPnt2d PClass(1,nbpnts);
+-      gp_Pnt2d anInitPnt(0., 0.);
+-      //
+-      PClass.Init(anInitPnt);
+-      if(nbpnts>3) { 
+-        Standard_Integer im2=nbpnts-2;
+-        Standard_Integer im1=nbpnts-1;
+-        Standard_Integer im0=1;
+-        Standard_Real    angle = 0.0;
+-        Standard_Real aX0, aY0, aX1, aY1, aS;
+-        //
+-        aS=0.;
+-        //
+-        Standard_Integer iFlag=1;
+-	//
+-        PClass(im2)=SeqPnt2d.Value(im2);
+-        PClass(im1)=SeqPnt2d.Value(im1);
+-        PClass(nbpnts)=SeqPnt2d.Value(nbpnts);
+-        Standard_Real aPer = 0.;
+-        for (Standard_Integer ii = 1; ii<nbpnts; ii++, im0++, im1++, im2++)
+-        {
+-          if(im2>=nbpnts) im2=1;
+-          if(im1>=nbpnts) im1=1;
+-          PClass(ii)=SeqPnt2d.Value(ii);
+-          //
+-          const gp_Pnt2d& aP2D1=PClass(im1);
+-          const gp_Pnt2d& aP2D0=PClass(im0);
+-          //aP2D0 is next to aP2D1
+-          aP2D0.Coord(aX0, aY0);
+-          aP2D1.Coord(aX1, aY1);
+-          aS=aS+(aY0+aY1)*(aX1-aX0); 
+-          aPer += aP2D1.Distance(aP2D0);
+-
+-          gp_Vec2d A(PClass(im2),PClass(im1));
+-          gp_Vec2d B(PClass(im1),PClass(im0));
+-
+-          Standard_Real N = A.Magnitude() * B.Magnitude();
+-          if(N>1e-16) { 
+-            Standard_Real a=A.Angle(B);
+-            //  
+-            if (anIndexMap.IsBound(im1)) {
+-              Standard_Integer  anInd  = anIndexMap.Find(im1);
+-              const gp_Vec2d   &aVPrev = aD1Prev.Value(anInd);
+-              const gp_Vec2d   &aVNext = aD1Next.Value(anInd);
+-
+-              Standard_Real aN = aVPrev.Magnitude() * aVNext.Magnitude();
+-              if(aN > 1e-16) { 
+-                Standard_Real aDerivAngle, aAbsDA, aProduct, aPA;
+-                //ifv 23.08.06
+-		aPA=Precision::Angular();
+-		aDerivAngle = aVPrev.Angle(aVNext);
+-		aAbsDA=Abs(aDerivAngle);
+-                if(aAbsDA <= aPA) {
+-		  aDerivAngle = 0.; 
+-		}
+-		//
+-		aProduct=aDerivAngle * a;
+-		//
+-	        if(Abs(aAbsDA - M_PI) <= aPA) {
+-		  if (aProduct > 0.) {
+-		    aProduct=-aProduct; 
+-		  }
+-		}
+-                //ifv 23.08.06 : if edges continuity > G1, |aDerivAngle| ~0,
+-                //but can has wrong sign and causes condition aDerivAngle * a < 0.
+-                //that is wrong in such situation
+-                if (iFlag && aProduct < 0.) {
+-                  iFlag=0;
+-                  // Bad case.
+-                  angle = 0.;
+-                }
+-              }
+-            }
+-            angle+=a;
+-          }
+-        }//for(ii=1; ii<nbpnts; ii++,im0++,im1++,im2++) { 
+-        if (!iFlag) {
+-          angle = 0.; 
+-        }
++      if (SeqPnt2d.Length() > 3)
++      {
+ #ifdef DEBUG_PCLASS_POLYGON
++        TColgp_Array1OfPnt2d PClass(1, nbpnts);
+         TColStd_Array1OfReal aKnots(1, nbpnts);
+         TColStd_Array1OfInteger aMults(1, nbpnts);
+         for (int i = 1; i <= nbpnts; i++)
+         {
+           aKnots(i) = i;
+           aMults(i) = 1;
++          PClass(ii) = SeqPnt2d.Value(ii);
+         }
+         aMults(1) = aMults(nbpnts) = 2;
+         Handle(Geom2d_BSplineCurve) aPol = new Geom2d_BSplineCurve(PClass, aKnots, aMults, 1);
+         DrawTrSurf::Set("pol", aPol);
+ #endif
+ 
++        Standard_Real aS = 0.;
++        Standard_Real aPer = 0.;
++        Poly::PolygonProperties(SeqPnt2d, aS, aPer);
++
+         Standard_Real anExpThick = Max(2. * Abs(aS) / aPer, 1e-7);
+         Standard_Real aDefl = Max(FlecheU, FlecheV);
+         Standard_Real aDiscrDefl = Min(aDefl*0.1, anExpThick * 10.);
++        Standard_Boolean isChanged = Standard_False;
+         while (aDefl > anExpThick && aDiscrDefl > 1e-7)
+         {
+           // Deflection of the polygon is too much for this ratio of area and perimeter,
+           // and this might lead to self-intersections.
+           // Discretize the wire more tightly to eliminate the error.
+           firstpoint = 1;
++          isChanged = Standard_True;
+           SeqPnt2d.Clear();
+           FlecheU = 0.0;
+           FlecheV = 0.0;
+@@ -532,41 +463,14 @@ void IntTools_FClass2d::Init(const TopoDS_Face& aFace,
+               firstpoint = 2;
+             }
+           }
+-          nbpnts = SeqPnt2d.Length();
+-          PClass.Resize(1, nbpnts, Standard_False);
+-          im1 = nbpnts - 1;
+-          im0 = 1;
+-          PClass(im1) = SeqPnt2d.Value(im1);
+-          PClass(nbpnts) = SeqPnt2d.Value(nbpnts);
+-          aS = 0.;
+-          aPer = 0.;
+-          for (Standard_Integer ii = 1; ii<nbpnts; ii++, im0++, im1++)
+-          {
+-            if (im1 >= nbpnts) im1 = 1;
+-            PClass(ii) = SeqPnt2d.Value(ii);
+-            aS += (PClass(im1).X() - PClass(im0).X())*(PClass(im0).Y() + PClass(im1).Y())*.5;
+-            aPer += (PClass(im0).XY() - PClass(im1).XY()).Modulus();
+-          }
+-#ifdef DEBUG_PCLASS_POLYGON
+-          TColStd_Array1OfReal aKnots(1, nbpnts);
+-          TColStd_Array1OfInteger aMults(1, nbpnts);
+-          for (int i = 1; i <= nbpnts; i++)
+-          {
+-            aKnots(i) = i;
+-            aMults(i) = 1;
+-          }
+-          aMults(1) = aMults(nbpnts) = 2;
+-          Handle(Geom2d_BSplineCurve) aPol = new Geom2d_BSplineCurve(PClass, aKnots, aMults, 1);
+-          DrawTrSurf::Set("pol1", aPol);
+-#endif
+-
+           anExpThick = Max(2. * Abs(aS) / aPer, 1e-7);
+           aDefl = Max(FlecheU, FlecheV);
+           aDiscrDefl = Min(aDiscrDefl * 0.1, anExpThick * 10.);
+         }
+ 
+-        if(aS>0.){
+-          myIsHole=Standard_False;
++        if (isChanged)
++        {
++          Poly::PolygonProperties(SeqPnt2d, aS, aPer);
+         }
+         //
+         if(FlecheU<Toluv)
+@@ -575,25 +479,35 @@ void IntTools_FClass2d::Init(const TopoDS_Face& aFace,
+         if(FlecheV<Toluv)
+           FlecheV = Toluv;
+ 
+-        TabClass.Append((void *)new CSLib_Class2d(PClass,
++        TabClass.Append((void *)new CSLib_Class2d(SeqPnt2d,
+ 						  FlecheU,
+ 						  FlecheV,
+ 						  Umin,Vmin,Umax,Vmax));
+         //
+-        if((angle<2 && angle>-2)||(angle>10)||(angle<-10)) { 
++        if(Abs(aS) < Precision::SquareConfusion()) { 
+           BadWire=1;
+           TabOrien.Append(-1);
+         } 
+-        else {         
+-          TabOrien.Append((angle>0.0)? 1 : 0);
++        else
++        {
++          if (aS > 0.0)
++          {
++            myIsHole = Standard_False;
++            TabOrien.Append(1);
++          }
++          else
++          {
++            myIsHole = Standard_True;
++            TabOrien.Append(0);
++          }
+         }
+       } 
+       else { 
+         BadWire=1;
+         TabOrien.Append(-1);
+         TColgp_Array1OfPnt2d PPClass(1,2);
+-        PPClass.Init(anInitPnt);
+-        TabClass.Append((void *)new CSLib_Class2d(PPClass,
++        SeqPnt2d.Clear();
++        TabClass.Append((void *)new CSLib_Class2d(SeqPnt2d,
+ 						  FlecheU,
+ 						  FlecheV,
+ 						  Umin,Vmin,Umax,Vmax));
+diff --git a/src/IntTools/IntTools_FaceFace.cxx b/src/IntTools/IntTools_FaceFace.cxx
+index 23f5eb83e6..759e5dda91 100644
+--- a/src/IntTools/IntTools_FaceFace.cxx
++++ b/src/IntTools/IntTools_FaceFace.cxx
+@@ -522,9 +522,6 @@ void IntTools_FaceFace::Perform(const TopoDS_Face& aF1,
+ #ifdef INTTOOLS_FACEFACE_DEBUG
+     if(!myListOfPnts.IsEmpty()) {
+       char aBuff[10000];
+-      const IntSurf_PntOn2S& aPt = myListOfPnts.First();
+-      Standard_Real u1, v1, u2, v2;
+-      aPt.Parameters(u1, v1, u2, v2);
+ 
+       Sprintf(aBuff,"bopcurves <face1 face2> -2d");
+       IntSurf_ListIteratorOfListOfPntOn2S IterLOP1(myListOfPnts);
+diff --git a/src/Poly/Poly.hxx b/src/Poly/Poly.hxx
+index 99ee2bd8e6..203de140ef 100644
+--- a/src/Poly/Poly.hxx
++++ b/src/Poly/Poly.hxx
+@@ -20,12 +20,13 @@
+ #include <Standard.hxx>
+ #include <Standard_DefineAlloc.hxx>
+ #include <Standard_Handle.hxx>
+-
+ #include <Poly_ListOfTriangulation.hxx>
+ #include <Standard_OStream.hxx>
+ #include <Standard_Boolean.hxx>
+ #include <Standard_IStream.hxx>
+ #include <Standard_Real.hxx>
++#include <TColgp_SequenceOfPnt2d.hxx>
++
+ class Poly_Triangulation;
+ class Poly_Polygon3D;
+ class Poly_Polygon2D;
+@@ -125,6 +126,48 @@ public:
+   Standard_EXPORT static Standard_Real PointOnTriangle (const gp_XY& P1, const gp_XY& P2, const gp_XY& P3, const gp_XY& P, gp_XY& UV);
+ 
+ 
++  //! Returns area and perimeter of 2D-polygon given by its vertices.
++  //! theArea will be negative if the polygon is bypassed clockwise
++  //! and will be positive, otherwise. thePerimeter will always be positive.
++  //!
++  //! ATTENTION!!!
++  //! The container theSeqPnts of 2D-points gp_Pnt2d must have definition
++  //! for following methods: Length(), Lower(), Upper() and Value(Standard_Integer)
++  //! (e.g. it can be either NCollection_Sequence<gp_Pnt2d> or
++  //! NCollection_Array1<gp_Pnt2d>).
++  template <class TypeSequencePnts>
++  Standard_EXPORT static
++    Standard_Boolean PolygonProperties(const TypeSequencePnts& theSeqPnts,
++                                       Standard_Real& theArea,
++                                       Standard_Real& thePerimeter)
++  {
++    if (theSeqPnts.Length() < 2)
++    {
++      theArea = thePerimeter = 0.0;
++      return Standard_True;
++    }
++
++    Standard_Integer aStartIndex = theSeqPnts.Lower();
++    const gp_XY &aRefPnt = theSeqPnts.Value(aStartIndex++).XY();
++    gp_XY aPrevPt = theSeqPnts.Value(aStartIndex++).XY() - aRefPnt, aCurrPt;
++
++    theArea = 0.0;
++    thePerimeter = aPrevPt.Modulus();
++
++    for (Standard_Integer i = aStartIndex; i <= theSeqPnts.Upper(); i++)
++    {
++      aCurrPt = theSeqPnts.Value(i).XY() - aRefPnt;
++      const Standard_Real aDelta = aPrevPt.Crossed(aCurrPt);
++
++      theArea += aDelta;
++      thePerimeter += (aPrevPt - aCurrPt).Modulus();
++      aPrevPt = aCurrPt;
++    }
++
++    thePerimeter += aPrevPt.Modulus();
++    theArea *= 0.5;
++    return Standard_True;
++  }
+ 
+ 
+ protected:

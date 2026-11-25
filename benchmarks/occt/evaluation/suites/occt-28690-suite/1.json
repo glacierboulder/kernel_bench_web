@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "occt-28690-suite",
+  "version": "1",
+  "title": "平面与面组的 Section 结果含无有效参数区间的微边",
+  "source_ids": [
+    "occt71-28690-b-f5b7241978a9"
+  ],
+  "group_ids": [
+    "occt-28690-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "28690-original",
+      "issue_id": "occt-28690",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt28690/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "28690-translated",
+      "issue_id": "occt-28690",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt28690/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "28690-alternate",
+      "issue_id": "occt-28690",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt28690/alternate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "28690-control",
+      "issue_id": "occt-28690",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt28690/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt28690/body.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt28690/assets/bug28690_m8_faces.brep"
+  ]
+}

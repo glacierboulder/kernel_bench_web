@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-29322-single",
+  "version": "1",
+  "title": "General Fuse 遗漏公差内的共边",
+  "kind": "single",
+  "source_id": "occt72-29322-b-c5b89fa358ab",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-29322",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-29322-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

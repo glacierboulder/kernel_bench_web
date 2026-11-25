@@ -15,7 +15,7 @@ sys.path.insert(0, str(REPO))
 from backend.catalog import public_task, validate_bundle
 from backend.checkpoints import get_suite
 from backend.reevaluate import _select_group
-from make_plan import CORE, build_plan
+from make_plan import CORE, FROZEN_CATALOG, FROZEN_LOCK, build_plan
 
 
 def require(test, message):
@@ -47,51 +47,62 @@ def audit_bytes(evidence):
           f"{len(evidence['previously_ignored_required_files'])} explicitly included despite ignore rules")
 
 
+def index_rows(rows):
+    return {(row["id"], row["version"]): row for row in rows}
+
+
 def compare_defaults(bundle, evidence):
     index = read(BENCH / "catalog.json")
-    groups = {f"{row['id']}@{row['version']}": row for row in index["groups"]}
-    suites = {(row["id"], row["version"]): row["path"] for row in index["evaluation_suites"]}
-    defaults = {"benchmarks/occt/sources.lock.json"}
+    revision = evidence["target_main_commit"]
+    old = json.loads(git("show", f"{revision}:benchmarks/occt/catalog.json"))
+    require(old["groups"] == index["groups"] and old["issues"] == index["issues"],
+            "changed main group or issue inventory")
+    groups = index_rows(index["groups"])
+    suites = index_rows(index["evaluation_suites"])
+    paths = {"benchmarks/occt/sources.lock.json"}
+    paths.update("benchmarks/occt/" + row["path"] for row in old["issues"] + old["evaluation_suites"])
+    case_paths = set()
     for (name, version), group in bundle["groups"].items():
         default = group["evaluation_suite"]
-        suite = suites[default["id"], default["version"]]
-        task = public_task(bundle, group)
-        require(task["evaluation_suite"] == default, f"default queue route changed on {name}")
-        defaults.update("benchmarks/occt/" + path for path in (groups[f"{name}@{version}"]["path"], suite))
-    case_paths = set()
-    for group in bundle["groups"].values():
-        default = group["evaluation_suite"]
-        suite = bundle["suites"][default["id"], default["version"]]
+        suite_key = (default["id"], default["version"])
+        require(public_task(bundle, group)["evaluation_suite"] == default, f"default queue route changed on {name}")
+        paths.add("benchmarks/occt/" + groups[name, version]["path"])
+        suite = bundle["suites"][suite_key]
         case_paths.update(suite.get("support_files", ()))
         for case in suite["checkpoints"]:
             case_paths.add(case["case"])
             case_paths.update(case.get("runner_options", {}).get("inputs", ()))
-    defaults.update("benchmarks/occt/" + path for path in case_paths)
-    for baseline, expected in (("base_commit", 88), ("target_main_commit", 84)):
-        revision = evidence[baseline]
-        old = json.loads(git("show", f"{revision}:benchmarks/occt/catalog.json"))
-        require(len(old["evaluation_suites"]) == expected and old["groups"] == index["groups"]
-                and old["issues"] == index["issues"], f"changed group or issue inventory vs {baseline}")
-        for path in sorted(defaults):
-            require(git("show", f"{revision}:{path}") == (REPO / path).read_bytes(),
-                    f"changed default artifact vs {baseline}: {path}")
-        dispatch = "benchmarks/occt/evaluation/cases/evaluator_assets/five_group_execution/dispatch_lock.json"
-        frozen_routes = json.loads(git("show", f"{revision}:{dispatch}"))
-        live_routes = read(REPO / dispatch)
-        for name, entries in frozen_routes.items():
-            if name in {"suite_routes", "checkpoint_routes"}:
-                require(all(live_routes[name].get(k) == v for k, v in entries.items()), "historical dispatch changed")
-            else:
-                require(entries == live_routes[name], "historical dispatcher contract changed")
+    paths.update("benchmarks/occt/" + path for path in case_paths)
+    for path in sorted(paths):
+        require(git("show", f"{revision}:{path}") == (REPO / path).read_bytes(),
+                f"changed artifact vs main: {path}")
+    for row in read(FROZEN_CATALOG)["groups"]:
+        require(groups[row["id"], row["version"]] == row, f"historical group changed: {row}")
+    for row in old["evaluation_suites"]:
+        require(suites[row["id"], row["version"]] == row, f"historical suite changed: {row}")
+    dispatch = "benchmarks/occt/evaluation/cases/evaluator_assets/five_group_execution/dispatch_lock.json"
+    frozen_routes = json.loads(git("show", f"{revision}:{dispatch}"))
+    live_routes = read(REPO / dispatch)
+    for name, entries in frozen_routes.items():
+        if name in {"suite_routes", "checkpoint_routes"}:
+            require(all(live_routes[name].get(k) == v for k, v in entries.items()), "historical dispatch changed")
+        else:
+            require(entries == live_routes[name], "historical dispatcher contract changed")
     print(f"Defaults: {len(groups)} groups and {len(case_paths)} declared default case materials "
-          "byte-identical to main and the preparation base")
+          "byte-identical to the recorded main")
 
 
 def audit_routes(bundle, evidence):
     old = json.loads(git("show", f"{evidence['base_commit']}:benchmarks/occt/catalog.json"))
-    frozen = {(row["id"], row["version"]) for row in old["evaluation_suites"]}
-    new = set(bundle["suites"]) - frozen
-    require(len(frozen) == 88 and len(new) == 26, "unexpected added suite count")
+    prep = index_rows(old["evaluation_suites"])
+    frozen = index_rows(read(FROZEN_CATALOG)["evaluation_suites"])
+    require(prep.items() <= frozen.items(), "frozen registry lost a preparation suite")
+    main = json.loads(git("show", f"{evidence['target_main_commit']}:benchmarks/occt/catalog.json"))
+    main_index = index_rows(main["evaluation_suites"])
+    live = index_rows(read(BENCH / "catalog.json")["evaluation_suites"])
+    require(live == (main_index | frozen), "live suites differ from main plus the frozen additions")
+    new = frozen.keys() - prep.keys()
+    require(len(prep) == 88 and len(new) == 26, "unexpected added suite count")
     negative = 0
     for name, version in sorted(new):
         suite = get_suite(BENCH, name, version)
@@ -117,7 +128,10 @@ def audit_routes(bundle, evidence):
 def audit_ledger(bundle):
     ledger = read(FINAL / "ledger.json")
     sources = {row["source_id"]: row for row in ledger["rows"]}
-    require(len(sources) == len(ledger["rows"]) == 37 and sources.keys() == bundle["sources"].keys(), "source denominator")
+    frozen = {row["source_id"]: row for row in read(FROZEN_LOCK)["sources"]}
+    require(len(sources) == len(ledger["rows"]) == 37 and sources.keys() == frozen.keys(), "frozen source denominator")
+    live_locks = {row["source_id"]: row for row in read(BENCH / "sources.lock.json")["sources"]}
+    require(frozen.items() <= live_locks.items(), "live source locks changed a covered identity")
     ref_counts = Counter()
     for source, row in sources.items():
         lock = bundle["sources"][source]
@@ -140,7 +154,7 @@ def audit_ledger(bundle):
     coons = sources["occt801-b8f597c67781-coons"]
     require(coons["coons_boundary_audit"]["status"] == "BASELINE_FAIL", "known Value defect history was lost")
     require(build_plan() == read(FINAL / "version-plan.json"), "final plan differs from the live bundle")
-    print(f"Coverage: {len(sources)} locks, {len(sources)*len(CORE)} common checks, {dict(ref_counts)}")
+    print(f"Coverage: {len(sources)}/{len(live_locks)} locks, {len(sources)*len(CORE)} common checks, {dict(ref_counts)}")
     return sources
 
 

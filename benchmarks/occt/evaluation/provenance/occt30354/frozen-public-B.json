@@ -1,0 +1,22 @@
+{
+  "issue": 30354,
+  "commit": "dc57476a0e478cd473400be81495083f2233ce12",
+  "command": [
+    "DRAWEXE",
+    "-b",
+    "-f",
+    "reproduce.tcl"
+  ],
+  "working_directory": "visible/issue_30354",
+  "snapshot_sha256": "3d518ae95841e7329a491a4268ede8689a39511330e657ae0455c3e321d72bda",
+  "files": {
+    "bug30354_Face_14.brep": "e9a08310239cd1b58a285bd69ca824e72446c20cafaf0d5c5c512624c0b22629",
+    "bug30354_vol_neg.brep": "c257265b9e3a6a5756cc4564951068b06cdffbeba220c494c0ede2810d88b847",
+    "issue.json": "b9eb7a3562df769b5e6ca47b24b32aeb4e029c53fb547f63e69525506c63efd4",
+    "reproduce.tcl": "99a4511cb7aab06af096c9e048e99571a4f22922d5585b38454d2d05e80c75ec",
+    "statement.md": "eb74bf0018b497cdfdd4145bd696a229e3bff57b04659146929b9b768f089682"
+  },
+  "stdout": "DRAW is running in batch mode\nNumber of shapes in result\n VERTEX    : 2\n EDGE      : 0\n WIRE      : 0\n FACE      : 0\n SHELL     : 0\n SOLID     : 0\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 3\n\n\n\nMass :               0\n\nCenter of gravity : \nX =               0\nY =               0\nZ =               0\n\nMatrix of Inertia : \n              0               0               0\n              0               0               0\n              0               0               0\n\nMoments : \nIX =               0\nIY =               0\nIZ =               0\n\n\nThis shape seems to be valid\n",
+  "stderr": "",
+  "returncode": 0
+}

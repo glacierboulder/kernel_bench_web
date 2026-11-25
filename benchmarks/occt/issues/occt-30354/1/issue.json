@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "occt-30354",
+  "version": "1",
+  "title": "曲面与实体做布尔截面时遗漏短交边",
+  "source_id": "occt73-30354-b-dc57476a0e47",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/reproduce.tcl",
+    "public/bug30354_Face_14.brep",
+    "public/bug30354_vol_neg.brep"
+  ]
+}

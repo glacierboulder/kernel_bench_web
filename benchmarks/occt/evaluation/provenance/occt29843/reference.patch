@@ -1,0 +1,730 @@
+diff --git a/src/BOPAlgo/BOPAlgo_PaveFiller_3.cxx b/src/BOPAlgo/BOPAlgo_PaveFiller_3.cxx
+index 6994be6fcd..1df7f3cd2c 100644
+--- a/src/BOPAlgo/BOPAlgo_PaveFiller_3.cxx
++++ b/src/BOPAlgo/BOPAlgo_PaveFiller_3.cxx
+@@ -89,28 +89,63 @@ class BOPAlgo_EdgeEdge :
+   Handle(BOPDS_PaveBlock)& PaveBlock2() {
+     return myPB2;
+   }
+-  // 
++  //
++  void SetBoxes (const Bnd_Box& theBox1,
++                 const Bnd_Box& theBox2)
++  {
++    myBox1 = theBox1;
++    myBox2 = theBox2;
++  }
++  //
+   void SetFuzzyValue(const Standard_Real theFuzz) {
+     IntTools_EdgeEdge::SetFuzzyValue(theFuzz);
+   }
+   //
+   virtual void Perform() {
+     BOPAlgo_Algo::UserBreak();
++    TopoDS_Edge anE1 = myEdge1, anE2 = myEdge2;
++    Standard_Boolean hasTrsf = false;
+     try
+     {
+       OCC_CATCH_SIGNALS
+ 
++      gp_Trsf aTrsf;
++      if (BOPAlgo_Tools::TrsfToPoint (myBox1, myBox2, aTrsf))
++      {
++        // Shapes are located far from origin, move the shapes to the origin,
++        // to increase the accuracy of intersection.
++        TopLoc_Location aLoc (aTrsf);
++        myEdge1.Move (aLoc);
++        myEdge2.Move (aLoc);
++        hasTrsf = Standard_True;
++      }
++
+       IntTools_EdgeEdge::Perform();
+     }
+     catch (Standard_Failure const&)
+     {
+       AddError(new BOPAlgo_AlertIntersectionFailed);
+     }
++
++    myEdge1 = anE1;
++    myEdge2 = anE2;
++    if (hasTrsf)
++    {
++      for (Standard_Integer i = 1; i <= myCommonParts.Length(); ++i)
++      {
++        IntTools_CommonPrt& aCPart = myCommonParts (i);
++        aCPart.SetEdge1 (myEdge1);
++        aCPart.SetEdge2 (myEdge2);
++      }
++    }
++
+   }
+   //
+  protected:
+   Handle(BOPDS_PaveBlock) myPB1;
+   Handle(BOPDS_PaveBlock) myPB2;
++  Bnd_Box myBox1;
++  Bnd_Box myBox2;
+ };
+ //
+ //=======================================================================
+@@ -216,6 +251,7 @@ void BOPAlgo_PaveFiller::PerformEE()
+         //
+         anEdgeEdge.SetEdge1(aE1, aT11, aT12);
+         anEdgeEdge.SetEdge2(aE2, aT21, aT22);
++        anEdgeEdge.SetBoxes (aBB1, aBB2);
+         anEdgeEdge.SetFuzzyValue(myFuzzyValue);
+         anEdgeEdge.SetProgressIndicator(myProgressIndicator);
+       }//for (; aIt2.More(); aIt2.Next()) {
+@@ -924,6 +960,8 @@ void BOPAlgo_PaveFiller::ForceInterfEE()
+   if (!aNbPB)
+     return;
+ 
++  const Standard_Boolean bSICheckMode = (myArguments.Extent() == 1);
++
+   // Prepare pave blocks with the same vertices for intersection.
+   BOPAlgo_VectorOfEdgeEdge aVEdgeEdge;
+ 
+@@ -940,10 +978,12 @@ void BOPAlgo_PaveFiller::ForceInterfEE()
+     const TopoDS_Vertex& aV1 = TopoDS::Vertex(myDS->Shape(nV1));
+     const TopoDS_Vertex& aV2 = TopoDS::Vertex(myDS->Shape(nV2));
+ 
+-    // Use the max tolerance of vertices as Fuzzy value for intersection
+-    // of edges
+-    Standard_Real aTolAdd = 2 * Max(BRep_Tool::Tolerance(aV1),
+-                                    BRep_Tool::Tolerance(aV2));
++    // Use the max tolerance of vertices as Fuzzy value for intersection of edges.
++    // In the Self-Interference check mode we are interested in real
++    // intersections only, so use only the real tolerance of edges,
++    // no need to use the extended tolerance.
++    Standard_Real aTolAdd = (bSICheckMode ? myFuzzyValue :
++      2 * Max(BRep_Tool::Tolerance(aV1), BRep_Tool::Tolerance(aV2)));
+ 
+     // All possible pairs combined from the list <aLPB> should be checked
+     BOPDS_ListIteratorOfListOfPaveBlock aItLPB1(aLPB);
+@@ -1022,6 +1062,7 @@ void BOPAlgo_PaveFiller::ForceInterfEE()
+         anEdgeEdge.SetPaveBlock2(aPB2);
+         anEdgeEdge.SetEdge1(aE1, aT11, aT12);
+         anEdgeEdge.SetEdge2(aE2, aT21, aT22);
++        anEdgeEdge.SetBoxes (myDS->ShapeInfo(nE1).Box(), myDS->ShapeInfo (nE2).Box());
+         if (bUseAddTol)
+           anEdgeEdge.SetFuzzyValue(myFuzzyValue + aTolAdd);
+         else
+diff --git a/src/BOPAlgo/BOPAlgo_PaveFiller_5.cxx b/src/BOPAlgo/BOPAlgo_PaveFiller_5.cxx
+index 7248bf994b..933f3c79bb 100644
+--- a/src/BOPAlgo/BOPAlgo_PaveFiller_5.cxx
++++ b/src/BOPAlgo/BOPAlgo_PaveFiller_5.cxx
+@@ -105,18 +105,50 @@ class BOPAlgo_EdgeFace :
+     IntTools_EdgeFace::SetFuzzyValue(theFuzz);
+   }
+   //
++  void SetBoxes (const Bnd_Box& theBox1,
++                 const Bnd_Box& theBox2)
++  {
++    myBox1 = theBox1;
++    myBox2 = theBox2;
++  }
++  //
+   virtual void Perform() {
+     BOPAlgo_Algo::UserBreak();
++    TopoDS_Face aFace = myFace;
++    TopoDS_Edge anEdge = myEdge;
++    Standard_Boolean hasTrsf = false;
+     try
+     {
+       OCC_CATCH_SIGNALS
+ 
++      gp_Trsf aTrsf;
++      if (BOPAlgo_Tools::TrsfToPoint (myBox1, myBox2, aTrsf))
++      {
++        // Shapes are located far from origin, move the shapes to the origin,
++        // to increase the accuracy of intersection.
++        TopLoc_Location aLoc (aTrsf);
++        myEdge.Move (aLoc);
++        myFace.Move (aLoc);
++        hasTrsf = Standard_True;
++      }
++
+       IntTools_EdgeFace::Perform();
+     }
+     catch (Standard_Failure const&)
+     {
+       AddError(new BOPAlgo_AlertIntersectionFailed);
+     }
++    myFace = aFace;
++    myEdge = anEdge;
++
++    if (hasTrsf)
++    {
++      for (Standard_Integer i = 1; i <= mySeqOfCommonPrts.Length(); ++i)
++      {
++        IntTools_CommonPrt& aCPart = mySeqOfCommonPrts (i);
++        aCPart.SetEdge1 (myEdge);
++      }
++    }
+   }
+   //
+  protected:
+@@ -124,6 +156,8 @@ class BOPAlgo_EdgeFace :
+   Standard_Integer myIF;
+   IntTools_Range myNewSR;
+   Handle(BOPDS_PaveBlock) myPB;
++  Bnd_Box myBox1;
++  Bnd_Box myBox2;
+ };
+ //
+ //=======================================================================
+@@ -231,6 +265,7 @@ void BOPAlgo_PaveFiller::PerformEF()
+       //
+       aEdgeFace.SetEdge (aE);
+       aEdgeFace.SetFace (aF);
++      aEdgeFace.SetBoxes (myDS->ShapeInfo(nE).Box(), myDS->ShapeInfo (nF).Box());
+       aEdgeFace.SetFuzzyValue(myFuzzyValue);
+       aEdgeFace.UseQuickCoincidenceCheck(bExpressCompute);
+       //
+@@ -756,6 +791,8 @@ void BOPAlgo_PaveFiller::ForceInterfEF(const BOPDS_IndexedMapOfPaveBlock& theMPB
+   // Shake the tree
+   aBBTree.Build();
+ 
++  const Standard_Boolean bSICheckMode = (myArguments.Extent() == 1);
++
+   // Find pairs of Face/PaveBlock containing the same vertices
+   // and prepare those pairs for intersection.
+   BOPAlgo_VectorOfEdgeFace aVEdgeFace;
+@@ -874,8 +911,12 @@ void BOPAlgo_PaveFiller::ForceInterfEF(const BOPDS_IndexedMapOfPaveBlock& theMPB
+       // tolerance as the criteria.
+       const TopoDS_Vertex& aV1 = TopoDS::Vertex(myDS->Shape(nV1));
+       const TopoDS_Vertex& aV2 = TopoDS::Vertex(myDS->Shape(nV2));
+-      Standard_Real aTolCheck = 2 * Max(BRep_Tool::Tolerance(aV1),
+-                                        BRep_Tool::Tolerance(aV2));
++
++      // In the Self-Interference check mode we are interested in real
++      // intersections only, so use only the real tolerance of edges,
++      // no need to use the extended tolerance.
++      Standard_Real aTolCheck = (bSICheckMode ? myFuzzyValue :
++        2 * Max(BRep_Tool::Tolerance(aV1), BRep_Tool::Tolerance(aV2)));
+ 
+       if (aProjPS.LowerDistance() > aTolCheck + myFuzzyValue)
+         continue;
+@@ -940,6 +981,7 @@ void BOPAlgo_PaveFiller::ForceInterfEF(const BOPDS_IndexedMapOfPaveBlock& theMPB
+         aEdgeFace.SetPaveBlock(aPB);
+         aEdgeFace.SetEdge(aE);
+         aEdgeFace.SetFace(aF);
++        aEdgeFace.SetBoxes (myDS->ShapeInfo(nE).Box(), myDS->ShapeInfo (nF).Box());
+         aEdgeFace.SetFuzzyValue(myFuzzyValue + aTolAdd);
+         aEdgeFace.UseQuickCoincidenceCheck(Standard_True);
+         aEdgeFace.SetRange(IntTools_Range(aPB->Pave1().Parameter(), aPB->Pave2().Parameter()));
+diff --git a/src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx b/src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx
+index 9588e57c31..5dc2772d12 100644
+--- a/src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx
++++ b/src/BOPAlgo/BOPAlgo_PaveFiller_6.cxx
+@@ -122,6 +122,12 @@ class BOPAlgo_FaceFace :
+     myF2=aF2;
+   }
+   //
++  void SetBoxes(const Bnd_Box& theBox1,
++                const Bnd_Box& theBox2) {
++    myBox1 = theBox1;
++    myBox2 = theBox2;
++  }
++  //
+   const TopoDS_Face& Face1()const {
+     return myF1;
+   }
+@@ -142,13 +148,37 @@ class BOPAlgo_FaceFace :
+     IntTools_FaceFace::SetFuzzyValue(theFuzz);
+   }
+   //
++  const gp_Trsf& Trsf() const { return myTrsf; }
++  //
+   virtual void Perform() {
+     BOPAlgo_Algo::UserBreak();
+     try
+     {
+       OCC_CATCH_SIGNALS
+ 
+-      IntTools_FaceFace::Perform(myF1, myF2);
++      gp_Trsf aTrsf;
++      TopoDS_Face aF1 = myF1, aF2 = myF2;
++      if (BOPAlgo_Tools::TrsfToPoint (myBox1, myBox2, aTrsf))
++      {
++        // Shapes are located far from origin, move the shapes to the origin,
++        // to increase the accuracy of intersection.
++        TopLoc_Location aLoc (aTrsf);
++        aF1.Move (aLoc);
++        aF2.Move (aLoc);
++
++        // The starting point is initialized only with the UV parameters
++        // on the faces - 3D point is not set (see GetEFPnts method),
++        // so no need to transform anything.
++        //for (IntSurf_ListOfPntOn2S::Iterator it (myListOfPnts); it.More(); it.Next())
++        //{
++        //  IntSurf_PntOn2S& aP2S = it.ChangeValue();
++        //  aP2S.SetValue (aP2S.Value().Transformed (aTrsf));
++        //}
++
++        myTrsf = aTrsf.Inverted();
++      }
++
++      IntTools_FaceFace::Perform (aF1, aF2);
+     }
+     catch (Standard_Failure const&)
+     {
+@@ -156,12 +186,39 @@ class BOPAlgo_FaceFace :
+     }
+   }
+   //
++  void ApplyTrsf()
++  {
++    if (IsDone())
++    {
++      // Update curves
++      for (Standard_Integer i = 1; i <= mySeqOfCurve.Length(); ++i)
++      {
++        IntTools_Curve& aIC = mySeqOfCurve (i);
++        aIC.Curve()->Transform (myTrsf);
++      }
++      // Update points
++      for (Standard_Integer i = 1; i <= myPnts.Length(); ++i)
++      {
++        IntTools_PntOn2Faces& aP2F = myPnts (i);
++        IntTools_PntOnFace aPOnF1 = aP2F.P1(), aPOnF2 = aP2F.P2();
++        aPOnF1.SetPnt (aPOnF1.Pnt().Transformed (myTrsf));
++        aPOnF2.SetPnt (aPOnF2.Pnt().Transformed (myTrsf));
++        aP2F.SetP1 (aPOnF1);
++        aP2F.SetP2 (aPOnF2);
++      }
++    }
++  }
++
++  //
+  protected:
+   Standard_Integer myIF1;
+   Standard_Integer myIF2;
+   Standard_Real myTolFF;
+   TopoDS_Face myF1;
+   TopoDS_Face myF2;
++  Bnd_Box myBox1;
++  Bnd_Box myBox2;
++  gp_Trsf myTrsf;
+ };
+ //
+ //=======================================================================
+@@ -235,6 +292,7 @@ void BOPAlgo_PaveFiller::PerformFF()
+       //
+       aFaceFace.SetIndices(nF1, nF2);
+       aFaceFace.SetFaces(aF1, aF2);
++      aFaceFace.SetBoxes (myDS->ShapeInfo (nF1).Box(), myDS->ShapeInfo (nF2).Box());
+       // compute minimal tolerance for the curves
+       Standard_Real aTolFF = ToleranceFF(aBAS1, aBAS2);
+       aFaceFace.SetTolFF(aTolFF);
+@@ -282,6 +340,8 @@ void BOPAlgo_PaveFiller::PerformFF()
+     //
+     aFaceFace.PrepareLines3D(bSplitCurve);
+     //
++    aFaceFace.ApplyTrsf();
++    //
+     const IntTools_SequenceOfCurves& aCvsX = aFaceFace.Lines();
+     const IntTools_SequenceOfPntOn2Faces& aPntsX = aFaceFace.Points();
+     //
+@@ -1711,12 +1771,16 @@ void BOPAlgo_PaveFiller::PutBoundPaveOnCurve(const TopoDS_Face& aF1,
+   getBoundPaves(myDS, aNC, aBndNV);
+   //
+   Standard_Real aTolVnew = Precision::Confusion();
++  Standard_Boolean isClosed = aP[1].IsEqual (aP[0], aTolVnew);
++  if (isClosed && (aBndNV[0] > 0 || aBndNV[1] > 0))
++    return;
++
+   for (Standard_Integer j = 0; j<2; ++j)
+   {
+     if (aBndNV[j] < 0)
+     {
+       // no vertex on this end
+-      if (j && aP[1].IsEqual(aP[0], aTolVnew)) {
++      if (j && isClosed) {
+         //if curve is closed, process only one bound
+         continue;
+       }
+diff --git a/src/BOPAlgo/BOPAlgo_ShellSplitter.cxx b/src/BOPAlgo/BOPAlgo_ShellSplitter.cxx
+index 631bb61a59..108d44f408 100644
+--- a/src/BOPAlgo/BOPAlgo_ShellSplitter.cxx
++++ b/src/BOPAlgo/BOPAlgo_ShellSplitter.cxx
+@@ -215,11 +215,15 @@ void BOPAlgo_ShellSplitter::SplitBlock(BOPTools_ConnexityBlock& aCB)
+   //
+   // use only connected faces
+   TopTools_ListOfShape aLFConnected;
++  // Boundary faces
++  TopTools_MapOfShape aBoundaryFaces;
+   aItF.Initialize (myShapes);
+   for (; aItF.More(); aItF.Next()) {
+     const TopoDS_Shape& aF = aItF.Value();
+     if (aMFaces.Contains(aF)) {
+       aLFConnected.Append(aF);
++      if (!aBoundaryFaces.Add (aF))
++        aBoundaryFaces.Remove (aF);
+     }
+   }
+   //
+@@ -254,6 +258,7 @@ void BOPAlgo_ShellSplitter::SplitBlock(BOPTools_ConnexityBlock& aCB)
+       aItS.Initialize(aShell);
+       for (; aItS.More(); aItS.Next()) {
+         const TopoDS_Face& aF = (*(TopoDS_Face*)(&aItS.Value()));
++        Standard_Boolean isBoundary = aBoundaryFaces.Contains (aF);
+         //
+         // loop on edges of aF; find a good neighbor face of aF by aE
+         aExp.Init(aF, TopAbs_EDGE);
+@@ -289,6 +294,8 @@ void BOPAlgo_ShellSplitter::SplitBlock(BOPTools_ConnexityBlock& aCB)
+           // take only not-processed faces as a candidates
+           BOPTools_ListOfCoupleOfShape aLCSOff;
+           //
++          Standard_Integer aNbWaysInside = 0;
++          TopoDS_Face aSelF;
+           TopTools_ListIteratorOfListOfShape aItLF(aLF);
+           for (; aItLF.More(); aItLF.Next()) {
+             const TopoDS_Face& aFL = (*(TopoDS_Face*)(&aItLF.Value()));
+@@ -301,6 +308,11 @@ void BOPAlgo_ShellSplitter::SplitBlock(BOPTools_ConnexityBlock& aCB)
+               continue;
+             }
+             //
++            if (isBoundary && !aBoundaryFaces.Contains (aFL))
++            {
++              ++aNbWaysInside;
++              aSelF = aFL;
++            }
+             aCSOff.SetShape1(aEL);
+             aCSOff.SetShape2(aFL);
+             aLCSOff.Append(aCSOff);
+@@ -313,12 +325,14 @@ void BOPAlgo_ShellSplitter::SplitBlock(BOPTools_ConnexityBlock& aCB)
+           //
+           // among all the adjacent faces chose one with the minimal
+           // angle to the current one
+-          TopoDS_Face aSelF;
+-          if (aNbOff == 1) {
+-            aSelF = (*(TopoDS_Face*)(&aLCSOff.First().Shape2()));
+-          }
+-          else if (aNbOff > 1) {
+-            BOPTools_AlgoTools::GetFaceOff(aE, aF, aLCSOff, aSelF, aContext);
++          if (!isBoundary || aNbWaysInside != 1)
++          {
++            if (aNbOff == 1) {
++              aSelF = (*(TopoDS_Face*)(&aLCSOff.First().Shape2()));
++            }
++            else if (aNbOff > 1) {
++              BOPTools_AlgoTools::GetFaceOff(aE, aF, aLCSOff, aSelF, aContext);
++            }
+           }
+           //
+           if (!aSelF.IsNull() && AddedFacesMap.Add(aSelF)) {
+diff --git a/src/BOPAlgo/BOPAlgo_Tools.cxx b/src/BOPAlgo/BOPAlgo_Tools.cxx
+index b5b7625e87..714708a5ee 100644
+--- a/src/BOPAlgo/BOPAlgo_Tools.cxx
++++ b/src/BOPAlgo/BOPAlgo_Tools.cxx
+@@ -1756,3 +1756,30 @@ void BOPAlgo_Tools::FillInternals(const TopTools_ListOfShape& theSolids,
+     }
+   }
+ }
++
++//=======================================================================
++//function : TrsfToPoint
++//purpose  :
++//=======================================================================
++Standard_Boolean BOPAlgo_Tools::TrsfToPoint (const Bnd_Box& theBox1,
++                                             const Bnd_Box& theBox2,
++                                             gp_Trsf&       theTrsf,
++                                             const gp_Pnt&  thePoint,
++                                             const Standard_Real theCriteria)
++{
++  // Unify two boxes
++  Bnd_Box aBox = theBox1;
++  aBox.Add (theBox2);
++
++  gp_XYZ aBCenter = (aBox.CornerMin().XYZ() + aBox.CornerMax().XYZ()) / 2.;
++  Standard_Real aPBDist = (thePoint.XYZ() - aBCenter).Modulus();
++  if (aPBDist < theCriteria)
++    return Standard_False;
++  
++  Standard_Real aBSize = Sqrt (aBox.SquareExtent());
++  if ((aBSize / aPBDist) > (1. / theCriteria))
++    return Standard_False;
++
++  theTrsf.SetTranslation (gp_Vec (aBox.CornerMin(), thePoint));
++  return Standard_True;
++}
+diff --git a/src/BOPAlgo/BOPAlgo_Tools.hxx b/src/BOPAlgo/BOPAlgo_Tools.hxx
+index 9d20dd3b26..1185394583 100644
+--- a/src/BOPAlgo/BOPAlgo_Tools.hxx
++++ b/src/BOPAlgo/BOPAlgo_Tools.hxx
+@@ -205,6 +205,20 @@ public:
+                                             const TopTools_DataMapOfShapeListOfShape& theImages,
+                                             const Handle(IntTools_Context)& theContext);
+ 
++  //! Computes the transformation needed to move the objects
++  //! to the given point to increase the quality of computations.
++  //! Returns true if the objects are located far from the given point
++  //! (relatively given criteria), false otherwise.
++  //! @param theBox1 the AABB of the first object
++  //! @param theBox2 the AABB of the second object
++  //! @param theTrsf the computed transformation
++  //! @param thePoint the Point to compute transformation to
++  //! @param theCriteria the Criteria to check whether thranformation is required
++  Standard_EXPORT static Standard_Boolean TrsfToPoint (const Bnd_Box& theBox1,
++                                                       const Bnd_Box& theBox2,
++                                                       gp_Trsf&       theTrsf,
++                                                       const gp_Pnt&  thePoint = gp_Pnt (0.0, 0.0, 0.0),
++                                                       const Standard_Real theCriteria = 1.e+5);
+ };
+ 
+ #endif // _BOPAlgo_Tools_HeaderFile
+diff --git a/src/BOPAlgo/BOPAlgo_WireSplitter.lxx b/src/BOPAlgo/BOPAlgo_WireSplitter.lxx
+index 9f44253994..e6510a4719 100644
+--- a/src/BOPAlgo/BOPAlgo_WireSplitter.lxx
++++ b/src/BOPAlgo/BOPAlgo_WireSplitter.lxx
+@@ -27,7 +27,9 @@ class BOPAlgo_EdgeInfo {
+   BOPAlgo_EdgeInfo() : 
+     myPassed(Standard_False),
+     myInFlag(Standard_False),
+-    myAngle (-1.) {
++    myIsInside (Standard_False),
++    myAngle (-1.)
++  {
+   };
+   //
+   void SetEdge(const TopoDS_Edge& theE) {
+@@ -62,10 +64,19 @@ class BOPAlgo_EdgeInfo {
+     return myAngle;
+   };
+   //
++  Standard_Boolean IsInside() const {
++    return myIsInside;
++  };
++  //
++  void SetIsInside (const Standard_Boolean theIsInside) {
++    myIsInside = theIsInside;
++  };
++  //
+  protected:
+   TopoDS_Edge myEdge;
+   Standard_Boolean myPassed;
+   Standard_Boolean myInFlag;
++  Standard_Boolean myIsInside;
+   Standard_Real myAngle;
+ };
+ 
+diff --git a/src/BOPAlgo/BOPAlgo_WireSplitter_1.cxx b/src/BOPAlgo/BOPAlgo_WireSplitter_1.cxx
+index 03adb27262..fac4bbf8e2 100644
+--- a/src/BOPAlgo/BOPAlgo_WireSplitter_1.cxx
++++ b/src/BOPAlgo/BOPAlgo_WireSplitter_1.cxx
+@@ -166,6 +166,8 @@ void BOPAlgo_WireSplitter::SplitBlock(const TopoDS_Face& myFace,
+   MyDataMapOfShapeBoolean aVertMap;
+   //
+   const TopTools_ListOfShape& myEdges=aCB.Shapes();
++
++  TopTools_MapOfShape aMS;
+   //
+   // 1.Filling mySmartMap
+   aIt.Initialize(myEdges);
+@@ -177,6 +179,10 @@ void BOPAlgo_WireSplitter::SplitBlock(const TopoDS_Face& myFace,
+     //
+     bIsClosed = BRep_Tool::Degenerated(aE) || 
+                 BRep_Tool::IsClosed(aE, myFace);
++
++    if (!aMS.Add (aE) && !bIsClosed)
++      aMS.Remove (aE);
++
+     //
+     aItS.Initialize(aE);
+     for(i = 0; aItS.More(); aItS.Next(), ++i) {
+@@ -218,7 +224,7 @@ void BOPAlgo_WireSplitter::SplitBlock(const TopoDS_Face& myFace,
+   for (i=1; i<=aNb; i++) {
+     aCntIn=0;
+     aCntOut=0;
+-    const BOPAlgo_ListOfEdgeInfo& aLEInfo= mySmartMap(i);
++    const BOPAlgo_ListOfEdgeInfo& aLEInfo = mySmartMap(i);
+     BOPAlgo_ListIteratorOfListOfEdgeInfo anIt(aLEInfo);
+     for (; anIt.More(); anIt.Next()) {
+       const BOPAlgo_EdgeInfo& aEI=anIt.Value();
+@@ -304,6 +310,7 @@ void BOPAlgo_WireSplitter::SplitBlock(const TopoDS_Face& myFace,
+     for (; aItLEI.More(); aItLEI.Next()) {
+       BOPAlgo_EdgeInfo& aEI=aItLEI.ChangeValue();
+       const TopoDS_Edge& aE=aEI.Edge();
++      aEI.SetIsInside (!aMS.Contains (aE));
+       //
+       aVV = aV;
+       bIsIN = aEI.IsIn();
+@@ -366,7 +373,7 @@ void Path (const GeomAdaptor_Surface& aGAS,
+   Standard_Integer i, j, aNb, aNbj;
+   Standard_Real anAngleIn, anAngleOut, anAngle, aMinAngle;
+   Standard_Real aTol2D, aTol2D2, aD2, aTwoPI;
+-  Standard_Boolean anIsSameV2d, anIsSameV, anIsFound, anIsOut, anIsNotPassed;
++  Standard_Boolean anIsSameV2d, anIsSameV, anIsOut, anIsNotPassed;
+   Standard_Boolean bIsClosed;
+   TopoDS_Vertex aVa, aVb;
+   TopoDS_Edge aEOuta;
+@@ -501,8 +508,12 @@ void Path (const GeomAdaptor_Surface& aGAS,
+     //
+     anAngleIn = AngleIn(aEOuta, aLEInfo);
+     aMinAngle = 100.;
+-    anIsFound = Standard_False;
+     Standard_Integer iCnt = NbWaysOut(aLEInfo);
++
++    Standard_Boolean isBoundary = !anEdgeInfo->IsInside();
++    Standard_Integer aNbWaysInside = 0;
++    BOPAlgo_EdgeInfo *pOnlyWayIn = NULL;
++
+     Standard_Integer aCurIndexE = 0;
+     anIt.Initialize(aLEInfo);
+     for (; anIt.More(); anIt.Next()) {
+@@ -525,7 +536,6 @@ void Path (const GeomAdaptor_Surface& aGAS,
+         if (iCnt==1) {
+           // the one and only way to go out .
+           pEdgeInfo=&anEI;
+-          anIsFound=Standard_True;
+           break;
+         }
+         //
+@@ -548,15 +558,25 @@ void Path (const GeomAdaptor_Surface& aGAS,
+           anAngleOut=anEI.Angle();
+           anAngle=ClockWiseAngle(anAngleIn, anAngleOut);
+         }
++
++        if (isBoundary && anEI.IsInside())
++        {
++          ++aNbWaysInside;
++          pOnlyWayIn = &anEI;
++        }
++
+         if (anAngle < aMinAngle - eps) {
+           aMinAngle=anAngle;
+           pEdgeInfo=&anEI;
+-          anIsFound=Standard_True;
+         }
+       }
+     } // for (; anIt.More(); anIt.Next()) 
++    if (aNbWaysInside == 1)
++    {
++      pEdgeInfo = pOnlyWayIn;
++    }
+     //
+-    if (!anIsFound) {
++    if (!pEdgeInfo) {
+       // no way to go . (Error)
+       return;
+     }
+diff --git a/src/BOPTools/BOPTools_AlgoTools_1.cxx b/src/BOPTools/BOPTools_AlgoTools_1.cxx
+index 5832bfa90a..803f8ba2f8 100644
+--- a/src/BOPTools/BOPTools_AlgoTools_1.cxx
++++ b/src/BOPTools/BOPTools_AlgoTools_1.cxx
+@@ -525,6 +525,7 @@ namespace {
+   struct EdgeData {
+     const TopoDS_Edge* Edge; // Edge
+     Standard_Real VParameter; // Parameter of the vertex on the edge
++    Standard_Boolean IsClosed; // Closed flag of the edge
+     Geom2dAdaptor_Curve GAdaptor; // 2D adaptor for PCurve of the edge on the face
+     Standard_Real First; // First parameter in the range
+     Standard_Real Last; // Last parameter in the rage
+@@ -610,9 +611,9 @@ static
+       continue;
+     }
+     //
+-    if (Abs(aTint1 - aT1) > aHalfR1 ||
+-        Abs(aTint2 - aT2) > aHalfR2) {
+-      // intersection on the other end of the closed edge
++    if ((!theEData1.IsClosed && Abs (aTint1 - aT1) > aHalfR1) ||
++        (!theEData2.IsClosed && Abs (aTint2 - aT2) > aHalfR2)) {
++      // intersection is on the other end of the edge
+       continue;
+     }
+     //
+@@ -634,7 +635,7 @@ void CorrectWires(const TopoDS_Face& aFx,
+                   const TopTools_IndexedMapOfShape& aMapToAvoid)
+ {
+   Standard_Integer i, aNbV;
+-  Standard_Real aTol, aTol2, aD2, aD2max, aT1, aT2, aT;
++  Standard_Real aTol, aTol2, aD2, aD2max, aT1, aT2;
+   gp_Pnt aP, aPV;
+   gp_Pnt2d aP2D;
+   TopoDS_Face aF;
+@@ -644,11 +645,9 @@ void CorrectWires(const TopoDS_Face& aFx,
+   aF=aFx;
+   aF.Orientation(TopAbs_FORWARD);
+   const Handle(Geom_Surface)& aS=BRep_Tool::Surface(aFx);
+-  //
+-  TopExp::MapShapesAndAncestors(aF, 
+-                                TopAbs_VERTEX, 
+-                                TopAbs_EDGE, 
+-                                aMVE);
++
++  TopExp::MapShapesAndUniqueAncestors (aF, TopAbs_VERTEX, TopAbs_EDGE, aMVE, Standard_True);
++
+   NCollection_DataMap<TopoDS_Shape, Standard_Real> aMapEdgeLen;
+   aNbV=aMVE.Extent();
+   for (i=1; i<=aNbV; ++i) {
+@@ -666,7 +665,13 @@ void CorrectWires(const TopoDS_Face& aFx,
+       const TopoDS_Edge& aE=*(TopoDS_Edge*)(&aIt.Value());
+       const Handle(Geom2d_Curve)& aC2D=
+         BRep_Tool::CurveOnSurface(aE, aF, aT1, aT2);
+-      aT=BRep_Tool::Parameter(aV, aE);
++      Standard_Real aT = BRep_Tool::Parameter (aV, aE);
++      Standard_Boolean isClosed = Standard_False;
++      {
++        TopoDS_Vertex aV1, aV2;
++        TopExp::Vertices (aE, aV1, aV2);
++        isClosed = aV1.IsSame (aV2);
++      }
+       //
+       aC2D->D0(aT, aP2D);
+       aS->D0(aP2D.X(), aP2D.Y(), aP);
+@@ -674,7 +679,7 @@ void CorrectWires(const TopoDS_Face& aFx,
+       if (aD2>aD2max) {
+         aD2max=aD2;
+       }
+-      EdgeData anEData = {&aE, aT, Geom2dAdaptor_Curve(aC2D), aT1, aT2};
++      EdgeData anEData = {&aE, aT, isClosed, Geom2dAdaptor_Curve(aC2D), aT1, aT2};
+       aLEPars.Append(anEData);
+     }
+     //
+diff --git a/src/IntTools/IntTools_EdgeEdge.cxx b/src/IntTools/IntTools_EdgeEdge.cxx
+index 63228f563f..91fadaf34a 100644
+--- a/src/IntTools/IntTools_EdgeEdge.cxx
++++ b/src/IntTools/IntTools_EdgeEdge.cxx
+@@ -682,10 +682,14 @@ void IntTools_EdgeEdge::MergeSolutions(const IntTools_SequenceOfRanges& theRange
+       aRj2.Range(aTj21, aTj22);
+       //
+       bCond = (fabs(aTi12 - aTj11) < dTR1) ||
++        (aTj11 > aTi11 && aTj11 < aTi12) ||
++        (aTi11 > aTj11 && aTi11 < aTj12) ||
+         (bSplit2 && (fabs(aTj12 - aTi11) < dTR1));
+       if (bCond && bSplit2) {
+         bCond = (fabs((Max(aTi22, aTj22) - Min(aTi21, aTj21)) - 
+-                      ((aTi22 - aTi21) + (aTj22 - aTj21))) < dTR2);
++                      ((aTi22 - aTi21) + (aTj22 - aTj21))) < dTR2) ||
++                        (aTj21 > aTi21 && aTj21 < aTi22) ||
++                          (aTi21 > aTj21 && aTi21 < aTj22);
+       }
+       //
+       if (bCond) {
+diff --git a/src/IntTools/IntTools_EdgeFace.hxx b/src/IntTools/IntTools_EdgeFace.hxx
+index 33af356183..12c25926e9 100644
+--- a/src/IntTools/IntTools_EdgeFace.hxx
++++ b/src/IntTools/IntTools_EdgeFace.hxx
+@@ -196,7 +196,7 @@ protected: //! @name Protected methods performing the intersection
+   //! Checks if the edge is in the face really.
+   Standard_EXPORT Standard_Boolean IsCoincident();
+ 
+-private:
++protected:
+ 
+   TopoDS_Edge myEdge;
+   TopoDS_Face myFace;
+diff --git a/src/IntTools/IntTools_FaceFace.hxx b/src/IntTools/IntTools_FaceFace.hxx
+index 04ad9d824e..8e9d5501b7 100644
+--- a/src/IntTools/IntTools_FaceFace.hxx
++++ b/src/IntTools/IntTools_FaceFace.hxx
+@@ -120,7 +120,7 @@ protected:
+   //! and surfaces is computed.
+   Standard_EXPORT void ComputeTolReached3d();
+ 
+-private:
++protected:
+ 
+   Standard_Boolean myIsDone;
+   IntPatch_Intersection myIntersector;

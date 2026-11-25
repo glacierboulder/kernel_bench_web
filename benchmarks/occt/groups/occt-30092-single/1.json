@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-30092-single",
+  "version": "1",
+  "title": "布尔截线在同域顶点附近失效并产生错误长度",
+  "kind": "single",
+  "source_id": "occt73-30092-b-798a95ed9b10",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-30092",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-30092-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

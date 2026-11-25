@@ -1,0 +1,21 @@
+{
+  "issue": 28690,
+  "commit": "8ae442a8cbcd50d4c59a7024b198646123387579",
+  "command": [
+    "DRAWEXE",
+    "-b",
+    "-f",
+    "reproduce.tcl"
+  ],
+  "working_directory": "visible/issue_28690",
+  "snapshot_sha256": "21cda3498318728250cb66cfd91de4226a32550e6549078bab72d0bdf6cc1655",
+  "files": {
+    "bug28690_m8_faces.brep": "5c989240a9303b54a84dd0b9f3df5537e65209e7b72103eeed610f6dc67845ec",
+    "issue.json": "cd9df8cb48991cf5cd066093cb646cc1baba7cf9ef3bcbdf7ac650e955da4f97",
+    "reproduce.tcl": "f3a1c58b25af3fb50f7055d0745d1b2351529afffba592a90faa2213d2ae126e",
+    "statement.md": "e57e59c36a8425494878b73d44626fc6e1325392fdc5a3c8d086d390007ba2d3"
+  },
+  "stdout": "DRAW is running in batch mode\nNumber of shapes in r\n VERTEX    : 4\n EDGE      : 3\n WIRE      : 0\n FACE      : 0\n SHELL     : 0\n SOLID     : 0\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 8\n\n\n\nMass :         594.045\n\nCenter of gravity : \nX =               0\nY =        -287.386\nZ =     2.52268e-06\n\nMatrix of Inertia : \n    1.74693e+07               0               0\n              0     3.55514e-07       -0.440918\n              0       -0.440918     1.74693e+07\n\nMoments : \nIX =     1.74693e+07\nIY =     1.74693e+07\nIZ =     3.44386e-07\n\n\n8.5385972916940448e-09 0.99999988062696898\n0.99999992640264901 0.99999997729526269\n7.2170034787179686e-06 0.99999862369078318\n",
+  "stderr": "",
+  "returncode": 0
+}

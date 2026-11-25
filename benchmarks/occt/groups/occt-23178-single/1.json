@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-23178-single",
+  "version": "1",
+  "title": "两张斜交圆柱面的 Section 应生成完整交线",
+  "kind": "single",
+  "source_id": "occt70-23178-b-fe4fc02d7b90",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-23178",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-23178-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}
