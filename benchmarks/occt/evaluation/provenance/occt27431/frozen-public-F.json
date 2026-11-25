@@ -1,0 +1,22 @@
+{
+  "issue": 27431,
+  "commit": "e2e0498b17acc86bdd64d3322ad2e9eb203e387f",
+  "command": [
+    "DRAWEXE",
+    "-b",
+    "-f",
+    "reproduce.tcl"
+  ],
+  "working_directory": "visible/issue_27431",
+  "snapshot_sha256": "fffe165a5ca43b5ac6fa618abf1d92d70c5aab3064ff379783f8b0835ab65df4",
+  "files": {
+    "OCC13116_sh1.brep": "4b75bf6f37bfb7e8494901dd34badd87b5f54cb241175dae90ce2d26f702332c",
+    "OCC13116_sh2.brep": "781225803848963432a610214d912f933eee687cd0537c86b42faebbae10c10d",
+    "issue.json": "55af6245e94531793cb8000716994403750748983b3447bd3c1f628b0476891b",
+    "reproduce.tcl": "e019cb4b7bbb9238031576dbaad9104a0aa726c1efc53fed92a4c56eb38f638e",
+    "statement.md": "e2a609e8d0505486bca7474a9fd25169c19db74ead5af9b38a509f7684370d79"
+  },
+  "stdout": "DRAW is running in batch mode\nThis shape seems to be valid\nNumber of shapes in section\n VERTEX    : 2\n EDGE      : 2\n WIRE      : 0\n FACE      : 0\n SHELL     : 0\n SOLID     : 0\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 5\n\n\n\nMass :         125.811\n\nCenter of gravity : \nX =         2536.82\nY =        -462.501\nZ =           12.72\n\nMatrix of Inertia : \n        18383.2        -12524.4        -1.11363\n       -12524.4         16428.4        -1.20297\n       -1.11363        -1.20297         25252.9\n\nMoments : \nIX =         29968.3\nIY =         25252.9\nIZ =         4843.34\n\n\nTolerance MAX=0.0014192302328601574 AVG=0.001419230232330138 MIN=0.0014192302318601574\nFACE    : MAX=0 AVG=0 MIN=0\nEDGE    : MAX=0.0014192302318601574 AVG=0.0014192302318601574 MIN=0.0014192302318601574\nVERTEX  : MAX=0.0014192302328601574 AVG=0.0014192302325651285 MIN=0.0014192302322700995\n\n\n\nMass :         32.2813\n\nCenter of gravity : \nX =          2528.9\nY =        -472.072\nZ =         12.9057\n\nMatrix of Inertia : \n        1919.31        -665.912        -826.876\n       -665.912         1889.19         -833.07\n       -826.876         -833.07         1332.99\n\nMoments : \nIX =         2570.72\nIY =         2459.89\nIZ =          110.87\n\n\n\n\nMass :         93.5295\n\nCenter of gravity : \nX =         2539.55\nY =        -459.197\nZ =         12.6559\n\nMatrix of Inertia : \n        12484.6        -8567.81         761.906\n       -8567.81         11815.5         754.678\n        761.906         754.678         17219.9\n\nMoments : \nIX =         20724.6\nIY =         17303.4\nIZ =         3491.99\n\n\n",
+  "stderr": "",
+  "returncode": 0
+}
