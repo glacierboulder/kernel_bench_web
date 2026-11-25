@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-30354-single",
+  "version": "1",
+  "title": "曲面与实体做布尔截面时遗漏短交边",
+  "kind": "single",
+  "source_id": "occt73-30354-b-dc57476a0e47",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-30354",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-30354-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "occt-30354-suite",
+  "version": "1",
+  "title": "曲面与实体做布尔截面时遗漏短交边",
+  "source_ids": [
+    "occt73-30354-b-dc57476a0e47"
+  ],
+  "group_ids": [
+    "occt-30354-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "30354-original",
+      "issue_id": "occt-30354",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt30354/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "30354-translated",
+      "issue_id": "occt-30354",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt30354/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "30354-alternate",
+      "issue_id": "occt-30354",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt30354/alternate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "30354-control",
+      "issue_id": "occt-30354",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt30354/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt30354/body.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt30354/assets/bug30354_Face_14.brep",
+    "evaluation/cases/occt30354/assets/bug30354_vol_neg.brep"
+  ]
+}
