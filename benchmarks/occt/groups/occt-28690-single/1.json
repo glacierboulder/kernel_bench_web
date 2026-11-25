@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-28690-single",
+  "version": "1",
+  "title": "平面与面组的 Section 结果含无有效参数区间的微边",
+  "kind": "single",
+  "source_id": "occt71-28690-b-f5b7241978a9",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-28690",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-28690-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}
