@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-28486-single",
+  "version": "1",
+  "title": "General Fuse 遗漏相交平面上的内部线段",
+  "kind": "single",
+  "source_id": "occt71-28486-b-e99816df7f28",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-28486",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-28486-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}
