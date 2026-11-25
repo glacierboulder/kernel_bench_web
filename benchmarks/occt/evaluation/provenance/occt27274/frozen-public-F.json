@@ -1,0 +1,20 @@
+{
+  "issue": 27274,
+  "commit": "5be33fb66755d98e1b549f33da4b6cf5a9e058fa",
+  "command": [
+    "DRAWEXE",
+    "-b",
+    "-f",
+    "reproduce.tcl"
+  ],
+  "working_directory": "visible/issue_27274",
+  "snapshot_sha256": "b46ef731b387a95faa3b0e945eb099cb5d681c419d9c427ba8d197e1f0bc258d",
+  "files": {
+    "issue.json": "663dbf6778f255e662040cb5024930cb523416481668890eca3c42290555813b",
+    "reproduce.tcl": "772dbed88323704d29499ba9ce4997610ca73bd927d7c59d9ebcb0170ebcb46d",
+    "statement.md": "8aaf8fe463c388c3f80f4b2f0ef1b98ec2bd767dfd81c026670dfe54e28f9643"
+  },
+  "stdout": "DRAW is running in batch mode\nThis shape seems to be valid\nNumber of shapes in result\n VERTEX    : 5\n EDGE      : 11\n WIRE      : 10\n FACE      : 10\n SHELL     : 3\n SOLID     : 3\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 43\n\n\n\nMass :          154518\n\nRelative error of mass computation :     1.29048e-07\n\nCenter of gravity : \nX =    -1.06588e-06\nY =        -23.9999\nZ =         57.9409\n\nMatrix of Inertia : \n    6.17856e+08         297.497         430.737\n        297.497     4.93958e+08     2.64842e+07\n        430.737     2.64842e+07      4.4099e+08\n\nMoments : \nIX =     6.17856e+08\nIY =     5.04928e+08\nIZ =     4.30019e+08\n\n\n",
+  "stderr": "",
+  "returncode": 0
+}

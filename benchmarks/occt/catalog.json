@@ -1,5 +1,6 @@
 {
   "evaluation_suites": [
+    {"id": "occt-27274-suite", "version": "1", "path": "evaluation/suites/occt-27274-suite/1.json"},
     {"id": "occt-24905-suite", "version": "1", "path": "evaluation/suites/occt-24905-suite/1.json"},
     {"id":"occt-28366-suite","version":"1","path":"evaluation/suites/occt-28366-suite/1.json"},
     {"id":"occt-25237-suite","version":"1","path":"evaluation/suites/occt-25237-suite/1.json"},
@@ -371,6 +372,7 @@
     }
   ],
   "groups": [
+    {"id": "occt-27274-single", "version": "1", "path": "groups/occt-27274-single/1.json"},
     {"id": "occt-24905-single", "version": "1", "path": "groups/occt-24905-single/1.json"},
     {"id":"occt-28366-single","version":"1","path":"groups/occt-28366-single/1.json"},
     {"id":"occt-25237-single","version":"1","path":"groups/occt-25237-single/1.json"},
@@ -738,6 +740,7 @@
   ],
   "id": "occt",
   "issues": [
+    {"id": "occt-27274", "version": "1", "path": "issues/occt-27274/1/issue.json"},
     {"id": "occt-24905", "version": "1", "path": "issues/occt-24905/1/issue.json"},
     {"id":"occt-28366","version":"1","path":"issues/occt-28366/1/issue.json"},
     {"id":"occt-25237","version":"1","path":"issues/occt-25237/1/issue.json"},

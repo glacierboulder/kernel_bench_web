@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-27274-single",
+  "version": "1",
+  "title": "相交圆柱的 General Fuse 丢失分割区域",
+  "kind": "single",
+  "source_id": "occt70-27274-b-66d914e8ea22",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-27274",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-27274-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}
