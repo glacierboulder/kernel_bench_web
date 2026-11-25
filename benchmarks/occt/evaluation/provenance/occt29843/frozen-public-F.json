@@ -1,0 +1,21 @@
+{
+  "issue": 29843,
+  "commit": "c08fd127066e78d3427955b8d3a11dd880fe3244",
+  "command": [
+    "DRAWEXE",
+    "-b",
+    "-f",
+    "reproduce.tcl"
+  ],
+  "working_directory": "visible/issue_29843",
+  "snapshot_sha256": "b12a7b67c1048157dc46e61528620d779cefcf8b59c3b7ac5c3c2ad5bbe54302",
+  "files": {
+    "bug29843_loc.brep": "637ab1d2e5dd7324255b564051fb2125f20793dc1586703a8ede88c571835e69",
+    "issue.json": "c12d504f5bd44b730b8fe3a936526526d5c5a1430dcd11b3212491055f21fb5b",
+    "reproduce.tcl": "fc521f11ed56e4fef6226cea3801c86bf6e4c65ef8f8371daa657c4f92985284",
+    "statement.md": "3c6e9b7ac0c1c151868d66d6208c64740d67094a97e742f00c656a5ed64eac1d"
+  },
+  "stdout": "DRAW is running in batch mode\nNumber of shapes in section\n VERTEX    : 6\n EDGE      : 7\n WIRE      : 0\n FACE      : 0\n SHELL     : 0\n SOLID     : 0\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 14\n\n\n\nMass :         952.189\n\nCenter of gravity : \nX =     6.00005e+08\nY =     1.33339e+08\nZ =         10103.8\n\nMatrix of Inertia : \n    3.47341e+06          -81920               0\n         -81920     3.53894e+06           -0.25\n              0           -0.25     3.93216e+06\n\nMoments : \nIX =     3.93216e+06\nIY =     3.59441e+06\nIZ =     3.41795e+06\n\n\n\nThis shape seems to be valid\n This shape seems to be OK.\n\nNumber of shapes in result\n VERTEX    : 6\n EDGE      : 9\n WIRE      : 5\n FACE      : 5\n SHELL     : 1\n SOLID     : 1\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 28\n\n\n\nMass :      1.1761e+06\n\nCenter of gravity : \nX =     6.00005e+08\nY =     1.33339e+08\nZ =         10103.7\n\nMatrix of Inertia : \n    2.05101e+09    -1.67772e+07           -2048\n   -1.67772e+07      2.2817e+09            -512\n          -2048            -512     2.08037e+09\n\nMoments : \nIX =     2.28292e+09\nIY =     2.08037e+09\nIZ =      2.0498e+09\n\n\n",
+  "stderr": "",
+  "returncode": 0
+}
