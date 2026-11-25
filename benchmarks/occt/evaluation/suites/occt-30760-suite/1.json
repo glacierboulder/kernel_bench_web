@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "occt-30760-suite",
+  "version": "1",
+  "title": "相交实体执行布尔公共部分运算后丢失重叠体积",
+  "source_ids": [
+    "occt73-30760-b-9324aa2d0db7"
+  ],
+  "group_ids": [
+    "occt-30760-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "30760-original",
+      "issue_id": "occt-30760",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt30760/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "30760-translated",
+      "issue_id": "occt-30760",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt30760/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "30760-alternate",
+      "issue_id": "occt-30760",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt30760/alternate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "30760-control",
+      "issue_id": "occt-30760",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt30760/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt30760/body.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt30760/assets/bug30760_shapes.brep"
+  ]
+}

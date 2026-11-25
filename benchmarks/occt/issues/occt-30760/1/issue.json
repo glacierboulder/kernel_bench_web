@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "id": "occt-30760",
+  "version": "1",
+  "title": "相交实体执行布尔公共部分运算后丢失重叠体积",
+  "source_id": "occt73-30760-b-9324aa2d0db7",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/reproduce.tcl",
+    "public/bug30760_shapes.brep"
+  ]
+}
