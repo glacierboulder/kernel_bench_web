@@ -1,0 +1,52 @@
+{
+  "source_id": "occt78-22821-b-2f33e34038e1",
+  "source_commit": "2f33e34038e1d6fdb373d362917af7a170e9425b",
+  "snapshot_sha256": "79da9bfeef3175ec73ba0ba16d8e32228932c67e6e18ff5c524469c777e04f49",
+  "patch_sha256": "ed405a3b0862a8e3f6cc9b03bdc03787791d145dd8690eb8f83f4cb6ffb334da",
+  "technical_passed": true,
+  "passed": true,
+  "returncode": 0,
+  "suite": {
+    "id": "occt-22821-suite",
+    "version": "1"
+  },
+  "category_summary": {
+    "original": {
+      "declared": 1,
+      "executed": 1,
+      "passed": 1,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "state": "configured"
+    },
+    "neighborhood": {
+      "declared": 2,
+      "executed": 2,
+      "passed": 2,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "state": "configured"
+    },
+    "regression": {
+      "declared": 1,
+      "executed": 1,
+      "passed": 1,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "inconclusive": 0,
+      "state": "configured"
+    }
+  },
+  "original_receipt_sha256": "ac44f4e8a8a24035394a48310a5dc8c959bc07cd3d15b16fe41a0c3495de4c76"
+}

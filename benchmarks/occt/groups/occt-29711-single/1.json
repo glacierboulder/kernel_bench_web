@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-29711-single",
+  "version": "1",
+  "title": "两个有重叠的实体融合后，结果仍保留两个实体",
+  "kind": "single",
+  "source_id": "occt72-29711-b-fb60181a3a21",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-29711",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-29711-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

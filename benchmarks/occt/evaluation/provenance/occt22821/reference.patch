@@ -1,0 +1,2860 @@
+diff --git a/src/BRepBlend/BRepBlend_CSWalking.hxx b/src/BRepBlend/BRepBlend_CSWalking.hxx
+index 8cc3b0ccb..590d369ea 100644
+--- a/src/BRepBlend/BRepBlend_CSWalking.hxx
++++ b/src/BRepBlend/BRepBlend_CSWalking.hxx
+@@ -51,7 +51,7 @@ public:
+   
+   Standard_EXPORT BRepBlend_CSWalking(const Handle(Adaptor3d_Curve)& Curv, const Handle(Adaptor3d_Surface)& Surf, const Handle(Adaptor3d_TopolTool)& Domain);
+   
+-  Standard_EXPORT void Perform (Blend_CSFunction& F, const Standard_Real Pdep, const Standard_Real Pmax, const Standard_Real MaxStep, const Standard_Real TolGuide, const math_Vector& Soldep, const Standard_Real Tolesp, const Standard_Real Fleche, const Standard_Boolean Appro = Standard_False);
++  Standard_EXPORT void Perform (Blend_CSFunction& F, const Standard_Real Pdep, const Standard_Real Pmax, const Standard_Real MaxStep, const Standard_Real Tol3d, const Standard_Real TolGuide, const math_Vector& Soldep, const Standard_Real Fleche, const Standard_Boolean Appro = Standard_False);
+   
+   Standard_EXPORT Standard_Boolean Complete (Blend_CSFunction& F, const Standard_Real Pmin);
+   
+@@ -80,7 +80,7 @@ private:
+   Handle(Adaptor3d_Surface) surf;
+   Handle(Adaptor3d_Curve) curv;
+   Handle(Adaptor3d_TopolTool) domain;
+-  Standard_Real tolesp;
++  Standard_Real tolpoint3d;
+   Standard_Real tolgui;
+   Standard_Real pasmax;
+   Standard_Real fleche;
+diff --git a/src/BRepBlend/BRepBlend_RstRstLineBuilder.cxx b/src/BRepBlend/BRepBlend_RstRstLineBuilder.cxx
+index 0183b2421..ecd711c76 100644
+--- a/src/BRepBlend/BRepBlend_RstRstLineBuilder.cxx
++++ b/src/BRepBlend/BRepBlend_RstRstLineBuilder.cxx
+@@ -173,7 +173,7 @@ BRepBlend_RstRstLineBuilder::BRepBlend_RstRstLineBuilder
+  done(Standard_False), sol(1, 2), surf1(Surf1),
+  domain1(Domain1), surf2(Surf2),
+  domain2(Domain2), rst1(Rst1), rst2(Rst2),
+- tolesp(0.0), tolgui(0.0), pasmax(0.0),
++ tolpoint3d(0.0), tolgui(0.0), pasmax(0.0),
+  fleche(0.0), param(0.0), rebrou(Standard_False),
+  iscomplete(Standard_False), comptra(Standard_False), sens(0.0),
+  decrochdeb(Blend_NoDecroch), decrochfin(Blend_NoDecroch)
+@@ -193,9 +193,9 @@ void BRepBlend_RstRstLineBuilder::Perform(Blend_RstRstFunction&   Func,
+ 					  const Standard_Real     Pdep,
+ 					  const Standard_Real     Pmax,
+ 					  const Standard_Real     MaxStep,
++            const Standard_Real     Tol3d,
+ 					  const Standard_Real     TolGuide,
+ 					  const math_Vector&      ParDep,
+-					  const Standard_Real     Tolesp,
+ 					  const Standard_Real     Fleche,
+ 					  const Standard_Boolean  Appro) 
+ {
+@@ -203,7 +203,7 @@ void BRepBlend_RstRstLineBuilder::Perform(Blend_RstRstFunction&   Func,
+   iscomplete = Standard_False;
+   comptra    = Standard_False;
+   line       = new BRepBlend_Line();
+-  tolesp     = Abs(Tolesp);
++  tolpoint3d   = Tol3d;
+   tolgui     = Abs(TolGuide);
+   fleche     = Abs(Fleche);
+   rebrou     = Standard_False;
+@@ -225,7 +225,7 @@ void BRepBlend_RstRstLineBuilder::Perform(Blend_RstRstFunction&   Func,
+     TopAbs_State siturst1, siturst2;
+     Blend_DecrochStatus decroch;
+     math_Vector tolerance(1, 2), infbound(1, 2), supbound(1, 2);
+-    Func.GetTolerance(tolerance, tolesp);
++    Func.GetTolerance(tolerance, tolpoint3d);
+     Func.GetBounds(infbound, supbound);
+     math_FunctionSetRoot rsnld(Func, tolerance, 30);
+     
+@@ -258,9 +258,9 @@ void BRepBlend_RstRstLineBuilder::Perform(Blend_RstRstFunction&   Func,
+   U = previousP.ParameterOnC1();
+   V = previousP.ParameterOnC2();
+   BRepBlend_Extremity ptf1 (previousP.PointOnC1(),
+-			    U, previousP.Parameter(),tolesp);
++			    U, previousP.Parameter(),tolpoint3d);
+   BRepBlend_Extremity ptf2 (previousP.PointOnC2(),
+-			    V, previousP.Parameter(),tolesp);
++			    V, previousP.Parameter(),tolpoint3d);
+   if (!previousP.IsTangencyPoint()) {
+     ptf1.SetTangent(previousP.TangentOnC1());
+     ptf2.SetTangent(previousP.TangentOnC2());
+@@ -291,7 +291,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::PerformFirstSection
+  const Standard_Real     Pdep,
+  const Standard_Real     Pmax,
+  const math_Vector&      ParDep,
+- const Standard_Real     Tolesp,
++ const Standard_Real     Tol3d,
+  const Standard_Real     TolGuide,
+  const Standard_Boolean  RecRst1,
+  const Standard_Boolean  RecP1,
+@@ -304,7 +304,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::PerformFirstSection
+   iscomplete = Standard_False;
+   comptra    = Standard_False;
+   line       = new BRepBlend_Line();
+-  tolesp     = Abs(Tolesp);
++  tolpoint3d   = Tol3d;
+   tolgui     = Abs(TolGuide);
+   rebrou     = Standard_False;
+   
+@@ -327,7 +327,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::PerformFirstSection
+   wp1   = wp2 = wrst1 = wrst2 = Pmax;
+   param = Pdep;
+   Func.Set(param);
+-  Func.GetTolerance(tolerance, tolesp);
++  Func.GetTolerance(tolerance, tolpoint3d);
+   Func.GetBounds(infbound, supbound);
+ 
+   math_FunctionSetRoot rsnld(Func, tolerance, 30);
+@@ -573,7 +573,7 @@ void BRepBlend_RstRstLineBuilder::InternalPerform(Blend_RstRstFunction&   Func,
+ 
+   //IntSurf_Transition Tline, Tarc;
+ 
+-  Func.GetTolerance(tolerance, tolesp);
++  Func.GetTolerance(tolerance, tolpoint3d);
+   Func.GetBounds(infbound, supbound);
+ 
+   math_FunctionSetRoot rsnld(Func, tolerance, 30);
+@@ -595,14 +595,14 @@ void BRepBlend_RstRstLineBuilder::InternalPerform(Blend_RstRstFunction&   Func,
+     if (rsnld.IsDone()) {
+       rsnld.Root(sol);
+       Blend_Point bp1;
+-      if(BBPP(param, Func, sol, tolesp, bp1)){
++      if(BBPP(param, Func, sol, tolpoint3d, bp1)){
+ 	Standard_Real dw = 1.e-10;
+ 	Func.Set(param + dw);
+ 	rsnld.Perform(Func, parinit, infbound, supbound);
+ 	if (rsnld.IsDone()) {
+ 	  rsnld.Root(sol);
+ 	  Blend_Point bp2;
+-	  if(BBPP(param + dw, Func, sol, tolesp, bp2)){
++	  if(BBPP(param + dw, Func, sol, tolpoint3d, bp2)){
+ 	    tracederiv(Func, bp1, bp2);
+ 	  }
+ 	}
+@@ -854,7 +854,7 @@ void BRepBlend_RstRstLineBuilder::InternalPerform(Blend_RstRstFunction&   Func,
+ 	  Arrive = Standard_True;
+ 	  Extrst1.SetValue(previousP.PointOnC1(),
+ 			   previousP.ParameterOnC1(),
+-			   previousP.Parameter(), tolesp);
++			   previousP.Parameter(), tolpoint3d);
+ 	  MakeExtremity(Extrst2, Standard_False, rst2, sol(2), IsVtxrst2, Vtxrst2);
+ 	  // Show that end is on Bound.
+ 	}
+@@ -873,10 +873,10 @@ void BRepBlend_RstRstLineBuilder::InternalPerform(Blend_RstRstFunction&   Func,
+ 	if (Abs(stepw) < tolgui) {
+ 	  Extrst1.SetValue(previousP.PointOnC1(),
+ 			   previousP.ParameterOnC1(),
+-			   previousP.Parameter(), tolesp);
++			   previousP.Parameter(), tolpoint3d);
+ 	  Extrst2.SetValue(previousP.PointOnC2(),
+ 			   previousP.ParameterOnC2(),
+-			   previousP.Parameter(), tolesp);
++			   previousP.Parameter(), tolpoint3d);
+ 	  Arrive = Standard_True;
+ #ifdef OCCT_DEBUG
+ 	  if (line->NbPoints()>=2) {
+@@ -913,7 +913,7 @@ void BRepBlend_RstRstLineBuilder::InternalPerform(Blend_RstRstFunction&   Func,
+ 	  Arrive = Standard_True;
+ 	  Extrst1.SetValue(previousP.PointOnC1(),
+ 			   previousP.ParameterOnC1(),
+-			   previousP.Parameter(), tolesp);
++			   previousP.Parameter(), tolpoint3d);
+ 	  MakeExtremity(Extrst2, Standard_False, rst2, sol(2), IsVtxrst2, Vtxrst2);
+ 	  // Indicate that end is on Bound.
+ 	}
+@@ -993,10 +993,10 @@ void BRepBlend_RstRstLineBuilder::InternalPerform(Blend_RstRstFunction&   Func,
+ #endif
+ 	Extrst1.SetValue(previousP.PointOnC1(),
+ 			 previousP.ParameterOnC1(),
+-			 previousP.Parameter(), tolesp);
++			 previousP.Parameter(), tolpoint3d);
+ 	Extrst2.SetValue(previousP.PointOnC2(),
+ 			 previousP.ParameterOnC2(),
+-			 previousP.Parameter(), tolesp);
++			 previousP.Parameter(), tolpoint3d);
+ 	Arrive = Standard_True;
+       }
+       break;
+@@ -1029,7 +1029,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::Recadre1(Blend_RstRstFunction&
+ 						       Handle(Adaptor3d_HVertex)& Vtx) 
+ {
+   math_Vector toler(1, 3), infb(1, 3), supb(1, 3);
+-  Finv.GetTolerance(toler, tolesp);
++  Finv.GetTolerance(toler, tolpoint3d);
+   Finv.GetBounds(infb, supb);
+   Solinv(1) = param;
+   Solinv(2) = sol(2);
+@@ -1049,7 +1049,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::Recadre1(Blend_RstRstFunction&
+ 
+   // It is necessary to check if the function value meets the
+   // second restriction
+-  if (Finv.IsSolution(Solinv, tolesp)) {
++  if (Finv.IsSolution(Solinv, tolpoint3d)) {
+     Standard_Real w = Solinv(2);
+     if(w < rst2->FirstParameter() - toler(2)||
+        w > rst2->LastParameter() + toler(2)){
+@@ -1079,7 +1079,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::Recadre1(Blend_RstRstFunction&
+ 
+     math_Vector infbound(1, 2), supbound(1, 2);
+     math_Vector parinit(1, 2), tolerance(1, 2);
+-    Func.GetTolerance(tolerance, tolesp);
++    Func.GetTolerance(tolerance, tolpoint3d);
+     Func.GetBounds(infbound, supbound);
+ 
+     math_FunctionSetRoot rsnld2(Func, tolerance, 30);
+@@ -1112,7 +1112,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::Recadre2(Blend_RstRstFunction&
+ 						       Handle(Adaptor3d_HVertex)& Vtx) 
+ {
+   math_Vector toler(1, 3), infb(1, 3), supb(1, 3);
+-  Finv.GetTolerance(toler, tolesp);
++  Finv.GetTolerance(toler, tolpoint3d);
+   Finv.GetBounds(infb, supb);
+   Solinv(1) = param;
+   Solinv(2) = sol(1);
+@@ -1130,7 +1130,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::Recadre2(Blend_RstRstFunction&
+   rsnld.Root(Solinv);
+ 
+   // It is necessary to check the value of the function
+-  if (Finv.IsSolution(Solinv, tolesp)) {
++  if (Finv.IsSolution(Solinv, tolpoint3d)) {
+     Standard_Real w = Solinv(2);
+     if(w < rst1->FirstParameter() - toler(2)||
+        w > rst1->LastParameter() + toler(2)){
+@@ -1159,7 +1159,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::Recadre2(Blend_RstRstFunction&
+    
+     math_Vector infbound(1, 2), supbound(1, 2);
+     math_Vector parinit(1,2), tolerance(1,2);
+-    Func.GetTolerance(tolerance, tolesp);
++    Func.GetTolerance(tolerance, tolpoint3d);
+     Func.GetBounds(infbound, supbound);
+ 
+     math_FunctionSetRoot rsnld2(Func, tolerance, 30);
+@@ -1199,7 +1199,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::Recadre1(Blend_CurvPointFuncInv&
+ 
+   FinvP.Set(thepoint);
+   math_Vector toler(1,2), infb(1, 2), supb(1, 2);
+-  FinvP.GetTolerance(toler, tolesp);
++  FinvP.GetTolerance(toler, tolpoint3d);
+   FinvP.GetBounds(infb, supb);
+   Solinv(1) = param;
+   Solinv(2) = sol(2);
+@@ -1214,7 +1214,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::Recadre1(Blend_CurvPointFuncInv&
+   }
+   rsnld.Root(Solinv);
+   
+-  if(FinvP.IsSolution(Solinv, tolesp)){
++  if(FinvP.IsSolution(Solinv, tolpoint3d)){
+     gp_Pnt2d p2drst2  = rst2->Value(Solinv(2));
+     TopAbs_State situ = domain2->Classify(p2drst2, toler(2), 0);
+     if ((situ != TopAbs_IN) && (situ != TopAbs_ON)) {
+@@ -1267,7 +1267,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::Recadre2(Blend_CurvPointFuncInv&
+ 
+   FinvP.Set(thepoint);
+   math_Vector toler(1,2), infb(1, 2), supb(1, 2);
+-  FinvP.GetTolerance(toler, tolesp);
++  FinvP.GetTolerance(toler, tolpoint3d);
+   FinvP.GetBounds(infb, supb);
+   Solinv(1) = param;
+   Solinv(2) = sol(1);
+@@ -1282,7 +1282,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::Recadre2(Blend_CurvPointFuncInv&
+   }
+   rsnld.Root(Solinv);
+   
+-  if(FinvP.IsSolution(Solinv, tolesp)){
++  if(FinvP.IsSolution(Solinv, tolpoint3d)){
+     gp_Pnt2d p2drst1  = rst1->Value(Solinv(2));
+     TopAbs_State situ = domain1->Classify(p2drst1, toler(2), 0);
+     if ((situ != TopAbs_IN) && (situ != TopAbs_ON)) {
+@@ -1378,7 +1378,7 @@ void BRepBlend_RstRstLineBuilder::MakeExtremity(BRepBlend_Extremity&
+   if (OnFirst) {
+     Extrem.SetValue(previousP.PointOnC1(),
+ 		    sol(1),
+-		    previousP.Parameter(), tolesp);
++		    previousP.Parameter(), tolpoint3d);
+     if (!previousP.IsTangencyPoint()) 
+       Extrem.SetTangent(previousP.TangentOnC1());
+     Iter = domain1;
+@@ -1386,7 +1386,7 @@ void BRepBlend_RstRstLineBuilder::MakeExtremity(BRepBlend_Extremity&
+   else {
+     Extrem.SetValue(previousP.PointOnC2(),
+ 		    sol(2),
+-		    previousP.Parameter(), tolesp);
++		    previousP.Parameter(), tolpoint3d);
+     if (!previousP.IsTangencyPoint()) 
+       Extrem.SetTangent(previousP.TangentOnC1());
+     Iter = domain2;
+@@ -1453,12 +1453,13 @@ Blend_Status BRepBlend_RstRstLineBuilder::CheckDeflectionOnRst1(const Blend_Poin
+   Norme = Corde.SquareMagnitude();
+   if (!prevpointistangent) prevNorme = prevTg.SquareMagnitude();
+ 
+-  if (Norme <= tolesp * tolesp) {
++  const Standard_Real toler3d = 0.01 * tolpoint3d;
++  if (Norme <= toler3d * toler3d) {
+     // it can be necessary to force the same point
+     return Blend_SamePoints;
+   }
+   if(!prevpointistangent){
+-    if (prevNorme <= tolesp * tolesp) {
++    if (prevNorme <= toler3d * toler3d) {
+       return Blend_SamePoints;
+     }
+     Cosi = sens * Corde * prevTg;
+@@ -1530,12 +1531,13 @@ Blend_Status BRepBlend_RstRstLineBuilder::CheckDeflectionOnRst2(const Blend_Poin
+   Norme = Corde.SquareMagnitude();
+   if (!prevpointistangent) prevNorme = prevTg.SquareMagnitude();
+ 
+-  if (Norme <= tolesp * tolesp){
++  const Standard_Real toler3d = 0.01 * tolpoint3d;
++  if (Norme <= toler3d * toler3d){
+     // it can be necessary to force the same point
+     return Blend_SamePoints;
+   }
+   if (!prevpointistangent) {
+-    if (prevNorme <= tolesp * tolesp) {
++    if (prevNorme <= toler3d * toler3d) {
+       return Blend_SamePoints;
+     }
+     Cosi = sens * Corde * prevTg;
+@@ -1597,7 +1599,7 @@ Blend_Status BRepBlend_RstRstLineBuilder::TestArret(Blend_RstRstFunction& Func,
+   IntSurf_TypeTrans trarst1 = IntSurf_Undecided, trarst2 = IntSurf_Undecided;
+   Blend_Point curpoint;
+ 
+-  if (Func.IsSolution(sol, tolesp)) {
++  if (Func.IsSolution(sol, tolpoint3d)) {
+     Standard_Boolean curpointistangent = Func.IsTangencyPoint();
+     ptrst1   = Func.PointOnRst1();
+     ptrst2   = Func.PointOnRst2();
+@@ -1644,7 +1646,7 @@ Blend_Status BRepBlend_RstRstLineBuilder::TestArret(Blend_RstRstFunction& Func,
+       Standard_Real testra = tg2drst1.Dot(tg2drstref);
+       TopAbs_Orientation Or = domain1->Orientation(rst1);
+ 
+-      if (Abs(testra) > tolesp) {
++      if (Abs(testra) > tolpoint3d) {
+ 	if (testra < 0.) {
+           trarst1 = ConvOrToTra(TopAbs::Reverse(Or));
+ 	}
+@@ -1656,7 +1658,7 @@ Blend_Status BRepBlend_RstRstLineBuilder::TestArret(Blend_RstRstFunction& Func,
+ 	testra = tg2drst2.Dot(tg2drstref);
+ 
+ 	Or = domain2->Orientation(rst2);
+-	if (Abs(testra) > tolesp) {
++	if (Abs(testra) > tolpoint3d) {
+ 	  if (testra < 0.) {
+ 	    trarst2 = ConvOrToTra(TopAbs::Reverse(Or));
+ 	  }
+@@ -1705,7 +1707,7 @@ Standard_Boolean BRepBlend_RstRstLineBuilder::CheckInside(Blend_RstRstFunction&
+ {
+ //  Standard_Boolean inside = Standard_True;
+   math_Vector tolerance(1, 2);
+-  Func.GetTolerance(tolerance, tolesp);
++  Func.GetTolerance(tolerance, tolpoint3d);
+ 
+   //face pcurve 1.
+   Standard_Real v = sol(1);
+diff --git a/src/BRepBlend/BRepBlend_RstRstLineBuilder.hxx b/src/BRepBlend/BRepBlend_RstRstLineBuilder.hxx
+index e5be492fc..10b1a0702 100644
+--- a/src/BRepBlend/BRepBlend_RstRstLineBuilder.hxx
++++ b/src/BRepBlend/BRepBlend_RstRstLineBuilder.hxx
+@@ -72,9 +72,9 @@ public:
+   
+   Standard_EXPORT BRepBlend_RstRstLineBuilder(const Handle(Adaptor3d_Surface)& Surf1, const Handle(Adaptor2d_Curve2d)& Rst1, const Handle(Adaptor3d_TopolTool)& Domain1, const Handle(Adaptor3d_Surface)& Surf2, const Handle(Adaptor2d_Curve2d)& Rst2, const Handle(Adaptor3d_TopolTool)& Domain2);
+   
+-  Standard_EXPORT void Perform (Blend_RstRstFunction& Func, Blend_SurfCurvFuncInv& Finv1, Blend_CurvPointFuncInv& FinvP1, Blend_SurfCurvFuncInv& Finv2, Blend_CurvPointFuncInv& FinvP2, const Standard_Real Pdep, const Standard_Real Pmax, const Standard_Real MaxStep, const Standard_Real TolGuide, const math_Vector& Soldep, const Standard_Real Tolesp, const Standard_Real Fleche, const Standard_Boolean Appro = Standard_False);
++  Standard_EXPORT void Perform (Blend_RstRstFunction& Func, Blend_SurfCurvFuncInv& Finv1, Blend_CurvPointFuncInv& FinvP1, Blend_SurfCurvFuncInv& Finv2, Blend_CurvPointFuncInv& FinvP2, const Standard_Real Pdep, const Standard_Real Pmax, const Standard_Real MaxStep, const Standard_Real Tol3d, const Standard_Real TolGuide, const math_Vector& Soldep, const Standard_Real Fleche, const Standard_Boolean Appro = Standard_False);
+   
+-  Standard_EXPORT Standard_Boolean PerformFirstSection (Blend_RstRstFunction& Func, Blend_SurfCurvFuncInv& Finv1, Blend_CurvPointFuncInv& FinvP1, Blend_SurfCurvFuncInv& Finv2, Blend_CurvPointFuncInv& FinvP2, const Standard_Real Pdep, const Standard_Real Pmax, const math_Vector& Soldep, const Standard_Real Tolesp, const Standard_Real TolGuide, const Standard_Boolean RecRst1, const Standard_Boolean RecP1, const Standard_Boolean RecRst2, const Standard_Boolean RecP2, Standard_Real& Psol, math_Vector& ParSol);
++  Standard_EXPORT Standard_Boolean PerformFirstSection (Blend_RstRstFunction& Func, Blend_SurfCurvFuncInv& Finv1, Blend_CurvPointFuncInv& FinvP1, Blend_SurfCurvFuncInv& Finv2, Blend_CurvPointFuncInv& FinvP2, const Standard_Real Pdep, const Standard_Real Pmax, const math_Vector& Soldep, const Standard_Real Tol3d, const Standard_Real TolGuide, const Standard_Boolean RecRst1, const Standard_Boolean RecP1, const Standard_Boolean RecRst2, const Standard_Boolean RecP2, Standard_Real& Psol, math_Vector& ParSol);
+   
+   Standard_EXPORT Standard_Boolean Complete (Blend_RstRstFunction& Func, Blend_SurfCurvFuncInv& Finv1, Blend_CurvPointFuncInv& FinvP1, Blend_SurfCurvFuncInv& Finv2, Blend_CurvPointFuncInv& FinvP2, const Standard_Real Pmin);
+   
+@@ -134,7 +134,7 @@ private:
+   Handle(Adaptor3d_TopolTool) domain2;
+   Handle(Adaptor2d_Curve2d) rst1;
+   Handle(Adaptor2d_Curve2d) rst2;
+-  Standard_Real tolesp;
++  Standard_Real tolpoint3d;
+   Standard_Real tolgui;
+   Standard_Real pasmax;
+   Standard_Real fleche;
+diff --git a/src/BRepBlend/BRepBlend_SurfRstLineBuilder.cxx b/src/BRepBlend/BRepBlend_SurfRstLineBuilder.cxx
+index 02d657bd3..8bba3178f 100644
+--- a/src/BRepBlend/BRepBlend_SurfRstLineBuilder.cxx
++++ b/src/BRepBlend/BRepBlend_SurfRstLineBuilder.cxx
+@@ -210,7 +210,7 @@ BRepBlend_SurfRstLineBuilder::BRepBlend_SurfRstLineBuilder
+  const Handle(Adaptor3d_TopolTool)& Domain2):
+  done(Standard_False), sol(1, 3), surf1(Surf1),
+  domain1(Domain1), surf2(Surf2), rst(Rst),
+- domain2(Domain2), tolesp(0.0), tolgui(0.0),
++ domain2(Domain2), tolpoint3d(0.0), tolpoint2d(0.0), tolgui(0.0),
+  pasmax(0.0), fleche(0.0), param(0.0),
+  rebrou(Standard_False), iscomplete(Standard_False),
+  comptra(Standard_False), sens(0.0),
+@@ -230,9 +230,10 @@ void BRepBlend_SurfRstLineBuilder::Perform(Blend_SurfRstFunction&  Func,
+ 					   const Standard_Real     Pdep,
+ 					   const Standard_Real     Pmax,
+ 					   const Standard_Real     MaxStep,
++             const Standard_Real     Tol3d,
++             const Standard_Real     Tol2d,
+ 					   const Standard_Real     TolGuide,
+ 					   const math_Vector&      ParDep,
+-					   const Standard_Real     Tolesp,
+ 					   const Standard_Real     Fleche,
+ 					   const Standard_Boolean  Appro) 
+ {
+@@ -240,7 +241,8 @@ void BRepBlend_SurfRstLineBuilder::Perform(Blend_SurfRstFunction&  Func,
+   iscomplete = Standard_False;
+   comptra = Standard_False;
+   line = new BRepBlend_Line();
+-  tolesp = Abs(Tolesp);
++  tolpoint3d = Tol3d;
++  tolpoint2d = Tol2d;
+   tolgui = Abs(TolGuide);
+   fleche = Abs(Fleche);
+   rebrou = Standard_False;
+@@ -262,7 +264,7 @@ void BRepBlend_SurfRstLineBuilder::Perform(Blend_SurfRstFunction&  Func,
+     TopAbs_State siturst,situs;
+     Standard_Boolean decroch;
+     math_Vector tolerance(1,3),infbound(1,3),supbound(1,3);
+-    Func.GetTolerance(tolerance,tolesp);
++    Func.GetTolerance(tolerance,tolpoint3d);
+     Func.GetBounds(infbound,supbound);
+     math_FunctionSetRoot rsnld(Func,tolerance,30);
+     
+@@ -296,9 +298,9 @@ void BRepBlend_SurfRstLineBuilder::Perform(Blend_SurfRstFunction&  Func,
+ //  W = previousP.ParameterOnC();
+   
+   BRepBlend_Extremity ptf1(previousP.PointOnS(),
+-			   U,V,previousP.Parameter(),tolesp);
++			   U,V,previousP.Parameter(),tolpoint3d);
+   BRepBlend_Extremity ptf2(previousP.PointOnC(),
+-			   U,V,previousP.Parameter(),tolesp);
++			   U,V,previousP.Parameter(),tolpoint3d);
+   if (!previousP.IsTangencyPoint()) {
+     ptf1.SetTangent(previousP.TangentOnS());
+     ptf2.SetTangent(previousP.TangentOnC());
+@@ -327,7 +329,8 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::PerformFirstSection
+  const Standard_Real     Pdep,
+  const Standard_Real     Pmax,
+  const math_Vector&      ParDep,
+- const Standard_Real     Tolesp,
++ const Standard_Real     Tol3d,
++ const Standard_Real     Tol2d,
+  const Standard_Real     TolGuide,
+  const Standard_Boolean  RecRst,
+  const Standard_Boolean  RecP,
+@@ -339,7 +342,8 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::PerformFirstSection
+   iscomplete = Standard_False;
+   comptra = Standard_False;
+   line = new BRepBlend_Line();
+-  tolesp = Abs(Tolesp);
++  tolpoint3d = Tol3d;
++  tolpoint2d = Tol2d;
+   tolgui = Abs(TolGuide);
+   rebrou = Standard_False;
+   
+@@ -362,7 +366,7 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::PerformFirstSection
+   wp = wrst = ws = Pmax;
+   param = Pdep;
+   Func.Set(param);
+-  Func.GetTolerance(tolerance,tolesp);
++  Func.GetTolerance(tolerance,tolpoint3d);
+   Func.GetBounds(infbound,supbound);
+ 
+   math_FunctionSetRoot rsnld(Func,tolerance,30);
+@@ -536,7 +540,7 @@ void BRepBlend_SurfRstLineBuilder::InternalPerform(Blend_SurfRstFunction&  Func,
+ 
+   //IntSurf_Transition Tline,Tarc;
+ 
+-  Func.GetTolerance(tolerance,tolesp);
++  Func.GetTolerance(tolerance,tolpoint3d);
+   Func.GetBounds(infbound,supbound);
+ 
+   math_FunctionSetRoot rsnld(Func,tolerance,30);
+@@ -558,14 +562,14 @@ void BRepBlend_SurfRstLineBuilder::InternalPerform(Blend_SurfRstFunction&  Func,
+     if (rsnld.IsDone()) {
+       rsnld.Root(sol);
+       Blend_Point bp1;
+-      if(BBPP(param,Func,sol,tolesp,bp1)){
++      if(BBPP(param,Func,sol,tolpoint3d,bp1)){
+ 	Standard_Real dw = 1.e-10;
+ 	Func.Set(param+dw);
+ 	rsnld.Perform(Func,parinit,infbound,supbound);
+ 	if (rsnld.IsDone()) {
+ 	  rsnld.Root(sol);
+ 	  Blend_Point bp2;
+-	  if(BBPP(param+dw,Func,sol,tolesp,bp2)){
++	  if(BBPP(param+dw,Func,sol,tolpoint3d,bp2)){
+ 	    tracederiv(Func,bp1,bp2);
+ 	  }
+ 	}
+@@ -746,7 +750,7 @@ void BRepBlend_SurfRstLineBuilder::InternalPerform(Blend_SurfRstFunction&  Func,
+ 	  Arrive = Standard_True;
+ 	  Exts.SetValue(previousP.PointOnS(),
+ 			sol(1),sol(2),
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  MakeExtremity(Extrst,Standard_False,rst,sol(3),IsVtxrst,Vtxrst);
+ 	  // Indicate end on Bound.
+ 	}
+@@ -765,10 +769,10 @@ void BRepBlend_SurfRstLineBuilder::InternalPerform(Blend_SurfRstFunction&  Func,
+ 	if (Abs(stepw) < tolgui) {
+ 	  previousP.ParametersOnS(U,V);
+ 	  Exts.SetValue(previousP.PointOnS(),U,V,
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  Extrst.SetValue(previousP.PointOnC(),
+ 			  previousP.ParameterOnC(),
+-			  previousP.Parameter(),tolesp);
++			  previousP.Parameter(),tolpoint3d);
+ 	  Arrive = Standard_True;
+ 	  if (line->NbPoints()>=2) {
+ 	    // Indicate that one stops during the processing
+@@ -804,7 +808,7 @@ void BRepBlend_SurfRstLineBuilder::InternalPerform(Blend_SurfRstFunction&  Func,
+ 	if (param == Bound) {
+ 	  Arrive = Standard_True;
+ 	  Exts.SetValue(previousP.PointOnS(),sol(1),sol(2),
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  MakeExtremity(Extrst,Standard_False,rst,sol(3),IsVtxrst,Vtxrst);
+ 	  // Indicate end on Bound.
+ 	}
+@@ -850,7 +854,7 @@ void BRepBlend_SurfRstLineBuilder::InternalPerform(Blend_SurfRstFunction&  Func,
+ 	  line->Prepend(previousP);
+ 	}
+ 	Exts.SetValue(previousP.PointOnS(),sol(1),sol(2),
+-		      previousP.Parameter(),tolesp);
++		      previousP.Parameter(),tolpoint3d);
+ 	MakeExtremity(Extrst,Standard_False,rst,sol(3),IsVtxrst,Vtxrst);
+ 	Arrive = Standard_True;
+       }
+@@ -883,10 +887,10 @@ void BRepBlend_SurfRstLineBuilder::InternalPerform(Blend_SurfRstFunction&  Func,
+ #endif
+ 	previousP.ParametersOnS(U,V);
+ 	Exts.SetValue(previousP.PointOnS(),U,V,
+-		      previousP.Parameter(),tolesp);
++		      previousP.Parameter(),tolpoint3d);
+ 	Extrst.SetValue(previousP.PointOnC(),
+ 			previousP.ParameterOnC(),
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	Arrive = Standard_True;
+       }
+       break;
+@@ -941,7 +945,10 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::Recadre(Blend_SurfCurvFuncInv&
+   FinvC.Set(Arc);
+   
+   math_Vector toler(1,3),infb(1,3),supb(1,3);
+-  FinvC.GetTolerance(toler,tolesp);
++  // use reduced Tol argument value to pass testcase
++  // blend complex A6 with scale factor of model 0.1 (base scale = 1000)
++  // So, here we using 1.0e-5 rather than 1.0e-4 of tolerance of point in 3d
++  FinvC.GetTolerance(toler,0.1 * tolpoint3d);
+   FinvC.GetBounds(infb,supb);
+   Solinv(1) = param;
+   Solinv(2) = sol(3);
+@@ -958,7 +965,7 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::Recadre(Blend_SurfCurvFuncInv&
+   else {
+       // It is necessary to check the value of the function
+     rsnld.Root(Solinv);
+-    recadre = FinvC.IsSolution(Solinv,tolesp);
++    recadre = FinvC.IsSolution(Solinv,tolpoint3d);
+   }
+ 
+   // In case of fail, it is checked if another arc 
+@@ -981,7 +988,7 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::Recadre(Blend_SurfCurvFuncInv&
+     Arc = domain1->Value();
+     FinvC.Set(Arc);
+   
+-    FinvC.GetTolerance(toler,tolesp);
++    FinvC.GetTolerance(toler,tolpoint3d);
+     FinvC.GetBounds(infb,supb);
+ 
+     Solinv(3) = pmin;
+@@ -997,7 +1004,7 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::Recadre(Blend_SurfCurvFuncInv&
+     else {
+       // It is necessary to check the value of the function
+       aRsnld.Root(Solinv);
+-      recadre = FinvC.IsSolution(Solinv,tolesp);
++      recadre = FinvC.IsSolution(Solinv,tolpoint3d);
+     }
+   }  
+ 
+@@ -1041,7 +1048,7 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::Recadre(Blend_SurfRstFunction&
+ 						       Handle(Adaptor3d_HVertex)& Vtx) 
+ {
+   math_Vector toler(1,4),infb(1,4),supb(1,4);
+-  Finv.GetTolerance(toler,tolesp);
++  Finv.GetTolerance(toler,tolpoint3d);
+   Finv.GetBounds(infb,supb);
+   Solinv(1) = sol(3);
+   Solinv(2) = param;
+@@ -1058,9 +1065,9 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::Recadre(Blend_SurfRstFunction&
+   }
+   rsnld.Root(Solinv);
+   
+-  if(Finv.IsSolution(Solinv,tolesp)){
++  if(Finv.IsSolution(Solinv,tolpoint3d)){
+     gp_Pnt2d p2d(Solinv(3),Solinv(4));
+-    TopAbs_State situ = domain1->Classify(p2d,Min(toler(3),toler(4)),0);
++    TopAbs_State situ = domain1->Classify(p2d,tolpoint2d,0);
+     if ((situ != TopAbs_IN) && (situ != TopAbs_ON)) {
+       return Standard_False;
+     }
+@@ -1086,7 +1093,7 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::Recadre(Blend_SurfRstFunction&
+ 
+     math_Vector infbound(1,3),supbound(1,3);
+     math_Vector parinit(1,3),tolerance(1,3);
+-    Func.GetTolerance(tolerance,tolesp);
++    Func.GetTolerance(tolerance,tolpoint3d);
+     Func.GetBounds(infbound,supbound);
+ 
+     math_FunctionSetRoot rsnld2(Func,tolerance,30);
+@@ -1126,7 +1133,7 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::Recadre(Blend_SurfPointFuncInv&
+ 
+   FinvP.Set(thepoint);
+   math_Vector toler(1,3),infb(1,3),supb(1,3);
+-  FinvP.GetTolerance(toler,tolesp);
++  FinvP.GetTolerance(toler,tolpoint3d);
+   FinvP.GetBounds(infb,supb);
+   Solinv(1) = param;
+   Solinv(2) = sol(1);
+@@ -1142,9 +1149,9 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::Recadre(Blend_SurfPointFuncInv&
+   }
+   rsnld.Root(Solinv);
+   
+-  if(FinvP.IsSolution(Solinv,tolesp)){
++  if(FinvP.IsSolution(Solinv,tolpoint3d)){
+     gp_Pnt2d p2d(Solinv(2),Solinv(3));
+-    TopAbs_State situ = domain1->Classify(p2d,Min(toler(2),toler(3)),0);
++    TopAbs_State situ = domain1->Classify(p2d,tolpoint2d,0);
+     if ((situ != TopAbs_IN) && (situ != TopAbs_ON)) {
+       return Standard_False;
+     }
+@@ -1237,7 +1244,7 @@ void BRepBlend_SurfRstLineBuilder::MakeExtremity(BRepBlend_Extremity&
+   if (OnFirst) {
+     Extrem.SetValue(previousP.PointOnS(),
+ 		    sol(1),sol(2),
+-		    previousP.Parameter(),tolesp);
++		    previousP.Parameter(),tolpoint3d);
+     if (!previousP.IsTangencyPoint()) 
+       Extrem.SetTangent(previousP.TangentOnS());
+     Iter = domain1;
+@@ -1245,7 +1252,7 @@ void BRepBlend_SurfRstLineBuilder::MakeExtremity(BRepBlend_Extremity&
+   else {
+     Extrem.SetValue(previousP.PointOnC(),
+ 		    sol(3),
+-		    previousP.Parameter(),tolesp);
++		    previousP.Parameter(),tolpoint3d);
+     if (!previousP.IsTangencyPoint()) 
+       Extrem.SetTangent(previousP.TangentOnC());    
+     Iter = domain2;
+@@ -1312,12 +1319,13 @@ Blend_Status BRepBlend_SurfRstLineBuilder::CheckDeflectionOnSurf(const Blend_Poi
+ //  if(!curpointistangent) curNorme = Tgsurf.SquareMagnitude();
+   if(!prevpointistangent) prevNorme = prevTg.SquareMagnitude();
+ 
+-  if (Norme <= tolesp*tolesp){
++  const Standard_Real toler3d = 0.01 * tolpoint3d;
++  if (Norme <= toler3d * toler3d){
+     // it can be necessary to force same point
+     return Blend_SamePoints;
+   }
+   if(!prevpointistangent){
+-    if(prevNorme <= tolesp*tolesp) {
++    if(prevNorme <= toler3d * toler3d) {
+       return Blend_SamePoints;
+     }
+     Cosi = sens*Corde*prevTg;
+@@ -1388,12 +1396,13 @@ Blend_Status BRepBlend_SurfRstLineBuilder::CheckDeflectionOnRst(const Blend_Poin
+ //  if(!curpointistangent) curNorme = Tgsurf.SquareMagnitude();
+   if(!prevpointistangent) prevNorme = prevTg.SquareMagnitude();
+ 
+-  if (Norme <= tolesp*tolesp){
++  const Standard_Real toler3d = 0.01 * tolpoint3d;
++  if (Norme <= toler3d * toler3d){
+     // it can be necessary to force same point
+     return Blend_SamePoints;
+   }
+   if(!prevpointistangent){
+-    if(prevNorme <= tolesp*tolesp) {
++    if(prevNorme <= toler3d * toler3d) {
+       return Blend_SamePoints;
+     }
+     Cosi = sens*Corde*prevTg;
+@@ -1455,7 +1464,7 @@ Blend_Status BRepBlend_SurfRstLineBuilder::TestArret(Blend_SurfRstFunction& Func
+   IntSurf_TypeTrans tras = IntSurf_Undecided, trarst = IntSurf_Undecided;
+   Blend_Point curpoint;
+ 
+-  if (Func.IsSolution(sol,tolesp)) {
++  if (Func.IsSolution(sol,tolpoint3d)) {
+     Standard_Boolean curpointistangent = Func.IsTangencyPoint();
+     pts = Func.PointOnS();
+     ptrst = Func.PointOnRst();
+@@ -1499,7 +1508,7 @@ Blend_Status BRepBlend_SurfRstLineBuilder::TestArret(Blend_SurfRstFunction& Func
+       Func.Decroch(sol,nors,tgsecs);
+       nors.Normalize();
+       Standard_Real testra = tgsecs.Dot(nors.Crossed(tgs));
+-      if (Abs(testra) > tolesp) {
++      if (Abs(testra) > tolpoint3d) {
+ 	if (testra < 0.) {
+ 	  tras = IntSurf_In;
+ 	}
+@@ -1558,7 +1567,7 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::CheckInside(Blend_SurfRstFunction
+ 							   Standard_Boolean&      Decroch)
+ {
+   math_Vector tolerance(1,3);
+-  Func.GetTolerance(tolerance,tolesp);
++  Func.GetTolerance(tolerance,tolpoint3d);
+   //face pcurve.
+   Standard_Real w = sol(3);
+   if(w < rst->FirstParameter() - tolerance(3)||
+@@ -1573,7 +1582,7 @@ Standard_Boolean BRepBlend_SurfRstLineBuilder::CheckInside(Blend_SurfRstFunction
+ 
+   //face surface
+   gp_Pnt2d p2d(sol(1),sol(2));
+-  SituOnS = domain1->Classify(p2d,Min(tolerance(1),tolerance(2)),0);
++  SituOnS = domain1->Classify(p2d,tolpoint2d,0);
+ 
+   //lost contact
+   gp_Vec tgs,nors;
+diff --git a/src/BRepBlend/BRepBlend_SurfRstLineBuilder.hxx b/src/BRepBlend/BRepBlend_SurfRstLineBuilder.hxx
+index a5834f1c6..3bf200950 100644
+--- a/src/BRepBlend/BRepBlend_SurfRstLineBuilder.hxx
++++ b/src/BRepBlend/BRepBlend_SurfRstLineBuilder.hxx
+@@ -71,9 +71,9 @@ public:
+   
+   Standard_EXPORT BRepBlend_SurfRstLineBuilder(const Handle(Adaptor3d_Surface)& Surf1, const Handle(Adaptor3d_TopolTool)& Domain1, const Handle(Adaptor3d_Surface)& Surf2, const Handle(Adaptor2d_Curve2d)& Rst, const Handle(Adaptor3d_TopolTool)& Domain2);
+   
+-  Standard_EXPORT void Perform (Blend_SurfRstFunction& Func, Blend_FuncInv& Finv, Blend_SurfPointFuncInv& FinvP, Blend_SurfCurvFuncInv& FinvC, const Standard_Real Pdep, const Standard_Real Pmax, const Standard_Real MaxStep, const Standard_Real TolGuide, const math_Vector& Soldep, const Standard_Real Tolesp, const Standard_Real Fleche, const Standard_Boolean Appro = Standard_False);
++  Standard_EXPORT void Perform (Blend_SurfRstFunction& Func, Blend_FuncInv& Finv, Blend_SurfPointFuncInv& FinvP, Blend_SurfCurvFuncInv& FinvC, const Standard_Real Pdep, const Standard_Real Pmax, const Standard_Real MaxStep, const Standard_Real Tol3d, const Standard_Real Tol2d, const Standard_Real TolGuide, const math_Vector& Soldep, const Standard_Real Fleche, const Standard_Boolean Appro = Standard_False);
+   
+-  Standard_EXPORT Standard_Boolean PerformFirstSection (Blend_SurfRstFunction& Func, Blend_FuncInv& Finv, Blend_SurfPointFuncInv& FinvP, Blend_SurfCurvFuncInv& FinvC, const Standard_Real Pdep, const Standard_Real Pmax, const math_Vector& Soldep, const Standard_Real Tolesp, const Standard_Real TolGuide, const Standard_Boolean RecRst, const Standard_Boolean RecP, const Standard_Boolean RecS, Standard_Real& Psol, math_Vector& ParSol);
++  Standard_EXPORT Standard_Boolean PerformFirstSection (Blend_SurfRstFunction& Func, Blend_FuncInv& Finv, Blend_SurfPointFuncInv& FinvP, Blend_SurfCurvFuncInv& FinvC, const Standard_Real Pdep, const Standard_Real Pmax, const math_Vector& Soldep, const Standard_Real Tol3d, const Standard_Real Tol2d, const Standard_Real TolGuide, const Standard_Boolean RecRst, const Standard_Boolean RecP, const Standard_Boolean RecS, Standard_Real& Psol, math_Vector& ParSol);
+   
+   Standard_EXPORT Standard_Boolean Complete (Blend_SurfRstFunction& Func, Blend_FuncInv& Finv, Blend_SurfPointFuncInv& FinvP, Blend_SurfCurvFuncInv& FinvC, const Standard_Real Pmin);
+   
+@@ -128,7 +128,8 @@ private:
+   Handle(Adaptor3d_Surface) surf2;
+   Handle(Adaptor2d_Curve2d) rst;
+   Handle(Adaptor3d_TopolTool) domain2;
+-  Standard_Real tolesp;
++  Standard_Real tolpoint3d;
++  Standard_Real tolpoint2d;
+   Standard_Real tolgui;
+   Standard_Real pasmax;
+   Standard_Real fleche;
+diff --git a/src/BRepBlend/BRepBlend_Walking.hxx b/src/BRepBlend/BRepBlend_Walking.hxx
+index 0f08fc6fe..23d718ec9 100644
+--- a/src/BRepBlend/BRepBlend_Walking.hxx
++++ b/src/BRepBlend/BRepBlend_Walking.hxx
+@@ -58,11 +58,11 @@ public:
+   //! To define singular points computed before walking.
+   Standard_EXPORT void AddSingularPoint (const Blend_Point& P);
+   
+-  Standard_EXPORT void Perform (Blend_Function& F, Blend_FuncInv& FInv, const Standard_Real Pdep, const Standard_Real Pmax, const Standard_Real MaxStep, const Standard_Real TolGuide, const math_Vector& Soldep, const Standard_Real Tolesp, const Standard_Real Fleche, const Standard_Boolean Appro = Standard_False);
++  Standard_EXPORT void Perform (Blend_Function& F, Blend_FuncInv& FInv, const Standard_Real Pdep, const Standard_Real Pmax, const Standard_Real MaxStep, const Standard_Real Tol3d, const Standard_Real TolGuide, const math_Vector& Soldep, const Standard_Real Fleche, const Standard_Boolean Appro = Standard_False);
+   
+-  Standard_EXPORT Standard_Boolean PerformFirstSection (Blend_Function& F, const Standard_Real Pdep, math_Vector& ParDep, const Standard_Real Tolesp, const Standard_Real TolGuide, TopAbs_State& Pos1, TopAbs_State& Pos2);
++  Standard_EXPORT Standard_Boolean PerformFirstSection (Blend_Function& F, const Standard_Real Pdep, math_Vector& ParDep, const Standard_Real Tol3d, const Standard_Real TolGuide, TopAbs_State& Pos1, TopAbs_State& Pos2);
+   
+-  Standard_EXPORT Standard_Boolean PerformFirstSection (Blend_Function& F, Blend_FuncInv& FInv, const Standard_Real Pdep, const Standard_Real Pmax, const math_Vector& ParDep, const Standard_Real Tolesp, const Standard_Real TolGuide, const Standard_Boolean RecOnS1, const Standard_Boolean RecOnS2, Standard_Real& Psol, math_Vector& ParSol);
++  Standard_EXPORT Standard_Boolean PerformFirstSection (Blend_Function& F, Blend_FuncInv& FInv, const Standard_Real Pdep, const Standard_Real Pmax, const math_Vector& ParDep, const Standard_Real Tol3d, const Standard_Real TolGuide, const Standard_Boolean RecOnS1, const Standard_Boolean RecOnS2, Standard_Real& Psol, math_Vector& ParSol);
+   
+   Standard_EXPORT Standard_Boolean Continu (Blend_Function& F, Blend_FuncInv& FInv, const Standard_Real P);
+   
+@@ -131,7 +131,7 @@ private:
+   Standard_Boolean ToCorrectOnRst1;
+   Standard_Boolean ToCorrectOnRst2;
+   Standard_Real CorrectedParam;
+-  Standard_Real tolesp;
++  Standard_Real tolpoint3d;
+   Standard_Real tolgui;
+   Standard_Real pasmax;
+   Standard_Real fleche;
+diff --git a/src/BRepFilletAPI/BRepFilletAPI_MakeFillet.cxx b/src/BRepFilletAPI/BRepFilletAPI_MakeFillet.cxx
+index f1b3287e3..2d9127ebb 100644
+--- a/src/BRepFilletAPI/BRepFilletAPI_MakeFillet.cxx
++++ b/src/BRepFilletAPI/BRepFilletAPI_MakeFillet.cxx
+@@ -44,13 +44,13 @@ BRepFilletAPI_MakeFillet::BRepFilletAPI_MakeFillet(const TopoDS_Shape& S,
+ //=======================================================================
+ 
+ void BRepFilletAPI_MakeFillet::SetParams(const Standard_Real Tang, 
+-					 const Standard_Real Tesp, 
+-					 const Standard_Real T2d, 
+-					 const Standard_Real TApp3d, 
+-					 const Standard_Real TolApp2d, 
+-					 const Standard_Real Fleche)
++                                         const Standard_Real Tesp, 
++                                         const Standard_Real T2d, 
++                                         const Standard_Real TApp3d,
++                                         const Standard_Real TolApp2d, 
++                                         const Standard_Real Fleche)
+ {
+-  myBuilder.SetParams(Tang,Tesp, T2d, TApp3d, TolApp2d, Fleche);
++  myBuilder.SetParams(Tang, Tesp, T2d, TApp3d, TolApp2d, Fleche);
+ }
+ 
+ //=======================================================================
+diff --git a/src/BRepTest/BRepTest_FeatureCommands.cxx b/src/BRepTest/BRepTest_FeatureCommands.cxx
+index 7b6a829db..07eab33da 100644
+--- a/src/BRepTest/BRepTest_FeatureCommands.cxx
++++ b/src/BRepTest/BRepTest_FeatureCommands.cxx
+@@ -112,6 +112,7 @@ static Standard_Boolean pidef = Standard_False;
+ static Standard_Boolean lfdef = Standard_False;
+ static Standard_Boolean rfdef = Standard_False;
+ 
++static Standard_Real tesp = 1.0e-4;
+ static Standard_Real t3d = 1.e-4;
+ static Standard_Real t2d = 1.e-5;
+ static Standard_Real ta = 1.e-2;
+@@ -2361,7 +2362,7 @@ static Standard_Integer BOSS(Draw_Interpretor& theCommands,
+     if (Rakk)
+       delete Rakk;
+     Rakk = new BRepFilletAPI_MakeFillet(V, FSh);
+-    Rakk->SetParams(ta, t3d, t2d, t3d, t2d, fl);
++    Rakk->SetParams(ta, tesp, t2d, t3d, t2d, fl);
+     Rakk->SetContinuity(blend_cont, tapp_angle);
+     Standard_Real Rad;
+     TopoDS_Shape S;
+diff --git a/src/BRepTest/BRepTest_FilletCommands.cxx b/src/BRepTest/BRepTest_FilletCommands.cxx
+index b4ef1ea15..08eae0641 100644
+--- a/src/BRepTest/BRepTest_FilletCommands.cxx
++++ b/src/BRepTest/BRepTest_FilletCommands.cxx
+@@ -47,7 +47,7 @@
+ 
+ #include <stdio.h>
+ 
+-
++static Standard_Real tesp = 1.0e-4;
+ static Standard_Real t3d = 1.e-4;
+ static Standard_Real t2d = 1.e-5;
+ static Standard_Real ta  = 1.e-2;
+@@ -152,7 +152,7 @@ static Standard_Integer BLEND(Draw_Interpretor& di, Standard_Integer narg, const
+     }
+   }
+   Rakk = new BRepFilletAPI_MakeFillet(V,FSh);
+-  Rakk->SetParams(ta,t3d,t2d,t3d,t2d,fl);
++  Rakk->SetParams(ta, tesp, t2d, t3d, t2d, fl);
+   Rakk->SetContinuity(blend_cont, tapp_angle);
+   Standard_Real Rad;
+   TopoDS_Edge E;
+@@ -254,7 +254,7 @@ static Standard_Integer MKEVOL(Draw_Interpretor& di,
+   if (narg < 3) return 1;
+   TopoDS_Shape V = DBRep::Get(a[2]);
+   Rake = new BRepFilletAPI_MakeFillet(V);
+-  Rake->SetParams(ta,t3d,t2d,t3d,t2d,fl);
++  Rake->SetParams(ta, tesp, t2d, t3d, t2d, fl);
+   Rake->SetContinuity(blend_cont, tapp_angle);
+   if (narg == 4) {
+     ChFi3d_FilletShape FSh = ChFi3d_Rational;
+@@ -410,7 +410,7 @@ Standard_Integer boptopoblend(Draw_Interpretor& di, Standard_Integer narg, const
+     const TopoDS_Shape& aSolid = Explo.Current();
+ 
+     BRepFilletAPI_MakeFillet Blender(aSolid);
+-    Blender.SetParams(ta,t3d,t2d,t3d,t2d,fl);
++    Blender.SetParams(ta, tesp, t2d, t3d, t2d, fl);
+     Blender.SetContinuity( blend_cont, tapp_angle );
+ 
+     TopExp_Explorer expsec( theSection, TopAbs_EDGE );
+diff --git a/src/Blend/Blend_CSWalking_1.gxx b/src/Blend/Blend_CSWalking_1.gxx
+index e86ee57c0..7f3a4557a 100644
+--- a/src/Blend/Blend_CSWalking_1.gxx
++++ b/src/Blend/Blend_CSWalking_1.gxx
+@@ -28,9 +28,9 @@ void Blend_CSWalking::Perform(Blend_CSFunction& Func,
+ 			      const Standard_Real Pdep,   
+ 			      const Standard_Real Pmax,
+ 			      const Standard_Real MaxStep,
++            const Standard_Real Tol3d,
+ 			      const Standard_Real TolGuide,
+ 			      const math_Vector& ParDep,
+-			      const Standard_Real Tolesp,
+ 			      const Standard_Real Fleche,
+ 			      const Standard_Boolean Appro)
+ {
+@@ -40,7 +40,7 @@ void Blend_CSWalking::Perform(Blend_CSFunction& Func,
+   comptra = Standard_False;
+   line = new TheLine ();
+   Standard_Integer Nbvar = Func.NbVariables();
+-  tolesp = Abs(Tolesp);
++  tolpoint3d = Tol3d;
+   tolgui = Abs(TolGuide);
+   fleche = Abs(Fleche);
+   rebrou = Standard_False;
+@@ -68,7 +68,7 @@ void Blend_CSWalking::Perform(Blend_CSFunction& Func,
+     TopAbs_State situ;
+ //    math_Vector tolerance(1,3),infbound(1,3),supbound(1,3);
+     math_Vector tolerance(1,Nbvar),infbound(1,Nbvar),supbound(1,Nbvar);
+-    Func.GetTolerance(tolerance,tolesp);
++    Func.GetTolerance(tolerance,tolpoint3d);
+     Func.GetBounds(infbound,supbound);
+     math_FunctionSetRoot rsnld(Func,tolerance,30);
+ 
+@@ -115,8 +115,8 @@ void Blend_CSWalking::Perform(Blend_CSFunction& Func,
+   Standard_Real U,V,W;
+   previousP.ParametersOnS(U,V);
+   W = previousP.ParameterOnC();
+-  TheExtremity P1(previousP.PointOnS(),U,V,previousP.Parameter(),tolesp);
+-  TheExtremity P2(previousP.PointOnC(),W,previousP.Parameter(),tolesp);
++  TheExtremity P1(previousP.PointOnS(),U,V,previousP.Parameter(),tolpoint3d);
++  TheExtremity P2(previousP.PointOnC(),W,previousP.Parameter(),tolpoint3d);
+   if (sens>0.) {
+     line->SetStartPoints(P1,P2);
+   }
+diff --git a/src/Blend/Blend_CSWalking_2.gxx b/src/Blend/Blend_CSWalking_2.gxx
+index fba4785d5..beb678fff 100644
+--- a/src/Blend/Blend_CSWalking_2.gxx
++++ b/src/Blend/Blend_CSWalking_2.gxx
+@@ -39,7 +39,7 @@ Blend_Status Blend_CSWalking::TestArret(Blend_CSFunction& Function,
+   Blend_Status State1,State2;
+   IntSurf_TypeTrans tras = IntSurf_Undecided;
+ 
+-  if (Function.IsSolution(Sol,tolesp)) {
++  if (Function.IsSolution(Sol,tolpoint3d)) {
+ 
+     pt1  = Function.PointOnS();
+     pt2  = Function.PointOnC();
+@@ -176,15 +176,16 @@ Blend_Status Blend_CSWalking::CheckDeflectionOnSurf
+ 
+   prevP = previousP.PointOnS();
+   prevTg = previousP.TangentOnS();
+-  tolu = TheSurfaceTool::UResolution(surf,tolesp);
+-  tolv = TheSurfaceTool::VResolution(surf,tolesp);
++  tolu = TheSurfaceTool::UResolution(surf,tolpoint3d);
++  tolv = TheSurfaceTool::VResolution(surf,tolpoint3d);
+ 
+   gp_Vec Corde(prevP,Psurf);
+   Norme = Corde.SquareMagnitude();
+   prevNorme = prevTg.SquareMagnitude(); // JAG MODIF 25.04.94
+ 
+ 
+-  if (Norme <= tolesp*tolesp || prevNorme <= tolesp*tolesp) { // JAG MODIF 25.04.94
++  const Standard_Real toler3d = tolpoint3d;
++  if (Norme <= toler3d * toler3d || prevNorme <= toler3d * toler3d) { // JAG MODIF 25.04.94
+     // il faudra peut etre  forcer meme point  JAG MODIF 25.04.94
+     return Blend_SamePoints;
+   }
+@@ -275,19 +276,20 @@ Blend_Status Blend_CSWalking::CheckDeflectionOnCurv
+ 
+   prevP = previousP.PointOnC();
+   prevTg = previousP.TangentOnC();
+-  tolu = TheCurveTool::Resolution(curv,tolesp);
++  tolu = TheCurveTool::Resolution(curv,tolpoint3d);
+ 
+   gp_Vec Corde(prevP,Pcurv);
+   Norme = Corde.SquareMagnitude();
+   prevNorme = prevTg.SquareMagnitude(); // JAG MODIF 25.04.94
+ 
+ 
++  const Standard_Real toler3d = tolpoint3d;
+ // if (Norme <= tolesp*tolesp || prevNorme <= tolesp*tolesp) { // JAG MODIF 25.04.94
+-  if (Norme <= tolesp*tolesp) { // le 95.01.10
++  if (Norme <= toler3d * toler3d) { // le 95.01.10
+     // il faudra peut etre  forcer meme point  JAG MODIF 25.04.94
+     return Blend_SamePoints;
+   }
+-  else if (prevNorme > tolesp*tolesp) {
++  else if (prevNorme > toler3d * toler3d) {
+     Cosi = sens*Corde*prevTg;
+     if (Cosi <0.) { // angle 3d>pi/2. --> retour arriere
+       return Blend_Backward;
+@@ -308,7 +310,7 @@ Blend_Status Blend_CSWalking::CheckDeflectionOnCurv
+ 
+   // Voir s il faut faire le controle sur le signe de prevtg*Tgsurf
+ 
+-  if (Tgcurv.Magnitude() <= tolesp) {
++  if (Tgcurv.Magnitude() <= tolpoint3d) {
+     return Blend_SamePoints; // GROS BOBARD EN ATTENDANT
+   }
+ 
+@@ -318,7 +320,7 @@ Blend_Status Blend_CSWalking::CheckDeflectionOnCurv
+     return Blend_StepTooLarge;
+   }
+ 
+-  if (prevNorme > tolesp*tolesp) {
++  if (prevNorme > toler3d * toler3d) {
+ 
+     // Estimation de la fleche courante
+ /*    
+diff --git a/src/Blend/Blend_CSWalking_3.gxx b/src/Blend/Blend_CSWalking_3.gxx
+index 77db2ccef..6108a1011 100644
+--- a/src/Blend/Blend_CSWalking_3.gxx
++++ b/src/Blend/Blend_CSWalking_3.gxx
+@@ -205,7 +205,7 @@ void Blend_CSWalking::MakeExtremity(TheExtremity& Extrem,
+ 
+ //  Extrem.SetValue(previousP.PointOnS(),sol(1),sol(2),tolesp);
+   previousP.ParametersOnS(U,V);
+-  Extrem.SetValue(previousP.PointOnS(),U,V,previousP.Parameter(),tolesp);
++  Extrem.SetValue(previousP.PointOnS(),U,V,previousP.Parameter(),tolpoint3d);
+   Iter = domain;
+ 
+ 
+diff --git a/src/Blend/Blend_CSWalking_4.gxx b/src/Blend/Blend_CSWalking_4.gxx
+index 1d693ff00..05873f2e5 100644
+--- a/src/Blend/Blend_CSWalking_4.gxx
++++ b/src/Blend/Blend_CSWalking_4.gxx
+@@ -40,7 +40,7 @@ void Blend_CSWalking::InternalPerform(Blend_CSFunction& Func,
+ 
+   //IntSurf_Transition Tline,Tarc;
+ 
+-  Func.GetTolerance(tolerance,tolesp);
++  Func.GetTolerance(tolerance,tolpoint3d);
+   Func.GetBounds(infbound,supbound);
+ 
+   math_FunctionSetRoot rsnld(Func,tolerance,30);
+@@ -146,9 +146,9 @@ void Blend_CSWalking::InternalPerform(Blend_CSFunction& Func,
+ */
+ 	  previousP.ParametersOnS(U,V);
+ 	  Exts.SetValue(previousP.PointOnS(),U,V, 
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  Extc.SetValue(previousP.PointOnC(),previousP.ParameterOnC(),
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  // Indiquer que fin sur Bound.
+ 	}
+ 	else {
+@@ -171,9 +171,9 @@ void Blend_CSWalking::InternalPerform(Blend_CSFunction& Func,
+ */
+ 	  previousP.ParametersOnS(U,V);
+ 	  Exts.SetValue(previousP.PointOnS(),U,V,
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  Extc.SetValue(previousP.PointOnC(),previousP.ParameterOnC(),
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  Arrive = Standard_True;
+ 	  if (line->NbPoints()>=2) {
+ 	    // Indiquer qu on s arrete en cours de cheminement
+@@ -214,9 +214,9 @@ void Blend_CSWalking::InternalPerform(Blend_CSFunction& Func,
+ */
+ 	  previousP.ParametersOnS(U,V);
+ 	  Exts.SetValue(previousP.PointOnS(),U,V,
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  Extc.SetValue(previousP.PointOnC(),previousP.ParameterOnC(),
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  // Indiquer que fin sur Bound.
+ 	}
+ 	else {
+@@ -244,7 +244,7 @@ void Blend_CSWalking::InternalPerform(Blend_CSFunction& Func,
+ 	MakeExtremity(Exts,Index,solrst(1),Isvtx,Vtx);
+ //	Extc.SetValue(previousP.PointOnC(),sol(3),tolesp);
+ 	Extc.SetValue(previousP.PointOnC(),previousP.ParameterOnC(),
+-		      previousP.Parameter(),tolesp);
++		      previousP.Parameter(),tolpoint3d);
+ 	Arrive = Standard_True;
+       }
+       break;
+@@ -259,9 +259,9 @@ void Blend_CSWalking::InternalPerform(Blend_CSFunction& Func,
+ */
+ 	previousP.ParametersOnS(U,V);
+ 	Exts.SetValue(previousP.PointOnS(),U,V,
+-		      previousP.Parameter(),tolesp);
++		      previousP.Parameter(),tolpoint3d);
+ 	Extc.SetValue(previousP.PointOnC(),previousP.ParameterOnC(),
+-		      previousP.Parameter(),tolesp);
++		      previousP.Parameter(),tolpoint3d);
+ 	Arrive = Standard_True;
+       }
+       break;
+diff --git a/src/Blend/Blend_Walking_1.gxx b/src/Blend/Blend_Walking_1.gxx
+index d7f65c768..01d4d154a 100644
+--- a/src/Blend/Blend_Walking_1.gxx
++++ b/src/Blend/Blend_Walking_1.gxx
+@@ -62,9 +62,9 @@ void Blend_Walking::Perform(Blend_Function& Func,
+ 			    const Standard_Real Pdep,   
+ 			    const Standard_Real Pmax,
+ 			    const Standard_Real MaxStep,
++          const Standard_Real Tol3d,
+ 			    const Standard_Real TolGuide,
+ 			    const math_Vector& ParDep,
+-			    const Standard_Real Tolesp,
+ 			    const Standard_Real Fleche,
+ 			    const Standard_Boolean Appro)
+ {
+@@ -75,7 +75,7 @@ void Blend_Walking::Perform(Blend_Function& Func,
+   Standard_Boolean doextremities = 1;
+   if(line.IsNull()) line = new TheLine ();
+   else {line->Clear();doextremities = 0;}
+-  tolesp = Abs(Tolesp);
++  tolpoint3d = Tol3d;
+   tolgui = Abs(TolGuide);
+   fleche = Abs(Fleche);
+   rebrou = Standard_False;
+@@ -96,7 +96,7 @@ void Blend_Walking::Perform(Blend_Function& Func,
+ 
+     TopAbs_State situ1,situ2;
+     math_Vector tolerance(1,4),infbound(1,4),supbound(1,4);
+-    Func.GetTolerance(tolerance,tolesp);
++    Func.GetTolerance(tolerance,tolpoint3d);
+     Func.GetBounds(infbound,supbound);
+     math_FunctionSetRoot rsnld(Func,tolerance,30);
+ 
+@@ -143,9 +143,9 @@ void Blend_Walking::Perform(Blend_Function& Func,
+ 
+   if(doextremities){
+     TheExtremity ptf1 (previousP.PointOnS1(),
+-		       sol(1),sol(2),tolesp);
++		       sol(1),sol(2),tolpoint3d);
+     TheExtremity ptf2 (previousP.PointOnS2(),
+-		       sol(3),sol(4),tolesp);
++		       sol(3),sol(4),tolpoint3d);
+     if (!previousP.IsTangencyPoint()) {
+       ptf1.SetTangent(previousP.TangentOnS1());
+       ptf2.SetTangent(previousP.TangentOnS2());
+@@ -168,7 +168,7 @@ void Blend_Walking::Perform(Blend_Function& Func,
+ Standard_Boolean Blend_Walking::PerformFirstSection(Blend_Function&     Func,
+                                                     const Standard_Real Pdep,
+                                                     math_Vector&        ParDep,
+-                                                    const Standard_Real Tolesp,
++                                                    const Standard_Real Tol3d,
+                                                     const Standard_Real TolGuide,
+                                                     TopAbs_State&       Pos1,
+                                                     TopAbs_State&       Pos2)
+@@ -176,7 +176,7 @@ Standard_Boolean Blend_Walking::PerformFirstSection(Blend_Function&     Func,
+   iscomplete = Standard_False;
+   comptra = Standard_False;
+   line = new TheLine ();
+-  tolesp = Abs(Tolesp);
++  tolpoint3d = Tol3d;
+   tolgui = Abs(TolGuide);
+ 
+   Pos1 = Pos2 = TopAbs_UNKNOWN;
+@@ -185,7 +185,7 @@ Standard_Boolean Blend_Walking::PerformFirstSection(Blend_Function&     Func,
+   Func.Set(param);
+ 
+   math_Vector tolerance(1, 4),infbound(1, 4),supbound(1, 4);
+-  Func.GetTolerance(tolerance, tolesp);
++  Func.GetTolerance(tolerance, tolpoint3d);
+   Func.GetBounds(infbound, supbound);
+   math_FunctionSetRoot rsnld(Func, tolerance, 30);
+ 
+@@ -220,7 +220,7 @@ Standard_Boolean Blend_Walking::PerformFirstSection (Blend_Function& Func,
+                                                      const Standard_Real Pdep,
+                                                      const Standard_Real Pmax,
+                                                      const math_Vector& ParDep,
+-                                                     const Standard_Real Tolesp,
++                                                     const Standard_Real Tol3d,
+                                                      const Standard_Real TolGuide,
+                                                      const Standard_Boolean RecOnS1,
+                                                      const Standard_Boolean RecOnS2,
+@@ -235,7 +235,7 @@ Standard_Boolean Blend_Walking::PerformFirstSection (Blend_Function& Func,
+   Standard_Real w1, w2, extrapol;
+   Standard_Boolean recad1, recad2;
+ 
+-  tolesp = Abs(Tolesp);
++  tolpoint3d = Tol3d;
+   tolgui = Abs(TolGuide);
+   if (Pmax - Pdep >= 0.0)
+   {
+@@ -262,7 +262,7 @@ Standard_Boolean Blend_Walking::PerformFirstSection (Blend_Function& Func,
+   Standard_Real CorrectedU = 0., CorrectedV = 0.;
+   gp_Pnt CorrectedPnt;
+ 
+-  Func.GetTolerance(tolerance, tolesp);
++  Func.GetTolerance(tolerance, tolpoint3d);
+   Func.GetBounds(infbound, supbound);
+   math_FunctionSetRoot rsnld(Func, tolerance, 30);
+ 
+@@ -409,9 +409,9 @@ Standard_Boolean Blend_Walking::PerformFirstSection (Blend_Function& Func,
+ #endif
+       MakeExtremity(Ext1, Standard_True, Index1, solrst1(1), Isvtx1, Vtx1);
+       if (ToCorrectOnRst1)
+-        Ext2.SetValue(CorrectedPnt, CorrectedU, CorrectedV, tolesp);
++        Ext2.SetValue(CorrectedPnt, CorrectedU, CorrectedV, tolpoint3d);
+       else
+-        Ext2.SetValue(previousP.PointOnS2(), sol(3), sol(4), tolesp);
++        Ext2.SetValue(previousP.PointOnS2(), sol(3), sol(4), tolpoint3d);
+     }
+     break;
+ 
+@@ -424,9 +424,9 @@ Standard_Boolean Blend_Walking::PerformFirstSection (Blend_Function& Func,
+       }
+ #endif
+       if (ToCorrectOnRst2)
+-        Ext1.SetValue(CorrectedPnt, CorrectedU, CorrectedV, tolesp);
++        Ext1.SetValue(CorrectedPnt, CorrectedU, CorrectedV, tolpoint3d);
+       else
+-        Ext1.SetValue(previousP.PointOnS1(), sol(1), sol(2), tolesp);
++        Ext1.SetValue(previousP.PointOnS1(), sol(1), sol(2), tolpoint3d);
+       MakeExtremity(Ext2, Standard_False, Index2, solrst2(1), Isvtx2, Vtx2);
+     }
+     break;
+diff --git a/src/Blend/Blend_Walking_2.gxx b/src/Blend/Blend_Walking_2.gxx
+index adb10bdde..333cdd063 100644
+--- a/src/Blend/Blend_Walking_2.gxx
++++ b/src/Blend/Blend_Walking_2.gxx
+@@ -41,7 +41,7 @@ Blend_Status Blend_Walking::TestArret(Blend_Function& Function,
+   IntSurf_TypeTrans tras1,tras2;
+   Blend_Point curpoint;
+   Standard_Boolean loctwist1 = Standard_False, loctwist2 = Standard_False;
+-  Standard_Real tolsolu = tolesp;
++  Standard_Real tolsolu = tolpoint3d;
+ 
+   if ( !TestSolu) tolsolu *= 1000; //Ca doit toujours etre bon
+   if (Function.IsSolution(sol,tolsolu)) {
+@@ -211,8 +211,8 @@ Blend_Status Blend_Walking::CheckDeflection
+     if(!prevpointistangent){
+       prevTg = previousP.TangentOnS1();
+     }
+-    tolu = TheSurfaceTool::UResolution(surf1,tolesp);
+-    tolv = TheSurfaceTool::VResolution(surf1,tolesp);
++    tolu = TheSurfaceTool::UResolution(surf1,tolpoint3d);
++    tolv = TheSurfaceTool::VResolution(surf1,tolpoint3d);
+   }
+   else {
+     Psurf = CurPoint.PointOnS2();
+@@ -223,8 +223,8 @@ Blend_Status Blend_Walking::CheckDeflection
+     if(!prevpointistangent){
+       prevTg = previousP.TangentOnS2();
+     }
+-    tolu = TheSurfaceTool::UResolution(surf2,tolesp);
+-    tolv = TheSurfaceTool::VResolution(surf2,tolesp);
++    tolu = TheSurfaceTool::UResolution(surf2,tolpoint3d);
++    tolv = TheSurfaceTool::VResolution(surf2,tolpoint3d);
+   }
+ 
+   gp_Vec Corde(prevP,Psurf);
+@@ -233,12 +233,13 @@ Blend_Status Blend_Walking::CheckDeflection
+   if(!prevpointistangent) prevNorme = prevTg.SquareMagnitude();
+ 
+ 
+-  if (Norme <= tolesp*tolesp){
++  const Standard_Real toler3d = 0.01 * tolpoint3d;
++  if (Norme <= toler3d * toler3d){
+     // il faudra peut etre  forcer meme point
+     return Blend_SamePoints;
+   }
+   if(!prevpointistangent){
+-    if(prevNorme <= tolesp*tolesp) {
++    if(prevNorme <= toler3d * toler3d) {
+       return Blend_SamePoints;
+     }
+     Cosi = sens*Corde*prevTg;
+diff --git a/src/Blend/Blend_Walking_3.gxx b/src/Blend/Blend_Walking_3.gxx
+index 41b669a3f..3dc6f746e 100644
+--- a/src/Blend/Blend_Walking_3.gxx
++++ b/src/Blend/Blend_Walking_3.gxx
+@@ -125,7 +125,7 @@ Standard_Boolean Blend_Walking::Recadre(Blend_FuncInv& FuncInv,
+   infb(2) -= Extrap;
+   supb(2) += Extrap;
+   
+-  FuncInv.GetTolerance(toler,tolesp/10);//Il vaut mieux garder un peu de marge
++  FuncInv.GetTolerance(toler,0.1 * tolpoint3d);//Il vaut mieux garder un peu de marge
+   math_FunctionSetRoot rsnld(FuncInv,toler,35);
+   toler *= 10; // Mais on fait les tests correctements
+ 
+@@ -262,7 +262,7 @@ Standard_Boolean Blend_Walking::Recadre(Blend_FuncInv& FuncInv,
+       else solrst(1) = pmin;
+     }
+     // On verifie le jalon
+-    jalons_Trouve = (FuncInv.IsSolution(solrst,tolesp));
++    jalons_Trouve = (FuncInv.IsSolution(solrst,tolpoint3d));
+   }
+ 
+   if (!jalons_Trouve) {
+@@ -276,7 +276,7 @@ Standard_Boolean Blend_Walking::Recadre(Blend_FuncInv& FuncInv,
+     }
+     else {
+       rsnld.Root(solrst);
+-      recadre = FuncInv.IsSolution(solrst,tolesp);
++      recadre = FuncInv.IsSolution(solrst,tolpoint3d);
+     }
+   }
+ 
+@@ -310,7 +310,7 @@ Standard_Boolean Blend_Walking::Recadre(Blend_FuncInv& FuncInv,
+     // Le probleme a resoudre
+     FuncInv.Set(OnFirst,thecur);
+     FuncInv.GetBounds(infb,supb);
+-    FuncInv.GetTolerance(toler,tolesp/10);//Il vaut mieux garder un peu de marge
++    FuncInv.GetTolerance(toler,0.1 * tolpoint3d);//Il vaut mieux garder un peu de marge
+     math_FunctionSetRoot aRsnld(FuncInv,toler,35);
+     toler *= 10; // Mais on fait les tests correctements
+     // Resolution...
+@@ -324,7 +324,7 @@ Standard_Boolean Blend_Walking::Recadre(Blend_FuncInv& FuncInv,
+     }
+     else {
+       aRsnld.Root(solrst);
+-      recadre = FuncInv.IsSolution(solrst,tolesp);
++      recadre = FuncInv.IsSolution(solrst,tolpoint3d);
+     }
+   }
+ 
+@@ -453,7 +453,7 @@ void Blend_Walking::MakeExtremity(TheExtremity& Extrem,
+   if (OnFirst) {
+     Extrem.SetValue(previousP.PointOnS1(),
+ 		    sol(1),sol(2),
+-		    previousP.Parameter(), tolesp);
++		    previousP.Parameter(), tolpoint3d);
+     if (!previousP.IsTangencyPoint())  
+       Extrem.SetTangent(previousP.TangentOnS1());
+     Iter = recdomain1;
+@@ -461,7 +461,7 @@ void Blend_Walking::MakeExtremity(TheExtremity& Extrem,
+   else {
+     Extrem.SetValue(previousP.PointOnS2(),
+ 		    sol(3),sol(4),
+-		    previousP.Parameter(), tolesp);
++		    previousP.Parameter(), tolpoint3d);
+     if (!previousP.IsTangencyPoint())  
+       Extrem.SetTangent(previousP.TangentOnS2());
+     Iter = recdomain2;
+diff --git a/src/Blend/Blend_Walking_4.gxx b/src/Blend/Blend_Walking_4.gxx
+index acd895f0c..17655cc31 100644
+--- a/src/Blend/Blend_Walking_4.gxx
++++ b/src/Blend/Blend_Walking_4.gxx
+@@ -135,7 +135,7 @@ void Blend_Walking::InternalPerform(Blend_Function& Func,
+ 
+   //IntSurf_Transition Tline,Tarc;
+ 
+-  Func.GetTolerance(tolerance,tolesp);
++  Func.GetTolerance(tolerance,tolpoint3d);
+   Func.GetBounds(infbound,supbound);
+ 
+   math_FunctionSetRoot rsnld(Func,tolerance,30);
+@@ -173,10 +173,10 @@ void Blend_Walking::InternalPerform(Blend_Function& Func,
+       if (Abs(stepw) < tolgui) {
+         Ext1.SetValue(previousP.PointOnS1(),
+                       sol(1),sol(2),
+-                      previousP.Parameter(),tolesp);
++                      previousP.Parameter(),tolpoint3d);
+         Ext2.SetValue(previousP.PointOnS2(),
+                       sol(3),sol(4),
+-                      previousP.Parameter(),tolesp);
++                      previousP.Parameter(),tolpoint3d);
+         if (!previousP.IsTangencyPoint()) {
+           Ext1.SetTangent(previousP.TangentOnS1());
+           Ext2.SetTangent(previousP.TangentOnS2());
+@@ -227,7 +227,7 @@ void Blend_Walking::InternalPerform(Blend_Function& Func,
+ 	if (recad1) {
+ 	  Standard_Real wtemp;
+ 	  wtemp  = solrst1(2);
+-	  if ((param - wtemp)/sens>= -10*tolesp){
++	  if ((param - wtemp)/sens>= -10*tolgui){
+ 	    w1 = solrst1(2);
+ 	    control = Standard_True;
+ 	  }
+@@ -253,7 +253,7 @@ void Blend_Walking::InternalPerform(Blend_Function& Func,
+ 	if (recad2) {
+ 	  Standard_Real wtemp;
+ 	  wtemp = solrst2(2);
+-	  if ((param - wtemp)/sens>= -10*tolesp){
++	  if ((param - wtemp)/sens>= -10*tolgui){
+ 	    w2 = solrst2(2);
+ 	    control = Standard_True;
+ 	  }
+@@ -505,10 +505,10 @@ void Blend_Walking::InternalPerform(Blend_Function& Func,
+ 	  Arrive = Standard_True;
+ 	  Ext1.SetValue(previousP.PointOnS1(),
+ 			sol(1),sol(2),
+-			previousP.Parameter(), tolesp);
++			previousP.Parameter(), tolpoint3d);
+ 	  Ext2.SetValue(previousP.PointOnS2(),
+ 			sol(3),sol(4),
+-			previousP.Parameter(), tolesp);
++			previousP.Parameter(), tolpoint3d);
+ 	  if (!previousP.IsTangencyPoint()) {
+ 	    Ext1.SetTangent(previousP.TangentOnS1());
+ 	    Ext2.SetTangent(previousP.TangentOnS2());
+@@ -533,10 +533,10 @@ void Blend_Walking::InternalPerform(Blend_Function& Func,
+ 	if (Abs(stepw) < tolgui) {
+ 	  Ext1.SetValue(previousP.PointOnS1(),
+ 			sol(1),sol(2),
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  Ext2.SetValue(previousP.PointOnS2(),
+ 			sol(3),sol(4),
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  if (!previousP.IsTangencyPoint()) {
+ 	    Ext1.SetTangent(previousP.TangentOnS1());
+ 	    Ext2.SetTangent(previousP.TangentOnS2());
+@@ -584,10 +584,10 @@ void Blend_Walking::InternalPerform(Blend_Function& Func,
+ 	  Arrive = Standard_True;
+ 	  Ext1.SetValue(previousP.PointOnS1(),
+ 			sol(1),sol(2),
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  Ext2.SetValue(previousP.PointOnS2(),
+ 			sol(3),sol(4), 
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	  if (!previousP.IsTangencyPoint()) {
+ 	    Ext1.SetTangent(previousP.TangentOnS1());
+ 	    Ext2.SetTangent(previousP.TangentOnS2());
+@@ -627,15 +627,15 @@ void Blend_Walking::InternalPerform(Blend_Function& Func,
+ 	MakeExtremity(Ext1,Standard_True,Index1,
+ 		      solrst1(1),Isvtx1,Vtx1);
+         // On blinde le cas singulier ou un des recadrage a planter
+-        if (previousP.PointOnS1().IsEqual(previousP.PointOnS2(), 2*tolesp)) {
++        if (previousP.PointOnS1().IsEqual(previousP.PointOnS2(), 2.0 * tolpoint3d)) {
+ 	  Ext2.SetValue(previousP.PointOnS1(),
+-			sol(3),sol(4),tolesp);
++			sol(3),sol(4),tolpoint3d);
+ 	  if (Isvtx1) MakeSingularExtremity(Ext2, Standard_False, Vtx1);
+ 	}
+ 	else {
+ 	  Ext2.SetValue(previousP.PointOnS2(),
+ 			sol(3),sol(4),
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	}
+ 	Arrive = Standard_True;
+       }
+@@ -661,15 +661,15 @@ void Blend_Walking::InternalPerform(Blend_Function& Func,
+ #endif
+ 
+         // On blinde le cas singulier ou un des recadrage a plante
+-        if (previousP.PointOnS1().IsEqual(previousP.PointOnS2(), 2*tolesp)) {
++        if (previousP.PointOnS1().IsEqual(previousP.PointOnS2(), 2.0 * tolpoint3d)) {
+ 	  Ext1.SetValue(previousP.PointOnS2(),
+-			sol(1),sol(2),tolesp);
++			sol(1),sol(2),tolpoint3d);
+ 	  if (Isvtx2) MakeSingularExtremity(Ext1, Standard_True, Vtx2);
+ 	}
+ 	else {
+ 	  Ext1.SetValue(previousP.PointOnS1(),
+ 			sol(1),sol(2),
+-			previousP.Parameter(),tolesp);
++			previousP.Parameter(),tolpoint3d);
+ 	}
+ 	MakeExtremity(Ext2,Standard_False,Index2,
+ 		      solrst2(1),Isvtx2,Vtx2);
+@@ -698,7 +698,7 @@ void Blend_Walking::InternalPerform(Blend_Function& Func,
+ #endif
+ 
+ 	if ( (Isvtx1 != Isvtx2) &&
+-	    (previousP.PointOnS1().IsEqual(previousP.PointOnS2(), 2*tolesp)) ) {
++	    (previousP.PointOnS1().IsEqual(previousP.PointOnS2(), 2.0 * tolpoint3d)) ) {
+ 	  // On blinde le cas singulier ou un seul recadrage
+ 	  // est reconnu comme vertex.
+ 	  if (Isvtx1) {
+@@ -727,10 +727,10 @@ void Blend_Walking::InternalPerform(Blend_Function& Func,
+ #endif
+ 	Ext1.SetValue(previousP.PointOnS1(),
+ 		      sol(1),sol(2),
+-		      previousP.Parameter(),tolesp);
++		      previousP.Parameter(),tolpoint3d);
+ 	Ext2.SetValue(previousP.PointOnS2(),
+ 		      sol(3),sol(4),
+-		      previousP.Parameter(),tolesp);
++		      previousP.Parameter(),tolpoint3d);
+ 	if (!previousP.IsTangencyPoint()) {
+ 	  Ext1.SetTangent(previousP.TangentOnS1());
+ 	  Ext2.SetTangent(previousP.TangentOnS2());
+diff --git a/src/ChFi3d/ChFi3d_Builder.cxx b/src/ChFi3d/ChFi3d_Builder.cxx
+index e56235f70..54b793e27 100644
+--- a/src/ChFi3d/ChFi3d_Builder.cxx
++++ b/src/ChFi3d/ChFi3d_Builder.cxx
+@@ -198,7 +198,8 @@ void  ChFi3d_Builder::Compute()
+   ChFi3d_InitChron(cl_total);
+   ChFi3d_InitChron(cl_extent);
+ #endif 
+-  
++  UpdateTolesp();
++
+   if (myListStripe.IsEmpty())
+     throw Standard_Failure("There are no suitable edges for chamfer or fillet");
+   
+@@ -335,7 +336,7 @@ void  ChFi3d_Builder::Compute()
+       }
+       // 05/02/02 akm ^^^
+       Standard_Integer solidindex = st->SolidIndex();
+-      ChFi3d_FilDS(solidindex,st,DStr,myRegul,tolesp,tol2d);
++      ChFi3d_FilDS(solidindex,st,DStr,myRegul,tolapp3d,tol2d);
+       if (!done) break;
+     }
+     
+diff --git a/src/ChFi3d/ChFi3d_Builder.hxx b/src/ChFi3d/ChFi3d_Builder.hxx
+index 207317321..3a4ba8cb6 100644
+--- a/src/ChFi3d/ChFi3d_Builder.hxx
++++ b/src/ChFi3d/ChFi3d_Builder.hxx
+@@ -849,6 +849,10 @@ private:
+                                    Handle(BRepAdaptor_Surface)& HS1,
+                                    Handle(BRepAdaptor_Surface)& HS2) const;
+ 
++  //! Assign to tolesp parameter minimal value of spine's tolesp if it is less
++  //! than default initial value.
++  Standard_EXPORT void UpdateTolesp();
++
+ 
+   TopoDS_Shape myShape;
+   Standard_Real angular;
+diff --git a/src/ChFi3d/ChFi3d_Builder_1.cxx b/src/ChFi3d/ChFi3d_Builder_1.cxx
+index d8f9df9ce..eca3b71ad 100644
+--- a/src/ChFi3d/ChFi3d_Builder_1.cxx
++++ b/src/ChFi3d/ChFi3d_Builder_1.cxx
+@@ -325,7 +325,7 @@ ChFi3d_Builder::ChFi3d_Builder(const TopoDS_Shape& S,
+   myEShMap.Fill(S,TopAbs_EDGE,TopAbs_SHELL);
+   myVFMap.Fill(S,TopAbs_VERTEX,TopAbs_FACE);
+   myVEMap.Fill(S,TopAbs_VERTEX,TopAbs_EDGE);
+-  SetParams(Ta,1.e-4,1.e-5,1.e-4,1.e-5,1.e-3);
++  SetParams(Ta, 1.0e-4, 1.e-5, 1.e-4, 1.e-5, 1.e-3);
+   SetContinuity(GeomAbs_C1, Ta);
+ }
+ 
+@@ -336,7 +336,7 @@ ChFi3d_Builder::ChFi3d_Builder(const TopoDS_Shape& S,
+ 
+ void ChFi3d_Builder::SetParams(const Standard_Real Tang, 
+ 			       const Standard_Real Tesp, 
+-			       const Standard_Real T2d, 
++             const Standard_Real T2d, 
+ 			       const Standard_Real TApp3d, 
+ 			       const Standard_Real TolApp2d, 
+ 			       const Standard_Real Fleche)
+diff --git a/src/ChFi3d/ChFi3d_Builder_2.cxx b/src/ChFi3d/ChFi3d_Builder_2.cxx
+index 04f981f39..2d92b13d2 100644
+--- a/src/ChFi3d/ChFi3d_Builder_2.cxx
++++ b/src/ChFi3d/ChFi3d_Builder_2.cxx
+@@ -188,7 +188,7 @@ static Standard_Boolean BonVoisin(const gp_Pnt& Point,
+ 				  Standard_Real& XDep,
+ 				  Standard_Real& YDep,
+ 				  const ChFiDS_Map& EFMap,
+-				  const Standard_Real tolesp) 
++				  const Standard_Real tol3d) 
+ {
+   Standard_Boolean bonvoisin = 1;
+   Standard_Real winter, Uf, Ul;
+@@ -203,7 +203,7 @@ static Standard_Boolean BonVoisin(const gp_Pnt& Point,
+     const TopoDS_Edge& ecur = TopoDS::Edge(Ex.Current());
+     if(!ecur.IsSame(cured)){
+       hc->Initialize(ecur);
+-      Standard_Real tolc = hc->Resolution(tolesp);
++      Standard_Real tolc = hc->Resolution(tol3d);
+       if(ChFi3d_InterPlaneEdge(plane,hc,winter,1,tolc)){
+ 	gp_Pnt np = hc->Value(winter);
+ 	Standard_Real ndist = np.SquareDistance(papp);
+@@ -848,7 +848,7 @@ void ChFi3d_Builder::StartSol(const Handle(ChFiDS_Stripe)&      Stripe,
+     const BRepAdaptor_Curve& Ced = Spine->CurrentElementarySpine(iedge);
+     gp_Pnt pnt = Ced.Value(woned);
+   
+-    if (Projection(PExt, pnt, els, w, tolesp) &&
++    if (Projection(PExt, pnt, els, w, tolapp3d) &&
+ 	PerformFirstSection(Spine,HGuide,Choix,HS1,HS2,
+ 			    I1,I2,w,SolDep,Pos1,Pos2)) {
+       P1.SetCoord(SolDep(1),SolDep(2));
+@@ -894,7 +894,7 @@ void ChFi3d_Builder::StartSol(const Handle(ChFiDS_Stripe)&      Stripe,
+ //    Extrema_LocateExtPC ext(pnt,els,w,1.e-8);
+ //    if(ext.IsDone()){
+ //      w = ext.Point().Parameter(); 
+-    if (Projection(PExt, pnt, els, w, tolesp)) {
++    if (Projection(PExt, pnt, els, w, tolapp3d)) {
+       PerformFirstSection(Spine,HGuide,Choix,HS1,HS2,
+ 			  I1,I2,w,SolDep,Pos1,Pos2);
+       gp_Pnt P;
+@@ -909,11 +909,11 @@ void ChFi3d_Builder::StartSol(const Handle(ChFiDS_Stripe)&      Stripe,
+ 	   NbChangement++) {
+ 	if(Pos1 != TopAbs_IN){
+ 	  bonvoisin = BonVoisin(P, HS1, f1, plane, cured, 
+-				SolDep(1),SolDep(2), myEFMap, tolesp); 
++				SolDep(1),SolDep(2), myEFMap, tolapp3d);
+ 	}
+ 	if(Pos2 != TopAbs_IN && bonvoisin){
+ 	  bonvoisin = BonVoisin(P, HS2, f2, plane, cured, 
+-				SolDep(3),SolDep(4), myEFMap, tolesp);
++				SolDep(3),SolDep(4), myEFMap, tolapp3d);
+ 	} 
+ 	if(bonvoisin){
+ 	  f1 = HS1->Face();
+@@ -2712,7 +2712,7 @@ void ChFi3d_Builder::PerformSetOfKGen(Handle(ChFiDS_Stripe)& Stripe,
+ 	    pcprev1->D1(prevpar1,pdeb1,vdeb1);
+ 	    pcnext1->D1(nextpar1,pfin1,vfin1);
+ 	    Bon1 = ChFi3d_mkbound(S1,PC1,-1,pdeb1,vdeb1,1,
+-				  pfin1,vfin1,tolesp,2.e-4);
++				  pfin1,vfin1,tolapp3d,2.e-4);
+ 	  }
+ 	}
+ 	else{
+@@ -2731,11 +2731,11 @@ void ChFi3d_Builder::PerformSetOfKGen(Handle(ChFiDS_Stripe)& Stripe,
+ 	  pdeb1 = PC1->Value(pardeb1);
+ 	  pfin1 = PC1->Value(parfin1);
+ 	  Bon1 = ChFi3d_mkbound(S1,PC1,-1,pdeb1,Vdeb1,1,
+-				pfin1,Vfin1,tolesp,2.e-4);
++				pfin1,Vfin1,tolapp3d,2.e-4);
+ 	}
+       }
+       else{
+-	Bon1 = ChFi3d_mkbound(S1,PC1,tolesp,2.e-4);
++	Bon1 = ChFi3d_mkbound(S1,PC1,tolapp3d,2.e-4);
+       }
+       if(tw2){
+ 	if(!yaprevon2 || !yanexton2){
+@@ -2770,7 +2770,7 @@ void ChFi3d_Builder::PerformSetOfKGen(Handle(ChFiDS_Stripe)& Stripe,
+ 	    pcprev2->D1(prevpar2,pdeb2,vdeb2);
+ 	    pcnext2->D1(nextpar2,pfin2,vfin2);
+ 	    Bon2 = ChFi3d_mkbound(S2,PC2,-1,pdeb2,vdeb2,1,
+-				  pfin2,vfin2,tolesp,2.e-4);
++				  pfin2,vfin2,tolapp3d,2.e-4);
+ 	  }
+ 	}
+ 	else{
+@@ -2789,11 +2789,11 @@ void ChFi3d_Builder::PerformSetOfKGen(Handle(ChFiDS_Stripe)& Stripe,
+ 	  pdeb2 = PC2->Value(pardeb2);
+ 	  pfin2 = PC2->Value(parfin2);
+ 	  Bon2 = ChFi3d_mkbound(S2,PC2,-1,pdeb2,Vdeb2,1,
+-				pfin2,Vfin2,tolesp,2.e-4);
++				pfin2,Vfin2,tolapp3d,2.e-4);
+ 	}
+       }
+       else{
+-	Bon2 = ChFi3d_mkbound(S2,PC2,tolesp,2.e-4);
++	Bon2 = ChFi3d_mkbound(S2,PC2,tolapp3d,2.e-4);
+       }
+       // The parameters of neighbor traces are updated, so 
+       // straight lines uv are pulled.
+@@ -2817,8 +2817,8 @@ void ChFi3d_Builder::PerformSetOfKGen(Handle(ChFiDS_Stripe)& Stripe,
+       gp_Pnt2d pdebs2 = pcsprev2->Value(prevpar2);
+       gp_Pnt2d pfins1 = pcsnext1->Value(nextpar1);
+       gp_Pnt2d pfins2 = pcsnext2->Value(nextpar2);
+-      Bdeb = ChFi3d_mkbound(sprev,pdebs1,pdebs2,tolesp,2.e-4);
+-      Bfin = ChFi3d_mkbound(snext,pfins1,pfins2,tolesp,2.e-4);
++      Bdeb = ChFi3d_mkbound(sprev,pdebs1,pdebs2,tolapp3d,2.e-4);
++      Bfin = ChFi3d_mkbound(snext,pfins1,pfins2,tolapp3d,2.e-4);
+ 
+       GeomFill_ConstrainedFilling fil(11,20);
+       if(pointuon1) fil.Init(Bon2,Bfin,Bdeb,1);
+@@ -3046,7 +3046,7 @@ void ChFi3d_Builder::PerformSetOfSurf(Handle(ChFiDS_Stripe)& Stripe,
+   ChFi3d_InitChron(ch); // init perf for ChFi3d_MakeExtremities
+ #endif
+   
+-  if(!Simul) ChFi3d_MakeExtremities(Stripe,DStr,myEFMap,tolesp,tol2d);
++  if(!Simul) ChFi3d_MakeExtremities(Stripe,DStr,myEFMap,tolapp3d,tol2d);
+   
+ #ifdef OCCT_DEBUG
+   ChFi3d_ResultChron(ch, t_makextremities); // result perf t_makextremities
+diff --git a/src/ChFi3d/ChFi3d_Builder_6.cxx b/src/ChFi3d/ChFi3d_Builder_6.cxx
+index f22c19b2b..d94353418 100644
+--- a/src/ChFi3d/ChFi3d_Builder_6.cxx
++++ b/src/ChFi3d/ChFi3d_Builder_6.cxx
+@@ -416,7 +416,7 @@ Standard_Boolean ChFi3d_Builder::CompleteData
+  const Standard_Boolean          Gf2)
+ {
+   TopOpeBRepDS_DataStructure& DStr = myDS->ChangeDS();
+-  Data->ChangeSurf(DStr.AddSurface(TopOpeBRepDS_Surface(Surfcoin,tolesp)));
++  Data->ChangeSurf(DStr.AddSurface(TopOpeBRepDS_Surface(Surfcoin,tolapp3d)));
+ #ifdef DRAW
+   ChFi3d_SettraceDRAWFIL(Standard_True);
+   if (ChFi3d_GettraceDRAWFIL()) {
+@@ -987,7 +987,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+   Standard_Real NewFirst = PFirst;
+   if(RecP || RecS || RecRst){
+     if(!TheWalk.PerformFirstSection(Func,FInv,FInvP,FInvC,PFirst,Target,Soldep,
+-				    tolesp,TolGuide,RecRst,RecP,RecS,
++				    tolapp3d,tolapp2d,TolGuide,RecRst,RecP,RecS,
+ 				    NewFirst,ParSol)){
+ #ifdef OCCT_DEBUG
+       std::cout<<"ChFi3d_Builder::ComputeData : calculation fail first section"<<std::endl;
+@@ -1001,7 +1001,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+ 
+   while (again < 2){
+     TheWalk.Perform (Func,FInv,FInvP,FInvC,NewFirst,Last,
+-		     MS,TolGuide,ParSol,tolesp,Fleche,Appro);
++		     MS,tolapp3d,tolapp2d,TolGuide,ParSol,Fleche,Appro);
+ 
+     if (!TheWalk.IsDone()) {
+ #ifdef OCCT_DEBUG
+@@ -1119,7 +1119,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+   Standard_Real NewFirst = PFirst;
+   if (RecP1 || RecRst1 || RecP2 || RecRst2) {
+     if (!TheWalk.PerformFirstSection(Func, FInv1, FInvP1, FInv2, FInvP2, PFirst, Target, Soldep,
+-	  			     tolesp, TolGuide, RecRst1, RecP1, RecRst2, RecP2,
++               tolapp3d, TolGuide, RecRst1, RecP1, RecRst2, RecP2,
+ 				     NewFirst, ParSol)){
+ #ifdef OCCT_DEBUG
+       std::cout<<"ChFi3d_Builder::ComputeData : fail calculation first section"<<std::endl;
+@@ -1133,7 +1133,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+ 
+   while (again < 2){
+     TheWalk.Perform (Func, FInv1, FInvP1, FInv2, FInvP2, NewFirst, Last,
+-		     MS, TolGuide, ParSol, tolesp, Fleche, Appro);
++		     MS, tolapp3d, TolGuide, ParSol, Fleche, Appro);
+ 
+     if (!TheWalk.IsDone()) {
+ #ifdef OCCT_DEBUG
+@@ -1249,7 +1249,7 @@ Standard_Boolean ChFi3d_Builder::SimulData
+   Standard_Real NewFirst = PFirst;
+   if(RecP || RecS || RecRst){
+     if(!TheWalk.PerformFirstSection(Func,FInv,FInvP,FInvC,PFirst,Target,Soldep,
+-				    tolesp,TolGuide,RecRst,RecP,RecS,
++				    tolapp3d,tolapp2d,TolGuide,RecRst,RecP,RecS,
+ 				    NewFirst,ParSol)){
+ #ifdef OCCT_DEBUG
+ 
+@@ -1264,7 +1264,7 @@ Standard_Boolean ChFi3d_Builder::SimulData
+ 
+   while (again < 2){
+     TheWalk.Perform (Func,FInv,FInvP,FInvC,NewFirst,Last,
+-		     MS,TolGuide,ParSol,tolesp,Fleche,Appro);
++		     MS,tolapp3d,tolapp2d,TolGuide,ParSol,Fleche,Appro);
+     if (!TheWalk.IsDone()) {
+ #ifdef OCCT_DEBUG
+       std::cout << "Path not done" << std::endl;
+@@ -1375,7 +1375,7 @@ Standard_Boolean ChFi3d_Builder::SimulData
+   Standard_Real NewFirst = PFirst;
+   if (RecP1 || RecRst1 || RecP2 || RecRst2) {
+     if(!TheWalk.PerformFirstSection(Func, FInv1, FInvP1, FInv2, FInvP2, PFirst, Target, Soldep,
+-	  			    tolesp, TolGuide, RecRst1, RecP1, RecRst2, RecP2,
++              tolapp3d, TolGuide, RecRst1, RecP1, RecRst2, RecP2,
+ 				    NewFirst,ParSol)){
+ #ifdef OCCT_DEBUG
+ 
+@@ -1390,7 +1390,7 @@ Standard_Boolean ChFi3d_Builder::SimulData
+ 
+   while (again < 2){
+     TheWalk.Perform (Func, FInv1, FInvP1, FInv2, FInvP2, NewFirst, Last,
+-		     MS, TolGuide, ParSol, tolesp, Fleche, Appro);
++		     MS, tolapp3d, TolGuide, ParSol, Fleche, Appro);
+     if (!TheWalk.IsDone()) {
+ #ifdef OCCT_DEBUG
+       std::cout << "Path not created" << std::endl;
+@@ -1518,7 +1518,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+   if(!HS.IsNull()) F2 = HS->Face();
+   
+   // Path framing variables
+-  Standard_Real TolGuide=tolguide, TolEsp = tolesp;
++  Standard_Real TolGuide=tolguide;
+   Standard_Integer nbptmin = 4;
+ 
+   BRepBlend_Walking TheWalk(S1,S2,I1,I2,HGuide);
+@@ -1559,7 +1559,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+ 	BP.ParametersOnS1(vec(1),vec(2));
+ 	BP.ParametersOnS2(vec(3),vec(4));
+ 	Func.Set(param);
+-	if (Func.IsSolution(vec, tolesp)) {
++	if (Func.IsSolution(vec, tolapp3d)) {
+ 	  TheWalk.AddSingularPoint(BP);
+ 	}
+       }
+@@ -1574,7 +1574,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+ 	BP.ParametersOnS1(vec(1),vec(2));
+ 	BP.ParametersOnS2(vec(3),vec(4));
+ 	Func.Set(param);
+-	if (Func.IsSolution(vec, tolesp)) {
++	if (Func.IsSolution(vec, tolapp3d)) {
+ 	  TheWalk.AddSingularPoint(BP);
+ 	}
+       }
+@@ -1587,7 +1587,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+   Standard_Real NewFirst = PFirst;
+   if(RecOnS1 || RecOnS2){
+     if(!TheWalk.PerformFirstSection(Func,FInv,PFirst,Target,Soldep,
+-				    tolesp,TolGuide,RecOnS1,RecOnS2,
++				    tolapp3d,TolGuide,RecOnS1,RecOnS2,
+ 				    NewFirst,ParSol)){
+ #ifdef OCCT_DEBUG
+       std::cout<<"ChFi3d_Builder::ComputeData : calculation fail first section"<<std::endl;
+@@ -1617,10 +1617,9 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+     if(!again && (MS < 5*TolGuide)) MS = 5*TolGuide;
+     else {
+       if (5*TolGuide > MS) TolGuide = MS/5;
+-      if (5*TolEsp > MS) TolEsp = MS/5;
+     }
+-    TheWalk.Perform(Func,FInv,NewFirst,Target,MS,TolGuide,
+-		    ParSol,TolEsp,Fleche,Appro);
++    TheWalk.Perform(Func,FInv,NewFirst,Target,MS,tolapp3d,TolGuide,
++		    ParSol,Fleche,Appro);
+     if (!TheWalk.IsDone()) {
+ #ifdef OCCT_DEBUG
+       std::cout << "Path is not created" << std::endl;
+@@ -1776,7 +1775,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+     narc2 = Lin->StartPointOnSecond().NbPointOnRst();
+     if(narc1 != 0) {
+       ChFi3d_FilCommonPoint(Lin->StartPointOnFirst(),Lin->TransitionOnS1(),
+-			    Standard_True, Data->ChangeVertexFirstOnS1(),tolesp);
++			    Standard_True, Data->ChangeVertexFirstOnS1(), tolapp3d);
+       debarc1 = Standard_True;
+       if(!SearchFace(Spine,Data->VertexFirstOnS1(),F1,bif)){
+ 	//It is checked if there is not an obstacle.
+@@ -1794,7 +1793,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+     }
+     if(narc2 != 0){
+       ChFi3d_FilCommonPoint(Lin->StartPointOnSecond(),Lin->TransitionOnS2(),
+-			    Standard_True, Data->ChangeVertexFirstOnS2(),tolesp);
++			    Standard_True, Data->ChangeVertexFirstOnS2(),tolapp3d);
+       debarc2 = Standard_True;
+       if(!SearchFace(Spine,Data->VertexFirstOnS2(),F2,bif)){
+ 	//It is checked if it is not an obstacle.
+@@ -1831,7 +1830,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+ 	  backwContinueFailed = Lin->StartPointOnFirst().ParameterOnGuide() > Target;
+ 	else {
+ 	  ChFi3d_FilCommonPoint(Lin->StartPointOnFirst(),Lin->TransitionOnS1(),
+-				Standard_True, Data->ChangeVertexFirstOnS1(),tolesp);
++				Standard_True, Data->ChangeVertexFirstOnS1(), tolapp3d);
+ 	  debarc1 = Standard_True;
+ 	  if(!SearchFace(Spine,Data->VertexFirstOnS1(),F1,bif)){
+ 	    //It is checked if it is not an obstacle.
+@@ -1853,7 +1852,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+ 	  backwContinueFailed = Lin->StartPointOnSecond().ParameterOnGuide() > Target;
+ 	else {
+ 	  ChFi3d_FilCommonPoint(Lin->StartPointOnSecond(),Lin->TransitionOnS2(),
+-                                Standard_True, Data->ChangeVertexFirstOnS2(),tolesp);
++                                Standard_True, Data->ChangeVertexFirstOnS2(), tolapp3d);
+           debarc2 = Standard_True;
+           if(!SearchFace(Spine,Data->VertexFirstOnS2(),F2,bif)){
+ 	    //It is checked if it is not an obstacle.
+@@ -1889,7 +1888,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+     narc2 = Lin->EndPointOnSecond().NbPointOnRst();
+     if(narc1 != 0){
+       ChFi3d_FilCommonPoint(Lin->EndPointOnFirst(),Lin->TransitionOnS1(),
+-			    Standard_False, Data->ChangeVertexLastOnS1(),tolesp);
++			    Standard_False, Data->ChangeVertexLastOnS1(), tolapp3d);
+       finarc1 = Standard_True;
+       if(!SearchFace(Spine,Data->VertexLastOnS1(),F1,bif)){
+              //It is checked if it is not an obstacle.
+@@ -1902,7 +1901,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+     }
+     if(narc2 != 0){
+       ChFi3d_FilCommonPoint(Lin->EndPointOnSecond(),Lin->TransitionOnS2(),
+-			    Standard_False, Data->ChangeVertexLastOnS2(),tolesp);
++			    Standard_False, Data->ChangeVertexLastOnS2(), tolapp3d);
+       finarc2 = Standard_True;
+       if(!SearchFace(Spine,Data->VertexLastOnS2(),F2,bif)){
+ 	 //It is checked if it is not an obstacle.
+@@ -1934,7 +1933,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+ 	  forwContinueFailed = Lin->EndPointOnFirst().ParameterOnGuide() < Target;
+ 	else {
+ 	  ChFi3d_FilCommonPoint(Lin->EndPointOnFirst(),Lin->TransitionOnS1(),
+-				Standard_False, Data->ChangeVertexLastOnS1(),tolesp);
++				Standard_False, Data->ChangeVertexLastOnS1(), tolapp3d);
+ 	  finarc1 = Standard_True;
+ 	  if(!SearchFace(Spine,Data->VertexLastOnS1(),F1,bif)){
+              //It is checked if it is not an obstacle.
+@@ -1951,7 +1950,7 @@ Standard_Boolean ChFi3d_Builder::ComputeData
+ 	  forwContinueFailed = Lin->EndPointOnSecond().ParameterOnGuide() < Target;
+ 	else {
+ 	  ChFi3d_FilCommonPoint(Lin->EndPointOnSecond(),Lin->TransitionOnS2(),
+-				Standard_False, Data->ChangeVertexLastOnS2(),tolesp);
++				Standard_False, Data->ChangeVertexLastOnS2(), tolapp3d);
+ 	  finarc2 = Standard_True;
+ 	  if(!SearchFace(Spine,Data->VertexLastOnS2(),F2,bif)){
+ 	    //On regarde si ce n'est pas un obstacle.
+@@ -2125,7 +2124,7 @@ Standard_Boolean ChFi3d_Builder::SimulData
+   TheWalk.Check2d(Standard_False);
+   
+   Standard_Real MS = MaxStep;
+-  Standard_Real TolGuide=tolguide, TolEsp = tolesp;
++  Standard_Real TolGuide=tolguide;
+   Standard_Integer Nbpnt = 0;
+   Standard_Real SpFirst = HGuide->FirstParameter();
+   Standard_Real SpLast =  HGuide->LastParameter();
+@@ -2145,7 +2144,7 @@ Standard_Boolean ChFi3d_Builder::SimulData
+   Standard_Real NewFirst = PFirst;
+   if(RecOnS1 || RecOnS2){
+     if(!TheWalk.PerformFirstSection(Func,FInv,PFirst,Target,Soldep,
+-				    tolesp,TolGuide,RecOnS1,RecOnS2,
++            tolapp3d,TolGuide,RecOnS1,RecOnS2,
+ 				    NewFirst,ParSol)){
+ #ifdef OCCT_DEBUG
+       std::cout<<"ChFi3d_Builder::SimulData : calculation fail first section"<<std::endl;
+@@ -2163,11 +2162,10 @@ Standard_Boolean ChFi3d_Builder::SimulData
+     if(!again && (MS < 5*TolGuide)) MS = 5*TolGuide;
+     else  {
+       if (5*TolGuide > MS) TolGuide = MS/5;
+-      if (5*TolEsp > MS) TolEsp = MS/5;
+     }
+       
+-    TheWalk.Perform(Func,FInv,NewFirst,Target,MS,TolGuide,
+-		    ParSol,TolEsp,Fleche,Appro);
++    TheWalk.Perform(Func,FInv,NewFirst,Target,MS,tolapp3d,TolGuide,
++		    ParSol,Fleche,Appro);
+     
+     if (!TheWalk.IsDone()) {
+ #ifdef OCCT_DEBUG
+diff --git a/src/ChFi3d/ChFi3d_Builder_C1.cxx b/src/ChFi3d/ChFi3d_Builder_C1.cxx
+index da727d1a3..edad09233 100644
+--- a/src/ChFi3d/ChFi3d_Builder_C1.cxx
++++ b/src/ChFi3d/ChFi3d_Builder_C1.cxx
+@@ -725,7 +725,7 @@ void ChFi3d_Builder::PerformOneCorner(const Standard_Integer Index,
+     ChFiDS_CommonPoint saveCPopArc = CPopArc;
+     c3df = DStr.Curve(FiopArc.LineIndex()).Curve();
+ 
+-    inters = IntersUpdateOnSame (HGs,HBs,c3df,Fop,Fv,Arcprol,Vtx,isfirst,10*tolesp, // in
++    inters = IntersUpdateOnSame (HGs,HBs,c3df,Fop,Fv,Arcprol,Vtx,isfirst,10*tolapp3d, // in
+ 				 FiopArc,CPopArc,p2dbout,wop);   // out
+ 
+     Handle(BRepAdaptor_Curve2d) pced = new BRepAdaptor_Curve2d();
+@@ -763,7 +763,7 @@ void ChFi3d_Builder::PerformOneCorner(const Standard_Integer Index,
+ 
+   TopoDS_Edge edgecouture;
+   Standard_Boolean couture,intcouture=Standard_False;
+-  Standard_Real tolreached = tolesp;
++  Standard_Real tolreached = tolapp3d;
+   Standard_Real  par1 =0.,par2 =0.;
+   Standard_Integer indpt = 0,Icurv1 = 0,Icurv2 = 0;
+   Handle(Geom_TrimmedCurve) curv1,curv2;
+@@ -817,7 +817,7 @@ void ChFi3d_Builder::PerformOneCorner(const Standard_Integer Index,
+ 
+     if (!ChFi3d_ComputeCurves(HGs,HBs,Pardeb,Parfin,Cc,
+ 			      Ps,
+-			      Pc,tolesp,tol2d,tolreached))
++			      Pc,tolapp3d,tol2d,tolreached))
+       throw Standard_Failure("OneCorner : echec calcul intersection");
+ 
+     Udeb = Cc->FirstParameter();
+@@ -1238,7 +1238,7 @@ void ChFi3d_Builder::PerformOneCorner(const Standard_Integer Index,
+     Handle(Geom2d_Curve) zob2dop, zob2dv;
+     //Standard_Real tolreached;
+     if (!ChFi3d_ComputeCurves(HBop,HBs,Pardeb,Parfin,zob3d,zob2dop,
+-			      zob2dv,tolesp,tol2d,tolreached))
++			      zob2dv,tolapp3d,tol2d,tolreached))
+       throw Standard_Failure("OneCorner : echec calcul intersection");
+ 
+     Udeb = zob3d->FirstParameter();
+@@ -2143,7 +2143,7 @@ void ChFi3d_Builder::PerformIntersectionAtEnd(const Standard_Integer Index)
+         const Handle(Geom_Curve)& c3df = DStr.Curve(Fi1.LineIndex()).Curve();
+         Standard_Real Ufi= Fi2.Parameter(isfirst);
+         ChFiDS_FaceInterference& Fi = Fd->ChangeInterferenceOnS1();
+-        if (!IntersUpdateOnSame (HGs,HBs,c3df,F1,Face[0],Edge[0],Vtx,isfirst,10*tolesp, // in
++        if (!IntersUpdateOnSame (HGs,HBs,c3df,F1,Face[0],Edge[0],Vtx,isfirst,10*tolapp3d, // in
+ 				 Fi,CV1,pfac1,Ufi))   // out
+ 	  throw Standard_Failure("IntersectionAtEnd: pb intersection Face - Fi");
+         Fi1 = Fi;
+@@ -2155,14 +2155,14 @@ void ChFi3d_Builder::PerformIntersectionAtEnd(const Standard_Integer Index)
+ 	  paredge2 = proj.LowerDistanceParameter();
+         }
+         // update stripe point
+-        TopOpeBRepDS_Point tpoint (CV1.Point(),tolesp);
++        TopOpeBRepDS_Point tpoint (CV1.Point(),tolapp3d);
+         indpoint1=DStr.AddPoint(tpoint);
+         stripe->SetIndexPoint(indpoint1,isfirst,1);
+         // reset arc of CV1
+         TopoDS_Vertex vert1,vert2;
+         TopExp::Vertices(Edge[0],vert1,vert2);
+         TopAbs_Orientation arcOri = Vtx.IsSame(vert1) ? TopAbs_FORWARD : TopAbs_REVERSED;
+-        CV1.SetArc(tolesp,Edge[0],paredge2,arcOri);
++        CV1.SetArc(tolapp3d,Edge[0],paredge2,arcOri);
+       }
+       else {
+         if (Hc1.IsNull()) {
+@@ -2389,7 +2389,7 @@ void ChFi3d_Builder::PerformIntersectionAtEnd(const Standard_Integer Index)
+       const Handle(Geom_Curve)& c3df = DStr.Curve(Fi2.LineIndex()).Curve();
+       Standard_Real Ufi= Fi1.Parameter(isfirst);
+       ChFiDS_FaceInterference& Fi = Fd->ChangeInterferenceOnS2();
+-      if (!IntersUpdateOnSame (HGs,HBs,c3df,F2,F,Edge[nb],Vtx,isfirst,10*tolesp, // in
++      if (!IntersUpdateOnSame (HGs,HBs,c3df,F2,F,Edge[nb],Vtx,isfirst,10*tolapp3d, // in
+ 			       Fi,CV2,pfac2,Ufi))   // out
+ 	throw Standard_Failure("IntersectionAtEnd: pb intersection Face - Fi");
+       Fi2 = Fi;
+@@ -2403,14 +2403,14 @@ void ChFi3d_Builder::PerformIntersectionAtEnd(const Standard_Integer Index)
+         paredge2 = proj.LowerDistanceParameter();
+       }
+       // update stripe point
+-      TopOpeBRepDS_Point tpoint (CV2.Point(),tolesp);
++      TopOpeBRepDS_Point tpoint (CV2.Point(),tolapp3d);
+       indpoint2=DStr.AddPoint(tpoint);
+       stripe->SetIndexPoint(indpoint2,isfirst,2);
+       // reset arc of CV2
+       TopoDS_Vertex vert1,vert2;
+       TopExp::Vertices(Edge[nbface],vert1,vert2);
+       TopAbs_Orientation arcOri = Vtx.IsSame(vert1) ? TopAbs_FORWARD : TopAbs_REVERSED;
+-      CV2.SetArc(tolesp,Edge[nbface],paredge2,arcOri);
++      CV2.SetArc(tolapp3d,Edge[nbface],paredge2,arcOri);
+     }
+ 
+ 
+@@ -2483,7 +2483,7 @@ void ChFi3d_Builder::PerformIntersectionAtEnd(const Standard_Integer Index)
+     //////////////////////////////////////////////////////////////////////
+ 
+     if (!ChFi3d_ComputeCurves(HGs,HBs,Pardeb,Parfin,Cc,
+-                              Ps,Pc,tolesp,tol2d,tolreached,nbface==1)) {
++                              Ps,Pc,tolapp3d,tol2d,tolreached,nbface==1)) {
+       PerformMoreThreeCorner (Index,1);
+       return;
+     }
+@@ -2799,7 +2799,7 @@ void ChFi3d_Builder::PerformIntersectionAtEnd(const Standard_Integer Index)
+       Standard_Real aTolreached;
+       ChFi3d_ComputePCurv(Cc,UV1,UV2,Ps,
+ 			  DStr.Surface(SDprev->Surf()).Surface(),
+-			  p1,p2,tolesp,aTolreached);
++			  p1,p2,tolapp3d,aTolreached);
+       TopOpeBRepDS_Curve& TCurv = DStr.ChangeCurve(indcurve[nb-1]);
+       TCurv.Tolerance(Max(TCurv.Tolerance(),aTolreached));
+ 
+@@ -2858,7 +2858,7 @@ void ChFi3d_Builder::PerformIntersectionAtEnd(const Standard_Integer Index)
+     //box.Add(aSurf->Value(UV.X(), UV.Y()));
+     
+     ChFi3d_ComputeArete(CV1,UV1,CV2,UV2,aSurf, // in 
+-			C3d,Ps,p1,p2,tolesp,tol2d,aTolreached,0); // out except tolers
++			C3d,Ps,p1,p2,tolapp3d,tol2d,aTolreached,0); // out except tolers
+ 
+     indpoint1 = indpoint2 = midIpoint;
+     gp_Pnt point;
+@@ -2890,7 +2890,7 @@ void ChFi3d_Builder::PerformIntersectionAtEnd(const Standard_Integer Index)
+     UV1.SetCoord(isUShrink ? 1 : 2, prevSDParam);
+     UV2.SetCoord(isUShrink ? 1 : 2, prevSDParam);
+     
+-    ChFi3d_ComputePCurv(C3d,UV1,UV2,Pc,aSurf,p1,p2,tolesp,aTolreached);
++    ChFi3d_ComputePCurv(C3d,UV1,UV2,Pc,aSurf,p1,p2,tolapp3d,aTolreached);
+     
+     Crv.Tolerance(Max(Crv.Tolerance(),aTolreached));
+     Interfc= ChFi3d_FilCurveInDS (Icurv,IsurfPrev,Pc,TopAbs::Reverse(orcourbe));
+@@ -3974,7 +3974,7 @@ void ChFi3d_Builder::IntersectMoreCorner(const Standard_Integer Index)
+       Handle(Geom2dAdaptor_Curve) pcprol = new Geom2dAdaptor_Curve(gpcprol);
+       Standard_Real partemp = BRep_Tool::Parameter(Vtx,Arcprol);
+       inters = Update(HBs,pcprol,HGs,FiopArc,CPopArc,p2dbout,
+-		      isfirst,partemp,wop,10*tolesp);
++		      isfirst,partemp,wop,10*tolapp3d);
+     }
+     Handle(BRepAdaptor_Curve2d) pced = new BRepAdaptor_Curve2d();
+     pced->Initialize(CPadArc.Arc(),Fv);
+@@ -3987,7 +3987,7 @@ void ChFi3d_Builder::IntersectMoreCorner(const Standard_Integer Index)
+ 
+   TopoDS_Edge edgecouture;
+   Standard_Boolean couture,intcouture=Standard_False;
+-  Standard_Real tolreached = tolesp;
++  Standard_Real tolreached = tolapp3d;
+   Standard_Real par1 = 0.,par2 = 0.;
+   Standard_Integer indpt =0,Icurv1 =0,Icurv2 =0;
+   Handle(Geom_TrimmedCurve) curv1,curv2;
+@@ -4039,7 +4039,7 @@ void ChFi3d_Builder::IntersectMoreCorner(const Standard_Integer Index)
+ 
+     if (!ChFi3d_ComputeCurves(HGs,HBs,Pardeb,Parfin,Cc,
+ 			      Ps,
+-			      Pc,tolesp,tol2d,tolreached))
++			      Pc,tolapp3d,tol2d,tolreached))
+     throw Standard_Failure("OneCorner : failed calculation intersection");
+ 
+     Udeb = Cc->FirstParameter();
+@@ -4311,7 +4311,7 @@ void ChFi3d_Builder::IntersectMoreCorner(const Standard_Integer Index)
+     Handle(Geom2d_Curve) zob2dop, zob2dv;
+ //    Standard_Real tolreached;
+     if (!ChFi3d_ComputeCurves(HBop,HBs,Pardeb,Parfin,zob3d,zob2dop,
+-			      zob2dv,tolesp,tol2d,tolreached))
++			      zob2dv,tolapp3d,tol2d,tolreached))
+       throw Standard_Failure("OneCorner : echec calcul intersection");
+ 
+     Udeb = zob3d->FirstParameter();
+diff --git a/src/ChFi3d/ChFi3d_Builder_C2.cxx b/src/ChFi3d/ChFi3d_Builder_C2.cxx
+index 37a13afa2..3892b686b 100644
+--- a/src/ChFi3d/ChFi3d_Builder_C2.cxx
++++ b/src/ChFi3d/ChFi3d_Builder_C2.cxx
+@@ -230,7 +230,7 @@ Standard_Boolean ChFi3d_Builder::PerformTwoCornerbyInter(const Standard_Integer
+   }
+   gp_Pnt psp1 = Hpivot->Value(parCP1);
+   gp_Pnt psp2 = Hpivot->Value(parCP2);
+-  Standard_Real sameparam = (psp1.Distance(psp2) < 10 * tolesp);
++  Standard_Real sameparam = (psp1.Distance(psp2) < 10.0 * tolapp3d);
+    
+   TopoDS_Face FF1 = TopoDS::Face(DStr.Shape(Fd1->Index(IFaArc1)));
+   TopoDS_Face FF2 = TopoDS::Face(DStr.Shape(Fd2->Index(IFaArc2)));
+@@ -289,10 +289,10 @@ Standard_Boolean ChFi3d_Builder::PerformTwoCornerbyInter(const Standard_Integer
+       Reduce(UIntPC1,UIntPC2,HS1,HS2);
+     }
+     
+-    Standard_Real tolreached = tolesp;
++    Standard_Real tolreached = tolapp3d;
+     if (IFaCo1 == 1 && 
+ 	!ChFi3d_ComputeCurves(HS1,HS2,Pardeb,Parfin,Gc,
+-			      PGc1,PGc2,tolesp,tol2d,tolreached)) {
++			      PGc1,PGc2,tolapp3d,tol2d,tolreached)) {
+ #ifdef OCCT_DEBUG
+       std::cout<<"failed to calculate bevel error interSS"<<std::endl;
+ #endif
+@@ -301,7 +301,7 @@ Standard_Boolean ChFi3d_Builder::PerformTwoCornerbyInter(const Standard_Integer
+     }
+     else if (IFaCo1 == 2 && 
+ 	     !ChFi3d_ComputeCurves(HS1,HS2,Parfin,Pardeb,Gc,
+-				   PGc1,PGc2,tolesp,tol2d,tolreached)) {
++				   PGc1,PGc2,tolapp3d,tol2d,tolreached)) {
+ #ifdef OCCT_DEBUG
+       std::cout<<"failed to calculate bevel error interSS"<<std::endl;
+ #endif
+@@ -451,7 +451,7 @@ Standard_Boolean ChFi3d_Builder::PerformTwoCornerbyInter(const Standard_Integer
+     
+     Standard_Real tolreached;
+     if (!ChFi3d_ComputeCurves(SmaHS,BigHS,Pardeb,Parfin,Gc,
+-			      PGc1,PGc2,tolesp,tol2d,tolreached)) {
++			      PGc1,PGc2,tolapp3d,tol2d,tolreached)) {
+ #ifdef OCCT_DEBUG
+       std::cout<<"failed to calculate bevel failed interSS"<<std::endl;
+ #endif
+@@ -573,7 +573,7 @@ Standard_Boolean ChFi3d_Builder::PerformTwoCornerbyInter(const Standard_Integer
+     ChFi3d_BoundFac (*HF, uu1, uu2, vv1, vv2, Standard_True);
+ 
+     if (!ChFi3d_ComputeCurves(HF,BigHS,Pardeb,Parfin,Gc,
+-			      PGc1,PGc2,tolesp,tol2d,tolreached)) {
++			      PGc1,PGc2,tolapp3d,tol2d,tolreached)) {
+ #ifdef OCCT_DEBUG
+       std::cout<<"fail calculation bevel fail interSS"<<std::endl;
+ #endif
+@@ -638,7 +638,26 @@ Standard_Boolean ChFi3d_Builder::PerformTwoCornerbyInter(const Standard_Integer
+ }
+ 
+ 
++//=======================================================================
++//function : UpdateTolesp
++//purpose  : Update tolesp field to fit it to range of parameter of spine curve
++//=======================================================================
+ 
++void ChFi3d_Builder::UpdateTolesp()
++{
++  ChFiDS_ListIteratorOfListOfStripe itel;
++  // tolesp = Precision::Infinite();
++  for (itel.Initialize(myListStripe); itel.More(); itel.Next())
++  {
++    Handle(ChFiDS_Stripe)& curStripe = itel.Value();
++    Handle(ChFiDS_Spine)& Spine = curStripe->ChangeSpine();
++    const Standard_Real current_stripe_tolesp = Spine->GetTolesp();
++    if (tolesp > current_stripe_tolesp)
++    {
++      tolesp = current_stripe_tolesp;
++    }
++  }
++}
+ 
+ 
+ 
+diff --git a/src/ChFi3d/ChFi3d_Builder_CnCrn.cxx b/src/ChFi3d/ChFi3d_Builder_CnCrn.cxx
+index c58f6ec7a..e974aca2f 100644
+--- a/src/ChFi3d/ChFi3d_Builder_CnCrn.cxx
++++ b/src/ChFi3d/ChFi3d_Builder_CnCrn.cxx
+@@ -2053,7 +2053,7 @@ void  ChFi3d_Builder::PerformMoreThreeCorner(const Standard_Integer Jndex,
+   // Using constraint order > 0 very often causes  unpredicable undulations of solution
+   Standard_Integer degree = 3, nbcurvpnt = 10, nbiter = 1;
+   Standard_Integer constr = 1; //G1
+-  GeomPlate_BuildPlateSurface PSurf(degree, nbcurvpnt, nbiter, tol2d, tolesp, angular);
++  GeomPlate_BuildPlateSurface PSurf(degree, nbcurvpnt, nbiter, tol2d, tolapp3d, angular);
+ // calculation of curves on surface for each stripe 
+   for (ic=0;ic<nedge;ic++) {
+     gp_Pnt2d p2d1, p2d2;
+@@ -2081,7 +2081,7 @@ void  ChFi3d_Builder::PerformMoreThreeCorner(const Standard_Integer Jndex,
+       //Order.SetValue(ic,1);
+       Order.SetValue(ic, constr);
+       Handle(GeomPlate_CurveConstraint) Cont =
+-	new GeomPlate_CurveConstraint(HCons,Order.Value(ic), nbcurvpnt,tolesp,angular,0.1);
++	new GeomPlate_CurveConstraint(HCons,Order.Value(ic),nbcurvpnt,tolapp3d,angular,0.1);
+       PSurf.Add(Cont);
+       
+       // calculate indexes of points and of the curve for the DS         
+@@ -2378,7 +2378,7 @@ void  ChFi3d_Builder::PerformMoreThreeCorner(const Standard_Integer Jndex,
+          if (isG1.Value(ic)) 
+            Order.SetValue(n3d,1);
+          Handle(GeomPlate_CurveConstraint) Cont =
+-           new GeomPlate_CurveConstraint(HCons,Order.Value(n3d),10,tolesp,angular,0.1);
++           new GeomPlate_CurveConstraint(HCons,Order.Value(n3d),10,tolapp3d,angular,0.1);
+          PSurf.Add(Cont);
+ 
+          //calculation of curve 3d if it is not a projection 
+@@ -2502,7 +2502,7 @@ void  ChFi3d_Builder::PerformMoreThreeCorner(const Standard_Integer Jndex,
+ 	  Handle(Adaptor3d_CurveOnSurface) HCons =new Adaptor3d_CurveOnSurface(CurvOnS);
+ 	  Order.SetValue(n3d,1);
+ 	  Handle(GeomPlate_CurveConstraint) Cont =
+-	    new GeomPlate_CurveConstraint(HCons,Order.Value(n3d),10,tolesp,angular,0.1);
++	    new GeomPlate_CurveConstraint(HCons,Order.Value(n3d),10,tolapp3d,angular,0.1);
+ 	  PSurf.Add(Cont);
+ 	  TopOpeBRepDS_Curve tcurv3d( cproj,error);
+ 	  indcurve3d.SetValue(n3d, DStr.AddCurve(tcurv3d));
+@@ -2615,7 +2615,7 @@ void  ChFi3d_Builder::PerformMoreThreeCorner(const Standard_Integer Jndex,
+ 	Handle(Adaptor3d_CurveOnSurface) HCons =new Adaptor3d_CurveOnSurface(CurvOnS);
+ 	Order.SetValue(n3d,0);
+ 	Handle(GeomPlate_CurveConstraint) Cont =
+-	  new GeomPlate_CurveConstraint(HCons,Order.Value(n3d),10,tolesp,angular,0.1);
++	  new GeomPlate_CurveConstraint(HCons,Order.Value(n3d),10,tolapp3d,angular,0.1);
+ 	PSurf.Add(Cont);
+ 	TopOpeBRepDS_Curve tcurv3d( ctrim,1.e-4);
+ 	indcurve3d.SetValue(n3d, DStr.AddCurve(tcurv3d));
+diff --git a/src/ChFi3d/ChFi3d_Builder_SpKP.cxx b/src/ChFi3d/ChFi3d_Builder_SpKP.cxx
+index c893b55c7..f17b40006 100644
+--- a/src/ChFi3d/ChFi3d_Builder_SpKP.cxx
++++ b/src/ChFi3d/ChFi3d_Builder_SpKP.cxx
+@@ -654,7 +654,7 @@ Standard_Boolean ChFi3d_Builder::SplitKPart
+   
+   // Cutting of tangency lines (hatching).
+   Geom2dHatch_Intersector Inter(pitol,pitol);
+-  Geom2dHatch_Hatcher H1(Inter,tol2d,tolesp), H2(Inter,tol2d,tolesp);
++  Geom2dHatch_Hatcher H1(Inter,tol2d,tolapp3d), H2(Inter,tol2d,tolapp3d);
+   Standard_Integer ie;
+   Handle(Geom2d_Curve) C1 = Data->InterferenceOnS1().PCurveOnFace(); 
+   Geom2dAdaptor_Curve  ll1;
+diff --git a/src/ChFi3d/ChFi3d_ChBuilder.cxx b/src/ChFi3d/ChFi3d_ChBuilder.cxx
+index 078a64723..999cfae0c 100644
+--- a/src/ChFi3d/ChFi3d_ChBuilder.cxx
++++ b/src/ChFi3d/ChFi3d_ChBuilder.cxx
+@@ -822,13 +822,13 @@ ChFi3d_ChBuilder::SimulSurf(Handle(ChFiDS_SurfData)&            Data,
+     Data->SetSimul(sec);
+     Data->Set2dPoints(pf1,pl1,pf2,pl2);
+     ChFi3d_FilCommonPoint(lin->StartPointOnFirst(),lin->TransitionOnS1(),
+-			  Standard_True, Data->ChangeVertexFirstOnS1(),tolesp);
++			  Standard_True, Data->ChangeVertexFirstOnS1(),tolapp3d);
+     ChFi3d_FilCommonPoint(lin->EndPointOnFirst(),lin->TransitionOnS1(),
+-			  Standard_False,Data->ChangeVertexLastOnS1(),tolesp);
++			  Standard_False,Data->ChangeVertexLastOnS1(),tolapp3d);
+     ChFi3d_FilCommonPoint(lin->StartPointOnSecond(),lin->TransitionOnS2(),
+-			  Standard_True, Data->ChangeVertexFirstOnS2(),tolesp);
++			  Standard_True, Data->ChangeVertexFirstOnS2(),tolapp3d);
+     ChFi3d_FilCommonPoint(lin->EndPointOnSecond(),lin->TransitionOnS2(),
+-			  Standard_False, Data->ChangeVertexLastOnS2(),tolesp);
++			  Standard_False, Data->ChangeVertexLastOnS2(),tolapp3d);
+     
+     Standard_Boolean reverse = (!Forward || Inside);
+     if(intf && reverse){
+@@ -932,13 +932,13 @@ ChFi3d_ChBuilder::SimulSurf(Handle(ChFiDS_SurfData)&            Data,
+     Data->SetSimul(sec);
+     Data->Set2dPoints(pf1,pl1,pf2,pl2);
+     ChFi3d_FilCommonPoint(lin->StartPointOnFirst(),lin->TransitionOnS1(),
+-			Standard_True, Data->ChangeVertexFirstOnS1(),tolesp);
++			Standard_True, Data->ChangeVertexFirstOnS1(),tolapp3d);
+     ChFi3d_FilCommonPoint(lin->EndPointOnFirst(),lin->TransitionOnS1(),
+-			  Standard_False,Data->ChangeVertexLastOnS1(),tolesp);
++			  Standard_False,Data->ChangeVertexLastOnS1(),tolapp3d);
+     ChFi3d_FilCommonPoint(lin->StartPointOnSecond(),lin->TransitionOnS2(),
+-			  Standard_True, Data->ChangeVertexFirstOnS2(),tolesp);
++			  Standard_True, Data->ChangeVertexFirstOnS2(),tolapp3d);
+     ChFi3d_FilCommonPoint(lin->EndPointOnSecond(),lin->TransitionOnS2(),
+-			  Standard_False, Data->ChangeVertexLastOnS2(),tolesp);
++			  Standard_False, Data->ChangeVertexLastOnS2(),tolapp3d);
+     
+     Standard_Boolean reverse = (!Forward || Inside);
+     if(intf && reverse){
+@@ -1017,13 +1017,13 @@ ChFi3d_ChBuilder::SimulSurf(Handle(ChFiDS_SurfData)&            Data,
+     Data->SetSimul(sec);
+     Data->Set2dPoints(pf1,pl1,pf2,pl2);
+     ChFi3d_FilCommonPoint(lin->StartPointOnFirst(),lin->TransitionOnS1(),
+-                          Standard_True, Data->ChangeVertexFirstOnS1(),tolesp);
++                          Standard_True, Data->ChangeVertexFirstOnS1(),tolapp3d);
+     ChFi3d_FilCommonPoint(lin->EndPointOnFirst(),lin->TransitionOnS1(),
+-                          Standard_False,Data->ChangeVertexLastOnS1(),tolesp);
++                          Standard_False,Data->ChangeVertexLastOnS1(),tolapp3d);
+     ChFi3d_FilCommonPoint(lin->StartPointOnSecond(),lin->TransitionOnS2(),
+-                          Standard_True, Data->ChangeVertexFirstOnS2(),tolesp);
++                          Standard_True, Data->ChangeVertexFirstOnS2(),tolapp3d);
+     ChFi3d_FilCommonPoint(lin->EndPointOnSecond(),lin->TransitionOnS2(),
+-                          Standard_False, Data->ChangeVertexLastOnS2(),tolesp);
++                          Standard_False, Data->ChangeVertexLastOnS2(),tolapp3d);
+     
+     Standard_Boolean reverse = (!Forward || Inside);
+     if(intf && reverse){
+@@ -1175,7 +1175,7 @@ Standard_Boolean ChFi3d_ChBuilder::PerformFirstSection
+   if (chsp.IsNull()) 
+     throw Standard_ConstructionError("PerformSurf : this is not the spine of a chamfer");
+ 
+-  Standard_Real TolGuide = HGuide->Resolution(tolesp) ;
++  Standard_Real TolGuide = HGuide->Resolution(tolapp3d);
+ 
+ 
+   if (chsp->IsChamfer() == ChFiDS_Sym) {
+@@ -1244,7 +1244,7 @@ Standard_Boolean ChFi3d_ChBuilder::PerformFirstSection
+     }
+     
+     return TheWalk.PerformFirstSection(*pFunc,Par,SolDep,
+-				       tolesp,TolGuide,Pos1,Pos2);
++				       tolapp3d,TolGuide,Pos1,Pos2);
+   }
+   else if (chsp->IsChamfer() == ChFiDS_TwoDist)  {
+     Standard_Real dis1, dis2;
+@@ -1347,7 +1347,7 @@ Standard_Boolean ChFi3d_ChBuilder::PerformFirstSection
+     }
+     
+     return TheWalk.PerformFirstSection(*pFunc,Par,SolDep,
+-				       tolesp,TolGuide,Pos1,Pos2);
++				       tolapp3d,TolGuide,Pos1,Pos2);
+   }
+   else { //distance and angle
+     Standard_Real dis1, angle;
+@@ -1415,7 +1415,7 @@ Standard_Boolean ChFi3d_ChBuilder::PerformFirstSection
+     }
+     
+     return TheWalk.PerformFirstSection(Func,Par,SolDep,
+-                                       tolesp,TolGuide,Pos1,Pos2);
++                                       tolapp3d,TolGuide,Pos1,Pos2);
+   } //distance and angle
+ }
+ 
+diff --git a/src/ChFi3d/ChFi3d_ChBuilder_C3.cxx b/src/ChFi3d/ChFi3d_ChBuilder_C3.cxx
+index 9bd677069..e6952627f 100644
+--- a/src/ChFi3d/ChFi3d_ChBuilder_C3.cxx
++++ b/src/ChFi3d/ChFi3d_ChBuilder_C3.cxx
+@@ -478,7 +478,7 @@ void ChFi3d_ChBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+     if (!ComputeIntersection(DStr,fdpiv,coin,
+ 			     p3d[fin],p2d[fin],p3d[deb],p2d[deb],
+ 			     gcpiv,pivpc1,pivpc2,deru,derv,ptbid,
+-			     tolesp,tol2d,tolrcoinpiv))
++			     tolapp3d,tol2d,tolrcoinpiv))
+       throw StdFail_NotDone("echec calcul intersection coin-pivot");
+     gp_Vec norpiv = deru.Crossed(derv);
+     
+@@ -495,7 +495,7 @@ void ChFi3d_ChBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+     if (!ComputeIntersection(DStr,fddeb,coin,
+ 			     p3d[pivot],p2d1,p3d[fin],p2d2,
+ 			     gcdeb,debpc1,debpc2,deru,derv,ptbid,
+-			     tolesp,tol2d,tolrcoindeb))
++			     tolapp3d,tol2d,tolrcoindeb))
+       throw StdFail_NotDone("echec calcul intersection coin-deb");
+     Icf = DStr.AddCurve(TopOpeBRepDS_Curve(gcdeb,tolrcoindeb));    
+ 
+@@ -514,7 +514,7 @@ void ChFi3d_ChBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+     if (!ComputeIntersection(DStr,fdfin,coin,
+ 			     p3dface,p2d1,p3d[deb],p2d2,
+ 			     gcfin,finpc1,finpc2,deru,derv,ptbid,
+-			     tolesp,tol2d,tolrcoinfin)) 
++			     tolapp3d,tol2d,tolrcoinfin)) 
+       throw StdFail_NotDone("echec calcul intersection coin-face");
+     Icl = DStr.AddCurve(TopOpeBRepDS_Curve(gcfin,tolrcoinfin));  
+     
+@@ -543,8 +543,8 @@ void ChFi3d_ChBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+ 	  gaf->Initialize(face[pivot]);
+ 	  
+ 	  Standard_Real tolr;
+-	  ChFi3d_ProjectPCurv(gac,gaf,facepc1,tolesp,tolr);
+-	  ChFi3d_ProjectPCurv(gac,gas,facepc2,tolesp,tolr);
++	  ChFi3d_ProjectPCurv(gac,gaf,facepc1,tolapp3d,tolr);
++	  ChFi3d_ProjectPCurv(gac,gas,facepc2,tolapp3d,tolr);
+ 	}
+       }
+     }
+@@ -616,18 +616,18 @@ void ChFi3d_ChBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+       // les bords de coin sont des lignes courbes qui suivent les 
+       // tangentes donnees
+       Bfac = ChFi3d_mkbound(Fac,PCurveOnFace,sens[deb],p2d[pivot],Tgpiv,
+-			    sens[fin],p2d[3],Tg3,tolesp,2.e-4);
++			    sens[fin],p2d[3],Tg3,tolapp3d,2.e-4);
+       Bpiv = ChFi3d_mkbound(Surf,PCurveOnPiv,sens[deb],p2d[fin],vpfin,
+-			    sens[fin],p2d[deb],vpdeb,tolesp,2.e-4);
++			    sens[fin],p2d[deb],vpdeb,tolapp3d,2.e-4);
+     }
+     else {
+       // les bords de coin sont des segments
+       //      Bfac = ChFi3d_mkbound(Fac,PCurveOnFace,p2d[pivot],
+       //			    p2d[3],tolesp,2.e-4);
+       Bfac = ChFi3d_mkbound(Fac,PCurveOnFace,p2d[pivot],
+-			    p2d[3],tolesp,2.e-4);
++			    p2d[3],tolapp3d,2.e-4);
+       Bpiv = ChFi3d_mkbound(Surf,PCurveOnPiv,p2d[fin],
+-			    p2d[deb],tolesp,2.e-4);
++			    p2d[deb],tolapp3d,2.e-4);
+     }
+     
+     gp_Pnt2d pdeb1 = fddeb->Interference(jf[deb][pivot]).PCurveOnSurf()->Value(p[deb][pivot]);
+@@ -637,15 +637,15 @@ void ChFi3d_ChBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+     
+     if (issmooth) {
+       // il faut homogeneiser, mettre les bords "BoundWithSurf"
+-      Bdeb = ChFi3d_mkbound(DStr.Surface(fddeb->Surf()).Surface(),pdeb1,pdeb2,tolesp,2.e-4);
+-      Bfin = ChFi3d_mkbound(DStr.Surface(fdfin->Surf()).Surface(),pfin1,pfin2,tolesp,2.e-4);
++      Bdeb = ChFi3d_mkbound(DStr.Surface(fddeb->Surf()).Surface(),pdeb1,pdeb2,tolapp3d,2.e-4);
++      Bfin = ChFi3d_mkbound(DStr.Surface(fdfin->Surf()).Surface(),pfin1,pfin2,tolapp3d,2.e-4);
+     }
+     else {
+       // ou les 4 bords de type "FreeBoundary"
+       Bdeb = ChFi3d_mkbound(DStr.Surface(fddeb->Surf()).Surface(),pdeb1,pdeb2,
+-			    tolesp,2.e-4,Standard_True);
++			    tolapp3d,2.e-4,Standard_True);
+       Bfin = ChFi3d_mkbound(DStr.Surface(fdfin->Surf()).Surface(),pfin1,pfin2,
+-			    tolesp,2.e-4,Standard_True);
++			    tolapp3d,2.e-4,Standard_True);
+     }
+     GeomFill_ConstrainedFilling fil(8,20);
+     fil.Init(Bpiv,Bfin,Bfac,Bdeb);
+@@ -704,7 +704,7 @@ void ChFi3d_ChBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+       ChFi3d_ComputeArete(Pf1,pp1,Pf2,pp2,
+ 			  DStr.Surface(coin->Surf()).Surface(),C3d,
+ 			  corner->ChangeFirstPCurve(),P1deb,P2deb,
+-			  tolesp,tol2d,tolreached,0);
++        tolapp3d,tol2d,tolreached,0);
+       TopOpeBRepDS_Curve Tcurv(C3d,tolreached);
+       Icf = DStr.AddCurve(Tcurv);
+     }
+@@ -733,7 +733,7 @@ void ChFi3d_ChBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+       ChFi3d_ComputeArete(Pl1,pp1,Pl2,pp2,
+ 			  DStr.Surface(coin->Surf()).Surface(),C3d,
+ 			  corner->ChangeLastPCurve(),P1fin,P2fin,
+-			  tolesp,tol2d,tolreached,0);
++        tolapp3d,tol2d,tolreached,0);
+       TopOpeBRepDS_Curve Tcurv(C3d,tolreached);
+       Icl = DStr.AddCurve(Tcurv);
+     }
+diff --git a/src/ChFi3d/ChFi3d_FilBuilder.cxx b/src/ChFi3d/ChFi3d_FilBuilder.cxx
+index 65164af45..d893460fe 100644
+--- a/src/ChFi3d/ChFi3d_FilBuilder.cxx
++++ b/src/ChFi3d/ChFi3d_FilBuilder.cxx
+@@ -689,13 +689,13 @@ ChFi3d_FilBuilder::SimulSurf(Handle(ChFiDS_SurfData)&            Data,
+   Data->SetSimul(sec);
+   Data->Set2dPoints(pf1,pl1,pf2,pl2);
+   ChFi3d_FilCommonPoint(lin->StartPointOnFirst(),lin->TransitionOnS1(),
+-			Standard_True, Data->ChangeVertexFirstOnS1(),tolesp);
++			Standard_True, Data->ChangeVertexFirstOnS1(),tolapp3d);
+   ChFi3d_FilCommonPoint(lin->EndPointOnFirst(),lin->TransitionOnS1(),
+-			Standard_False,Data->ChangeVertexLastOnS1(),tolesp);
++			Standard_False,Data->ChangeVertexLastOnS1(),tolapp3d);
+   ChFi3d_FilCommonPoint(lin->StartPointOnSecond(),lin->TransitionOnS2(),
+-			Standard_True, Data->ChangeVertexFirstOnS2(),tolesp);
++			Standard_True, Data->ChangeVertexFirstOnS2(),tolapp3d);
+   ChFi3d_FilCommonPoint(lin->EndPointOnSecond(),lin->TransitionOnS2(),
+-			Standard_False, Data->ChangeVertexLastOnS2(),tolesp);
++			Standard_False, Data->ChangeVertexLastOnS2(),tolapp3d);
+   Standard_Boolean reverse = (!Forward || Inside);
+   if(intf && reverse){
+     Standard_Boolean ok = Standard_False;
+@@ -857,13 +857,13 @@ void  ChFi3d_FilBuilder::SimulSurf(Handle(ChFiDS_SurfData)&            Data,
+ //  gp_Pnt2d pbid;
+   Data->Set2dPoints(ppcf,ppcl,pf,pl);
+   ChFi3d_FilCommonPoint(lin->StartPointOnFirst(),lin->TransitionOnS1(),
+-			Standard_True, Data->ChangeVertexFirstOnS2(),tolesp);
++			Standard_True, Data->ChangeVertexFirstOnS2(),tolapp3d);
+   ChFi3d_FilCommonPoint(lin->EndPointOnFirst(),lin->TransitionOnS1(),
+-			Standard_False,Data->ChangeVertexLastOnS2(),tolesp);
++			Standard_False,Data->ChangeVertexLastOnS2(),tolapp3d);
+   ChFi3d_FilCommonPoint(lin->StartPointOnSecond(),lin->TransitionOnS2(),
+-			Standard_True, Data->ChangeVertexFirstOnS1(),tolesp);
++			Standard_True, Data->ChangeVertexFirstOnS1(),tolapp3d);
+   ChFi3d_FilCommonPoint(lin->EndPointOnSecond(),lin->TransitionOnS2(),
+-			Standard_False, Data->ChangeVertexLastOnS1(),tolesp);
++			Standard_False, Data->ChangeVertexLastOnS1(),tolapp3d);
+ }
+ 
+ //=======================================================================
+@@ -989,13 +989,13 @@ void  ChFi3d_FilBuilder::SimulSurf(Handle(ChFiDS_SurfData)&            Data,
+   //gp_Pnt2d pbid;
+   Data->Set2dPoints(pf,pl,ppcf,ppcl);
+   ChFi3d_FilCommonPoint(lin->StartPointOnFirst(),lin->TransitionOnS1(),
+-			Standard_True, Data->ChangeVertexFirstOnS1(),tolesp);
++			Standard_True, Data->ChangeVertexFirstOnS1(),tolapp3d);
+   ChFi3d_FilCommonPoint(lin->EndPointOnFirst(),lin->TransitionOnS1(),
+-			Standard_False,Data->ChangeVertexLastOnS1(),tolesp);
++			Standard_False,Data->ChangeVertexLastOnS1(),tolapp3d);
+   ChFi3d_FilCommonPoint(lin->StartPointOnSecond(),lin->TransitionOnS2(),
+-			Standard_True, Data->ChangeVertexFirstOnS2(),tolesp);
++			Standard_True, Data->ChangeVertexFirstOnS2(),tolapp3d);
+   ChFi3d_FilCommonPoint(lin->EndPointOnSecond(),lin->TransitionOnS2(),
+-			Standard_False, Data->ChangeVertexLastOnS2(),tolesp);
++			Standard_False, Data->ChangeVertexLastOnS2(),tolapp3d);
+ }
+ 
+ 
+@@ -1153,13 +1153,13 @@ void  ChFi3d_FilBuilder::SimulSurf(Handle(ChFiDS_SurfData)&            Data,
+ //  Data->Set2dPoints(pf,pl,pbid,pbid);
+ 
+   ChFi3d_FilCommonPoint(lin->StartPointOnFirst(),lin->TransitionOnS1(),
+-			Standard_True, Data->ChangeVertexFirstOnS1(),tolesp);
++			Standard_True, Data->ChangeVertexFirstOnS1(),tolapp3d);
+   ChFi3d_FilCommonPoint(lin->EndPointOnFirst(),lin->TransitionOnS1(),
+-			Standard_False,Data->ChangeVertexLastOnS1(),tolesp);
++			Standard_False,Data->ChangeVertexLastOnS1(),tolapp3d);
+   ChFi3d_FilCommonPoint(lin->StartPointOnSecond(),lin->TransitionOnS2(),
+-			Standard_True, Data->ChangeVertexFirstOnS2(),tolesp);
++			Standard_True, Data->ChangeVertexFirstOnS2(),tolapp3d);
+   ChFi3d_FilCommonPoint(lin->EndPointOnSecond(),lin->TransitionOnS2(),
+-			Standard_False, Data->ChangeVertexLastOnS2(),tolesp);
++			Standard_False, Data->ChangeVertexLastOnS2(),tolapp3d);
+ }
+ 
+ 
+@@ -1188,14 +1188,14 @@ Standard_Boolean ChFi3d_FilBuilder::PerformFirstSection
+ {
+   Handle(ChFiDS_FilSpine) fsp = Handle(ChFiDS_FilSpine)::DownCast(Spine);
+   if(fsp.IsNull()) throw Standard_ConstructionError("PerformSurf : this is not the spine of a fillet");
+-  Standard_Real TolGuide = HGuide->Resolution(tolesp);
++  Standard_Real TolGuide = HGuide->Resolution(tolapp3d);
+   if(fsp->IsConstant()){
+     BRepBlend_ConstRad Func(S1,S2,HGuide);
+     Func.Set(fsp->Radius(),Choix);
+     Func.Set(myShape);
+     BRepBlend_Walking TheWalk(S1,S2,I1,I2,HGuide);
+     return TheWalk.PerformFirstSection(Func,Par,SolDep,
+-				       tolesp,TolGuide,Pos1,Pos2);
++               tolapp3d,TolGuide,Pos1,Pos2);
+   }
+   else {
+     BRepBlend_EvolRad Func(S1,S2,HGuide,fsp->Law(HGuide));
+@@ -1203,7 +1203,7 @@ Standard_Boolean ChFi3d_FilBuilder::PerformFirstSection
+     Func.Set(myShape);
+     BRepBlend_Walking TheWalk(S1,S2,I1,I2,HGuide);
+     return TheWalk.PerformFirstSection(Func,Par,SolDep,
+-				       tolesp,TolGuide,Pos1,Pos2);
++               tolapp3d,TolGuide,Pos1,Pos2);
+   }
+ }
+ 
+diff --git a/src/ChFi3d/ChFi3d_FilBuilder_C2.cxx b/src/ChFi3d/ChFi3d_FilBuilder_C2.cxx
+index b54b8f997..942eed88e 100644
+--- a/src/ChFi3d/ChFi3d_FilBuilder_C2.cxx
++++ b/src/ChFi3d/ChFi3d_FilBuilder_C2.cxx
+@@ -321,7 +321,7 @@ void ChFi3d_FilBuilder::PerformTwoCorner(const Standard_Integer Index)
+     parCP2 = CP2.ParameterOnArc();
+     gp_Pnt tst1 = Hpivot->Value(parCP1);
+     gp_Pnt tst2 = Hpivot->Value(parCP2);
+-    sameparam = tst1.Distance(tst2) <= tolesp;
++    sameparam = tst1.Distance(tst2) <= tolapp3d;
+   }
+   Handle(BRepAdaptor_Surface) HFaCo = new BRepAdaptor_Surface();
+   Handle(BRepAdaptor_Surface) HFaPiv;
+@@ -477,18 +477,18 @@ void ChFi3d_FilBuilder::PerformTwoCorner(const Standard_Integer Index)
+ #ifdef OCCT_DEBUG
+ 	ChFi3d_InitChron(ch ); // init perf filling
+ #endif 
+-	B1 = ChFi3d_mkbound(surf1,p2df1,p2da1,tolesp,2.e-4);
+-	B2 = ChFi3d_mkbound(surf2,p2df2,p2da2,tolesp,2.e-4);
++	B1 = ChFi3d_mkbound(surf1,p2df1,p2da1,tolapp3d,2.e-4);
++	B2 = ChFi3d_mkbound(surf2,p2df2,p2da2,tolapp3d,2.e-4);
+ 	Handle(Geom2d_Curve) PCurveOnFace;
+ 	Bfac = ChFi3d_mkbound(HFaCo,PCurveOnFace,Sens1,p2dfac1,v2dfac1,
+-			      Sens2,p2dfac2,v2dfac2,tolesp,2.e-4);
++			      Sens2,p2dfac2,v2dfac2,tolapp3d,2.e-4);
+ 	GeomFill_ConstrainedFilling fil(8,20);
+ 	if(sameparam) {
+ 	  fil.Init(Bfac,B2,B1,1);
+ 	}
+ 	else {
+ 	  Handle(Adaptor3d_Curve) HPivTrim = Hpivot->Trim(Min(parCP1,parCP2),Max(parCP1,parCP2),tolesp);
+-	  Bpiv = new GeomFill_SimpleBound(HPivTrim,tolesp,2.e-4);
++	  Bpiv = new GeomFill_SimpleBound(HPivTrim,tolapp3d,2.e-4);
+ 	  fil.Init(Bfac,B2,Bpiv,B1,1);
+ 	  BRepAdaptor_Curve2d pcpivot;
+ 	  gp_Vec dArc,dcf;
+@@ -597,14 +597,14 @@ void ChFi3d_FilBuilder::PerformTwoCorner(const Standard_Integer Index)
+ 	ChFi3d_ComputeArete(Pf1,pp1,Pf2,pp2,
+ 			    DStr.Surface(coin->Surf()).Surface(),C3d,
+ 			    corner->ChangeFirstPCurve(),P1deb,P2deb,
+-			    tolesp,tol2d,tolreached,0);
++			    tolapp3d,tol2d,tolreached,0);
+ 	Standard_Real par1 = sd1->Interference(IFaArc1).Parameter(isfirst1);
+ 	pp1 = sd1->Interference(IFaCo1).PCurveOnSurf()->Value(par1);
+ 	pp2 = sd1->Interference(IFaArc1).PCurveOnSurf()->Value(par1);
+ 	Standard_Real tolr1;
+ 	ChFi3d_ComputePCurv(C3d,pp1,pp2,st1->ChangePCurve(isfirst1),
+ 			    DStr.Surface(sd1->Surf()).Surface(),
+-			    P1deb,P2deb,tolesp,tolr1);
++			    P1deb,P2deb,tolapp3d,tolr1);
+ 	tolreached = Max(tolreached,tolr1);
+ 	TopOpeBRepDS_Curve Tcurv1(C3d,tolreached);
+ 	Icf = DStr.AddCurve(Tcurv1);
+@@ -624,14 +624,14 @@ void ChFi3d_FilBuilder::PerformTwoCorner(const Standard_Integer Index)
+ 	ChFi3d_ComputeArete(Pl1,pp1,Pl2,pp2,
+ 			    DStr.Surface(coin->Surf()).Surface(),C3d,
+ 			    corner->ChangeLastPCurve(),P1fin,P2fin,
+-			    tolesp,tol2d,tolreached,0);
++			    tolapp3d,tol2d,tolreached,0);
+ 	Standard_Real par2 = sd2->Interference(IFaArc2).Parameter(isfirst2);
+ 	pp1 = sd2->Interference(IFaCo2).PCurveOnSurf()->Value(par2);
+ 	pp2 = sd2->Interference(IFaArc2).PCurveOnSurf()->Value(par2);
+ 	Standard_Real tolr2;
+ 	ChFi3d_ComputePCurv(C3d,pp1,pp2,st2->ChangePCurve(isfirst2),
+ 			    DStr.Surface(sd2->Surf()).Surface(),
+-			    P1deb,P2deb,tolesp,tolr2);
++			    P1deb,P2deb,tolapp3d,tolr2);
+ 	tolreached = Max(tolreached,tolr2);
+ 	TopOpeBRepDS_Curve Tcurv2(C3d,tolreached);
+ 	Icl = DStr.AddCurve(Tcurv2);
+@@ -732,7 +732,7 @@ void ChFi3d_FilBuilder::PerformTwoCorner(const Standard_Integer Index)
+       Handle(Geom_Surface) surfsam = DStr.Surface(sdsam->Surf()).Surface();
+       Handle(GeomAdaptor_Surface) Hsurfsam = new GeomAdaptor_Surface(surfsam);
+       Handle(Geom2d_Curve) pcsurfsam;
+-      Bsam = ChFi3d_mkbound(Hsurfsam,pcsurfsam,ppopsam,ppcosam,tolesp,2.e-4);
++      Bsam = ChFi3d_mkbound(Hsurfsam,pcsurfsam,ppopsam,ppcosam,tolapp3d,2.e-4);
+       Standard_Real upcopdif = sddif->Interference(ifaopdif).Parameter(isfirstdif);
+       gp_Pnt2d ppopdif = 
+ 	sddif->Interference(ifaopdif).PCurveOnSurf()->Value(upcopdif);
+@@ -741,7 +741,7 @@ void ChFi3d_FilBuilder::PerformTwoCorner(const Standard_Integer Index)
+       Handle(Geom_Surface) surfdif = DStr.Surface(sddif->Surf()).Surface();
+       Handle(GeomAdaptor_Surface) Hsurfdif = new GeomAdaptor_Surface(surfdif);
+       Handle(Geom2d_Curve) pcsurfdif;
+-      Bdif = ChFi3d_mkbound(Hsurfdif,pcsurfdif,ppcodif,ppopdif,tolesp,2.e-4);
++      Bdif = ChFi3d_mkbound(Hsurfdif,pcsurfdif,ppcodif,ppopdif,tolapp3d,2.e-4);
+       gp_Pnt2d ppfacsam,ppfacdif;
+       gp_Pnt PPfacsam,PPfacdif;
+       gp_Vec VVfacsam,VVfacdif;
+@@ -773,7 +773,7 @@ void ChFi3d_FilBuilder::PerformTwoCorner(const Standard_Integer Index)
+       Handle(Geom2d_Curve) pcFopsam = ChFi3d_BuildPCurve(HBRFopsam,
+ 							 ppfacsam,VVfacsam,
+ 							 ppfacdif,VVfacdif,1);
+-      Bfac = ChFi3d_mkbound(HBRFopsam,pcFopsam,tolesp,2.e-4);
++      Bfac = ChFi3d_mkbound(HBRFopsam,pcFopsam,tolapp3d,2.e-4);
+       GeomFill_ConstrainedFilling fil(8,20);
+       fil.Init(Bsam,Bdif,Bfac,1);
+ #if 0
+@@ -827,10 +827,10 @@ void ChFi3d_FilBuilder::PerformTwoCorner(const Standard_Integer Index)
+       ChFi3d_ComputeArete(Pf1,pp1,Pf2,pp2,
+ 			  DStr.Surface(coin->Surf()).Surface(),C3d,
+ 			  corner->ChangeFirstPCurve(),P1deb,P2deb,
+-			  tolesp,tol2d,tolreached,0);
++			  tolapp3d,tol2d,tolreached,0);
+       Standard_Real tolr1;
+       Handle(GeomAdaptor_Curve) HC3d = new GeomAdaptor_Curve(C3d);
+-      ChFi3d_SameParameter(HC3d,pcFopsam,HBRFopsam,tolesp,tolr1);
++      ChFi3d_SameParameter(HC3d,pcFopsam,HBRFopsam,tolapp3d,tolr1);
+       tolreached = Max(tolreached,tolr1);
+       TopOpeBRepDS_Curve Tcurv1(C3d,tolreached);
+       Icf = DStr.AddCurve(Tcurv1);
+@@ -858,10 +858,10 @@ void ChFi3d_FilBuilder::PerformTwoCorner(const Standard_Integer Index)
+       ChFi3d_ComputeArete(Pl1,pp1,Pl2,pp2,
+ 			  DStr.Surface(coin->Surf()).Surface(),C3d,
+ 			  corner->ChangeLastPCurve(),P1fin,P2fin,
+-			  tolesp,tol2d,tolreached,0);
++        tolapp3d,tol2d,tolreached,0);
+       Standard_Real tolr2;
+       HC3d->Load(C3d);
+-      ChFi3d_SameParameter(HC3d,pcsurfdif,Hsurfdif,tolesp,tolr2);
++      ChFi3d_SameParameter(HC3d,pcsurfdif,Hsurfdif,tolapp3d,tolr2);
+       tolreached = Max(tolreached,tolr2);
+       TopOpeBRepDS_Curve Tcurv2(C3d,tolreached);
+       Icl = DStr.AddCurve(Tcurv2);
+diff --git a/src/ChFi3d/ChFi3d_FilBuilder_C3.cxx b/src/ChFi3d/ChFi3d_FilBuilder_C3.cxx
+index 6403c2141..e4cc37484 100644
+--- a/src/ChFi3d/ChFi3d_FilBuilder_C3.cxx
++++ b/src/ChFi3d/ChFi3d_FilBuilder_C3.cxx
+@@ -307,7 +307,7 @@ void ChFi3d_FilBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+ 	pivot = ii; deb = jj; fin = kk;
+       }
+     }
+-    if(!c1toric)c1spheric=(Abs(qr[0]-qr[1])<tolesp && Abs(qr[0]-qr[2])<tolesp);
++    if(!c1toric)c1spheric=(Abs(qr[0]-qr[1])<tolapp3d && Abs(qr[0]-qr[2])<tolapp3d);
+   }
+   
+   //  Previously to avoid loops the points were always located 
+@@ -543,14 +543,14 @@ void ChFi3d_FilBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+       Handle(BRepBlend_Line) lin;
+       Standard_Real ffi = WFirst, lla = WLast + pasmax;
+       
+-      if (Abs(Rdeb-Rfin)<=tolesp){
++      if (Abs(Rdeb-Rfin)<=tolapp3d){
+ 	
+ 	BRepBlend_ConstRad func(Fac,Surf,cornerspine);
+ 	BRepBlend_ConstRadInv finv(Fac,Surf,cornerspine);
+ 	func.Set(Rdeb,choix);
+ 	func.Set(myShape);
+ 	finv.Set(Rdeb,choix);
+-	Standard_Real TolGuide = cornerspine->Resolution(tolesp); 
++	Standard_Real TolGuide = cornerspine->Resolution(tolapp3d);
+ 	
+ 	Standard_Integer intf = 3, intl = 3;
+ 	done = ComputeData(coin,cornerspine,NullSpine,lin,Fac,IFac,Surf,ISurf,
+@@ -573,7 +573,7 @@ void ChFi3d_FilBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+ 	func.Set(choix);
+ 	func.Set(myShape);
+ 	finv.Set(choix);
+-	Standard_Real TolGuide = cornerspine->Resolution(tolesp);
++	Standard_Real TolGuide = cornerspine->Resolution(tolapp3d);
+ 	Standard_Integer intf = 3, intl = 3;
+ 	done = ComputeData(coin,cornerspine,NullSpine,lin,Fac,IFac,Surf,ISurf,
+ 			   func,finv,ffi,pasmax,locfleche,TolGuide,ffi,lla,
+@@ -607,7 +607,7 @@ void ChFi3d_FilBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+       Handle(Geom2d_Curve) PCurveOnFace;
+       if(!c1pointu) 
+ 	Bfac = ChFi3d_mkbound(Fac,PCurveOnFace,sens[deb],pfac1,vfac1,
+-			      sens[fin],pfac2,vfac2,tolesp,2.e-4);
++			      sens[fin],pfac2,vfac2,tolapp3d,2.e-4);
+       Standard_Integer kkk;
+       gp_Pnt ppbid;
+       gp_Vec vp1,vp2;
+@@ -620,7 +620,7 @@ void ChFi3d_FilBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+       Handle(Geom2d_Curve) PCurveOnPiv;
+ //      Bpiv = ChFi3d_mkbound(Surf,PCurveOnPiv,sens[deb],psurf1,vp1,
+ //			    sens[fin],psurf2,vp2,tolesp,2.e-4);
+-      Bpiv = ChFi3d_mkbound(Surf,PCurveOnPiv,psurf1,psurf2,tolesp,2.e-4,0);
++      Bpiv = ChFi3d_mkbound(Surf,PCurveOnPiv,psurf1,psurf2,tolapp3d,2.e-4,0);
+       Standard_Real pardeb2 = p[deb][pivot];
+       Standard_Real parfin2 = p[fin][pivot];
+       if(c1pointu){
+@@ -642,8 +642,8 @@ void ChFi3d_FilBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+ 	DStr.Surface(CD[fin]->SetOfSurfData()->
+ 		     Value(i[fin][pivot])->Surf()).Surface();
+       
+-      Bdeb = ChFi3d_mkbound(sdeb,pdeb1,pdeb2,tolesp,2.e-4);
+-      Bfin = ChFi3d_mkbound(sfin,pfin1,pfin2,tolesp,2.e-4);
++      Bdeb = ChFi3d_mkbound(sdeb,pdeb1,pdeb2,tolapp3d,2.e-4);
++      Bfin = ChFi3d_mkbound(sfin,pfin1,pfin2,tolapp3d,2.e-4);
+       
+       GeomFill_ConstrainedFilling fil(11,20);
+       if(c1pointu) fil.Init(Bpiv,Bfin,Bdeb,1);
+@@ -712,7 +712,7 @@ void ChFi3d_FilBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+     ChFi3d_ComputeArete(Pf1,pp1,Pf2,pp2,
+ 			DStr.Surface(coin->Surf()).Surface(),C3d,
+ 			corner->ChangeFirstPCurve(),P1deb,P2deb,
+-			tolesp,tol2d,tolreached,0);
++			tolapp3d,tol2d,tolreached,0);
+     TopOpeBRepDS_Curve Tcurv1(C3d,tolreached);
+     Icf = DStr.AddCurve(Tcurv1);
+     regdeb.SetCurve(Icf);
+@@ -732,7 +732,7 @@ void ChFi3d_FilBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+     ChFi3d_ComputeArete(Pl1,pp1,Pl2,pp2,
+ 			DStr.Surface(coin->Surf()).Surface(),C3d,
+ 			corner->ChangeLastPCurve(),P1fin,P2fin,
+-			tolesp,tol2d,tolreached,0);
++			tolapp3d,tol2d,tolreached,0);
+     TopOpeBRepDS_Curve Tcurv2(C3d,tolreached);
+     Icl = DStr.AddCurve(Tcurv2);
+     regfin.SetCurve(Icl);
+@@ -770,7 +770,7 @@ void ChFi3d_FilBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+     Standard_Real tolrdeb;
+     ChFi3d_ComputePCurv(crefdeb,pp1,pp2,CD[deb]->ChangePCurve(isfirst),
+ 			DStr.Surface(fddeb->Surf()).Surface(),
+-			P1deb,P2deb,tolesp,tolrdeb,rev);
++			P1deb,P2deb,tolapp3d,tolrdeb,rev);
+     tcdeb.Tolerance(Max(tolrdeb,tcdeb.Tolerance()));
+     if(rev) ChFi3d_EnlargeBox(DStr,CD[deb],fddeb,*pbf2,*pbf1,isfirst);
+     else ChFi3d_EnlargeBox(DStr,CD[deb],fddeb,*pbf1,*pbf2,isfirst);
+@@ -800,7 +800,7 @@ void ChFi3d_FilBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+     Standard_Real tolrfin;
+     ChFi3d_ComputePCurv(creffin,pp1,pp2,CD[fin]->ChangePCurve(isfirst),
+ 			DStr.Surface(fdfin->Surf()).Surface(),
+-			P1fin,P2fin,tolesp,tolrfin,rev);
++			P1fin,P2fin,tolapp3d,tolrfin,rev);
+     tcfin.Tolerance(Max(tolrfin,tcfin.Tolerance()));
+     if(rev) ChFi3d_EnlargeBox(DStr,CD[fin],fdfin,*pbl2,*pbl1,isfirst);
+     else ChFi3d_EnlargeBox(DStr,CD[fin],fdfin,*pbl1,*pbl2,isfirst);
+@@ -823,7 +823,7 @@ void ChFi3d_FilBuilder::PerformThreeCorner(const Standard_Integer Jndex)
+     Standard_Real tolr;
+     ChFi3d_SameParameter(Ccoinpiv,C2dOnPiv,Spiv,
+ 			 fi.FirstParameter(),fi.LastParameter(),
+-			 tolesp,tolr);
++			 tolapp3d,tolr);
+     TCcoinpiv.Tolerance(Max(TCcoinpiv.Tolerance(),tolr));
+     CD[pivot]->ChangePCurve(isfirst) = C2dOnPiv;
+     CD[pivot]->SetIndexPoint(If2,isfirst,isurf1);
+diff --git a/src/ChFiDS/ChFiDS_Spine.cxx b/src/ChFiDS/ChFiDS_Spine.cxx
+index b6c08471e..30496915b 100644
+--- a/src/ChFiDS/ChFiDS_Spine.cxx
++++ b/src/ChFiDS/ChFiDS_Spine.cxx
+@@ -558,6 +558,17 @@ void  ChFiDS_Spine::Load()
+   }
+   indexofcurve =1;
+   myCurve.Initialize(TopoDS::Edge(spine.Value(1)));
++
++  // Here, we should update tolesp according to curve parameter range
++  // if tolesp candidate less than default initial value.
++  const Standard_Real umin = FirstParameter();
++  const Standard_Real umax = LastParameter();
++
++  Standard_Real new_tolesp = 5.0e-5 * (umax - umin);
++  if (tolesp > new_tolesp)
++  {
++    tolesp = new_tolesp;
++  }
+ }
+ 
+ 
+diff --git a/src/ChFiDS/ChFiDS_Spine.hxx b/src/ChFiDS/ChFiDS_Spine.hxx
+index ffc6be878..07f4f8ddf 100644
+--- a/src/ChFiDS/ChFiDS_Spine.hxx
++++ b/src/ChFiDS/ChFiDS_Spine.hxx
+@@ -244,6 +244,9 @@ public:
+   //! Return the mode of chamfers used
+   Standard_EXPORT ChFiDS_ChamfMode Mode() const;
+ 
++  //! Return tolesp parameter
++  Standard_EXPORT Standard_Real GetTolesp() const;
++
+ 
+ 
+   DEFINE_STANDARD_RTTIEXT(ChFiDS_Spine,Standard_Transient)
+diff --git a/src/ChFiDS/ChFiDS_Spine.lxx b/src/ChFiDS/ChFiDS_Spine.lxx
+index fef5d0db4..731532f0c 100644
+--- a/src/ChFiDS/ChFiDS_Spine.lxx
++++ b/src/ChFiDS/ChFiDS_Spine.lxx
+@@ -214,3 +214,12 @@ inline ChFiDS_ChamfMode  ChFiDS_Spine::Mode() const
+ 
+   return myMode;
+ }
++
++//=======================================================================
++//function : GetTolesp
++//purpose  : 
++//=======================================================================
++inline Standard_Real ChFiDS_Spine::GetTolesp() const
++{
++  return tolesp;
++}
+diff --git a/src/FilletSurf/FilletSurf_InternalBuilder.cxx b/src/FilletSurf/FilletSurf_InternalBuilder.cxx
+index fb1c98ed0..955d61eac 100644
+--- a/src/FilletSurf/FilletSurf_InternalBuilder.cxx
++++ b/src/FilletSurf/FilletSurf_InternalBuilder.cxx
+@@ -345,19 +345,19 @@ Standard_Boolean
+   if(!done) return Standard_False;
+   if(lin->StartPointOnFirst().NbPointOnRst() !=0){
+     ChFi3d_FilCommonPoint(lin->StartPointOnFirst(),lin->TransitionOnS1(),
+-			  Standard_True, Data->ChangeVertexFirstOnS1(), tolesp);
++			  Standard_True, Data->ChangeVertexFirstOnS1(), tolapp3d);
+   }
+   if(lin->EndPointOnFirst().NbPointOnRst() !=0){
+     ChFi3d_FilCommonPoint(lin->EndPointOnFirst(),lin->TransitionOnS1(),
+-			  Standard_False,Data->ChangeVertexLastOnS1(), tolesp);
++			  Standard_False,Data->ChangeVertexLastOnS1(), tolapp3d);
+   }
+   if(lin->StartPointOnSecond().NbPointOnRst() !=0){
+     ChFi3d_FilCommonPoint(lin->StartPointOnSecond(),lin->TransitionOnS2(),
+-			  Standard_True, Data->ChangeVertexFirstOnS2(), tolesp);
++			  Standard_True, Data->ChangeVertexFirstOnS2(), tolapp3d);
+   }
+   if(lin->EndPointOnSecond().NbPointOnRst() !=0){
+     ChFi3d_FilCommonPoint(lin->EndPointOnSecond(),lin->TransitionOnS2(),
+-			  Standard_False, Data->ChangeVertexLastOnS2(), tolesp);
++			  Standard_False, Data->ChangeVertexLastOnS2(), tolapp3d);
+   }
+   done = CompleteData(Data,Func,lin,S1,S2,Or,0,0,0,0);
+   if(!done)  throw Standard_Failure("PerformSurf : Failed approximation!");
+@@ -554,7 +554,7 @@ Standard_Real FilletSurf_InternalBuilder::FirstParameter() const
+   Standard_Integer ind = 1;
+   if(sp->IsPeriodic()) ind = sp->Index(p);
+   Standard_Real ep;
+-  if(ComputeEdgeParameter(sp,ind,p,ep,tolesp)) return ep;
++  if(ComputeEdgeParameter(sp,ind,p,ep,tolapp3d)) return ep;
+   return 0.0;
+ }
+ //=======================================================================
+@@ -570,7 +570,7 @@ Standard_Real FilletSurf_InternalBuilder::LastParameter() const
+   Standard_Integer ind = sp->NbEdges();
+   if(sp->IsPeriodic()) ind = sp->Index(p);
+   Standard_Real ep;
+-  if(ComputeEdgeParameter(sp,ind,p,ep,tolesp)) return ep;
++  if(ComputeEdgeParameter(sp,ind,p,ep,tolapp3d)) return ep;
+   return 0.0;
+ }
+ 
+diff --git a/src/QABugs/QABugs_11.cxx b/src/QABugs/QABugs_11.cxx
+index 81e94fb87..ac029f88e 100644
+--- a/src/QABugs/QABugs_11.cxx
++++ b/src/QABugs/QABugs_11.cxx
+@@ -1864,6 +1864,7 @@ static Standard_Integer OCC1487 (Draw_Interpretor& di, Standard_Integer argc, co
+ //=======================================================================
+ TopoDS_Shape OCC1077_boolbl(BRepAlgoAPI_BooleanOperation& aBoolenaOperation,const Standard_Real aRadius)
+ {
++  Standard_Real tesp = 1.e-4;
+   Standard_Real t3d = 1.e-4;
+   Standard_Real t2d = 1.e-5;
+   Standard_Real ta  = 1.e-2;
+@@ -1885,7 +1886,7 @@ TopoDS_Shape OCC1077_boolbl(BRepAlgoAPI_BooleanOperation& aBoolenaOperation,cons
+       const TopoDS_Shape& cutsol = ex.Current();
+ 
+       BRepFilletAPI_MakeFillet fill(cutsol);
+-      fill.SetParams(ta, t3d, t2d, t3d, t2d, fl);
++      fill.SetParams(ta, tesp, t2d, t3d, t2d, fl);
+       fill.SetContinuity(blend_cont, tapp_angle);
+       its = aBoolenaOperation.SectionEdges();
+       while (its.More())
+diff --git a/src/QABugs/QABugs_17.cxx b/src/QABugs/QABugs_17.cxx
+index b02e62e50..b46fc24e2 100644
+--- a/src/QABugs/QABugs_17.cxx
++++ b/src/QABugs/QABugs_17.cxx
+@@ -577,6 +577,7 @@ static Standard_Integer OCC570 (Draw_Interpretor& di, Standard_Integer argc,cons
+ 
+ #include <Law_Interpol.hxx>
+ 
++static Standard_Real tesp = 1.e-4;
+ static Standard_Real t3d = 1.e-4;
+ static Standard_Real t2d = 1.e-5;
+ static Standard_Real ta  = 1.e-2;
+@@ -606,7 +607,7 @@ static Standard_Integer MKEVOL(Draw_Interpretor& di,
+   if (narg < 3) return 1;
+   TopoDS_Shape V = DBRep::Get(a[2]);
+   Rake = new BRepFilletAPI_MakeFillet(V);
+-  Rake->SetParams(ta,t3d,t2d,t3d,t2d,fl);
++  Rake->SetParams(ta, tesp, t2d, t3d, t2d, fl);
+   Rake->SetContinuity(blend_cont, tapp_angle);
+   if (narg == 4) {
+     ChFi3d_FilletShape FSh = ChFi3d_Rational;
+diff --git a/src/ViewerTest/ViewerTest_FilletCommands.cxx b/src/ViewerTest/ViewerTest_FilletCommands.cxx
+index 803b52c10..2590c103c 100644
+--- a/src/ViewerTest/ViewerTest_FilletCommands.cxx
++++ b/src/ViewerTest/ViewerTest_FilletCommands.cxx
+@@ -38,6 +38,7 @@
+ # include <stdio.h>
+ #endif
+ 
++static Standard_Real tesp = 1.e-4;
+ static Standard_Real t3d = 1.e-4;
+ static Standard_Real t2d = 1.e-5;
+ static Standard_Real ta  = 1.e-2;
+@@ -87,7 +88,7 @@ static Standard_Integer VBLEND(Draw_Interpretor& di, Standard_Integer narg, cons
+     }
+   }
+   Rakk = new BRepFilletAPI_MakeFillet(V,FSh);
+-  Rakk->SetParams(ta,t3d,t2d,t3d,t2d,fl);
++  Rakk->SetParams(ta, tesp, t2d, t3d, t2d, fl);
+   Rakk->SetContinuity(blend_cont, tapp_angle);
+   Standard_Real Rad;
+   TopoDS_Edge E;

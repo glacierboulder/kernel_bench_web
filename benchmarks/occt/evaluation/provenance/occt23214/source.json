@@ -1,0 +1,31 @@
+{
+  "source_id": "occt65-23214-b-a2d5ab2e7f2c",
+  "commit": "a2d5ab2e7f2c58d793e039f87b18f2790708ab31",
+  "materialized_tree_sha256": "5e3496f976f753d8739b4b54b359165930d1fcfab260f269166622ca788480eb",
+  "B": "a2d5ab2e7f2c58d793e039f87b18f2790708ab31",
+  "F": "989341c59396925fdc0771ce6e036b7a34450566",
+  "F_tree_sha256": "5c599f6d2bfa4d3cd4a7cc504bf1aa950cf4a4efbc073b183a6b5f55369114b4",
+  "reference_patch_sha256": "4f40148a98e959ae67622305ccbe62f266d4313dd6a5e38cc61ff3dfb8b43168",
+  "upstream_test": "https://github.com/Open-Cascade-SAS/OCCT/blob/a8676008f76eba6c84344e41f2ca7901abeb1ca9/tests/bugs/modalg_2/bug23214",
+  "inputs": [
+    {
+      "name": "OCC23214-face_1188.brep",
+      "git_blob": "202a50c4d13d71bcaf3aefef6dc55916423fc7e3",
+      "sha256": "a2cf2d611e57999758c3d9ff7a4777dd607552db423686ad6b5a06248100f98b",
+      "size": 1285,
+      "url": "https://github.com/a-betenev/opencascade-dataset/blob/d78a7a9e6de57699261fa03641ec1b5bafac39a1/brep/OCC23214-face_1188.brep",
+      "archive_member": "opencascade-dataset-7.8.0/brep/OCC23214-face_1188.brep",
+      "official_archive": "https://github.com/Open-Cascade-SAS/OCCT/releases/download/V7_8_0/opencascade-dataset-7.8.0.tar.xz"
+    },
+    {
+      "name": "OCC23214-shell_for_line_1188.brep",
+      "git_blob": "e69f0db0e607330952340fda3126a1e9dffa250b",
+      "sha256": "e78626ae33469b6d51bd620ad802b9be3151195ee5746c50cc47426bb44b345e",
+      "size": 51935,
+      "url": "https://github.com/a-betenev/opencascade-dataset/blob/d78a7a9e6de57699261fa03641ec1b5bafac39a1/brep/OCC23214-shell_for_line_1188.brep",
+      "archive_member": "opencascade-dataset-7.8.0/brep/OCC23214-shell_for_line_1188.brep",
+      "official_archive": "https://github.com/Open-Cascade-SAS/OCCT/releases/download/V7_8_0/opencascade-dataset-7.8.0.tar.xz"
+    }
+  ],
+  "SDK_sha256": "b63c5efd66f54efd5c59223ba58df4127bd088f0a5ac37cee0563fb798d6ff37"
+}

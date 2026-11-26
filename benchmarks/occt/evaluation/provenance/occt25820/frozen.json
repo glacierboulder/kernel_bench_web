@@ -1,0 +1,27 @@
+{
+  "snapshot_sha256": "48a8b9c7d3d33c4337609a440fe62f880396b5c80871c2d1d06f08bb192d88d3",
+  "frozen_task": "/root/r27-legacy25820/official/data/reevaluations/b08483bd420132cd/frozen-task/visible/issue_25820",
+  "public_sha256": {
+    "cdl-toolchain.tar.xz": "8ecf99f558fb1bfa0498aacd8aeca87cd0fb70be50d15515853f789ad6b224d5",
+    "OCC25820-Translation_1.brep": "2970c53919e2c0e2858bcd089e5bf4a97bbd1ddc77e706f540dcbf8f99f72d54",
+    "SDK-SOURCES.md": "6b70b6e9d8513430ad32f0228ee6800a14eee1d8571a2a2029999027860a1c97",
+    "public-replay.sh": "a6ad55eee4ce1cae8aec4612648326bf0157118f4dbbb4def77933d794dfefa3",
+    "public-build.sh": "e49e9ba267892d9f7b6aca470d33741ef9bb58cd4082d2b7125de9920ef24532",
+    "OCC25820-Revolution_5.brep": "30825e7e3032956b3a4edc8794b487fbbe4a557792006e7b78ec0b22bf6b4d47",
+    "reproduce.cxx": "710683b5461672999f3a8c94352dd27720f5062355e4f37b9e4526a222d3f02b",
+    "issue.json": "5950ba1c4db1037c3719fbf348adfef79f11092b82640e64d28bb52d743f9ee1",
+    "statement.md": "3c0a09b39db2585d66cb0a6fa97502d993447e587a4e28104d8220d46fe2af89"
+  },
+  "runs": {
+    "B": {
+      "build_exit": 0,
+      "replay_exit": 1,
+      "compile_log_sha256": "a4db8a2874978944a38d702a9383381e115a6d4148e1f3d61091986318f69bf3"
+    },
+    "F": {
+      "build_exit": 0,
+      "replay_exit": 0,
+      "compile_log_sha256": "a86cd5178364a0fba53be3af4d45c4580f0220cae79acdb751ce291445916f50"
+    }
+  }
+}

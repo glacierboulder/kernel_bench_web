@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-24060-single",
+  "version": "1",
+  "title": "General Fuse 在方形面的角点保留了重复顶点",
+  "kind": "single",
+  "source_id": "occt66-24060-b-9733d9b31b3f",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-24060",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-24060-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

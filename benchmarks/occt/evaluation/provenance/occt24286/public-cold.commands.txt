@@ -1,0 +1,40 @@
++ for side in B F
++ SOURCE=/root/r26-main/24286.CK3Xsl/B
++ BUILD=/root/r26-main/24286-public.Qzs1YS/B
++ mkdir /root/r26-main/24286-public.Qzs1YS/B
++ git -C /root/r26-main/24286.CK3Xsl/B rev-parse HEAD
+a6eb515f9d6430bce09c4dcc0f088bcfea6bb6c6
++ export BENCH_COMPILER_JOBS=5
++ BENCH_COMPILER_JOBS=5
++ [[ 24286 == 25199 ]]
++ bash public-build.sh /root/r26-main/24286.CK3Xsl/B /root/r26-main/24286-public.Qzs1YS/B
++ rc=0
++ bash public-replay.sh /root/r26-main/24286-public.Qzs1YS/B
++ rc=1
++ cat <author-workspace>/round-01/replacements/24286/evidence/formal.2PxlUT/public-cold-B.log
+/usr/bin/ld: /root/r26-main/24286-public.Qzs1YS/B/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
+edges=3 vertices=4 length_mm=79.885527802753 valid=1 verdict=FAIL
++ [[ B == B ]]
++ test 1 = 1
++ grep -q verdict=FAIL <author-workspace>/round-01/replacements/24286/evidence/formal.2PxlUT/public-cold-B.log
++ for side in B F
++ SOURCE=/root/r26-main/24286.CK3Xsl/F
++ BUILD=/root/r26-main/24286-public.Qzs1YS/F
++ mkdir /root/r26-main/24286-public.Qzs1YS/F
++ git -C /root/r26-main/24286.CK3Xsl/F rev-parse HEAD
+78c66ef1c92515f5d43d299f763348e6fe8d7a85
++ export BENCH_COMPILER_JOBS=5
++ BENCH_COMPILER_JOBS=5
++ [[ 24286 == 25199 ]]
++ bash public-build.sh /root/r26-main/24286.CK3Xsl/F /root/r26-main/24286-public.Qzs1YS/F
++ rc=0
++ bash public-replay.sh /root/r26-main/24286-public.Qzs1YS/F
++ cat <author-workspace>/round-01/replacements/24286/evidence/formal.2PxlUT/public-cold-F.log
+/usr/bin/ld: /root/r26-main/24286-public.Qzs1YS/F/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
+edges=2 vertices=3 length_mm=72.422217828633 valid=1 verdict=PASS
++ [[ F == B ]]
++ test 0 = 0
++ grep -q verdict=PASS <author-workspace>/round-01/replacements/24286/evidence/formal.2PxlUT/public-cold-F.log
++ printf 'Verified task-visible cold build and replay in %s\n' /root/r26-main/24286-formal.I1mtUW/data/reevaluations/12278dde184eab23/frozen-task/visible/issue_24286

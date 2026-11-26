@@ -1,0 +1,28 @@
+{
+  "source_id": "occt72-29496-b-e3744452bb60",
+  "commit": "e3744452bb60730ebf3e00e366e961f17e9ca3ec",
+  "B": "e3744452bb60730ebf3e00e366e961f17e9ca3ec",
+  "F": "7797eb389a518e537e52eab9a88081be430a6048",
+  "materialized_tree_sha256": "2eea9781edcb8c2564c4f2f61d4e90701026936d0aa7e09b6173fbb57a9394af",
+  "F_tree_sha256": "c6555b3f086a0cd02c274feec8c5b03b1ae5cc930595aed8ca66f48169e6d5c2",
+  "reference_patch_sha256": "a138828f8e6a3a6dfaa3c9b094c14abf9afb634d5be49ab2a626685f861c51be",
+  "inputs": [
+    {
+      "name": "bug25994_body.brep",
+      "size": 318201,
+      "archive_member": "opencascade-dataset-7.9.0/brep/bug25994_body.brep",
+      "sha256": "821767fde15d56930c670d46a58039103f3ca6f2f4bd758ecffe40090a0198e1",
+      "git_blob": "f327ca05e94a8283d29d3e8f9362c79382b041ff",
+      "url": "https://github.com/Open-Cascade-SAS/OCCT/releases/download/V7_9_0_beta1/opencascade-dataset-7.9.0.tar.xz"
+    },
+    {
+      "name": "bug25994_wing.brep",
+      "size": 139903,
+      "archive_member": "opencascade-dataset-7.9.0/brep/bug25994_wing.brep",
+      "sha256": "73e0fb5d078d253948b76124ec06d34c60d623bcb0c6907be5ae54500ce78535",
+      "git_blob": "b857d7814d84b2a28b0247031489fcf35322fe6a",
+      "url": "https://github.com/Open-Cascade-SAS/OCCT/releases/download/V7_9_0_beta1/opencascade-dataset-7.9.0.tar.xz"
+    }
+  ],
+  "upstream_test": "https://github.com/Open-Cascade-SAS/OCCT/blob/7797eb389a518e537e52eab9a88081be430a6048/tests/bugs/modalg_7/bug25994"
+}

@@ -1,0 +1,25 @@
+{
+  "snapshot_sha256": "8cb64f8894977993df1960951e9dfe832fc8d8473f42d694ac79ef0d2d7256d5",
+  "frozen_task": "/root/r27-legacy24060/official/data/reevaluations/e25ffb9cfa5c4a62/frozen-task/visible/issue_24060",
+  "public_sha256": {
+    "cdl-toolchain.tar.xz": "4046800860cbee4d05e8a4758ba4be3cd551e1fd19d3b6ed9c2b0f36093b26ac",
+    "SDK-SOURCES.md": "d6974c4282455ab2e0607c1b5b0ee503129730a223bb60f9338a6cb15b110670",
+    "public-replay.sh": "f42bdf395afc25bbad46d4a25281e06b738145ee00bb08ae3eaa03b6f32bfa26",
+    "public-build.sh": "1c0a77f326a19a3e10ce01902e8a7f0feb0bd7766277412119811fd6abbc2150",
+    "reproduce.cxx": "22562c346b10b7af610a55062cb131ade66e4fdb4e000492b3dcd7a45cea3383",
+    "issue.json": "7c9096172313688f9465dba117b381abb00602915dfc820dfde0042390610627",
+    "statement.md": "bbd3cfc81248dfe06b85702407beee03a7c37d9e0c85fc764cf36658aa7de901"
+  },
+  "runs": {
+    "B": {
+      "build_exit": 0,
+      "replay_exit": 1,
+      "compile_log_sha256": "fe25a148017b8aa36ad5ec4d63449ee3e98bbfb764d9731e4d8fae8450b0bf46"
+    },
+    "F": {
+      "build_exit": 0,
+      "replay_exit": 0,
+      "compile_log_sha256": "61e0af0b37ac84066221387d5003acb46a978ffcd66e27af0f0fa9e277bf38c8"
+    }
+  }
+}

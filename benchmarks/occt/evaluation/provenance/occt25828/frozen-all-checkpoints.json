@@ -1,0 +1,46 @@
+{
+  "B": {
+    "25828-original": {
+      "case_sha256": "df95014e818af1b8629fb8f2865a8c10f28301279d73f45bbb29eec482949c6c",
+      "code": 1,
+      "stdout": "mode=original length=261.261890488497 expected=264.314 vertices=27 edges=17 faces=0 solids=0 valid=1 verdict=FAIL"
+    },
+    "25828-rotated": {
+      "case_sha256": "90b1a93cfdf794edcdbfa52563f160277cf153409edbf535434fc80b3b5c7949",
+      "code": 1,
+      "stdout": "mode=rotated length=261.261776156936 expected=264.314 vertices=27 edges=17 faces=0 solids=0 valid=1 verdict=FAIL"
+    },
+    "25828-translated": {
+      "case_sha256": "002b68c4ca96c029884c859daf871949cabb9272d4fd2ff7515105a766ce399c",
+      "code": 1,
+      "stdout": "mode=translated length=261.261890488497 expected=264.314 vertices=27 edges=17 faces=0 solids=0 valid=1 verdict=FAIL"
+    },
+    "25828-control": {
+      "case_sha256": "93c7fbb1564c653c7317f9374b9ca062814b56a61c6c7bb9577a9b00477b4a7b",
+      "code": 0,
+      "stdout": "mode=control length=20 expected=20 vertices=4 edges=2 faces=0 solids=0 valid=1 verdict=PASS"
+    }
+  },
+  "F": {
+    "25828-original": {
+      "case_sha256": "df95014e818af1b8629fb8f2865a8c10f28301279d73f45bbb29eec482949c6c",
+      "code": 0,
+      "stdout": "mode=original length=264.046080105004 expected=264.314 vertices=27 edges=18 faces=0 solids=0 valid=1 verdict=PASS"
+    },
+    "25828-rotated": {
+      "case_sha256": "90b1a93cfdf794edcdbfa52563f160277cf153409edbf535434fc80b3b5c7949",
+      "code": 0,
+      "stdout": "mode=rotated length=264.045965773443 expected=264.314 vertices=27 edges=18 faces=0 solids=0 valid=1 verdict=PASS"
+    },
+    "25828-translated": {
+      "case_sha256": "002b68c4ca96c029884c859daf871949cabb9272d4fd2ff7515105a766ce399c",
+      "code": 0,
+      "stdout": "mode=translated length=264.046080105004 expected=264.314 vertices=27 edges=18 faces=0 solids=0 valid=1 verdict=PASS"
+    },
+    "25828-control": {
+      "case_sha256": "93c7fbb1564c653c7317f9374b9ca062814b56a61c6c7bb9577a9b00477b4a7b",
+      "code": 0,
+      "stdout": "mode=control length=20 expected=20 vertices=4 edges=2 faces=0 solids=0 valid=1 verdict=PASS"
+    }
+  }
+}

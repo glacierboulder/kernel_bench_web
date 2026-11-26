@@ -1,0 +1,15 @@
+{
+  "snapshot_sha256": "641516338003c9baa6e58175130103fbc6be98160021e2b93707cd2c1d64c2a8",
+  "versions": {
+    "B": {
+      "command": "DRAWEXE -b -f reproduce.tcl",
+      "cwd": "/mnt/r27-builds/26775-formal.sWyvXT/data/reevaluations/e2ab31f3787321ef/frozen-task/visible/issue_26775",
+      "output": "bf02aa7d7dcbdc460bef975913388ffc25d3d1a7\n2bc1a4eaba10faba8f360d2d77c24a16a83bc34d721d7421611d60c308f6a3b3  /root/round-pair-26675.HInRjf/build/lin64/gcc/lib/libTKBO.so\nDRAW is running in batch mode\nNumber of shapes in result\n VERTEX    : 8\n EDGE      : 8\n WIRE      : 2\n FACE      : 1\n SHELL     : 0\n SOLID     : 0\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 20\n\n\n\nMass :         81.6712\n\nCenter of gravity : \nX =         3.61571\nY =         6.33354\nZ =        -3.76281\n\nMatrix of Inertia : \n        1014.49        -3.18708        -35.1657\n       -3.18708         311.398         80.0768\n       -35.1657         80.0768         1298.67\n\nMoments : \nIX =         1309.35\nIY =         1010.26\nIZ =         304.945\n\n\nThis shape seems to be valid\n"
+    },
+    "F": {
+      "command": "DRAWEXE -b -f reproduce.tcl",
+      "cwd": "/mnt/r27-builds/26775-formal.sWyvXT/data/reevaluations/e2ab31f3787321ef/frozen-task/visible/issue_26775",
+      "output": "d33a8cde9649617a2fc433a58b98238136cc11a3\nc74495999fd17aa05802ee35f77d33d8890b0d5ed36bb81f3945c6a426ffaff5  /root/round-pair-26675.HInRjf/build/lin64/gcc/lib/libTKBO.so\nDRAW is running in batch mode\nNumber of shapes in result\n VERTEX    : 5\n EDGE      : 5\n WIRE      : 1\n FACE      : 1\n SHELL     : 0\n SOLID     : 0\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 13\n\n\n\nMass :         78.7016\n\nCenter of gravity : \nX =         3.61357\nY =         6.11287\nZ =        -3.75163\n\nMatrix of Inertia : \n        908.617        -2.16272        -33.9421\n       -2.16272         299.771         74.7409\n       -33.9421         74.7409         1182.01\n\nMoments : \nIX =         1192.37\nIY =         904.543\nIZ =         293.483\n\n\nThis shape seems to be valid\n"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+93442c6f24ea0e7afc058e81ef2eee2f1b085d3b
+3c94f1813a2eb86e81252a70c3244be4c4184b775511cc292f511a75b8a4f389  <author-workspace>/round-02/cases/25450/assets/OCC497e.brep
+c241a8462ab351d7cb7bc7d874f53e979f649243f832d45b26c3fae14e32d06f  <author-workspace>/round-02/cases/25450/assets/OCC497f.brep
+mode=original area=1773.59641848921 expected=2471.48 vertices=3 edges=4 faces=2 solids=1 valid=1 verdict=FAIL
+exit(original)=1
+mode=tool_box area=1773.59641848921 expected=2471.48 vertices=3 edges=4 faces=2 solids=1 valid=1 verdict=FAIL
+exit(tool_box)=1
+mode=object_box area=1825.59641848921 expected=2523.48 vertices=11 edges=16 faces=8 solids=2 valid=1 verdict=FAIL
+exit(object_box)=1
+mode=control area=400 expected=400 vertices=8 edges=12 faces=6 solids=1 valid=1 verdict=PASS
+exit(control)=0

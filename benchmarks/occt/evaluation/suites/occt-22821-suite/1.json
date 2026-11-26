@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "occt-22821-suite",
+  "version": "1",
+  "title": "小尺度实体的首条边无法生成半径 0.01 的圆角",
+  "source_ids": [
+    "occt78-22821-b-2f33e34038e1"
+  ],
+  "group_ids": [
+    "occt-22821-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "22821-original",
+      "issue_id": "occt-22821",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt22821/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "22821-translated",
+      "issue_id": "occt-22821",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt22821/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "22821-alternate",
+      "issue_id": "occt-22821",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt22821/alternate.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "22821-control",
+      "issue_id": "occt-22821",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt22821/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/occt22821/body.tcl",
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt22821/assets/corner.brep"
+  ]
+}

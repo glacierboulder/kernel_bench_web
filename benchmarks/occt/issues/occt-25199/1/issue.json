@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "occt-25199",
+  "version": "1",
+  "title": "圆角交线使用错误曲面边界，导致边容差膨胀",
+  "source_id": "occt67-25199-b-2a78ec6a0747",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/reproduce.cxx",
+    "public/OCC615.brep",
+    "public/public-build.sh",
+    "public/public-replay.sh",
+    "public/cdl-toolchain.tar.xz",
+    "public/SDK-SOURCES.md"
+  ]
+}

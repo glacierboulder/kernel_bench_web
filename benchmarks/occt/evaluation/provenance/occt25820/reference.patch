@@ -1,0 +1,39 @@
+diff --git a/src/IntPatch/IntPatch_WLine.cxx b/src/IntPatch/IntPatch_WLine.cxx
+index e55a3d218..72bd7bc73 100644
+--- a/src/IntPatch/IntPatch_WLine.cxx
++++ b/src/IntPatch/IntPatch_WLine.cxx
+@@ -120,7 +120,9 @@ static void RecadreMemePeriode(IntSurf_PntOn2S& POn2S,const IntSurf_PntOn2S& Ref
+ }
+ 
+ static Standard_Boolean CompareVertexAndPoint(const gp_Pnt& V, const gp_Pnt& P, const Standard_Real& Tol) { 
+-  return (V.Distance(P) <= Tol);
++  const Standard_Real aSQDist = V.SquareDistance(P);
++  const Standard_Real aSQTol = Tol*Tol;
++  return (aSQDist <= aSQTol);
+ }
+ 
+ void IntPatch_WLine::SetPeriod(const Standard_Real pu1,
+diff --git a/src/IntWalk/IntWalk_IWalking_5.gxx b/src/IntWalk/IntWalk_IWalking_5.gxx
+index 98dce89f3..ca67056f0 100644
+--- a/src/IntWalk/IntWalk_IWalking_5.gxx
++++ b/src/IntWalk/IntWalk_IWalking_5.gxx
+@@ -107,8 +107,18 @@ IntWalk_StatusDeflection IntWalk_IWalking::TestDeflection
+     }
+   }
+ 
+-  if (Abs(Du) < tolerance(1) && Abs(Dv) < tolerance(2))
++  const Standard_Real aMinTolU = 0.1*Abs(Step*previousd2d.X()),
++                      aMinTolV = 0.1*Abs(Step*previousd2d.Y());
++
++  if ((Abs(Du) < Min(tolerance(1), aMinTolU)) && (Abs(Dv) < Min(tolerance(2), aMinTolV)))
++  {
++    //Thin shapes (for which Ulast-Ufirst or/and Vlast-Vfirst is quite small)
++    //exists (see bug #25820). In this case, step is quite small too.
++    //Nevertheless, it not always means that we mark time. Therefore, Du and Dv
++    //must consider step (aMinTolU and aMinTolV parameters).
++
+     return IntWalk_ArretSurPointPrecedent; //confused point 2d
++  }
+ 
+   Standard_Real Cosi = StepSign * (Du * previousd2d.X() + Dv * previousd2d.Y());
+ 

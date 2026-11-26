@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "id": "occt-23738-suite",
+  "version": "1",
+  "title": "近轴二次曲面的布尔融合没有连接相交部分",
+  "source_ids": [
+    "occt65-23738-b-ab4a555430d4"
+  ],
+  "group_ids": [
+    "occt-23738-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "23738-original",
+      "issue_id": "occt-23738",
+      "category": "original",
+      "required": true,
+      "visibility": "public",
+      "timeout_seconds": 90,
+      "case": "issues/occt-23738/1/public/reproduce.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-23738/1/public/bug23738_b1.brep",
+          "issues/occt-23738/1/public/bug23738_b2.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "23738-swapped",
+      "issue_id": "occt-23738",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt23738/swapped.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-23738/1/public/bug23738_b1.brep",
+          "issues/occt-23738/1/public/bug23738_b2.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "23738-translated",
+      "issue_id": "occt-23738",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt23738/translated.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-23738/1/public/bug23738_b1.brep",
+          "issues/occt-23738/1/public/bug23738_b2.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "23738-normal",
+      "issue_id": "occt-23738",
+      "category": "regression",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt23738/normal.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-23738/1/public/bug23738_b1.brep",
+          "issues/occt-23738/1/public/bug23738_b2.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-23738/1/public/cdl-toolchain.tar.xz"
+  ]
+}

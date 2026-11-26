@@ -1,0 +1,26 @@
+{
+  "snapshot_sha256": "67ee1f5f626afba1943f89c1a853724e21fcbad5bfb6476679930dbae8f4caf6",
+  "frozen_task": "/root/r27-legacy25163/official/data/reevaluations/96749c5f12e4da91/frozen-task/visible/issue_25163",
+  "public_sha256": {
+    "cdl-toolchain.tar.xz": "b63c5efd66f54efd5c59223ba58df4127bd088f0a5ac37cee0563fb798d6ff37",
+    "SDK-SOURCES.md": "7bce74006e4d40eb4f3e3e389aca3d0a7562097dd9d9e7aa4f3d4f6472e533b2",
+    "public-replay.sh": "a3c66b6529e762ecb93817b063bf7747b26698845d14a02446a9510e1841f618",
+    "bug25163_qf_25_39.brep": "a4f53da3b465edb7389435cc8e466702f1389b02fd9bbc1c7bd6e240b3881691",
+    "public-build.sh": "48d1a2f449528d135683553572fd7dcb1ecfc562a339f2fe9375be3f44698fb5",
+    "reproduce.cxx": "478864a7805b207e13d28634297a6508095cac3cfd0fed86f606452cea62a079",
+    "issue.json": "1bf9b0951a242d06c6be5506cc6bfac24227a613b64309f1fa3d78b2a10b509f",
+    "statement.md": "faab48eddce41a253675d96532f2f6612632c3c86fee648b606a1adea6c46a0a"
+  },
+  "runs": {
+    "B": {
+      "build_exit": 0,
+      "replay_exit": 1,
+      "compile_log_sha256": "df75af40c9c5009a55acbf3ce5bcc297e88ec079d3f8065400457bd9892e248e"
+    },
+    "F": {
+      "build_exit": 0,
+      "replay_exit": 0,
+      "compile_log_sha256": "21e81b225d2824f2b7b80a2d17cc049c167651f1dabcf42a132666b794e7cfde"
+    }
+  }
+}

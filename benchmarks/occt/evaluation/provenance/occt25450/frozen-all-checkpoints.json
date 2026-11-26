@@ -1,0 +1,46 @@
+{
+  "B": {
+    "25450-original": {
+      "case_sha256": "5ce61361c0b0b2b532938f8a90aa7a622d5804288a6480bda57918705eff8962",
+      "code": 1,
+      "stdout": "mode=original area=1773.59641848921 expected=2471.48 vertices=3 edges=4 faces=2 solids=1 valid=1 verdict=FAIL"
+    },
+    "25450-tool_box": {
+      "case_sha256": "ba539aed90503a63cc1ed72c510f3a69542cf35f31b23383cf279f22e6f37ec2",
+      "code": 1,
+      "stdout": "mode=tool_box area=1773.59641848921 expected=2471.48 vertices=3 edges=4 faces=2 solids=1 valid=1 verdict=FAIL"
+    },
+    "25450-object_box": {
+      "case_sha256": "b0941bb7c0354a23c67b50096dbc5f1042354efdac61c1e2b1f1140f67ee3f2f",
+      "code": 1,
+      "stdout": "mode=object_box area=1825.59641848921 expected=2523.48 vertices=11 edges=16 faces=8 solids=2 valid=1 verdict=FAIL"
+    },
+    "25450-control": {
+      "case_sha256": "6cf6d31561e11175bbef2751015613663e651d1db46d0143924de2676bcae2c4",
+      "code": 0,
+      "stdout": "mode=control area=400 expected=400 vertices=8 edges=12 faces=6 solids=1 valid=1 verdict=PASS"
+    }
+  },
+  "F": {
+    "25450-original": {
+      "case_sha256": "5ce61361c0b0b2b532938f8a90aa7a622d5804288a6480bda57918705eff8962",
+      "code": 0,
+      "stdout": "mode=original area=2471.48255519881 expected=2471.48 vertices=9 edges=16 faces=8 solids=1 valid=1 verdict=PASS"
+    },
+    "25450-tool_box": {
+      "case_sha256": "ba539aed90503a63cc1ed72c510f3a69542cf35f31b23383cf279f22e6f37ec2",
+      "code": 0,
+      "stdout": "mode=tool_box area=2471.48255519881 expected=2471.48 vertices=9 edges=16 faces=8 solids=1 valid=1 verdict=PASS"
+    },
+    "25450-object_box": {
+      "case_sha256": "b0941bb7c0354a23c67b50096dbc5f1042354efdac61c1e2b1f1140f67ee3f2f",
+      "code": 0,
+      "stdout": "mode=object_box area=2523.48255519881 expected=2523.48 vertices=17 edges=28 faces=14 solids=2 valid=1 verdict=PASS"
+    },
+    "25450-control": {
+      "case_sha256": "6cf6d31561e11175bbef2751015613663e651d1db46d0143924de2676bcae2c4",
+      "code": 0,
+      "stdout": "mode=control area=400 expected=400 vertices=8 edges=12 faces=6 solids=1 valid=1 verdict=PASS"
+    }
+  }
+}

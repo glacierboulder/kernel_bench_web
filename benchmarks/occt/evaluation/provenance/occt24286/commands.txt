@@ -1,0 +1,132 @@
++ py=/root/accept-1114-1610/offline-venv/bin/python
++ export BENCHMARK_ROOT=/root/r26-main/24286-formal.I1mtUW/bundle BENCH_CACHE_DIR=/root/r26-main/24286-formal.I1mtUW/cache BENCH_DATA_DIR=/root/r26-main/24286-formal.I1mtUW/data
++ BENCHMARK_ROOT=/root/r26-main/24286-formal.I1mtUW/bundle
++ BENCH_CACHE_DIR=/root/r26-main/24286-formal.I1mtUW/cache
++ BENCH_DATA_DIR=/root/r26-main/24286-formal.I1mtUW/data
++ cd /root/r26-main/24286-formal.I1mtUW
++ /root/accept-1114-1610/offline-venv/bin/python -B <author-workspace>/round-01/replacements/24286/assemble.py /root/r26-main/24286-formal.I1mtUW/bundle /root/r26-main/24286.CK3Xsl/B /root/r26-main/24286.CK3Xsl/F
++ for side in B F
++ d=/root/r26-main/24286.CK3Xsl/build-B
++ git -C /root/r26-main/24286.CK3Xsl/B rev-parse HEAD
++ for m in original swapped translated normal
++ ck=/root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/original.cxx
++ test original '!=' original
++ ck=/root/r26-main/24286-formal.I1mtUW/bundle/issues/occt-24286/1/public/reproduce.cxx
++ g++ -std=c++17 -w -I/root/r26-main/24286.CK3Xsl/build-B/include/opencascade /root/r26-main/24286-formal.I1mtUW/bundle/issues/occt-24286/1/public/reproduce.cxx -L/root/r26-main/24286.CK3Xsl/build-B/lin64/gcc/lib -lTKBO -o /root/r26-main/24286-formal.I1mtUW/test-B
+/usr/bin/ld: /root/r26-main/24286.CK3Xsl/build-B/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
++ rc=0
++ printf '%s ' original
++ /root/r26-main/24286-formal.I1mtUW/test-B <author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle
++ rc=1
++ echo exit=1
++ expected=0
++ [[ B == B ]]
++ [[ original != normal ]]
++ expected=1
++ test 1 = 1
++ for m in original swapped translated normal
++ ck=/root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/swapped.cxx
++ test swapped '!=' original
++ g++ -std=c++17 -w -I/root/r26-main/24286.CK3Xsl/build-B/include/opencascade /root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/swapped.cxx -L/root/r26-main/24286.CK3Xsl/build-B/lin64/gcc/lib -lTKBO -o /root/r26-main/24286-formal.I1mtUW/test-B
+/usr/bin/ld: /root/r26-main/24286.CK3Xsl/build-B/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
++ rc=0
++ printf '%s ' swapped
++ /root/r26-main/24286-formal.I1mtUW/test-B <author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle
++ rc=1
++ echo exit=1
++ expected=0
++ [[ B == B ]]
++ [[ swapped != normal ]]
++ expected=1
++ test 1 = 1
++ for m in original swapped translated normal
++ ck=/root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/translated.cxx
++ test translated '!=' original
++ g++ -std=c++17 -w -I/root/r26-main/24286.CK3Xsl/build-B/include/opencascade /root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/translated.cxx -L/root/r26-main/24286.CK3Xsl/build-B/lin64/gcc/lib -lTKBO -o /root/r26-main/24286-formal.I1mtUW/test-B
+/usr/bin/ld: /root/r26-main/24286.CK3Xsl/build-B/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
++ rc=0
++ printf '%s ' translated
++ /root/r26-main/24286-formal.I1mtUW/test-B <author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle
++ rc=1
++ echo exit=1
++ expected=0
++ [[ B == B ]]
++ [[ translated != normal ]]
++ expected=1
++ test 1 = 1
++ for m in original swapped translated normal
++ ck=/root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/normal.cxx
++ test normal '!=' original
++ g++ -std=c++17 -w -I/root/r26-main/24286.CK3Xsl/build-B/include/opencascade /root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/normal.cxx -L/root/r26-main/24286.CK3Xsl/build-B/lin64/gcc/lib -lTKBO -o /root/r26-main/24286-formal.I1mtUW/test-B
+/usr/bin/ld: /root/r26-main/24286.CK3Xsl/build-B/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
++ rc=0
++ printf '%s ' normal
++ /root/r26-main/24286-formal.I1mtUW/test-B <author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle
++ echo exit=0
++ expected=0
++ [[ B == B ]]
++ [[ normal != normal ]]
++ test 0 = 0
++ for side in B F
++ d=/root/r26-main/24286.CK3Xsl/build-F
++ git -C /root/r26-main/24286.CK3Xsl/F rev-parse HEAD
++ for m in original swapped translated normal
++ ck=/root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/original.cxx
++ test original '!=' original
++ ck=/root/r26-main/24286-formal.I1mtUW/bundle/issues/occt-24286/1/public/reproduce.cxx
++ g++ -std=c++17 -w -I/root/r26-main/24286.CK3Xsl/build-F/include/opencascade /root/r26-main/24286-formal.I1mtUW/bundle/issues/occt-24286/1/public/reproduce.cxx -L/root/r26-main/24286.CK3Xsl/build-F/lin64/gcc/lib -lTKBO -o /root/r26-main/24286-formal.I1mtUW/test-F
+/usr/bin/ld: /root/r26-main/24286.CK3Xsl/build-F/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
++ rc=0
++ printf '%s ' original
++ /root/r26-main/24286-formal.I1mtUW/test-F <author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle
++ echo exit=0
++ expected=0
++ [[ F == B ]]
++ test 0 = 0
++ for m in original swapped translated normal
++ ck=/root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/swapped.cxx
++ test swapped '!=' original
++ g++ -std=c++17 -w -I/root/r26-main/24286.CK3Xsl/build-F/include/opencascade /root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/swapped.cxx -L/root/r26-main/24286.CK3Xsl/build-F/lin64/gcc/lib -lTKBO -o /root/r26-main/24286-formal.I1mtUW/test-F
+/usr/bin/ld: /root/r26-main/24286.CK3Xsl/build-F/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
++ rc=0
++ printf '%s ' swapped
++ /root/r26-main/24286-formal.I1mtUW/test-F <author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle
++ echo exit=0
++ expected=0
++ [[ F == B ]]
++ test 0 = 0
++ for m in original swapped translated normal
++ ck=/root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/translated.cxx
++ test translated '!=' original
++ g++ -std=c++17 -w -I/root/r26-main/24286.CK3Xsl/build-F/include/opencascade /root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/translated.cxx -L/root/r26-main/24286.CK3Xsl/build-F/lin64/gcc/lib -lTKBO -o /root/r26-main/24286-formal.I1mtUW/test-F
+/usr/bin/ld: /root/r26-main/24286.CK3Xsl/build-F/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
++ rc=0
++ printf '%s ' translated
++ /root/r26-main/24286-formal.I1mtUW/test-F <author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle
++ echo exit=0
++ expected=0
++ [[ F == B ]]
++ test 0 = 0
++ for m in original swapped translated normal
++ ck=/root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/normal.cxx
++ test normal '!=' original
++ g++ -std=c++17 -w -I/root/r26-main/24286.CK3Xsl/build-F/include/opencascade /root/r26-main/24286-formal.I1mtUW/bundle/evaluation/cases/occt24286/normal.cxx -L/root/r26-main/24286.CK3Xsl/build-F/lin64/gcc/lib -lTKBO -o /root/r26-main/24286-formal.I1mtUW/test-F
+/usr/bin/ld: /root/r26-main/24286.CK3Xsl/build-F/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
++ rc=0
++ printf '%s ' normal
++ /root/r26-main/24286-formal.I1mtUW/test-F <author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle
++ echo exit=0
++ expected=0
++ [[ F == B ]]
++ test 0 = 0
++ sid=occt67-24286-b-a6eb515f9d64
++ /root/accept-1114-1610/offline-venv/bin/python -B -m backend.source_cache occt67-24286-b-a6eb515f9d64 --from-dir /root/r26-main/24286.CK3Xsl/B
++ /root/accept-1114-1610/offline-venv/bin/python -B -m backend.reevaluate --patch /root/r26-main/24286-formal.I1mtUW/bundle/evaluation/provenance/occt24286/reference.patch --source-id occt67-24286-b-a6eb515f9d64 --suite-id occt-24286-suite --suite-version 1

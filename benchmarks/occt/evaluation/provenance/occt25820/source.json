@@ -1,0 +1,33 @@
+{
+  "source_id": "occt70-25820-b-b028f13535bf",
+  "commit": "b028f13535bfce86f015b5825c3ae4cef1b6783a",
+  "B": "b028f13535bfce86f015b5825c3ae4cef1b6783a",
+  "F": "c0e32b3c3d3638cae0fa1d54615bb432d442fbaf",
+  "materialized_tree_sha256": "fd597bbf81278bd7e01885bfd9eb289d1fddec7f6da852a10bf67fa6b1209266",
+  "F_tree_sha256": "a0f40ca601d2f940bddb74e1bbc905ef0885b8da5883433cfa5d923ec056afbd",
+  "reference_patch_sha256": "a390a5d575825810558a7852c5e0697d5160a1ecd95ff2461247549d5eb964ab",
+  "upstream_test": "https://github.com/Open-Cascade-SAS/OCCT/blob/c0e32b3c3d3638cae0fa1d54615bb432d442fbaf/tests/bugs/modalg_6/bug25820_1",
+  "upstream_neighborhoods": [
+    "https://github.com/Open-Cascade-SAS/OCCT/blob/c0e32b3c3d3638cae0fa1d54615bb432d442fbaf/tests/bugs/modalg_6/bug25820_2",
+    "https://github.com/Open-Cascade-SAS/OCCT/blob/c0e32b3c3d3638cae0fa1d54615bb432d442fbaf/tests/bugs/modalg_6/bug25820_3"
+  ],
+  "inputs": {
+    "OCC25820-Revolution_5.brep": {
+      "sha256": "30825e7e3032956b3a4edc8794b487fbbe4a557792006e7b78ec0b22bf6b4d47",
+      "url": "https://github.com/a-betenev/opencascade-dataset/blob/d78a7a9e6de57699261fa03641ec1b5bafac39a1/brep/OCC25820-Revolution_5.brep"
+    },
+    "OCC25820-Translation_1.brep": {
+      "sha256": "2970c53919e2c0e2858bcd089e5bf4a97bbd1ddc77e706f540dcbf8f99f72d54",
+      "url": "https://github.com/a-betenev/opencascade-dataset/blob/d78a7a9e6de57699261fa03641ec1b5bafac39a1/brep/OCC25820-Translation_1.brep"
+    },
+    "OCC25820-Translation_2.brep": {
+      "sha256": "576a6568aefccc334675705b89deff6b315989e0ffcc3daa703089cbcba3e625",
+      "url": "https://github.com/a-betenev/opencascade-dataset/blob/d78a7a9e6de57699261fa03641ec1b5bafac39a1/brep/OCC25820-Translation_2.brep"
+    },
+    "OCC25820-Translation_3.brep": {
+      "sha256": "42aa2b61c648d6dfbd7f7fb2807dc5272a3e61dbe531ad3d59d3fbc9c6111518",
+      "url": "https://github.com/a-betenev/opencascade-dataset/blob/d78a7a9e6de57699261fa03641ec1b5bafac39a1/brep/OCC25820-Translation_3.brep"
+    }
+  },
+  "SDK_sha256": "8ecf99f558fb1bfa0498aacd8aeca87cd0fb70be50d15515853f789ad6b224d5"
+}

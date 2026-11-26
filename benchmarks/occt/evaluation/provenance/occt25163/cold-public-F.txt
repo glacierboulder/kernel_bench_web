@@ -1,0 +1,19 @@
+cwd=/root/r27-legacy25163/official/data/reevaluations/96749c5f12e4da91/frozen-task/visible/issue_25163
+started=2026-11-26T12:00:30Z
+source=fc88faf18a2d3e55c036322e1bb966ec218278c5
+build_dir=/root/r27-legacy25163/public-cold-F.HEdN8q/build (absent before invocation)
+CCACHE_DISABLE=1; BENCH_COMPILER_JOBS=2; PATH uses /usr/bin/g++
+48d1a2f449528d135683553572fd7dcb1ecfc562a339f2fe9375be3f44698fb5  public-build.sh
+a3c66b6529e762ecb93817b063bf7747b26698845d14a02446a9510e1841f618  public-replay.sh
+b63c5efd66f54efd5c59223ba58df4127bd088f0a5ac37cee0563fb798d6ff37  cdl-toolchain.tar.xz
+478864a7805b207e13d28634297a6508095cac3cfd0fed86f606452cea62a079  reproduce.cxx
+a4f53da3b465edb7389435cc8e466702f1389b02fd9bbc1c7bd6e240b3881691  bug25163_qf_25_39.brep
+bash public-build.sh /root/r27-legacy25163/source-F /root/r27-legacy25163/public-cold-F.HEdN8q/build
+build_rc=0
+[2243/2243] ar rcs lin64/gcc/lib/libTKBO.a obj/Adaptor2d_Curve2d.cxx.o obj/Adaptor2d_HCurve2d.cxx.o obj/Adaptor2d_Line2d.cxx.o obj/Adaptor3d_Curve.cxx.o obj/Ada
+translation_units=2242
+faf0e2c9346077652d3400c4a0869c1ac2695ddeeb5b19ec8111b213e95c1e2d  /root/r27-legacy25163/public-cold-F.HEdN8q/build/lin64/gcc/lib/libTKBO.a
+bash public-replay.sh /root/r27-legacy25163/public-cold-F.HEdN8q/build
+vertices=4 edges=4 faces=1 shells=1 area=3417.7118648226 valid=1 verdict=PASS
+replay_rc=0
+ended=2026-11-26T12:08:49Z

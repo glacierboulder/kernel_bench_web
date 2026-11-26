@@ -1,0 +1,13 @@
+diff --git a/src/IntTools/IntTools_FaceFace.cxx b/src/IntTools/IntTools_FaceFace.cxx
+index 5030a3e0c..e0da23b45 100644
+--- a/src/IntTools/IntTools_FaceFace.cxx
++++ b/src/IntTools/IntTools_FaceFace.cxx
+@@ -581,7 +581,7 @@ void IntTools_FaceFace::Perform(const TopoDS_Face& aF1,
+     myIntersector.Perform(myHS1, dom1, TolArc, TolTang);
+   else
+     myIntersector.Perform(myHS1, dom1, myHS2, dom2, TolArc, TolTang, 
+-                          myListOfPnts, RestrictLine, isGeomInt);
++                          myListOfPnts, Standard_True, isGeomInt);
+ 
+   myIsDone = myIntersector.IsDone();
+ 

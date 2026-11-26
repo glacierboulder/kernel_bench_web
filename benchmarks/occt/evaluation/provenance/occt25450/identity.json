@@ -1,0 +1,14 @@
+{
+  "issue": "25450",
+  "B": "93442c6f24ea0e7afc058e81ef2eee2f1b085d3b",
+  "F": "ceb31c6156839c4a96563cbe288fdc1e3bc3cc46",
+  "dataset": "d78a7a9e6de57699261fa03641ec1b5bafac39a1",
+  "upstream_test": "tests/bugs/modalg_2/bug497_3",
+  "source_role": "Existing public regression whose geometric reference is changed at F; not the initial issue attachment.",
+  "files": [
+    "OCC497e.brep",
+    "OCC497f.brep"
+  ],
+  "production_path": "src/BOPAlgo/BOPAlgo_PaveFiller_5.cxx",
+  "main": "6f44a316f136ad24da38db3123ee085120eb11a8"
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "occt-27948-suite",
+  "version": "1",
+  "title": "布尔差集在共端点边段处留下多余的壳",
+  "source_ids": [
+    "occt72-27948-b-4563472c1eb4"
+  ],
+  "group_ids": [
+    "occt-27948-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "27948-original",
+      "issue_id": "occt-27948",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt27948/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "27948-translated",
+      "issue_id": "occt-27948",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt27948/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "27948-rotated",
+      "issue_id": "occt-27948",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt27948/rotated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "27948-control",
+      "issue_id": "occt-27948",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt27948/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt27948/geometry.tcl",
+    "evaluation/cases/occt27948/assets/bug27948_a.brep",
+    "evaluation/cases/occt27948/assets/bug27948_b.brep"
+  ]
+}

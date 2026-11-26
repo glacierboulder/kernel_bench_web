@@ -1,0 +1,18 @@
+cwd=/root/r27-legacy24060/official/data/reevaluations/e25ffb9cfa5c4a62/frozen-task/visible/issue_24060
+started=2026-11-26T11:48:40Z
+source=9733d9b31b3f77a68443654541ddea5030b3d1f7
+build_dir=/root/r27-legacy24060/public-cold-B.BCuJvY/build (absent before invocation)
+CCACHE_DISABLE=1; BENCH_COMPILER_JOBS=2; PATH uses /usr/bin/g++
+1c0a77f326a19a3e10ce01902e8a7f0feb0bd7766277412119811fd6abbc2150  public-build.sh
+f42bdf395afc25bbad46d4a25281e06b738145ee00bb08ae3eaa03b6f32bfa26  public-replay.sh
+4046800860cbee4d05e8a4758ba4be3cd551e1fd19d3b6ed9c2b0f36093b26ac  cdl-toolchain.tar.xz
+22562c346b10b7af610a55062cb131ade66e4fdb4e000492b3dcd7a45cea3383  reproduce.cxx
+bash public-build.sh /root/r27-legacy24060/source-B /root/r27-legacy24060/public-cold-B.BCuJvY/build
+build_rc=0
+[2257/2257] ar rcs lin64/gcc/lib/libTKBO.a obj/Adaptor2d_Curve2d.cxx.o obj/Adaptor2d_HCurve2d.cxx.o obj/Adaptor2d_Line2d.cxx.o obj/Adaptor3d_Curve.cxx.o obj/Ada
+translation_units=2256
+980fd63e6aa82c096a861ea72bad6e060597118601b09a300a6ca3c5555da5e4  /root/r27-legacy24060/public-cold-B.BCuJvY/build/lin64/gcc/lib/libTKBO.a
+bash public-replay.sh /root/r27-legacy24060/public-cold-B.BCuJvY/build
+vertices=5 coincident=2 edges=4 faces=1 area=1 valid=1 verdict=FAIL
+replay_rc=1
+ended=2026-11-26T11:56:47Z

@@ -1,0 +1,211 @@
+diff --git a/src/BOPAlgo/BOPAlgo_BuilderFace.cxx b/src/BOPAlgo/BOPAlgo_BuilderFace.cxx
+index 9d4007a0e..2caa3ff56 100644
+--- a/src/BOPAlgo/BOPAlgo_BuilderFace.cxx
++++ b/src/BOPAlgo/BOPAlgo_BuilderFace.cxx
+@@ -708,45 +708,53 @@ void MakeInternalWires(const TopTools_IndexedMapOfShape& theME,
+ //function : IsInside
+ //purpose  : 
+ //=======================================================================
+-Standard_Boolean IsInside(const TopoDS_Shape& theHole,
+-                          const TopoDS_Shape& theF2,
++Standard_Boolean IsInside(const TopoDS_Shape& theWire,
++                          const TopoDS_Shape& theF,
+                           Handle(IntTools_Context)& theContext)
+ {
+-  Standard_Boolean bRet;
+-  Standard_Real aT, aU, aV;
+-  
+-  TopAbs_State aState;
+-  TopExp_Explorer aExp;
+-  TopTools_IndexedMapOfShape aME2;
+-  gp_Pnt2d aP2D;
+-  //
+-  bRet=Standard_False;
+-  aState=TopAbs_UNKNOWN;
+-  const TopoDS_Face& aF2=(*(TopoDS_Face *)(&theF2));
+-  //
+-  TopExp::MapShapes(aF2, TopAbs_EDGE, aME2);//AA
+-  //
+-  aExp.Init(theHole, TopAbs_EDGE);
+-  if (aExp.More()) {
+-    const TopoDS_Edge& aE =(*(TopoDS_Edge *)(&aExp.Current()));
+-    if (aME2.Contains(aE)) {
+-      return bRet;
+-    }
+-    if (!BRep_Tool::Degenerated(aE)) {
+-      //
+-      aT=BOPTools_AlgoTools2D::IntermediatePoint(aE);
+-      BOPTools_AlgoTools2D::PointOnSurface(aE, aF2, aT, aU, aV, theContext);
+-      aP2D.SetCoord(aU, aV);
+-      //
+-      IntTools_FClass2d& aClsf=theContext->FClass2d(aF2);
+-      aState=aClsf.Perform(aP2D);
+-      bRet=(aState==TopAbs_IN);
+-    }
++  // Check if the wire is located inside the face:
++  // take unique point from the wire and classify it relatively the face
++
++  // Avoid edges of the face
++  TopTools_IndexedMapOfShape aFaceEdgesMap;
++  TopExp::MapShapes(theF, TopAbs_EDGE, aFaceEdgesMap);
++
++  // Get classification tool from the context
++  const TopoDS_Face& aF = TopoDS::Face(theF);
++  IntTools_FClass2d& aClassifier = theContext->FClass2d(aF);
++
++  Standard_Boolean isInside = Standard_False;
++
++  // Iterate on wire edges until first classification is performed
++  TopExp_Explorer anExp(theWire, TopAbs_EDGE);
++  for (; anExp.More(); anExp.Next())
++  {
++    const TopoDS_Edge& aE = TopoDS::Edge(anExp.Current());
++    if (BRep_Tool::Degenerated(aE))
++      // Avoid checking degenerated edges.
++      continue;
++
++    if (aFaceEdgesMap.Contains(aE))
++      // Face contains the edge from the wire, thus the wire cannot be
++      // inside that face.
++      return isInside;
++
++    // Get 2d curve of the edge on the face
++    Standard_Real aT1, aT2;
++    const Handle(Geom2d_Curve)& aC2D = BRep_Tool::CurveOnSurface(aE, aF, aT1, aT2);
++    if (aC2D.IsNull())
++      continue;
++
++    // Get middle point on the curve
++    gp_Pnt2d aP2D = aC2D->Value((aT1 + aT2) / 2.);
++
++    // Classify the point
++    TopAbs_State aState = aClassifier.Perform(aP2D);
++    isInside = (aState == TopAbs_IN);
++    break;
+   }
+-  //
+-  return bRet;
++  return isInside;
+ }
+-
+ //=======================================================================
+ //function : IsGrowthWire
+ //purpose  : 
+diff --git a/src/BOPAlgo/BOPAlgo_PaveFiller_3.cxx b/src/BOPAlgo/BOPAlgo_PaveFiller_3.cxx
+index 40e2b417d..cd04b75d3 100644
+--- a/src/BOPAlgo/BOPAlgo_PaveFiller_3.cxx
++++ b/src/BOPAlgo/BOPAlgo_PaveFiller_3.cxx
+@@ -803,8 +803,8 @@ void BOPAlgo_PaveFiller::ForceInterfEE()
+   Handle(NCollection_IncAllocator) anAlloc = new NCollection_IncAllocator;
+ 
+   // Initialize pave blocks for all SD vertices
+-  Standard_Integer i, aNbS = myDS->NbSourceShapes();
+-  for (i = 0; i < aNbS; ++i)
++  const Standard_Integer aNbS = myDS->NbSourceShapes();
++  for (Standard_Integer i = 0; i < aNbS; ++i)
+   {
+     const BOPDS_ShapeInfo& aSI = myDS->ShapeInfo(i);
+     if (aSI.ShapeType() == TopAbs_VERTEX)
+@@ -822,11 +822,22 @@ void BOPAlgo_PaveFiller::ForceInterfEE()
+   // Fence map of pave blocks
+   BOPDS_MapOfPaveBlock aMPBFence(1, anAlloc);
+ 
+-  BOPDS_VectorOfListOfPaveBlock& aPBP = myDS->ChangePaveBlocksPool();
+-  Standard_Integer aNbPBP = aPBP.Length();
+-  for (i = 0; i < aNbPBP; ++i)
++  for (Standard_Integer i = 0; i < aNbS; ++i)
+   {
+-    BOPDS_ListOfPaveBlock& aLPB = aPBP(i);
++    const BOPDS_ShapeInfo& aSI = myDS->ShapeInfo(i);
++    if (aSI.ShapeType() != TopAbs_EDGE)
++      // Not an edge
++      continue;
++
++    if (!aSI.HasReference())
++      // Edge has no pave blocks
++      continue;
++
++    if (aSI.HasFlag())
++      // Degenerated edge
++      continue;
++
++    const BOPDS_ListOfPaveBlock& aLPB = myDS->PaveBlocks(i);
+     BOPDS_ListIteratorOfListOfPaveBlock aItLPB(aLPB);
+     for (; aItLPB.More(); aItLPB.Next())
+     {
+@@ -852,23 +863,11 @@ void BOPAlgo_PaveFiller::ForceInterfEE()
+   if (!aNbPB)
+     return;
+ 
+-  // Find pairs of Pave Blocks having the same SD vertices,
+-  // rejecting the pairs of edges that have already been intersected
+-
+-  // Prepare map of pairs of intersected edges
+-  BOPDS_MapOfPair aMEEDone(1, anAlloc);
+-  myIterator->Initialize(TopAbs_EDGE, TopAbs_EDGE);
+-  for (; myIterator->More(); myIterator->Next())
+-  {
+-    Standard_Integer nE1, nE2;
+-    myIterator->Value(nE1, nE2);
+-    aMEEDone.Add(BOPDS_Pair(nE1, nE2));
+-  }
+-
+-  // Vector of pairs for intersection
++  // Find pairs of Pave Blocks having the same SD vertices
++  // and put them into the vector for parallel intersection.
+   BOPAlgo_VectorOfEdgeEdge aVEdgeEdge;
+ 
+-  for (i = 1; i <= aNbPB; ++i)
++  for (Standard_Integer i = 1; i <= aNbPB; ++i)
+   {
+     const BOPDS_ListOfPaveBlock& aLPB = aPBMap(i);
+     if (aLPB.Extent() < 2)
+@@ -891,6 +890,7 @@ void BOPAlgo_PaveFiller::ForceInterfEE()
+     for (; aItLPB1.More(); aItLPB1.Next())
+     {
+       const Handle(BOPDS_PaveBlock)& aPB1 = aItLPB1.Value();
++      const Handle(BOPDS_CommonBlock)& aCB1 = myDS->CommonBlock(aPB1);
+       const Standard_Integer nE1 = aPB1->OriginalEdge();
+       const TopoDS_Edge& aE1 = TopoDS::Edge(myDS->Shape(nE1));
+       Standard_Real aT11, aT12;
+@@ -900,15 +900,20 @@ void BOPAlgo_PaveFiller::ForceInterfEE()
+       for (aItLPB2.Next(); aItLPB2.More(); aItLPB2.Next())
+       {
+         const Handle(BOPDS_PaveBlock)& aPB2 = aItLPB2.Value();
++        const Handle(BOPDS_CommonBlock)& aCB2 = myDS->CommonBlock(aPB2);
+         const Standard_Integer nE2 = aPB2->OriginalEdge();
+ 
+-        if (aMEEDone.Contains(BOPDS_Pair(nE1, nE2)))
+-          continue;
+-
+         // Make sure that the edges came from different arguments
+         if (myDS->Rank(nE1) == myDS->Rank(nE2))
+           continue;
+ 
++        // Check that the Pave blocks do not form the Common block already
++        if (!aCB1.IsNull() && !aCB2.IsNull())
++        {
++          if (aCB1 == aCB2)
++            continue;
++        }
++
+         const TopoDS_Edge& aE2 = TopoDS::Edge(myDS->Shape(nE2));
+         Standard_Real aT21, aT22;
+         aPB2->Range(aT21, aT22);
+@@ -932,7 +937,6 @@ void BOPAlgo_PaveFiller::ForceInterfEE()
+ 
+   aPBMap.Clear();
+   aMPBFence.Clear();
+-  aMEEDone.Clear();
+   anAlloc->Reset();
+ 
+   // Perform intersection of the found pairs
+@@ -947,7 +951,7 @@ void BOPAlgo_PaveFiller::ForceInterfEE()
+ 
+   BOPDS_IndexedDataMapOfPaveBlockListOfPaveBlock aMPBLPB(1, anAlloc);
+ 
+-  for (i = 0; i < aNbPairs; ++i)
++  for (Standard_Integer i = 0; i < aNbPairs; ++i)
+   {
+     BOPAlgo_EdgeEdge& anEdgeEdge = aVEdgeEdge(i);
+     if (!anEdgeEdge.IsDone() || anEdgeEdge.HasErrors())

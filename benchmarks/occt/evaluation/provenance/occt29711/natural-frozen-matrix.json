@@ -1,0 +1,41 @@
+{
+  "snapshot_sha256": "078d63a4354d4dc0bb4cc4e33b445fa4fcd550a06fca258cec6ab6af6da54686",
+  "checkpoints": {
+    "B": {
+      "original": {
+        "expected": "FAIL",
+        "output": "DRAW is running in batch mode\nMEASURE tag=original wire=17 face=15 shell=2 solid=2 area=8636.79 volume=30978.4 valid=This shape seems to be valid\nBENCH_ASSERT_FAIL boolean_geometry fuse kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "translated": {
+        "expected": "FAIL",
+        "output": "DRAW is running in batch mode\nMEASURE tag=translated wire=17 face=15 shell=2 solid=2 area=8636.79 volume=30978.4 valid=This shape seems to be valid\nBENCH_ASSERT_FAIL boolean_geometry fuse kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "rotated": {
+        "expected": "FAIL",
+        "output": "DRAW is running in batch mode\nMEASURE tag=rotated wire=17 face=15 shell=2 solid=2 area=8636.79 volume=30978.4 valid=This shape seems to be valid\nBENCH_ASSERT_FAIL boolean_geometry fuse kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "control": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\nMEASURE tag=control wire=14 face=14 shell=1 solid=1 area=72 volume=36 valid=This shape seems to be valid\nBENCH_ASSERT_PASS boolean_geometry fuse kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      }
+    },
+    "F": {
+      "original": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\nMEASURE tag=original wire=9 face=9 shell=1 solid=1 area=8231.06 volume=30472.5 valid=This shape seems to be valid\nBENCH_ASSERT_PASS boolean_geometry fuse kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "translated": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\nMEASURE tag=translated wire=9 face=9 shell=1 solid=1 area=8231.06 volume=30472.5 valid=This shape seems to be valid\nBENCH_ASSERT_PASS boolean_geometry fuse kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "rotated": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\nMEASURE tag=rotated wire=9 face=9 shell=1 solid=1 area=8231.06 volume=30472.5 valid=This shape seems to be valid\nBENCH_ASSERT_PASS boolean_geometry fuse kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "control": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\nMEASURE tag=control wire=14 face=14 shell=1 solid=1 area=72 volume=36 valid=This shape seems to be valid\nBENCH_ASSERT_PASS boolean_geometry fuse kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      }
+    }
+  }
+}

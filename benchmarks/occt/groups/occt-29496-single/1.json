@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-29496-single",
+  "version": "1",
+  "title": "翼面与机体做布尔截交时，闭合环缺少一条短边",
+  "kind": "single",
+  "source_id": "occt72-29496-b-e3744452bb60",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-29496",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-29496-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

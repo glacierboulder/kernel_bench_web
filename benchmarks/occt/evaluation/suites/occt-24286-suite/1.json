@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "occt-24286-suite",
+  "version": "1",
+  "title": "布尔截交在裁剪面边界上保留多余曲线",
+  "source_ids": [
+    "occt67-24286-b-a6eb515f9d64"
+  ],
+  "group_ids": [
+    "occt-24286-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "24286-original",
+      "issue_id": "occt-24286",
+      "category": "original",
+      "required": true,
+      "visibility": "public",
+      "timeout_seconds": 90,
+      "case": "issues/occt-24286/1/public/reproduce.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-24286/1/public/GEN747_nofog.rle"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "24286-swapped",
+      "issue_id": "occt-24286",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt24286/swapped.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-24286/1/public/GEN747_nofog.rle"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "24286-translated",
+      "issue_id": "occt-24286",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt24286/translated.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-24286/1/public/GEN747_nofog.rle"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "24286-normal",
+      "issue_id": "occt-24286",
+      "category": "regression",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt24286/normal.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-24286/1/public/GEN747_nofog.rle"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-24286/1/public/cdl-toolchain.tar.xz"
+  ]
+}

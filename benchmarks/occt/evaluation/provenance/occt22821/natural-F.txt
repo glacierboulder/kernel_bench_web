@@ -1,0 +1,24 @@
+assets/bug22821_test.step: OK
+run mode=original binary=DRAWEXE
+DRAW is running in batch mode
+Reduced model for translation without additional info will be used 
+input mode=original edges=12 target=a_1 radius=0.01
+mode=original valid=1 area=0.220328 expected=0.220328 verdict=pass
+runner mode=original exit=0
+run mode=translated binary=DRAWEXE
+DRAW is running in batch mode
+Reduced model for translation without additional info will be used 
+input mode=translated edges=12 target=a_1 radius=0.01
+mode=translated valid=1 area=0.220328 expected=0.220328 verdict=pass
+runner mode=translated exit=0
+run mode=rotated binary=DRAWEXE
+DRAW is running in batch mode
+Reduced model for translation without additional info will be used 
+input mode=rotated edges=12 target=a_1 radius=0.01
+mode=rotated valid=1 area=0.220328 expected=0.220328 verdict=pass
+runner mode=rotated exit=0
+run mode=control binary=DRAWEXE
+DRAW is running in batch mode
+input mode=control edges=12 target=a_1 radius=0.01
+mode=control valid=1 area=0.239099 expected=0.23909867228626933 verdict=pass
+runner mode=control exit=0

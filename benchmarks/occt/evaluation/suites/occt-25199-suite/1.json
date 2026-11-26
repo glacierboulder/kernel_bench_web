@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "occt-25199-suite",
+  "version": "1",
+  "title": "圆角交线使用错误曲面边界，导致边容差膨胀",
+  "source_ids": [
+    "occt67-25199-b-2a78ec6a0747"
+  ],
+  "group_ids": [
+    "occt-25199-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "25199-original",
+      "issue_id": "occt-25199",
+      "category": "original",
+      "required": true,
+      "visibility": "public",
+      "timeout_seconds": 90,
+      "case": "issues/occt-25199/1/public/reproduce.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKFillet"
+        ],
+        "inputs": [
+          "issues/occt-25199/1/public/OCC615.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25199-rotated",
+      "issue_id": "occt-25199",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25199/rotated.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKFillet"
+        ],
+        "inputs": [
+          "issues/occt-25199/1/public/OCC615.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25199-translated",
+      "issue_id": "occt-25199",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25199/translated.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKFillet"
+        ],
+        "inputs": [
+          "issues/occt-25199/1/public/OCC615.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25199-normal",
+      "issue_id": "occt-25199",
+      "category": "regression",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25199/normal.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKFillet"
+        ],
+        "inputs": [
+          "issues/occt-25199/1/public/OCC615.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-25199/1/public/cdl-toolchain.tar.xz"
+  ]
+}

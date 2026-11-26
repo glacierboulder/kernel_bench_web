@@ -1,0 +1,3 @@
+edges=2 vertices=3 length_mm=72.422217828633 valid=1 verdict=PASS
+/usr/bin/ld: /root/r26-main/24286-public.Qzs1YS/F/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'

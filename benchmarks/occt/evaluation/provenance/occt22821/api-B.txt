@@ -1,0 +1,16 @@
+input mode=original edges=12 target=a_1 radius=0.01
+api done=0 contours=1 faulty_contours=1 faulty_vertices=0
+api contour=1 stripe_status=2 computed_surfaces=1
+mode=original operation=exception detail={} verdict=fail
+input mode=translated edges=12 target=a_1 radius=0.01
+api done=0 contours=1 faulty_contours=1 faulty_vertices=0
+api contour=1 stripe_status=2 computed_surfaces=1
+mode=translated operation=exception detail={} verdict=fail
+input mode=rotated edges=12 target=a_1 radius=0.01
+api done=0 contours=1 faulty_contours=1 faulty_vertices=0
+api contour=1 stripe_status=2 computed_surfaces=1
+mode=rotated operation=exception detail={} verdict=fail
+input mode=control edges=12 target=a_1 radius=0.01
+api done=1 contours=1 faulty_contours=0 faulty_vertices=0
+api contour=1 stripe_status=0 computed_surfaces=1
+mode=control valid=1 area=0.239099 expected=0.23909867228626933 verdict=pass

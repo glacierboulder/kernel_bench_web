@@ -1,0 +1,29 @@
++ export PYTHONPATH=/root/r26-main/formal-bench-baseline
++ PYTHONPATH=/root/r26-main/formal-bench-baseline
+++ git -C /root/r26-main/formal-bench-baseline rev-parse HEAD
++ test 6f44a316f136ad24da38db3123ee085120eb11a8 = 6f44a316f136ad24da38db3123ee085120eb11a8
++ export BENCHMARK_ROOT=/mnt/r27-builds/26775-formal.sWyvXT/bundle BENCH_DATA_DIR=/mnt/r27-builds/26775-formal.sWyvXT/data BENCH_CACHE_DIR=/mnt/r27-builds/26775-formal.sWyvXT/cache PYTHONDONTWRITEBYTECODE=1
++ BENCHMARK_ROOT=/mnt/r27-builds/26775-formal.sWyvXT/bundle
++ BENCH_DATA_DIR=/mnt/r27-builds/26775-formal.sWyvXT/data
++ BENCH_CACHE_DIR=/mnt/r27-builds/26775-formal.sWyvXT/cache
++ PYTHONDONTWRITEBYTECODE=1
++ venv=/root/accept-1114-1610/offline-venv
++ py=/root/accept-1114-1610/offline-venv/bin/python
++ tcl=/root/accept-1114-1610/offline-venv/occt-tcl86-complete
++ export BENCH_TCL_DIR=/root/accept-1114-1610/offline-venv/occt-tcl86-complete BENCH_TCL_INCLUDE_DIR=/root/accept-1114-1610/offline-venv/occt-tcl86-complete/include BENCH_TCL_LIBRARY=/root/accept-1114-1610/offline-venv/occt-tcl86-complete/lib/libtcl8.6.so BENCH_TCL_LIBRARY_DIR=/root/accept-1114-1610/offline-venv/occt-tcl86-complete/lib
++ BENCH_TCL_DIR=/root/accept-1114-1610/offline-venv/occt-tcl86-complete
++ BENCH_TCL_INCLUDE_DIR=/root/accept-1114-1610/offline-venv/occt-tcl86-complete/include
++ BENCH_TCL_LIBRARY=/root/accept-1114-1610/offline-venv/occt-tcl86-complete/lib/libtcl8.6.so
++ BENCH_TCL_LIBRARY_DIR=/root/accept-1114-1610/offline-venv/occt-tcl86-complete/lib
++ cp -a /root/accept-1114-1610/offline-venv/occt-tcl86-complete /mnt/r27-builds/26775-formal.sWyvXT/tcl
++ cp -L /usr/lib/x86_64-linux-gnu/libtk8.6.so /mnt/r27-builds/26775-formal.sWyvXT/tcl/lib/libtk8.6.so
++ cp -a /usr/share/tcltk/tk8.6 /mnt/r27-builds/26775-formal.sWyvXT/tcl/lib
++ cd /mnt/r27-builds/26775-formal.sWyvXT
++ export GIT_ALTERNATE_OBJECT_DIRECTORIES=/root/occt1124-candidate-sources/.git/objects
++ GIT_ALTERNATE_OBJECT_DIRECTORIES=/root/occt1124-candidate-sources/.git/objects
++ git -C /mnt/r27-builds/26775-B/source archive HEAD
++ /root/accept-1114-1610/offline-venv/bin/python -B <author-workspace>/round-02/draw-suite.py <author-workspace>/round-02/cases/26775 /root/r26-main/formal-bench-baseline/benchmarks/occt /mnt/r27-builds/26775-formal.sWyvXT/bundle /mnt/r27-builds/26775-B/source /mnt/r27-builds/26775-F/source src/IntTools
+++ git -C /mnt/r27-builds/26775-B/source rev-parse --short=12 HEAD
++ sid=occt70-26775-b-bf02aa7d7dcb
++ unshare -n /root/accept-1114-1610/offline-venv/bin/python -B -m backend.source_cache occt70-26775-b-bf02aa7d7dcb --from-dir /mnt/r27-builds/26775-B/source
++ unshare -n --mount --propagation private bash -c 'set -eu; mount --bind "$1" "$2"; shift 2; exec "$@"' _ /mnt/r27-builds/26775-formal.sWyvXT/tcl /root/accept-1114-1610/offline-venv/occt-tcl86-complete taskset -c 8,9 /root/accept-1114-1610/offline-venv/bin/python -B -m backend.reevaluate --patch /mnt/r27-builds/26775-formal.sWyvXT/bundle/evaluation/provenance/occt26775/reference.patch --source-id occt70-26775-b-bf02aa7d7dcb --suite-id occt-26775-suite --suite-version 1

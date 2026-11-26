@@ -1,0 +1,33 @@
+{
+  "snapshot_sha256": "513d24911f0d07c7091100dc3de000ce595588702de6e391fcd65326b165f2f8",
+  "public_files": {
+    "reproduce.cxx": "5ce61361c0b0b2b532938f8a90aa7a622d5804288a6480bda57918705eff8962",
+    "statement.md": "789d6357dc1a2aafae01b7318bda76552ee81f6b1d96890ee12919057ad3f09e",
+    "public-build.sh": "0b3cde7c3746fdb884991748cddb34a68e48d36108d800a44e3267882a911e6b",
+    "SDK-SOURCES.md": "7bce74006e4d40eb4f3e3e389aca3d0a7562097dd9d9e7aa4f3d4f6472e533b2",
+    "OCC497e.brep": "3c94f1813a2eb86e81252a70c3244be4c4184b775511cc292f511a75b8a4f389",
+    "issue.json": "19e238c4105c51c5f5c97a5d5e782551538e61b033b27aa9e1b1aef34df7dc47",
+    "public-replay.sh": "4d71d415f5ac72843def926b830ac45647a49b94d357fe18d9664e722e14c957",
+    "cdl-toolchain.tar.xz": "42c080c1fa48fbc144c2292b920eed81d30036054c0e3beccf136f0edbc93a74",
+    "OCC497f.brep": "c241a8462ab351d7cb7bc7d874f53e979f649243f832d45b26c3fae14e32d06f"
+  },
+  "readings": {
+    "B": {
+      "public_original": "mode=original area=1773.59641848921 expected=2471.48 vertices=3 edges=4 faces=2 solids=1 valid=1 verdict=FAIL",
+      "exit": 1,
+      "stage": [
+        "TRACE ef-edge face=30 edge=9 queued=0",
+        "TRACE ef-edge face=30 edge=14 queued=0"
+      ]
+    },
+    "F": {
+      "public_original": "mode=original area=2471.48255519881 expected=2471.48 vertices=9 edges=16 faces=8 solids=1 valid=1 verdict=PASS",
+      "exit": 0,
+      "stage": [
+        "TRACE ef-edge face=30 edge=9 queued=1",
+        "TRACE ef-edge face=30 edge=14 queued=1",
+        "TRACE updateFaceInfoIn face=30"
+      ]
+    }
+  }
+}

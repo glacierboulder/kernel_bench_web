@@ -1,0 +1,33 @@
+{
+  "source_id": "occt70-26775-b-bf02aa7d7dcb",
+  "commit": "bf02aa7d7dcbdc460bef975913388ffc25d3d1a7",
+  "materialized_tree_sha256": "47b48bc6606d9f61c9ed962012dcc38f589a378aa760fdac7c17224a6ad89a5c",
+  "B": "bf02aa7d7dcbdc460bef975913388ffc25d3d1a7",
+  "F": "d33a8cde9649617a2fc433a58b98238136cc11a3",
+  "F_tree_sha256": "29b54536caa51744ea3edebeaf79817dc102f9c0901f15985b217d3ab231ad79",
+  "reference_patch_sha256": "ab97be7857ffe95570dc5d33878f7d7c00f6d5c286c10deefa9319df57b24591",
+  "upstream_test": "https://github.com/Open-Cascade-SAS/OCCT/blob/d33a8cde9649617a2fc433a58b98238136cc11a3/tests/bugs/modalg_1/buc60532_2",
+  "inputs": [
+    {
+      "name": "buc60532a.brep",
+      "git_blob": "9edfacc2c01c43dd7e1ec927b1f010fb37184576",
+      "size": 265191,
+      "sha256": "c3cadb25981eb959c1cedca211ad3acd57f042e93592af36a992d159906249bb",
+      "url": "https://github.com/a-betenev/opencascade-dataset/blob/d78a7a9e6de57699261fa03641ec1b5bafac39a1/brep/buc60532a.brep"
+    },
+    {
+      "name": "buc60532b.brep",
+      "git_blob": "6ef7f4a0424f0f97d08518bf6345ba0d4a14a2ba",
+      "size": 17791,
+      "sha256": "112a74bf40af8540a084f29a3f628fdf0d62ff9ebeaa010f8ea04ff8a0f834dc",
+      "url": "https://github.com/a-betenev/opencascade-dataset/blob/d78a7a9e6de57699261fa03641ec1b5bafac39a1/brep/buc60532b.brep"
+    },
+    {
+      "name": "buc60532c.brep",
+      "git_blob": "92751a3a7a681b263d5acb0a35a65de95fb88b7a",
+      "size": 15161,
+      "sha256": "5458a0f6c8e3a58b2082308d5706fec0534fd94a3d067a2a93baad2fdf43511e",
+      "url": "https://github.com/a-betenev/opencascade-dataset/blob/d78a7a9e6de57699261fa03641ec1b5bafac39a1/brep/buc60532c.brep"
+    }
+  ]
+}

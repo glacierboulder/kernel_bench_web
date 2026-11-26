@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-26841-single",
+  "version": "1",
+  "title": "两张裁剪曲面求截时产生越界的多余截边",
+  "kind": "single",
+  "source_id": "occt70-26841-b-c9e1d810abfa",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-26841",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-26841-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

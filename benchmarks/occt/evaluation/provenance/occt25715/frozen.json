@@ -1,0 +1,24 @@
+{
+  "snapshot_sha256": "9de91fdb021a0af30ff14626e0d87c4ea1704a141c360844131b959f99371da6",
+  "public_files": {
+    "cdl-toolchain.tar.xz": "42c080c1fa48fbc144c2292b920eed81d30036054c0e3beccf136f0edbc93a74",
+    "issue.json": "236be39779156d6bb95aa2dde3742230f2e20cfe8211945ae816673ad8fcb537",
+    "statement.md": "f6082afd40dee2be9198573eff4383c3c1f7faa59be2856e6393652dba7c7f25",
+    "SDK-SOURCES.md": "7bce74006e4d40eb4f3e3e389aca3d0a7562097dd9d9e7aa4f3d4f6472e533b2",
+    "public-replay.sh": "7459bc7970d052526f86736150916dfab2b3a589e87ae02bcce6f2d88e7a0728",
+    "public-build.sh": "e4e41ca6e3ed3ce9d7ca57f32f07ea38aefcf1a033bc7210cdd4e951fe4bf86b",
+    "reproduce.cxx": "7441c36f9400892d83c8561e495e8ccc87bb72ba02a72b3bb4775c1cbb0ffa2d"
+  },
+  "readings": {
+    "B": {
+      "counts": "6,8,6,4,1,1,0,1,27",
+      "exit": 1,
+      "face_face_before_BOP": "face_pair=0 curves=4 segments=1,1,1,1,"
+    },
+    "F": {
+      "counts": "4,6,6,4,1,1,0,1,23",
+      "exit": 0,
+      "face_face_before_BOP": "face_pair=0 curves=2 segments=1,1,"
+    }
+  }
+}

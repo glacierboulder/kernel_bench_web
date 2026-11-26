@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-23738-single",
+  "version": "1",
+  "title": "近轴二次曲面的布尔融合没有连接相交部分",
+  "kind": "single",
+  "source_id": "occt65-23738-b-ab4a555430d4",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-23738",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-23738-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

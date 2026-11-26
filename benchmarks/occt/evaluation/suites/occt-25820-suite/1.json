@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "id": "occt-25820-suite",
+  "version": "1",
+  "title": "旋转面与平面的布尔截交只留下两个孤立顶点",
+  "source_ids": [
+    "occt70-25820-b-b028f13535bf"
+  ],
+  "group_ids": [
+    "occt-25820-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "25820-original",
+      "issue_id": "occt-25820",
+      "category": "original",
+      "required": true,
+      "visibility": "public",
+      "timeout_seconds": 90,
+      "case": "issues/occt-25820/1/public/reproduce.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25820/1/public/OCC25820-Revolution_5.brep",
+          "issues/occt-25820/1/public/OCC25820-Translation_1.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25820-plane2",
+      "issue_id": "occt-25820",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25820/plane2.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25820/1/public/OCC25820-Revolution_5.brep",
+          "evaluation/cases/occt25820/assets/OCC25820-Translation_2.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25820-plane3",
+      "issue_id": "occt-25820",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25820/plane3.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25820/1/public/OCC25820-Revolution_5.brep",
+          "evaluation/cases/occt25820/assets/OCC25820-Translation_3.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25820-normal",
+      "issue_id": "occt-25820",
+      "category": "regression",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25820/normal.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-25820/1/public/cdl-toolchain.tar.xz"
+  ]
+}

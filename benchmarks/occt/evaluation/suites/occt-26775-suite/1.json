@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "id": "occt-26775-suite",
+  "version": "1",
+  "title": "两次半空间差集保留了错误的面边界",
+  "source_ids": [
+    "occt70-26775-b-bf02aa7d7dcb"
+  ],
+  "group_ids": [
+    "occt-26775-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "26775-original",
+      "issue_id": "occt-26775",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt26775/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "26775-translated",
+      "issue_id": "occt-26775",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt26775/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "26775-rotated",
+      "issue_id": "occt-26775",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt26775/rotated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "26775-control",
+      "issue_id": "occt-26775",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt26775/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt26775/geometry.tcl",
+    "evaluation/cases/occt26775/assets/buc60532a.brep",
+    "evaluation/cases/occt26775/assets/buc60532b.brep",
+    "evaluation/cases/occt26775/assets/buc60532c.brep"
+  ]
+}

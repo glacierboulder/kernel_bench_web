@@ -1,0 +1,12 @@
+diff --git a/src/BOPAlgo/BOPAlgo_PaveFiller.cxx b/src/BOPAlgo/BOPAlgo_PaveFiller.cxx
+index 0257af3d7..d3eb2fa15 100644
+--- a/src/BOPAlgo/BOPAlgo_PaveFiller.cxx
++++ b/src/BOPAlgo/BOPAlgo_PaveFiller.cxx
+@@ -300,7 +300,6 @@ void BOPAlgo_PaveFiller::PerformInternal()
+   ForceInterfEE();
+   // Force Edge/Face intersection after increase
+   // of the tolerance values of their vertices
+-  ForceInterfEF();
+   //
+   // 22
+   PerformFF();

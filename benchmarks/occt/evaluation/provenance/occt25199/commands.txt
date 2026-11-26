@@ -1,0 +1,4 @@
++ cp <author-workspace>/round-01/cases/25199/evidence/formal.CraHaD/natural-B.log <author-workspace>/round-01/cases/25199/evidence/formal.CraHaD/natural-F.log <author-workspace>/round-01/cases/25199/evidence/formal.CraHaD/source-import.json <author-workspace>/round-01/cases/25199/evidence/retry.kNKdUp/
++ git -C /root/r26-main/formal-bench-baseline rev-parse HEAD
+6f44a316f136ad24da38db3123ee085120eb11a8
++ unshare -n taskset -c 8,9 /root/accept-1114-1610/offline-venv/bin/python -B -m backend.reevaluate --patch /root/r26-main/25199-formal.toMN61/bundle/evaluation/provenance/occt25199/reference.patch --source-id occt67-25199-b-2a78ec6a0747 --suite-id occt-25199-suite --suite-version 1

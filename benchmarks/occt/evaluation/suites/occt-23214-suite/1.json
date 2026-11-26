@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "id": "occt-23214-suite",
+  "version": "1",
+  "title": "面与壳求截时两段交边的总长错误",
+  "source_ids": [
+    "occt65-23214-b-a2d5ab2e7f2c"
+  ],
+  "group_ids": [
+    "occt-23214-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "23214-original",
+      "issue_id": "occt-23214",
+      "category": "original",
+      "required": true,
+      "visibility": "public",
+      "timeout_seconds": 90,
+      "case": "issues/occt-23214/1/public/reproduce.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-23214/1/public/OCC23214-face_1188.brep",
+          "issues/occt-23214/1/public/OCC23214-shell_for_line_1188.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "23214-swapped",
+      "issue_id": "occt-23214",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt23214/swapped.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-23214/1/public/OCC23214-face_1188.brep",
+          "issues/occt-23214/1/public/OCC23214-shell_for_line_1188.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "23214-translated",
+      "issue_id": "occt-23214",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt23214/translated.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-23214/1/public/OCC23214-face_1188.brep",
+          "issues/occt-23214/1/public/OCC23214-shell_for_line_1188.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "23214-normal",
+      "issue_id": "occt-23214",
+      "category": "regression",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt23214/normal.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-23214/1/public/OCC23214-face_1188.brep",
+          "issues/occt-23214/1/public/OCC23214-shell_for_line_1188.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-23214/1/public/cdl-toolchain.tar.xz"
+  ]
+}

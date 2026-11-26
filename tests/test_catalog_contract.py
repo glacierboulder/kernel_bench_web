@@ -18,8 +18,8 @@ BUNDLE=ROOT/"benchmarks"/"occt"
 class CatalogContractTests(unittest.TestCase):
     def test_current_catalog_maps_legacy_tasks_and_only_public_issue_material(self):
         bundle=validate_bundle(BUNDLE)
-        self.assertEqual(bundle["counts"],{"issues":101,"groups":101,"evaluation_suites":132})
-        self.assertEqual(len(bundle["groups"]),101)
+        self.assertEqual(bundle["counts"],{"issues":121,"groups":121,"evaluation_suites":152})
+        self.assertEqual(len(bundle["groups"]),121)
         self.assertIn(("NG-04R-v2","1"),bundle["groups"])
         task=public_task(bundle,bundle["groups"][("occt_boolean_group_visible_544","1")])
         self.assertEqual(task["evaluation_suite"],{"id":"occt-group-544","version":"1"})
@@ -67,12 +67,12 @@ class CatalogContractTests(unittest.TestCase):
             ("occt-25237-suite","2"), ("occt-28366-suite","2")})
         self.assertIn(("occt-bf-suite-b55-27310-27773-27252-geometry-v2","1"),referenced)
         checkpoints=[checkpoint for suite in suites.values() for checkpoint in suite["checkpoints"]]
-        self.assertEqual(len(checkpoints),530)
+        self.assertEqual(len(checkpoints),610)
         self.assertTrue(all(checkpoint["required"] for checkpoint in checkpoints))
         self.assertEqual({category:sum(cp["category"]==category for cp in checkpoints)
                           for category in ("original","neighborhood","regression")},
-                         {"original":142,"neighborhood":241,"regression":147})
-        self.assertEqual(sum(len(suites[key]["checkpoints"]) for key in referenced),464)
+                         {"original":162,"neighborhood":281,"regression":167})
+        self.assertEqual(sum(len(suites[key]["checkpoints"]) for key in referenced),544)
 
     def test_extended_common_suites_are_opt_in_and_preserve_v1(self):
         bundle = validate_bundle(BUNDLE)

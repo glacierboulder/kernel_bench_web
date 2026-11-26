@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-29323-single",
+  "version": "1",
+  "title": "两张曲面截出的短边出现过大的几何误差",
+  "kind": "single",
+  "source_id": "occt72-29323-b-48a2dd2012ac",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-29323",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-29323-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

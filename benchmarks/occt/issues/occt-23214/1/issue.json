@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "occt-23214",
+  "version": "1",
+  "title": "面与壳求截时两段交边的总长错误",
+  "source_id": "occt65-23214-b-a2d5ab2e7f2c",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/reproduce.cxx",
+    "public/OCC23214-face_1188.brep",
+    "public/OCC23214-shell_for_line_1188.brep",
+    "public/public-build.sh",
+    "public/public-replay.sh",
+    "public/cdl-toolchain.tar.xz",
+    "public/SDK-SOURCES.md"
+  ]
+}

@@ -1,0 +1,26 @@
++ ninja -C /root/r26-main/24286.CK3Xsl/build-B -t commands obj/IntTools_FClass2d.cxx.o
++ g++ -std=gnu++11 -fPIC -w -O0 -DCSFDB -DLIN -DLININTEL -DOCC_CONVERT_SIGNALS -DHAVE_IOSTREAM -DHAVE_FSTREAM -DHAVE_LIMITS_H -DHAVE_IOMANIP -DHAVE_UNISTD_H -DHAVE_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_STAT_H -DHAVE_PTHREAD_H -Iinc -Igen -MMD -MF /root/r26-main/24286.CK3Xsl/classifier-cijxg5yt/deps -c /root/r26-main/24286.CK3Xsl/F/src/IntTools/IntTools_FClass2d.cxx -o /root/r26-main/24286.CK3Xsl/classifier-cijxg5yt/classifier.o
++ g++ -w -std=c++17 -I/root/r26-main/24286.CK3Xsl/build-B/include/opencascade '<author-workspace>/round-01/replacements/24286/check.cxx' /root/r26-main/24286.CK3Xsl/classifier-cijxg5yt/classifier.o -L/root/r26-main/24286.CK3Xsl/build-B/lin64/gcc/lib -lTKBO -o /root/r26-main/24286.CK3Xsl/classifier-cijxg5yt/trial
+/usr/bin/ld: /root/r26-main/24286.CK3Xsl/build-B/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
++ /root/r26-main/24286.CK3Xsl/classifier-cijxg5yt/trial '<author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle' original
+B plus F classifier: mode=original edge=2 vertex=3 length_mm=72.422217828633 valid=1 pass=1
++ /root/r26-main/24286.CK3Xsl/classifier-cijxg5yt/trial '<author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle' translated
+B plus F classifier: mode=translated edge=2 vertex=3 length_mm=72.422217828673 valid=1 pass=1
++ /root/r26-main/24286.CK3Xsl/classifier-cijxg5yt/trial '<author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle' swapped
+B plus F classifier: mode=swapped edge=2 vertex=3 length_mm=72.42221782862 valid=1 pass=1
++ /root/r26-main/24286.CK3Xsl/classifier-cijxg5yt/trial '<author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle' control
+B plus F classifier: mode=control edge=1 vertex=2 length_mm=6 valid=1 pass=1
++ ninja -C /root/r26-main/24286.CK3Xsl/build-F -t commands obj/IntTools_FClass2d.cxx.o
++ g++ -std=gnu++11 -fPIC -w -O0 -DCSFDB -DLIN -DLININTEL -DOCC_CONVERT_SIGNALS -DHAVE_IOSTREAM -DHAVE_FSTREAM -DHAVE_LIMITS_H -DHAVE_IOMANIP -DHAVE_UNISTD_H -DHAVE_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_STAT_H -DHAVE_PTHREAD_H -Iinc -Igen -MMD -MF /root/r26-main/24286.CK3Xsl/classifier-asi5br9t/deps -c /root/r26-main/24286.CK3Xsl/B/src/IntTools/IntTools_FClass2d.cxx -o /root/r26-main/24286.CK3Xsl/classifier-asi5br9t/classifier.o
++ g++ -w -std=c++17 -I/root/r26-main/24286.CK3Xsl/build-F/include/opencascade '<author-workspace>/round-01/replacements/24286/check.cxx' /root/r26-main/24286.CK3Xsl/classifier-asi5br9t/classifier.o -L/root/r26-main/24286.CK3Xsl/build-F/lin64/gcc/lib -lTKBO -o /root/r26-main/24286.CK3Xsl/classifier-asi5br9t/trial
+/usr/bin/ld: /root/r26-main/24286.CK3Xsl/build-F/lin64/gcc/lib/libTKBO.a(OSD_File.cxx.o): in function `OSD_File::BuildTemporary()':
+OSD_File.cxx:(.text+0x8a7): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
++ /root/r26-main/24286.CK3Xsl/classifier-asi5br9t/trial '<author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle' original
+F plus B classifier: mode=original edge=3 vertex=4 length_mm=79.885527802753 valid=1 pass=0
++ /root/r26-main/24286.CK3Xsl/classifier-asi5br9t/trial '<author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle' translated
+F plus B classifier: mode=translated edge=3 vertex=4 length_mm=79.885527802745 valid=1 pass=0
++ /root/r26-main/24286.CK3Xsl/classifier-asi5br9t/trial '<author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle' swapped
+F plus B classifier: mode=swapped edge=3 vertex=4 length_mm=79.885527802747 valid=1 pass=0
++ /root/r26-main/24286.CK3Xsl/classifier-asi5br9t/trial '<author-workspace>/round-01/replacements/24286/assets/GEN747_nofog.rle' control
+F plus B classifier: mode=control edge=1 vertex=2 length_mm=6 valid=1 pass=1
