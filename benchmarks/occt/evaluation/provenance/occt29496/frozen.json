@@ -1,0 +1,15 @@
+{
+  "snapshot_sha256": "a1baef4f7029ecd45befdae9126577bc80b379cc8aa9af2978fcde3e2a819b28",
+  "files": {
+    "statement.md": "f19be660f5ab33c99d36626f56611357ced5bad4d3011ada3243d5941dd725af",
+    "bug25994_wing.brep": "73e0fb5d078d253948b76124ec06d34c60d623bcb0c6907be5ae54500ce78535",
+    "issue.json": "71c5caa552136066274ce8d73afeefc6c95389cefe5645946219c279ff8bb881",
+    "reproduce.tcl": "1c680d5623e3a077b335c8bfdb56d2d9ee5bcb76d604763f3229c20c2dee8ec9",
+    "bug25994_body.brep": "821767fde15d56930c670d46a58039103f3ca6f2f4bd758ecffe40090a0198e1"
+  },
+  "command": "DRAWEXE -b -f reproduce.tcl",
+  "readings": {
+    "B": "MEASURE tag=original vertices=3 edges=2 length=620.017 maxTolerance=0.00021315581114336483",
+    "F": "MEASURE tag=original vertices=3 edges=3 length=620.026 maxTolerance=2.4993906603428902e-05"
+  }
+}

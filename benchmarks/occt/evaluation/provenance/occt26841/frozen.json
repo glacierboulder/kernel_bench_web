@@ -1,0 +1,15 @@
+{
+  "snapshot_sha256": "79b38d18bd48ecfddceae5b2971eff3cd6d96ea0c3160edcb30ea91859ea618c",
+  "versions": {
+    "B": {
+      "command": "DRAWEXE -b -f reproduce.tcl",
+      "cwd": "/mnt/r27-builds/26841-formal.cxOB14/data/reevaluations/ee4710fb4b6d1c31/frozen-task/visible/issue_26841",
+      "output": "c9e1d810abfa9e49255b7b9ade86006567af7a9c\n64186b586adcb660e1dc94265ad8030561ed98d9c014440a0ddf18f96d774030  /root/round-pair-26675.HInRjf/build/lin64/gcc/lib/libTKBO.so\nDRAW is running in batch mode\nNumber of shapes in result\n VERTEX    : 5\n EDGE      : 5\n WIRE      : 0\n FACE      : 0\n SHELL     : 0\n SOLID     : 0\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 11\n\n\n\nMass :         22.6867\n\nCenter of gravity : \nX =         4244.72\nY =        -251.678\nZ =         1462.51\n\nMatrix of Inertia : \n        554.101         104.871        -81.1406\n        104.871          444.53         235.156\n       -81.1406         235.156         278.808\n\nMoments : \nIX =         638.718\nIY =         560.384\nIZ =         78.3359\n\n\nThis shape seems to be valid\n"
+    },
+    "F": {
+      "command": "DRAWEXE -b -f reproduce.tcl",
+      "cwd": "/mnt/r27-builds/26841-formal.cxOB14/data/reevaluations/ee4710fb4b6d1c31/frozen-task/visible/issue_26841",
+      "output": "47e3009da9a2d86bdcf01f166e552adeee57af12\n26601bfede85ba8766322a12a47f812c52479abd11ea0c4741f3abd8b081d717  /root/round-pair-26675.HInRjf/build/lin64/gcc/lib/libTKBO.so\nDRAW is running in batch mode\nNumber of shapes in result\n VERTEX    : 3\n EDGE      : 2\n WIRE      : 0\n FACE      : 0\n SHELL     : 0\n SOLID     : 0\n COMPSOLID : 0\n COMPOUND  : 1\n SHAPE     : 6\n\n\n\nMass :         22.2576\n\nCenter of gravity : \nX =         4244.75\nY =        -251.667\nZ =         1462.44\n\nMatrix of Inertia : \n        548.631         105.214        -83.2471\n        105.214         438.369         234.282\n       -83.2471         234.282         277.826\n\nMoments : \nIX =         632.412\nIY =         557.255\nIZ =         75.1583\n\n\nThis shape seems to be valid\n"
+    }
+  }
+}

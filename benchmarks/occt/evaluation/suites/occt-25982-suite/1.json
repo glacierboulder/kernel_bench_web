@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "occt-25982-suite",
+  "version": "1",
+  "title": "镜像自由曲面进行广义融合时丢失一侧分割面",
+  "source_ids": [
+    "occt68-25982-b-1804bb99a682"
+  ],
+  "group_ids": [
+    "occt-25982-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "25982-original",
+      "issue_id": "occt-25982",
+      "category": "original",
+      "required": true,
+      "visibility": "public",
+      "timeout_seconds": 90,
+      "case": "issues/occt-25982/1/public/reproduce.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25982/1/public/bug25982_human_head_3.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25982-swapped",
+      "issue_id": "occt-25982",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25982/swapped.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25982/1/public/bug25982_human_head_3.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25982-translated",
+      "issue_id": "occt-25982",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25982/translated.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25982/1/public/bug25982_human_head_3.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25982-normal",
+      "issue_id": "occt-25982",
+      "category": "regression",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25982/normal.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25982/1/public/bug25982_human_head_3.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-25982/1/public/cdl-toolchain.tar.xz"
+  ]
+}

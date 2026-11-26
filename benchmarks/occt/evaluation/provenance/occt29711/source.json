@@ -1,0 +1,28 @@
+{
+  "source_id": "occt72-29711-b-fb60181a3a21",
+  "commit": "fb60181a3a213c25c4c63797f52cf48798532d96",
+  "B": "fb60181a3a213c25c4c63797f52cf48798532d96",
+  "F": "d3578357e3e819c259d2ddd882a5f9932c7c95ee",
+  "materialized_tree_sha256": "36223057f5c844f346df617f9f791e77e157570155f3bc73362948e688a949a2",
+  "F_tree_sha256": "101f5532466cdd9370c2fc5503794ba7ff688be8f3d7ff5246fe77b4abedc86a",
+  "reference_patch_sha256": "0558027ea38b43c0981aae52e2faf54f2533cb79d98e3d0e449c65a3eefdc264",
+  "inputs": [
+    {
+      "name": "CTO900_pro10658a.rle",
+      "size": 4199,
+      "archive_member": "opencascade-dataset-7.9.0/brep/CTO900_pro10658a.rle",
+      "sha256": "118a2e402d7f9187b9663768cf3edcfe679ada2f7bdab928b8ddef59f2904c13",
+      "git_blob": "ca235847b5f0c633ad3ccd913e7fc46e60f13413",
+      "url": "https://github.com/Open-Cascade-SAS/OCCT/releases/download/V7_9_0_beta1/opencascade-dataset-7.9.0.tar.xz"
+    },
+    {
+      "name": "pro10658b.rle",
+      "size": 2205,
+      "archive_member": "opencascade-dataset-7.9.0/brep/pro10658b.rle",
+      "sha256": "a9822d0695b5a11273a73dab5a42f2f90cfc362d2549a76cf437ca1ec16593bb",
+      "git_blob": "37c7b2103f3acf3509f9ced4b23b8fed74264cf9",
+      "url": "https://github.com/Open-Cascade-SAS/OCCT/releases/download/V7_9_0_beta1/opencascade-dataset-7.9.0.tar.xz"
+    }
+  ],
+  "upstream_test": "https://github.com/Open-Cascade-SAS/OCCT/blob/d3578357e3e819c259d2ddd882a5f9932c7c95ee/tests/boolean/bfuse_complex/F5"
+}

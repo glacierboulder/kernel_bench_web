@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "id": "occt-25715-suite",
+  "version": "1",
+  "title": "斜交圆柱做差后，孔口边界多出分割顶点",
+  "source_ids": [
+    "occt68-25715-b-a70f58235a5c"
+  ],
+  "group_ids": [
+    "occt-25715-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "25715-original",
+      "issue_id": "occt-25715",
+      "category": "original",
+      "required": true,
+      "visibility": "public",
+      "timeout_seconds": 90,
+      "case": "issues/occt-25715/1/public/reproduce.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25715-rotated",
+      "issue_id": "occt-25715",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25715/rotated.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25715-translated",
+      "issue_id": "occt-25715",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25715/translated.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25715-control",
+      "issue_id": "occt-25715",
+      "category": "regression",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25715/control.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-25715/1/public/cdl-toolchain.tar.xz"
+  ]
+}

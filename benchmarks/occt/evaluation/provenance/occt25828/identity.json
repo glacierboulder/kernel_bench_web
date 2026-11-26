@@ -1,0 +1,14 @@
+{
+  "issue": "25828",
+  "B": "5bffb8828265a829f7f938639a92076294a62cff",
+  "F": "c8187bb218b658b71da96da46eb2105795c897cb",
+  "dataset": "d78a7a9e6de57699261fa03641ec1b5bafac39a1",
+  "upstream_test": "tests/boolean/bsection/R9",
+  "source_role": "Existing public regression whose geometric reference is changed at F; not the initial issue attachment.",
+  "files": [
+    "buc60462a.brep",
+    "buc60462b.brep"
+  ],
+  "production_path": "src/IntPatch/IntPatch_PrmPrmIntersection.cxx",
+  "main": "6f44a316f136ad24da38db3123ee085120eb11a8"
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "id": "occt-25450-suite",
+  "version": "1",
+  "title": "有效形体作布尔差后丢失边界面积",
+  "source_ids": [
+    "occt68-25450-b-93442c6f24ea"
+  ],
+  "group_ids": [
+    "occt-25450-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "25450-original",
+      "issue_id": "occt-25450",
+      "category": "original",
+      "required": true,
+      "visibility": "public",
+      "timeout_seconds": 90,
+      "case": "issues/occt-25450/1/public/reproduce.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25450/1/public/OCC497e.brep",
+          "issues/occt-25450/1/public/OCC497f.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25450-tool_box",
+      "issue_id": "occt-25450",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25450/tool_box.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25450/1/public/OCC497e.brep",
+          "issues/occt-25450/1/public/OCC497f.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25450-object_box",
+      "issue_id": "occt-25450",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25450/object_box.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25450/1/public/OCC497e.brep",
+          "issues/occt-25450/1/public/OCC497f.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25450-control",
+      "issue_id": "occt-25450",
+      "category": "regression",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25450/control.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-25450/1/public/cdl-toolchain.tar.xz"
+  ]
+}

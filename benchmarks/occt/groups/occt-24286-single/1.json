@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-24286-single",
+  "version": "1",
+  "title": "布尔截交在裁剪面边界上保留多余曲线",
+  "kind": "single",
+  "source_id": "occt67-24286-b-a6eb515f9d64",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-24286",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-24286-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

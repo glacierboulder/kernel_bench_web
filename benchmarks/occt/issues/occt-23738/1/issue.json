@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "occt-23738",
+  "version": "1",
+  "title": "近轴二次曲面的布尔融合没有连接相交部分",
+  "source_id": "occt65-23738-b-ab4a555430d4",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/reproduce.cxx",
+    "public/bug23738_b1.brep",
+    "public/bug23738_b2.brep",
+    "public/public-build.sh",
+    "public/public-replay.sh",
+    "public/cdl-toolchain.tar.xz",
+    "public/SDK-SOURCES.md"
+  ]
+}

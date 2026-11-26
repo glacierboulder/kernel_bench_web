@@ -1,0 +1,92 @@
+{
+  "snapshot_sha256": "9c0e2c12634e1636e007c215586ce3c98398f48730efc3a80f18357afa9fc064",
+  "public_files": {
+    "issue.json": "5b8273f3092f23643320f85f2852b40b6d18c1f47bf548459686f882f72c85fc",
+    "statement.md": "d5af3def576ca1537ca3ec39720132fca86439cb1be554a83a4c0befbd97aa81",
+    "reproduce.tcl": "bd13352e233fa02cb3faae65ead0fa8d998e99c3d55baf93c9221524b7049e2c"
+  },
+  "command": "DRAWEXE -b -f reproduce.tcl",
+  "cwd": "/root/r26-21564-formal.JpqkPN/data/reevaluations/2e55fd61aae01557/benchmark-snapshot/visible/issue_21564",
+  "readings": {
+    "B": {
+      "commit": "7a324550c8cdbf0e55505e78d92c7233f68bc031",
+      "rows": [
+        [
+          "0",
+          "0",
+          "1",
+          "101",
+          "20",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "101",
+          "20",
+          "1"
+        ],
+        [
+          "2",
+          "0",
+          "1",
+          "101",
+          "22.3607",
+          "1"
+        ],
+        [
+          "2",
+          "1",
+          "1",
+          "101",
+          "22.3607",
+          "1"
+        ]
+      ],
+      "exit": 0,
+      "TKGeomAlgo_sha256": "643b40df5b2c9589179f201b7ee55bebd3ca0498f0c1503f110d9f1c4c757579",
+      "TKBO_sha256": "9f3e1080df71463906f2ceaa2db15911c2fdd67ec9a01d38a11e59c7b4f6276b"
+    },
+    "F": {
+      "commit": "0cbfb9f15140fce08ac4fac39bb34ed0da69b0fa",
+      "rows": [
+        [
+          "0",
+          "0",
+          "1",
+          "2",
+          "20",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "2",
+          "20",
+          "1"
+        ],
+        [
+          "2",
+          "0",
+          "1",
+          "2",
+          "22.3607",
+          "1"
+        ],
+        [
+          "2",
+          "1",
+          "1",
+          "2",
+          "22.3607",
+          "1"
+        ]
+      ],
+      "exit": 0,
+      "TKGeomAlgo_sha256": "c92227982df2532c9438b8fcad79df534853bfb95188dfb93501c769aa564225",
+      "TKBO_sha256": "f8cf90541086b74fb9636dd60fc0af5353c944ded0ea4ef3e469f1c49f7a626e"
+    }
+  }
+}

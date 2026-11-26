@@ -1,0 +1,41 @@
+{
+  "snapshot_sha256": "b45a785aa8eac365d96fa537b7e4bb172f1174f55d845b1e99eda1ec142b74ac",
+  "checkpoints": {
+    "B": {
+      "original": {
+        "expected": "FAIL",
+        "output": "DRAW is running in batch mode\nMEASURE tag=original vertices=2 edges=1 length=2.72347 maxTolerance=0.72664128562081154\nBENCH_ASSERT_FAIL boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "translated": {
+        "expected": "FAIL",
+        "output": "DRAW is running in batch mode\nMEASURE tag=translated vertices=2 edges=0 length=0 maxTolerance=1.7602604813871396\nBENCH_ASSERT_FAIL boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "rotated": {
+        "expected": "FAIL",
+        "output": "DRAW is running in batch mode\nMEASURE tag=rotated vertices=2 edges=0 length=0 maxTolerance=2.0000099999999999e-07\nBENCH_ASSERT_FAIL boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "control": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\nMEASURE tag=control vertices=2 edges=1 length=6 maxTolerance=1.4999999999999999e-07\nBENCH_ASSERT_PASS boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      }
+    },
+    "F": {
+      "original": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\nMEASURE tag=original vertices=2 edges=1 length=1.93162 maxTolerance=5.0000010000000006e-06\nBENCH_ASSERT_PASS boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "translated": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\nMEASURE tag=translated vertices=2 edges=1 length=1.93162 maxTolerance=5.0000010000000006e-06\nBENCH_ASSERT_PASS boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "rotated": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\nMEASURE tag=rotated vertices=2 edges=1 length=1.93162 maxTolerance=5.0000010000000006e-06\nBENCH_ASSERT_PASS boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "control": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\nMEASURE tag=control vertices=2 edges=1 length=6 maxTolerance=1.4999999999999999e-07\nBENCH_ASSERT_PASS boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      }
+    }
+  }
+}

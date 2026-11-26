@@ -1,0 +1,36 @@
++ for side in B F
++ SOURCE=/root/r26-main/25199-formal.WmQpag/B
++ BUILD=/root/r26-main/25199-public.BgrLTO/B
++ mkdir /root/r26-main/25199-public.BgrLTO/B
++ git -C /root/r26-main/25199-formal.WmQpag/B rev-parse HEAD
+2a78ec6a074716322d15275a771c5c1105fa4057
++ export BENCH_COMPILER_JOBS=5
++ BENCH_COMPILER_JOBS=5
++ [[ 25199 == 25199 ]]
++ bash public-build.sh /root/r26-main/25199-formal.WmQpag/B /root/r26-main/25199-public.BgrLTO/B /root/r26-main/25199-formal.toMN61/data/reevaluations/b66b9a40b33246f2/frozen-task/visible/issue_25199
++ rc=0
++ bash public-replay.sh /root/r26-main/25199-public.BgrLTO/B
++ rc=1
++ cat <author-workspace>/round-01/cases/25199/evidence/formal.CraHaD/public-cold-B.log
+edge21_mm=310.821196000985 max_tol_mm=310.821196000985 area_mm2=-18289712194591.9 faces=14 valid=0 verdict=FAIL
++ [[ B == B ]]
++ test 1 = 1
++ grep -q verdict=FAIL <author-workspace>/round-01/cases/25199/evidence/formal.CraHaD/public-cold-B.log
++ for side in B F
++ SOURCE=/root/r26-main/25199-formal.WmQpag/F
++ BUILD=/root/r26-main/25199-public.BgrLTO/F
++ mkdir /root/r26-main/25199-public.BgrLTO/F
++ git -C /root/r26-main/25199-formal.WmQpag/F rev-parse HEAD
+31cf9c5f7dd2cdc19db053ec246f32ac61f7a09a
++ export BENCH_COMPILER_JOBS=5
++ BENCH_COMPILER_JOBS=5
++ [[ 25199 == 25199 ]]
++ bash public-build.sh /root/r26-main/25199-formal.WmQpag/F /root/r26-main/25199-public.BgrLTO/F /root/r26-main/25199-formal.toMN61/data/reevaluations/b66b9a40b33246f2/frozen-task/visible/issue_25199
++ rc=0
++ bash public-replay.sh /root/r26-main/25199-public.BgrLTO/F
++ cat <author-workspace>/round-01/cases/25199/evidence/formal.CraHaD/public-cold-F.log
+edge21_mm=1e-07 max_tol_mm=0.0001 area_mm2=197055.036266 faces=14 valid=1 verdict=PASS
++ [[ F == B ]]
++ test 0 = 0
++ grep -q verdict=PASS <author-workspace>/round-01/cases/25199/evidence/formal.CraHaD/public-cold-F.log
++ printf 'Verified task-visible cold build and replay in %s\n' /root/r26-main/25199-formal.toMN61/data/reevaluations/b66b9a40b33246f2/frozen-task/visible/issue_25199

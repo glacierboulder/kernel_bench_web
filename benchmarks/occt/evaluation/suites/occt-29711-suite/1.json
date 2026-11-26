@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "occt-29711-suite",
+  "version": "1",
+  "title": "两个有重叠的实体融合后，结果仍保留两个实体",
+  "source_ids": [
+    "occt72-29711-b-fb60181a3a21"
+  ],
+  "group_ids": [
+    "occt-29711-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "29711-original",
+      "issue_id": "occt-29711",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29711/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "29711-translated",
+      "issue_id": "occt-29711",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29711/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "29711-rotated",
+      "issue_id": "occt-29711",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29711/rotated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "29711-control",
+      "issue_id": "occt-29711",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29711/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt29711/geometry.tcl",
+    "evaluation/cases/occt29711/assets/CTO900_pro10658a.rle",
+    "evaluation/cases/occt29711/assets/pro10658b.rle"
+  ]
+}

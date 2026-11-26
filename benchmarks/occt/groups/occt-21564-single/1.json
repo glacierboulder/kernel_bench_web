@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-21564-single",
+  "version": "1",
+  "title": "两个平面相交时，直线截边包含多余的控制点",
+  "kind": "single",
+  "source_id": "occt70-21564-b-7a324550c8cd",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-21564",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-21564-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

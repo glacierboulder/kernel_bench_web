@@ -1,0 +1,45 @@
+diff --git a/src/BOPAlgo/BOPAlgo_PaveFiller_2.cxx b/src/BOPAlgo/BOPAlgo_PaveFiller_2.cxx
+index 2b66c0b82..e4e415e94 100644
+--- a/src/BOPAlgo/BOPAlgo_PaveFiller_2.cxx
++++ b/src/BOPAlgo/BOPAlgo_PaveFiller_2.cxx
+@@ -80,6 +80,7 @@
+     }
+     //
+     if (myDS->HasInterfShapeSubShapes(nV, nE)) {
++      myDS->ChangePaveBlocks(nE);
+       continue;
+     }
+     //
+diff --git a/src/BOPAlgo/BOPAlgo_PaveFiller_4.cxx b/src/BOPAlgo/BOPAlgo_PaveFiller_4.cxx
+index de1b7d263..456c2d6f1 100644
+--- a/src/BOPAlgo/BOPAlgo_PaveFiller_4.cxx
++++ b/src/BOPAlgo/BOPAlgo_PaveFiller_4.cxx
+@@ -75,6 +75,7 @@
+       }
+       //
+       if (myDS->HasInterfShapeSubShapes(nV, nF)) {
++        myDS->ChangeFaceInfo(nF);
+         continue;
+       }
+       //
+@@ -102,6 +103,11 @@
+         aVF.SetUV(aT1, aT2);
+         // 2
+         myDS->AddInterf(nVx, nF);
++        //
++        BOPDS_FaceInfo& aFI=myDS->ChangeFaceInfo(nF);
++        BOPCol_MapOfInteger& aMVIn=aFI.ChangeVerticesIn();
++        aMVIn.Add(nVx);
++        //
+         if (aTolV < aTolF) {
+           aBB.UpdateVertex(aV, aTolF);
+           BOPDS_ShapeInfo& aSIV = myDS->ChangeShapeInfo(nVx);
+@@ -118,7 +124,7 @@
+     aVFs.SetIncrement(iSize);
+     aVFs.Init();
+   }
+-    //
++  //
+   TreatVerticesEE();
+ } 
+ 

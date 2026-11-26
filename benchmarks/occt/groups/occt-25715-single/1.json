@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-25715-single",
+  "version": "1",
+  "title": "斜交圆柱做差后，孔口边界多出分割顶点",
+  "kind": "single",
+  "source_id": "occt68-25715-b-a70f58235a5c",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-25715",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-25715-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

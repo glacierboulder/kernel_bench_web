@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-25820-single",
+  "version": "1",
+  "title": "旋转面与平面的布尔截交只留下两个孤立顶点",
+  "kind": "single",
+  "source_id": "occt70-25820-b-b028f13535bf",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-25820",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-25820-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-26775-single",
+  "version": "1",
+  "title": "两次半空间差集保留了错误的面边界",
+  "kind": "single",
+  "source_id": "occt70-26775-b-bf02aa7d7dcb",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-26775",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-26775-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

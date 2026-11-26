@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-25828-single",
+  "version": "1",
+  "title": "两个复杂形体的截交结果缺少一段曲线",
+  "kind": "single",
+  "source_id": "occt68-25828-b-5bffb8828265",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-25828",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-25828-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

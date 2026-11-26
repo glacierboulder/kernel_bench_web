@@ -1,0 +1,42 @@
+{
+  "snapshot_sha256": "6eb80cf140f30a86e95b947cb93c7be193d217c181a40c3e2647fd7ac1fd3aed",
+  "command": "DRAWEXE -b -f reproduce.tcl",
+  "files": {
+    "issue.json": "1b457ee41ea3514b4ca3cf7e4974b51ccfb6aa809ed1244640195cc20cfb32e5",
+    "statement.md": "48aeb160dca3bb903dea145d0170020c13abcab48d3a961f2c168666d5a205b2",
+    "bug24094_face.brep": "2140db9b88336a702a6d4806d6fd4b68c28618dee4f07563c5c46746388bd6ac",
+    "reproduce.tcl": "5a52558d180c80eb7e9e21b778bd703c5cf1101131737a87346566341d447690"
+  },
+  "readings": {
+    "B": {
+      "measurements": {
+        "standard": {
+          "VERTEX": 2,
+          "EDGE": 1,
+          "length": 0.000510151
+        },
+        "first-only": {
+          "VERTEX": 2,
+          "EDGE": 0,
+          "length": 0.0
+        }
+      },
+      "TKBO_sha256": "7108ce1dc27035f336e99f4f9f835fb312f025ee6ff3ece05c4b2b1ae8e11b36"
+    },
+    "F": {
+      "measurements": {
+        "standard": {
+          "VERTEX": 2,
+          "EDGE": 1,
+          "length": 0.000510151
+        },
+        "first-only": {
+          "VERTEX": 2,
+          "EDGE": 1,
+          "length": 0.000510151
+        }
+      },
+      "TKBO_sha256": "5630cc2c14aa2966afbd7819945046eb963907884913fed0470b7cf3a786b7fa"
+    }
+  }
+}

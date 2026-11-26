@@ -1,0 +1,21 @@
+{
+  "issue": 22821,
+  "commit": "03275c0be165da7abe8e0044d79c10a0038a8340",
+  "command": [
+    "DRAWEXE",
+    "-b",
+    "-f",
+    "reproduce.tcl"
+  ],
+  "working_directory": "visible/issue_22821",
+  "snapshot_sha256": "79da9bfeef3175ec73ba0ba16d8e32228932c67e6e18ff5c524469c777e04f49",
+  "files": {
+    "corner.brep": "eb0936011d0c152ac1311b0489987a0f0a2538512f63d1d96ed204cf49846449",
+    "issue.json": "553f2f0472edf89fdf9b5bafaa1f4fbea184ab5720c6f162726665d28f037cad",
+    "reproduce.tcl": "32c580c7494eff26f1603d8c15d2cc930551a1808f83391a953c7c9f7855843c",
+    "statement.md": "a2ab7b12f37987b712a9b52e58ab409c845c5294b60bcb96d80c7499a688a878"
+  },
+  "stdout": "DRAW is running in batch mode\nThis shape seems to be valid\n\n\nMass :        0.220328\n\nCenter of gravity : \nX =        0.249459\nY =     0.000109919\nZ =           -0.05\n\nMatrix of Inertia : \n    0.000700959    -6.11554e-06               0\n   -6.11554e-06      0.00579764     2.06253e-19\n              0     2.06253e-19      0.00579686\n\nMoments : \nIX =      0.00579765\nIY =      0.00579686\nIZ =     0.000700952\n\n\nfaces=7\n",
+  "stderr": "",
+  "returncode": 0
+}

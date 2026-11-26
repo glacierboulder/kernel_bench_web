@@ -1,0 +1,168 @@
+{
+  "id": "b4324c3b5568f548",
+  "created_at": "2026-11-26T09:03:26.799768+00:00",
+  "run_id": null,
+  "experiment_id": null,
+  "kind": "reevaluation",
+  "result": {
+    "protocol": "manifest-suite-v1",
+    "suite": {
+      "id": "occt-25982-suite",
+      "version": "1"
+    },
+    "tests": [
+      {
+        "test": "25982-original",
+        "passed": true,
+        "status": "passed"
+      }
+    ],
+    "checkpoints": [
+      {
+        "id": "25982-original",
+        "issue_id": "occt-25982",
+        "category": "original",
+        "status": "passed",
+        "required": true,
+        "elapsed_seconds": 0.793
+      },
+      {
+        "id": "hidden-summary",
+        "issue_id": null,
+        "name": "隐藏检查（详情不公开）",
+        "visibility": "hidden",
+        "category_summary": {
+          "declared": 3,
+          "passed": 3,
+          "failed": 0,
+          "timeout": 0,
+          "error": 0,
+          "not_run": 0,
+          "skipped": 0,
+          "inconclusive": 0
+        }
+      }
+    ],
+    "limitations": [
+      "Checks are only those declared in this frozen suite; this is not the full upstream test suite."
+    ],
+    "report": {
+      "provided": false
+    },
+    "patch_bytes": 6553,
+    "build": {
+      "configure": {
+        "return_code": 0
+      },
+      "build": {
+        "return_code": 0
+      }
+    },
+    "elapsed_seconds": 396.182,
+    "passed": true,
+    "evaluation_suites": [
+      {
+        "id": "occt-25982-suite",
+        "version": "1"
+      }
+    ],
+    "category_summary": {
+      "original": {
+        "declared": 1,
+        "executed": 1,
+        "passed": 1,
+        "failed": 0,
+        "timeout": 0,
+        "error": 0,
+        "not_run": 0,
+        "skipped": 0,
+        "inconclusive": 0,
+        "state": "configured"
+      },
+      "neighborhood": {
+        "declared": 2,
+        "executed": 2,
+        "passed": 2,
+        "failed": 0,
+        "timeout": 0,
+        "error": 0,
+        "not_run": 0,
+        "skipped": 0,
+        "inconclusive": 0,
+        "state": "configured"
+      },
+      "regression": {
+        "declared": 1,
+        "executed": 1,
+        "passed": 1,
+        "failed": 0,
+        "timeout": 0,
+        "error": 0,
+        "not_run": 0,
+        "skipped": 0,
+        "inconclusive": 0,
+        "state": "configured"
+      }
+    },
+    "technical_passed": true,
+    "hidden_check_summary": {
+      "declared": 3,
+      "passed": 3,
+      "failed": 0,
+      "timeout": 0,
+      "error": 0,
+      "not_run": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    }
+  },
+  "returncode": 0,
+  "stages": [
+    {
+      "name": "submission",
+      "status": "failed"
+    },
+    {
+      "name": "patch_application",
+      "status": "passed"
+    },
+    {
+      "name": "configure",
+      "status": "passed"
+    },
+    {
+      "name": "build",
+      "status": "passed"
+    },
+    {
+      "name": "25982-original",
+      "status": "passed"
+    },
+    {
+      "name": "25982-swapped",
+      "status": "passed"
+    },
+    {
+      "name": "25982-translated",
+      "status": "passed"
+    },
+    {
+      "name": "25982-normal",
+      "status": "passed"
+    }
+  ],
+  "patch_sha256": "9b3180c001316f5698d857e5770cbc4d558e690d57dc46b522350f3e1fd53ed0",
+  "evaluator_sha256": "4dbc8ed3827cf44d767b2f72868d5df0ca9a9c3aecb549d094c12e0acbc98743",
+  "reevaluation": {
+    "source_id": "occt68-25982-b-1804bb99a682",
+    "source_commit": "1804bb99a682a8653a8228408b476a811553b54e",
+    "source_tree_sha256": "893966c430123523d8d30962e1d8ea2ec8728218b0d46f51d51e60d003be24ff",
+    "suite_id": "occt-25982-suite",
+    "suite_version": "1",
+    "patch_sha256": "9b3180c001316f5698d857e5770cbc4d558e690d57dc46b522350f3e1fd53ed0",
+    "report_provided": false,
+    "snapshot_sha256": "073f874c006b047544d6889293b6bf39c69f89d9b3af584231d8935006adb63d",
+    "model_called": false,
+    "baseline_verification": "explicit_source_id_for_patch"
+  }
+}

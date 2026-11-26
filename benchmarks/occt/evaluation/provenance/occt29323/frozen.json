@@ -1,0 +1,14 @@
+{
+  "snapshot_sha256": "b45a785aa8eac365d96fa537b7e4bb172f1174f55d845b1e99eda1ec142b74ac",
+  "files": {
+    "issue.json": "15e30c0760f3e65689c0e51cda5c4555b99c88c2d88380458d741c509c42096e",
+    "statement.md": "cd3305bd0b71053c42014ec34d85749598656bd76f10667f6e635661572b43ca",
+    "bug27615.brep": "baf8f9a86539c4807f3d8281363113e3b32d647ab63f4c4d3d6b654f61a195ed",
+    "reproduce.tcl": "ea06ae551ed551a5d6b5a684b0caca9d42b74778b2e6cfdbf1cd5441c59a551e"
+  },
+  "command": "DRAWEXE -b -f reproduce.tcl",
+  "readings": {
+    "B": "MEASURE tag=original vertices=2 edges=1 length=2.72347 maxTolerance=0.72664128562081154",
+    "F": "MEASURE tag=original vertices=2 edges=1 length=1.93162 maxTolerance=5.0000010000000006e-06"
+  }
+}

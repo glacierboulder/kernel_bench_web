@@ -1,0 +1,13 @@
+# 小尺度实体首条边的圆角步进不能完成
+
+本题复现上游 [OCC22821](https://github.com/Open-Cascade-SAS/OCCT/commit/03275c0be165da7abe8e0044d79c10a0038a8340)。对 12 边实体的首条边做半径 0.01 圆角，父版无法完成，修复版得到有效的 7 面实体，面积 0.220328。该边来自父版上游测试；修复版也为它给出了同一面积期望。
+
+判据包含原位、共同平移、绕 Z 轴旋转，以及同尺度解析盒体的保护例。前三项要求结果有效、7 个面、面积与期望相差不超过 0.00001。保护例另用解析面积 0.239098672286：它必须在两个版本都通过，不能靠放宽所有小尺度圆角来过题。
+
+对未改写操作的诊断显示，三个触发输入在父版均有一条故障轮廓，错误枚举为 ChFiDS_WalkingFailure；修复版三次均无故障轮廓。原例断点确认父版是在 PerformSetOfSurfOnElSpine 中将该脊线设为步进失败，修复版没有进入这个失败分支；不能再据此推定某一个求根迭代最先出错。第 5 条边在本环境两个版本都成功，明确不作为触发样本。
+
+原始 STEP 和由两个版本独立导出、逐字节相同的 BREP 有可核查的来源。冻结的公开输入使用 BREP，因而只需 MODELING 插件；它在自然 B/F 上重现了与 STEP 相同的差分。独立自然 F 在冻结套件通过 4/4，公开脚本也在相同快照的两个版本上执行过。
+
+**单参数验证。** 在自然 B 对长 0.1 mm 的同一条边保持半径和 3D 逼近容差（0.0001 mm）不变，只改 `SetParams` 的第二个参数，即脊线步进容差。默认 0.0001 时返回 WalkingFailure；改为 0.000005（按 F 的尺度公式）时步进成功，面积 0.22032787909418 mm²。0.00001 和 0.000001 时也得到同一面积。该实验定位的是截面沿小尺度脊线步进的参数容差问题，不把某个未观测到的迭代点当成根因。
+
+固定链接：[自然 B](https://github.com/Open-Cascade-SAS/OCCT/commit/2f33e34038e1d6fdb373d362917af7a170e9425b)、[直接修复 F](https://github.com/Open-Cascade-SAS/OCCT/commit/03275c0be165da7abe8e0044d79c10a0038a8340)、[父版原始第 1 边 DRAW](https://github.com/Open-Cascade-SAS/OCCT/blob/2f33e34038e1d6fdb373d362917af7a170e9425b/tests/bugs/modalg_7/bug22821)、[固定 STEP](https://github.com/a-betenev/opencascade-dataset/blob/d78a7a9e6de57699261fa03641ec1b5bafac39a1/step/bug22821_test.step)。原始 STEP 摘要见 input.sha256。

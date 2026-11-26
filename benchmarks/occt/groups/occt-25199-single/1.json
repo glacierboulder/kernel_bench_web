@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-25199-single",
+  "version": "1",
+  "title": "圆角交线使用错误曲面边界，导致边容差膨胀",
+  "kind": "single",
+  "source_id": "occt67-25199-b-2a78ec6a0747",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-25199",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-25199-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

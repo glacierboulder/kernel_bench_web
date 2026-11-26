@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "occt-25982",
+  "version": "1",
+  "title": "镜像自由曲面进行广义融合时丢失一侧分割面",
+  "source_id": "occt68-25982-b-1804bb99a682",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/reproduce.cxx",
+    "public/bug25982_human_head_3.brep",
+    "public/public-build.sh",
+    "public/public-replay.sh",
+    "public/cdl-toolchain.tar.xz",
+    "public/SDK-SOURCES.md"
+  ]
+}

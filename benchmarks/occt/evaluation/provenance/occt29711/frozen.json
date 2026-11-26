@@ -1,0 +1,15 @@
+{
+  "snapshot_sha256": "078d63a4354d4dc0bb4cc4e33b445fa4fcd550a06fca258cec6ab6af6da54686",
+  "files": {
+    "CTO900_pro10658a.rle": "118a2e402d7f9187b9663768cf3edcfe679ada2f7bdab928b8ddef59f2904c13",
+    "issue.json": "61ef1bc8d4222acc988e6b0fb509a2d3508eb5706de0e574cb524cbee0a6a7ed",
+    "statement.md": "2e2e3cfc032f038705c5f53dbd998d9e9bb940fdc84482d80271fa95b079cd0a",
+    "reproduce.tcl": "8dc5fc520b4fa2c4c498bff0ff08ba90bc7d684ea63f6ff894ecbe6ec8c46692",
+    "pro10658b.rle": "a9822d0695b5a11273a73dab5a42f2f90cfc362d2549a76cf437ca1ec16593bb"
+  },
+  "command": "DRAWEXE -b -f reproduce.tcl",
+  "readings": {
+    "B": "MEASURE tag=original wire=17 face=15 shell=2 solid=2 area=8636.79 volume=30978.4 valid=This shape seems to be valid",
+    "F": "MEASURE tag=original wire=9 face=9 shell=1 solid=1 area=8231.06 volume=30472.5 valid=This shape seems to be valid"
+  }
+}

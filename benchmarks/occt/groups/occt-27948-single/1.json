@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-27948-single",
+  "version": "1",
+  "title": "布尔差集在共端点边段处留下多余的壳",
+  "kind": "single",
+  "source_id": "occt72-27948-b-4563472c1eb4",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-27948",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-27948-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

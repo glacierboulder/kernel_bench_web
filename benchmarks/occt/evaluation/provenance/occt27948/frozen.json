@@ -1,0 +1,42 @@
+{
+  "snapshot_sha256": "fd21842c30d19ea83075cf1f4edc0082fe574271707e6921c553164b950b3eae",
+  "command": "DRAWEXE -b -f reproduce.tcl",
+  "cwd": "/root/r26-main/27948-formal.V8Z72A/data/reevaluations/3b12f4fdd884750a/benchmark-snapshot/visible/issue_27948",
+  "public_files": {
+    "issue.json": "29694a9d5fb2b6a41a71519ea0636b12d37f9d1e48d6d6781591090fec677c09",
+    "statement.md": "7bb7813929bf89400d9fafe824f01d3c389229a8a14412e2cd50a6c81ac293b2",
+    "reproduce.tcl": "1e3c8936d613620cf64351150a8e7aba182fcf688c2647938fc26427c59109f6",
+    "bug27948_b.brep": "a71726801157609e4b5e7986405431bf2c89675bd211d9970285ee91f6664438",
+    "bug27948_a.brep": "dfddc1c1d3076c048a854b65087d1f2c5f01660c845164675ef013a766cae9a0"
+  },
+  "readings": {
+    "B": {
+      "counts": {
+        "VERTEX": 20,
+        "EDGE": 40,
+        "WIRE": 23,
+        "FACE": 20,
+        "SHELL": 2,
+        "SOLID": 1
+      },
+      "area_mm2": 138.208,
+      "volume_mm3": 42.8584,
+      "exit": 0,
+      "TKBO_sha256": "50ad51552ecb453dd99c0c5129362a03df7041648189a2be2bc0f59db8834d22"
+    },
+    "F": {
+      "counts": {
+        "VERTEX": 20,
+        "EDGE": 37,
+        "WIRE": 19,
+        "FACE": 17,
+        "SHELL": 1,
+        "SOLID": 1
+      },
+      "area_mm2": 135.137,
+      "volume_mm3": 40.573,
+      "exit": 0,
+      "TKBO_sha256": "c3b34c57da628cf903aa3972d8eab3c1117ea9746c20c6ff9a9dc57500fd5d60"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-25450-single",
+  "version": "1",
+  "title": "有效形体作布尔差后丢失边界面积",
+  "kind": "single",
+  "source_id": "occt68-25450-b-93442c6f24ea",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-25450",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-25450-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

@@ -1,0 +1,41 @@
+{
+  "snapshot_sha256": "6eb80cf140f30a86e95b947cb93c7be193d217c181a40c3e2647fd7ac1fd3aed",
+  "checkpoints": {
+    "B": {
+      "original": {
+        "expected": "FAIL",
+        "output": "DRAW is running in batch mode\ncase=original mode=standard vertices=2 edges=1 length=0.000510151\ncase=original mode=first-only vertices=2 edges=0 length=0\nBENCH_ASSERT_FAIL boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "left": {
+        "expected": "FAIL",
+        "output": "DRAW is running in batch mode\ncase=left mode=standard vertices=2 edges=1 length=0.00046535\ncase=left mode=first-only vertices=2 edges=0 length=0\nBENCH_ASSERT_FAIL boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "right": {
+        "expected": "FAIL",
+        "output": "DRAW is running in batch mode\ncase=right mode=standard vertices=2 edges=1 length=0.000557059\ncase=right mode=first-only vertices=2 edges=0 length=0\nBENCH_ASSERT_FAIL boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "control": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\ncase=control mode=standard vertices=2 edges=1 length=6\ncase=control mode=first-only vertices=2 edges=1 length=6\nBENCH_ASSERT_PASS boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      }
+    },
+    "F": {
+      "original": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\ncase=original mode=standard vertices=2 edges=1 length=0.000510151\ncase=original mode=first-only vertices=2 edges=1 length=0.000510151\nBENCH_ASSERT_PASS boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "left": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\ncase=left mode=standard vertices=2 edges=1 length=0.00046535\ncase=left mode=first-only vertices=2 edges=1 length=0.00046535\nBENCH_ASSERT_PASS boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "right": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\ncase=right mode=standard vertices=2 edges=1 length=0.000557059\ncase=right mode=first-only vertices=2 edges=1 length=0.000557059\nBENCH_ASSERT_PASS boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      },
+      "control": {
+        "expected": "PASS",
+        "output": "DRAW is running in batch mode\ncase=control mode=standard vertices=2 edges=1 length=6\ncase=control mode=first-only vertices=2 edges=1 length=6\nBENCH_ASSERT_PASS boolean_geometry section kind=numeric\n__BENCH_ORACLE_COMPLETE__\nBENCH_ORACLE_OK assertions=1 numeric_assertions=1\nTEST_DONE assertions=1 numeric_assertions=1\n"
+      }
+    }
+  }
+}

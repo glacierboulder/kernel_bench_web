@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "occt-25163-suite",
+  "version": "1",
+  "title": "两个圆柱面片的布尔公共区域为空",
+  "source_ids": [
+    "occt67-25163-b-1d33d22bd739"
+  ],
+  "group_ids": [
+    "occt-25163-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "25163-original",
+      "issue_id": "occt-25163",
+      "category": "original",
+      "required": true,
+      "visibility": "public",
+      "timeout_seconds": 90,
+      "case": "issues/occt-25163/1/public/reproduce.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25163/1/public/bug25163_qf_25_39.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25163-swapped",
+      "issue_id": "occt-25163",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25163/swapped.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25163/1/public/bug25163_qf_25_39.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25163-translated",
+      "issue_id": "occt-25163",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25163/translated.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25163/1/public/bug25163_qf_25_39.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25163-normal",
+      "issue_id": "occt-25163",
+      "category": "regression",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25163/normal.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25163/1/public/bug25163_qf_25_39.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-25163/1/public/cdl-toolchain.tar.xz"
+  ]
+}

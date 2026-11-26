@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "id": "occt-25828-suite",
+  "version": "1",
+  "title": "两个复杂形体的截交结果缺少一段曲线",
+  "source_ids": [
+    "occt68-25828-b-5bffb8828265"
+  ],
+  "group_ids": [
+    "occt-25828-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "25828-original",
+      "issue_id": "occt-25828",
+      "category": "original",
+      "required": true,
+      "visibility": "public",
+      "timeout_seconds": 90,
+      "case": "issues/occt-25828/1/public/reproduce.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25828/1/public/buc60462a.brep",
+          "issues/occt-25828/1/public/buc60462b.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25828-rotated",
+      "issue_id": "occt-25828",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25828/rotated.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25828/1/public/buc60462a.brep",
+          "issues/occt-25828/1/public/buc60462b.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25828-translated",
+      "issue_id": "occt-25828",
+      "category": "neighborhood",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25828/translated.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [
+          "issues/occt-25828/1/public/buc60462a.brep",
+          "issues/occt-25828/1/public/buc60462b.brep"
+        ],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    },
+    {
+      "id": "25828-control",
+      "issue_id": "occt-25828",
+      "category": "regression",
+      "required": true,
+      "visibility": "hidden",
+      "timeout_seconds": 90,
+      "case": "evaluation/cases/occt25828/control.cxx",
+      "runner": "cpp_case_v1",
+      "oracle": "stdout_contains_v1",
+      "runner_options": {
+        "libraries": [
+          "TKBO"
+        ],
+        "inputs": [],
+        "stdout_contains": [
+          "verdict=PASS"
+        ]
+      }
+    }
+  ],
+  "support_files": [
+    "issues/occt-25828/1/public/cdl-toolchain.tar.xz"
+  ]
+}

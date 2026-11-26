@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "occt-29496",
+  "version": "1",
+  "title": "翼面与机体做布尔截交时，闭合环缺少一条短边",
+  "source_id": "occt72-29496-b-e3744452bb60",
+  "statement": "statement.md",
+  "public_materials": [
+    "public/reproduce.tcl",
+    "public/bug25994_body.brep",
+    "public/bug25994_wing.brep"
+  ]
+}

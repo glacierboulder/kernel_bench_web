@@ -1,0 +1,30 @@
+{
+  "snapshot_sha256": "3675e76de8afb4534c352b07906e6104a2389376ff21851ea6104c3be869cfad",
+  "public_files": {
+    "reproduce.cxx": "df95014e818af1b8629fb8f2865a8c10f28301279d73f45bbb29eec482949c6c",
+    "statement.md": "6d862b9733c3770d98976c1125e1205cf10177b51736f0789d515ee387993f6b",
+    "public-build.sh": "4da2029ec15346523aaedbc37567c5476fa86e386ec6f839e63414afc28241ee",
+    "SDK-SOURCES.md": "7bce74006e4d40eb4f3e3e389aca3d0a7562097dd9d9e7aa4f3d4f6472e533b2",
+    "buc60462a.brep": "b8e56a69ce345327c41391c5268297758dead009337e4b8b302f9f6e83a3e591",
+    "buc60462b.brep": "4f446681eb56266fceded0e08c7d77c5ece54acaafabbcdb3747f72292eaca09",
+    "issue.json": "065ba6bcdbf8e5adb1c62a8447c7d4434b3b3fcd956e4662369c76654e002638",
+    "public-replay.sh": "3c758400387f08637c788d14988a3eb9425f08b4b0a00697180ed47ba85b4ae2",
+    "cdl-toolchain.tar.xz": "42c080c1fa48fbc144c2292b920eed81d30036054c0e3beccf136f0edbc93a74"
+  },
+  "readings": {
+    "B": {
+      "public_original": "mode=original length=261.261890488497 expected=264.314 vertices=27 edges=17 faces=0 solids=0 valid=1 verdict=FAIL",
+      "exit": 1,
+      "stage": [
+        "TRACE duplicate prevPts=3 nextPts=3 oldLen=0.16512 newLen=0.912832 preferNew=1 action=keep"
+      ]
+    },
+    "F": {
+      "public_original": "mode=original length=264.046080105004 expected=264.314 vertices=27 edges=18 faces=0 solids=0 valid=1 verdict=PASS",
+      "exit": 0,
+      "stage": [
+        "TRACE duplicate prevPts=3 nextPts=3 oldLen=0.16512 newLen=0.912832 preferNew=1 action=replace"
+      ]
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "occt-29496-suite",
+  "version": "1",
+  "title": "翼面与机体做布尔截交时，闭合环缺少一条短边",
+  "source_ids": [
+    "occt72-29496-b-e3744452bb60"
+  ],
+  "group_ids": [
+    "occt-29496-single"
+  ],
+  "checkpoints": [
+    {
+      "id": "29496-original",
+      "issue_id": "occt-29496",
+      "category": "original",
+      "visibility": "public",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29496/original.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "29496-translated",
+      "issue_id": "occt-29496",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29496/translated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "29496-rotated",
+      "issue_id": "occt-29496",
+      "category": "neighborhood",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29496/rotated.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    },
+    {
+      "id": "29496-control",
+      "issue_id": "occt-29496",
+      "category": "regression",
+      "visibility": "hidden",
+      "runner": "draw_case_v1",
+      "oracle": "draw_test_done_v1",
+      "case": "evaluation/cases/occt29496/control.tcl",
+      "timeout_seconds": 60,
+      "required": true,
+      "runner_options": {
+        "expected_assertion_ids": [
+          "boolean_geometry"
+        ],
+        "case_timeout_seconds": 60
+      }
+    }
+  ],
+  "support_files": [
+    "evaluation/cases/single20/assertions.tcl",
+    "evaluation/cases/occt29496/geometry.tcl",
+    "evaluation/cases/occt29496/assets/bug25994_body.brep",
+    "evaluation/cases/occt29496/assets/bug25994_wing.brep"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "occt-23214-single",
+  "version": "1",
+  "title": "面与壳求截时两段交边的总长错误",
+  "kind": "single",
+  "source_id": "occt65-23214-b-a2d5ab2e7f2c",
+  "execution_mode": "joint",
+  "members": [
+    {
+      "issue_id": "occt-23214",
+      "issue_version": "1"
+    }
+  ],
+  "budget": {
+    "scope": "group",
+    "wall_seconds": 7200
+  },
+  "required_outputs": [
+    "patch.diff",
+    "report.md"
+  ],
+  "evaluation_suite": {
+    "id": "occt-23214-suite",
+    "version": "1"
+  },
+  "has_hidden_checks": true
+}

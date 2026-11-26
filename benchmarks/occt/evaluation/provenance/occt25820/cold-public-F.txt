@@ -1,0 +1,20 @@
+cwd=/root/r27-legacy25820/official/data/reevaluations/b08483bd420132cd/frozen-task/visible/issue_25820
+started=2026-11-26T12:22:02Z
+source=c0e32b3c3d3638cae0fa1d54615bb432d442fbaf
+build_dir=/root/r27-legacy25820/public-cold-F.wi6vC5/build (absent before invocation)
+CCACHE_DISABLE=1; BENCH_COMPILER_JOBS=2; PATH uses /usr/bin/g++
+e49e9ba267892d9f7b6aca470d33741ef9bb58cd4082d2b7125de9920ef24532  public-build.sh
+a6ad55eee4ce1cae8aec4612648326bf0157118f4dbbb4def77933d794dfefa3  public-replay.sh
+8ecf99f558fb1bfa0498aacd8aeca87cd0fb70be50d15515853f789ad6b224d5  cdl-toolchain.tar.xz
+710683b5461672999f3a8c94352dd27720f5062355e4f37b9e4526a222d3f02b  reproduce.cxx
+30825e7e3032956b3a4edc8794b487fbbe4a557792006e7b78ec0b22bf6b4d47  OCC25820-Revolution_5.brep
+2970c53919e2c0e2858bcd089e5bf4a97bbd1ddc77e706f540dcbf8f99f72d54  OCC25820-Translation_1.brep
+bash public-build.sh /root/r27-legacy25820/source-F /root/r27-legacy25820/public-cold-F.wi6vC5/build
+build_rc=0
+[2257/2257] ar rcs lin64/gcc/lib/libTKBO.a obj/Adaptor2d_Curve2d.cxx.o obj/Adaptor2d_HCurve2d.cxx.o obj/Adaptor2d_Line2d.cxx.o obj/Adaptor3d_Curve.cxx.o obj/Ada
+translation_units=2256
+9d77fdf804ba547a5f91ff7894e310a61550bfeac1684150c7a9f9ccf2625173  /root/r27-legacy25820/public-cold-F.wi6vC5/build/lin64/gcc/lib/libTKBO.a
+bash public-replay.sh /root/r27-legacy25820/public-cold-F.wi6vC5/build
+edges=1 vertices=2 length=2.4999999941836e-05 valid=1 verdict=PASS
+replay_rc=0
+ended=2026-11-26T12:31:08Z

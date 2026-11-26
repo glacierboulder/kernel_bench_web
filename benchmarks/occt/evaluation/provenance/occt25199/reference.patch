@@ -1,0 +1,16 @@
+diff --git a/src/GeomInt/GeomInt_IntSS_1.cxx b/src/GeomInt/GeomInt_IntSS_1.cxx
+index b5e07242c..609cda12a 100644
+--- a/src/GeomInt/GeomInt_IntSS_1.cxx
++++ b/src/GeomInt/GeomInt_IntSS_1.cxx
+@@ -1558,7 +1558,10 @@ Standard_Boolean DecompositionOfWLine(const Handle(IntPatch_WLine)& theWLine,
+ 
+ 	Handle(GeomAdaptor_HSurface) aGASurface = (!surfit) ? theSurface1 : theSurface2;
+ 	
+-	aGASurface->ChangeSurface().Surface()->Bounds(umin, umax, vmin, vmax);
++        umin = aGASurface->FirstUParameter();
++        umax = aGASurface->LastUParameter();
++        vmin = aGASurface->FirstVParameter();
++        vmax = aGASurface->LastVParameter();
+ 	Standard_Real U=0., V=0.;
+ 
+ 	if(!surfit) {
